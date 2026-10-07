@@ -1,0 +1,3043 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Phố đi bộ Kỳ Lừa | Lạng Sơn</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+    <style>
+
+        :root {
+            --bg: #f4efe7;
+            --paper: #fffaf3;
+            --paper-2: #eee4d5;
+            --ink: #2f2923;
+            --muted: #756b61;
+            --brown: #5e4030;
+            --brown-dark: #3c2b21;
+            --gold: #b78a48;
+            --line: rgba(94, 64, 48, .16);
+            --shadow: 0 18px 50px rgba(61, 42, 28, .10);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 132px;
+        }
+
+        body {
+            font-family: "Be Vietnam Pro", sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.75;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        /* =========================
+           MENU CHÍNH
+        ========================= */
+
+        .topbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 70px;
+
+            z-index: 1000;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 5vw;
+
+            background: rgba(255, 250, 243, .95);
+            backdrop-filter: blur(14px);
+
+            border-bottom: 1px solid var(--line);
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: .08em;
+
+            color: var(--brown-dark);
+        }
+
+        .main-link {
+            padding: 10px 19px;
+
+            border: 1px solid rgba(94, 64, 48, .25);
+            border-radius: 999px;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            color: var(--brown);
+            background: rgba(255,255,255,.6);
+
+            transition: .25s ease;
+        }
+
+        .main-link:hover {
+            color: white;
+            background: var(--brown);
+        }
+
+        /* =========================
+           MENU MỤC
+        ========================= */
+
+        .section-nav {
+            position: fixed;
+
+            top: 70px;
+            left: 0;
+
+            width: 100%;
+            height: 58px;
+
+            z-index: 999;
+
+            display: flex;
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 0 5vw;
+
+            background: rgba(247,241,232,.97);
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid var(--line);
+
+            overflow-x: auto;
+            white-space: nowrap;
+
+            scrollbar-width: none;
+        }
+
+        .section-nav::-webkit-scrollbar {
+            display: none;
+        }
+
+        .section-nav a {
+            flex: 0 0 auto;
+
+            padding: 7px 13px;
+
+            border-radius: 999px;
+
+            font-size: 12px;
+            font-weight: 600;
+
+            color: var(--muted);
+
+            transition: .25s ease;
+        }
+
+        .section-nav a:hover,
+        .section-nav a.active {
+            color: white;
+            background: var(--brown);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 720px;
+
+            padding: 190px 6vw 100px;
+
+            display: flex;
+            align-items: flex-end;
+
+            position: relative;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(31,24,19,.90),
+                    rgba(31,24,19,.18) 65%,
+                    rgba(31,24,19,.05)
+                ),
+                url("https://i.ex-cdn.com/nongnghiepmoitruong.vn/files/cuongvv/2020/11/06/pho-di-bo-ky-lua2-230712_686.jpg")
+                center / cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            color: white;
+        }
+
+        .eyebrow {
+            display: inline-block;
+
+            margin-bottom: 20px;
+
+            font-size: 12px;
+            font-weight: 800;
+
+            letter-spacing: .14em;
+            text-transform: uppercase;
+
+            color: #ead5ad;
+        }
+
+        .hero h1 {
+            font-family: "DM Serif Display", serif;
+
+            font-size: clamp(55px, 9vw, 110px);
+
+            line-height: .95;
+
+            font-weight: 400;
+
+            letter-spacing: -.03em;
+
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 730px;
+
+            font-size: 16px;
+
+            color: rgba(255,255,255,.88);
+        }
+
+        .hero-tags {
+            margin-top: 28px;
+
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 10px;
+        }
+
+        .hero-tag {
+            padding: 8px 13px;
+
+            border: 1px solid rgba(255,255,255,.28);
+
+            border-radius: 999px;
+
+            background: rgba(255,255,255,.08);
+
+            backdrop-filter: blur(8px);
+
+            font-size: 12px;
+
+            color: rgba(255,255,255,.92);
+        }
+
+        /* =========================
+           KHUNG CHUNG
+        ========================= */
+
+        main {
+            width: min(1180px, 90%);
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 105px 0;
+            scroll-margin-top: 130px;
+        }
+
+        .section-head {
+            display: grid;
+
+            grid-template-columns: 260px 1fr;
+
+            gap: 50px;
+
+            margin-bottom: 48px;
+        }
+
+        .section-number {
+            font-size: 13px;
+
+            font-weight: 800;
+
+            letter-spacing: .15em;
+
+            text-transform: uppercase;
+
+            color: var(--gold);
+        }
+
+        .section-head h2 {
+            font-family: "DM Serif Display", serif;
+
+            font-size: clamp(38px, 5vw, 62px);
+
+            line-height: 1.05;
+
+            font-weight: 400;
+
+            color: var(--brown-dark);
+
+            margin-bottom: 18px;
+        }
+
+        .section-head p {
+            max-width: 760px;
+            color: var(--muted);
+        }
+
+        /* =========================
+           TỔNG QUAN
+        ========================= */
+
+        .overview-grid {
+            display: grid;
+
+            grid-template-columns: 1.08fr .92fr;
+
+            gap: 55px;
+
+            align-items: start;
+        }
+
+        .overview-image {
+            position: relative;
+
+            min-height: 540px;
+
+            overflow: hidden;
+
+            border-radius: 26px;
+
+            background: #ddd1c1;
+
+            box-shadow: var(--shadow);
+        }
+
+        .overview-image img {
+            width: 100%;
+            height: 540px;
+
+            object-fit: cover;
+        }
+
+        .overview-source {
+            position: absolute;
+
+            left: 16px;
+            bottom: 16px;
+
+            padding: 7px 11px;
+
+            border-radius: 8px;
+
+            background: rgba(31,24,19,.72);
+
+            backdrop-filter: blur(8px);
+
+            color: rgba(255,255,255,.92);
+
+            font-size: 11px;
+
+            line-height: 1.4;
+        }
+
+        .overview-text h3 {
+            font-family: "DM Serif Display", serif;
+
+            font-size: 37px;
+
+            line-height: 1.1;
+
+            font-weight: 400;
+
+            color: var(--brown-dark);
+
+            margin-bottom: 20px;
+        }
+
+        .overview-text p {
+            color: var(--muted);
+
+            margin-bottom: 18px;
+        }
+
+        .highlight {
+            margin-top: 30px;
+
+            padding: 25px;
+
+            border-left: 3px solid var(--gold);
+
+            border-radius: 0 16px 16px 0;
+
+            background: var(--paper-2);
+        }
+
+        .highlight strong {
+            display: block;
+
+            color: var(--brown-dark);
+
+            margin-bottom: 7px;
+        }
+
+        /* =========================
+           THÔNG TIN NHANH
+        ========================= */
+
+        .quick-info {
+            margin-top: 55px;
+        }
+
+        .quick-title {
+            margin-bottom: 20px;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            letter-spacing: .12em;
+
+            text-transform: uppercase;
+
+            color: var(--brown);
+        }
+
+        .info-grid {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 14px;
+        }
+
+        .info-card {
+            padding: 22px;
+
+            border: 1px solid var(--line);
+
+            border-radius: 17px;
+
+            background: var(--paper);
+        }
+
+        .info-card small {
+            display: block;
+
+            margin-bottom: 5px;
+
+            font-size: 11px;
+
+            color: var(--muted);
+
+            text-transform: uppercase;
+
+            letter-spacing: .08em;
+        }
+
+        .info-card strong {
+            display: block;
+
+            font-size: 14px;
+
+            line-height: 1.45;
+
+            color: var(--brown-dark);
+        }
+
+        /* =========================
+           TIMELINE
+        ========================= */
+
+        .timeline {
+            position: relative;
+
+            padding-left: 38px;
+        }
+
+        .timeline::before {
+            content: "";
+
+            position: absolute;
+
+            left: 7px;
+
+            top: 5px;
+            bottom: 5px;
+
+            width: 1px;
+
+            background: var(--line);
+        }
+
+        .timeline-item {
+            position: relative;
+
+            padding-bottom: 38px;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: "";
+
+            position: absolute;
+
+            left: -36px;
+            top: 7px;
+
+            width: 14px;
+            height: 14px;
+
+            border-radius: 50%;
+
+            background: var(--bg);
+
+            border: 3px solid var(--gold);
+        }
+
+        .timeline-year {
+            margin-bottom: 5px;
+
+            font-size: 13px;
+
+            font-weight: 800;
+
+            color: var(--gold);
+        }
+
+        .timeline-item h3 {
+            margin-bottom: 8px;
+
+            font-size: 20px;
+
+            color: var(--brown-dark);
+        }
+
+        .timeline-item p {
+            color: var(--muted);
+        }
+
+        /* =========================
+           CONTENT 2 CỘT
+        ========================= */
+
+        .content-grid {
+            display: grid;
+
+            grid-template-columns: .95fr 1.05fr;
+
+            gap: 55px;
+
+            align-items: center;
+        }
+
+        .content-grid.reverse {
+            grid-template-columns: 1.05fr .95fr;
+        }
+
+        .content-grid img {
+            width: 100%;
+
+            height: 420px;
+
+            object-fit: cover;
+
+            border-radius: 22px;
+
+            box-shadow: var(--shadow);
+        }
+
+        .content-title {
+            font-family: "DM Serif Display", serif;
+
+            font-size: 38px;
+
+            line-height: 1.1;
+
+            font-weight: 400;
+
+            color: var(--brown-dark);
+
+            margin-bottom: 20px;
+        }
+
+        .content-text p {
+            color: var(--muted);
+
+            margin-bottom: 17px;
+        }
+
+        .quote {
+            margin-top: 25px;
+
+            padding: 20px 22px;
+
+            border-radius: 14px;
+
+            background: var(--paper-2);
+
+            color: var(--brown);
+
+            font-size: 14px;
+        }
+
+        /* =========================
+           THẺ HOẠT ĐỘNG
+        ========================= */
+
+        .activity-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+        .activity-card {
+            min-height: 235px;
+
+            padding: 27px;
+
+            border: 1px solid var(--line);
+
+            border-radius: 20px;
+
+            background: var(--paper);
+
+            transition: .25s ease;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow: var(--shadow);
+        }
+
+        .activity-index {
+            width: 38px;
+            height: 38px;
+
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 23px;
+
+            border-radius: 50%;
+
+            background: var(--paper-2);
+
+            color: var(--brown);
+
+            font-size: 12px;
+
+            font-weight: 800;
+        }
+
+        .activity-card h3 {
+            font-size: 19px;
+
+            margin-bottom: 10px;
+
+            color: var(--brown-dark);
+        }
+
+        .activity-card p {
+            color: var(--muted);
+
+            font-size: 14px;
+        }
+
+        /* =========================
+           ÁNH SÁNG
+        ========================= */
+
+        .lantern-box {
+            padding: 43px;
+
+            border-radius: 25px;
+
+            background: var(--brown-dark);
+
+            color: white;
+        }
+
+        .lantern-box h2 {
+            font-family: "DM Serif Display", serif;
+
+            font-size: 43px;
+
+            line-height: 1.08;
+
+            font-weight: 400;
+
+            margin-bottom: 18px;
+        }
+
+        .lantern-box > p {
+            max-width: 850px;
+
+            color: rgba(255,255,255,.76);
+        }
+
+        .lantern-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 15px;
+
+            margin-top: 35px;
+        }
+
+        .lantern-card {
+            padding: 21px;
+
+            border: 1px solid rgba(255,255,255,.12);
+
+            border-radius: 15px;
+
+            background: rgba(255,255,255,.055);
+        }
+
+        .lantern-card strong {
+            display: block;
+
+            margin-bottom: 7px;
+
+            color: #e9d2a8;
+
+            font-size: 15px;
+        }
+
+        .lantern-card span {
+            display: block;
+
+            color: rgba(255,255,255,.67);
+
+            font-size: 13px;
+        }
+
+        /* =========================
+           ẨM THỰC
+        ========================= */
+
+        .food-grid {
+            display: grid;
+
+            grid-template-columns: .9fr 1.1fr;
+
+            gap: 55px;
+
+            align-items: center;
+        }
+
+        .food-image {
+            position: relative;
+
+            overflow: hidden;
+
+            border-radius: 24px;
+
+            box-shadow: var(--shadow);
+
+            background: #ddd1c1;
+        }
+
+        .food-image img {
+            width: 100%;
+
+            height: 480px;
+
+            object-fit: cover;
+
+            transition: transform .5s ease;
+        }
+
+        .food-image:hover img {
+            transform: scale(1.03);
+        }
+
+        .food-source {
+            position: absolute;
+
+            left: 16px;
+            bottom: 16px;
+
+            padding: 7px 11px;
+
+            border-radius: 8px;
+
+            background: rgba(31,24,19,.72);
+
+            backdrop-filter: blur(8px);
+
+            color: rgba(255,255,255,.92);
+
+            font-size: 11px;
+        }
+
+        .food-text h3 {
+            font-family: "DM Serif Display", serif;
+
+            font-size: 41px;
+
+            line-height: 1.08;
+
+            font-weight: 400;
+
+            color: var(--brown-dark);
+
+            margin-bottom: 20px;
+        }
+
+        .food-text p {
+            color: var(--muted);
+
+            margin-bottom: 17px;
+        }
+
+        .food-list {
+            margin-top: 25px;
+        }
+
+        .food-item {
+            display: flex;
+
+            gap: 14px;
+
+            align-items: flex-start;
+
+            padding: 13px 0;
+
+            border-bottom: 1px solid var(--line);
+        }
+
+        .food-item:last-child {
+            border-bottom: none;
+        }
+
+        .food-dot {
+            width: 9px;
+            height: 9px;
+
+            margin-top: 9px;
+
+            flex: 0 0 auto;
+
+            border-radius: 50%;
+
+            background: var(--gold);
+        }
+
+        .food-item span {
+            color: var(--brown);
+
+            font-size: 14px;
+        }
+
+        /* =========================
+           MUA SẮM
+        ========================= */
+
+        .commerce-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 18px;
+        }
+
+        .commerce-card {
+            padding: 32px;
+
+            border-radius: 21px;
+
+            border: 1px solid var(--line);
+
+            background: var(--paper);
+        }
+
+        .commerce-card h3 {
+            font-family: "DM Serif Display", serif;
+
+            font-size: 31px;
+
+            font-weight: 400;
+
+            line-height: 1.1;
+
+            color: var(--brown-dark);
+
+            margin-bottom: 15px;
+        }
+
+        .commerce-card p {
+            color: var(--muted);
+
+            font-size: 14px;
+        }
+
+        /* =========================
+           GIÁ TRỊ
+        ========================= */
+
+        .value-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+        .value-card {
+            min-height: 215px;
+
+            padding: 27px;
+
+            background: var(--paper);
+
+            border: 1px solid var(--line);
+
+            border-radius: 20px;
+
+            transition: .25s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow: var(--shadow);
+        }
+
+        .value-index {
+            width: 36px;
+            height: 36px;
+
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 24px;
+
+            border-radius: 50%;
+
+            background: var(--paper-2);
+
+            color: var(--brown);
+
+            font-size: 12px;
+
+            font-weight: 800;
+        }
+
+        .value-card h3 {
+            margin-bottom: 9px;
+
+            font-size: 18px;
+
+            color: var(--brown-dark);
+        }
+
+        .value-card p {
+            color: var(--muted);
+
+            font-size: 14px;
+        }
+
+        /* =========================
+           BẢO TỒN
+        ========================= */
+
+        .conservation {
+            padding: 45px;
+
+            border-radius: 25px;
+
+            background: var(--brown-dark);
+
+            color: white;
+        }
+
+        .conservation h2 {
+            font-family: "DM Serif Display", serif;
+
+            font-size: 42px;
+
+            line-height: 1.1;
+
+            font-weight: 400;
+
+            margin-bottom: 18px;
+        }
+
+        .conservation > p {
+            max-width: 850px;
+
+            color: rgba(255,255,255,.77);
+        }
+
+        .conservation-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 15px;
+
+            margin-top: 35px;
+        }
+
+        .conservation-card {
+            padding: 20px;
+
+            border: 1px solid rgba(255,255,255,.12);
+
+            border-radius: 15px;
+
+            background: rgba(255,255,255,.055);
+        }
+
+        .conservation-card strong {
+            display: block;
+
+            margin-bottom: 7px;
+
+            color: #e9d2a8;
+
+            font-size: 15px;
+        }
+
+        .conservation-card span {
+            display: block;
+
+            color: rgba(255,255,255,.66);
+
+            font-size: 13px;
+        }
+
+        /* =========================
+           GALLERY
+        ========================= */
+
+        .gallery {
+            display: grid;
+
+            grid-template-columns: repeat(12, 1fr);
+
+            gap: 16px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+
+            border-radius: 18px;
+
+            background: #ddd1c1;
+        }
+
+        .gallery-item:nth-child(1) {
+            grid-column: span 7;
+        }
+
+        .gallery-item:nth-child(2) {
+            grid-column: span 5;
+        }
+
+        .gallery-item:nth-child(3) {
+            grid-column: span 4;
+        }
+
+        .gallery-item:nth-child(4) {
+            grid-column: span 4;
+        }
+
+        .gallery-item:nth-child(5) {
+            grid-column: span 4;
+        }
+
+        .gallery-item img {
+            height: 310px;
+
+            object-fit: cover;
+
+            transition: transform .5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.045);
+        }
+
+        .image-label {
+            padding: 10px 13px;
+
+            background: var(--paper);
+
+            color: var(--muted);
+
+            font-size: 11px;
+        }
+
+        /* =========================
+           NGUỒN
+        ========================= */
+
+        .source-box {
+            padding: 32px;
+
+            border: 1px solid var(--line);
+
+            border-radius: 20px;
+
+            background: var(--paper);
+        }
+
+        .source-box h3 {
+            font-family: "DM Serif Display", serif;
+
+            font-size: 34px;
+
+            font-weight: 400;
+
+            color: var(--brown-dark);
+
+            margin-bottom: 20px;
+        }
+
+        .source-box a {
+            display: block;
+
+            padding: 9px 0;
+
+            border-bottom: 1px solid var(--line);
+
+            color: var(--brown);
+
+            font-size: 14px;
+        }
+
+        .source-box a:last-child {
+            border-bottom: none;
+        }
+
+        .source-box a:hover {
+            color: var(--gold);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            margin-top: 30px;
+
+            padding: 60px 5vw;
+
+            text-align: center;
+
+            background: var(--brown-dark);
+
+            color: rgba(255,255,255,.72);
+        }
+
+        footer strong {
+            display: block;
+
+            margin-bottom: 8px;
+
+            font-family: "DM Serif Display", serif;
+
+            font-size: 28px;
+
+            font-weight: 400;
+
+            color: white;
+        }
+
+        footer span {
+            font-size: 12px;
+        }
+
+        /* =========================
+           NÚT QUAY LẠI
+        ========================= */
+
+        .back-button {
+            position: fixed;
+
+            right: 22px;
+            bottom: 22px;
+
+            z-index: 1001;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            padding: 12px 17px;
+
+            border-radius: 999px;
+
+            background: var(--brown-dark);
+
+            color: white;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,.16);
+
+            font-size: 12px;
+
+            font-weight: 700;
+
+            transition: .25s ease;
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px);
+
+            background: var(--brown);
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .section-head,
+            .overview-grid,
+            .content-grid,
+            .content-grid.reverse,
+            .food-grid {
+                grid-template-columns: 1fr;
+
+                gap: 30px;
+            }
+
+            .section-head {
+                margin-bottom: 35px;
+            }
+
+            .info-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .activity-grid,
+            .lantern-grid,
+            .commerce-grid,
+            .value-grid,
+            .conservation-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .overview-image,
+            .overview-image img {
+                min-height: 420px;
+
+                height: 420px;
+            }
+
+            .food-image img {
+                height: 420px;
+            }
+
+            .hero {
+                min-height: 650px;
+            }
+        }
+
+        @media (max-width: 620px) {
+
+            html {
+                scroll-padding-top: 120px;
+            }
+
+            .topbar {
+                height: 62px;
+
+                padding: 0 5%;
+            }
+
+            .logo {
+                font-size: 17px;
+            }
+
+            .main-link {
+                padding: 8px 13px;
+
+                font-size: 12px;
+            }
+
+            .section-nav {
+                top: 62px;
+
+                height: 56px;
+
+                padding: 0 5%;
+            }
+
+            .hero {
+                min-height: 610px;
+
+                padding: 170px 6% 70px;
+            }
+
+            .hero h1 {
+                font-size: 57px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            section {
+                padding: 80px 0;
+            }
+
+            .section-head h2 {
+                font-size: 42px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .overview-image,
+            .overview-image img {
+                min-height: 350px;
+
+                height: 350px;
+            }
+
+            .food-image img {
+                height: 350px;
+            }
+
+            .content-grid img {
+                height: 320px;
+            }
+
+            .lantern-box,
+            .conservation {
+                padding: 28px;
+            }
+
+            .lantern-box h2,
+            .conservation h2 {
+                font-size: 35px;
+            }
+
+            .food-text h3 {
+                font-size: 36px;
+            }
+
+            .gallery {
+                display: grid;
+
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item:nth-child(n) {
+                grid-column: auto;
+            }
+
+            .gallery-item img {
+                height: 270px;
+            }
+
+            .back-button {
+                right: 15px;
+
+                bottom: 15px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- ==================================================
+         MENU CHÍNH
+    ================================================== -->
+
+    <header class="topbar">
+
+        <a
+            href="./danhlamthangcanh.html"
+            class="logo"
+        >
+            LẠNG SƠN
+        </a>
+
+
+        <a
+            href="./danhlamthangcanh.html"
+            class="main-link"
+        >
+            Danh thắng
+        </a>
+
+    </header>
+
+
+
+    <!-- ==================================================
+         MENU MỤC
+    ================================================== -->
+
+    <nav class="section-nav">
+
+        <a href="#tong-quan">
+            Tổng quan
+        </a>
+
+        <a href="#lich-su">
+            Lịch sử
+        </a>
+
+        <a href="#khong-gian">
+            Không gian
+        </a>
+
+        <a href="#hoat-dong">
+            Hoạt động
+        </a>
+
+        <a href="#den-long">
+            Ánh sáng
+        </a>
+
+        <a href="#am-thuc">
+            Ẩm thực
+        </a>
+
+        <a href="#mua-sam">
+            Mua sắm
+        </a>
+
+        <a href="#gia-tri">
+            Giá trị
+        </a>
+
+        <a href="#bao-ton">
+            Bảo tồn
+        </a>
+
+        <a href="#hinh-anh">
+            Hình ảnh
+        </a>
+
+        <a href="#nguon">
+            Nguồn
+        </a>
+
+    </nav>
+
+
+
+    <!-- ==================================================
+         HERO
+    ================================================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                Không gian văn hóa · du lịch đô thị
+            </div>
+
+
+            <h1>
+                Phố đi bộ Kỳ Lừa
+            </h1>
+
+
+            <p>
+                Không gian đi bộ giữa trung tâm Lạng Sơn,
+                nơi kết hợp văn hóa truyền thống, ẩm thực,
+                mua sắm, vui chơi và các hoạt động nghệ thuật
+                đường phố.
+            </p>
+
+
+            <div class="hero-tags">
+
+                <span class="hero-tag">
+                    Khai trương · 16/10/2020
+                </span>
+
+                <span class="hero-tag">
+                    Phường Kỳ Lừa · Lạng Sơn
+                </span>
+
+                <span class="hero-tag">
+                    Không gian khoảng 1.300 m
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <main>
+
+
+        <!-- ==================================================
+             01 TỔNG QUAN
+        ================================================== -->
+
+        <section id="tong-quan">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    01 · Tổng quan
+                </div>
+
+
+                <div>
+
+                    <h2>
+                        Một không gian sống động giữa phố Lạng Sơn
+                    </h2>
+
+
+                    <p>
+                        Phố đi bộ Kỳ Lừa được xây dựng nhằm khai thác
+                        thế mạnh về du lịch, thương mại và dịch vụ,
+                        đồng thời tạo một không gian văn hóa, vui chơi
+                        cho người dân và du khách.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="overview-grid">
+
+
+                <div class="overview-image">
+
+                    <img
+                        src="https://img.baobacninhtv.vn/Medias/2020/10/17/07/20201017073407-dl.jpg"
+                        alt="Phố đi bộ Kỳ Lừa Lạng Sơn"
+                        onerror="
+                            this.onerror=null;
+                            this.src='https://i.ex-cdn.com/nongnghiepmoitruong.vn/files/cuongvv/2020/11/06/pho-di-bo-ky-lua-3-230759_617.jpg';
+                        "
+                    >
+
+
+                    <div class="overview-source">
+                        Nguồn ảnh: tư liệu báo chí
+                    </div>
+
+                </div>
+
+
+
+                <div class="overview-text">
+
+                    <h3>
+                        Từ khu chợ truyền thống đến phố đi bộ hiện đại
+                    </h3>
+
+
+                    <p>
+                        Phố đi bộ Kỳ Lừa nằm trong khu vực trung tâm
+                        Lạng Sơn, gắn với chợ Kỳ Lừa và những tuyến phố
+                        có lịch sử lâu đời.
+                    </p>
+
+
+                    <p>
+                        Không gian được đưa vào hoạt động từ năm 2020,
+                        trở thành nơi tổ chức các chương trình văn hóa,
+                        vui chơi, thương mại và giới thiệu sản vật
+                        địa phương.
+                    </p>
+
+
+                    <p>
+                        Vào buổi tối, hệ thống ánh sáng, các gian hàng,
+                        sân khấu và hoạt động đường phố tạo nên
+                        một diện mạo nhộn nhịp cho khu vực Kỳ Lừa.
+                    </p>
+
+
+                    <div class="highlight">
+
+                        <strong>
+                            Điểm đặc trưng
+                        </strong>
+
+                        Phố đi bộ không chỉ là nơi để đi bộ mà còn
+                        là không gian kết nối giữa văn hóa, thương mại,
+                        ẩm thực và đời sống cộng đồng của Xứ Lạng.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="quick-info">
+
+                <div class="quick-title">
+                    Thông tin nhanh
+                </div>
+
+
+                <div class="info-grid">
+
+
+                    <div class="info-card">
+
+                        <small>
+                            Tên
+                        </small>
+
+                        <strong>
+                            Phố đi bộ Kỳ Lừa
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="info-card">
+
+                        <small>
+                            Vị trí
+                        </small>
+
+                        <strong>
+                            Phường Kỳ Lừa, tỉnh Lạng Sơn
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="info-card">
+
+                        <small>
+                            Khai trương
+                        </small>
+
+                        <strong>
+                            16/10/2020
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="info-card">
+
+                        <small>
+                            Quy mô ban đầu
+                        </small>
+
+                        <strong>
+                            Khoảng 1.300 m
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="info-card">
+
+                        <small>
+                            Gắn với
+                        </small>
+
+                        <strong>
+                            Chợ Kỳ Lừa
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="info-card">
+
+                        <small>
+                            Không gian
+                        </small>
+
+                        <strong>
+                            Văn hóa · đi bộ · thương mại
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="info-card">
+
+                        <small>
+                            Trải nghiệm
+                        </small>
+
+                        <strong>
+                            Ẩm thực · mua sắm · vui chơi
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="info-card">
+
+                        <small>
+                            Hoạt động
+                        </small>
+
+                        <strong>
+                            Văn nghệ · trò chơi · sự kiện
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             02 LỊCH SỬ
+        ================================================== -->
+
+        <section id="lich-su">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    02 · Lịch sử
+                </div>
+
+
+                <div>
+
+                    <h2>
+                        Từ ý tưởng đến không gian văn hóa mới
+                    </h2>
+
+
+                    <p>
+                        Sự hình thành phố đi bộ nằm trong định hướng
+                        phát triển du lịch, thương mại và dịch vụ
+                        của khu vực trung tâm Lạng Sơn.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="timeline">
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-year">
+                        Trước năm 2020
+                    </div>
+
+                    <h3>
+                        Khu vực chợ và phố Kỳ Lừa
+                    </h3>
+
+                    <p>
+                        Kỳ Lừa vốn là khu vực thương mại, buôn bán
+                        lâu đời và giữ vai trò quan trọng trong
+                        đời sống đô thị Lạng Sơn.
+                    </p>
+
+                </div>
+
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-year">
+                        Năm 2020
+                    </div>
+
+                    <h3>
+                        Triển khai xây dựng phố đi bộ
+                    </h3>
+
+                    <p>
+                        Thành phố triển khai không gian phố đi bộ
+                        nhằm tạo thêm một điểm sinh hoạt văn hóa
+                        và vui chơi cho người dân, đồng thời thu hút
+                        khách du lịch.
+                    </p>
+
+                </div>
+
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-year">
+                        16/10/2020
+                    </div>
+
+                    <h3>
+                        Chính thức khai trương
+                    </h3>
+
+                    <p>
+                        Phố đi bộ Kỳ Lừa chính thức được khai trương,
+                        thu hút đông đảo người dân và du khách trong
+                        những ngày đầu hoạt động.
+                    </p>
+
+                </div>
+
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-year">
+                        Sau khi khai trương
+                    </div>
+
+                    <h3>
+                        Từng bước hình thành không gian cuối tuần
+                    </h3>
+
+                    <p>
+                        Nhiều chương trình văn nghệ, trò chơi,
+                        hoạt động thương mại và giới thiệu sản vật
+                        địa phương được tổ chức tại phố.
+                    </p>
+
+                </div>
+
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-year">
+                        Hiện nay
+                    </div>
+
+                    <h3>
+                        Điểm hẹn văn hóa – du lịch
+                    </h3>
+
+                    <p>
+                        Phố đi bộ tiếp tục được sử dụng cho những
+                        hoạt động văn hóa, du lịch, vui chơi và
+                        giới thiệu sản phẩm địa phương.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             03 KHÔNG GIAN
+        ================================================== -->
+
+        <section id="khong-gian">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    03 · Không gian
+                </div>
+
+
+                <div>
+
+                    <h2>
+                        Những tuyến phố kết nối với Kỳ Lừa
+                    </h2>
+
+
+                    <p>
+                        Không gian phố đi bộ được tổ chức trên
+                        nhiều tuyến đường quanh khu vực chợ Kỳ Lừa.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="content-grid">
+
+
+                <div class="content-text">
+
+                    <h3 class="content-title">
+                        Không gian đi bộ giữa khu phố trung tâm
+                    </h3>
+
+
+                    <p>
+                        Giai đoạn đầu, phố đi bộ được tổ chức trên
+                        các tuyến Lê Lai, Lương Văn Tri, Trần Quốc Toản,
+                        Bắc Sơn và khu vực xung quanh chợ Kỳ Lừa.
+                    </p>
+
+
+                    <p>
+                        Cách tổ chức này tạo nên một mạng lưới không gian
+                        mở, liên kết các điểm kinh doanh, khu vui chơi,
+                        hàng quán và sân khấu.
+                    </p>
+
+
+                    <p>
+                        Không gian thay đổi rõ rệt giữa ban ngày và
+                        buổi tối: ban ngày mang diện mạo của khu phố
+                        thương mại, còn buổi tối trở thành nơi dành
+                        nhiều hơn cho người đi bộ và trải nghiệm du lịch.
+                    </p>
+
+
+                    <div class="quote">
+                        Phố đi bộ tận dụng chính không gian đô thị
+                        quen thuộc để tạo thành một điểm đến văn hóa
+                        về đêm.
+                    </div>
+
+                </div>
+
+
+
+                <img
+                    src="https://i.ex-cdn.com/nongnghiepmoitruong.vn/files/cuongvv/2020/11/06/pho-di-bo-ky-lua-3-230759_617.jpg"
+                    alt="Không gian Phố đi bộ Kỳ Lừa"
+                    onerror="
+                        this.onerror=null;
+                        this.src='https://img.baobacninhtv.vn/Medias/2020/10/17/07/20201017073407-dl.jpg';
+                    "
+                >
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             04 HOẠT ĐỘNG
+        ================================================== -->
+
+        <section id="hoat-dong">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    04 · Hoạt động
+                </div>
+
+
+                <div>
+
+                    <h2>
+                        Một khu phố luôn có chuyển động
+                    </h2>
+
+
+                    <p>
+                        Hoạt động tại phố đi bộ tập trung vào trải nghiệm
+                        văn hóa, vui chơi, nghệ thuật và giao lưu cộng đồng.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="activity-grid">
+
+
+                <div class="activity-card">
+
+                    <div class="activity-index">
+                        01
+                    </div>
+
+                    <h3>
+                        Biểu diễn nghệ thuật
+                    </h3>
+
+                    <p>
+                        Các chương trình văn nghệ, biểu diễn và hoạt động
+                        nghệ thuật góp phần tạo không khí sôi động cho
+                        phố vào những buổi tối.
+                    </p>
+
+                </div>
+
+
+
+                <div class="activity-card">
+
+                    <div class="activity-index">
+                        02
+                    </div>
+
+                    <h3>
+                        Trò chơi dân gian
+                    </h3>
+
+                    <p>
+                        Một số trò chơi truyền thống được đưa vào
+                        các chương trình cộng đồng để người dân
+                        và du khách cùng tham gia.
+                    </p>
+
+                </div>
+
+
+
+                <div class="activity-card">
+
+                    <div class="activity-index">
+                        03
+                    </div>
+
+                    <h3>
+                        Hoạt động cộng đồng
+                    </h3>
+
+                    <p>
+                        Các chương trình theo chủ đề tạo cơ hội
+                        giao lưu giữa người dân địa phương
+                        và khách tham quan.
+                    </p>
+
+                </div>
+
+
+
+                <div class="activity-card">
+
+                    <div class="activity-index">
+                        04
+                    </div>
+
+                    <h3>
+                        Chụp ảnh
+                    </h3>
+
+                    <p>
+                        Ánh sáng, đèn trang trí và không gian đường phố
+                        tạo nhiều góc hình đặc trưng cho phố đêm.
+                    </p>
+
+                </div>
+
+
+
+                <div class="activity-card">
+
+                    <div class="activity-index">
+                        05
+                    </div>
+
+                    <h3>
+                        Khám phá phố đêm
+                    </h3>
+
+                    <p>
+                        Du khách có thể đi bộ, ngắm cảnh, tham quan
+                        cửa hàng và trải nghiệm nhịp sống về đêm.
+                    </p>
+
+                </div>
+
+
+
+                <div class="activity-card">
+
+                    <div class="activity-index">
+                        06
+                    </div>
+
+                    <h3>
+                        Sự kiện theo mùa
+                    </h3>
+
+                    <p>
+                        Phố đi bộ còn được sử dụng để tổ chức những
+                        sự kiện văn hóa, lễ hội và chương trình
+                        đặc biệt theo từng thời điểm trong năm.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             05 ÁNH SÁNG
+        ================================================== -->
+
+        <section id="den-long">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    05 · Ánh sáng
+                </div>
+
+
+                <div>
+
+                    <h2>
+                        Sắc màu của phố khi thành phố lên đèn
+                    </h2>
+
+
+                    <p>
+                        Hệ thống chiếu sáng và trang trí giúp tạo
+                        diện mạo riêng cho phố đi bộ vào ban đêm.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="lantern-box">
+
+                <h2>
+                    Không gian ánh sáng nhiều màu
+                </h2>
+
+
+                <p>
+                    Khi trời tối, nhiều đoạn phố được trang trí
+                    bằng đèn lồng, ánh sáng trang trí và hệ thống
+                    chiếu sáng phục vụ các hoạt động nghệ thuật.
+                </p>
+
+
+
+                <div class="lantern-grid">
+
+
+                    <div class="lantern-card">
+
+                        <strong>
+                            Đèn lồng
+                        </strong>
+
+                        <span>
+                            Tạo nên nét nhận diện đặc trưng
+                            cho các tuyến phố.
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="lantern-card">
+
+                        <strong>
+                            Ánh sáng trang trí
+                        </strong>
+
+                        <span>
+                            Làm nổi bật các tuyến phố và khu vực
+                            hoạt động vào buổi tối.
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="lantern-card">
+
+                        <strong>
+                            Sân khấu
+                        </strong>
+
+                        <span>
+                            Phục vụ những chương trình biểu diễn
+                            và hoạt động cộng đồng.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             06 ẨM THỰC
+        ================================================== -->
+
+        <section id="am-thuc">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    06 · Ẩm thực
+                </div>
+
+
+                <div>
+
+                    <h2>
+                        Hương vị Xứ Lạng giữa phố đêm
+                    </h2>
+
+
+                    <p>
+                        Ẩm thực là một phần quan trọng của trải nghiệm
+                        tại khu vực Kỳ Lừa, đặc biệt với những món đặc sản
+                        nổi tiếng của Lạng Sơn.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="food-grid">
+
+
+                <!-- ẢNH ẨM THỰC MỚI -->
+
+                <div class="food-image">
+
+                    <img
+                        src="https://vb.1cdn.vn/2025/04/06/image.phunuonline.com.vn-fckeditor-upload-2025-20250406-images-_ky-lua-cho-dem-cua-_321743894620.jpg"
+                        alt="Vịt quay Lạng Sơn tại khu vực Kỳ Lừa"
+                        onerror="
+                            this.onerror=null;
+                            this.src='https://vnn-imgs-f.vgcloud.vn/2020/12/29/10/ky-lua-5.jpg?s=gJWZrVn2blDAp9PV9pAGbA&width=260';
+                        "
+                    >
+
+
+                    <div class="food-source">
+                        Nguồn ảnh: tư liệu báo chí
+                    </div>
+
+                </div>
+
+
+
+                <div class="food-text">
+
+                    <h3>
+                        Vịt quay và những món ngon Xứ Lạng
+                    </h3>
+
+
+                    <p>
+                        Khu vực Kỳ Lừa là nơi du khách có thể tìm
+                        thấy nhiều món ăn đặc trưng của Lạng Sơn.
+                        Đặc biệt, vịt quay lá mắc mật là một trong
+                        những món được nhắc tới nhiều khi khám phá
+                        ẩm thực Xứ Lạng.
+                    </p>
+
+
+                    <p>
+                        Các hoạt động giới thiệu ẩm thực tại phố đi bộ
+                        cũng góp phần đưa sản vật địa phương tới gần
+                        du khách hơn, kết hợp trải nghiệm ăn uống
+                        với không gian văn hóa và mua sắm.
+                    </p>
+
+
+                    <div class="food-list">
+
+
+                        <div class="food-item">
+
+                            <div class="food-dot"></div>
+
+                            <span>
+                                Vịt quay lá mắc mật
+                            </span>
+
+                        </div>
+
+
+                        <div class="food-item">
+
+                            <div class="food-dot"></div>
+
+                            <span>
+                                Lợn quay Xứ Lạng
+                            </span>
+
+                        </div>
+
+
+                        <div class="food-item">
+
+                            <div class="food-dot"></div>
+
+                            <span>
+                                Các món ăn đường phố
+                            </span>
+
+                        </div>
+
+
+                        <div class="food-item">
+
+                            <div class="food-dot"></div>
+
+                            <span>
+                                Đặc sản và sản vật địa phương
+                            </span>
+
+                        </div>
+
+
+                        <div class="food-item">
+
+                            <div class="food-dot"></div>
+
+                            <span>
+                                Đồ ăn, thức uống phục vụ khách buổi tối
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="highlight">
+
+                        <strong>
+                            Một phần không thể thiếu của phố đêm
+                        </strong>
+
+                        Ăn uống giúp kết nối trải nghiệm phố đi bộ
+                        với văn hóa địa phương, đặc sản vùng miền
+                        và không khí sinh hoạt buổi tối ở Kỳ Lừa.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             07 MUA SẮM
+        ================================================== -->
+
+        <section id="mua-sam">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    07 · Mua sắm
+                </div>
+
+
+                <div>
+
+                    <h2>
+                        Phố đi bộ và không gian thương mại
+                    </h2>
+
+
+                    <p>
+                        Hoạt động mua sắm tiếp nối truyền thống buôn bán
+                        lâu đời của khu vực Kỳ Lừa.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="commerce-grid">
+
+
+                <div class="commerce-card">
+
+                    <h3>
+                        Đặc sản địa phương
+                    </h3>
+
+                    <p>
+                        Các sản phẩm đặc trưng của Lạng Sơn có thể
+                        được giới thiệu tới người dân và khách du lịch
+                        trong không gian phố.
+                    </p>
+
+                </div>
+
+
+
+                <div class="commerce-card">
+
+                    <h3>
+                        Quà lưu niệm
+                    </h3>
+
+                    <p>
+                        Những sản phẩm nhỏ gọn, đặc sản và hàng lưu niệm
+                        giúp du khách dễ dàng mua quà sau chuyến tham quan.
+                    </p>
+
+                </div>
+
+
+
+                <div class="commerce-card">
+
+                    <h3>
+                        Cửa hàng quanh phố
+                    </h3>
+
+                    <p>
+                        Cửa hàng, hàng quán và các cơ sở kinh doanh
+                        tạo thành hệ thống dịch vụ hỗ trợ cho người đi bộ.
+                    </p>
+
+                </div>
+
+
+
+                <div class="commerce-card">
+
+                    <h3>
+                        Gắn với chợ Kỳ Lừa
+                    </h3>
+
+                    <p>
+                        Vị trí gần chợ giúp du khách kết hợp khám phá
+                        phố đi bộ với không gian thương mại truyền thống.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             08 GIÁ TRỊ
+        ================================================== -->
+
+        <section id="gia-tri">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    08 · Giá trị
+                </div>
+
+
+                <div>
+
+                    <h2>
+                        Nhiều giá trị trong một không gian
+                    </h2>
+
+
+                    <p>
+                        Phố đi bộ Kỳ Lừa góp phần tạo thêm sản phẩm
+                        du lịch về đêm và làm nổi bật văn hóa đô thị
+                        của Lạng Sơn.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="value-grid">
+
+
+                <div class="value-card">
+
+                    <div class="value-index">
+                        01
+                    </div>
+
+                    <h3>
+                        Văn hóa
+                    </h3>
+
+                    <p>
+                        Tạo không gian giới thiệu nghệ thuật,
+                        trò chơi và bản sắc địa phương.
+                    </p>
+
+                </div>
+
+
+
+                <div class="value-card">
+
+                    <div class="value-index">
+                        02
+                    </div>
+
+                    <h3>
+                        Du lịch
+                    </h3>
+
+                    <p>
+                        Bổ sung điểm trải nghiệm vào buổi tối
+                        cho hành trình khám phá Lạng Sơn.
+                    </p>
+
+                </div>
+
+
+
+                <div class="value-card">
+
+                    <div class="value-index">
+                        03
+                    </div>
+
+                    <h3>
+                        Ẩm thực
+                    </h3>
+
+                    <p>
+                        Tạo điều kiện quảng bá món ăn và đặc sản
+                        nổi tiếng của Xứ Lạng.
+                    </p>
+
+                </div>
+
+
+
+                <div class="value-card">
+
+                    <div class="value-index">
+                        04
+                    </div>
+
+                    <h3>
+                        Thương mại
+                    </h3>
+
+                    <p>
+                        Kết nối hoạt động đi bộ với hàng quán,
+                        cửa hàng và các sản phẩm địa phương.
+                    </p>
+
+                </div>
+
+
+
+                <div class="value-card">
+
+                    <div class="value-index">
+                        05
+                    </div>
+
+                    <h3>
+                        Cộng đồng
+                    </h3>
+
+                    <p>
+                        Tạo một không gian gặp gỡ và sinh hoạt
+                        chung cho người dân và du khách.
+                    </p>
+
+                </div>
+
+
+
+                <div class="value-card">
+
+                    <div class="value-index">
+                        06
+                    </div>
+
+                    <h3>
+                        Hình ảnh Lạng Sơn
+                    </h3>
+
+                    <p>
+                        Góp phần tạo nên hình ảnh một thành phố
+                        năng động và giàu bản sắc về đêm.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             09 BẢO TỒN
+        ================================================== -->
+
+        <section id="bao-ton">
+
+            <div class="conservation">
+
+                <h2>
+                    Giữ phố đi bộ hấp dẫn và văn minh
+                </h2>
+
+
+                <p>
+                    Phát triển phố đi bộ cần đi cùng với việc giữ gìn
+                    môi trường, trật tự đô thị, chất lượng dịch vụ
+                    và bản sắc văn hóa địa phương.
+                </p>
+
+
+
+                <div class="conservation-grid">
+
+
+                    <div class="conservation-card">
+
+                        <strong>
+                            Không gian
+                        </strong>
+
+                        <span>
+                            Giữ đường phố sạch đẹp và thuận tiện
+                            cho người đi bộ.
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="conservation-card">
+
+                        <strong>
+                            Văn hóa
+                        </strong>
+
+                        <span>
+                            Duy trì các chương trình phù hợp với
+                            bản sắc Xứ Lạng.
+                        </span>
+
+                    </div>
+
+
+
+                    <div class="conservation-card">
+
+                        <strong>
+                            Dịch vụ
+                        </strong>
+
+                        <span>
+                            Nâng cao chất lượng ẩm thực, hàng hóa
+                            và các dịch vụ phục vụ du khách.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             10 HÌNH ẢNH
+        ================================================== -->
+
+        <section id="hinh-anh">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    10 · Hình ảnh
+                </div>
+
+
+                <div>
+
+                    <h2>
+                        Kỳ Lừa khi thành phố lên đèn
+                    </h2>
+
+
+                    <p>
+                        Một số hình ảnh về không gian phố đêm,
+                        ánh sáng, hoạt động và khu vực ẩm thực.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="gallery">
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://i.ex-cdn.com/nongnghiepmoitruong.vn/files/cuongvv/2020/11/06/pho-di-bo-ky-lua2-230712_686.jpg"
+                        alt="Phố đi bộ Kỳ Lừa về đêm"
+                    >
+
+                    <div class="image-label">
+                        Phố đi bộ Kỳ Lừa về đêm
+                    </div>
+
+                </div>
+
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://img.baobacninhtv.vn/Medias/2020/10/17/07/20201017073407-dl.jpg"
+                        alt="Không gian Phố đi bộ Kỳ Lừa"
+                    >
+
+                    <div class="image-label">
+                        Không gian phố
+                    </div>
+
+                </div>
+
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://i.ex-cdn.com/nongnghiepmoitruong.vn/files/cuongvv/2020/11/06/pho-di-bo-ky-lua-3-230759_617.jpg"
+                        alt="Đèn trang trí tại Phố đi bộ Kỳ Lừa"
+                    >
+
+                    <div class="image-label">
+                        Ánh sáng trang trí
+                    </div>
+
+                </div>
+
+
+
+              
+                <div class="gallery-item">
+
+                    <img
+                        src="https://vnn-imgs-f.vgcloud.vn/2020/12/29/10/ky-lua-5.jpg?s=gJWZrVn2blDAp9PV9pAGbA&width=260"
+                        alt="Gian hàng ẩm thực tại Kỳ Lừa"
+                    >
+
+                    <div class="image-label">
+                        Gian hàng ẩm thực
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==================================================
+             11 NGUỒN
+        ================================================== -->
+
+        <section id="nguon">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    11 · Nguồn
+                </div>
+
+
+                <div>
+
+                    <h2>
+                        Tài liệu tham khảo
+                    </h2>
+
+
+                    <p>
+                        Nội dung được tổng hợp từ các nguồn thông tin
+                        về phố đi bộ, chợ Kỳ Lừa và ẩm thực Lạng Sơn.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="source-box">
+
+                <h3>
+                    Nguồn thông tin
+                </h3>
+
+
+                <a
+                    href="https://baolangson.vn/pho-di-bo-ky-lua-nao-nhiet-trong-ngay-khai-truong-1318316.html"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Báo và Phát thanh, Truyền hình Lạng Sơn –
+                    Phố đi bộ Kỳ Lừa náo nhiệt trong ngày khai trương
+                </a>
+
+
+                <a
+                    href="https://baotintuc.vn/van-hoa/pho-di-bo-ky-lua-chinh-thuc-hoat-dong-20201016223321944.htm"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Thông tấn xã Việt Nam / Báo Tin tức –
+                    Phố đi bộ Kỳ Lừa chính thức hoạt động
+                </a>
+
+
+                <a
+                    href="https://www.vietnamplus.vn/pho-di-bo-ky-lua-tai-thanh-pho-lang-son-chinh-thuc-hoat-dong-post669765.vnp"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    VietnamPlus –
+                    Phố đi bộ Kỳ Lừa chính thức hoạt động
+                </a>
+
+
+                <a
+                    href="https://lspa.langson.gov.vn/"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Cổng Du lịch Lạng Sơn
+                </a>
+
+
+                <a
+                    href="https://lspa.langson.gov.vn/am-thuc/vit-quay-339228"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Cổng Du lịch Lạng Sơn –
+                    Vịt quay lá mắc mật
+                </a>
+
+
+                <a
+                    href="https://thanhpho.langson.gov.vn/"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Cổng thông tin điện tử thành phố Lạng Sơn
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- ==================================================
+         FOOTER
+    ================================================== -->
+
+    <footer>
+
+        <strong>
+            Phố đi bộ Kỳ Lừa
+        </strong>
+
+
+        <span>
+            Không gian văn hóa, ẩm thực và nhịp sống về đêm của Xứ Lạng.
+        </span>
+
+    </footer>
+
+
+
+    <!-- ==================================================
+         NÚT QUAY LẠI
+    ================================================== -->
+
+    <a
+        href="./danhlamthangcanh.html"
+        class="back-button"
+    >
+        ← Quay lại danh thắng
+    </a>
+
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    ================================================== -->
+
+    <script>
+
+        const sections =
+            document.querySelectorAll("main section");
+
+
+        const navLinks =
+            document.querySelectorAll(".section-nav a");
+
+
+        const observer =
+            new IntersectionObserver(
+
+                (entries) => {
+
+                    entries.forEach((entry) => {
+
+                        if (entry.isIntersecting) {
+
+                            navLinks.forEach((link) => {
+                                link.classList.remove("active");
+                            });
+
+
+                            const active =
+                                document.querySelector(
+                                    '.section-nav a[href="#' +
+                                    entry.target.id +
+                                    '"]'
+                                );
+
+
+                            if (active) {
+                                active.classList.add("active");
+                            }
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    rootMargin: "-150px 0px -60% 0px",
+                    threshold: 0
+                }
+
+            );
+
+
+        sections.forEach((section) => {
+            observer.observe(section);
+        });
+
+
+        navLinks.forEach((link) => {
+
+            link.addEventListener("click", () => {
+
+                setTimeout(() => {
+
+                    link.scrollIntoView({
+                        behavior: "smooth",
+                        block: "nearest",
+                        inline: "center"
+                    });
+
+                }, 100);
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>

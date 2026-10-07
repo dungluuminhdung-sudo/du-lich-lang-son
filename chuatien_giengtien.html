@@ -1,0 +1,2995 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Chùa Tiên – Giếng Tiên | Lạng Sơn</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+<style>
+:root{
+    --bg:#f4efe6;
+    --paper:#fffdf8;
+    --paper-2:#eee6d9;
+    --green:#304a3a;
+    --green-dark:#22362b;
+    --green-light:#58725f;
+    --gold:#b98b4d;
+    --gold-light:#d5b477;
+    --text:#282821;
+    --muted:#706b62;
+    --line:#ddd5c7;
+    --white:#fff;
+    --shadow:0 18px 45px rgba(38,45,37,.11);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+html{
+    scroll-padding-top:135px;
+}
+
+body{
+    font-family:"Be Vietnam Pro",sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.75;
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+/* =====================================================
+   MENU CHÍNH
+===================================================== */
+
+.topbar{
+    position:fixed;
+    inset:0 0 auto 0;
+    height:70px;
+    z-index:2000;
+
+    background:rgba(255,253,248,.96);
+    backdrop-filter:blur(14px);
+
+    border-bottom:1px solid var(--line);
+}
+
+.topbar-inner{
+    width:min(1200px,100%);
+    height:100%;
+    margin:auto;
+    padding:0 24px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    color:var(--green);
+    text-decoration:none;
+
+    font-size:21px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.back-menu{
+    color:var(--green);
+    text-decoration:none;
+
+    font-size:14px;
+    font-weight:700;
+
+    border:1px solid var(--line);
+    border-radius:999px;
+
+    padding:9px 18px;
+
+    transition:.25s;
+}
+
+.back-menu:hover{
+    background:var(--green);
+    color:#fff;
+    border-color:var(--green);
+}
+
+/* =====================================================
+   THANH SECTION
+===================================================== */
+
+.section-nav{
+    position:fixed;
+    top:70px;
+    left:0;
+    width:100%;
+    height:58px;
+
+    z-index:1900;
+
+    background:var(--green);
+    box-shadow:0 6px 20px rgba(0,0,0,.14);
+}
+
+.section-nav-inner{
+    width:min(1200px,100%);
+    height:100%;
+    margin:auto;
+    padding:0 24px;
+
+    display:flex;
+    align-items:center;
+    gap:7px;
+
+    overflow-x:auto;
+    scrollbar-width:none;
+}
+
+.section-nav-inner::-webkit-scrollbar{
+    display:none;
+}
+
+.section-nav a{
+    flex:none;
+
+    padding:9px 15px;
+
+    border-radius:999px;
+
+    color:rgba(255,255,255,.70);
+    text-decoration:none;
+
+    white-space:nowrap;
+
+    font-size:12.5px;
+    font-weight:700;
+
+    transition:.25s;
+}
+
+.section-nav a:hover,
+.section-nav a.active{
+    color:#fff;
+    background:rgba(255,255,255,.16);
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+    margin-top:128px;
+    min-height:690px;
+
+    position:relative;
+    overflow:hidden;
+
+    display:flex;
+    align-items:flex-end;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(22,31,25,.03) 10%,
+            rgba(22,31,25,.22) 42%,
+            rgba(22,31,25,.87) 100%
+        ),
+        url("https://luongvantri.langson.gov.vn/upload/105842/fck/adminluongvantri/2025_10_27_03_58_0511.jpg")
+        center/cover no-repeat;
+}
+
+.hero-content{
+    width:min(1200px,100%);
+    margin:auto;
+
+    padding:100px 24px 78px;
+
+    color:#fff;
+}
+
+.hero-kicker{
+    margin-bottom:14px;
+
+    color:var(--gold-light);
+
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:4px;
+    text-transform:uppercase;
+}
+
+.hero h1{
+    max-width:950px;
+
+    font-family:"DM Serif Display",serif;
+    font-size:clamp(60px,9vw,115px);
+    font-weight:400;
+    line-height:.93;
+
+    margin-bottom:28px;
+}
+
+.hero-description{
+    max-width:760px;
+
+    color:rgba(255,255,255,.90);
+
+    font-size:17px;
+    line-height:1.8;
+}
+
+.hero-tags{
+    margin-top:28px;
+
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+}
+
+.hero-tag{
+    padding:8px 13px;
+
+    color:#fff;
+    background:rgba(255,255,255,.11);
+    border:1px solid rgba(255,255,255,.26);
+
+    border-radius:999px;
+
+    font-size:11px;
+    font-weight:700;
+
+    backdrop-filter:blur(7px);
+}
+
+/* =====================================================
+   GENERAL
+===================================================== */
+
+.container{
+    width:min(1150px,100%);
+    margin:auto;
+    padding:0 24px;
+}
+
+section{
+    padding:95px 0;
+    scroll-margin-top:138px;
+}
+
+.section-label{
+    margin-bottom:11px;
+
+    color:var(--gold);
+
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+.section-title{
+    margin-bottom:23px;
+
+    color:var(--green);
+
+    font-family:"DM Serif Display",serif;
+    font-size:clamp(39px,5vw,58px);
+    font-weight:400;
+    line-height:1.08;
+}
+
+.intro{
+    max-width:850px;
+
+    color:#575249;
+    font-size:17px;
+}
+
+.text{
+    color:#575249;
+}
+
+.text p{
+    margin-bottom:17px;
+}
+
+/* =====================================================
+   TỔNG QUAN
+===================================================== */
+
+#tong-quan{
+    background:var(--paper);
+}
+
+.overview-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:65px;
+    align-items:center;
+}
+
+.overview-image{
+    min-height:500px;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 50%,
+            rgba(0,0,0,.35)
+        ),
+        url("https://luongvantri.langson.gov.vn/upload/105842/fck/adminluongvantri/2025_10_27_03_58_058.jpg")
+        center/cover no-repeat;
+
+    box-shadow:var(--shadow);
+}
+
+.overview-image-note{
+    position:relative;
+    height:100%;
+
+    min-height:500px;
+
+    display:flex;
+    align-items:flex-end;
+
+    padding:27px;
+
+    color:#fff;
+}
+
+.overview-image-note span{
+    padding:7px 11px;
+
+    background:rgba(0,0,0,.42);
+    border-radius:999px;
+
+    font-size:10px;
+}
+
+/* =====================================================
+   THÔNG TIN NHANH - CUỐI TỔNG QUAN
+===================================================== */
+
+.quick-info{
+    margin-top:60px;
+
+    border-top:1px solid var(--line);
+}
+
+.quick-info-head{
+    padding:24px 0 17px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:end;
+    gap:20px;
+}
+
+.quick-info-head h3{
+    color:var(--green);
+
+    font-family:"DM Serif Display",serif;
+    font-size:35px;
+    font-weight:400;
+}
+
+.quick-info-head p{
+    color:var(--muted);
+    font-size:12px;
+}
+
+.info-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    border-top:1px solid var(--line);
+    border-left:1px solid var(--line);
+}
+
+.info-card{
+    padding:22px 20px;
+    min-height:135px;
+
+    border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+
+    background:var(--bg);
+}
+
+.info-card-label{
+    margin-bottom:14px;
+
+    color:var(--gold);
+
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:1.5px;
+    text-transform:uppercase;
+}
+
+.info-card strong{
+    display:block;
+
+    color:var(--green);
+
+    font-size:16px;
+    margin-bottom:5px;
+}
+
+.info-card span{
+    color:#666057;
+    font-size:12px;
+}
+
+/* =====================================================
+   LỊCH SỬ
+===================================================== */
+
+#lich-su{
+    background:#e9e1d3;
+}
+
+.timeline{
+    max-width:900px;
+    margin-top:42px;
+
+    border-left:2px solid var(--gold);
+    padding-left:33px;
+}
+
+.timeline-item{
+    position:relative;
+    margin-bottom:42px;
+}
+
+.timeline-item:last-child{
+    margin-bottom:0;
+}
+
+.timeline-item::before{
+    content:"";
+
+    position:absolute;
+    left:-42px;
+    top:7px;
+
+    width:14px;
+    height:14px;
+
+    border:3px solid var(--gold);
+    border-radius:50%;
+
+    background:var(--paper);
+}
+
+.timeline-year{
+    margin-bottom:5px;
+
+    color:var(--gold);
+
+    font-size:19px;
+    font-weight:800;
+}
+
+.timeline-item h3{
+    margin-bottom:7px;
+
+    color:var(--green);
+
+    font-size:20px;
+}
+
+.timeline-item p{
+    max-width:790px;
+
+    color:#575249;
+}
+
+/* =====================================================
+   KHÔNG GIAN KIẾN TRÚC
+===================================================== */
+
+#khong-gian{
+    background:var(--paper);
+}
+
+.space-grid{
+    display:grid;
+    grid-template-columns:.95fr 1.05fr;
+    gap:65px;
+    align-items:start;
+}
+
+.space-copy{
+    padding-top:8px;
+}
+
+.space-points{
+    margin-top:30px;
+
+    display:grid;
+    gap:12px;
+}
+
+.space-point{
+    padding:15px 18px;
+
+    background:var(--bg);
+    border-left:3px solid var(--gold);
+}
+
+.space-point strong{
+    display:block;
+
+    color:var(--green);
+
+    font-size:14px;
+    margin-bottom:3px;
+}
+
+.space-point span{
+    color:#625d54;
+    font-size:12.5px;
+}
+
+.space-facts{
+    margin-top:33px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:13px;
+}
+
+.space-fact{
+    padding:20px;
+
+    border:1px solid var(--line);
+}
+
+.space-fact strong{
+    display:block;
+
+    color:var(--green);
+    font-size:18px;
+}
+
+.space-fact span{
+    color:var(--muted);
+    font-size:12px;
+}
+
+/* =====================================================
+   ĐỘNG
+===================================================== */
+
+#dong{
+    background:var(--green);
+    color:#fff;
+}
+
+#dong .section-label{
+    color:var(--gold-light);
+}
+
+#dong .section-title{
+    color:#fff;
+}
+
+#dong .intro{
+    color:rgba(255,255,255,.72);
+}
+
+.cave-layout{
+    margin-top:42px;
+
+    display:grid;
+    grid-template-columns:1.15fr .85fr;
+    gap:18px;
+}
+
+.cave-main{
+    min-height:470px;
+
+    padding:30px;
+
+    display:flex;
+    align-items:flex-end;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 40%,
+            rgba(0,0,0,.80)
+        ),
+        url("https://luongvantri.langson.gov.vn/upload/105842/fck/adminluongvantri/2025_10_27_03_58_059.jpg")
+        center/cover no-repeat;
+}
+
+.cave-main h3{
+    margin-bottom:7px;
+
+    font-family:"DM Serif Display",serif;
+    font-size:31px;
+    font-weight:400;
+}
+
+.cave-main p{
+    max-width:570px;
+
+    color:rgba(255,255,255,.78);
+    font-size:13px;
+}
+
+.cave-side{
+    padding:31px;
+
+    background:#263d30;
+    border:1px solid rgba(255,255,255,.12);
+}
+
+.cave-side h3{
+    margin-bottom:15px;
+
+    color:var(--gold-light);
+
+    font-size:18px;
+}
+
+.cave-side p{
+    margin-bottom:16px;
+
+    color:rgba(255,255,255,.72);
+    font-size:13px;
+}
+
+.cave-note{
+    margin-top:23px;
+
+    padding-top:20px;
+
+    border-top:1px solid rgba(255,255,255,.14);
+
+    color:rgba(255,255,255,.62);
+    font-size:12px;
+}
+
+/* =====================================================
+   GIẾNG TIÊN
+===================================================== */
+
+#gieng-tien{
+    background:var(--bg);
+}
+
+.well-layout{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:65px;
+}
+
+.well-card{
+    padding:33px;
+
+    background:var(--paper);
+    border:1px solid var(--line);
+    box-shadow:var(--shadow);
+}
+
+.well-card h3{
+    margin-bottom:14px;
+
+    color:var(--green);
+
+    font-family:"DM Serif Display",serif;
+    font-size:34px;
+    font-weight:400;
+}
+
+.legend{
+    margin-top:27px;
+
+    padding:22px;
+
+    background:#eee6d9;
+    border-left:3px solid var(--gold);
+}
+
+.legend strong{
+    display:block;
+
+    color:var(--green);
+    margin-bottom:7px;
+}
+
+.legend p{
+    color:#5f5951;
+    font-size:13px;
+}
+
+.well-points{
+    margin-top:27px;
+
+    display:grid;
+    gap:10px;
+}
+
+.well-point{
+    padding:15px;
+
+    background:rgba(255,255,255,.50);
+    border:1px solid var(--line);
+
+    color:#5e584f;
+    font-size:13px;
+}
+
+/* =====================================================
+   VĂN BIA
+===================================================== */
+
+#van-bia{
+    background:var(--paper);
+}
+
+.inscription-intro{
+    display:grid;
+    grid-template-columns:.75fr 1.25fr;
+    gap:70px;
+    align-items:start;
+}
+
+.big-number{
+    color:var(--gold);
+
+    font-family:"DM Serif Display",serif;
+    font-size:145px;
+    line-height:.72;
+    opacity:.58;
+}
+
+.quote{
+    margin:18px 0 24px;
+
+    color:var(--green);
+
+    font-family:"DM Serif Display",serif;
+    font-size:36px;
+    line-height:1.3;
+}
+
+.inscription-cards{
+    margin-top:45px;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.inscription-card{
+    padding:24px;
+
+    background:var(--bg);
+    border:1px solid var(--line);
+}
+
+.inscription-card h3{
+    color:var(--green);
+    font-size:16px;
+    margin-bottom:8px;
+}
+
+.inscription-card p{
+    color:#615b53;
+    font-size:12.5px;
+}
+
+/* =====================================================
+   LỄ HỘI
+===================================================== */
+
+#le-hoi{
+    background:#e9e1d3;
+}
+
+.festival-layout{
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    gap:55px;
+    align-items:center;
+}
+
+.festival-image{
+    min-height:500px;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 35%,
+            rgba(0,0,0,.70)
+        ),
+        url("https://luongvantri.langson.gov.vn/upload/105842/fck/adminluongvantri/2025_10_27_03_58_0510.jpg")
+        center/cover no-repeat;
+
+    box-shadow:var(--shadow);
+}
+
+.festival-content{
+    padding:8px 0;
+}
+
+.date-pill{
+    display:inline-block;
+
+    margin:3px 0 22px;
+
+    padding:9px 14px;
+
+    color:#fff;
+    background:var(--green);
+
+    border-radius:999px;
+
+    font-size:12px;
+    font-weight:700;
+}
+
+.festival-list{
+    margin-top:27px;
+
+    display:grid;
+    gap:10px;
+}
+
+.festival-item{
+    padding:15px 18px;
+
+    background:var(--paper);
+    border-left:3px solid var(--gold);
+}
+
+.festival-item strong{
+    display:block;
+
+    color:var(--green);
+    margin-bottom:3px;
+
+    font-size:14px;
+}
+
+.festival-item span{
+    color:#615b53;
+    font-size:12.5px;
+}
+
+/* =====================================================
+   GIÁ TRỊ
+===================================================== */
+
+#gia-tri{
+    background:var(--green);
+    color:#fff;
+}
+
+#gia-tri .section-label{
+    color:var(--gold-light);
+}
+
+#gia-tri .section-title{
+    color:#fff;
+}
+
+.value-grid{
+    margin-top:43px;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+}
+
+.value-card{
+    min-height:240px;
+
+    padding:28px;
+
+    border:1px solid rgba(255,255,255,.15);
+    background:rgba(255,255,255,.035);
+}
+
+.value-no{
+    margin-bottom:28px;
+
+    color:var(--gold-light);
+
+    font-size:11px;
+    font-weight:800;
+    letter-spacing:1.5px;
+}
+
+.value-card h3{
+    margin-bottom:10px;
+
+    font-size:20px;
+}
+
+.value-card p{
+    color:rgba(255,255,255,.67);
+    font-size:13px;
+}
+
+/* =====================================================
+   BẢO TỒN
+===================================================== */
+
+#bao-ton{
+    background:var(--paper);
+}
+
+.conservation-grid{
+    margin-top:40px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+}
+
+.conservation-card{
+    padding:28px;
+
+    border:1px solid var(--line);
+    background:var(--bg);
+}
+
+.conservation-card h3{
+    color:var(--green);
+    margin-bottom:11px;
+}
+
+.conservation-card p{
+    color:#5d574e;
+    font-size:13px;
+    margin-bottom:12px;
+}
+
+.conservation-card p:last-child{
+    margin-bottom:0;
+}
+
+/* =====================================================
+   HÌNH ẢNH
+===================================================== */
+
+#hinh-anh{
+    background:var(--paper);
+}
+
+.gallery{
+    margin-top:42px;
+
+    display:grid;
+    grid-template-columns:repeat(12,1fr);
+    grid-auto-rows:245px;
+
+    gap:13px;
+}
+
+.gallery-item{
+    position:relative;
+    overflow:hidden;
+
+    background:#d7cec0;
+}
+
+.gallery-item:nth-child(1){
+    grid-column:span 7;
+    grid-row:span 2;
+}
+
+.gallery-item:nth-child(2){
+    grid-column:span 5;
+}
+
+.gallery-item:nth-child(3){
+    grid-column:span 5;
+}
+
+.gallery-item:nth-child(4){
+    grid-column:span 5;
+}
+
+.gallery-item:nth-child(5){
+    grid-column:span 7;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    transition:.5s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.05);
+}
+
+.gallery-caption{
+    position:absolute;
+    inset:auto 0 0 0;
+
+    padding:40px 18px 15px;
+
+    color:#fff;
+
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.78)
+    );
+}
+
+.gallery-caption strong{
+    display:block;
+    font-size:13px;
+}
+
+.gallery-caption span{
+    color:rgba(255,255,255,.70);
+    font-size:10px;
+}
+
+/* =====================================================
+   NGUỒN
+===================================================== */
+
+#nguon{
+    background:var(--bg);
+}
+
+.source-grid{
+    margin-top:38px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+}
+
+.source-card{
+    padding:27px;
+
+    border:1px solid var(--line);
+    background:var(--paper);
+}
+
+.source-card h3{
+    color:var(--green);
+    margin-bottom:9px;
+}
+
+.source-card p{
+    color:#5f5951;
+    font-size:13px;
+    margin-bottom:10px;
+}
+
+.source-card a{
+    color:var(--green);
+
+    font-weight:700;
+    text-decoration:none;
+    font-size:12px;
+}
+
+.source-card a:hover{
+    text-decoration:underline;
+}
+
+.usage-note{
+    margin-top:18px;
+    padding:18px 20px;
+
+    color:#645e55;
+    background:#eae2d5;
+
+    font-size:11px;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+    padding:48px 24px;
+
+    background:#1f2c24;
+    color:#fff;
+}
+
+.footer-inner{
+    width:min(1150px,100%);
+    margin:auto;
+
+    display:flex;
+    justify-content:space-between;
+    gap:30px;
+}
+
+.footer-logo{
+    font-size:18px;
+    font-weight:800;
+    letter-spacing:2px;
+}
+
+.footer-text{
+    color:rgba(255,255,255,.52);
+    font-size:11px;
+    text-align:right;
+}
+
+/* =====================================================
+   NÚT QUAY LẠI
+===================================================== */
+
+.back-button{
+    position:fixed;
+    right:21px;
+    bottom:21px;
+
+    width:49px;
+    height:49px;
+
+    z-index:2100;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:var(--green);
+    color:#fff;
+
+    border-radius:50%;
+
+    text-decoration:none;
+    font-size:20px;
+
+    box-shadow:0 10px 28px rgba(0,0,0,.22);
+
+    transition:.25s;
+}
+
+.back-button:hover{
+    transform:translateY(-3px);
+    background:var(--green-dark);
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:950px){
+
+    .overview-grid,
+    .space-grid,
+    .well-layout,
+    .inscription-intro,
+    .festival-layout{
+        grid-template-columns:1fr;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .cave-layout{
+        grid-template-columns:1fr;
+    }
+
+    .value-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .conservation-grid,
+    .source-grid{
+        grid-template-columns:1fr;
+    }
+
+    .inscription-cards{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .info-intro{
+        position:static;
+    }
+}
+
+@media(max-width:700px){
+
+    .topbar{
+        height:62px;
+    }
+
+    .section-nav{
+        top:62px;
+        height:55px;
+    }
+
+    .hero{
+        margin-top:117px;
+        min-height:630px;
+    }
+
+    .topbar-inner{
+        padding:0 15px;
+    }
+
+    .logo{
+        font-size:17px;
+    }
+
+    .back-menu{
+        padding:8px 12px;
+        font-size:12px;
+    }
+
+    .section-nav-inner{
+        padding:0 10px;
+    }
+
+    .section-nav a{
+        font-size:11.5px;
+        padding:8px 12px;
+    }
+
+    .hero-content{
+        padding:80px 18px 58px;
+    }
+
+    .hero h1{
+        font-size:58px;
+    }
+
+    .hero-description{
+        font-size:15px;
+    }
+
+    section{
+        padding:72px 0;
+    }
+
+    .container{
+        padding:0 18px;
+    }
+
+    .overview-image,
+    .overview-image-note,
+    .festival-image{
+        min-height:370px;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .space-facts{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .inscription-cards,
+    .value-grid{
+        grid-template-columns:1fr;
+    }
+
+    .big-number{
+        font-size:100px;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+        grid-auto-rows:250px;
+    }
+
+    .gallery-item:nth-child(n){
+        grid-column:span 1;
+        grid-row:span 1;
+    }
+
+    .footer-inner{
+        flex-direction:column;
+    }
+
+    .footer-text{
+        text-align:left;
+    }
+}
+
+@media(max-width:450px){
+
+    .space-facts{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .quick-info-head{
+        display:block;
+    }
+
+    .quick-info-head p{
+        margin-top:6px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     MENU CHÍNH
+===================================================== -->
+
+<header class="topbar">
+
+    <div class="topbar-inner">
+
+        <a href="./danhlamthangcanh.html" class="logo">
+            LẠNG SƠN
+        </a>
+
+        <a href="./danhlamthangcanh.html" class="back-menu">
+            Danh thắng
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     THANH SECTION - NHIỀU MỤC HƠN
+===================================================== -->
+
+<nav class="section-nav">
+
+    <div class="section-nav-inner">
+
+        <a href="#tong-quan" class="section-link active">
+            Tổng quan
+        </a>
+
+        <a href="#lich-su" class="section-link">
+            Lịch sử
+        </a>
+
+        <a href="#khong-gian" class="section-link">
+            Không gian
+        </a>
+
+        <a href="#dong" class="section-link">
+            Động Chùa Tiên
+        </a>
+
+        <a href="#gieng-tien" class="section-link">
+            Giếng Tiên
+        </a>
+
+        <a href="#van-bia" class="section-link">
+            Văn bia
+        </a>
+
+        <a href="#le-hoi" class="section-link">
+            Lễ hội
+        </a>
+
+        <a href="#gia-tri" class="section-link">
+            Giá trị
+        </a>
+
+        <a href="#bao-ton" class="section-link">
+            Bảo tồn
+        </a>
+
+        <a href="#hinh-anh" class="section-link">
+            Hình ảnh
+        </a>
+
+        <a href="#nguon" class="section-link">
+            Nguồn
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-kicker">
+            Danh thắng Xứ Lạng
+        </div>
+
+        <h1>
+            Chùa Tiên<br>
+            – Giếng Tiên
+        </h1>
+
+        <p class="hero-description">
+            Di tích nằm trong lòng núi Đại Tượng,
+            nơi kết hợp giữa cảnh quan hang động,
+            tín ngưỡng, văn bia và những giá trị văn hóa
+            đặc sắc của Lạng Sơn.
+        </p>
+
+        <div class="hero-tags">
+
+            <span class="hero-tag">
+                Di tích Quốc gia · 1992
+            </span>
+
+            <span class="hero-tag">
+                Núi Đại Tượng
+            </span>
+
+            <span class="hero-tag">
+                Lễ hội 18 tháng Giêng
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     01 TỔNG QUAN
+     - ẢNH Ở ĐẦU
+     - THÔNG TIN ĐẶT Ở CUỐI TỔNG QUAN
+===================================================== -->
+
+<section id="tong-quan">
+
+    <div class="container">
+
+        <div class="overview-grid">
+
+            <div class="overview-image">
+
+                <div class="overview-image-note">
+                    <span>
+                        Ảnh: Cổng TTĐT phường Lương Văn Tri
+                    </span>
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <div class="section-label">
+                    01 · Tổng quan
+                </div>
+
+                <h2 class="section-title">
+                    Một danh thắng nằm giữa lòng núi đá
+                </h2>
+
+                <div class="text">
+
+                    <p>
+                        Chùa Tiên – Giếng Tiên, còn được biết đến
+                        với tên Chùa Song Tiên, là một danh thắng
+                        nổi tiếng của Xứ Lạng.
+                    </p>
+
+                    <p>
+                        Di tích nằm trong lòng núi Đại Tượng,
+                        thuộc phố Hoàng Hoa Thám, phường Lương Văn Tri,
+                        tỉnh Lạng Sơn. Vị trí di tích cách cầu Kỳ Cùng
+                        khoảng 500 m.
+                    </p>
+
+                    <p>
+                        Không gian nơi đây kết hợp giữa thạch động,
+                        nhũ đá tự nhiên, các công trình và không gian
+                        thờ tự, Giếng Tiên, văn bia cổ cùng những
+                        câu chuyện dân gian được lưu truyền qua nhiều
+                        thế hệ.
+                    </p>
+
+                    <p>
+                        Đây cũng là một trong những địa danh từng được
+                        danh nhân Ngô Thì Sĩ ghi nhận trong
+                        “Trấn Doanh bát cảnh” – tám cảnh đẹp của Xứ Lạng.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- THÔNG TIN NHANH Ở CUỐI TỔNG QUAN -->
+
+        <div class="quick-info">
+
+            <div class="quick-info-head">
+
+                <h3>
+                    Thông tin nhanh
+                </h3>
+
+                <p>
+                    Những dữ kiện quan trọng về di tích
+                </p>
+
+            </div>
+
+
+            <div class="info-grid">
+
+                <div class="info-card">
+
+                    <div class="info-card-label">
+                        Tên gọi
+                    </div>
+
+                    <strong>
+                        Chùa Tiên – Giếng Tiên
+                    </strong>
+
+                    <span>
+                        Còn gọi là Chùa Song Tiên
+                    </span>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-card-label">
+                        Địa điểm
+                    </div>
+
+                    <strong>
+                        Phường Lương Văn Tri
+                    </strong>
+
+                    <span>
+                        Tỉnh Lạng Sơn
+                    </span>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-card-label">
+                        Hình thành
+                    </div>
+
+                    <strong>
+                        Thời Lê Hồng Đức
+                    </strong>
+
+                    <span>
+                        Khoảng 1460–1497
+                    </span>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-card-label">
+                        Xếp hạng
+                    </div>
+
+                    <strong>
+                        Di tích Quốc gia
+                    </strong>
+
+                    <span>
+                        Năm 1992
+                    </span>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-card-label">
+                        Văn bia
+                    </div>
+
+                    <strong>
+                        13 bia Ma Nhai
+                    </strong>
+
+                    <span>
+                        Khắc trên vách đá
+                    </span>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-card-label">
+                        Lễ hội
+                    </div>
+
+                    <strong>
+                        18 tháng Giêng
+                    </strong>
+
+                    <span>
+                        Âm lịch hằng năm
+                    </span>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-card-label">
+                        Không gian
+                    </div>
+
+                    <strong>
+                        Núi Đại Tượng
+                    </strong>
+
+                    <span>
+                        Thạch động, nhũ đá, ban thờ
+                    </span>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-card-label">
+                        Điểm gần kề
+                    </div>
+
+                    <strong>
+                        Hang Thủy Cung
+                    </strong>
+
+                    <span>
+                        Trong cùng khu vực danh thắng
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     02 LỊCH SỬ
+===================================================== -->
+
+<section id="lich-su">
+
+    <div class="container">
+
+        <div class="section-label">
+            02 · Lịch sử
+        </div>
+
+        <h2 class="section-title">
+            Dấu ấn qua nhiều thế kỷ
+        </h2>
+
+        <p class="intro">
+            Quá trình hình thành Chùa Tiên gắn với lịch sử,
+            văn hóa và đời sống tín ngưỡng của cộng đồng
+            Xứ Lạng qua nhiều thời kỳ.
+        </p>
+
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+                    1460–1497
+                </div>
+
+                <h3>
+                    Khởi nguyên Chùa Tiên
+                </h3>
+
+                <p>
+                    Theo các nguồn sử liệu, Chùa Tiên được lập
+                    từ thời Lê Hồng Đức. Khởi nguyên là một ngôi
+                    chùa nhỏ nằm cạnh Giếng Tiên bên sườn núi
+                    Đèo Giang – Văn Vỉ.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+                    Khoảng nửa cuối thế kỷ XVIII
+                </div>
+
+                <h3>
+                    Chùa chuyển vào động Song Tiên
+                </h3>
+
+                <p>
+                    Do ngôi chùa ban đầu bị xuống cấp,
+                    chùa được chuyển vào trong động Song Tiên
+                    thuộc núi Đại Tượng, tạo nên không gian
+                    đặc biệt của di tích ngày nay.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+                    1779
+                </div>
+
+                <h3>
+                    “Trấn Doanh bát cảnh”
+                </h3>
+
+                <p>
+                    Danh nhân Ngô Thì Sĩ ca ngợi Chùa Tiên
+                    trong bài “Trấn Doanh bát cảnh”, xếp nơi đây
+                    vào một trong tám cảnh đẹp của Xứ Lạng.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+                    1992
+                </div>
+
+                <h3>
+                    Xếp hạng di tích cấp Quốc gia
+                </h3>
+
+                <p>
+                    Chùa Tiên – Giếng Tiên được xếp hạng
+                    di tích cấp Quốc gia, ghi nhận những giá trị
+                    lịch sử, văn hóa và cảnh quan của di tích.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     03 KHÔNG GIAN
+===================================================== -->
+
+<section id="khong-gian">
+
+    <div class="container">
+
+        <div class="space-grid">
+
+            <div class="space-copy">
+
+                <div class="section-label">
+                    03 · Không gian
+                </div>
+
+                <h2 class="section-title">
+                    Con đường dẫn vào thạch động
+                </h2>
+
+                <div class="text">
+
+                    <p>
+                        Động Chùa Tiên không nằm ngay sát chân núi.
+                        Để vào khu vực chùa, du khách phải đi qua
+                        hơn 65 bậc đá uốn theo sườn núi.
+                    </p>
+
+                    <p>
+                        Cửa động nằm giữa sườn núi Đại Tượng,
+                        tạo cảm giác chuyển tiếp rõ rệt từ
+                        không gian ngoài trời vào thế giới
+                        thạch động bên trong.
+                    </p>
+
+                    <p>
+                        Đường lên được xây dựng với lan can,
+                        giúp việc di chuyển thuận tiện hơn
+                        cho khách tham quan.
+                    </p>
+
+                </div>
+
+
+                <div class="space-facts">
+
+                    <div class="space-fact">
+
+                        <strong>
+                            65+
+                        </strong>
+
+                        <span>
+                            bậc đá uốn khúc
+                        </span>
+
+                    </div>
+
+
+                    <div class="space-fact">
+
+                        <strong>
+                            Đại Tượng
+                        </strong>
+
+                        <span>
+                            núi đá chứa thạch động
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <div class="space-points">
+
+                    <div class="space-point">
+
+                        <strong>
+                            Cửa động
+                        </strong>
+
+                        <span>
+                            Nằm ở lưng chừng núi thay vì ngay chân núi.
+                        </span>
+
+                    </div>
+
+
+                    <div class="space-point">
+
+                        <strong>
+                            Thạch nhũ
+                        </strong>
+
+                        <span>
+                            Nhiều hình thù tự nhiên được người xưa
+                            liên tưởng thành tiên ông, đầu sư tử, dơi...
+                        </span>
+
+                    </div>
+
+
+                    <div class="space-point">
+
+                        <strong>
+                            Không gian tín ngưỡng
+                        </strong>
+
+                        <span>
+                            Các ban thờ và tượng pháp tạo nên
+                            không gian tâm linh trong lòng động.
+                        </span>
+
+                    </div>
+
+
+                    <div class="space-point">
+
+                        <strong>
+                            Giá trị cảnh quan
+                        </strong>
+
+                        <span>
+                            Sự kết hợp giữa núi đá, cây xanh,
+                            hang động và ánh sáng tạo nên nét riêng.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     04 ĐỘNG CHÙA TIÊN
+===================================================== -->
+
+<section id="dong">
+
+    <div class="container">
+
+        <div class="section-label">
+            04 · Động Chùa Tiên
+        </div>
+
+        <h2 class="section-title">
+            Không gian kỳ thú trong lòng núi
+        </h2>
+
+        <p class="intro">
+            Động là phần nổi bật nhất của danh thắng,
+            nơi cảnh quan tự nhiên và không gian tín ngưỡng
+            hòa quyện với nhau.
+        </p>
+
+
+        <div class="cave-layout">
+
+            <div class="cave-main">
+
+                <div>
+
+                    <h3>
+                        Bên trong động Chùa Tiên
+                    </h3>
+
+                    <p>
+                        Vòm động cao và rộng, cùng hệ thống
+                        nhũ đá tự nhiên tạo ra nhiều hình dáng
+                        sống động. Bên trong là không gian
+                        thờ tự của di tích.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="cave-side">
+
+                <h3>
+                    Điều đặc biệt
+                </h3>
+
+                <p>
+                    Ánh sáng trong động kết hợp với
+                    thạch nhũ và kiến trúc ban thờ tạo nên
+                    một không gian vừa linh thiêng vừa huyền bí.
+                </p>
+
+                <p>
+                    Những hình dáng tự nhiên của đá được
+                    người dân liên tưởng thành nhiều hình tượng
+                    quen thuộc, góp phần tạo nên những câu chuyện
+                    dân gian xung quanh di tích.
+                </p>
+
+                <div class="cave-note">
+                    Ảnh minh họa trong phần này:
+                    Cổng thông tin điện tử phường Lương Văn Tri.
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     05 GIẾNG TIÊN
+     KHÔNG CHÈN ẢNH - DÀNH ẢNH CHO NHỮNG PHẦN CẦN THIẾT HƠN
+===================================================== -->
+
+<section id="gieng-tien">
+
+    <div class="container">
+
+        <div class="well-layout">
+
+            <div>
+
+                <div class="section-label">
+                    05 · Giếng Tiên
+                </div>
+
+                <h2 class="section-title">
+                    Mạch nước gắn với truyền thuyết
+                </h2>
+
+                <div class="text">
+
+                    <p>
+                        Giếng Tiên là một phần quan trọng trong
+                        quần thể di tích. Cùng với Chùa Tiên,
+                        nơi đây tạo nên một không gian văn hóa,
+                        tín ngưỡng gắn với nguồn nước và núi đá.
+                    </p>
+
+                    <p>
+                        Theo truyền thuyết dân gian được người dân
+                        lưu truyền, sự ra đời của Giếng Tiên gắn với
+                        hình ảnh một ông Tiên đã ban cho dân làng
+                        nguồn nước trong lành, giúp vượt qua
+                        những ngày thiếu mưa và hạn hán.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="well-card">
+
+                <h3>
+                    Truyền thuyết Tiên ông
+                </h3>
+
+                <p class="text">
+                    Chuyện kể rằng một ông Tiên sống trên núi,
+                    được những đứa trẻ chăn trâu trong làng
+                    chia phần cơm ít ỏi. Sau đó, ông dẫm chân
+                    xuống núi đá và tạo thành Giếng Tiên,
+                    ban cho dân làng Phai Luông nguồn nước
+                    trong vắt.
+                </p>
+
+
+                <div class="legend">
+
+                    <strong>
+                        Ý nghĩa văn hóa
+                    </strong>
+
+                    <p>
+                        Câu chuyện cho thấy hình ảnh nguồn nước
+                        được gắn với sự che chở, lòng nhân ái
+                        và mong ước cuộc sống no đủ của cộng đồng.
+                    </p>
+
+                </div>
+
+
+                <div class="well-points">
+
+                    <div class="well-point">
+                        Gắn với tín ngưỡng dân gian về nguồn nước.
+                    </div>
+
+                    <div class="well-point">
+                        Là một bộ phận của cụm Chùa Tiên – Giếng Tiên.
+                    </div>
+
+                    <div class="well-point">
+                        Gắn với nghi lễ và không gian lễ hội.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     06 VĂN BIA
+===================================================== -->
+
+<section id="van-bia">
+
+    <div class="container">
+
+        <div class="inscription-intro">
+
+            <div>
+
+                <div class="section-label">
+                    06 · Văn bia
+                </div>
+
+                <div class="big-number">
+                    13
+                </div>
+
+                <h2 class="section-title">
+                    Bia đá trên vách động
+                </h2>
+
+            </div>
+
+
+            <div>
+
+                <p class="intro">
+                    Một trong những giá trị nổi bật của Chùa Tiên
+                    là hệ thống bia Ma Nhai được khắc trực tiếp
+                    trên vách đá trong động.
+                </p>
+
+                <div class="quote">
+                    “Trấn Doanh bát cảnh”
+                </div>
+
+                <div class="text">
+
+                    <p>
+                        Hiện tại di tích còn lưu giữ 13 bia khắc
+                        trên vách đá của các vị quan thuộc nhiều
+                        triều đại.
+                    </p>
+
+                    <p>
+                        Đặc biệt, bia khắc bài “Trấn Doanh bát cảnh”
+                        của Ngô Thì Sĩ là tư liệu quan trọng,
+                        phản ánh cách nhìn về cảnh đẹp của Lạng Sơn
+                        trong lịch sử.
+                    </p>
+
+                    <p>
+                        Cùng với văn bia, di tích còn lưu giữ
+                        các tượng pháp, câu đối và nhiều dấu tích
+                        của đời sống tín ngưỡng.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="inscription-cards">
+
+            <div class="inscription-card">
+
+                <h3>
+                    Văn học
+                </h3>
+
+                <p>
+                    Gắn với sáng tác của văn nhân,
+                    trong đó nổi bật là Ngô Thì Sĩ.
+                </p>
+
+            </div>
+
+
+            <div class="inscription-card">
+
+                <h3>
+                    Lịch sử
+                </h3>
+
+                <p>
+                    Cung cấp tư liệu về nhiều giai đoạn
+                    lịch sử và nhân vật từng đến di tích.
+                </p>
+
+            </div>
+
+
+            <div class="inscription-card">
+
+                <h3>
+                    Nghệ thuật
+                </h3>
+
+                <p>
+                    Thể hiện giá trị của chữ khắc,
+                    bố cục bia và hình thức trang trí.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     07 LỄ HỘI
+===================================================== -->
+
+<section id="le-hoi">
+
+    <div class="container">
+
+        <div class="festival-layout">
+
+            <div class="festival-image"></div>
+
+
+            <div class="festival-content">
+
+                <div class="section-label">
+                    07 · Lễ hội
+                </div>
+
+                <h2 class="section-title">
+                    Lễ hội Chùa Tiên
+                </h2>
+
+                <div class="date-pill">
+                    Ngày 18 tháng Giêng âm lịch
+                </div>
+
+                <div class="text">
+
+                    <p>
+                        Lễ hội Chùa Tiên được tổ chức hằng năm,
+                        là dịp người dân và du khách về dâng hương,
+                        cầu nguyện, vãn cảnh và tham gia các
+                        hoạt động văn hóa truyền thống.
+                    </p>
+
+                    <p>
+                        Lễ hội góp phần duy trì đời sống tín ngưỡng
+                        và tạo nên không khí văn hóa đặc sắc
+                        trong những ngày đầu xuân.
+                    </p>
+
+                </div>
+
+
+                <div class="festival-list">
+
+                    <div class="festival-item">
+
+                        <strong>
+                            Dâng hương
+                        </strong>
+
+                        <span>
+                            Hoạt động tín ngưỡng quan trọng của lễ hội.
+                        </span>
+
+                    </div>
+
+
+                    <div class="festival-item">
+
+                        <strong>
+                            Vãn cảnh
+                        </strong>
+
+                        <span>
+                            Tham quan Chùa Tiên, Giếng Tiên,
+                            động và Hang Thủy Cung.
+                        </span>
+
+                    </div>
+
+
+                    <div class="festival-item">
+
+                        <strong>
+                            Trò chơi dân gian
+                        </strong>
+
+                        <span>
+                            Đẩy gậy, bịt mắt đập niêu, nhảy sạp,
+                            ô ăn quan và nhiều hoạt động khác.
+                        </span>
+
+                    </div>
+
+
+                    <div class="festival-item">
+
+                        <strong>
+                            Văn hóa cộng đồng
+                        </strong>
+
+                        <span>
+                            Là không gian để cộng đồng địa phương
+                            gìn giữ và truyền lại phong tục.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     08 GIÁ TRỊ
+===================================================== -->
+
+<section id="gia-tri">
+
+    <div class="container">
+
+        <div class="section-label">
+            08 · Giá trị
+        </div>
+
+        <h2 class="section-title">
+            Nhiều lớp giá trị trong một danh thắng
+        </h2>
+
+
+        <div class="value-grid">
+
+            <div class="value-card">
+
+                <div class="value-no">
+                    01 · CẢNH QUAN
+                </div>
+
+                <h3>
+                    Giá trị tự nhiên
+                </h3>
+
+                <p>
+                    Núi Đại Tượng, thạch động, nhũ đá và
+                    hệ thống hang động tạo nên cảnh quan
+                    đặc sắc của Chùa Tiên – Giếng Tiên.
+                </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+                <div class="value-no">
+                    02 · LỊCH SỬ
+                </div>
+
+                <h3>
+                    Giá trị lịch sử
+                </h3>
+
+                <p>
+                    Những bia Ma Nhai, tượng pháp và dấu tích
+                    trong động góp phần lưu giữ các lớp
+                    lịch sử của di tích.
+                </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+                <div class="value-no">
+                    03 · VĂN HÓA
+                </div>
+
+                <h3>
+                    Giá trị tín ngưỡng
+                </h3>
+
+                <p>
+                    Không gian thờ tự, truyền thuyết về Giếng Tiên
+                    và lễ hội hằng năm tạo nên một đời sống
+                    tín ngưỡng phong phú.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     09 BẢO TỒN
+===================================================== -->
+
+<section id="bao-ton">
+
+    <div class="container">
+
+        <div class="section-label">
+            09 · Bảo tồn
+        </div>
+
+        <h2 class="section-title">
+            Giữ gìn di sản Xứ Lạng
+        </h2>
+
+        <p class="intro">
+            Bảo tồn Chùa Tiên – Giếng Tiên cần đồng thời
+            giữ gìn cảnh quan tự nhiên, di vật, văn bia,
+            không gian tín ngưỡng và các giá trị văn hóa
+            cộng đồng.
+        </p>
+
+
+        <div class="conservation-grid">
+
+            <div class="conservation-card">
+
+                <h3>
+                    Bảo vệ cảnh quan
+                </h3>
+
+                <p>
+                    Hạn chế tác động lên đá, nhũ đá và cảnh quan
+                    tự nhiên của núi Đại Tượng.
+                </p>
+
+                <p>
+                    Giữ vệ sinh và không xả rác trong khu vực
+                    danh thắng.
+                </p>
+
+            </div>
+
+
+            <div class="conservation-card">
+
+                <h3>
+                    Bảo vệ văn bia
+                </h3>
+
+                <p>
+                    Không chạm khắc, viết hoặc tác động lên
+                    các bia Ma Nhai và vách đá có chữ khắc.
+                </p>
+
+                <p>
+                    Đây là những tư liệu có giá trị lịch sử,
+                    văn học và nghệ thuật.
+                </p>
+
+            </div>
+
+
+            <div class="conservation-card">
+
+                <h3>
+                    Tôn trọng không gian tín ngưỡng
+                </h3>
+
+                <p>
+                    Khi tham quan cần giữ thái độ phù hợp
+                    với không gian thờ tự và hoạt động lễ hội.
+                </p>
+
+            </div>
+
+
+            <div class="conservation-card">
+
+                <h3>
+                    Phát triển du lịch bền vững
+                </h3>
+
+                <p>
+                    Kết hợp bảo tồn với tham quan, giáo dục
+                    và giới thiệu di sản để tăng giá trị
+                    của điểm đến mà vẫn giữ được bản sắc.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     10 HÌNH ẢNH
+     - CHỈ TẬP TRUNG ẢNH Ở ĐÂY
+===================================================== -->
+
+<section id="hinh-anh">
+
+    <div class="container">
+
+        <div class="section-label">
+            10 · Hình ảnh
+        </div>
+
+        <h2 class="section-title">
+            Những góc nhìn tiêu biểu
+        </h2>
+
+        <p class="intro">
+            Bộ ảnh được giữ ở mức vừa phải, tập trung vào
+            các góc quan trọng của danh thắng thay vì trải ảnh
+            ở mọi phần nội dung.
+        </p>
+
+
+        <div class="gallery">
+
+            <!-- 1 -->
+
+            <figure class="gallery-item">
+
+                <img
+                    src="https://luongvantri.langson.gov.vn/upload/105842/fck/adminluongvantri/2025_10_27_03_58_0511.jpg"
+                    alt="Cửa động Chùa Tiên"
+                    loading="lazy"
+                >
+
+                <figcaption class="gallery-caption">
+
+                    <div>
+                        <strong>
+                            Cửa động Chùa Tiên
+                        </strong>
+
+                        <span>
+                            Nguồn: Cổng TTĐT phường Lương Văn Tri
+                        </span>
+                    </div>
+
+                </figcaption>
+
+            </figure>
+
+
+            <!-- 2 -->
+
+            <figure class="gallery-item">
+
+                <img
+                    src="https://luongvantri.langson.gov.vn/upload/105842/fck/adminluongvantri/2025_10_27_03_58_058.jpg"
+                    alt="Bậc đá lên Chùa Tiên"
+                    loading="lazy"
+                >
+
+                <figcaption class="gallery-caption">
+
+                    <div>
+                        <strong>
+                            Bậc đá lên động
+                        </strong>
+
+                        <span>
+                            Nguồn: Cổng TTĐT phường Lương Văn Tri
+                        </span>
+                    </div>
+
+                </figcaption>
+
+            </figure>
+
+
+            <!-- 3 -->
+
+            <figure class="gallery-item">
+
+                <img
+                    src="https://luongvantri.langson.gov.vn/upload/105842/fck/adminluongvantri/2025_10_27_03_58_059.jpg"
+                    alt="Không gian bên trong Chùa Tiên"
+                    loading="lazy"
+                >
+
+                <figcaption class="gallery-caption">
+
+                    <div>
+                        <strong>
+                            Không gian bên trong
+                        </strong>
+
+                        <span>
+                            Nguồn: Cổng TTĐT phường Lương Văn Tri
+                        </span>
+                    </div>
+
+                </figcaption>
+
+            </figure>
+
+
+            <!-- 4 -->
+
+            <figure class="gallery-item">
+
+                <img
+                    src="https://luongvantri.langson.gov.vn/upload/105842/fck/adminluongvantri/2025_10_27_03_58_0512.jpg"
+                    alt="Không gian thờ tự trong động"
+                    loading="lazy"
+                >
+
+                <figcaption class="gallery-caption">
+
+                    <div>
+                        <strong>
+                            Không gian thờ tự
+                        </strong>
+
+                        <span>
+                            Nguồn: Cổng TTĐT phường Lương Văn Tri
+                            / ảnh Báo Lạng Sơn
+                        </span>
+                    </div>
+
+                </figcaption>
+
+            </figure>
+
+
+            <!-- 5 -->
+
+            <figure class="gallery-item">
+
+                <img
+                    src="https://luongvantri.langson.gov.vn/upload/105842/fck/adminluongvantri/2025_10_27_03_58_0510.jpg"
+                    alt="Lễ hội Chùa Tiên"
+                    loading="lazy"
+                >
+
+                <figcaption class="gallery-caption">
+
+                    <div>
+                        <strong>
+                            Lễ hội Chùa Tiên
+                        </strong>
+
+                        <span>
+                            Nguồn: Cổng TTĐT phường Lương Văn Tri
+                        </span>
+                    </div>
+
+                </figcaption>
+
+            </figure>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     11 NGUỒN
+===================================================== -->
+
+<section id="nguon">
+
+    <div class="container">
+
+        <div class="section-label">
+            11 · Nguồn
+        </div>
+
+        <h2 class="section-title">
+            Nguồn thông tin và hình ảnh
+        </h2>
+
+
+        <div class="source-grid">
+
+            <div class="source-card">
+
+                <h3>
+                    Cổng thông tin phường Lương Văn Tri
+                </h3>
+
+                <p>
+                    Nguồn chính cho thông tin về vị trí,
+                    truyền thuyết, hơn 65 bậc đá,
+                    13 bia Ma Nhai, lễ hội,
+                    Hang Thủy Cung và giá trị di tích.
+                </p>
+
+                <a
+                    href="https://luongvantri.langson.gov.vn/gioi-thieu/cac-di-tich-danh-lam-thang-canh?isFeatured=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Xem nguồn →
+                </a>
+
+            </div>
+
+
+            <div class="source-card">
+
+                <h3>
+                    Cổng du lịch Lạng Sơn
+                </h3>
+
+                <p>
+                    Nguồn tham khảo về lịch sử hình thành Chùa Tiên,
+                    thời Lê Hồng Đức và quá trình chuyển chùa
+                    vào động Song Tiên.
+                </p>
+
+                <a
+                    href="https://lspa.langson.gov.vn/diem-den-du-lich/chua-tien-341497"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Xem nguồn →
+                </a>
+
+            </div>
+
+
+            <div class="source-card">
+
+                <h3>
+                    Báo Lạng Sơn
+                </h3>
+
+                <p>
+                    Nguồn tham khảo về Chùa Tiên – Giếng Tiên,
+                    văn bia, lễ hội và những giá trị văn hóa
+                    của danh thắng.
+                </p>
+
+                <a
+                    href="https://baolangson.vn/kham-pha-ve-dep-cua-chua-tien-1437593.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Khám phá vẻ đẹp Chùa Tiên →
+                </a>
+
+                <br><br>
+
+                <a
+                    href="https://baolangson.vn/di-tich-chua-tien-gieng-tien-noi-hoi-tu-nhung-gia-tri-van-hoa-dac-sac-xu-lang-5016526.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Xem bài Chùa Tiên – Giếng Tiên →
+                </a>
+
+            </div>
+
+
+            <div class="source-card">
+
+                <h3>
+                    Nguồn ảnh
+                </h3>
+
+                <p>
+                    Ảnh cửa động, bậc đá, không gian bên trong
+                    và lễ hội được lấy từ Cổng thông tin điện tử
+                    phường Lương Văn Tri.
+                </p>
+
+                <p>
+                    Một số ảnh có watermark của Báo Lạng Sơn;
+                    nguồn ảnh được ghi rõ ngay dưới từng ảnh.
+                </p>
+
+                <a
+                    href="https://luongvantri.langson.gov.vn/gioi-thieu/cac-di-tich-danh-lam-thang-canh?isFeatured=1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Xem trang nguồn ảnh →
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="usage-note">
+            Lưu ý: ảnh trên Internet có thể thuộc quyền tác giả
+            hoặc quyền sử dụng của đơn vị đăng ảnh. Khi sử dụng
+            website ngoài mục đích học tập hoặc công khai rộng rãi,
+            nên kiểm tra điều kiện sử dụng của từng ảnh và giữ nguyên
+            phần ghi nguồn.
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div class="footer-logo">
+            LẠNG SƠN
+        </div>
+
+        <div class="footer-text">
+            CHÙA TIÊN – GIẾNG TIÊN · NÚI ĐẠI TƯỢNG
+            <br>
+            Danh thắng và di tích văn hóa Xứ Lạng
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     NÚT QUAY LẠI
+===================================================== -->
+
+<a
+    href="./danhlamthangcanh.html"
+    class="back-button"
+    aria-label="Quay lại danh thắng"
+>
+    ←
+</a>
+
+
+<script>
+
+/* =====================================================
+   ACTIVE SECTION
+===================================================== */
+
+const links =
+    document.querySelectorAll(".section-link");
+
+const sectionIds = [
+    "tong-quan",
+    "lich-su",
+    "khong-gian",
+    "dong",
+    "gieng-tien",
+    "van-bia",
+    "le-hoi",
+    "gia-tri",
+    "bao-ton",
+    "hinh-anh",
+    "nguon"
+];
+
+const sections =
+    sectionIds
+        .map(id => document.getElementById(id))
+        .filter(Boolean);
+
+
+const observer =
+    new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if(!entry.isIntersecting){
+                    return;
+                }
+
+                links.forEach(link => {
+                    link.classList.remove("active");
+                });
+
+                const active =
+                    document.querySelector(
+                        `.section-link[href="#${entry.target.id}"]`
+                    );
+
+                if(active){
+                    active.classList.add("active");
+
+                    active.scrollIntoView({
+                        behavior:"smooth",
+                        block:"nearest",
+                        inline:"center"
+                    });
+                }
+
+            });
+
+        },
+        {
+            rootMargin:"-150px 0px -55% 0px",
+            threshold:0
+        }
+    );
+
+
+sections.forEach(section => {
+    observer.observe(section);
+});
+
+
+/* =====================================================
+   CLICK MENU
+===================================================== */
+
+links.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        links.forEach(item => {
+            item.classList.remove("active");
+        });
+
+        link.classList.add("active");
+
+    });
+
+});
+
+
+/* =====================================================
+   XỬ LÝ ẢNH LỖI
+===================================================== */
+
+document.querySelectorAll(".gallery-item img").forEach(img => {
+
+    img.addEventListener("error", () => {
+
+        img.style.opacity = ".15";
+
+        img.alt =
+            "Ảnh tạm thời không tải được từ nguồn";
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
+```

@@ -1,0 +1,2638 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Thác Bản Khiếng | Lạng Sơn</title>
+
+<meta name="description"
+content="Khám phá Thác Bản Khiếng tại xã Mẫu Sơn, tỉnh Lạng Sơn – dòng thác dài khoảng 1.320m giữa núi rừng, nổi bật với nhiều tầng nước, ghềnh đá và cảnh quan xanh mát.">
+
+<style>
+
+:root{
+  --forest:#123d2e;
+  --forest-dark:#08261c;
+  --forest-deep:#051b13;
+  --water:#24998b;
+  --water-light:#7bddcf;
+  --leaf:#dceecb;
+  --leaf-soft:#edf7e5;
+  --cream:#fffaf0;
+  --paper:#ffffff;
+  --text:#243a31;
+  --muted:#718078;
+  --gold:#d1a957;
+  --line:#dfe9e2;
+  --shadow:0 22px 60px rgba(7,45,31,.13);
+  --radius:30px;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:100px;
+}
+
+body{
+  font-family:Inter,Arial,Helvetica,sans-serif;
+  background:#f4f8f4;
+  color:var(--text);
+  line-height:1.72;
+}
+
+img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:cover;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+
+/* =========================================================
+   NAVIGATION - GIAO DIỆN CHUNG
+========================================================= */
+
+.site-nav{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1000;
+  padding:17px 4%;
+  transition:.35s ease;
+}
+
+.site-nav.scrolled{
+  background:rgba(255,255,255,.95);
+  backdrop-filter:blur(18px);
+  box-shadow:0 8px 30px rgba(0,0,0,.08);
+}
+
+.nav-inner{
+  width:min(1180px,92%);
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  color:white;
+  font-size:14px;
+  font-weight:950;
+  letter-spacing:.6px;
+  text-shadow:0 2px 13px rgba(0,0,0,.45);
+}
+
+.site-nav.scrolled .logo{
+  color:var(--forest);
+  text-shadow:none;
+}
+
+.nav-links{
+  display:flex;
+  gap:5px;
+}
+
+.nav-links a{
+  padding:9px 12px;
+  color:white;
+  border-radius:50px;
+  font-size:11px;
+  font-weight:850;
+  transition:.25s;
+}
+
+.site-nav.scrolled .nav-links a{
+  color:var(--forest);
+}
+
+.nav-links a:hover{
+  background:rgba(255,255,255,.16);
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+  min-height:100vh;
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(3,25,17,.05),
+      rgba(3,28,20,.2) 40%,
+      rgba(3,24,16,.96) 100%
+    ),
+    url("https://sohanews.sohacdn.com/160588918557773824/2024/4/23/1-17129757382912142997863-1713881635927-17138816360201785985128.jpg");
+
+  background-size:cover;
+  background-position:center;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  width:520px;
+  height:520px;
+  right:-180px;
+  top:-160px;
+  border-radius:50%;
+  background:
+    radial-gradient(
+      circle,
+      rgba(118,215,197,.18),
+      transparent 70%
+    );
+}
+
+.hero-content{
+  width:min(1140px,92%);
+  margin:auto;
+  padding:160px 0 125px;
+  color:white;
+  position:relative;
+  z-index:2;
+}
+
+.hero-tag{
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  padding:8px 15px;
+  border:1px solid rgba(255,255,255,.4);
+  border-radius:50px;
+  background:rgba(255,255,255,.1);
+  backdrop-filter:blur(12px);
+  font-size:10px;
+  font-weight:950;
+  letter-spacing:1.7px;
+  text-transform:uppercase;
+}
+
+.hero h1{
+  margin-top:22px;
+  font-size:clamp(58px,9vw,120px);
+  line-height:.82;
+  letter-spacing:-6px;
+  font-weight:950;
+}
+
+.hero h1 span{
+  display:block;
+  color:var(--water-light);
+}
+
+.hero-desc{
+  max-width:700px;
+  margin-top:30px;
+  color:rgba(255,255,255,.91);
+  font-size:17px;
+}
+
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:11px;
+  margin-top:31px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:13px 21px;
+  border-radius:50px;
+  font-size:12px;
+  font-weight:900;
+  transition:.25s;
+}
+
+.btn-primary{
+  color:var(--forest);
+  background:white;
+}
+
+.btn-primary:hover{
+  transform:translateY(-3px);
+}
+
+.btn-glass{
+  color:white;
+  border:1px solid rgba(255,255,255,.42);
+  background:rgba(255,255,255,.08);
+}
+
+.btn-glass:hover{
+  background:rgba(255,255,255,.17);
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.container{
+  width:min(1120px,92%);
+  margin:auto;
+}
+
+section{
+  padding:100px 0;
+}
+
+.label{
+  color:var(--water);
+  font-size:11px;
+  font-weight:950;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.title{
+  margin-top:10px;
+  color:var(--forest);
+  font-size:clamp(38px,5vw,64px);
+  line-height:.98;
+  letter-spacing:-3.5px;
+  font-weight:950;
+}
+
+.text{
+  max-width:760px;
+  margin-top:17px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+
+/* =========================================================
+   QUICK INFO
+========================================================= */
+
+.quick{
+  position:relative;
+  z-index:20;
+  margin-top:-58px;
+}
+
+.quick-card{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  overflow:hidden;
+  background:white;
+  border-radius:30px;
+  box-shadow:var(--shadow);
+}
+
+.quick-item{
+  padding:27px 15px;
+  text-align:center;
+  border-right:1px solid var(--line);
+}
+
+.quick-item:last-child{
+  border-right:0;
+}
+
+.quick-item strong{
+  display:block;
+  color:var(--water);
+  font-size:26px;
+  line-height:1.2;
+  font-weight:950;
+}
+
+.quick-item span{
+  display:block;
+  margin-top:5px;
+  color:var(--muted);
+  font-size:11px;
+}
+
+
+/* =========================================================
+   OVERVIEW
+========================================================= */
+
+.overview{
+  background:#f4f8f4;
+}
+
+.overview-grid{
+  display:grid;
+  grid-template-columns:.95fr 1.05fr;
+  gap:65px;
+  align-items:center;
+}
+
+.overview-photo{
+  height:590px;
+  position:relative;
+  overflow:hidden;
+  border-radius:35px;
+  box-shadow:var(--shadow);
+}
+
+.overview-photo img{
+  width:100%;
+  height:100%;
+}
+
+.photo-label{
+  position:absolute;
+  left:20px;
+  bottom:20px;
+  padding:12px 15px;
+  color:var(--forest);
+  background:rgba(255,255,255,.91);
+  backdrop-filter:blur(14px);
+  border-radius:17px;
+  font-size:11px;
+  font-weight:900;
+}
+
+.overview-copy p{
+  margin-top:15px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.quote{
+  margin-top:28px;
+  padding:21px 23px;
+  border-left:5px solid var(--gold);
+  border-radius:0 20px 20px 0;
+  background:white;
+  color:var(--forest);
+  font-weight:850;
+  box-shadow:0 8px 28px rgba(0,0,0,.05);
+}
+
+
+/* =========================================================
+   WATER
+========================================================= */
+
+.water{
+  color:white;
+  background:
+    radial-gradient(
+      circle at 85% 8%,
+      rgba(102,213,198,.20),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #103f31,
+      #061f17
+    );
+}
+
+.water .label{
+  color:#91e1d4;
+}
+
+.water .title{
+  color:white;
+}
+
+.water .text{
+  color:#c3d9d2;
+}
+
+.water-layout{
+  margin-top:46px;
+  display:grid;
+  grid-template-columns:1.25fr .75fr;
+  gap:20px;
+}
+
+.water-main{
+  min-height:570px;
+  position:relative;
+  overflow:hidden;
+  border-radius:34px;
+}
+
+.water-main img{
+  width:100%;
+  height:100%;
+}
+
+.water-main::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      transparent 35%,
+      rgba(2,20,14,.93)
+    );
+}
+
+.water-main-content{
+  position:absolute;
+  left:28px;
+  right:28px;
+  bottom:27px;
+  z-index:2;
+}
+
+.water-main-content h3{
+  font-size:40px;
+  line-height:1;
+}
+
+.water-main-content p{
+  margin-top:9px;
+  color:#d2e2dd;
+  font-size:13px;
+}
+
+.water-side{
+  display:grid;
+  grid-template-rows:1fr 1fr;
+  gap:20px;
+}
+
+.water-small{
+  position:relative;
+  overflow:hidden;
+  border-radius:29px;
+}
+
+.water-small img{
+  width:100%;
+  height:100%;
+}
+
+.water-small::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      transparent 30%,
+      rgba(2,20,14,.93)
+    );
+}
+
+.water-small-content{
+  position:absolute;
+  left:21px;
+  right:21px;
+  bottom:19px;
+  z-index:2;
+}
+
+.water-small-content h3{
+  font-size:23px;
+}
+
+.water-small-content p{
+  margin-top:3px;
+  color:#d0e1dc;
+  font-size:11px;
+}
+
+
+/* =========================================================
+   THREE LEVELS
+========================================================= */
+
+.levels{
+  background:white;
+}
+
+.levels-grid{
+  margin-top:45px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.level{
+  padding:30px;
+  border-radius:27px;
+  background:#f5f8f4;
+  border:1px solid #e4ebe5;
+  overflow:hidden;
+}
+
+.level-number{
+  color:#d6e6d9;
+  font-size:76px;
+  line-height:.8;
+  font-weight:950;
+}
+
+.level h3{
+  margin-top:19px;
+  color:var(--forest);
+  font-size:23px;
+  line-height:1.05;
+}
+
+.level p{
+  margin-top:9px;
+  color:var(--muted);
+  font-size:12px;
+}
+
+.level-tag{
+  display:inline-block;
+  margin-top:18px;
+  padding:6px 10px;
+  color:var(--forest);
+  border-radius:50px;
+  background:var(--leaf);
+  font-size:9px;
+  font-weight:950;
+  letter-spacing:.7px;
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   FOREST
+========================================================= */
+
+.forest{
+  color:white;
+  background:
+    linear-gradient(
+      135deg,
+      #09291e,
+      #153e2e
+    );
+}
+
+.forest .label{
+  color:#91e1d4;
+}
+
+.forest .title{
+  color:white;
+}
+
+.forest .text{
+  color:#bfd5cd;
+}
+
+.forest-grid{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:25px;
+  align-items:stretch;
+}
+
+.forest-photo{
+  min-height:550px;
+  overflow:hidden;
+  border-radius:32px;
+}
+
+.forest-photo img{
+  height:100%;
+}
+
+.forest-copy{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:39px;
+  border-radius:32px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.forest-copy h2{
+  margin-top:9px;
+}
+
+.forest-copy p{
+  margin-top:15px;
+  color:#c8dad4;
+  font-size:14px;
+}
+
+.forest-facts{
+  margin-top:25px;
+  display:grid;
+  gap:11px;
+}
+
+.forest-fact{
+  padding:14px 16px;
+  border-radius:17px;
+  background:rgba(255,255,255,.07);
+}
+
+.forest-fact strong{
+  color:#9ee2d7;
+}
+
+
+/* =========================================================
+   EXPERIENCE
+========================================================= */
+
+.experience{
+  background:var(--cream);
+}
+
+.experience-grid{
+  margin-top:46px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+}
+
+.experience-card{
+  overflow:hidden;
+  border-radius:29px;
+  background:white;
+  box-shadow:0 10px 35px rgba(57,65,43,.07);
+}
+
+.experience-img{
+  height:310px;
+  overflow:hidden;
+}
+
+.experience-img img{
+  width:100%;
+  height:100%;
+  transition:.55s;
+}
+
+.experience-card:hover .experience-img img{
+  transform:scale(1.05);
+}
+
+.experience-body{
+  padding:25px;
+}
+
+.exp-no{
+  color:var(--water);
+  font-size:9px;
+  font-weight:950;
+  letter-spacing:1.6px;
+}
+
+.experience-body h3{
+  margin-top:5px;
+  color:var(--forest);
+  font-size:23px;
+  line-height:1.05;
+}
+
+.experience-body p{
+  margin-top:7px;
+  color:var(--muted);
+  font-size:12px;
+}
+
+
+/* =========================================================
+   HERITAGE
+========================================================= */
+
+.heritage{
+  background:#eff6eb;
+}
+
+.heritage-box{
+  margin-top:45px;
+  max-width:910px;
+  padding:37px;
+  border-radius:31px;
+  background:white;
+  box-shadow:0 13px 40px rgba(20,58,39,.07);
+}
+
+.heritage-box p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+.heritage-box p + p{
+  margin-top:15px;
+}
+
+.heritage-highlight{
+  margin-top:24px;
+  padding:18px 20px;
+  border-radius:18px;
+  background:var(--leaf-soft);
+  color:var(--forest);
+  font-size:13px;
+  font-weight:850;
+}
+
+
+/* =========================================================
+   SAFETY
+========================================================= */
+
+.safety{
+  background:#fff8eb;
+}
+
+.safety-grid{
+  margin-top:43px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.safety-card{
+  padding:25px;
+  border-radius:25px;
+  background:white;
+  border:1px solid #eee6d8;
+}
+
+.safety-icon{
+  width:53px;
+  height:53px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:16px;
+  background:#fff0d4;
+  font-size:24px;
+}
+
+.safety-card h3{
+  margin-top:16px;
+  color:var(--forest);
+  font-size:18px;
+}
+
+.safety-card p{
+  margin-top:6px;
+  color:var(--muted);
+  font-size:12px;
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.timeline-section{
+  background:#f4f8f4;
+}
+
+.timeline{
+  max-width:860px;
+  margin:47px auto 0;
+  position:relative;
+}
+
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:18px;
+  top:0;
+  bottom:0;
+  width:3px;
+  background:#d9e6dc;
+}
+
+.timeline-item{
+  position:relative;
+  padding-left:67px;
+  margin-bottom:40px;
+}
+
+.timeline-item:last-child{
+  margin-bottom:0;
+}
+
+.timeline-dot{
+  position:absolute;
+  top:1px;
+  left:0;
+  width:39px;
+  height:39px;
+  border:7px solid #dbe9df;
+  border-radius:50%;
+  background:var(--water);
+}
+
+.timeline-year{
+  color:var(--water);
+  font-size:11px;
+  font-weight:950;
+  letter-spacing:1.2px;
+}
+
+.timeline-item h3{
+  margin-top:3px;
+  color:var(--forest);
+  font-size:21px;
+}
+
+.timeline-item p{
+  margin-top:4px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+
+/* =========================================================
+   DATA
+========================================================= */
+
+.data{
+  background:#e9f2e8;
+}
+
+.data-table{
+  margin-top:43px;
+  overflow:hidden;
+  border-radius:30px;
+  background:white;
+  box-shadow:var(--shadow);
+}
+
+.data-row{
+  display:grid;
+  grid-template-columns:240px 1fr;
+  border-bottom:1px solid var(--line);
+}
+
+.data-row:last-child{
+  border-bottom:0;
+}
+
+.data-key{
+  padding:18px 22px;
+  background:#f2f7f0;
+  color:var(--forest);
+  font-size:12px;
+  font-weight:950;
+}
+
+.data-value{
+  padding:18px 22px;
+  color:var(--text);
+  font-size:13px;
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.gallery{
+  background:white;
+}
+
+.gallery-grid{
+  margin-top:44px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-auto-rows:220px;
+  gap:13px;
+}
+
+.gallery-item{
+  position:relative;
+  overflow:hidden;
+  border-radius:20px;
+}
+
+.gallery-item.big{
+  grid-column:span 2;
+  grid-row:span 2;
+}
+
+.gallery-item.wide{
+  grid-column:span 2;
+}
+
+.gallery-item img{
+  width:100%;
+  height:100%;
+  transition:.6s;
+}
+
+.gallery-item:hover img{
+  transform:scale(1.06);
+}
+
+.gallery-item::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      transparent 48%,
+      rgba(0,0,0,.72)
+    );
+}
+
+.gallery-caption{
+  position:absolute;
+  left:14px;
+  right:14px;
+  bottom:12px;
+  z-index:2;
+  color:white;
+  font-size:11px;
+  font-weight:850;
+}
+
+
+/* =========================================================
+   SOURCES
+========================================================= */
+
+.sources{
+  color:#cbddd6;
+  background:#061d15;
+}
+
+.sources .label{
+  color:#8fded3;
+}
+
+.sources .title{
+  color:white;
+}
+
+.source-list{
+  margin-top:31px;
+  display:grid;
+  gap:11px;
+}
+
+.source{
+  padding:17px 18px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+  background:rgba(255,255,255,.045);
+}
+
+.source a{
+  color:#9de2d8;
+  font-size:13px;
+  font-weight:850;
+  word-break:break-word;
+}
+
+.source p{
+  margin-top:4px;
+  color:#8da69f;
+  font-size:11px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+  padding:31px 5%;
+  color:#91aaa1;
+  background:#03120d;
+}
+
+.footer-inner{
+  width:min(1120px,92%);
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.footer-title{
+  color:white;
+  font-weight:950;
+}
+
+.footer-sub{
+  margin-top:2px;
+  font-size:10px;
+}
+
+.footer-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.footer-links a{
+  padding:8px 12px;
+  border-radius:50px;
+  background:rgba(255,255,255,.07);
+  font-size:10px;
+}
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+.top{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:47px;
+  height:47px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  color:white;
+  background:var(--water);
+  box-shadow:0 10px 25px rgba(0,0,0,.22);
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(12px);
+  transition:.3s;
+  z-index:999;
+}
+
+.top.show{
+  opacity:1;
+  visibility:visible;
+  transform:none;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:950px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .quick-card{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .quick-item:nth-child(2){
+    border-right:0;
+  }
+
+  .overview-grid,
+  .forest-grid{
+    grid-template-columns:1fr;
+  }
+
+  .overview-photo{
+    height:450px;
+  }
+
+  .water-layout{
+    grid-template-columns:1fr;
+  }
+
+  .water-main{
+    min-height:470px;
+  }
+
+  .levels-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .safety-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .gallery-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .gallery-item.big{
+    grid-column:span 2;
+    grid-row:span 1;
+  }
+
+  .gallery-item.wide{
+    grid-column:span 2;
+  }
+}
+
+
+@media(max-width:620px){
+
+  section{
+    padding:72px 0;
+  }
+
+  .hero-content{
+    padding:135px 0 120px;
+  }
+
+  .hero h1{
+    font-size:56px;
+    letter-spacing:-3px;
+  }
+
+  .hero-desc{
+    font-size:14px;
+  }
+
+  .quick-item{
+    padding:21px 9px;
+  }
+
+  .quick-item strong{
+    font-size:21px;
+  }
+
+  .overview-photo{
+    height:360px;
+  }
+
+  .levels-grid,
+  .experience-grid,
+  .safety-grid{
+    grid-template-columns:1fr;
+  }
+
+  .forest-photo{
+    min-height:390px;
+  }
+
+  .forest-copy{
+    padding:27px;
+  }
+
+  .water-main{
+    min-height:390px;
+  }
+
+  .water-main-content h3{
+    font-size:30px;
+  }
+
+  .experience-img{
+    height:245px;
+  }
+
+  .heritage-box{
+    padding:25px;
+  }
+
+  .data-row{
+    grid-template-columns:1fr;
+  }
+
+  .data-key{
+    padding-bottom:7px;
+  }
+
+  .data-value{
+    padding-top:7px;
+  }
+
+  .gallery-grid{
+    grid-auto-rows:170px;
+  }
+
+  .footer-inner{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<header class="site-nav" id="nav">
+
+  <div class="nav-inner">
+
+    <a href="./danhlamthangcanh.html" class="logo">
+      LẠNG SƠN
+    </a>
+
+    <nav class="nav-links">
+
+      <a href="./danhlamthangcanh.html">
+        Trang chủ
+      </a>
+
+      <a href="#tong-quan">
+        Tổng quan
+      </a>
+
+      <a href="#thac">
+        Dòng thác
+      </a>
+
+      <a href="#cau-truc">
+        Cấu trúc
+      </a>
+
+      <a href="#rung">
+        Núi rừng
+      </a>
+
+      <a href="#trai-nghiem">
+        Trải nghiệm
+      </a>
+
+      <a href="#thong-tin">
+        Thông tin
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="hero-tag">
+      Xã Mẫu Sơn · Lạng Sơn
+    </div>
+
+    <h1>
+      THÁC
+      <span>BẢN KHIẾNG</span>
+    </h1>
+
+    <p class="hero-desc">
+      Dòng thác giữa núi rừng Mẫu Sơn,
+      nơi nước trong len qua ghềnh đá,
+      những tầng nước nối tiếp nhau và
+      màu xanh của rừng bao quanh dòng chảy.
+    </p>
+
+    <div class="hero-actions">
+
+      <a href="#tong-quan" class="btn btn-primary">
+        Khám phá Bản Khiếng ↓
+      </a>
+
+      <a href="./danhlamthangcanh.html" class="btn btn-glass">
+        ← Về trang chủ
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     QUICK INFORMATION
+========================================================= -->
+
+<div class="container quick">
+
+  <div class="quick-card">
+
+    <div class="quick-item">
+      <strong>1.320 m</strong>
+      <span>Chiều dài danh thắng</span>
+    </div>
+
+    <div class="quick-item">
+      <strong>3</strong>
+      <span>Phần chính</span>
+    </div>
+
+    <div class="quick-item">
+      <strong>2–8 m</strong>
+      <span>Độ cao các thác</span>
+    </div>
+
+    <div class="quick-item">
+      <strong>2017</strong>
+      <span>Xếp hạng cấp tỉnh</span>
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =========================================================
+     01 TỔNG QUAN
+========================================================= -->
+
+<section class="overview" id="tong-quan">
+
+  <div class="container overview-grid">
+
+    <div class="overview-photo">
+
+      <img
+        src="https://mediabls.mediatech.vn/upload/image/202109/medium/8947_6.jpg"
+        alt="Cảnh quan Thác Bản Khiếng"
+        loading="eager"
+        referrerpolicy="no-referrer">
+
+      <div class="photo-label">
+        Thác Bản Khiếng · Mẫu Sơn
+      </div>
+
+    </div>
+
+
+    <div class="overview-copy">
+
+      <div class="label">
+        01 · Tổng quan
+      </div>
+
+      <h2 class="title">
+        Dòng nước
+        giữa đại ngàn.
+      </h2>
+
+      <p>
+        Thác Bản Khiếng nằm trong không gian núi rừng
+        Mẫu Sơn, tỉnh Lạng Sơn. Đây là một điểm du lịch
+        được nhiều du khách lựa chọn để tham quan,
+        nghỉ ngơi và tận hưởng không gian xanh mát.
+      </p>
+
+      <p>
+        Dòng thác bắt nguồn từ dãy núi Mẫu Sơn ở độ cao
+        trên 1.000 m. Hệ thống dòng chảy đi qua địa hình
+        lòng suối hẹp và dốc, tạo thành nhiều ghềnh,
+        thác và hồ nước.
+      </p>
+
+      <p>
+        Toàn bộ danh thắng có chiều dài khoảng 1.320 m
+        và được chia thành ba phần. Các phần được nối
+        với nhau bởi hệ thống thác nước tự nhiên.
+      </p>
+
+      <div class="quote">
+        Nước – đá – rừng – núi tạo nên
+        vẻ đẹp đặc trưng của Bản Khiếng.
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     02 DÒNG THÁC
+========================================================= -->
+
+<section class="water" id="thac">
+
+  <div class="container">
+
+    <div class="label">
+      02 · Dòng thác
+    </div>
+
+    <h2 class="title">
+      Nước đi qua đá
+      và tạo thành cảnh quan.
+    </h2>
+
+    <p class="text">
+      Lòng thác hẹp và dốc khiến dòng nước tạo ra
+      nhiều đoạn ghềnh, thác nhỏ và hồ nước.
+      Đây chính là yếu tố làm nên diện mạo riêng
+      của Bản Khiếng.
+    </p>
+
+    <div class="water-layout">
+
+      <article class="water-main">
+
+        <img
+          src="https://sohanews.sohacdn.com/160588918557773824/2024/4/23/1-17129757382912142997863-1713881635927-17138816360201785985128.jpg"
+          alt="Toàn cảnh dòng nước và thác Bản Khiếng"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+        <div class="water-main-content">
+
+          <h3>
+            Dòng nước trong xanh
+          </h3>
+
+          <p>
+            Nước chảy qua những tầng đá,
+            tạo nên các hồ nhỏ và ghềnh nước
+            giữa rừng cây.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <div class="water-side">
+
+        <article class="water-small">
+
+          <img
+            src="https://ik.imagekit.io/tvlk/blog/2022/10/thac-ban-khieng-7-819x1024.jpg?tr=q-70%2Cc-at_max%2Cw-1000%2Ch-600"
+            alt="Cầu đỏ và dòng nước tại Thác Bản Khiếng"
+            loading="lazy"
+            referrerpolicy="no-referrer">
+
+          <div class="water-small-content">
+
+            <h3>
+              Cầu bên dòng thác
+            </h3>
+
+            <p>
+              Cây cầu đỏ tạo điểm nhấn
+              giữa không gian rừng và nước.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="water-small">
+
+          <img
+            src="https://mediabls.mediatech.vn/upload/image/202109/medium/8947_6.jpg"
+            alt="Thác Bản Khiếng với cầu đỏ, ghềnh đá và dòng nước"
+            loading="lazy"
+            referrerpolicy="no-referrer">
+
+          <div class="water-small-content">
+
+            <h3>
+              Ghềnh nước giữa rừng
+            </h3>
+
+            <p>
+              Nước liên tục chảy qua các bậc đá,
+              tạo nên cảnh quan nhiều tầng.
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     03 CẤU TRÚC 3 PHẦN
+========================================================= -->
+
+<section class="levels" id="cau-truc">
+
+  <div class="container">
+
+    <div class="label">
+      03 · Cấu trúc danh thắng
+    </div>
+
+    <h2 class="title">
+      Ba phần,
+      một dòng chảy.
+    </h2>
+
+    <p class="text">
+      Theo thông tin của Trung tâm Xúc tiến Đầu tư,
+      Thương mại và Du lịch tỉnh Lạng Sơn, Thác Bản Khiếng
+      dài khoảng 1.320 m và được chia làm ba phần,
+      cách nhau khoảng 200–300 m.
+    </p>
+
+    <div class="levels-grid">
+
+      <article class="level">
+
+        <div class="level-number">01</div>
+
+        <h3>
+          Phần thứ nhất
+        </h3>
+
+        <p>
+          Đoạn đầu của danh thắng với dòng nước,
+          nền đá và các ghềnh tự nhiên trong lòng núi.
+        </p>
+
+        <span class="level-tag">
+          Dòng chảy
+        </span>
+
+      </article>
+
+
+      <article class="level">
+
+        <div class="level-number">02</div>
+
+        <h3>
+          Phần thứ hai
+        </h3>
+
+        <p>
+          Nước tiếp tục đi qua các bậc đá,
+          tạo những hồ nước nhỏ và những đoạn
+          thác thấp.
+        </p>
+
+        <span class="level-tag">
+          Ghềnh đá
+        </span>
+
+      </article>
+
+
+      <article class="level">
+
+        <div class="level-number">03</div>
+
+        <h3>
+          Phần thứ ba
+        </h3>
+
+        <p>
+          Các đoạn nước phía dưới tạo thành
+          những hồ và thác lớn hơn, làm cảnh quan
+          trở nên đa dạng.
+        </p>
+
+        <span class="level-tag">
+          Hồ nước
+        </span>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     04 NÚI RỪNG
+========================================================= -->
+
+<section class="forest" id="rung">
+
+  <div class="container forest-grid">
+
+    <div class="forest-photo">
+
+      <img
+        src="https://sohanews.sohacdn.com/160588918557773824/2024/4/23/1-17129757382912142997863-1713881635927-17138816360201785985128.jpg"
+        alt="Cây xanh và dòng nước tại Thác Bản Khiếng"
+        loading="lazy"
+        referrerpolicy="no-referrer">
+
+    </div>
+
+
+    <div class="forest-copy">
+
+      <div class="label">
+        04 · Núi rừng
+      </div>
+
+      <h2 class="title">
+        Rừng xanh
+        ôm lấy dòng thác.
+      </h2>
+
+      <p>
+        Một trong những yếu tố khiến Bản Khiếng
+        nổi bật là hệ sinh thái rừng nằm hai bên
+        dòng suối.
+      </p>
+
+      <p>
+        Sự kết hợp giữa nước trong, đá cuội,
+        vách núi và cây xanh tạo ra không gian
+        vừa hùng vĩ vừa mềm mại.
+      </p>
+
+      <div class="forest-facts">
+
+        <div class="forest-fact">
+          <strong>Rừng:</strong>
+          cây xanh bao quanh dòng chảy.
+        </div>
+
+        <div class="forest-fact">
+          <strong>Đá:</strong>
+          nền suối có đá, sỏi và cuội.
+        </div>
+
+        <div class="forest-fact">
+          <strong>Nước:</strong>
+          dòng nước trong xanh chảy qua nhiều ghềnh.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     05 TRẢI NGHIỆM
+========================================================= -->
+
+<section class="experience" id="trai-nghiem">
+
+  <div class="container">
+
+    <div class="label">
+      05 · Trải nghiệm
+    </div>
+
+    <h2 class="title">
+      Đến Bản Khiếng
+      để cảm nhận thiên nhiên.
+    </h2>
+
+    <p class="text">
+      Điểm đến phù hợp với tham quan, ngắm cảnh,
+      chụp ảnh và nghỉ ngơi trong không gian núi rừng.
+      Khi tiếp cận khu vực thác nước, nên tuân thủ
+      biển cảnh báo và hướng dẫn tại điểm đến.
+    </p>
+
+    <div class="experience-grid">
+
+      <article class="experience-card">
+
+        <div class="experience-img">
+
+          <img
+            src="https://mediabls.mediatech.vn/upload/image/202109/medium/8947_6.jpg"
+            alt="Dòng nước và cầu tại Thác Bản Khiếng"
+            loading="lazy"
+            referrerpolicy="no-referrer">
+
+        </div>
+
+        <div class="experience-body">
+
+          <div class="exp-no">
+            TRẢI NGHIỆM 01
+          </div>
+
+          <h3>
+            Ngắm dòng thác
+          </h3>
+
+          <p>
+            Quan sát nước chảy qua những
+            bậc đá và hồ nước tự nhiên.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="experience-card">
+
+        <div class="experience-img">
+
+          <img
+            src="https://ik.imagekit.io/tvlk/blog/2022/10/thac-ban-khieng-7-819x1024.jpg?tr=q-70%2Cc-at_max%2Cw-1000%2Ch-600"
+            alt="Cầu đỏ bên dòng nước Thác Bản Khiếng"
+            loading="lazy"
+            referrerpolicy="no-referrer">
+
+        </div>
+
+        <div class="experience-body">
+
+          <div class="exp-no">
+            TRẢI NGHIỆM 02
+          </div>
+
+          <h3>
+            Chụp ảnh
+          </h3>
+
+          <p>
+            Cầu đỏ, dòng nước và cây xanh
+            tạo nên những góc chụp đặc trưng.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="experience-card">
+
+        <div class="experience-img">
+
+          <img
+            src="https://sohanews.sohacdn.com/160588918557773824/2024/4/23/1-17129757382912142997863-1713881635927-17138816360201785985128.jpg"
+            alt="Toàn cảnh nước và các bậc thác tại Bản Khiếng"
+            loading="lazy"
+            referrerpolicy="no-referrer">
+
+        </div>
+
+        <div class="experience-body">
+
+          <div class="exp-no">
+            TRẢI NGHIỆM 03
+          </div>
+
+          <h3>
+            Ngắm toàn cảnh
+          </h3>
+
+          <p>
+            Quan sát sự kết hợp giữa dòng nước,
+            đá và rừng từ những góc nhìn rộng.
+          </p>
+
+        </div>
+
+      </article>
+
+
+      <article class="experience-card">
+
+        <div class="experience-img">
+
+          <img
+            src="https://mediabls.mediatech.vn/upload/image/202109/medium/8947_6.jpg"
+            alt="Ghềnh nước và cây xanh tại Thác Bản Khiếng"
+            loading="lazy"
+            referrerpolicy="no-referrer">
+
+        </div>
+
+        <div class="experience-body">
+
+          <div class="exp-no">
+            TRẢI NGHIỆM 04
+          </div>
+
+          <h3>
+            Nghỉ ngơi giữa thiên nhiên
+          </h3>
+
+          <p>
+            Không gian xanh mát thích hợp
+            cho những chuyến tham quan ngắn.
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     06 GIÁ TRỊ DANH THẮNG
+========================================================= -->
+
+<section class="heritage">
+
+  <div class="container">
+
+    <div class="label">
+      06 · Giá trị danh thắng
+    </div>
+
+    <h2 class="title">
+      Không chỉ là
+      một dòng thác đẹp.
+    </h2>
+
+    <div class="heritage-box">
+
+      <p>
+        Thác Bản Khiếng có giá trị nổi bật
+        về cảnh quan tự nhiên. Dòng nước bắt nguồn
+        từ vùng núi Mẫu Sơn, đi qua địa hình đá
+        và rừng rồi tạo thành hệ thống thác ghềnh.
+      </p>
+
+      <p>
+        Chiều dài khoảng 1.320 m khiến Bản Khiếng
+        không phải một thác đơn lẻ mà là cả một hệ thống
+        dòng chảy với nhiều đoạn cảnh quan khác nhau.
+      </p>
+
+      <p>
+        Danh thắng được xếp hạng di tích cấp tỉnh
+        năm 2017, góp phần khẳng định giá trị cảnh quan
+        của khu vực trong hệ thống di sản của Lạng Sơn.
+      </p>
+
+      <div class="heritage-highlight">
+        Xếp hạng di tích cấp tỉnh:
+        năm 2017
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     07 AN TOÀN
+========================================================= -->
+
+<section class="safety">
+
+  <div class="container">
+
+    <div class="label">
+      07 · Trải nghiệm có trách nhiệm
+    </div>
+
+    <h2 class="title">
+      Giữ Bản Khiếng
+      đẹp và an toàn.
+    </h2>
+
+    <p class="text">
+      Thác nước là môi trường tự nhiên có thể thay đổi
+      theo thời tiết. Khi tham quan cần chú ý khu vực
+      nước sâu, dòng chảy mạnh và hướng dẫn tại điểm đến.
+    </p>
+
+    <div class="safety-grid">
+
+      <article class="safety-card">
+
+        <div class="safety-icon">
+          ⚠️
+        </div>
+
+        <h3>
+          Chú ý cảnh báo
+        </h3>
+
+        <p>
+          Không đi vào khu vực có biển cảnh báo
+          hoặc hạn chế tiếp cận.
+        </p>
+
+      </article>
+
+
+      <article class="safety-card">
+
+        <div class="safety-icon">
+          🌧️
+        </div>
+
+        <h3>
+          Theo dõi thời tiết
+        </h3>
+
+        <p>
+          Mưa lớn có thể làm dòng nước thay đổi
+          nhanh và khiến đá trơn trượt.
+        </p>
+
+      </article>
+
+
+      <article class="safety-card">
+
+        <div class="safety-icon">
+          🌿
+        </div>
+
+        <h3>
+          Bảo vệ môi trường
+        </h3>
+
+        <p>
+          Không xả rác, không phá hoại cây cối
+          và giữ gìn cảnh quan tự nhiên.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     08 DẤU MỐC
+========================================================= -->
+
+<section class="timeline-section">
+
+  <div class="container">
+
+    <div class="label">
+      08 · Dấu mốc
+    </div>
+
+    <h2 class="title">
+      Hành trình
+      của Bản Khiếng.
+    </h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-year">
+          TỰ NHIÊN
+        </div>
+
+        <h3>
+          Dòng suối bắt nguồn từ núi Mẫu Sơn
+        </h3>
+
+        <p>
+          Hệ thống nước từ vùng núi Mẫu Sơn
+          hình thành dòng thác và nhiều ghềnh
+          trong lòng núi.
+        </p>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-year">
+          2017
+        </div>
+
+        <h3>
+          Xếp hạng di tích cấp tỉnh
+        </h3>
+
+        <p>
+          Thác Bản Khiếng được xếp hạng
+          di tích cấp tỉnh.
+        </p>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-year">
+          2020–2024
+        </div>
+
+        <h3>
+          Phát triển thành điểm du lịch
+        </h3>
+
+        <p>
+          Cảnh quan thác được đầu tư và quảng bá
+          để phục vụ tham quan, nghỉ ngơi và trải nghiệm.
+        </p>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-year">
+          2025–2026
+        </div>
+
+        <h3>
+          Tiếp tục phát triển du lịch sinh thái
+        </h3>
+
+        <p>
+          Các nguồn chính thức của địa phương
+          tiếp tục giới thiệu Bản Khiếng như một
+          điểm du lịch thuộc xã Mẫu Sơn.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     09 THÔNG TIN CƠ BẢN
+========================================================= -->
+
+<section class="data" id="thong-tin">
+
+  <div class="container">
+
+    <div class="label">
+      09 · Thông tin cơ bản
+    </div>
+
+    <h2 class="title">
+      Bản Khiếng
+      trong vài dòng.
+    </h2>
+
+    <div class="data-table">
+
+      <div class="data-row">
+        <div class="data-key">Tên địa danh</div>
+        <div class="data-value">Thác Bản Khiếng.</div>
+      </div>
+
+      <div class="data-row">
+        <div class="data-key">Địa chỉ hiện nay</div>
+        <div class="data-value">
+          Thôn Nà Mò, xã Mẫu Sơn, tỉnh Lạng Sơn.
+        </div>
+      </div>
+
+      <div class="data-row">
+        <div class="data-key">Địa bàn trong tài liệu cũ</div>
+        <div class="data-value">
+          Thôn Nà Mò, xã Mẫu Sơn và thôn
+          Bản Khiếng, xã Hữu Khánh, huyện Lộc Bình.
+        </div>
+      </div>
+
+      <div class="data-row">
+        <div class="data-key">Khoảng cách</div>
+        <div class="data-value">
+          Khoảng 6 km từ trung tâm thị trấn Lộc Bình
+          theo tài liệu du lịch trước đây.
+        </div>
+      </div>
+
+      <div class="data-row">
+        <div class="data-key">Chiều dài</div>
+        <div class="data-value">
+          Khoảng 1.320 m.
+        </div>
+      </div>
+
+      <div class="data-row">
+        <div class="data-key">Số phần chính</div>
+        <div class="data-value">
+          3 phần.
+        </div>
+      </div>
+
+      <div class="data-row">
+        <div class="data-key">Khoảng cách giữa các phần</div>
+        <div class="data-value">
+          Khoảng 200–300 m.
+        </div>
+      </div>
+
+      <div class="data-row">
+        <div class="data-key">Độ cao các thác</div>
+        <div class="data-value">
+          Khoảng 2–8 m.
+        </div>
+      </div>
+
+      <div class="data-row">
+        <div class="data-key">Nguồn gốc</div>
+        <div class="data-value">
+          Bắt nguồn từ dãy núi Mẫu Sơn
+          có độ cao trên 1.000 m.
+        </div>
+      </div>
+
+      <div class="data-row">
+        <div class="data-key">Đặc điểm</div>
+        <div class="data-value">
+          Nước trong xanh, nhiều ghềnh thác,
+          hồ nước, đá cuội và hệ sinh thái rừng.
+        </div>
+      </div>
+
+      <div class="data-row">
+        <div class="data-key">Xếp hạng</div>
+        <div class="data-value">
+          Di tích cấp tỉnh năm 2017.
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     10 THƯ VIỆN ẢNH
+========================================================= -->
+
+<section class="gallery">
+
+  <div class="container">
+
+    <div class="label">
+      10 · Thư viện ảnh
+    </div>
+
+    <h2 class="title">
+      Bản Khiếng
+      qua nhiều góc nhìn.
+    </h2>
+
+    <p class="text">
+      Các ảnh được lựa chọn theo hướng ưu tiên
+      những nguồn có URL trực tiếp rõ ràng và
+      hạn chế sử dụng các đường dẫn ảnh dễ thay đổi.
+    </p>
+
+    <div class="gallery-grid">
+
+      <figure class="gallery-item big">
+
+        <img
+          src="https://sohanews.sohacdn.com/160588918557773824/2024/4/23/1-17129757382912142997863-1713881635927-17138816360201785985128.jpg"
+          alt="Toàn cảnh Thác Bản Khiếng"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+        <figcaption class="gallery-caption">
+          Toàn cảnh Bản Khiếng
+        </figcaption>
+
+      </figure>
+
+
+      <figure class="gallery-item">
+
+        <img
+          src="https://mediabls.mediatech.vn/upload/image/202109/medium/8947_6.jpg"
+          alt="Dòng nước và cầu đỏ tại Bản Khiếng"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+        <figcaption class="gallery-caption">
+          Dòng nước và cầu
+        </figcaption>
+
+      </figure>
+
+
+      <figure class="gallery-item">
+
+        <img
+          src="https://ik.imagekit.io/tvlk/blog/2022/10/thac-ban-khieng-7-819x1024.jpg?tr=q-70%2Cc-at_max%2Cw-1000%2Ch-600"
+          alt="Cầu đỏ giữa không gian xanh của Bản Khiếng"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+        <figcaption class="gallery-caption">
+          Cầu bên dòng thác
+        </figcaption>
+
+      </figure>
+
+
+      <figure class="gallery-item">
+
+        <img
+          src="https://sohanews.sohacdn.com/160588918557773824/2024/4/23/1-17129757382912142997863-1713881635927-17138816360201785985128.jpg"
+          alt="Các tầng nước tại Thác Bản Khiếng"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+        <figcaption class="gallery-caption">
+          Các tầng nước
+        </figcaption>
+
+      </figure>
+
+
+      <figure class="gallery-item">
+
+        <img
+          src="https://mediabls.mediatech.vn/upload/image/202109/medium/8947_6.jpg"
+          alt="Ghềnh đá và dòng nước Thác Bản Khiếng"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+        <figcaption class="gallery-caption">
+          Ghềnh đá
+        </figcaption>
+
+      </figure>
+
+
+      <figure class="gallery-item wide">
+
+        <img
+          src="https://ik.imagekit.io/tvlk/blog/2022/10/thac-ban-khieng-7-819x1024.jpg?tr=q-70%2Cc-at_max%2Cw-1000%2Ch-600"
+          alt="Cầu đỏ và dòng thác Bản Khiếng"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+        <figcaption class="gallery-caption">
+          Cầu và dòng thác
+        </figcaption>
+
+      </figure>
+
+
+      <figure class="gallery-item">
+
+        <img
+          src="https://mediabls.mediatech.vn/upload/image/202109/medium/8947_6.jpg"
+          alt="Nước chảy qua ghềnh đá Bản Khiếng"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+        <figcaption class="gallery-caption">
+          Nước qua ghềnh đá
+        </figcaption>
+
+      </figure>
+
+
+      <figure class="gallery-item">
+
+        <img
+          src="https://sohanews.sohacdn.com/160588918557773824/2024/4/23/1-17129757382912142997863-1713881635927-17138816360201785985128.jpg"
+          alt="Không gian cây xanh quanh Thác Bản Khiếng"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+        <figcaption class="gallery-caption">
+          Không gian xanh
+        </figcaption>
+
+      </figure>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     11 NGUỒN
+========================================================= -->
+
+<section class="sources" id="nguon">
+
+  <div class="container">
+
+    <div class="label">
+      11 · Nguồn tham khảo
+    </div>
+
+    <h2 class="title">
+      Nguồn thông tin
+      và hình ảnh.
+    </h2>
+
+    <div class="source-list">
+
+      <div class="source">
+
+        <a
+          href="https://lspa.langson.gov.vn/diem-den-du-lich/thac-ban-khieng-341506"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Trung tâm Xúc tiến Đầu tư, Thương mại
+          và Du lịch tỉnh Lạng Sơn – Thác Bản Khiếng
+
+        </a>
+
+        <p>
+          Nguồn chính thức về chiều dài 1.320 m,
+          cấu trúc 3 phần, độ cao các thác và
+          đặc điểm tự nhiên.
+        </p>
+
+      </div>
+
+
+      <div class="source">
+
+        <a
+          href="https://mauson.langson.gov.vn/gioi-thieu/thong-tin-chung"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Cổng thông tin điện tử xã Mẫu Sơn –
+          Thông tin chung
+
+        </a>
+
+        <p>
+          Nguồn chính quyền địa phương về
+          địa bàn Thác Bản Khiếng.
+        </p>
+
+      </div>
+
+
+      <div class="source">
+
+        <a
+          href="https://baolangson.vn/thac-ban-khieng-dia-chi-moi-hut-khach-du-lich-1285674.html"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Báo và Phát thanh, Truyền hình Lạng Sơn –
+          Thác Bản Khiếng: Địa chỉ mới hút khách du lịch
+
+        </a>
+
+        <p>
+          Nguồn địa phương về cảnh quan,
+          cấu trúc thác và hoạt động du lịch.
+        </p>
+
+      </div>
+
+
+      <div class="source">
+
+        <a
+          href="https://baolangson.vn/thac-ban-khieng-diem-du-lich-tiem-nang-cua-huyen-loc-binh-1448106.html"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Báo và Phát thanh, Truyền hình Lạng Sơn –
+          Thác Bản Khiếng: Điểm du lịch tiềm năng
+
+        </a>
+
+        <p>
+          Nguồn về cảnh quan, hồ nước,
+          thác và cơ sở phục vụ du khách.
+        </p>
+
+      </div>
+
+
+      <div class="source">
+
+        <a
+          href="https://dulichlangson.com.vn/shop/di-tich-khuoi-noi/"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Cổng thông tin Du lịch Lạng Sơn
+
+        </a>
+
+        <p>
+          Nguồn hình ảnh và thông tin
+          quảng bá điểm đến.
+        </p>
+
+      </div>
+
+
+      <div class="source">
+
+        <a
+          href="https://www.traveloka.com/vi-vn/explore/destination/thac-ban-khieng/175402"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Traveloka – Thác Bản Khiếng
+
+        </a>
+
+        <p>
+          Nguồn hình ảnh tham khảo
+          về cảnh quan và cây cầu.
+        </p>
+
+      </div>
+
+
+      <div class="source">
+
+        <a
+          href="https://soha.vn/cach-ha-noi-150km-co-mot-phuong-hoang-co-tran-ban-viet-khung-canh-nen-tho-tru-tinh-cam-giac-nhu-lac-buoc-vao-chon-tien-canh-198240423212307945.htm"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Soha – Bản Khiếng Waterfall
+
+        </a>
+
+        <p>
+          Nguồn hình ảnh tham khảo
+          về cảnh quan toàn khu.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div>
+
+      <div class="footer-title">
+        THÁC BẢN KHIẾNG
+      </div>
+
+      <div class="footer-sub">
+        Mẫu Sơn · Lạng Sơn
+      </div>
+
+    </div>
+
+
+    <div class="footer-links">
+
+      <a href="./danhlamthangcanh.html">
+        Trang chủ
+      </a>
+
+      <a href="./momam.html">
+        ← Suối Mỏ Mắm
+      </a>
+
+      <a href="./naduong.html">
+        Thế giới đầm hồ Na Dương →
+      </a>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- =========================================================
+     BACK TO TOP
+========================================================= -->
+
+<a
+  href="#"
+  class="top"
+  id="top"
+  aria-label="Lên đầu trang">
+
+  ↑
+
+</a>
+
+
+<script>
+
+const nav = document.getElementById("nav");
+const topButton = document.getElementById("top");
+
+
+/* NAV */
+
+window.addEventListener("scroll", function(){
+
+  if(window.scrollY > 70){
+
+    nav.classList.add("scrolled");
+    topButton.classList.add("show");
+
+  }else{
+
+    nav.classList.remove("scrolled");
+    topButton.classList.remove("show");
+
+  }
+
+});
+
+
+/* BACK TO TOP */
+
+topButton.addEventListener("click", function(e){
+
+  e.preventDefault();
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+});
+
+
+/* =========================================================
+   ẢNH DỰ PHÒNG
+========================================================= */
+
+const backupImage =
+  "https://mediabls.mediatech.vn/upload/image/202109/medium/8947_6.jpg";
+
+document.querySelectorAll("img").forEach(function(img){
+
+  img.addEventListener("error", function(){
+
+    if(this.src !== backupImage){
+      this.src = backupImage;
+    }
+
+  });
+
+});
+
+</script>
+
+</body>
+</html>
+```

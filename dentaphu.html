@@ -1,0 +1,3291 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Đền Tả Phủ – Lạng Sơn</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --bg:#f3eee5;
+    --paper:#fffdf8;
+    --paper-dark:#e9e1d3;
+
+    --green:#304a3a;
+    --green-dark:#20362b;
+    --green-light:#597361;
+
+    --gold:#b88a4b;
+    --gold-light:#d8b879;
+
+    --red:#8a3d32;
+    --red-dark:#682d26;
+
+    --text:#292821;
+    --muted:#716b61;
+    --line:#ddd4c6;
+
+    --white:#fff;
+
+    --shadow:0 18px 45px rgba(37,43,36,.11);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+html{
+    scroll-padding-top:138px;
+}
+
+body{
+    font-family:"Be Vietnam Pro",sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.75;
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+/* =====================================================
+   MENU CHÍNH
+===================================================== */
+
+.topbar{
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:70px;
+
+    z-index:2000;
+
+    background:rgba(255,253,248,.96);
+    backdrop-filter:blur(14px);
+
+    border-bottom:1px solid var(--line);
+}
+
+.topbar-inner{
+    width:min(1200px,100%);
+    height:100%;
+
+    margin:auto;
+    padding:0 24px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    color:var(--green);
+
+    text-decoration:none;
+
+    font-size:21px;
+    font-weight:800;
+
+    letter-spacing:2px;
+}
+
+.main-link{
+    color:var(--green);
+
+    text-decoration:none;
+
+    font-size:14px;
+    font-weight:700;
+
+    padding:9px 18px;
+
+    border:1px solid var(--line);
+    border-radius:999px;
+
+    transition:.25s;
+}
+
+.main-link:hover{
+    color:#fff;
+    background:var(--green);
+    border-color:var(--green);
+}
+
+/* =====================================================
+   THANH SECTION
+===================================================== */
+
+.section-nav{
+    position:fixed;
+
+    top:70px;
+    left:0;
+
+    width:100%;
+    height:58px;
+
+    z-index:1900;
+
+    background:var(--green);
+
+    box-shadow:0 6px 20px rgba(0,0,0,.14);
+}
+
+.section-nav-inner{
+    width:min(1200px,100%);
+    height:100%;
+
+    margin:auto;
+    padding:0 24px;
+
+    display:flex;
+    align-items:center;
+    gap:7px;
+
+    overflow-x:auto;
+    scrollbar-width:none;
+}
+
+.section-nav-inner::-webkit-scrollbar{
+    display:none;
+}
+
+.section-nav a{
+    flex:none;
+
+    padding:9px 15px;
+
+    color:rgba(255,255,255,.70);
+
+    text-decoration:none;
+
+    border-radius:999px;
+
+    white-space:nowrap;
+
+    font-size:12.5px;
+    font-weight:700;
+
+    transition:.25s;
+}
+
+.section-nav a:hover,
+.section-nav a.active{
+    color:#fff;
+
+    background:rgba(255,255,255,.16);
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+    margin-top:128px;
+
+    min-height:700px;
+
+    position:relative;
+    overflow:hidden;
+
+    display:flex;
+    align-items:flex-end;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(22,25,20,.04) 8%,
+            rgba(22,25,20,.20) 45%,
+            rgba(22,25,20,.82) 100%
+        ),
+        url("https://mediabls.mediatech.vn/upload/image/202410/medium/494113_z5873119220089_3d0f6f3f461f2037fed2df2b6ab26cba_11395702.jpg")
+        center/cover no-repeat;
+}
+
+.hero-content{
+    width:min(1200px,100%);
+
+    margin:auto;
+    padding:100px 24px 80px;
+
+    color:#fff;
+}
+
+.hero-kicker{
+    margin-bottom:14px;
+
+    color:var(--gold-light);
+
+    font-size:12px;
+    font-weight:800;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+}
+
+.hero h1{
+    max-width:950px;
+
+    margin-bottom:27px;
+
+    font-family:"DM Serif Display",serif;
+
+    font-size:clamp(65px,9vw,118px);
+
+    font-weight:400;
+
+    line-height:.91;
+}
+
+.hero-description{
+    max-width:760px;
+
+    color:rgba(255,255,255,.90);
+
+    font-size:17px;
+
+    line-height:1.8;
+}
+
+.hero-tags{
+    margin-top:28px;
+
+    display:flex;
+    flex-wrap:wrap;
+
+    gap:9px;
+}
+
+.hero-tag{
+    padding:8px 13px;
+
+    color:#fff;
+
+    background:rgba(255,255,255,.10);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    border-radius:999px;
+
+    font-size:11px;
+    font-weight:700;
+
+    backdrop-filter:blur(7px);
+}
+
+/* =====================================================
+   GENERAL
+===================================================== */
+
+.container{
+    width:min(1150px,100%);
+
+    margin:auto;
+
+    padding:0 24px;
+}
+
+section{
+    padding:95px 0;
+
+    scroll-margin-top:140px;
+}
+
+.section-label{
+    margin-bottom:11px;
+
+    color:var(--gold);
+
+    font-size:11px;
+    font-weight:800;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+}
+
+.section-title{
+    margin-bottom:24px;
+
+    color:var(--green);
+
+    font-family:"DM Serif Display",serif;
+
+    font-size:clamp(40px,5vw,58px);
+
+    font-weight:400;
+
+    line-height:1.08;
+}
+
+.intro{
+    max-width:850px;
+
+    color:#575249;
+
+    font-size:17px;
+}
+
+.text{
+    color:#575249;
+}
+
+.text p{
+    margin-bottom:17px;
+}
+
+/* =====================================================
+   01 TỔNG QUAN
+===================================================== */
+
+#tong-quan{
+    background:var(--paper);
+}
+
+.overview-grid{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:65px;
+
+    align-items:center;
+}
+
+.overview-image{
+    min-height:500px;
+
+    position:relative;
+
+    box-shadow:var(--shadow);
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 45%,
+            rgba(0,0,0,.34)
+        ),
+        url("https://mediabls.mediatech.vn/upload/image/202410/medium/494113_z5873119220089_3d0f6f3f461f2037fed2df2b6ab26cba_11395702.jpg")
+        center/cover no-repeat;
+}
+
+.overview-source{
+    position:absolute;
+
+    left:20px;
+    bottom:18px;
+
+    padding:7px 11px;
+
+    color:#fff;
+
+    background:rgba(0,0,0,.47);
+
+    border-radius:999px;
+
+    font-size:10px;
+}
+
+/* =====================================================
+   THÔNG TIN NHANH CUỐI TỔNG QUAN
+===================================================== */
+
+.quick-info{
+    margin-top:60px;
+
+    border-top:1px solid var(--line);
+}
+
+.quick-head{
+    padding:25px 0 17px;
+
+    display:flex;
+
+    justify-content:space-between;
+    align-items:end;
+
+    gap:20px;
+}
+
+.quick-head h3{
+    color:var(--green);
+
+    font-family:"DM Serif Display",serif;
+
+    font-size:35px;
+
+    font-weight:400;
+}
+
+.quick-head p{
+    color:var(--muted);
+
+    font-size:12px;
+}
+
+.info-grid{
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    border-top:1px solid var(--line);
+    border-left:1px solid var(--line);
+}
+
+.info-card{
+    min-height:140px;
+
+    padding:21px;
+
+    background:var(--bg);
+
+    border-right:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+}
+
+.info-label{
+    margin-bottom:13px;
+
+    color:var(--gold);
+
+    font-size:10px;
+    font-weight:800;
+
+    letter-spacing:1.5px;
+
+    text-transform:uppercase;
+}
+
+.info-card strong{
+    display:block;
+
+    margin-bottom:5px;
+
+    color:var(--green);
+
+    font-size:16px;
+}
+
+.info-card span{
+    color:#655f56;
+
+    font-size:12px;
+}
+
+/* =====================================================
+   02 LỊCH SỬ
+===================================================== */
+
+#lich-su{
+    background:var(--paper-dark);
+}
+
+.timeline{
+    max-width:900px;
+
+    margin-top:45px;
+
+    padding-left:34px;
+
+    border-left:2px solid var(--gold);
+}
+
+.timeline-item{
+    position:relative;
+
+    margin-bottom:43px;
+}
+
+.timeline-item:last-child{
+    margin-bottom:0;
+}
+
+.timeline-item::before{
+    content:"";
+
+    position:absolute;
+
+    left:-43px;
+    top:7px;
+
+    width:14px;
+    height:14px;
+
+    border:3px solid var(--gold);
+
+    border-radius:50%;
+
+    background:var(--paper);
+}
+
+.timeline-year{
+    margin-bottom:5px;
+
+    color:var(--gold);
+
+    font-size:20px;
+    font-weight:800;
+}
+
+.timeline-item h3{
+    margin-bottom:7px;
+
+    color:var(--green);
+
+    font-size:20px;
+}
+
+.timeline-item p{
+    max-width:800px;
+
+    color:#575249;
+}
+
+/* =====================================================
+   03 NHÂN VẬT THÂN CÔNG TÀI
+===================================================== */
+
+#than-cong-tai{
+    background:var(--paper);
+}
+
+.person-layout{
+    display:grid;
+
+    grid-template-columns:.80fr 1.20fr;
+
+    gap:65px;
+
+    align-items:center;
+}
+
+.person-card{
+    padding:34px;
+
+    background:var(--green);
+
+    color:#fff;
+
+    box-shadow:var(--shadow);
+}
+
+.person-card-label{
+    margin-bottom:22px;
+
+    color:var(--gold-light);
+
+    font-size:11px;
+    font-weight:800;
+
+    letter-spacing:2px;
+}
+
+.person-card h3{
+    margin-bottom:20px;
+
+    font-family:"DM Serif Display",serif;
+
+    font-size:42px;
+
+    font-weight:400;
+
+    line-height:1.1;
+}
+
+.person-card p{
+    color:rgba(255,255,255,.74);
+
+    font-size:13px;
+}
+
+.person-copy{
+    padding:10px 0;
+}
+
+.person-points{
+    margin-top:28px;
+
+    display:grid;
+
+    gap:11px;
+}
+
+.person-point{
+    padding:16px 18px;
+
+    background:var(--bg);
+
+    border-left:3px solid var(--gold);
+}
+
+.person-point strong{
+    display:block;
+
+    margin-bottom:4px;
+
+    color:var(--green);
+
+    font-size:14px;
+}
+
+.person-point span{
+    color:#625c53;
+
+    font-size:12.5px;
+}
+
+/* =====================================================
+   04 KIẾN TRÚC
+===================================================== */
+
+#kien-truc{
+    background:var(--paper-dark);
+}
+
+.architecture-layout{
+    display:grid;
+
+    grid-template-columns:1.05fr .95fr;
+
+    gap:65px;
+
+    align-items:center;
+}
+
+.architecture-copy{
+    padding-top:8px;
+}
+
+.architecture-points{
+    margin-top:30px;
+
+    display:grid;
+
+    gap:11px;
+}
+
+.architecture-point{
+    padding:17px 18px;
+
+    background:var(--paper);
+
+    border-left:3px solid var(--gold);
+}
+
+.architecture-point strong{
+    display:block;
+
+    margin-bottom:4px;
+
+    color:var(--green);
+
+    font-size:14px;
+}
+
+.architecture-point span{
+    color:#625c53;
+
+    font-size:12.5px;
+}
+
+.architecture-image{
+    min-height:510px;
+
+    box-shadow:var(--shadow);
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 45%,
+            rgba(0,0,0,.33)
+        ),
+        url("https://mediabls.mediatech.vn/upload/image/202410/medium/494113_z5873119220089_3d0f6f3f461f2037fed2df2b6ab26cba_11395702.jpg")
+        center/cover no-repeat;
+}
+
+/* =====================================================
+   05 BIA TẢ PHỦ
+===================================================== */
+
+#bia{
+    background:var(--paper);
+}
+
+.stele-layout{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:start;
+}
+
+.stele-number{
+    color:var(--gold);
+
+    font-family:"DM Serif Display",serif;
+
+    font-size:145px;
+
+    line-height:.72;
+
+    opacity:.58;
+}
+
+.quote{
+    margin:18px 0 24px;
+
+    color:var(--green);
+
+    font-family:"DM Serif Display",serif;
+
+    font-size:34px;
+
+    line-height:1.3;
+}
+
+.stele-box{
+    margin-top:30px;
+
+    padding:23px;
+
+    background:var(--bg);
+
+    border-left:3px solid var(--gold);
+}
+
+.stele-box strong{
+    display:block;
+
+    margin-bottom:7px;
+
+    color:var(--green);
+}
+
+.stele-box p{
+    color:#625c53;
+
+    font-size:13px;
+}
+
+/* =====================================================
+   06 LỄ HỘI
+===================================================== */
+
+#le-hoi{
+    background:var(--paper-dark);
+}
+
+.festival-layout{
+    display:grid;
+
+    grid-template-columns:1.08fr .92fr;
+
+    gap:55px;
+
+    align-items:center;
+}
+
+.festival-image{
+    min-height:500px;
+
+    box-shadow:var(--shadow);
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 35%,
+            rgba(0,0,0,.68)
+        ),
+        url("https://images.bdatrip.com/2021/3/le-hoi-den-ta-phu-2.jpg")
+        center/cover no-repeat;
+}
+
+.festival-copy{
+    padding:8px 0;
+}
+
+.date-pill{
+    display:inline-block;
+
+    margin:3px 0 22px;
+
+    padding:9px 14px;
+
+    color:#fff;
+
+    background:var(--red);
+
+    border-radius:999px;
+
+    font-size:12px;
+    font-weight:700;
+}
+
+.festival-list{
+    margin-top:28px;
+
+    display:grid;
+
+    gap:10px;
+}
+
+.festival-item{
+    padding:16px 18px;
+
+    background:var(--paper);
+
+    border-left:3px solid var(--gold);
+}
+
+.festival-item strong{
+    display:block;
+
+    margin-bottom:3px;
+
+    color:var(--green);
+
+    font-size:14px;
+}
+
+.festival-item span{
+    color:#615b53;
+
+    font-size:12.5px;
+}
+
+/* =====================================================
+   07 HỘI ĐẦU PHÁO
+===================================================== */
+
+#dau-phao{
+    background:var(--paper);
+}
+
+.firecracker-layout{
+    display:grid;
+
+    grid-template-columns:.9fr 1.1fr;
+
+    gap:60px;
+
+    align-items:center;
+}
+
+.firecracker-copy{
+    padding:8px 0;
+}
+
+.firecracker-title{
+    margin-top:5px;
+
+    color:var(--red);
+
+    font-family:"DM Serif Display",serif;
+
+    font-size:47px;
+
+    line-height:1.08;
+}
+
+.firecracker-description{
+    margin-top:23px;
+
+    color:#575249;
+
+    font-size:16px;
+}
+
+.firecracker-steps{
+    margin-top:30px;
+
+    display:grid;
+
+    gap:12px;
+}
+
+.firecracker-step{
+    display:grid;
+
+    grid-template-columns:50px 1fr;
+
+    gap:15px;
+
+    padding:18px;
+
+    background:var(--bg);
+
+    border:1px solid var(--line);
+}
+
+.firecracker-no{
+    color:var(--gold);
+
+    font-size:13px;
+    font-weight:800;
+}
+
+.firecracker-step strong{
+    display:block;
+
+    color:var(--green);
+
+    margin-bottom:3px;
+
+    font-size:14px;
+}
+
+.firecracker-step span{
+    color:#625c53;
+
+    font-size:12.5px;
+}
+
+.firecracker-card{
+    padding:35px;
+
+    color:#fff;
+
+    background:
+        linear-gradient(
+            150deg,
+            var(--red),
+            var(--red-dark)
+        );
+
+    box-shadow:var(--shadow);
+}
+
+.firecracker-card .big{
+    font-family:"DM Serif Display",serif;
+
+    font-size:90px;
+
+    line-height:.9;
+
+    color:var(--gold-light);
+}
+
+.firecracker-card h3{
+    margin-top:25px;
+
+    font-family:"DM Serif Display",serif;
+
+    font-size:32px;
+
+    font-weight:400;
+}
+
+.firecracker-card p{
+    margin-top:13px;
+
+    color:rgba(255,255,255,.75);
+
+    font-size:13px;
+}
+
+/* =====================================================
+   08 GIÁ TRỊ
+===================================================== */
+
+#gia-tri{
+    background:var(--green);
+
+    color:#fff;
+}
+
+#gia-tri .section-label{
+    color:var(--gold-light);
+}
+
+#gia-tri .section-title{
+    color:#fff;
+}
+
+.value-grid{
+    margin-top:43px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:16px;
+}
+
+.value-card{
+    min-height:245px;
+
+    padding:29px;
+
+    background:rgba(255,255,255,.035);
+
+    border:1px solid rgba(255,255,255,.15);
+}
+
+.value-no{
+    margin-bottom:28px;
+
+    color:var(--gold-light);
+
+    font-size:11px;
+    font-weight:800;
+
+    letter-spacing:1.5px;
+}
+
+.value-card h3{
+    margin-bottom:10px;
+
+    font-size:20px;
+}
+
+.value-card p{
+    color:rgba(255,255,255,.68);
+
+    font-size:13px;
+}
+
+/* =====================================================
+   09 BẢO TỒN
+===================================================== */
+
+#bao-ton{
+    background:var(--paper-dark);
+}
+
+.conservation-grid{
+    margin-top:40px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:16px;
+}
+
+.conservation-card{
+    padding:28px;
+
+    background:var(--paper);
+
+    border:1px solid var(--line);
+}
+
+.conservation-card h3{
+    margin-bottom:11px;
+
+    color:var(--green);
+}
+
+.conservation-card p{
+    margin-bottom:12px;
+
+    color:#5d574e;
+
+    font-size:13px;
+}
+
+.conservation-card p:last-child{
+    margin-bottom:0;
+}
+
+.renovation-note{
+    margin-top:22px;
+
+    padding:21px 22px;
+
+    background:#e0d5c3;
+
+    border-left:3px solid var(--gold);
+}
+
+.renovation-note strong{
+    display:block;
+
+    color:var(--green);
+
+    margin-bottom:5px;
+}
+
+.renovation-note span{
+    color:#5f594f;
+
+    font-size:12.5px;
+}
+
+/* =====================================================
+   10 HÌNH ẢNH
+===================================================== */
+
+#hinh-anh{
+    background:var(--paper);
+}
+
+.gallery{
+    margin-top:42px;
+
+    display:grid;
+
+    grid-template-columns:repeat(12,1fr);
+
+    grid-auto-rows:250px;
+
+    gap:13px;
+}
+
+.gallery-item{
+    position:relative;
+
+    overflow:hidden;
+
+    background:#d7cfc1;
+}
+
+.gallery-item:nth-child(1){
+    grid-column:span 7;
+    grid-row:span 2;
+}
+
+.gallery-item:nth-child(2){
+    grid-column:span 5;
+}
+
+.gallery-item:nth-child(3){
+    grid-column:span 5;
+}
+
+.gallery-item:nth-child(4){
+    grid-column:span 7;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:.55s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.05);
+}
+
+.gallery-caption{
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    padding:45px 18px 15px;
+
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.80)
+    );
+
+    color:#fff;
+}
+
+.gallery-caption strong{
+    display:block;
+
+    font-size:13px;
+}
+
+.gallery-caption span{
+    color:rgba(255,255,255,.68);
+
+    font-size:10px;
+}
+
+/* =====================================================
+   11 NGUỒN
+===================================================== */
+
+#nguon{
+    background:var(--bg);
+}
+
+.source-grid{
+    margin-top:40px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:16px;
+}
+
+.source-card{
+    padding:27px;
+
+    background:var(--paper);
+
+    border:1px solid var(--line);
+}
+
+.source-card h3{
+    margin-bottom:10px;
+
+    color:var(--green);
+}
+
+.source-card p{
+    margin-bottom:10px;
+
+    color:#5f5951;
+
+    font-size:13px;
+}
+
+.source-card a{
+    color:var(--green);
+
+    text-decoration:none;
+
+    font-size:12px;
+    font-weight:700;
+}
+
+.source-card a:hover{
+    text-decoration:underline;
+}
+
+.usage-note{
+    margin-top:18px;
+
+    padding:18px 20px;
+
+    background:#e8dfd1;
+
+    color:#645e55;
+
+    font-size:11px;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+    padding:48px 24px;
+
+    background:#1f2c24;
+
+    color:#fff;
+}
+
+.footer-inner{
+    width:min(1150px,100%);
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:30px;
+}
+
+.footer-logo{
+    font-size:18px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+}
+
+.footer-text{
+    color:rgba(255,255,255,.52);
+
+    font-size:11px;
+
+    text-align:right;
+}
+
+/* =====================================================
+   NÚT QUAY LẠI
+===================================================== */
+
+.back-button{
+    position:fixed;
+
+    right:21px;
+    bottom:21px;
+
+    width:49px;
+    height:49px;
+
+    z-index:2100;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    color:#fff;
+
+    background:var(--green);
+
+    border-radius:50%;
+
+    text-decoration:none;
+
+    font-size:20px;
+
+    box-shadow:0 10px 28px rgba(0,0,0,.22);
+
+    transition:.25s;
+}
+
+.back-button:hover{
+    transform:translateY(-3px);
+
+    background:var(--green-dark);
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:950px){
+
+    .overview-grid,
+    .person-layout,
+    .architecture-layout,
+    .stele-layout,
+    .festival-layout,
+    .firecracker-layout{
+        grid-template-columns:1fr;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .value-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .conservation-grid,
+    .source-grid{
+        grid-template-columns:1fr;
+    }
+
+    .architecture-image{
+        min-height:430px;
+    }
+}
+
+@media(max-width:700px){
+
+    .topbar{
+        height:62px;
+    }
+
+    .section-nav{
+        top:62px;
+
+        height:55px;
+    }
+
+    .hero{
+        margin-top:117px;
+
+        min-height:650px;
+    }
+
+    .topbar-inner{
+        padding:0 15px;
+    }
+
+    .logo{
+        font-size:17px;
+    }
+
+    .main-link{
+        padding:8px 12px;
+
+        font-size:12px;
+    }
+
+    .section-nav-inner{
+        padding:0 10px;
+    }
+
+    .section-nav a{
+        padding:8px 12px;
+
+        font-size:11.5px;
+    }
+
+    .hero-content{
+        padding:80px 18px 60px;
+    }
+
+    .hero h1{
+        font-size:57px;
+    }
+
+    .hero-description{
+        font-size:15px;
+    }
+
+    section{
+        padding:72px 0;
+    }
+
+    .container{
+        padding:0 18px;
+    }
+
+    .overview-image,
+    .architecture-image,
+    .festival-image{
+        min-height:370px;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .quick-head{
+        display:block;
+    }
+
+    .quick-head p{
+        margin-top:5px;
+    }
+
+    .stele-number{
+        font-size:105px;
+    }
+
+    .firecracker-card .big{
+        font-size:78px;
+    }
+
+    .value-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery{
+        grid-template-columns:1fr;
+
+        grid-auto-rows:250px;
+    }
+
+    .gallery-item:nth-child(n){
+        grid-column:span 1;
+        grid-row:span 1;
+    }
+
+    .footer-inner{
+        flex-direction:column;
+    }
+
+    .footer-text{
+        text-align:left;
+    }
+}
+
+@media(max-width:450px){
+
+    .hero h1{
+        font-size:50px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     MENU CHÍNH
+===================================================== -->
+
+<header class="topbar">
+
+    <div class="topbar-inner">
+
+        <a
+            href="./danhlamthangcanh.html"
+            class="logo"
+        >
+            LẠNG SƠN
+        </a>
+
+        <a
+            href="./danhlamthangcanh.html"
+            class="main-link"
+        >
+            Danh thắng
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     THANH SECTION
+===================================================== -->
+
+<nav class="section-nav">
+
+    <div class="section-nav-inner">
+
+        <a href="#tong-quan" class="section-link active">
+            Tổng quan
+        </a>
+
+        <a href="#lich-su" class="section-link">
+            Lịch sử
+        </a>
+
+        <a href="#than-cong-tai" class="section-link">
+            Thân Công Tài
+        </a>
+
+        <a href="#kien-truc" class="section-link">
+            Kiến trúc
+        </a>
+
+        <a href="#bia" class="section-link">
+            Bia Tả Phủ
+        </a>
+
+        <a href="#le-hoi" class="section-link">
+            Lễ hội
+        </a>
+
+        <a href="#dau-phao" class="section-link">
+            Hội đầu pháo
+        </a>
+
+        <a href="#gia-tri" class="section-link">
+            Giá trị
+        </a>
+
+        <a href="#bao-ton" class="section-link">
+            Bảo tồn
+        </a>
+
+        <a href="#hinh-anh" class="section-link">
+            Hình ảnh
+        </a>
+
+        <a href="#nguon" class="section-link">
+            Nguồn
+        </a>
+
+    </div>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-kicker">
+            Di tích lịch sử – kiến trúc nghệ thuật
+        </div>
+
+        <h1>
+            Đền<br>
+            Tả Phủ
+        </h1>
+
+        <p class="hero-description">
+            Ngôi đền hơn 300 năm tuổi giữa phố chợ Kỳ Lừa,
+            gắn với danh nhân Thân Công Tài và truyền thống
+            giao thương, văn hóa, tín ngưỡng đặc sắc của Xứ Lạng.
+        </p>
+
+        <div class="hero-tags">
+
+            <span class="hero-tag">
+                Di tích Quốc gia · 1993
+            </span>
+
+            <span class="hero-tag">
+                Xây dựng năm 1683
+            </span>
+
+            <span class="hero-tag">
+                Thờ Thân Công Tài
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     01 TỔNG QUAN
+===================================================== -->
+
+<section id="tong-quan">
+
+    <div class="container">
+
+        <div class="overview-grid">
+
+            <!-- ẢNH TỔNG QUAN -->
+
+            <div class="overview-image">
+
+                <div class="overview-source">
+                    Nguồn ảnh: Báo Lạng Sơn
+                </div>
+
+            </div>
+
+
+            <!-- NỘI DUNG -->
+
+            <div>
+
+                <div class="section-label">
+                    01 · Tổng quan
+                </div>
+
+                <h2 class="section-title">
+                    Ngôi đền giữa phố chợ Kỳ Lừa
+                </h2>
+
+                <div class="text">
+
+                    <p>
+                        Đền Tả Phủ nằm ở trung tâm phố chợ Kỳ Lừa,
+                        một không gian buôn bán lâu đời của Lạng Sơn.
+                        Đền được xây dựng năm Chính Hòa thứ 4,
+                        tức năm 1683, để thờ Tả Đô đốc Hán Quận công
+                        Thân Công Tài.
+                    </p>
+
+                    <p>
+                        Thân Công Tài là vị quan thời Hậu Lê,
+                        từng được cử lên Lạng Sơn giữ việc biên ải.
+                        Trong thời gian làm việc tại đây, ông có công
+                        mở mang phố chợ Kỳ Lừa, góp phần thúc đẩy
+                        giao thương giữa cư dân địa phương với thương nhân
+                        từ Trung Quốc sang buôn bán.
+                    </p>
+
+                    <p>
+                        Đền không chỉ là nơi tưởng nhớ một nhân vật
+                        lịch sử mà còn là không gian sinh hoạt văn hóa,
+                        tín ngưỡng của cộng đồng.
+                    </p>
+
+                    <p>
+                        Hiện nay đền đã được tu bổ, tôn tạo và
+                        khánh thành diện mạo mới vào tháng 9 năm 2024.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================================
+             THÔNG TIN NHANH
+        ================================================= -->
+
+        <div class="quick-info">
+
+            <div class="quick-head">
+
+                <h3>
+                    Thông tin nhanh
+                </h3>
+
+                <p>
+                    Những dữ kiện chính về Đền Tả Phủ
+                </p>
+
+            </div>
+
+
+            <div class="info-grid">
+
+                <div class="info-card">
+
+                    <div class="info-label">
+                        Tên
+                    </div>
+
+                    <strong>
+                        Đền Tả Phủ
+                    </strong>
+
+                    <span>
+                        Còn gọi là Tả Phủ Linh từ
+                    </span>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-label">
+                        Địa chỉ hiện nay
+                    </div>
+
+                    <strong>
+                        Phường Kỳ Lừa
+                    </strong>
+
+                    <span>
+                        Tỉnh Lạng Sơn
+                    </span>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-label">
+                        Năm xây dựng
+                    </div>
+
+                    <strong>
+                        1683
+                    </strong>
+
+                    <span>
+                        Chính Hòa thứ 4
+                    </span>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-label">
+                        Nhân vật thờ
+                    </div>
+
+                    <strong>
+                        Thân Công Tài
+                    </strong>
+
+                    <span>
+                        Tả Đô đốc Hán Quận công
+                    </span>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-label">
+                        Hướng chính
+                    </div>
+
+                    <strong>
+                        Hướng Tây
+                    </strong>
+
+                    <span>
+                        Đền nằm trên thế đất cao
+                    </span>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-label">
+                        Kiến trúc
+                    </div>
+
+                    <strong>
+                        Chữ Công
+                    </strong>
+
+                    <span>
+                        Hai tòa chính
+                    </span>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-label">
+                        Xếp hạng
+                    </div>
+
+                    <strong>
+                        Di tích Quốc gia
+                    </strong>
+
+                    <span>
+                        Năm 1993
+                    </span>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-label">
+                        Lễ hội
+                    </div>
+
+                    <strong>
+                        22 – 27 tháng Giêng
+                    </strong>
+
+                    <span>
+                        Hội Đầu pháo Kỳ Lừa
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     02 LỊCH SỬ
+===================================================== -->
+
+<section id="lich-su">
+
+    <div class="container">
+
+        <div class="section-label">
+            02 · Lịch sử
+        </div>
+
+        <h2 class="section-title">
+            Hơn ba thế kỷ gắn với Kỳ Lừa
+        </h2>
+
+        <p class="intro">
+            Lịch sử Đền Tả Phủ gắn chặt với quá trình hình thành
+            phố chợ Kỳ Lừa và vai trò của Thân Công Tài
+            trong việc phát triển giao thương ở Lạng Sơn.
+        </p>
+
+
+        <div class="timeline">
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+                    1683
+                </div>
+
+                <h3>
+                    Đền được xây dựng
+                </h3>
+
+                <p>
+                    Theo bia hưng tạo lưu giữ tại đền,
+                    nhân dân 7 phường chợ ở Đoàn Thành Lạng Sơn
+                    cùng 13 phường buôn Trung Quốc đã góp công
+                    xây dựng đền để phụng thờ Thân Công Tài.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+                    Thế kỷ XVII – XVIII
+                </div>
+
+                <h3>
+                    Kỳ Lừa phát triển thành phố chợ
+                </h3>
+
+                <p>
+                    Công cuộc mở mang đường sá và phố phường
+                    góp phần đưa Kỳ Lừa trở thành một trung tâm
+                    giao thương quan trọng ở khu vực biên giới.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+                    1979
+                </div>
+
+                <h3>
+                    Đền bị phá hủy gần như hoàn toàn
+                </h3>
+
+                <p>
+                    Trong chiến tranh biên giới, công trình đền
+                    bị phá hủy nghiêm trọng; tấm bia đá bốn mặt
+                    năm 1683 là một trong những dấu tích quan trọng
+                    còn lại.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+                    1993
+                </div>
+
+                <h3>
+                    Được xếp hạng di tích Quốc gia
+                </h3>
+
+                <p>
+                    Bia và Đền Tả Phủ được Bộ Văn hóa – Thông tin
+                    xếp hạng di tích quốc gia theo Quyết định
+                    số 57/VH-QĐ ngày 18/01/1993.
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-year">
+                    2023 – 2024
+                </div>
+
+                <h3>
+                    Tu bổ và tôn tạo
+                </h3>
+
+                <p>
+                    Đền được tu bổ, tôn tạo từ nguồn xã hội hóa.
+                    Công trình được khánh thành và đưa vào sử dụng
+                    ngày 12/9/2024.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     03 THÂN CÔNG TÀI
+===================================================== -->
+
+<section id="than-cong-tai">
+
+    <div class="container">
+
+        <div class="person-layout">
+
+            <div class="person-card">
+
+                <div class="person-card-label">
+                    NHÂN VẬT ĐƯỢC TÔN THỜ
+                </div>
+
+                <h3>
+                    Thân Công Tài
+                </h3>
+
+                <p>
+                    Tả Đô đốc Hán Quận công thời Hậu Lê,
+                    nhân vật có công lớn với Lạng Sơn
+                    trong việc giữ gìn biên ải và phát triển
+                    phố chợ Kỳ Lừa.
+                </p>
+
+            </div>
+
+
+            <div class="person-copy">
+
+                <div class="section-label">
+                    03 · Thân Công Tài
+                </div>
+
+                <h2 class="section-title">
+                    Người mở mang phố chợ Kỳ Lừa
+                </h2>
+
+                <div class="text">
+
+                    <p>
+                        Thân Công Tài quê ở vùng Bắc Giang,
+                        được triều đình trọng dụng và cử lên
+                        Lạng Sơn làm nhiệm vụ ở vùng biên giới.
+                    </p>
+
+                    <p>
+                        Bên cạnh công việc phòng thủ Đoàn thành,
+                        ông nhận thấy vị trí thuận lợi của Kỳ Lừa
+                        và chủ trương mở mang đường sá, tạo điều kiện
+                        cho giao thương phát triển.
+                    </p>
+
+                    <p>
+                        Theo tư liệu di sản, người dân truyền tụng
+                        ông có công san đồi, bạt đất, mở bảy con đường
+                        và lập bảy phường cho phố chợ Kỳ Lừa.
+                    </p>
+
+                </div>
+
+
+                <div class="person-points">
+
+                    <div class="person-point">
+
+                        <strong>
+                            Giữ gìn biên ải
+                        </strong>
+
+                        <span>
+                            Thực hiện nhiệm vụ quân sự và quản lý
+                            vùng biên giới Lạng Sơn.
+                        </span>
+
+                    </div>
+
+
+                    <div class="person-point">
+
+                        <strong>
+                            Mở mang phố chợ
+                        </strong>
+
+                        <span>
+                            Góp phần hình thành không gian giao thương
+                            của Kỳ Lừa.
+                        </span>
+
+                    </div>
+
+
+                    <div class="person-point">
+
+                        <strong>
+                            Giao lưu Việt – Trung
+                        </strong>
+
+                        <span>
+                            Thúc đẩy hoạt động buôn bán giữa cư dân
+                            hai bên biên giới.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     04 KIẾN TRÚC
+===================================================== -->
+
+<section id="kien-truc">
+
+    <div class="container">
+
+        <div class="architecture-layout">
+
+            <div class="architecture-copy">
+
+                <div class="section-label">
+                    04 · Kiến trúc
+                </div>
+
+                <h2 class="section-title">
+                    Kiến trúc chữ Công giữa phố chợ
+                </h2>
+
+                <div class="text">
+
+                    <p>
+                        Đền được xây dựng trên thế đất cao,
+                        cửa chính quay về hướng Tây, tạo nên
+                        vẻ uy nghi và linh thiêng.
+                    </p>
+
+                    <p>
+                        Theo hồ sơ di sản, đền gồm hai tòa
+                        được bố trí theo lối chữ Công.
+                        Hai tòa được nối bởi tường vây,
+                        ở giữa có khoảng sân nhỏ.
+                    </p>
+
+                    <p>
+                        Các cấu kiện gỗ mang đặc điểm kiến trúc
+                        chịu ảnh hưởng phong cách của người Hoa,
+                        phù hợp với bối cảnh phố chợ Kỳ Lừa
+                        vốn có hoạt động giao thương Việt – Trung.
+                    </p>
+
+                </div>
+
+
+                <div class="architecture-points">
+
+                    <div class="architecture-point">
+
+                        <strong>
+                            Hai tòa chính
+                        </strong>
+
+                        <span>
+                            Tòa ngoài và tòa trong liên kết với nhau
+                            trên cùng trục chính đạo.
+                        </span>
+
+                    </div>
+
+
+                    <div class="architecture-point">
+
+                        <strong>
+                            Chữ Công
+                        </strong>
+
+                        <span>
+                            Hai khối công trình được nối bằng
+                            phần trung gian ở giữa.
+                        </span>
+
+                    </div>
+
+
+                    <div class="architecture-point">
+
+                        <strong>
+                            Điêu khắc gỗ
+                        </strong>
+
+                        <span>
+                            Một số đầu xà, vì kèo và cấu kiện
+                            được trang trí với hình lá, hoa văn
+                            cách điệu.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="architecture-image"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     05 BIA TẢ PHỦ
+===================================================== -->
+
+<section id="bia">
+
+    <div class="container">
+
+        <div class="stele-layout">
+
+            <div>
+
+                <div class="section-label">
+                    05 · Văn bia
+                </div>
+
+                <div class="stele-number">
+                    1683
+                </div>
+
+                <h2 class="section-title">
+                    Tấm bia kể lại công đức tiền nhân
+                </h2>
+
+            </div>
+
+
+            <div>
+
+                <p class="intro">
+                    Một trong những hiện vật quan trọng nhất
+                    của di tích là tấm bia đá bốn mặt được dựng
+                    ngay khi đền được xây dựng.
+                </p>
+
+                <div class="quote">
+                    “Tôn sư phụ bi”
+                </div>
+
+                <div class="text">
+
+                    <p>
+                        Tấm bia được dựng năm Chính Hòa thứ 4,
+                        tức năm 1683. Tên bia “Tôn sư phụ bi”
+                        có thể hiểu là bia tôn người làm thầy,
+                        làm cha, thể hiện sự ghi nhớ công lao
+                        của Thân Công Tài.
+                    </p>
+
+                    <p>
+                        Một mặt bên của bia có dòng chữ
+                        “Lưỡng quốc khách nhân”, gắn với việc
+                        người dân hai nước Việt – Trung ghi nhận
+                        công lao của ông đối với Lạng Sơn
+                        và hoạt động buôn bán tại Kỳ Lừa.
+                    </p>
+
+                </div>
+
+
+                <div class="stele-box">
+
+                    <strong>
+                        Giá trị của bia
+                    </strong>
+
+                    <p>
+                        Đây là tư liệu quan trọng giúp tìm hiểu
+                        lịch sử hình thành Đền Tả Phủ,
+                        Thân Công Tài và sự phát triển
+                        của phố chợ Kỳ Lừa.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     06 LỄ HỘI
+===================================================== -->
+
+<section id="le-hoi">
+
+    <div class="container">
+
+        <div class="festival-layout">
+
+            <div class="festival-image"></div>
+
+
+            <div class="festival-copy">
+
+                <div class="section-label">
+                    06 · Lễ hội
+                </div>
+
+                <h2 class="section-title">
+                    Kỳ Cùng – Tả Phủ
+                </h2>
+
+                <div class="date-pill">
+                    22 – 27 tháng Giêng âm lịch
+                </div>
+
+                <div class="text">
+
+                    <p>
+                        Lễ hội đền Tả Phủ gắn bó mật thiết với
+                        lễ hội đền Kỳ Cùng, tạo thành một lễ hội
+                        lớn và đặc sắc của Lạng Sơn.
+                    </p>
+
+                    <p>
+                        Trong những ngày hội, không gian phố chợ
+                        Kỳ Lừa trở nên sôi động với các nghi thức
+                        rước kiệu, tế lễ, diễn xướng và hoạt động
+                        văn hóa dân gian.
+                    </p>
+
+                    <p>
+                        Lễ hội Kỳ Cùng – Tả Phủ được đưa vào
+                        Danh mục di sản văn hóa phi vật thể quốc gia
+                        năm 2015.
+                    </p>
+
+                </div>
+
+
+                <div class="festival-list">
+
+                    <div class="festival-item">
+
+                        <strong>
+                            Rước kiệu
+                        </strong>
+
+                        <span>
+                            Nghi thức kết nối đền Kỳ Cùng
+                            với đền Tả Phủ.
+                        </span>
+
+                    </div>
+
+
+                    <div class="festival-item">
+
+                        <strong>
+                            Tế lễ
+                        </strong>
+
+                        <span>
+                            Các nghi thức tín ngưỡng được thực hiện
+                            trong những ngày diễn ra lễ hội.
+                        </span>
+
+                    </div>
+
+
+                    <div class="festival-item">
+
+                        <strong>
+                            Diễn xướng dân gian
+                        </strong>
+
+                        <span>
+                            Múa lân, sư, rồng, hát đối đáp,
+                            sli, lượn và các hoạt động văn hóa.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     07 HỘI ĐẦU PHÁO
+===================================================== -->
+
+<section id="dau-phao">
+
+    <div class="container">
+
+        <div class="firecracker-layout">
+
+            <div class="firecracker-copy">
+
+                <div class="section-label">
+                    07 · Hội đầu pháo
+                </div>
+
+                <h2 class="firecracker-title">
+                    Nét hội độc đáo của Kỳ Lừa
+                </h2>
+
+                <p class="firecracker-description">
+                    Điểm nhấn nổi bật nhất trong lễ hội là
+                    Hội đầu pháo diễn ra tại khu vực Đền Tả Phủ,
+                    thường vào ngày 27 tháng Giêng.
+                </p>
+
+
+                <div class="firecracker-steps">
+
+                    <div class="firecracker-step">
+
+                        <div class="firecracker-no">
+                            01
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Chuẩn bị đầu pháo
+                            </strong>
+
+                            <span>
+                                Đầu pháo là một vòng kim loại
+                                quấn vải đỏ, gắn với nghi thức
+                                của ngày hội.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="firecracker-step">
+
+                        <div class="firecracker-no">
+                            02
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Hội tranh đầu pháo
+                            </strong>
+
+                            <span>
+                                Người dự hội cùng tham gia tranh
+                                đầu pháo sau nghi thức đốt pháo.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="firecracker-step">
+
+                        <div class="firecracker-no">
+                            03
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Tạ lễ
+                            </strong>
+
+                            <span>
+                                Người nhận được đầu pháo mang
+                                về thờ trong năm và làm lễ trả lại
+                                vào mùa hội sau theo lệ truyền thống.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="firecracker-step">
+
+                        <div class="firecracker-no">
+                            04
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Rước hồi cung
+                            </strong>
+
+                            <span>
+                                Sau Hội đầu pháo, đoàn rước
+                                thực hiện nghi lễ đưa Quan lớn Tuần Tranh
+                                trở về đền Kỳ Cùng.
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="firecracker-card">
+
+                <div class="big">
+                    27
+                </div>
+
+                <h3>
+                    Tháng Giêng
+                </h3>
+
+                <p>
+                    Hội đầu pháo Kỳ Lừa là điểm nhấn đặc biệt
+                    trong lễ hội Kỳ Cùng – Tả Phủ.
+                    Năm 2026, Hội đầu pháo tiếp tục được tổ chức
+                    tại khu vực Đền Tả Phủ, thu hút đông đảo
+                    người dân và du khách.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     08 GIÁ TRỊ
+===================================================== -->
+
+<section id="gia-tri">
+
+    <div class="container">
+
+        <div class="section-label">
+            08 · Giá trị
+        </div>
+
+        <h2 class="section-title">
+            Một ngôi đền, nhiều lớp giá trị
+        </h2>
+
+
+        <div class="value-grid">
+
+            <div class="value-card">
+
+                <div class="value-no">
+                    01 · LỊCH SỬ
+                </div>
+
+                <h3>
+                    Giá trị lịch sử
+                </h3>
+
+                <p>
+                    Di tích lưu dấu hơn ba thế kỷ lịch sử
+                    của phố chợ Kỳ Lừa và nhân vật Thân Công Tài.
+                </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+                <div class="value-no">
+                    02 · KIẾN TRÚC
+                </div>
+
+                <h3>
+                    Giá trị kiến trúc
+                </h3>
+
+                <p>
+                    Bố cục chữ Công, cấu kiện gỗ và phong cách
+                    kiến trúc chịu ảnh hưởng giao thoa văn hóa
+                    tạo nên nét riêng của ngôi đền.
+                </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+                <div class="value-no">
+                    03 · VĂN BIA
+                </div>
+
+                <h3>
+                    Giá trị tư liệu
+                </h3>
+
+                <p>
+                    Bia “Tôn sư phụ bi” năm 1683 là tư liệu quan trọng
+                    về công lao của Thân Công Tài và lịch sử Kỳ Lừa.
+                </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+                <div class="value-no">
+                    04 · TÍN NGƯỠNG
+                </div>
+
+                <h3>
+                    Giá trị tâm linh
+                </h3>
+
+                <p>
+                    Đền là nơi thờ tự, hành lễ và sinh hoạt
+                    tín ngưỡng của cộng đồng địa phương.
+                </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+                <div class="value-no">
+                    05 · LỄ HỘI
+                </div>
+
+                <h3>
+                    Giá trị phi vật thể
+                </h3>
+
+                <p>
+                    Lễ hội Kỳ Cùng – Tả Phủ lưu giữ nhiều nghi thức,
+                    diễn xướng và phong tục truyền thống đặc sắc.
+                </p>
+
+            </div>
+
+
+            <div class="value-card">
+
+                <div class="value-no">
+                    06 · CỘNG ĐỒNG
+                </div>
+
+                <h3>
+                    Giá trị giao lưu
+                </h3>
+
+                <p>
+                    Lịch sử ngôi đền phản ánh sự giao lưu kinh tế
+                    và văn hóa lâu đời giữa cộng đồng Lạng Sơn
+                    và thương nhân từ bên kia biên giới.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     09 BẢO TỒN
+===================================================== -->
+
+<section id="bao-ton">
+
+    <div class="container">
+
+        <div class="section-label">
+            09 · Bảo tồn
+        </div>
+
+        <h2 class="section-title">
+            Giữ gìn di sản giữa phố chợ hiện đại
+        </h2>
+
+        <p class="intro">
+            Bảo tồn Đền Tả Phủ cần đồng thời giữ gìn
+            kiến trúc, bia đá, hiện vật, không gian tín ngưỡng
+            và lễ hội truyền thống.
+        </p>
+
+
+        <div class="conservation-grid">
+
+            <div class="conservation-card">
+
+                <h3>
+                    Giữ gìn kiến trúc
+                </h3>
+
+                <p>
+                    Bảo vệ bố cục không gian, cấu kiện gỗ,
+                    mái, sân và các chi tiết kiến trúc
+                    có giá trị của di tích.
+                </p>
+
+            </div>
+
+
+            <div class="conservation-card">
+
+                <h3>
+                    Bảo vệ bia đá
+                </h3>
+
+                <p>
+                    Không viết, vẽ hoặc tác động lên bia “Tôn sư phụ bi”
+                    và các hiện vật lịch sử trong di tích.
+                </p>
+
+            </div>
+
+
+            <div class="conservation-card">
+
+                <h3>
+                    Giữ gìn lễ hội
+                </h3>
+
+                <p>
+                    Bảo tồn nghi lễ, rước kiệu, Hội đầu pháo
+                    và các hình thức diễn xướng dân gian
+                    theo hướng phù hợp với đời sống hiện đại.
+                </p>
+
+            </div>
+
+
+            <div class="conservation-card">
+
+                <h3>
+                    Du lịch có trách nhiệm
+                </h3>
+
+                <p>
+                    Du khách cần giữ vệ sinh, tôn trọng
+                    không gian thờ tự và thực hiện đúng
+                    các quy định của khu di tích.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="renovation-note">
+
+            <strong>
+                Diện mạo mới năm 2024
+            </strong>
+
+            <span>
+                Công trình tu bổ, tôn tạo được triển khai từ năm 2023
+                bằng nguồn xã hội hóa và khánh thành ngày 12/9/2024.
+                Sau tu bổ, khu đền có diện tích hơn 700 m²,
+                gồm không gian tiền bái và hậu cung.
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     10 HÌNH ẢNH
+===================================================== -->
+
+<section id="hinh-anh">
+
+    <div class="container">
+
+        <div class="section-label">
+            10 · Hình ảnh
+        </div>
+
+        <h2 class="section-title">
+            Những góc nhìn tiêu biểu
+        </h2>
+
+        <p class="intro">
+            Bộ ảnh được giữ ở mức vừa phải, tập trung vào
+            diện mạo ngôi đền, không gian thờ tự và lễ hội.
+        </p>
+
+
+        <div class="gallery">
+
+            <!-- ẢNH 1 -->
+
+            <figure class="gallery-item">
+
+                <img
+                    src="https://mediabls.mediatech.vn/upload/image/202410/medium/494113_z5873119220089_3d0f6f3f461f2037fed2df2b6ab26cba_11395702.jpg"
+                    alt="Mặt trước Đền Tả Phủ"
+                    loading="lazy"
+                >
+
+                <figcaption class="gallery-caption">
+
+                    <div>
+
+                        <strong>
+                            Đền Tả Phủ sau tu bổ
+                        </strong>
+
+                        <span>
+                            Nguồn ảnh: Báo Lạng Sơn
+                        </span>
+
+                    </div>
+
+                </figcaption>
+
+            </figure>
+
+
+            <!-- ẢNH 2 -->
+
+            <figure class="gallery-item">
+
+                <img
+                    src="https://mediabls.mediatech.vn/upload/image/202410/medium/494114_z5873119266577_4b075e4ec88815908e2092e26aa464af_11410002.jpg"
+                    alt="Không gian thờ tự Đền Tả Phủ"
+                    loading="lazy"
+                >
+
+                <figcaption class="gallery-caption">
+
+                    <div>
+
+                        <strong>
+                            Gian tiền bái
+                        </strong>
+
+                        <span>
+                            Nguồn ảnh: Báo Lạng Sơn
+                        </span>
+
+                    </div>
+
+                </figcaption>
+
+            </figure>
+
+
+            <!-- ẢNH 3 -->
+
+            <figure class="gallery-item">
+
+                <img
+                    src="https://mediabls.mediatech.vn/upload/image/202410/medium/494124_dsc_3655_11463402.jpg"
+                    alt="Tượng Thân Công Tài tại Đền Tả Phủ"
+                    loading="lazy"
+                >
+
+                <figcaption class="gallery-caption">
+
+                    <div>
+
+                        <strong>
+                            Tượng Hán Quận công Thân Công Tài
+                        </strong>
+
+                        <span>
+                            Nguồn ảnh: Báo Lạng Sơn
+                        </span>
+
+                    </div>
+
+                </figcaption>
+
+            </figure>
+
+
+            <!-- ẢNH 4 -->
+
+            <figure class="gallery-item">
+
+                <img
+                    src="https://images.bdatrip.com/2021/3/le-hoi-den-ta-phu-2.jpg"
+                    alt="Lễ hội Đền Tả Phủ – Kỳ Lừa"
+                    loading="lazy"
+                >
+
+                <figcaption class="gallery-caption">
+
+                    <div>
+
+                        <strong>
+                            Lễ hội Đền Tả Phủ – Kỳ Lừa
+                        </strong>
+
+                        <span>
+                            Nguồn ảnh: BDATrip
+                        </span>
+
+                    </div>
+
+                </figcaption>
+
+            </figure>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     11 NGUỒN
+===================================================== -->
+
+<section id="nguon">
+
+    <div class="container">
+
+        <div class="section-label">
+            11 · Nguồn
+        </div>
+
+        <h2 class="section-title">
+            Nguồn thông tin và hình ảnh
+        </h2>
+
+
+        <div class="source-grid">
+
+            <div class="source-card">
+
+                <h3>
+                    Cổng Du lịch Lạng Sơn
+                </h3>
+
+                <p>
+                    Thông tin về vị trí, năm xây dựng,
+                    Thân Công Tài, kiến trúc và lễ hội
+                    Đền Tả Phủ.
+                </p>
+
+                <a
+                    href="https://lspa.langson.gov.vn/diem-den-du-lich/den-ta-phu-341496"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Xem nguồn →
+                </a>
+
+            </div>
+
+
+            <div class="source-card">
+
+                <h3>
+                    Cục Di sản văn hóa
+                </h3>
+
+                <p>
+                    Hồ sơ Bia và Đền Tả Phủ: lịch sử xây dựng,
+                    kiến trúc, bia “Tôn sư phụ bi”, lễ hội,
+                    Hội đầu pháo và quyết định xếp hạng
+                    di tích quốc gia năm 1993.
+                </p>
+
+                <a
+                    href="https://dsvh.gov.vn/bia-va-den-ta-phu-tinh-lang-son-22271"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Xem hồ sơ →
+                </a>
+
+            </div>
+
+
+            <div class="source-card">
+
+                <h3>
+                    Báo Lạng Sơn
+                </h3>
+
+                <p>
+                    Nguồn về diện mạo Đền Tả Phủ sau tu bổ,
+                    hoàn thành và khánh thành năm 2024,
+                    cùng thông tin về lễ hội.
+                </p>
+
+                <a
+                    href="https://baolangson.vn/dien-mao-moi-o-di-tich-quoc-gia-den-ta-phu-5023622.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Xem bài viết →
+                </a>
+
+                <br><br>
+
+                <a
+                    href="https://baolangson.vn/dia-diem-den-ta-phu-chon-thieng-noi-pho-cho-ky-lua-1439240.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Xem bài lịch sử →
+                </a>
+
+            </div>
+
+
+            <div class="source-card">
+
+                <h3>
+                    Lễ hội Kỳ Cùng – Tả Phủ 2026
+                </h3>
+
+                <p>
+                    Nguồn cập nhật về Hội đầu pháo Kỳ Lừa năm 2026,
+                    nghi thức tranh đầu pháo và rước Quan lớn
+                    Tuần Tranh về Đền Kỳ Cùng.
+                </p>
+
+                <a
+                    href="https://baolangson.vn/tung-bung-hoi-dau-phao-ky-lua-nam-2026-5081788.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Xem bài 2026 →
+                </a>
+
+            </div>
+
+
+            <div class="source-card">
+
+                <h3>
+                    Nguồn hình ảnh
+                </h3>
+
+                <p>
+                    Ảnh mặt trước, gian tiền bái và tượng Thân Công Tài:
+                    Báo Lạng Sơn.
+                </p>
+
+                <p>
+                    Ảnh lễ hội:
+                    BDATrip.
+                </p>
+
+                <p>
+                    Nguồn ảnh được ghi trực tiếp dưới từng hình.
+                </p>
+
+            </div>
+
+
+            <div class="source-card">
+
+                <h3>
+                    Lưu ý sử dụng ảnh
+                </h3>
+
+                <p>
+                    Ảnh trên Internet có thể thuộc quyền tác giả
+                    hoặc quyền sử dụng của đơn vị đăng tải.
+                    Khi công khai website hoặc sử dụng ngoài mục đích
+                    học tập, cần kiểm tra điều kiện sử dụng của từng ảnh.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="usage-note">
+            Website được thiết kế phục vụ mục đích học tập,
+            giới thiệu và tìm hiểu di sản văn hóa Lạng Sơn.
+            Nội dung lịch sử nên được đối chiếu với hồ sơ di sản
+            và các nguồn chính thức khi dùng cho ấn phẩm chính thức.
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-inner">
+
+        <div class="footer-logo">
+            LẠNG SƠN
+        </div>
+
+        <div class="footer-text">
+            ĐỀN TẢ PHỦ · PHƯỜNG KỲ LỪA · TỈNH LẠNG SƠN
+            <br>
+            Di tích lịch sử – kiến trúc nghệ thuật
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =====================================================
+     NÚT QUAY LẠI
+===================================================== -->
+
+<a
+    href="./danhlamthangcanh.html"
+    class="back-button"
+    aria-label="Quay lại danh thắng"
+>
+    ←
+</a>
+
+
+<script>
+
+/* =====================================================
+   ACTIVE SECTION
+===================================================== */
+
+const links =
+    document.querySelectorAll(".section-link");
+
+const sectionIds = [
+    "tong-quan",
+    "lich-su",
+    "than-cong-tai",
+    "kien-truc",
+    "bia",
+    "le-hoi",
+    "dau-phao",
+    "gia-tri",
+    "bao-ton",
+    "hinh-anh",
+    "nguon"
+];
+
+const sections =
+    sectionIds
+        .map(id => document.getElementById(id))
+        .filter(Boolean);
+
+
+const observer =
+    new IntersectionObserver(
+
+        entries => {
+
+            entries.forEach(entry => {
+
+                if(!entry.isIntersecting){
+                    return;
+                }
+
+                links.forEach(link => {
+                    link.classList.remove("active");
+                });
+
+                const active =
+                    document.querySelector(
+                        `.section-link[href="#${entry.target.id}"]`
+                    );
+
+                if(active){
+
+                    active.classList.add("active");
+
+                    active.scrollIntoView({
+                        behavior:"smooth",
+                        block:"nearest",
+                        inline:"center"
+                    });
+
+                }
+
+            });
+
+        },
+
+        {
+            rootMargin:"-145px 0px -55% 0px",
+            threshold:0
+        }
+
+    );
+
+
+sections.forEach(section => {
+    observer.observe(section);
+});
+
+
+/* =====================================================
+   CLICK MENU
+===================================================== */
+
+links.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        links.forEach(item => {
+            item.classList.remove("active");
+        });
+
+        link.classList.add("active");
+
+    });
+
+});
+
+
+/* =====================================================
+   KIỂM TRA ẢNH
+===================================================== */
+
+document.querySelectorAll("img").forEach(img => {
+
+    img.addEventListener("error", function(){
+
+        this.style.opacity = ".15";
+
+        this.alt =
+            "Ảnh tạm thời không tải được từ nguồn";
+
+    });
+
+});
+
+</script>
+
+</body>
+</html>
+```

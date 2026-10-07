@@ -1,0 +1,2762 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pò Kít – Làng nhà trình tường | Khuất Xá, Lạng Sơn</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700;800&family=DM+Serif+Display&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+  --earth:#8a5638;
+  --earth2:#b8784b;
+  --earth3:#d6a06e;
+  --clay:#9e6a49;
+
+  --sand:#ead7bc;
+  --green:#789c68;
+  --green2:#9ebc88;
+
+  --dark:#171411;
+  --dark2:#211a15;
+  --dark3:#2a211a;
+
+  --paper:#f4eee3;
+  --paper2:#fbf8f1;
+  --paper3:#eae1d3;
+
+  --ink:#29231e;
+  --muted:#7d7369;
+  --muted2:#625952;
+
+  --white:#f8f2e9;
+  --line:rgba(237,215,189,.15);
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:125px;
+}
+
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Be Vietnam Pro",sans-serif;
+  line-height:1.7;
+  overflow-x:hidden;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+/* =====================================
+   THANH TRÊN CÙNG
+===================================== */
+
+.top-nav{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+
+  height:70px;
+
+  z-index:2000;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:0 42px;
+
+  background:rgba(23,20,17,.96);
+  backdrop-filter:blur(16px);
+
+  border-bottom:1px solid rgba(255,255,255,.08);
+
+  color:var(--white);
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:13px;
+
+  font-family:"Space Grotesk",sans-serif;
+  font-size:14px;
+  font-weight:700;
+  letter-spacing:.08em;
+}
+
+.logo span{
+  width:34px;
+  height:34px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:50%;
+
+  font-size:11px;
+}
+
+.back-link{
+  display:flex;
+  align-items:center;
+  gap:8px;
+
+  font-size:13px;
+  color:rgba(255,255,255,.75);
+
+  transition:.25s;
+}
+
+.back-link:hover{
+  color:white;
+  transform:translateX(-3px);
+}
+
+
+/* =====================================
+   SECTION NAV - LUÔN Ở TRÊN CÙNG
+===================================== */
+
+.section-nav{
+  position:fixed;
+
+  top:70px;
+  left:0;
+  right:0;
+
+  height:56px;
+
+  z-index:1900;
+
+  background:rgba(33,26,21,.98);
+  backdrop-filter:blur(15px);
+
+  border-bottom:1px solid rgba(255,255,255,.08);
+
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+
+.section-nav::-webkit-scrollbar{
+  display:none;
+}
+
+.section-nav-inner{
+  min-width:max-content;
+
+  height:56px;
+
+  display:flex;
+  align-items:center;
+
+  padding:0 25px;
+}
+
+.section-link{
+  position:relative;
+
+  height:56px;
+
+  display:flex;
+  align-items:center;
+
+  padding:0 15px;
+
+  color:rgba(255,255,255,.45);
+
+  font-family:"Space Grotesk",sans-serif;
+  font-size:10px;
+  font-weight:700;
+
+  letter-spacing:.07em;
+  text-transform:uppercase;
+
+  white-space:nowrap;
+
+  transition:.25s;
+}
+
+.section-link::after{
+  content:"";
+
+  position:absolute;
+
+  left:15px;
+  right:15px;
+  bottom:0;
+
+  height:3px;
+
+  background:var(--earth3);
+
+  transform:scaleX(0);
+
+  transition:.25s;
+}
+
+.section-link:hover,
+.section-link.active{
+  color:white;
+}
+
+.section-link.active::after{
+  transform:scaleX(1);
+}
+
+
+/* =====================================
+   HERO
+===================================== */
+
+.hero{
+  min-height:100vh;
+
+  position:relative;
+
+  display:flex;
+  align-items:flex-end;
+
+  padding:210px 7vw 80px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.08),
+      rgba(0,0,0,.25) 45%,
+      rgba(0,0,0,.88)
+    ),
+    url("https://langsongeopark.com.vn/upload_images/images/2026/06/29/z7988159379019_3a6f6ea3724039ea28734ef90e2def63.jpg")
+    center/cover no-repeat;
+
+  color:var(--white);
+}
+
+.hero-content{
+  max-width:1100px;
+}
+
+.hero-label{
+  margin-bottom:18px;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:12px;
+  font-weight:600;
+
+  letter-spacing:.2em;
+  text-transform:uppercase;
+
+  color:var(--earth3);
+}
+
+.hero h1{
+  font-family:"DM Serif Display",serif;
+
+  font-size:clamp(80px,15vw,210px);
+
+  font-weight:400;
+
+  line-height:.78;
+
+  letter-spacing:-.055em;
+
+  margin-bottom:35px;
+}
+
+.hero h1 span{
+  display:block;
+  margin-left:8vw;
+}
+
+.hero-description{
+  max-width:760px;
+
+  font-size:clamp(17px,2vw,22px);
+
+  line-height:1.6;
+
+  color:rgba(255,255,255,.88);
+}
+
+.hero-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+
+  margin-top:30px;
+}
+
+.hero-tag{
+  padding:7px 13px;
+
+  border:1px solid rgba(255,255,255,.22);
+
+  border-radius:999px;
+
+  background:rgba(0,0,0,.2);
+
+  font-size:12px;
+
+  color:rgba(255,255,255,.84);
+}
+
+.hero-note{
+  max-width:850px;
+
+  margin-top:30px;
+
+  padding-left:18px;
+
+  border-left:2px solid var(--earth2);
+
+  font-size:13px;
+
+  color:rgba(255,255,255,.68);
+}
+
+
+/* =====================================
+   COMMON
+===================================== */
+
+section{
+  scroll-margin-top:135px;
+}
+
+.section{
+  padding:120px 7vw;
+}
+
+.section.dark{
+  background:var(--dark);
+  color:var(--white);
+}
+
+.section.dark2{
+  background:var(--dark2);
+  color:var(--white);
+}
+
+.section.paper{
+  background:var(--paper);
+}
+
+.section.paper2{
+  background:var(--paper2);
+}
+
+.section-header{
+  max-width:1050px;
+  margin-bottom:65px;
+}
+
+.section-number{
+  margin-bottom:12px;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:12px;
+  font-weight:700;
+
+  letter-spacing:.18em;
+
+  color:var(--earth2);
+}
+
+.dark .section-number,
+.dark2 .section-number{
+  color:var(--earth3);
+}
+
+.section-title{
+  max-width:950px;
+
+  font-family:"DM Serif Display",serif;
+
+  font-weight:400;
+
+  font-size:clamp(42px,6vw,78px);
+
+  line-height:1.05;
+
+  letter-spacing:-.035em;
+}
+
+.section-intro{
+  max-width:820px;
+
+  margin-top:25px;
+
+  font-size:17px;
+
+  line-height:1.85;
+
+  color:var(--muted2);
+}
+
+.dark .section-intro,
+.dark2 .section-intro{
+  color:rgba(255,255,255,.63);
+}
+
+
+/* =====================================
+   HỒ SƠ
+===================================== */
+
+.profile-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1px;
+
+  background:rgba(0,0,0,.12);
+
+  border:1px solid rgba(0,0,0,.08);
+}
+
+.profile-card{
+  min-height:250px;
+
+  padding:35px;
+
+  background:var(--paper2);
+}
+
+.profile-number{
+  font-family:"DM Serif Display",serif;
+
+  font-size:70px;
+
+  line-height:1;
+
+  color:var(--earth);
+}
+
+.profile-label{
+  margin-top:18px;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:13px;
+  font-weight:700;
+
+  text-transform:uppercase;
+
+  letter-spacing:.08em;
+}
+
+.profile-text{
+  margin-top:9px;
+
+  font-size:14px;
+
+  color:var(--muted);
+}
+
+
+/* =====================================
+   SPLIT
+===================================== */
+
+.split{
+  display:grid;
+
+  grid-template-columns:1.05fr .95fr;
+
+  gap:70px;
+
+  align-items:center;
+}
+
+.split.reverse{
+  grid-template-columns:.95fr 1.05fr;
+}
+
+.image-frame{
+  position:relative;
+
+  overflow:hidden;
+
+  background:var(--dark3);
+}
+
+.image-frame img{
+  aspect-ratio:4/3;
+
+  object-fit:cover;
+
+  transition:transform .8s ease;
+}
+
+.image-frame:hover img{
+  transform:scale(1.035);
+}
+
+.image-caption{
+  padding:12px 15px;
+
+  background:var(--dark3);
+
+  color:rgba(255,255,255,.62);
+
+  font-size:11px;
+}
+
+.text-block h3{
+  font-family:"DM Serif Display",serif;
+
+  font-size:clamp(35px,4vw,58px);
+
+  font-weight:400;
+
+  line-height:1.1;
+
+  margin-bottom:24px;
+}
+
+.text-block p{
+  margin-bottom:20px;
+
+  color:var(--muted2);
+
+  font-size:16px;
+}
+
+.dark .text-block p,
+.dark2 .text-block p{
+  color:rgba(255,255,255,.64);
+}
+
+
+/* =====================================
+   FACT
+===================================== */
+
+.fact-grid{
+  display:grid;
+
+  grid-template-columns:repeat(4,1fr);
+
+  gap:12px;
+
+  margin-top:45px;
+}
+
+.fact{
+  padding:25px;
+
+  border:1px solid rgba(255,255,255,.1);
+
+  background:rgba(255,255,255,.035);
+}
+
+.fact strong{
+  display:block;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:13px;
+
+  text-transform:uppercase;
+
+  letter-spacing:.08em;
+
+  color:var(--earth3);
+}
+
+.fact span{
+  display:block;
+
+  margin-top:7px;
+
+  font-size:14px;
+
+  color:rgba(255,255,255,.6);
+}
+
+
+/* =====================================
+   KIẾN TRÚC
+===================================== */
+
+.architecture-grid{
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:18px;
+}
+
+.architecture-card{
+  min-height:320px;
+
+  padding:35px;
+
+  border:1px solid rgba(0,0,0,.09);
+
+  background:var(--paper2);
+
+  transition:.3s;
+}
+
+.architecture-card:hover{
+  transform:translateY(-6px);
+
+  border-color:rgba(138,86,56,.3);
+}
+
+.architecture-icon{
+  width:46px;
+  height:46px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  border-radius:50%;
+
+  background:var(--earth);
+
+  color:white;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-weight:700;
+}
+
+.architecture-card h3{
+  margin-top:30px;
+
+  font-family:"DM Serif Display",serif;
+
+  font-size:34px;
+
+  font-weight:400;
+}
+
+.architecture-card p{
+  margin-top:15px;
+
+  color:var(--muted2);
+
+  font-size:14px;
+}
+
+
+/* =====================================
+   CULTURE
+===================================== */
+
+.culture-list{
+  margin-top:35px;
+
+  border-top:1px solid rgba(255,255,255,.12);
+}
+
+.culture-item{
+  display:grid;
+
+  grid-template-columns:230px 1fr;
+
+  padding:23px 0;
+
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+
+.culture-item strong{
+  font-family:"Space Grotesk",sans-serif;
+
+  color:var(--earth3);
+
+  font-size:13px;
+
+  text-transform:uppercase;
+
+  letter-spacing:.06em;
+}
+
+.culture-item span{
+  color:rgba(255,255,255,.67);
+
+  font-size:15px;
+}
+
+
+/* =====================================
+   NHỊP SỐNG
+===================================== */
+
+.life-grid{
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:18px;
+}
+
+.life-card{
+  min-height:300px;
+
+  padding:35px;
+
+  background:var(--paper3);
+
+  border:1px solid rgba(0,0,0,.06);
+}
+
+.life-card .number{
+  font-family:"DM Serif Display",serif;
+
+  font-size:45px;
+
+  color:var(--earth);
+}
+
+.life-card h3{
+  margin-top:35px;
+
+  font-family:"DM Serif Display",serif;
+
+  font-size:35px;
+
+  font-weight:400;
+}
+
+.life-card p{
+  margin-top:12px;
+
+  color:var(--muted2);
+
+  font-size:14px;
+}
+
+
+/* =====================================
+   CẢNH QUAN
+===================================== */
+
+.landscape{
+  background:var(--green);
+
+  color:white;
+}
+
+.landscape-inner{
+  max-width:1300px;
+
+  margin:auto;
+}
+
+.landscape-layout{
+  display:grid;
+
+  grid-template-columns:.85fr 1.15fr;
+
+  gap:70px;
+
+  align-items:center;
+}
+
+.landscape-image img{
+  aspect-ratio:16/10;
+
+  object-fit:cover;
+}
+
+.landscape-text h3{
+  font-family:"DM Serif Display",serif;
+
+  font-size:clamp(40px,5vw,70px);
+
+  font-weight:400;
+
+  line-height:1.05;
+}
+
+.landscape-text p{
+  margin-top:25px;
+
+  color:rgba(255,255,255,.78);
+}
+
+.landscape-stat{
+  display:inline-block;
+
+  margin-top:30px;
+
+  padding:12px 17px;
+
+  border:1px solid rgba(255,255,255,.3);
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:12px;
+
+  letter-spacing:.08em;
+}
+
+
+/* =====================================
+   TIMELINE
+===================================== */
+
+.timeline{
+  position:relative;
+
+  margin-top:50px;
+
+  padding-left:45px;
+
+  border-left:1px solid rgba(0,0,0,.15);
+}
+
+.timeline-item{
+  position:relative;
+
+  padding:0 0 55px 35px;
+}
+
+.timeline-item:last-child{
+  padding-bottom:0;
+}
+
+.timeline-item::before{
+  content:"";
+
+  position:absolute;
+
+  left:-51px;
+  top:5px;
+
+  width:11px;
+  height:11px;
+
+  border-radius:50%;
+
+  background:var(--earth);
+
+  box-shadow:0 0 0 6px var(--paper);
+}
+
+.timeline-year{
+  font-family:"Space Grotesk",sans-serif;
+
+  font-weight:700;
+
+  font-size:13px;
+
+  letter-spacing:.08em;
+
+  color:var(--earth);
+}
+
+.timeline-item h3{
+  margin-top:7px;
+
+  font-family:"DM Serif Display",serif;
+
+  font-size:36px;
+
+  font-weight:400;
+}
+
+.timeline-item p{
+  max-width:760px;
+
+  margin-top:8px;
+
+  color:var(--muted2);
+}
+
+
+/* =====================================
+   2026
+===================================== */
+
+.feature-2026{
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  min-height:550px;
+}
+
+.feature-2026-image{
+  background:
+    linear-gradient(180deg,rgba(0,0,0,.05),rgba(0,0,0,.45)),
+    url("https://langsongeopark.com.vn/upload_images/images/2026/06/29/z7988159370326_4bfa16b882a31d38b59f99afb5a9ba25.jpg")
+    center/cover no-repeat;
+}
+
+.feature-2026-text{
+  display:flex;
+
+  flex-direction:column;
+
+  justify-content:center;
+
+  padding:70px;
+
+  background:var(--dark2);
+
+  color:var(--white);
+}
+
+.feature-2026-text .date{
+  font-family:"Space Grotesk",sans-serif;
+
+  color:var(--earth3);
+
+  font-size:12px;
+
+  font-weight:700;
+
+  letter-spacing:.15em;
+
+  text-transform:uppercase;
+}
+
+.feature-2026-text h3{
+  margin-top:20px;
+
+  font-family:"DM Serif Display",serif;
+
+  font-size:clamp(45px,5vw,72px);
+
+  font-weight:400;
+
+  line-height:1;
+}
+
+.feature-2026-text p{
+  margin-top:25px;
+
+  color:rgba(255,255,255,.65);
+}
+
+
+/* =====================================
+   ẨM THỰC
+===================================== */
+
+.food{
+  background:var(--paper3);
+}
+
+.food-layout{
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:60px;
+
+  align-items:center;
+}
+
+.food-image img{
+  aspect-ratio:4/3;
+
+  object-fit:cover;
+}
+
+.food-text h3{
+  font-family:"DM Serif Display",serif;
+
+  font-size:clamp(42px,5vw,70px);
+
+  font-weight:400;
+
+  line-height:1.05;
+}
+
+.food-text p{
+  margin-top:22px;
+
+  color:var(--muted2);
+}
+
+
+/* =====================================
+   GALLERY
+===================================== */
+
+.gallery{
+  display:grid;
+
+  grid-template-columns:1.25fr .75fr;
+
+  gap:14px;
+}
+
+.gallery-main{
+  grid-row:span 2;
+}
+
+.gallery-main img,
+.gallery-small img{
+  height:100%;
+
+  object-fit:cover;
+}
+
+.gallery-main img{
+  min-height:620px;
+}
+
+.gallery-small img{
+  min-height:300px;
+}
+
+
+/* =====================================
+   VALUES
+===================================== */
+
+.value-grid{
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:1px;
+
+  background:rgba(255,255,255,.12);
+
+  border:1px solid rgba(255,255,255,.12);
+}
+
+.value-card{
+  min-height:240px;
+
+  padding:30px;
+
+  background:var(--dark2);
+}
+
+.value-card strong{
+  display:block;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  color:var(--earth3);
+
+  font-size:12px;
+
+  letter-spacing:.1em;
+
+  text-transform:uppercase;
+}
+
+.value-card h3{
+  margin-top:25px;
+
+  font-family:"DM Serif Display",serif;
+
+  font-size:32px;
+
+  font-weight:400;
+}
+
+.value-card p{
+  margin-top:10px;
+
+  color:rgba(255,255,255,.58);
+
+  font-size:14px;
+}
+
+
+/* =====================================
+   BẢO TỒN
+===================================== */
+
+.conservation-grid{
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:18px;
+}
+
+.conservation-card{
+  padding:40px;
+
+  background:var(--paper2);
+
+  border:1px solid rgba(0,0,0,.08);
+}
+
+.conservation-card h3{
+  font-family:"DM Serif Display",serif;
+
+  font-size:40px;
+
+  font-weight:400;
+}
+
+.conservation-card p{
+  margin-top:15px;
+
+  color:var(--muted2);
+}
+
+.alert{
+  margin-top:18px;
+
+  padding:25px 30px;
+
+  background:var(--earth);
+
+  color:white;
+}
+
+.alert strong{
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:13px;
+
+  letter-spacing:.08em;
+
+  text-transform:uppercase;
+}
+
+.alert p{
+  margin-top:7px;
+
+  color:rgba(255,255,255,.78);
+
+  font-size:14px;
+}
+
+
+/* =====================================
+   SOURCES
+===================================== */
+
+.sources{
+  padding:75px 7vw;
+
+  background:var(--dark);
+
+  color:var(--white);
+}
+
+.sources h2{
+  font-family:"DM Serif Display",serif;
+
+  font-size:42px;
+
+  font-weight:400;
+}
+
+.source-list{
+  display:grid;
+
+  gap:10px;
+
+  margin-top:25px;
+}
+
+.source-list a{
+  padding:17px 20px;
+
+  border:1px solid rgba(255,255,255,.1);
+
+  background:rgba(255,255,255,.03);
+
+  color:rgba(255,255,255,.65);
+
+  font-size:13px;
+
+  transition:.25s;
+}
+
+.source-list a:hover{
+  color:white;
+
+  border-color:rgba(214,160,110,.45);
+
+  transform:translateX(5px);
+}
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer{
+  padding:35px 7vw;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+  gap:20px;
+
+  background:#100e0c;
+
+  color:rgba(255,255,255,.45);
+
+  font-size:12px;
+}
+
+.footer-links{
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:20px;
+}
+
+.footer-links a:hover{
+  color:white;
+}
+
+
+/* =====================================
+   ANIMATION
+===================================== */
+
+.reveal{
+  opacity:0;
+
+  transform:translateY(35px);
+
+  transition:
+    opacity .8s ease,
+    transform .8s ease;
+}
+
+.reveal.show{
+  opacity:1;
+
+  transform:translateY(0);
+}
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media(max-width:900px){
+
+  .top-nav{
+    height:64px;
+
+    padding:0 20px;
+  }
+
+  .section-nav{
+    top:64px;
+
+    height:52px;
+  }
+
+  .section-nav-inner{
+    height:52px;
+
+    padding:0 8px;
+  }
+
+  .section-link{
+    height:52px;
+
+    padding:0 11px;
+
+    font-size:9px;
+  }
+
+  .section-link::after{
+    left:11px;
+    right:11px;
+  }
+
+  html{
+    scroll-padding-top:120px;
+  }
+
+  section{
+    scroll-margin-top:120px;
+  }
+
+  .hero{
+    min-height:100vh;
+
+    padding:
+      190px 25px 55px;
+  }
+
+  .hero h1{
+    font-size:clamp(72px,22vw,145px);
+  }
+
+  .hero h1 span{
+    margin-left:10vw;
+  }
+
+  .section{
+    padding:80px 25px;
+  }
+
+  .profile-grid,
+  .architecture-grid,
+  .life-grid,
+  .value-grid{
+    grid-template-columns:1fr;
+  }
+
+  .split,
+  .split.reverse,
+  .landscape-layout,
+  .food-layout,
+  .feature-2026{
+    grid-template-columns:1fr;
+
+    gap:35px;
+  }
+
+  .fact-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .culture-item{
+    grid-template-columns:1fr;
+
+    gap:8px;
+  }
+
+  .feature-2026-image{
+    min-height:400px;
+  }
+
+  .feature-2026-text{
+    padding:50px 25px;
+  }
+
+  .gallery{
+    grid-template-columns:1fr;
+  }
+
+  .gallery-main{
+    grid-row:auto;
+  }
+
+  .gallery-main img,
+  .gallery-small img{
+    min-height:280px;
+  }
+
+  .conservation-grid{
+    grid-template-columns:1fr;
+  }
+
+  footer{
+    flex-direction:column;
+
+    align-items:flex-start;
+  }
+
+}
+
+@media(max-width:560px){
+
+  .back-link span{
+    display:none;
+  }
+
+  .hero-description{
+    font-size:15px;
+  }
+
+  .hero-note{
+    font-size:12px;
+  }
+
+  .fact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .profile-card{
+    min-height:210px;
+  }
+
+  .timeline{
+    padding-left:25px;
+  }
+
+  .timeline-item{
+    padding-left:20px;
+  }
+
+  .timeline-item::before{
+    left:-32px;
+  }
+
+  .sources{
+    padding:60px 25px;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================
+     THANH NAV CHÍNH
+===================================== -->
+
+<nav class="top-nav">
+
+  <a href="./danhlamthangcanh.html" class="logo">
+    <span>N</span>
+    LẠNG SƠN
+  </a>
+
+  <a href="./danhlamthangcanh.html" class="back-link">
+    ← <span>Quay lại danh lam thắng cảnh</span>
+  </a>
+
+</nav>
+
+
+<!-- =====================================
+     SECTION ĐƯỢC ĐẶT NGAY TRÊN CÙNG
+===================================== -->
+
+<nav class="section-nav">
+
+  <div class="section-nav-inner">
+
+    <a href="#ho-so" class="section-link active">
+      01 · Hồ sơ
+    </a>
+
+    <a href="#nha-trinh-tuong" class="section-link">
+      02 · Nhà trình tường
+    </a>
+
+    <a href="#kien-truc" class="section-link">
+      03 · Kiến trúc
+    </a>
+
+    <a href="#cong-dong" class="section-link">
+      04 · Cộng đồng
+    </a>
+
+    <a href="#nhip-song" class="section-link">
+      05 · Nhịp sống
+    </a>
+
+    <a href="#van-hoa" class="section-link">
+      06 · Văn hóa
+    </a>
+
+    <a href="#canh-quan" class="section-link">
+      07 · Cảnh quan
+    </a>
+
+    <a href="#dau-moc" class="section-link">
+      08 · Dấu mốc
+    </a>
+
+    <a href="#nam-2026" class="section-link">
+      09 · Pò Kít 2026
+    </a>
+
+    <a href="#am-thuc" class="section-link">
+      10 · Ẩm thực
+    </a>
+
+    <a href="#hinh-anh" class="section-link">
+      11 · Hình ảnh
+    </a>
+
+    <a href="#gia-tri" class="section-link">
+      12 · Giá trị
+    </a>
+
+    <a href="#bao-ton" class="section-link">
+      13 · Bảo tồn
+    </a>
+
+  </div>
+
+</nav>
+
+
+<!-- =====================================
+     HERO
+===================================== -->
+
+<header class="hero">
+
+  <div class="hero-content reveal">
+
+    <div class="hero-label">
+      PÒ KÍT · LIÊN HỢP · KHUẤT XÁ · LẠNG SƠN
+    </div>
+
+    <h1>
+      PÒ
+      <span>KÍT</span>
+    </h1>
+
+    <p class="hero-description">
+      Một ngôi làng được nhận diện bằng những bức tường đất nện,
+      nơi kiến trúc truyền thống, đời sống cộng đồng và cảnh quan
+      miền núi phía Bắc cùng tồn tại.
+    </p>
+
+    <div class="hero-tags">
+
+      <span class="hero-tag">Xã Khuất Xá</span>
+      <span class="hero-tag">Nhà trình tường</span>
+      <span class="hero-tag">Nùng · Tày</span>
+      <span class="hero-tag">Du lịch cộng đồng</span>
+      <span class="hero-tag">Bảo tồn cảnh quan</span>
+
+    </div>
+
+    <div class="hero-note">
+      Pò Kít là tên gọi cũ của khu vực. Sau quá trình sắp xếp,
+      sáp nhập thôn, địa bàn hiện thuộc thôn Liên Hợp, xã Khuất Xá.
+      Nơi đây đang được định hướng phát triển du lịch cộng đồng
+      gắn với bảo tồn nhà trình tường và văn hóa địa phương.
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- =====================================
+     01 HỒ SƠ
+===================================== -->
+
+<section class="section paper" id="ho-so">
+
+  <div class="section-header reveal">
+
+    <div class="section-number">
+      01 / HỒ SƠ LÀNG
+    </div>
+
+    <h2 class="section-title">
+      Một ngôi làng được nhận diện bằng chính những bức tường đất.
+    </h2>
+
+    <p class="section-intro">
+      Pò Kít nổi bật với hệ thống nhà trình tường còn được bảo tồn
+      trong không gian làng bản truyền thống. Theo khảo sát năm 2021,
+      khu vực ghi nhận 29 ngôi nhà trình tường của 29 hộ gia đình,
+      trong đó khoảng 13 ngôi nhà nằm tương đối liền kề nhau.
+    </p>
+
+  </div>
+
+  <div class="profile-grid reveal">
+
+    <div class="profile-card">
+
+      <div class="profile-number">
+        29
+      </div>
+
+      <div class="profile-label">
+        Nhà trình tường
+      </div>
+
+      <div class="profile-text">
+        Số nhà trình tường được ghi nhận trong khảo sát năm 2021.
+      </div>
+
+    </div>
+
+
+    <div class="profile-card">
+
+      <div class="profile-number">
+        ~13
+      </div>
+
+      <div class="profile-label">
+        Nhà liền kề
+      </div>
+
+      <div class="profile-text">
+        Một cụm nhà có giá trị tạo nên diện mạo đặc trưng của làng.
+      </div>
+
+    </div>
+
+
+    <div class="profile-card">
+
+      <div class="profile-number">
+        53
+      </div>
+
+      <div class="profile-label">
+        Hộ dân
+      </div>
+
+      <div class="profile-text">
+        Cộng đồng dân cư tạo nên không gian sống và văn hóa địa phương.
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================
+     02 NHÀ TRÌNH TƯỜNG
+===================================== -->
+
+<section class="section dark" id="nha-trinh-tuong">
+
+  <div class="section-header reveal">
+
+    <div class="section-number">
+      02 / NHÀ TRÌNH TƯỜNG
+    </div>
+
+    <h2 class="section-title">
+      Tường đất không phải là dấu tích của một thời đã qua.
+      Nó vẫn đang đứng.
+    </h2>
+
+  </div>
+
+
+  <div class="split reveal">
+
+    <div class="image-frame">
+
+      <img
+        src="https://langsongeopark.com.vn/upload_images/images/2026/06/29/z7988159379019_3a6f6ea3724039ea28734ef90e2def63.jpg"
+        alt="Nhà trình tường tại Pò Kít"
+      >
+
+      <div class="image-caption">
+        Nhà trình tường – một dấu ấn kiến trúc đặc trưng của Pò Kít.
+      </div>
+
+    </div>
+
+
+    <div class="text-block">
+
+      <h3>
+        Đất, mái ngói và thời gian.
+      </h3>
+
+      <p>
+        Nhà trình tường được tạo nên bằng kỹ thuật nện đất thành
+        những bức tường dày, chắc chắn. Vật liệu địa phương cùng
+        kỹ thuật xây dựng truyền thống giúp ngôi nhà thích nghi
+        với khí hậu vùng núi.
+      </p>
+
+      <p>
+        Theo khảo sát năm 2025 của ngành văn hóa, tại Pò Kít có
+        một ngôi nhà được xác định đã tồn tại gần 100 năm.
+        Giá trị của những ngôi nhà này không chỉ nằm ở tuổi đời
+        mà còn ở kỹ thuật, không gian sống và ký ức cộng đồng.
+      </p>
+
+      <div class="fact-grid">
+
+        <div class="fact">
+          <strong>Vật liệu</strong>
+          <span>Đất nện</span>
+        </div>
+
+        <div class="fact">
+          <strong>Mái</strong>
+          <span>Ngói âm dương</span>
+        </div>
+
+        <div class="fact">
+          <strong>Niên đại</strong>
+          <span>Gần 100 năm</span>
+        </div>
+
+        <div class="fact">
+          <strong>Địa bàn</strong>
+          <span>Liên Hợp</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================
+     03 KIẾN TRÚC
+===================================== -->
+
+<section class="section paper2" id="kien-truc">
+
+  <div class="section-header reveal">
+
+    <div class="section-number">
+      03 / CẤU TRÚC KIẾN TRÚC
+    </div>
+
+    <h2 class="section-title">
+      Ba chi tiết làm nên diện mạo của một ngôi nhà trình tường.
+    </h2>
+
+  </div>
+
+
+  <div class="architecture-grid reveal">
+
+    <article class="architecture-card">
+
+      <div class="architecture-icon">
+        01
+      </div>
+
+      <h3>
+        Tường
+      </h3>
+
+      <p>
+        Đất được lựa chọn, làm ẩm rồi nện thành từng lớp.
+        Tường dày tạo cảm giác vững chắc, đồng thời giúp
+        điều hòa nhiệt độ trong nhà.
+      </p>
+
+    </article>
+
+
+    <article class="architecture-card">
+
+      <div class="architecture-icon">
+        02
+      </div>
+
+      <h3>
+        Mái
+      </h3>
+
+      <p>
+        Mái ngói âm dương là một thành phần quan trọng của
+        kiến trúc truyền thống, tạo nên hình ảnh đặc trưng
+        cho các ngôi nhà vùng miền núi phía Bắc.
+      </p>
+
+    </article>
+
+
+    <article class="architecture-card">
+
+      <div class="architecture-icon">
+        03
+      </div>
+
+      <h3>
+        Cửa
+      </h3>
+
+      <p>
+        Hệ thống cửa và cách bố trí không gian thể hiện sự
+        thích nghi với khí hậu, sinh hoạt gia đình và tập quán
+        xây dựng truyền thống.
+      </p>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================
+     04 CỘNG ĐỒNG
+===================================== -->
+
+<section class="section dark2" id="cong-dong">
+
+  <div class="section-header reveal">
+
+    <div class="section-number">
+      04 / CON NGƯỜI VÀ DI SẢN
+    </div>
+
+    <h2 class="section-title">
+      Di sản không chỉ nằm trong những bức tường.
+    </h2>
+
+  </div>
+
+
+  <div class="split reverse reveal">
+
+    <div class="text-block">
+
+      <h3>
+        Con người mới là phần sống của di sản.
+      </h3>
+
+      <p>
+        Pò Kít gắn với cộng đồng cư dân Nùng và Tày.
+        Những phong tục, nghề thủ công, sinh hoạt cộng đồng
+        và ẩm thực địa phương tạo nên một lớp giá trị văn hóa
+        song hành với kiến trúc.
+      </p>
+
+      <p>
+        Khảo sát năm 2025 không chỉ quan tâm đến các ngôi nhà
+        mà còn đánh giá những giá trị văn hóa phi vật thể
+        gắn với đời sống của người dân.
+      </p>
+
+
+      <div class="culture-list">
+
+        <div class="culture-item">
+          <strong>Dệt & nghề thủ công</strong>
+          <span>
+            Các kỹ năng truyền thống gắn với đời sống gia đình và cộng đồng.
+          </span>
+        </div>
+
+        <div class="culture-item">
+          <strong>Hội làng</strong>
+          <span>
+            Không gian sinh hoạt cộng đồng và duy trì tập quán địa phương.
+          </span>
+        </div>
+
+        <div class="culture-item">
+          <strong>Ẩm thực</strong>
+          <span>
+            Những món ăn phản ánh nguồn nguyên liệu và cách chế biến
+            đặc trưng của vùng.
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="image-frame">
+
+      <img
+        src="https://langsongeopark.com.vn/upload_images/images/2026/06/29/z7988159435099_f51ee81cf1035cc2f552d5e4feb23395.jpg"
+        alt="Người dân và đời sống văn hóa tại Pò Kít"
+      >
+
+      <div class="image-caption">
+        Cộng đồng địa phương là chủ thể quan trọng của việc bảo tồn di sản.
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================
+     05 NHỊP SỐNG
+===================================== -->
+
+<section class="section paper" id="nhip-song">
+
+  <div class="section-header reveal">
+
+    <div class="section-number">
+      05 / NHỊP SỐNG
+    </div>
+
+    <h2 class="section-title">
+      Di sản vẫn phải là một phần của cuộc sống hiện tại.
+    </h2>
+
+  </div>
+
+
+  <div class="life-grid reveal">
+
+    <article class="life-card">
+
+      <div class="number">
+        01
+      </div>
+
+      <h3>
+        Đời sống
+      </h3>
+
+      <p>
+        Nhà ở, sân vườn, bếp và các không gian sinh hoạt
+        tạo thành một chỉnh thể gắn bó với đời sống gia đình.
+      </p>
+
+    </article>
+
+
+    <article class="life-card">
+
+      <div class="number">
+        02
+      </div>
+
+      <h3>
+        Nông nghiệp
+      </h3>
+
+      <p>
+        Không gian làng gắn với sản xuất nông nghiệp và
+        cảnh quan tự nhiên, tạo nên mối liên hệ giữa con người
+        với đất đai.
+      </p>
+
+    </article>
+
+
+    <article class="life-card">
+
+      <div class="number">
+        03
+      </div>
+
+      <h3>
+        Trải nghiệm
+      </h3>
+
+      <p>
+        Những giá trị kiến trúc và văn hóa có thể trở thành
+        nền tảng cho các hoạt động du lịch cộng đồng phù hợp.
+      </p>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================
+     06 VĂN HÓA
+===================================== -->
+
+<section class="section dark" id="van-hoa">
+
+  <div class="section-header reveal">
+
+    <div class="section-number">
+      06 / BẢN SẮC VĂN HÓA
+    </div>
+
+    <h2 class="section-title">
+      Sau những bức tường là cả một lớp ký ức văn hóa.
+    </h2>
+
+  </div>
+
+
+  <div class="split reveal">
+
+    <div class="image-frame">
+
+      <img
+        src="https://langsongeopark.com.vn/upload_images/images/2026/06/29/z7988159520865_432a5f5380272aa0c7f4e355449c0246.jpg"
+        alt="Bản sắc văn hóa Pò Kít"
+      >
+
+      <div class="image-caption">
+        Văn hóa cộng đồng tạo nên chiều sâu cho không gian làng.
+      </div>
+
+    </div>
+
+
+    <div class="text-block">
+
+      <h3>
+        Giữ lại không chỉ hình dáng, mà cả cách sống.
+      </h3>
+
+      <p>
+        Những bức tường đất, nghề thủ công, món ăn, phong tục
+        và hình thức sinh hoạt cộng đồng cùng tạo nên bản sắc
+        của Pò Kít.
+      </p>
+
+      <p>
+        Bảo tồn hiệu quả không có nghĩa là biến ngôi làng thành
+        một “bảo tàng đóng kín”. Điều quan trọng là để các giá trị
+        truyền thống tiếp tục có ý nghĩa và được sử dụng trong
+        đời sống hiện tại.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================
+     07 CẢNH QUAN
+===================================== -->
+
+<section class="section landscape" id="canh-quan">
+
+  <div class="landscape-inner">
+
+    <div class="section-header reveal">
+
+      <div class="section-number">
+        07 / CẢNH QUAN
+      </div>
+
+      <h2 class="section-title">
+        Một ngôi làng nằm trong câu chuyện lớn hơn của Công viên địa chất.
+      </h2>
+
+    </div>
+
+
+    <div class="landscape-layout reveal">
+
+      <div class="landscape-image">
+
+        <img
+          src="https://langsongeopark.com.vn/upload_images/images/2026/06/29/z7988159435099_f51ee81cf1035cc2f552d5e4feb23395.jpg"
+          alt="Cảnh quan khu vực Pò Kít"
+        >
+
+      </div>
+
+
+      <div class="landscape-text">
+
+        <h3>
+          Đất, rừng, làng và con người.
+        </h3>
+
+        <p>
+          Pò Kít nằm trong không gian của Công viên địa chất
+          toàn cầu UNESCO Lạng Sơn, cách trung tâm tỉnh khoảng
+          30 km. Giá trị của địa điểm không chỉ nằm ở một cụm nhà,
+          mà còn ở mối quan hệ giữa làng bản với cảnh quan tự nhiên.
+        </p>
+
+        <div class="landscape-stat">
+          CÔNG VIÊN ĐỊA CHẤT TOÀN CẦU UNESCO LẠNG SƠN
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================
+     08 DẤU MỐC
+===================================== -->
+
+<section class="section paper" id="dau-moc">
+
+  <div class="section-header reveal">
+
+    <div class="section-number">
+      08 / NHỮNG DẤU MỐC
+    </div>
+
+    <h2 class="section-title">
+      Từ một ngôi làng cũ đến một điểm đến được quan tâm.
+    </h2>
+
+  </div>
+
+
+  <div class="timeline reveal">
+
+    <div class="timeline-item">
+
+      <div class="timeline-year">
+        2021
+      </div>
+
+      <h3>
+        Khảo sát nhà trình tường
+      </h3>
+
+      <p>
+        Ghi nhận 29 ngôi nhà trình tường của 29 hộ gia đình,
+        trong đó có khoảng 13 ngôi nhà nằm tương đối liền kề.
+      </p>
+
+    </div>
+
+
+    <div class="timeline-item">
+
+      <div class="timeline-year">
+        2025
+      </div>
+
+      <h3>
+        Khảo sát và định hướng
+      </h3>
+
+      <p>
+        Các giá trị kiến trúc, văn hóa và tiềm năng phát triển
+        du lịch cộng đồng tiếp tục được khảo sát, đánh giá.
+      </p>
+
+    </div>
+
+
+    <div class="timeline-item">
+
+      <div class="timeline-year">
+        2026
+      </div>
+
+      <h3>
+        Chung tay kiến tạo cảnh quan
+      </h3>
+
+      <p>
+        Các hoạt động cải thiện cảnh quan, trồng cây và phát triển
+        không gian điểm đến được triển khai.
+      </p>
+
+    </div>
+
+
+    <div class="timeline-item">
+
+      <div class="timeline-year">
+        HIỆN NAY
+      </div>
+
+      <h3>
+        Bảo tồn gắn với phát triển
+      </h3>
+
+      <p>
+        Pò Kít được định hướng phát triển theo hướng du lịch cộng đồng,
+        trong đó bảo tồn nhà trình tường và văn hóa địa phương là trọng tâm.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================
+     09 PÒ KÍT 2026
+===================================== -->
+
+<section class="section dark2" id="nam-2026">
+
+  <div class="section-header reveal">
+
+    <div class="section-number">
+      09 / PÒ KÍT 2026
+    </div>
+
+    <h2 class="section-title">
+      Khi bảo tồn bắt đầu từ chính cảnh quan quanh ngôi làng.
+    </h2>
+
+  </div>
+
+
+  <div class="feature-2026 reveal">
+
+    <div class="feature-2026-image"></div>
+
+
+    <div class="feature-2026-text">
+
+      <div class="date">
+        27 / 06 / 2026
+      </div>
+
+      <h3>
+        Một diện mạo mới cho Pò Kít.
+      </h3>
+
+      <p>
+        Các hoạt động kiến tạo cảnh quan hướng tới việc làm đẹp
+        không gian làng và tạo nền tảng cho phát triển du lịch.
+        Gần 600 cây tường vi và khoảng 50 cây hoàng đàn tuyết
+        được đưa vào không gian cảnh quan, góp phần tạo thêm
+        điểm nhấn xanh cho khu vực.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================
+     10 ẨM THỰC
+===================================== -->
+
+<section class="section food" id="am-thuc">
+
+  <div class="food-layout reveal">
+
+    <div class="food-image">
+
+      <img
+        src="https://langsongeopark.com.vn/upload_images/images/2026/06/29/z7988159356606_51831e54863bb7b1ada60cce4090da2f.jpg"
+        alt="Ẩm thực địa phương tại Pò Kít"
+      >
+
+    </div>
+
+
+    <div class="food-text">
+
+      <div class="section-number">
+        10 / ẨM THỰC
+      </div>
+
+      <h3>
+        Hương vị cũng là một cách kể chuyện về quê hương.
+      </h3>
+
+      <p>
+        Ẩm thực địa phương gắn với nguồn nguyên liệu sẵn có,
+        cách chế biến truyền thống và những dịp sinh hoạt cộng đồng.
+        Khi được giới thiệu đúng cách, ẩm thực có thể trở thành
+        một phần quan trọng của trải nghiệm du lịch cộng đồng.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================
+     11 HÌNH ẢNH
+===================================== -->
+
+<section class="section paper2" id="hinh-anh">
+
+  <div class="section-header reveal">
+
+    <div class="section-number">
+      11 / HÌNH ẢNH THỰC TẾ
+    </div>
+
+    <h2 class="section-title">
+      Pò Kít qua những góc nhìn thực tế.
+    </h2>
+
+  </div>
+
+
+  <div class="gallery reveal">
+
+    <div class="gallery-main image-frame">
+
+      <img
+        src="https://locbinh.langson.gov.vn/upload/105424/20231214/82bcd85a884f7286c1b9072db5850e34IMG_1842.JPG"
+        alt="Hình ảnh thực tế tại Pò Kít"
+      >
+
+    </div>
+
+
+    <div class="gallery-small image-frame">
+
+      <img
+        src="https://langsongeopark.com.vn/upload_images/images/2026/06/29/z7988159379019_3a6f6ea3724039ea28734ef90e2def63.jpg"
+        alt="Nhà trình tường Pò Kít"
+      >
+
+    </div>
+
+
+    <div class="gallery-small image-frame">
+
+      <img
+        src="https://langsongeopark.com.vn/upload_images/images/2026/06/29/z7988159370326_4bfa16b882a31d38b59f99afb5a9ba25.jpg"
+        alt="Cảnh quan Pò Kít"
+      >
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================
+     12 GIÁ TRỊ
+===================================== -->
+
+<section class="section dark" id="gia-tri">
+
+  <div class="section-header reveal">
+
+    <div class="section-number">
+      12 / GIÁ TRỊ CỦA PÒ KÍT
+    </div>
+
+    <h2 class="section-title">
+      Sáu lớp giá trị tạo nên một Pò Kít đáng được gìn giữ.
+    </h2>
+
+  </div>
+
+
+  <div class="value-grid reveal">
+
+    <article class="value-card">
+
+      <strong>01 / Kiến trúc</strong>
+
+      <h3>
+        Nhà trình tường
+      </h3>
+
+      <p>
+        Lưu giữ kỹ thuật xây dựng và hình thái kiến trúc truyền thống.
+      </p>
+
+    </article>
+
+
+    <article class="value-card">
+
+      <strong>02 / Lịch sử</strong>
+
+      <h3>
+        Ký ức làng
+      </h3>
+
+      <p>
+        Những ngôi nhà lâu đời phản ánh quá trình hình thành
+        và phát triển của cộng đồng.
+      </p>
+
+    </article>
+
+
+    <article class="value-card">
+
+      <strong>03 / Văn hóa</strong>
+
+      <h3>
+        Nùng Phàn Slình
+      </h3>
+
+      <p>
+        Các giá trị văn hóa cộng đồng là một phần quan trọng
+        của bản sắc.
+      </p>
+
+    </article>
+
+
+    <article class="value-card">
+
+      <strong>04 / Cộng đồng</strong>
+
+      <h3>
+        Người dân
+      </h3>
+
+      <p>
+        Người dân là chủ thể của việc gìn giữ, sử dụng
+        và truyền lại di sản.
+      </p>
+
+    </article>
+
+
+    <article class="value-card">
+
+      <strong>05 / Du lịch</strong>
+
+      <h3>
+        Trải nghiệm
+      </h3>
+
+      <p>
+        Không gian làng có tiềm năng phát triển các sản phẩm
+        du lịch cộng đồng phù hợp.
+      </p>
+
+    </article>
+
+
+    <article class="value-card">
+
+      <strong>06 / Địa chất</strong>
+
+      <h3>
+        Công viên địa chất
+      </h3>
+
+      <p>
+        Pò Kít nằm trong không gian rộng lớn của Công viên địa chất
+        toàn cầu UNESCO Lạng Sơn.
+      </p>
+
+    </article>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================
+     13 BẢO TỒN
+===================================== -->
+
+<section class="section paper" id="bao-ton">
+
+  <div class="section-header reveal">
+
+    <div class="section-number">
+      13 / BẢO TỒN
+    </div>
+
+    <h2 class="section-title">
+      Giữ Pò Kít không có nghĩa là giữ mọi thứ đứng yên.
+    </h2>
+
+    <p class="section-intro">
+      Bảo tồn cần đi cùng đời sống. Những ngôi nhà phải tiếp tục được sử dụng,
+      cảnh quan phải được chăm sóc và cộng đồng phải được hưởng lợi từ
+      những giá trị mà chính họ đang gìn giữ.
+    </p>
+
+  </div>
+
+
+  <div class="conservation-grid reveal">
+
+    <div class="conservation-card">
+
+      <h3>
+        Giữ kiến trúc
+      </h3>
+
+      <p>
+        Ưu tiên bảo vệ những ngôi nhà trình tường có giá trị,
+        giữ lại vật liệu, hình thức và những đặc điểm kiến trúc
+        truyền thống quan trọng.
+      </p>
+
+    </div>
+
+
+    <div class="conservation-card">
+
+      <h3>
+        Giữ văn hóa
+      </h3>
+
+      <p>
+        Khuyến khích cộng đồng tiếp tục duy trì nghề truyền thống,
+        phong tục, ẩm thực và các hình thức sinh hoạt văn hóa
+        phù hợp với đời sống hiện nay.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <div class="alert reveal">
+
+    <strong>
+      Điều quan trọng nhất
+    </strong>
+
+    <p>
+      Du lịch chỉ thực sự có ý nghĩa khi giúp cộng đồng có thêm động lực
+      bảo tồn di sản thay vì làm mất đi những giá trị khiến Pò Kít trở nên
+      đặc biệt ngay từ đầu.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================
+     NGUỒN
+===================================== -->
+
+<section class="sources">
+
+  <h2>
+    Nguồn tham khảo
+  </h2>
+
+
+  <div class="source-list">
+
+    <a
+      href="https://langsongeopark.com.vn/tin-tuc-bao-chi/chung-tay-kien-tao-canh-quan-lang-po-kit-n497.html"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Công viên địa chất toàn cầu UNESCO Lạng Sơn –
+      Chung tay kiến tạo cảnh quan làng Pò Kít
+    </a>
+
+
+    <a
+      href="https://locbinh.langson.gov.vn/tin-tuc-su-kien/du-lich/khao-sat-dinh-huong-giai-phap-ho-tro-phat-trien-du-lich-tai-thon-po-kit-xa-khuat-xa.html"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      UBND huyện Lộc Bình –
+      Khảo sát, định hướng giải pháp hỗ trợ phát triển du lịch
+      tại thôn Pò Kít, xã Khuất Xá
+    </a>
+
+
+    <a
+      href="https://khuatxa.langson.gov.vn/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Cổng thông tin điện tử xã Khuất Xá
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================
+     FOOTER
+===================================== -->
+
+<footer>
+
+  <div>
+    © 2026 · PÒ KÍT · LẠNG SƠN
+  </div>
+
+
+  <div class="footer-links">
+
+    <a
+      href="https://khuatxa.langson.gov.vn/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Khuất Xá
+    </a>
+
+    <a
+      href="https://langsongeopark.com.vn/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Lang Son Geopark
+    </a>
+
+    <a
+      href="https://locbinh.langson.gov.vn/"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Lộc Bình
+    </a>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+/* =====================================
+   HIỆU ỨNG XUẤT HIỆN
+===================================== */
+
+const revealElements =
+  document.querySelectorAll(".reveal");
+
+const revealObserver =
+  new IntersectionObserver(
+    (entries) => {
+
+      entries.forEach((entry) => {
+
+        if(entry.isIntersecting){
+
+          entry.target.classList.add("show");
+
+          revealObserver.unobserve(entry.target);
+
+        }
+
+      });
+
+    },
+    {
+      threshold:.12
+    }
+  );
+
+
+revealElements.forEach((element) => {
+
+  revealObserver.observe(element);
+
+});
+
+
+/* =====================================
+   SECTION ACTIVE
+===================================== */
+
+const sections =
+  document.querySelectorAll("section[id]");
+
+const sectionLinks =
+  document.querySelectorAll(".section-link");
+
+
+const sectionObserver =
+  new IntersectionObserver(
+
+    (entries) => {
+
+      entries.forEach((entry) => {
+
+        if(entry.isIntersecting){
+
+          sectionLinks.forEach((link) => {
+
+            link.classList.remove("active");
+
+          });
+
+
+          const activeLink =
+            document.querySelector(
+              '.section-link[href="#' +
+              entry.target.id +
+              '"]'
+            );
+
+
+          if(activeLink){
+
+            activeLink.classList.add("active");
+
+            activeLink.scrollIntoView({
+              behavior:"smooth",
+              block:"nearest",
+              inline:"center"
+            });
+
+          }
+
+        }
+
+      });
+
+    },
+
+    {
+      rootMargin:"-25% 0px -60% 0px",
+      threshold:0
+    }
+
+  );
+
+
+sections.forEach((section) => {
+
+  sectionObserver.observe(section);
+
+});
+
+
+/* =====================================
+   CLICK SECTION
+===================================== */
+
+sectionLinks.forEach((link) => {
+
+  link.addEventListener("click", function(){
+
+    sectionLinks.forEach((item) => {
+
+      item.classList.remove("active");
+
+    });
+
+    this.classList.add("active");
+
+  });
+
+});
+
+</script>
+
+
+</body>
+</html>
+```

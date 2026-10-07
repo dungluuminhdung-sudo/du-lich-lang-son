@@ -1,0 +1,2411 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Thế giới Cúc đá | Lạng Sơn</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=DM+Serif+Display&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#efe8da;
+  --paper:#fbf7ef;
+  --paper2:#f5eee2;
+  --ink:#29251f;
+  --muted:#71685c;
+  --line:#d8cdbc;
+  --orange:#b65c34;
+  --rust:#8f4329;
+  --gold:#c39447;
+  --dark:#302a24;
+  --cream:#f7f0e5;
+  --shadow:0 20px 50px rgba(67,47,28,.10);
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:"Be Vietnam Pro",sans-serif;
+  line-height:1.7;
+  overflow-x:hidden;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+a{
+  color:inherit;
+}
+
+button{
+  font:inherit;
+}
+
+/* =========================
+   TOP NAV
+========================= */
+
+.nav{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:72px;
+  z-index:200;
+  background:rgba(239,232,218,.94);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--line);
+}
+
+.nav-inner{
+  width:min(1180px,92%);
+  height:100%;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.brand{
+  font-family:"Space Grotesk",sans-serif;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.12em;
+}
+
+.brand span{
+  color:var(--orange);
+  margin:0 5px;
+}
+
+.back{
+  text-decoration:none;
+  color:var(--ink);
+  border:1px solid var(--line);
+  padding:9px 15px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:700;
+  transition:.25s ease;
+  background:rgba(251,247,239,.65);
+}
+
+.back:hover{
+  color:white;
+  background:var(--orange);
+  border-color:var(--orange);
+  transform:translateY(-2px);
+}
+
+/* =========================
+   SECTION NAV
+========================= */
+
+.section-nav{
+  position:sticky;
+  top:72px;
+  z-index:150;
+  margin-top:72px;
+  background:rgba(239,232,218,.94);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+
+.section-nav-inner{
+  width:min(1180px,92%);
+  margin:auto;
+  display:flex;
+  align-items:center;
+  gap:4px;
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+
+.section-nav-inner::-webkit-scrollbar{
+  display:none;
+}
+
+.section-link{
+  flex:0 0 auto;
+  padding:13px 14px 11px;
+  text-decoration:none;
+  color:#766d61;
+  font-family:"Space Grotesk",sans-serif;
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.04em;
+  white-space:nowrap;
+  border-bottom:2px solid transparent;
+  transition:.25s ease;
+}
+
+.section-link:hover,
+.section-link.active{
+  color:var(--orange);
+  border-bottom-color:var(--orange);
+}
+
+section[id],
+footer[id]{
+  scroll-margin-top:140px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  min-height:calc(100vh - 120px);
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+  overflow:hidden;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(32,25,18,.84) 0%,
+      rgba(32,25,18,.55) 42%,
+      rgba(32,25,18,.16) 100%
+    ),
+    url("https://photo-baomoi.bmcdn.me/w700_r1/2023_04_27_180_45675783/4efe87cff7821edc4793.jpg")
+    center/cover no-repeat;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:auto 0 0;
+  height:35%;
+  background:linear-gradient(transparent,rgba(20,15,10,.55));
+}
+
+.hero-content{
+  width:min(1180px,92%);
+  margin:0 auto;
+  padding:100px 0 90px;
+  position:relative;
+  z-index:2;
+  color:white;
+}
+
+.kicker{
+  font-family:"Space Grotesk",sans-serif;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.15em;
+  color:#f0c98e;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  font-family:"DM Serif Display",serif;
+  font-size:clamp(65px,11vw,145px);
+  line-height:.82;
+  font-weight:400;
+  letter-spacing:-.055em;
+  max-width:850px;
+}
+
+.hero h1 span{
+  display:block;
+  color:#e7b56f;
+}
+
+.hero-desc{
+  max-width:700px;
+  margin-top:30px;
+  font-size:17px;
+  line-height:1.8;
+  color:#f4ece2;
+}
+
+.hero-chips{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:25px;
+}
+
+.chip{
+  border:1px solid rgba(255,255,255,.3);
+  background:rgba(255,255,255,.08);
+  backdrop-filter:blur(8px);
+  padding:8px 13px;
+  border-radius:999px;
+  font-size:11px;
+}
+
+.hero-note{
+  margin-top:30px;
+  padding-left:18px;
+  border-left:2px solid #e1aa65;
+  max-width:650px;
+  color:#e7ddd1;
+  font-size:12px;
+}
+
+/* =========================
+   GENERAL
+========================= */
+
+.section{
+  padding:110px 0;
+}
+
+.section-inner{
+  width:min(1180px,92%);
+  margin:auto;
+}
+
+.label{
+  font-family:"Space Grotesk",sans-serif;
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.13em;
+  color:var(--orange);
+  margin-bottom:17px;
+}
+
+.section-heading{
+  max-width:850px;
+}
+
+.section-heading h2{
+  font-family:"DM Serif Display",serif;
+  font-weight:400;
+  font-size:clamp(42px,6vw,76px);
+  line-height:1;
+  letter-spacing:-.035em;
+}
+
+.section-heading p{
+  margin-top:22px;
+  max-width:760px;
+  color:var(--muted);
+  font-size:16px;
+}
+
+/* =========================
+   IMAGE + TEXT FEATURE
+========================= */
+
+.media-feature{
+  margin-top:55px;
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+  background:var(--paper);
+  border:1px solid var(--line);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+
+.media-feature.reverse{
+  grid-template-columns:.92fr 1.08fr;
+}
+
+.media-photo{
+  min-height:440px;
+  position:relative;
+  overflow:hidden;
+  background:#d8cdbc;
+}
+
+.media-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:transform .7s ease;
+}
+
+.media-feature:hover .media-photo img{
+  transform:scale(1.035);
+}
+
+.media-copy{
+  padding:48px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.media-copy h3{
+  font-family:"DM Serif Display",serif;
+  font-size:42px;
+  line-height:1.05;
+  font-weight:400;
+  margin-bottom:20px;
+}
+
+.media-copy p{
+  color:var(--muted);
+  margin-bottom:18px;
+}
+
+.media-points{
+  margin-top:12px;
+  display:grid;
+  gap:10px;
+}
+
+.media-point{
+  padding:13px 15px;
+  background:var(--paper2);
+  border-left:3px solid var(--orange);
+  font-size:12px;
+  color:#62594f;
+}
+
+/* =========================
+   OVERVIEW
+========================= */
+
+.overview-intro{
+  margin-top:45px;
+  max-width:850px;
+  font-size:19px;
+  color:#514a42;
+}
+
+.overview-grid{
+  margin-top:35px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+
+.overview-card{
+  padding:27px 23px;
+  border:1px solid var(--line);
+  background:var(--paper);
+  min-height:185px;
+}
+
+.overview-card small{
+  display:block;
+  color:var(--orange);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.1em;
+  margin-bottom:18px;
+}
+
+.overview-card strong{
+  display:block;
+  font-family:"Space Grotesk",sans-serif;
+  font-size:25px;
+  line-height:1.05;
+  margin-bottom:10px;
+}
+
+.overview-card p{
+  color:var(--muted);
+  font-size:12px;
+}
+
+/* =========================
+   DARK SECTION
+========================= */
+
+.dark-section{
+  background:var(--dark);
+  color:var(--cream);
+}
+
+.dark-section .label{
+  color:#e1aa65;
+}
+
+.dark-section .section-heading p{
+  color:#cfc4b6;
+}
+
+.real-grid{
+  margin-top:55px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+  align-items:stretch;
+}
+
+.real-text{
+  padding:42px;
+  background:#3a332c;
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.real-text h3{
+  font-family:"DM Serif Display",serif;
+  font-size:39px;
+  font-weight:400;
+  line-height:1.05;
+  margin-bottom:22px;
+}
+
+.real-text p{
+  color:#d2c8bb;
+  font-size:14px;
+  margin-bottom:17px;
+}
+
+.real-highlight{
+  margin-top:25px;
+  padding:16px 18px;
+  background:#2c2722;
+  border-left:3px solid #d39752;
+  color:#e9dccd;
+  font-size:12px;
+}
+
+.real-images{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.real-img{
+  background:#221e1a;
+  overflow:hidden;
+}
+
+.real-img figure{
+  height:100%;
+  display:flex;
+  flex-direction:column;
+}
+
+.real-img img{
+  width:100%;
+  flex:1;
+  min-height:280px;
+  object-fit:cover;
+}
+
+.real-img figcaption{
+  padding:12px;
+  color:#cfc4b6;
+  font-size:10px;
+  line-height:1.5;
+}
+
+/* =========================
+   SEA STORY
+========================= */
+
+.story-grid{
+  margin-top:50px;
+  display:grid;
+  grid-template-columns:1.25fr .75fr;
+  gap:20px;
+}
+
+.story-panel,
+.story-side{
+  background:var(--paper);
+  border:1px solid var(--line);
+  padding:42px;
+}
+
+.story-panel h3,
+.story-side h3{
+  font-family:"DM Serif Display",serif;
+  font-weight:400;
+  font-size:39px;
+  line-height:1.05;
+  margin-bottom:22px;
+}
+
+.story-panel p,
+.story-side p{
+  color:var(--muted);
+  font-size:14px;
+  margin-bottom:16px;
+}
+
+.story-side{
+  background:var(--rust);
+  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.story-side p{
+  color:#f0dfd3;
+}
+
+.story-side .mini{
+  font-family:"Space Grotesk",sans-serif;
+  font-size:10px;
+  letter-spacing:.12em;
+  color:#efc28f;
+  margin-bottom:15px;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline{
+  margin-top:55px;
+  border-top:1px solid var(--line);
+}
+
+.time-item{
+  display:grid;
+  grid-template-columns:130px 250px 1fr;
+  gap:30px;
+  padding:28px 0;
+  border-bottom:1px solid var(--line);
+  align-items:start;
+}
+
+.time-number{
+  font-family:"Space Grotesk",sans-serif;
+  font-size:12px;
+  font-weight:800;
+  color:var(--orange);
+}
+
+.time-item h3{
+  font-family:"DM Serif Display",serif;
+  font-size:31px;
+  font-weight:400;
+  line-height:1;
+}
+
+.time-item p{
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* =========================
+   ANATOMY
+========================= */
+
+.anatomy-grid{
+  margin-top:55px;
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:20px;
+  align-items:stretch;
+}
+
+.anatomy-art{
+  min-height:520px;
+  background:
+    radial-gradient(circle at center,transparent 0 26%,rgba(182,92,52,.16) 26.5% 27%,transparent 27.5%),
+    radial-gradient(circle at center,transparent 0 39%,rgba(182,92,52,.13) 39.5% 40%,transparent 40.5%),
+    radial-gradient(circle at center,transparent 0 52%,rgba(182,92,52,.10) 52.5% 53%,transparent 53.5%),
+    var(--paper);
+  border:1px solid var(--line);
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.anatomy-art::before{
+  content:"AMMONITE";
+  position:absolute;
+  top:25px;
+  left:25px;
+  font-family:"Space Grotesk",sans-serif;
+  font-size:10px;
+  letter-spacing:.14em;
+  color:var(--orange);
+  font-weight:800;
+}
+
+.shell{
+  width:310px;
+  height:310px;
+  border:22px solid var(--orange);
+  border-radius:50%;
+  position:relative;
+  box-shadow:
+    inset 0 0 0 12px rgba(195,148,71,.45),
+    inset 0 0 0 30px transparent;
+}
+
+.shell::before{
+  content:"";
+  position:absolute;
+  inset:28px;
+  border:14px solid var(--gold);
+  border-radius:50%;
+}
+
+.shell::after{
+  content:"";
+  position:absolute;
+  inset:72px;
+  border:11px solid var(--orange);
+  border-radius:50%;
+}
+
+.anatomy-text{
+  background:var(--paper);
+  border:1px solid var(--line);
+  padding:48px;
+}
+
+.anatomy-text h3{
+  font-family:"DM Serif Display",serif;
+  font-size:42px;
+  font-weight:400;
+  line-height:1.05;
+  margin-bottom:22px;
+}
+
+.anatomy-text p{
+  color:var(--muted);
+  font-size:14px;
+  margin-bottom:16px;
+}
+
+.fact-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-top:25px;
+}
+
+.fact{
+  padding:16px;
+  background:var(--paper2);
+}
+
+.fact b{
+  display:block;
+  font-family:"Space Grotesk",sans-serif;
+  color:var(--orange);
+  font-size:11px;
+  margin-bottom:5px;
+}
+
+.fact span{
+  color:var(--muted);
+  font-size:11px;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-grid{
+  margin-top:50px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
+}
+
+.gallery-large{
+  grid-column:span 2;
+  background:var(--paper);
+  border:1px solid var(--line);
+  overflow:hidden;
+}
+
+.gallery-large img{
+  width:100%;
+  height:530px;
+  object-fit:cover;
+}
+
+.gallery-card{
+  background:var(--paper);
+  border:1px solid var(--line);
+  overflow:hidden;
+}
+
+.gallery-card img{
+  width:100%;
+  height:340px;
+  object-fit:cover;
+}
+
+.gallery-caption{
+  padding:20px;
+}
+
+.gallery-caption small{
+  color:var(--orange);
+  font-family:"Space Grotesk",sans-serif;
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.12em;
+}
+
+.gallery-caption h3{
+  margin-top:7px;
+  font-family:"DM Serif Display",serif;
+  font-size:27px;
+  font-weight:400;
+  line-height:1.1;
+}
+
+.gallery-caption p{
+  color:var(--muted);
+  font-size:11px;
+  margin-top:8px;
+}
+
+.gallery-note{
+  grid-column:span 2;
+  padding:28px;
+  background:#e4d8c7;
+  border:1px solid var(--line);
+}
+
+.gallery-note small{
+  color:var(--orange);
+  font-size:10px;
+  font-weight:800;
+}
+
+.gallery-note h3{
+  font-family:"DM Serif Display",serif;
+  font-size:31px;
+  font-weight:400;
+  margin:8px 0;
+}
+
+.gallery-note p{
+  max-width:780px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* =========================
+   VALUES
+========================= */
+
+.value-grid{
+  margin-top:50px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+
+.value-card{
+  padding:30px;
+  min-height:230px;
+  background:var(--paper);
+  border:1px solid var(--line);
+}
+
+.value-card .num{
+  color:var(--orange);
+  font-family:"Space Grotesk",sans-serif;
+  font-size:11px;
+  font-weight:800;
+}
+
+.value-card h3{
+  margin-top:25px;
+  font-family:"DM Serif Display",serif;
+  font-size:31px;
+  font-weight:400;
+  line-height:1;
+}
+
+.value-card strong{
+  display:block;
+  margin-top:8px;
+  font-family:"Space Grotesk",sans-serif;
+  font-size:12px;
+}
+
+.value-card p{
+  margin-top:12px;
+  color:var(--muted);
+  font-size:12px;
+}
+
+/* =========================
+   EDUCATION
+========================= */
+
+.edu-grid{
+  margin-top:50px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+}
+
+.edu-card{
+  padding:30px;
+  background:#3a332c;
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.edu-card .num{
+  color:#e0a662;
+  font-family:"Space Grotesk",sans-serif;
+  font-size:11px;
+  font-weight:800;
+}
+
+.edu-card h3{
+  font-family:"DM Serif Display",serif;
+  font-size:31px;
+  font-weight:400;
+  line-height:1.05;
+  margin:17px 0 10px;
+}
+
+.edu-card p{
+  color:#d0c5b7;
+  font-size:12px;
+}
+
+/* =========================
+   FINAL
+========================= */
+
+.final{
+  padding:120px 0 90px;
+  background:
+    radial-gradient(circle at 85% 15%,rgba(182,92,52,.17),transparent 28%),
+    var(--paper2);
+}
+
+.final-inner{
+  width:min(950px,92%);
+  margin:auto;
+  text-align:center;
+}
+
+.final small{
+  font-family:"Space Grotesk",sans-serif;
+  color:var(--orange);
+  font-weight:800;
+  font-size:10px;
+  letter-spacing:.13em;
+}
+
+.final h2{
+  margin-top:20px;
+  font-family:"DM Serif Display",serif;
+  font-size:clamp(42px,7vw,80px);
+  line-height:.98;
+  font-weight:400;
+}
+
+.final p{
+  max-width:750px;
+  margin:25px auto 0;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.source-box{
+  margin-top:50px;
+  padding:25px;
+  background:var(--paper);
+  border:1px solid var(--line);
+  text-align:left;
+}
+
+.source-box strong{
+  display:block;
+  margin-bottom:12px;
+  font-family:"Space Grotesk",sans-serif;
+  font-size:11px;
+}
+
+.source-box a{
+  color:var(--orange);
+  font-size:12px;
+  text-decoration:none;
+}
+
+.source-box a:hover{
+  text-decoration:underline;
+}
+
+.source-box p{
+  margin:12px 0 0;
+  font-size:11px;
+  line-height:1.7;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  background:#25211d;
+  color:#ddd2c5;
+  padding:55px 0;
+}
+
+.footer-inner{
+  width:min(1180px,92%);
+  margin:auto;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+}
+
+.footer-brand{
+  font-family:"Space Grotesk",sans-serif;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:.12em;
+  color:#f1e7da;
+}
+
+.footer-title{
+  margin-top:15px;
+  font-family:"DM Serif Display",serif;
+  font-size:43px;
+  color:#f2e7d9;
+  line-height:1;
+}
+
+.footer-text{
+  margin-top:15px;
+  color:#aaa095;
+  max-width:470px;
+  font-size:12px;
+}
+
+.footer-sources{
+  display:grid;
+  gap:9px;
+  align-content:start;
+}
+
+.footer-sources div{
+  display:flex;
+  flex-direction:column;
+  gap:3px;
+}
+
+.footer-sources span{
+  font-family:"Space Grotesk",sans-serif;
+  font-size:9px;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  color:#8e847a;
+}
+
+.footer-sources a{
+  color:#d6b17a;
+  font-size:11px;
+  text-decoration:none;
+}
+
+.footer-sources a:hover{
+  text-decoration:underline;
+}
+
+/* =========================
+   REVEAL
+========================= */
+
+.overview-card,
+.real-text,
+.real-img,
+.story-panel,
+.story-side,
+.time-item,
+.anatomy-art,
+.anatomy-text,
+.gallery-large,
+.gallery-card,
+.gallery-note,
+.value-card,
+.edu-card,
+.media-feature{
+  opacity:0;
+  transform:translateY(22px);
+  transition:
+    opacity .7s ease,
+    transform .7s ease;
+}
+
+.show{
+  opacity:1 !important;
+  transform:translateY(0) !important;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+  .overview-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .real-grid,
+  .story-grid,
+  .anatomy-grid,
+  .media-feature,
+  .media-feature.reverse{
+    grid-template-columns:1fr;
+  }
+
+  .media-photo{
+    min-height:350px;
+  }
+
+  .real-images{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .time-item{
+    grid-template-columns:90px 1fr;
+    gap:15px;
+  }
+
+  .time-item p{
+    grid-column:2;
+  }
+
+  .value-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .footer-inner{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width:650px){
+
+  .nav{
+    height:64px;
+  }
+
+  .nav-inner{
+    width:94%;
+  }
+
+  .brand{
+    font-size:10px;
+  }
+
+  .back{
+    padding:7px 11px;
+    font-size:10px;
+  }
+
+  .section-nav{
+    top:64px;
+    margin-top:64px;
+  }
+
+  .section-link{
+    padding:11px 11px 9px;
+    font-size:9px;
+  }
+
+  section[id],
+  footer[id]{
+    scroll-margin-top:120px;
+  }
+
+  .hero{
+    min-height:700px;
+  }
+
+  .hero-content{
+    width:94%;
+    padding:80px 0 60px;
+  }
+
+  .hero h1{
+    font-size:68px;
+  }
+
+  .hero-desc{
+    font-size:14px;
+  }
+
+  .section{
+    padding:75px 0;
+  }
+
+  .section-inner{
+    width:94%;
+  }
+
+  .section-heading h2{
+    font-size:48px;
+  }
+
+  .overview-grid{
+    grid-template-columns:1fr;
+  }
+
+  .media-copy{
+    padding:30px;
+  }
+
+  .media-copy h3{
+    font-size:35px;
+  }
+
+  .media-photo{
+    min-height:280px;
+  }
+
+  .real-grid{
+    gap:12px;
+  }
+
+  .real-text{
+    padding:28px;
+  }
+
+  .real-images{
+    grid-template-columns:1fr;
+  }
+
+  .real-img img{
+    min-height:240px;
+  }
+
+  .story-panel,
+  .story-side,
+  .anatomy-text{
+    padding:30px;
+  }
+
+  .story-panel h3,
+  .story-side h3,
+  .anatomy-text h3{
+    font-size:35px;
+  }
+
+  .time-item{
+    grid-template-columns:1fr;
+    gap:7px;
+  }
+
+  .time-item p{
+    grid-column:auto;
+  }
+
+  .anatomy-art{
+    min-height:380px;
+  }
+
+  .shell{
+    width:220px;
+    height:220px;
+    border-width:15px;
+  }
+
+  .shell::before{
+    inset:20px;
+    border-width:10px;
+  }
+
+  .shell::after{
+    inset:52px;
+    border-width:8px;
+  }
+
+  .fact-grid{
+    grid-template-columns:1fr;
+  }
+
+  .gallery-grid{
+    grid-template-columns:1fr;
+  }
+
+  .gallery-large,
+  .gallery-note{
+    grid-column:auto;
+  }
+
+  .gallery-large img{
+    height:350px;
+  }
+
+  .gallery-card img{
+    height:280px;
+  }
+
+  .value-grid,
+  .edu-grid{
+    grid-template-columns:1fr;
+  }
+
+  .final{
+    padding:85px 0 70px;
+  }
+
+  .final h2{
+    font-size:48px;
+  }
+
+  .footer-title{
+    font-size:37px;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- =========================
+     NAV
+========================= -->
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="brand">
+      LẠNG SƠN <span>/</span> 09
+    </div>
+
+```
+<a class="back" href="./danhlamthangcanh.html">
+  ← Danh sách danh thắng
+</a>
+```
+
+  </div>
+</header>
+
+<!-- =========================
+     SECTION NAV
+========================= -->
+
+<nav class="section-nav" aria-label="Điều hướng nội dung">
+  <div class="section-nav-inner">
+    <a class="section-link active" href="#ho-so">Hồ sơ</a>
+    <a class="section-link" href="#hoa-thach">Hóa thạch</a>
+    <a class="section-link" href="#bien-xua">Biển xưa</a>
+    <a class="section-link" href="#thoi-gian">Thời gian</a>
+    <a class="section-link" href="#hinh-dang">Hình dạng</a>
+    <a class="section-link" href="#gallery">Hình ảnh</a>
+    <a class="section-link" href="#gia-tri">Giá trị</a>
+    <a class="section-link" href="#giao-duc">Giáo dục</a>
+    <a class="section-link" href="#nguon">Nguồn</a>
+  </div>
+</nav>
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+  <div class="hero-content">
+
+```
+<div class="kicker">
+  LANG SON GEOPARK · ROUTE 3 · SITE 28
+</div>
+
+<h1>
+  THẾ GIỚI
+  <span>CÚC ĐÁ</span>
+</h1>
+
+<p class="hero-desc">
+  Ở vùng Bắc Thủy, những dấu tích Cúc đá trong đá trở thành cánh cửa
+  nhìn về một thế giới biển cổ. Từ một vòng xoắn nhỏ, câu chuyện mở rộng
+  thành hàng trăm triệu năm lịch sử Trái đất.
+</p>
+
+<div class="hero-chips">
+  <div class="chip">📍 Khu vực Bắc Thủy cũ</div>
+  <div class="chip">🏘 Nay thuộc xã Nhân Lý</div>
+  <div class="chip">🌀 Ammonite World</div>
+  <div class="chip">⏳ 400–65 triệu năm</div>
+</div>
+
+<div class="hero-note">
+  Theo hồ sơ điểm của tỉnh, địa điểm hóa thạch nằm trước ngọn đồi đối
+  diện nhà ga đường sắt xã Bắc Thủy. Bắc Thủy hiện là địa bàn thuộc xã
+  Nhân Lý, tỉnh Lạng Sơn.
+</div>
+```
+
+  </div>
+</section>
+
+<!-- =========================
+     01. OVERVIEW
+========================= -->
+
+<section class="section" id="ho-so">
+  <div class="section-inner">
+
+```
+<div class="section-heading">
+  <div class="label">01 / HỒ SƠ ĐIỂM ĐẾN</div>
+
+  <h2>
+    Một địa điểm nhỏ nhưng chứa một câu chuyện địa chất rất lớn.
+  </h2>
+</div>
+
+<p class="overview-intro">
+  “Thế giới Cúc Đá” là tên gọi của điểm hóa thạch Ammonite trong hệ thống
+  Công viên địa chất Lạng Sơn. Tài liệu chính thức của tỉnh xác định điểm
+  này ở xã Bắc Thủy, huyện Chi Lăng cũ, với hóa thạch Cúc đá có niên đại
+  từ 400 đến 65 triệu năm.
+</p>
+
+<!-- ẢNH + VĂN BẢN THÊM -->
+
+<div class="media-feature">
+
+  <figure class="media-photo">
+    <img
+      src="https://photo-baomoi.bmcdn.me/w700_r1/2023_04_27_180_45675783/4efe87cff7821edc4793.jpg"
+      alt="Hóa thạch Cúc đá được tìm thấy tại Bắc Thủy, Lạng Sơn"
+    >
+  </figure>
+
+  <div class="media-copy">
+
+    <div class="label">
+      GÓC NHÌN HÓA THẠCH
+    </div>
+
+    <h3>
+      Một vòng xoắn, một dấu tích của biển cổ.
+    </h3>
+
+    <p>
+      Cúc đá giúp người xem hình dung trực quan hơn về lịch sử địa chất
+      của Lạng Sơn. Mẫu hóa thạch nằm trong đá là phần còn lại của một
+      thế giới tự nhiên đã thay đổi rất xa so với cảnh quan ngày nay.
+    </p>
+
+    <div class="media-points">
+
+      <div class="media-point">
+        <strong>ĐỊA ĐIỂM</strong><br>
+        Khu vực Bắc Thủy cũ, nay thuộc xã Nhân Lý.
+      </div>
+
+      <div class="media-point">
+        <strong>HÓA THẠCH</strong><br>
+        Cúc đá thuộc nhóm Ammonite.
+      </div>
+
+      <div class="media-point">
+        <strong>THỜI GIAN</strong><br>
+        Hồ sơ điểm ghi nhận khoảng 400–65 triệu năm.
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<div class="overview-grid">
+
+  <div class="overview-card">
+    <small>ĐỊA CHỈ HIỆN NAY</small>
+    <strong>Nhân Lý</strong>
+    <p>
+      Khu vực Bắc Thủy cũ, hiện thuộc xã Nhân Lý, tỉnh Lạng Sơn.
+    </p>
+  </div>
+
+  <div class="overview-card">
+    <small>TÊN GỌI</small>
+    <strong>Ammonite World</strong>
+    <p>
+      Tên tiếng Anh của điểm “Thế giới Cúc Đá”.
+    </p>
+  </div>
+
+  <div class="overview-card">
+    <small>NIÊN ĐẠI HÓA THẠCH</small>
+    <strong>400–65</strong>
+    <p>
+      Triệu năm, theo hồ sơ điểm của tỉnh.
+    </p>
+  </div>
+
+  <div class="overview-card">
+    <small>VỊ TRÍ TRONG TUYẾN</small>
+    <strong>Điểm 28</strong>
+    <p>
+      Thuộc tuyến du lịch của Công viên địa chất Lạng Sơn.
+    </p>
+  </div>
+
+</div>
+```
+
+  </div>
+</section>
+
+<!-- =========================
+     02. FOSSIL
+========================= -->
+
+<section class="section dark-section" id="hoa-thach">
+  <div class="section-inner">
+
+```
+<div class="section-heading">
+  <div class="label">02 / HÓA THẠCH BẮC THỦY</div>
+
+  <h2>
+    Những vòng xoắn từng nằm dưới biển cổ.
+  </h2>
+</div>
+
+<div class="real-grid">
+
+  <div class="real-text">
+
+    <h3>
+      Bắc Thủy và câu chuyện của Cúc đá.
+    </h3>
+
+    <p>
+      Điểm Thế giới Cúc Đá được xác định là một địa điểm hóa thạch
+      Ammonite thuộc Công viên địa chất Lạng Sơn. Tài liệu của tỉnh mô tả
+      vị trí tại khu vực trước ngọn đồi đối diện nhà ga đường sắt Bắc Thủy.
+    </p>
+
+    <p>
+      Một tư liệu báo chí giới thiệu mẫu hóa thạch Cúc đá được tìm thấy
+      tại Bắc Thủy, Lạng Sơn vào năm 1977. Chi tiết này giúp câu chuyện
+      về điểm di sản trở nên trực quan hơn: hóa thạch không chỉ là một
+      khái niệm trong sách mà là dấu tích thực tế đã được phát hiện.
+    </p>
+
+    <div class="real-highlight">
+      Hai ảnh bên phải được giữ lại vì phù hợp nhất với câu chuyện
+      hóa thạch Bắc Thủy.
+    </div>
+
+  </div>
+
+  <div class="real-images">
+
+    <div class="real-img">
+      <figure>
+
+        <img
+          src="https://photo-baomoi.bmcdn.me/w700_r1/2023_04_27_180_45675783/4efe87cff7821edc4793.jpg"
+          alt="Hóa thạch Cúc đá được tìm thấy tại Bắc Thủy, Lạng Sơn"
+        >
+
+        <figcaption>
+          Mẫu hóa thạch Cúc đá được tư liệu báo chí ghi nhận tìm thấy
+          tại Bắc Thủy, Lạng Sơn.
+        </figcaption>
+
+      </figure>
+    </div>
+
+    <div class="real-img">
+      <figure>
+
+        <img
+          src="https://photo-baomoi.bmcdn.me/w700_r1/2023_04_27_180_45675783/a1689f58ef15064b5f04.jpg"
+          alt="Mẫu hóa thạch Cúc đá"
+        >
+
+        <figcaption>
+          Mẫu hóa thạch được giới thiệu trong tư liệu về Cúc đá ở khu vực
+          Lạng Sơn.
+        </figcaption>
+
+      </figure>
+    </div>
+
+  </div>
+</div>
+
+<p style="margin-top:18px;color:#a99e91;font-size:10px;">
+  Ảnh tư liệu: Tri thức & Cuộc sống / Báo điện tử tổng hợp.
+</p>
+```
+
+  </div>
+</section>
+
+<!-- =========================
+     03. ANCIENT SEA
+========================= -->
+
+<section class="section" id="bien-xua">
+  <div class="section-inner">
+
+```
+<div class="section-heading">
+  <div class="label">03 / BIỂN XƯA</div>
+
+  <h2>
+    Vì sao hóa thạch sinh vật biển lại nằm giữa vùng núi ngày nay?
+  </h2>
+
+  <p>
+    Đây chính là điều khiến Thế giới Cúc Đá trở nên hấp dẫn. Những lớp
+    đá chứa hóa thạch là dấu hiệu cho thấy lịch sử môi trường của khu vực
+    từng rất khác với cảnh quan hiện tại.
+  </p>
+</div>
+
+<div class="story-grid">
+
+  <div class="story-panel">
+
+    <h3>
+      Từ đáy biển đến đất liền.
+    </h3>
+
+    <p>
+      Theo tài liệu giới thiệu của Công viên địa chất Lạng Sơn, khoảng
+      220 triệu năm trước, biển vẫn hiện diện ở vùng Công viên địa chất
+      và Cúc đá là một trong những sinh vật tiêu biểu của môi trường biển đó.
+    </p>
+
+    <p>
+      Cúc đá có lớp vỏ cuộn xoắn với các khoang. Những đặc điểm ấy giúp
+      chúng thích nghi với môi trường nước và trở thành một nhóm sinh vật
+      biển rất đặc trưng.
+    </p>
+
+    <p>
+      Sau khi bị chôn vùi và trải qua quá trình biến đổi lâu dài, dấu tích
+      của sinh vật có thể được bảo tồn trong đá. Những vận động địa chất
+      sau đó góp phần làm thay đổi địa hình và vị trí tương đối của các
+      lớp đá.
+    </p>
+
+    <p>
+      Vì thế, một hóa thạch Cúc đá ngày nay có thể được xem như một
+      “mẩu hồ sơ” của biển cổ Lạng Sơn.
+    </p>
+
+  </div>
+
+  <div class="story-side">
+
+    <div class="mini">
+      AMMONITE · SEA · TIME
+    </div>
+
+    <h3>
+      Một vòng xoắn mở ra cả một đại dương đã biến mất.
+    </h3>
+
+    <p>
+      Đằng sau hình dạng quen thuộc của Cúc đá là câu chuyện về sự sống,
+      môi trường biển và những thay đổi địa chất kéo dài qua một khoảng
+      thời gian vượt xa lịch sử con người.
+    </p>
+
+  </div>
+
+</div>
+```
+
+  </div>
+</section>
+
+<!-- =========================
+     04. TIMELINE
+========================= -->
+
+<section class="section" id="thoi-gian">
+  <div class="section-inner">
+
+```
+<div class="section-heading">
+  <div class="label">04 / DÒNG THỜI GIAN ĐỊA CHẤT</div>
+
+  <h2>
+    Hàng trăm triệu năm trong một dấu tích hóa thạch.
+  </h2>
+</div>
+
+<div class="timeline">
+
+  <div class="time-item">
+    <div class="time-number">01</div>
+
+    <h3>
+      400 TRIỆU NĂM
+      <small style="display:block;font-size:11px;font-family:'Space Grotesk';color:var(--orange);margin-top:8px;">
+        Những biển cổ
+      </small>
+    </h3>
+
+    <p>
+      Hồ sơ điểm của tỉnh xếp các hóa thạch Cúc đá tại Thế giới Cúc Đá
+      trong khoảng 400–65 triệu năm.
+    </p>
+  </div>
+
+  <div class="time-item">
+    <div class="time-number">02</div>
+
+    <h3>
+      ~220 TRIỆU NĂM
+      <small style="display:block;font-size:11px;font-family:'Space Grotesk';color:var(--orange);margin-top:8px;">
+        Biển và Cúc đá
+      </small>
+    </h3>
+
+    <p>
+      Tài liệu diễn giải của Công viên địa chất cho biết biển và Cúc đá
+      vẫn tồn tại ở vùng Lạng Sơn trong giai đoạn này.
+    </p>
+  </div>
+
+  <div class="time-item">
+    <div class="time-number">03</div>
+
+    <h3>
+      66 TRIỆU NĂM
+      <small style="display:block;font-size:11px;font-family:'Space Grotesk';color:var(--orange);margin-top:8px;">
+        Kết thúc một chương
+      </small>
+    </h3>
+
+    <p>
+      Ammonite biến mất vào cuối kỷ Phấn Trắng, để lại hóa thạch như
+      những dấu tích của sự sống cổ.
+    </p>
+  </div>
+
+  <div class="time-item">
+    <div class="time-number">04</div>
+
+    <h3>
+      NGÀY NAY
+      <small style="display:block;font-size:11px;font-family:'Space Grotesk';color:var(--orange);margin-top:8px;">
+        Đá trở thành dữ liệu
+      </small>
+    </h3>
+
+    <p>
+      Hóa thạch trở thành nguồn tư liệu phục vụ nghiên cứu địa chất,
+      cổ sinh và giáo dục địa chất.
+    </p>
+  </div>
+
+</div>
+```
+
+  </div>
+</section>
+
+<!-- =========================
+     05. SHAPE
+========================= -->
+
+<section class="section" id="hinh-dang">
+  <div class="section-inner">
+
+```
+<div class="section-heading">
+  <div class="label">05 / HÌNH DẠNG ĐẶC TRƯNG</div>
+
+  <h2>
+    Tại sao Cúc đá lại có hình xoắn ốc?
+  </h2>
+
+  <p>
+    Vỏ xoắn là đặc điểm dễ nhận biết nhất của Ammonite. Nhìn vào những
+    vòng xoắn ấy, người xem có thể nhận ra ngay vì sao hóa thạch này có
+    sức hấp dẫn đặc biệt trong địa chất học.
+  </p>
+</div>
+
+<div class="anatomy-grid">
+
+  <div class="anatomy-art">
+    <div class="shell"></div>
+  </div>
+
+  <div class="anatomy-text">
+
+    <h3>
+      Một chiếc vỏ như chiếc đồng hồ của biển cổ.
+    </h3>
+
+    <p>
+      Cúc đá là nhóm động vật thân mềm biển có lớp vỏ cuộn theo dạng xoắn.
+      Những khoang trong vỏ góp phần giúp chúng điều chỉnh khả năng nổi
+      và di chuyển trong nước.
+    </p>
+
+    <p>
+      Khi hóa thạch được bảo tồn trong đá, hình dạng xoắn ốc trở thành
+      một dấu hiệu rất rõ để nhận biết nhóm sinh vật này.
+    </p>
+
+    <div class="fact-grid">
+
+      <div class="fact">
+        <b>01 · VỎ XOẮN</b>
+        <span>
+          Đặc điểm hình thái nổi bật nhất của Cúc đá.
+        </span>
+      </div>
+
+      <div class="fact">
+        <b>02 · SINH VẬT BIỂN</b>
+        <span>
+          Cúc đá sống trong môi trường biển cổ.
+        </span>
+      </div>
+
+      <div class="fact">
+        <b>03 · CÁC KHOANG</b>
+        <span>
+          Vỏ có cấu trúc nhiều khoang liên tiếp.
+        </span>
+      </div>
+
+      <div class="fact">
+        <b>04 · HÓA THẠCH</b>
+        <span>
+          Vỏ được bảo tồn trong trầm tích qua thời gian rất dài.
+        </span>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- ẢNH + VĂN BẢN THÊM -->
+
+<div class="media-feature reverse">
+
+  <div class="media-copy">
+
+    <div class="label">
+      NHÌN GẦN HƠN
+    </div>
+
+    <h3>
+      Những đường xoắn kể câu chuyện bằng hình dạng.
+    </h3>
+
+    <p>
+      Mặt cắt hóa thạch giúp nhìn rõ hơn cấu trúc bên trong của Ammonite.
+      Đây là ảnh minh họa hình thái, không phải ảnh chụp hiện trường
+      tại Bắc Thủy.
+    </p>
+
+    <div class="media-point">
+      <strong>GHI NHỚ</strong><br>
+      Hình dạng xoắn và cấu trúc khoang là những đặc điểm nổi bật giúp
+      nhận biết Cúc đá.
+    </div>
+
+  </div>
+
+  <figure class="media-photo">
+
+    <img
+      src="https://commons.wikimedia.org/wiki/Special:FilePath/Ammonite%20section.JPG?width=1200"
+      alt="Mặt cắt hóa thạch Ammonite"
+    >
+
+  </figure>
+
+</div>
+```
+
+  </div>
+</section>
+
+<!-- =========================
+     06. GALLERY
+========================= -->
+
+<section class="section" id="gallery">
+  <div class="section-inner">
+
+```
+<div class="section-heading">
+
+  <div class="label">06 / GÓC NHÌN HÓA THẠCH</div>
+
+  <h2>
+    Bốn khung hình là đủ để kể câu chuyện.
+  </h2>
+
+  <p>
+    Trang này chỉ giữ lại những ảnh có thể sử dụng ổn định: hai ảnh tư
+    liệu liên quan Bắc Thủy và hai ảnh minh họa Ammonite từ Wikimedia
+    Commons. Như vậy trang ít ảnh hơn nhưng tránh tình trạng ảnh lỗi
+    hoặc ảnh không rõ nguồn.
+  </p>
+
+</div>
+
+<div class="gallery-grid">
+
+  <div class="gallery-large">
+
+    <img
+      src="https://photo-baomoi.bmcdn.me/w700_r1/2023_04_27_180_45675783/4efe87cff7821edc4793.jpg"
+      alt="Mẫu hóa thạch Cúc đá tại Bắc Thủy"
+    >
+
+    <div class="gallery-caption">
+      <small>ẢNH TƯ LIỆU</small>
+      <h3>
+        Hóa thạch Cúc đá ở Bắc Thủy.
+      </h3>
+      <p>
+        Mẫu hóa thạch được tư liệu báo chí giới thiệu trong câu chuyện
+        về Cúc đá tại Lạng Sơn.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="gallery-card">
+
+    <img
+      src="https://photo-baomoi.bmcdn.me/w700_r1/2023_04_27_180_45675783/a1689f58ef15064b5f04.jpg"
+      alt="Mẫu hóa thạch Cúc đá"
+    >
+
+    <div class="gallery-caption">
+      <small>ẢNH TƯ LIỆU</small>
+      <h3>
+        Dấu tích nằm trong đá.
+      </h3>
+      <p>
+        Mẫu hóa thạch được giới thiệu trong tư liệu về Cúc đá ở khu vực
+        Lạng Sơn.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="gallery-card">
+
+    <img
+      src="https://commons.wikimedia.org/wiki/Special:FilePath/Ammonite%20section.JPG?width=1200"
+      alt="Mặt cắt hóa thạch Ammonite"
+    >
+
+    <div class="gallery-caption">
+      <small>ẢNH MINH HỌA</small>
+      <h3>
+        Mặt cắt Ammonite.
+      </h3>
+      <p>
+        Mặt cắt Ammonite cho thấy rõ cấu trúc các vòng xoắn và khoang
+        bên trong.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="gallery-card">
+
+    <img
+      src="https://commons.wikimedia.org/wiki/Special:FilePath/Ammonite%20Jeletzkytes.jpg?width=1200"
+      alt="Hóa thạch Ammonite Jeletzkytes"
+    >
+
+    <div class="gallery-caption">
+      <small>ẢNH MINH HỌA</small>
+      <h3>
+        Ammonite Jeletzkytes.
+      </h3>
+      <p>
+        Mẫu Ammonite với các đường gân tỏa quanh vỏ hóa thạch.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="gallery-note">
+
+    <small>ẢNH MINH HỌA</small>
+
+    <h3>
+      Không phải ảnh hiện trường Bắc Thủy.
+    </h3>
+
+    <p>
+      Hai ảnh Wikimedia Commons ở khu vực này chỉ dùng để minh họa hình
+      thái Ammonite. Chúng không được chú thích như ảnh chụp tại
+      Thế giới Cúc Đá Lạng Sơn.
+    </p>
+
+    <p style="margin-top:10px;">
+      Ảnh minh họa Ammonite: Wikimedia Commons.
+    </p>
+
+  </div>
+
+</div>
+```
+
+  </div>
+</section>
+
+<!-- =========================
+     07. VALUES
+========================= -->
+
+<section class="section" id="gia-tri">
+  <div class="section-inner">
+
+```
+<div class="section-heading">
+
+  <div class="label">07 / GIÁ TRỊ CỦA ĐIỂM DI SẢN</div>
+
+  <h2>
+    Thế giới Cúc Đá có nhiều hơn một câu chuyện.
+  </h2>
+
+</div>
+
+<div class="value-grid">
+
+  <div class="value-card">
+    <div class="num">01</div>
+    <h3>ĐỊA CHẤT</h3>
+    <strong>Đọc lịch sử Trái đất</strong>
+    <p>
+      Đá và hóa thạch giúp các nhà nghiên cứu tìm hiểu môi trường địa
+      chất của những thời kỳ xa xưa.
+    </p>
+  </div>
+
+  <div class="value-card">
+    <div class="num">02</div>
+    <h3>CỔ SINH</h3>
+    <strong>Hiểu về sự sống cổ</strong>
+    <p>
+      Cúc đá là một nhóm sinh vật biển quan trọng trong lịch sử tiến hóa
+      của sự sống dưới đại dương.
+    </p>
+  </div>
+
+  <div class="value-card">
+    <div class="num">03</div>
+    <h3>CẢNH QUAN</h3>
+    <strong>Nhìn cảnh quan bằng một góc khác</strong>
+    <p>
+      Những lớp đá quanh điểm di sản không còn chỉ là đá: chúng trở thành
+      dấu tích của những môi trường cổ.
+    </p>
+  </div>
+
+  <div class="value-card">
+    <div class="num">04</div>
+    <h3>GIÁO DỤC</h3>
+    <strong>Học địa chất trực quan</strong>
+    <p>
+      Người học có thể bắt đầu từ một hóa thạch nhìn thấy được rồi tìm
+      hiểu về biển cổ, trầm tích và thời gian địa chất.
+    </p>
+  </div>
+
+  <div class="value-card">
+    <div class="num">05</div>
+    <h3>CÔNG VIÊN ĐỊA CHẤT</h3>
+    <strong>Một mắt xích trong tuyến du lịch</strong>
+    <p>
+      Thế giới Cúc Đá là một trong các điểm thuộc hệ thống tuyến trải
+      nghiệm Công viên địa chất Lạng Sơn.
+    </p>
+  </div>
+
+  <div class="value-card">
+    <div class="num">06</div>
+    <h3>BẢO TỒN</h3>
+    <strong>Giữ lại dấu tích không thể tái tạo</strong>
+    <p>
+      Hóa thạch có giá trị khoa học. Không tự ý lấy, đục, di chuyển hoặc
+      làm hư hại các mẫu đá và hóa thạch.
+    </p>
+  </div>
+
+</div>
+```
+
+  </div>
+</section>
+
+<!-- =========================
+     08. EDUCATION
+========================= -->
+
+<section class="section dark-section" id="giao-duc">
+  <div class="section-inner">
+
+```
+<div class="section-heading">
+
+  <div class="label">08 / HỌC TỪ MỘT HÓA THẠCH</div>
+
+  <h2>
+    Một vòng xoắn nhỏ có thể mở ra cả một bài học lớn.
+  </h2>
+
+  <p>
+    Thế giới Cúc Đá phù hợp với cách tiếp cận giáo dục địa chất: bắt đầu
+    từ vật thật, đặt câu hỏi rồi lần theo câu trả lời qua thời gian địa chất.
+  </p>
+
+</div>
+
+<div class="edu-grid">
+
+  <div class="edu-card">
+    <div class="num">01</div>
+
+    <h3>
+      Vì sao sinh vật biển lại nằm trên đất liền?
+    </h3>
+
+    <p>
+      Từ câu hỏi này có thể tìm hiểu về biển cổ, trầm tích và các vận động
+      làm biến đổi địa hình.
+    </p>
+  </div>
+
+  <div class="edu-card">
+    <div class="num">02</div>
+
+    <h3>
+      Hóa thạch hình thành như thế nào?
+    </h3>
+
+    <p>
+      Một sinh vật sau khi chết có thể được chôn vùi, bảo tồn và biến đổi
+      để trở thành dấu tích hóa thạch.
+    </p>
+  </div>
+
+  <div class="edu-card">
+    <div class="num">03</div>
+
+    <h3>
+      Vì sao hình xoắn lại quan trọng?
+    </h3>
+
+    <p>
+      Hình dạng vỏ là một trong những đặc điểm giúp nhận biết Ammonite
+      giữa rất nhiều loại hóa thạch khác nhau.
+    </p>
+  </div>
+
+  <div class="edu-card">
+    <div class="num">04</div>
+
+    <h3>
+      Vì sao cần bảo vệ hóa thạch?
+    </h3>
+
+    <p>
+      Một mẫu vật mất đi có thể đồng nghĩa với việc mất đi một phần dữ
+      liệu khoa học không thể phục hồi.
+    </p>
+  </div>
+
+</div>
+```
+
+  </div>
+</section>
+
+<!-- =========================
+     FINAL / SOURCES
+========================= -->
+
+<section class="final" id="nguon">
+
+  <div class="final-inner">
+
+```
+<small>
+  THẾ GIỚI CÚC ĐÁ · BẮC THỦY
+</small>
+
+<h2>
+  Đừng chỉ nhìn một vòng xoắn.
+  Hãy nhìn cả biển cổ phía sau nó.
+</h2>
+
+<p>
+  Một hóa thạch Cúc đá không chỉ cho thấy hình dạng của một sinh vật đã
+  biến mất. Nó còn gợi mở câu chuyện về môi trường biển, lịch sử địa chất
+  và sự thay đổi của Trái đất qua thời gian cực dài.
+</p>
+
+<div class="source-box">
+
+  <strong>
+    Nguồn thông tin chính:
+  </strong>
+
+  <p>
+    <a href="https://langsongeopark.com.vn/" target="_blank">
+      Công viên địa chất Lạng Sơn
+    </a>
+  </p>
+
+  <p>
+    <a href="https://sonv.langson.gov.vn/" target="_blank">
+      Sở Văn hóa, Thể thao và Du lịch Lạng Sơn
+    </a>
+  </p>
+
+  <p>
+    <a
+      href="https://xaydungchinhsach.chinhphu.vn/toan-van-nghi-quyet-so-1672-nq-ubtvqh15-sap-xep-cac-dvhc-cap-xa-cua-tinh-lang-son-nam-2025-119250616214533435.htm"
+      target="_blank"
+    >
+      Nghị quyết 1672/NQ-UBTVQH15
+    </a>
+  </p>
+
+  <p>
+    Ảnh tư liệu hóa thạch Bắc Thủy:
+    <br>
+    Tri thức & Cuộc sống / Baomoi.
+  </p>
+
+  <p>
+    Ảnh minh họa:
+    <br>
+    Wikimedia Commons.
+  </p>
+
+</div>
+```
+
+  </div>
+</section>
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  <div class="footer-inner">
+
+```
+<div>
+
+  <div class="footer-brand">
+    LẠNG SƠN / 09
+  </div>
+
+  <div class="footer-title">
+    THẾ GIỚI CÚC ĐÁ
+  </div>
+
+  <p class="footer-text">
+    Điểm di sản hóa thạch Ammonite tại khu vực Bắc Thủy cũ, nay thuộc
+    xã Nhân Lý, tỉnh Lạng Sơn.
+  </p>
+
+</div>
+
+<div class="footer-sources">
+
+  <div>
+    <span>Tài liệu chính</span>
+
+    <a
+      href="https://sonv.langson.gov.vn/upload/105373/20240702/Danh_sach_tuyen_va_diem__hoan_thien_ha_tang_don_Doan_chuyen_gia__e2bff.pdf"
+      target="_blank"
+    >
+      Danh sách tuyến và điểm – Công viên địa chất Lạng Sơn
+    </a>
+  </div>
+
+  <div>
+    <span>Tài liệu diễn giải</span>
+
+    <a
+      href="https://sonv.langson.gov.vn/upload/105373/20240618/4__THUYET_MINH_TUYEN_DIEM_bf94a.pdf"
+      target="_blank"
+    >
+      Thuyết minh tuyến điểm
+    </a>
+  </div>
+
+  <div>
+    <span>Wikimedia Commons</span>
+
+    <a
+      href="https://commons.wikimedia.org/wiki/File:Ammonite_section.JPG"
+      target="_blank"
+    >
+      Ammonite section
+    </a>
+  </div>
+
+  <div>
+    <span>Wikimedia Commons</span>
+
+    <a
+      href="https://commons.wikimedia.org/wiki/File:Ammonite_Jeletzkytes.jpg"
+      target="_blank"
+    >
+      Ammonite Jeletzkytes
+    </a>
+  </div>
+
+</div>
+```
+
+  </div>
+
+</footer>
+
+<script>
+
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+const revealItems = document.querySelectorAll(
+  ".overview-card, .real-text, .real-img, .story-panel, .story-side, " +
+  ".time-item, .anatomy-art, .anatomy-text, .gallery-large, .gallery-card, " +
+  ".gallery-note, .value-card, .edu-card, .media-feature"
+);
+
+const revealObserver = new IntersectionObserver(
+  (entries, observer) => {
+
+    entries.forEach(entry => {
+
+      if(entry.isIntersecting){
+
+        entry.target.classList.add("show");
+
+        observer.unobserve(entry.target);
+
+      }
+
+    });
+
+  },
+  {
+    threshold:.12
+  }
+);
+
+revealItems.forEach(item => {
+  revealObserver.observe(item);
+});
+
+
+/* =========================
+   ACTIVE SECTION NAV
+========================= */
+
+const navLinks = document.querySelectorAll(".section-link");
+
+const sections = [...navLinks]
+  .map(link => document.querySelector(link.getAttribute("href")))
+  .filter(Boolean);
+
+const sectionObserver = new IntersectionObserver(
+  entries => {
+
+    entries.forEach(entry => {
+
+      if(entry.isIntersecting){
+
+        navLinks.forEach(link => {
+
+          link.classList.toggle(
+            "active",
+            link.getAttribute("href") === "#" + entry.target.id
+          );
+
+        });
+
+      }
+
+    });
+
+  },
+  {
+    rootMargin:"-135px 0px -55% 0px",
+    threshold:0
+  }
+);
+
+sections.forEach(section => {
+  sectionObserver.observe(section);
+});
+
+
+/* =========================
+   SMOOTH NAV CLICK
+========================= */
+
+navLinks.forEach(link => {
+
+  link.addEventListener("click", event => {
+
+    const target = document.querySelector(
+      link.getAttribute("href")
+    );
+
+    if(!target) return;
+
+    event.preventDefault();
+
+    const navHeight =
+      window.innerWidth <= 650 ? 120 : 140;
+
+    const top =
+      target.getBoundingClientRect().top +
+      window.scrollY -
+      navHeight;
+
+    window.scrollTo({
+      top,
+      behavior:"smooth"
+    });
+
+  });
+
+});
+
+</script>
+
+</body>
+</html>

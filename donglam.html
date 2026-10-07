@@ -1,0 +1,2717 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Thảo nguyên Đồng Lâm | Lạng Sơn</title>
+
+<meta name="description"
+content="Khám phá Thảo nguyên Đồng Lâm, xã Hữu Liên, tỉnh Lạng Sơn - danh lam thắng cảnh cấp tỉnh với đồng cỏ, núi đá vôi, mặt nước, đàn ngựa và những trải nghiệm du lịch sinh thái đặc sắc.">
+
+<style>
+:root{
+  --green:#1f684d;
+  --green-dark:#103c2e;
+  --green-deep:#09291f;
+  --green-light:#e8f4e8;
+  --water:#4b9eaa;
+  --water-light:#e6f5f5;
+  --cream:#fffaf0;
+  --gold:#d4a747;
+  --text:#29463b;
+  --muted:#6d8078;
+  --white:#fff;
+  --line:#e4ece6;
+  --shadow:0 20px 60px rgba(20,65,45,.12);
+  --radius:30px;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:90px;
+}
+
+body{
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  color:var(--text);
+  background:#f7faf7;
+  line-height:1.75;
+}
+
+img{
+  width:100%;
+  display:block;
+  object-fit:cover;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+button{
+  font:inherit;
+}
+
+
+/* =====================================================
+   NAVIGATION
+===================================================== */
+
+.nav{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1000;
+  padding:15px 4%;
+  transition:.3s;
+}
+
+.nav.scrolled{
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(18px);
+  box-shadow:0 8px 30px rgba(0,0,0,.08);
+}
+
+.nav-inner{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo{
+  color:#fff;
+  font-size:16px;
+  font-weight:950;
+  letter-spacing:.5px;
+  text-shadow:0 2px 10px rgba(0,0,0,.35);
+}
+
+.nav.scrolled .logo{
+  color:var(--green-dark);
+  text-shadow:none;
+}
+
+.nav-links{
+  display:flex;
+  gap:5px;
+}
+
+.nav-links a{
+  color:#fff;
+  padding:8px 12px;
+  border-radius:50px;
+  font-size:12px;
+  font-weight:800;
+  transition:.25s;
+}
+
+.nav.scrolled .nav-links a{
+  color:var(--green-dark);
+}
+
+.nav-links a:hover{
+  background:rgba(255,255,255,.18);
+}
+
+.nav.scrolled .nav-links a:hover{
+  background:var(--green-light);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+  min-height:100vh;
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(5,25,18,.04) 10%,
+      rgba(5,35,25,.18) 42%,
+      rgba(4,28,20,.93) 100%
+    ),
+    url("https://songv.langson.gov.vn/upload/105396/fck/snvu/2026_03_23_08_12_451.jpg");
+
+  background-size:cover;
+  background-position:center;
+}
+
+.hero-content{
+  width:min(1200px,92%);
+  margin:auto;
+  padding:150px 0 105px;
+  position:relative;
+  z-index:2;
+  color:white;
+}
+
+.hero-label{
+  display:inline-flex;
+  padding:8px 15px;
+  border:1px solid rgba(255,255,255,.4);
+  background:rgba(255,255,255,.1);
+  backdrop-filter:blur(10px);
+  border-radius:50px;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+}
+
+.hero h1{
+  margin-top:20px;
+  font-size:clamp(54px,9vw,108px);
+  line-height:.88;
+  letter-spacing:-5px;
+}
+
+.hero h1 span{
+  display:block;
+  color:#d9efb8;
+}
+
+.hero-description{
+  max-width:700px;
+  margin-top:27px;
+  font-size:18px;
+  color:rgba(255,255,255,.9);
+}
+
+.hero-buttons{
+  margin-top:30px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:13px 20px;
+  border-radius:50px;
+  font-size:13px;
+  font-weight:900;
+  transition:.25s;
+}
+
+.btn-primary{
+  color:var(--green-dark);
+  background:#fff;
+}
+
+.btn-primary:hover{
+  transform:translateY(-3px);
+}
+
+.btn-glass{
+  color:#fff;
+  border:1px solid rgba(255,255,255,.45);
+  background:rgba(255,255,255,.1);
+  backdrop-filter:blur(10px);
+}
+
+.btn-glass:hover{
+  background:rgba(255,255,255,.2);
+}
+
+
+/* =====================================================
+   COMMON
+===================================================== */
+
+.container{
+  width:min(1120px,92%);
+  margin:auto;
+}
+
+section{
+  padding:95px 0;
+}
+
+.label{
+  color:var(--green);
+  font-size:11px;
+  font-weight:950;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.title{
+  margin-top:10px;
+  color:var(--green-dark);
+  font-size:clamp(36px,5vw,62px);
+  line-height:1.02;
+  letter-spacing:-2.8px;
+}
+
+.text{
+  max-width:740px;
+  margin-top:18px;
+  color:var(--muted);
+}
+
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.stats-wrap{
+  position:relative;
+  z-index:10;
+  margin-top:-35px;
+}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  background:white;
+  border-radius:30px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+
+.stat{
+  padding:27px 15px;
+  text-align:center;
+  border-right:1px solid var(--line);
+}
+
+.stat:last-child{
+  border-right:0;
+}
+
+.stat strong{
+  display:block;
+  color:var(--green);
+  font-size:29px;
+  line-height:1.2;
+}
+
+.stat span{
+  display:block;
+  margin-top:5px;
+  color:var(--muted);
+  font-size:12px;
+}
+
+
+/* =====================================================
+   INTRO
+===================================================== */
+
+.intro{
+  background:#f7faf7;
+}
+
+.intro-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+
+.intro-photo{
+  height:570px;
+  border-radius:35px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+
+.intro-photo img{
+  height:100%;
+}
+
+.quote{
+  margin-top:28px;
+  padding:22px 24px;
+  border-left:5px solid var(--gold);
+  border-radius:0 20px 20px 0;
+  background:#fff;
+  box-shadow:0 8px 25px rgba(0,0,0,.05);
+  color:var(--green-dark);
+  font-weight:800;
+}
+
+
+/* =====================================================
+   LANDSCAPE
+===================================================== */
+
+.landscape{
+  background:var(--green-light);
+}
+
+.landscape-grid{
+  margin-top:45px;
+  display:grid;
+  grid-template-columns:1.25fr .75fr;
+  grid-template-rows:270px 270px;
+  gap:18px;
+}
+
+.land-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:28px;
+}
+
+.land-card.big{
+  grid-row:span 2;
+}
+
+.land-card img{
+  height:100%;
+  transition:.6s;
+}
+
+.land-card:hover img{
+  transform:scale(1.05);
+}
+
+.land-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    transparent 30%,
+    rgba(0,0,0,.78)
+  );
+}
+
+.land-info{
+  position:absolute;
+  z-index:2;
+  left:22px;
+  right:20px;
+  bottom:20px;
+  color:#fff;
+}
+
+.land-info h3{
+  font-size:25px;
+  line-height:1.1;
+}
+
+.land-info p{
+  margin-top:5px;
+  font-size:12px;
+  color:rgba(255,255,255,.88);
+}
+
+
+/* =====================================================
+   FIVE ELEMENTS
+===================================================== */
+
+.elements{
+  margin-top:30px;
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:13px;
+}
+
+.element{
+  padding:22px 16px;
+  background:white;
+  border-radius:22px;
+  box-shadow:0 7px 25px rgba(20,60,45,.07);
+}
+
+.element-icon{
+  font-size:29px;
+}
+
+.element h3{
+  margin-top:8px;
+  color:var(--green-dark);
+  font-size:16px;
+}
+
+.element p{
+  margin-top:4px;
+  color:var(--muted);
+  font-size:12px;
+}
+
+
+/* =====================================================
+   TWO SEASONS
+===================================================== */
+
+.seasons{
+  color:white;
+  background:var(--green-dark);
+}
+
+.seasons .label{
+  color:#c5e8b7;
+}
+
+.seasons .title{
+  color:white;
+}
+
+.seasons .text{
+  color:#cbd9d3;
+}
+
+.season-grid{
+  margin-top:45px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.season-card{
+  min-height:560px;
+  position:relative;
+  overflow:hidden;
+  border-radius:32px;
+}
+
+.season-card img{
+  height:100%;
+  transition:.7s;
+}
+
+.season-card:hover img{
+  transform:scale(1.04);
+}
+
+.season-card::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    transparent 25%,
+    rgba(0,0,0,.86)
+  );
+}
+
+.season-info{
+  position:absolute;
+  z-index:2;
+  left:28px;
+  right:28px;
+  bottom:27px;
+}
+
+.season-tag{
+  display:inline-block;
+  padding:6px 11px;
+  border-radius:50px;
+  background:rgba(255,255,255,.15);
+  backdrop-filter:blur(8px);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:1px;
+}
+
+.season-info h3{
+  margin-top:12px;
+  font-size:37px;
+  line-height:1;
+}
+
+.season-info p{
+  margin-top:9px;
+  color:rgba(255,255,255,.88);
+  font-size:14px;
+}
+
+
+/* =====================================================
+   WATER CYCLE
+===================================================== */
+
+.cycle-section{
+  background:#f8fcfa;
+}
+
+.cycle{
+  margin-top:45px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+.cycle-card{
+  text-align:center;
+  padding:20px 14px;
+}
+
+.cycle-circle{
+  width:105px;
+  height:105px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:white;
+  border:7px solid #e0eee6;
+  font-size:35px;
+  box-shadow:0 8px 25px rgba(20,60,45,.08);
+}
+
+.cycle-card h3{
+  margin-top:16px;
+  color:var(--green);
+  font-size:18px;
+}
+
+.cycle-card p{
+  margin-top:5px;
+  color:var(--muted);
+  font-size:12px;
+}
+
+
+/* =====================================================
+   EXPERIENCE
+===================================================== */
+
+.experience{
+  background:white;
+}
+
+.experience-grid{
+  margin-top:45px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.experience-card{
+  overflow:hidden;
+  border:1px solid var(--line);
+  border-radius:25px;
+  background:#fff;
+  box-shadow:0 9px 30px rgba(20,60,45,.07);
+}
+
+.experience-card img{
+  height:235px;
+}
+
+.experience-body{
+  padding:21px;
+}
+
+.experience-body h3{
+  color:var(--green-dark);
+  font-size:20px;
+}
+
+.experience-body p{
+  margin-top:6px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+
+/* =====================================================
+   CULTURE
+===================================================== */
+
+.culture{
+  background:var(--cream);
+}
+
+.culture-grid{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:55px;
+  align-items:center;
+}
+
+.culture-photo{
+  height:590px;
+  border-radius:32px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+
+.culture-photo img{
+  height:100%;
+}
+
+.culture-list{
+  margin-top:28px;
+  display:grid;
+  gap:11px;
+}
+
+.culture-item{
+  display:flex;
+  gap:13px;
+  padding:15px;
+  border-radius:18px;
+  background:white;
+}
+
+.culture-icon{
+  font-size:25px;
+}
+
+.culture-item strong{
+  color:var(--green-dark);
+}
+
+.culture-item p{
+  margin-top:2px;
+  color:var(--muted);
+  font-size:12px;
+}
+
+
+/* =====================================================
+   HISTORY
+===================================================== */
+
+.history{
+  background:#f7faf7;
+}
+
+.timeline{
+  max-width:850px;
+  margin:45px auto 0;
+  position:relative;
+}
+
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:18px;
+  top:0;
+  bottom:0;
+  width:3px;
+  background:#dbe8e0;
+}
+
+.timeline-item{
+  position:relative;
+  padding-left:65px;
+  margin-bottom:38px;
+}
+
+.dot{
+  position:absolute;
+  left:0;
+  top:2px;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  background:var(--green);
+  border:7px solid #dceee3;
+}
+
+.year{
+  color:var(--green);
+  font-weight:950;
+}
+
+.timeline-item h3{
+  margin-top:3px;
+  color:var(--green-dark);
+  font-size:21px;
+}
+
+.timeline-item p{
+  margin-top:4px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+
+/* =====================================================
+   UNESCO
+===================================================== */
+
+.unesco{
+  position:relative;
+  overflow:hidden;
+  color:white;
+  background:
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(125,190,135,.22),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #103e2f,
+      #1e684d
+    );
+}
+
+.unesco-content{
+  max-width:850px;
+}
+
+.unesco .label{
+  color:#c7e9b9;
+}
+
+.unesco .title{
+  color:#fff;
+}
+
+.unesco .text{
+  color:#d0ded8;
+}
+
+.badge{
+  display:inline-flex;
+  margin-top:25px;
+  padding:11px 16px;
+  border-radius:50px;
+  border:1px solid rgba(255,255,255,.35);
+  background:rgba(255,255,255,.1);
+  font-size:12px;
+  font-weight:900;
+}
+
+
+/* =====================================================
+   INFORMATION
+===================================================== */
+
+.info{
+  background:#edf6ef;
+}
+
+.info-table{
+  margin-top:40px;
+  background:white;
+  border-radius:28px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+
+.info-row{
+  display:grid;
+  grid-template-columns:240px 1fr;
+  border-bottom:1px solid var(--line);
+}
+
+.info-row:last-child{
+  border-bottom:0;
+}
+
+.info-key{
+  padding:18px 23px;
+  color:var(--green);
+  background:#f5faf6;
+  font-weight:900;
+}
+
+.info-value{
+  padding:18px 23px;
+}
+
+
+/* =====================================================
+   GALLERY
+===================================================== */
+
+.gallery-section{
+  background:#f7faf7;
+}
+
+.gallery{
+  margin-top:45px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-auto-rows:220px;
+  gap:13px;
+}
+
+.gallery-item{
+  position:relative;
+  overflow:hidden;
+  border-radius:20px;
+}
+
+.gallery-item.big{
+  grid-column:span 2;
+  grid-row:span 2;
+}
+
+.gallery-item.wide{
+  grid-column:span 2;
+}
+
+.gallery-item img{
+  height:100%;
+  transition:.6s;
+}
+
+.gallery-item:hover img{
+  transform:scale(1.06);
+}
+
+.gallery-item::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    transparent 55%,
+    rgba(0,0,0,.65)
+  );
+}
+
+.caption{
+  position:absolute;
+  z-index:2;
+  left:14px;
+  bottom:12px;
+  color:white;
+  font-size:12px;
+  font-weight:850;
+}
+
+
+/* =====================================================
+   SOURCES
+===================================================== */
+
+.sources{
+  background:var(--green-deep);
+  color:#d3e2db;
+}
+
+.sources .label{
+  color:#c4e6b6;
+}
+
+.sources .title{
+  color:white;
+}
+
+.source-list{
+  margin-top:30px;
+  display:grid;
+  gap:12px;
+}
+
+.source{
+  padding:15px 18px;
+  border-radius:16px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.source a{
+  color:#bde5af;
+  word-break:break-word;
+}
+
+.source small{
+  display:block;
+  margin-top:3px;
+  color:#91aaa0;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+  background:#061912;
+  color:#aebfb8;
+  padding:30px 5%;
+}
+
+.footer-inner{
+  max-width:1120px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.footer-title{
+  color:#fff;
+  font-weight:950;
+}
+
+.footer-small{
+  margin-top:3px;
+  font-size:11px;
+}
+
+.footer-links{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+.footer-links a{
+  padding:8px 12px;
+  border-radius:50px;
+  background:rgba(255,255,255,.07);
+  font-size:11px;
+}
+
+.footer-links a:hover{
+  background:rgba(255,255,255,.14);
+}
+
+
+/* =====================================================
+   TOP
+===================================================== */
+
+.top{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:47px;
+  height:47px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  color:white;
+  background:var(--green);
+  box-shadow:0 10px 25px rgba(0,0,0,.2);
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(12px);
+  transition:.3s;
+  z-index:999;
+}
+
+.top.show{
+  opacity:1;
+  visibility:visible;
+  transform:none;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:900px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .stats{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .stat:nth-child(2){
+    border-right:0;
+  }
+
+  .intro-grid,
+  .culture-grid{
+    grid-template-columns:1fr;
+  }
+
+  .intro-photo,
+  .culture-photo{
+    height:430px;
+  }
+
+  .elements{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .season-grid{
+    grid-template-columns:1fr;
+  }
+
+  .season-card{
+    min-height:460px;
+  }
+
+  .cycle{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .experience-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .gallery{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .gallery-item.big{
+    grid-column:span 2;
+    grid-row:span 1;
+  }
+
+  .gallery-item.wide{
+    grid-column:span 2;
+  }
+}
+
+
+@media(max-width:600px){
+
+  section{
+    padding:70px 0;
+  }
+
+  .hero-content{
+    padding:130px 0 85px;
+  }
+
+  .hero h1{
+    font-size:54px;
+    letter-spacing:-3px;
+  }
+
+  .hero-description{
+    font-size:15px;
+  }
+
+  .landscape-grid{
+    grid-template-columns:1fr;
+    grid-template-rows:300px 230px 230px;
+  }
+
+  .land-card.big{
+    grid-row:auto;
+  }
+
+  .elements{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .cycle{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .experience-grid{
+    grid-template-columns:1fr;
+  }
+
+  .gallery{
+    grid-auto-rows:170px;
+  }
+
+  .info-row{
+    grid-template-columns:1fr;
+  }
+
+  .info-key{
+    padding-bottom:5px;
+  }
+
+  .info-value{
+    padding-top:5px;
+  }
+
+  .footer-inner{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     NAV
+===================================================== -->
+
+<header class="nav" id="nav">
+
+  <div class="nav-inner">
+
+    <a href="./danhlamthangcanh.html" class="logo">
+      🌿 LẠNG SƠN
+    </a>
+
+    <nav class="nav-links">
+      <a href="./danhlamthangcanh.html">Trang chủ</a>
+      <a href="#tong-quan">Tổng quan</a>
+      <a href="#canh-quan">Cảnh quan</a>
+      <a href="#mua">Mùa nước</a>
+      <a href="#trai-nghiem">Trải nghiệm</a>
+      <a href="#van-hoa">Văn hóa</a>
+    </nav>
+
+  </div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="hero-label">
+      🌿 Hữu Liên · Lạng Sơn
+    </div>
+
+    <h1>
+      THẢO NGUYÊN
+      <span>ĐỒNG LÂM</span>
+    </h1>
+
+    <p class="hero-description">
+      Một danh lam thắng cảnh rộng hơn 100 ha,
+      nơi đồng cỏ, núi đá vôi, mặt nước và đàn ngựa
+      tạo nên một trong những cảnh quan đặc trưng
+      của Hữu Liên.
+    </p>
+
+    <div class="hero-buttons">
+
+      <a href="#tong-quan" class="btn btn-primary">
+        Khám phá Đồng Lâm ↓
+      </a>
+
+      <a href="./danhlamthangcanh.html" class="btn btn-glass">
+        ← Về trang chủ
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     STATS
+===================================================== -->
+
+<div class="container stats-wrap">
+
+  <div class="stats">
+
+    <div class="stat">
+      <strong>100+ ha</strong>
+      <span>Diện tích</span>
+    </div>
+
+    <div class="stat">
+      <strong>1,5 km</strong>
+      <span>Chiều dài</span>
+    </div>
+
+    <div class="stat">
+      <strong>2021</strong>
+      <span>Xếp hạng cấp tỉnh</span>
+    </div>
+
+    <div class="stat">
+      <strong>🐎</strong>
+      <span>Đàn ngựa đặc trưng</span>
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =====================================================
+     01 TỔNG QUAN
+===================================================== -->
+
+<section class="intro" id="tong-quan">
+
+  <div class="container intro-grid">
+
+    <div class="intro-photo">
+
+      <img
+        src="https://songv.langson.gov.vn/upload/105396/fck/snvu/2026_03_23_08_12_451.jpg"
+        alt="Đàn ngựa chạy qua vùng nước tại Thảo nguyên Đồng Lâm">
+
+    </div>
+
+    <div>
+
+      <div class="label">
+        01 · Tổng quan
+      </div>
+
+      <h2 class="title">
+        Nơi đồng cỏ
+        gặp núi đá và nước.
+      </h2>
+
+      <p class="text">
+        Thảo nguyên Đồng Lâm nằm tại thôn Làng Que,
+        xã Hữu Liên, tỉnh Lạng Sơn. Theo Cổng thông tin
+        Du lịch Lạng Sơn, khu vực rộng khoảng 100 ha,
+        trải dài khoảng 1,5 km, có đồng cỏ, thảm thực vật,
+        vách núi đá, hồ nước, thác và suối.
+      </p>
+
+      <p class="text">
+        Một nét đặc trưng nổi bật của Đồng Lâm là những
+        đàn ngựa được chăn thả trong không gian thảo nguyên.
+        Người dân địa phương cũng phát triển các trải nghiệm
+        gắn với đàn ngựa.
+      </p>
+
+      <div class="quote">
+        “Đồng cỏ + núi đá + mặt nước + đàn ngựa”
+        tạo nên diện mạo rất riêng của Đồng Lâm.
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     02 CẢNH QUAN
+===================================================== -->
+
+<section class="landscape" id="canh-quan">
+
+  <div class="container">
+
+    <div class="label">
+      02 · Cảnh quan
+    </div>
+
+    <h2 class="title">
+      Bốn hình ảnh
+      làm nên Đồng Lâm.
+    </h2>
+
+    <p class="text">
+      Không cần những công trình nhân tạo lớn,
+      chính cảnh quan tự nhiên và đàn ngựa đã tạo
+      nên sức hút của danh thắng.
+    </p>
+
+    <div class="landscape-grid">
+
+      <article class="land-card big">
+
+        <img
+          src="https://songv.langson.gov.vn/upload/105396/fck/snvu/2026_03_23_08_12_451.jpg"
+          alt="Đàn ngựa chạy qua vùng nước tại Đồng Lâm">
+
+        <div class="land-info">
+
+          <h3>
+            🐎 Đàn ngựa
+          </h3>
+
+          <p>
+            Đàn ngựa là hình ảnh đặc trưng nổi bật
+            của thảo nguyên Đồng Lâm.
+          </p>
+
+        </div>
+
+      </article>
+
+      <article class="land-card">
+
+        <img
+          src="https://songv.langson.gov.vn/upload/105396/fck/snvu/2026_03_23_08_12_453.jpg"
+          alt="Du khách cưỡi ngựa tại Đồng Lâm">
+
+        <div class="land-info">
+
+          <h3>
+            🏇 Trải nghiệm
+          </h3>
+
+          <p>
+            Du khách có thể trải nghiệm cưỡi ngựa
+            trên thảo nguyên.
+          </p>
+
+        </div>
+
+      </article>
+
+      <article class="land-card">
+
+        <img
+          src="https://songv.langson.gov.vn/upload/105396/fck/snvu/2026_03_23_08_12_455.jpg"
+          alt="Du khách cưỡi ngựa giữa thảo nguyên Đồng Lâm">
+
+        <div class="land-info">
+
+          <h3>
+            ⛰️ Núi đá
+          </h3>
+
+          <p>
+            Những dãy núi đá và thảm thực vật
+            bao quanh không gian thảo nguyên.
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+    <div class="elements">
+
+      <div class="element">
+        <div class="element-icon">🌱</div>
+        <h3>Đồng cỏ</h3>
+        <p>
+          Những bãi cỏ rộng là thành phần cảnh quan
+          nổi bật của Đồng Lâm.
+        </p>
+      </div>
+
+      <div class="element">
+        <div class="element-icon">⛰️</div>
+        <h3>Núi đá</h3>
+        <p>
+          Thung lũng được bao quanh bởi địa hình
+          núi đá vôi.
+        </p>
+      </div>
+
+      <div class="element">
+        <div class="element-icon">💧</div>
+        <h3>Hồ & suối</h3>
+        <p>
+          Khu vực có hồ nước, suối và các vùng
+          nước thay đổi theo mùa.
+        </p>
+      </div>
+
+      <div class="element">
+        <div class="element-icon">🐎</div>
+        <h3>Đàn ngựa</h3>
+        <p>
+          Ngựa được chăn thả và trở thành một
+          hình ảnh đặc trưng của điểm đến.
+        </p>
+      </div>
+
+      <div class="element">
+        <div class="element-icon">🌳</div>
+        <h3>Thực vật</h3>
+        <p>
+          Thảm thực vật góp phần tạo nên
+          màu xanh của thung lũng.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     03 MÙA NƯỚC
+===================================================== -->
+
+<section class="seasons" id="mua">
+
+  <div class="container">
+
+    <div class="label">
+      03 · Cảnh quan theo mùa
+    </div>
+
+    <h2 class="title">
+      Đồng Lâm không
+      đứng yên một chỗ.
+    </h2>
+
+    <p class="text">
+      Mực nước thay đổi làm diện mạo khu vực thay đổi
+      rõ rệt. Vì vậy cùng một địa điểm có thể mang
+      đến những trải nghiệm rất khác nhau.
+    </p>
+
+    <div class="season-grid">
+
+      <article class="season-card">
+
+        <img
+          src="https://songv.langson.gov.vn/upload/105396/fck/snvu/2026_03_23_08_12_454.jpg"
+          alt="Du khách cưỡi ngựa trên bãi cỏ Đồng Lâm">
+
+        <div class="season-info">
+
+          <span class="season-tag">
+            🌱 MÙA NƯỚC CẠN
+          </span>
+
+          <h3>
+            Thảo nguyên xanh
+          </h3>
+
+          <p>
+            Khi nước rút, những khoảng đồng cỏ rộng
+            hiện rõ hơn, thuận lợi cho các hoạt động
+            tham quan, chụp ảnh và trải nghiệm ngoài trời.
+          </p>
+
+        </div>
+
+      </article>
+
+      <article class="season-card">
+
+        <img
+          src="https://songv.langson.gov.vn/upload/105396/fck/snvu/2026_03_23_08_12_451.jpg"
+          alt="Đàn ngựa chạy qua vùng nước tại Đồng Lâm">
+
+        <div class="season-info">
+
+          <span class="season-tag">
+            💧 KHI NƯỚC DÂNG
+          </span>
+
+          <h3>
+            Nước giữa thảo nguyên
+          </h3>
+
+          <p>
+            Những vùng thấp bị ngập tạo nên mặt nước
+            xen giữa đồng cỏ và núi đá, làm cảnh quan
+            trở nên khác biệt so với mùa cạn.
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     04 CHU KỲ TỰ NHIÊN
+===================================================== -->
+
+<section class="cycle-section">
+
+  <div class="container">
+
+    <div class="label">
+      04 · Chu kỳ tự nhiên
+    </div>
+
+    <h2 class="title">
+      Nước quyết định
+      diện mạo.
+    </h2>
+
+    <p class="text">
+      Không nên xem các tháng dưới đây là lịch cố định.
+      Mực nước Đồng Lâm phụ thuộc vào tình hình mưa
+      từng năm.
+    </p>
+
+    <div class="cycle">
+
+      <div class="cycle-card">
+
+        <div class="cycle-circle">
+          🌱
+        </div>
+
+        <h3>
+          Nước rút
+        </h3>
+
+        <p>
+          Đồng cỏ dần hiện ra.
+        </p>
+
+      </div>
+
+      <div class="cycle-card">
+
+        <div class="cycle-circle">
+          ☀️
+        </div>
+
+        <h3>
+          Mùa cạn
+        </h3>
+
+        <p>
+          Không gian thảo nguyên rộng hơn.
+        </p>
+
+      </div>
+
+      <div class="cycle-card">
+
+        <div class="cycle-circle">
+          🌧️
+        </div>
+
+        <h3>
+          Mưa tăng
+        </h3>
+
+        <p>
+          Các vùng thấp bắt đầu tích nước.
+        </p>
+
+      </div>
+
+      <div class="cycle-card">
+
+        <div class="cycle-circle">
+          💧
+        </div>
+
+        <h3>
+          Nước dâng
+        </h3>
+
+        <p>
+          Cảnh quan chuyển sang dạng hồ – thung lũng.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     05 TRẢI NGHIỆM
+===================================================== -->
+
+<section class="experience" id="trai-nghiem">
+
+  <div class="container">
+
+    <div class="label">
+      05 · Trải nghiệm
+    </div>
+
+    <h2 class="title">
+      Đến Đồng Lâm
+      để làm gì?
+    </h2>
+
+    <p class="text">
+      Các hoạt động du lịch ở Đồng Lâm chủ yếu gắn
+      với thiên nhiên, cảnh quan và đời sống địa phương.
+    </p>
+
+    <div class="experience-grid">
+
+      <article class="experience-card">
+
+        <img
+          src="https://songv.langson.gov.vn/upload/105396/fck/snvu/2026_03_23_08_12_453.jpg"
+          alt="Du khách cưỡi ngựa tại Thảo nguyên Đồng Lâm">
+
+        <div class="experience-body">
+
+          <h3>
+            🐎 Cưỡi ngựa
+          </h3>
+
+          <p>
+            Du khách có thể trải nghiệm cưỡi ngựa
+            trên không gian thảo nguyên. Đây là hoạt động
+            được nguồn chính thức của tỉnh Lạng Sơn ghi nhận.
+          </p>
+
+        </div>
+
+      </article>
+
+      <article class="experience-card">
+
+        <img
+          src="https://songv.langson.gov.vn/upload/105396/fck/snvu/2026_03_23_08_12_455.jpg"
+          alt="Du khách cưỡi ngựa giữa cảnh quan Đồng Lâm">
+
+        <div class="experience-body">
+
+          <h3>
+            📸 Chụp ảnh
+          </h3>
+
+          <p>
+            Núi đá, đồng cỏ, cây xanh và đàn ngựa
+            tạo nên những khung hình đặc trưng của Đồng Lâm.
+          </p>
+
+        </div>
+
+      </article>
+
+      <!-- ĐÃ ĐỔI ẢNH THỨ 3 PHẦN 5 -->
+
+      <article class="experience-card">
+
+        <img
+          src="https://tttctt.1cdn.vn/2025/01/01/thao-nguyen-dong-lam.jpg"
+          alt="Cảnh quan xanh và mặt nước tại Thảo nguyên Đồng Lâm">
+
+        <div class="experience-body">
+
+          <h3>
+            ⛺ Dã ngoại
+          </h3>
+
+          <p>
+            Không gian đồng cỏ và cảnh quan núi đá
+            phù hợp với các hoạt động dã ngoại, thư giãn
+            và khám phá thiên nhiên.
+          </p>
+
+        </div>
+
+      </article>
+
+      <article class="experience-card">
+
+        <img
+          src="https://cdn.nhandan.vn/images/22f099ca8bc7ae81aa2a8d3416a84bf8df9a3968fcc22848c158c84e98a7f6c3d176d0d3fc4cd8c6a909bf1d53c7702b7e0f9975d435438b89e98e0ded1392ec/102-2843.jpg.webp"
+          alt="Mùa nước nổi tại Thảo nguyên Đồng Lâm">
+
+        <div class="experience-body">
+
+          <h3>
+            🛶 Đi bè mùa nước
+          </h3>
+
+          <p>
+            Khi nước dâng, hoạt động đi bè trên mặt nước
+            là một trải nghiệm được ghi nhận tại Đồng Lâm.
+          </p>
+
+        </div>
+
+      </article>
+
+      <article class="experience-card">
+
+        <img
+          src="https://kenh14cdn.com/203336854389633024/2023/9/27/photo-9-1695781140606432029438.jpg"
+          alt="Toàn cảnh thung lũng Đồng Lâm">
+
+        <div class="experience-body">
+
+          <h3>
+            🥾 Khám phá thiên nhiên
+          </h3>
+
+          <p>
+            Quan sát đồng cỏ, núi đá, dòng nước
+            và hệ sinh thái trong thung lũng.
+          </p>
+
+        </div>
+
+      </article>
+
+      <article class="experience-card">
+
+        <img
+          src="https://songv.langson.gov.vn/upload/105396/fck/snvu/2026_03_23_08_12_454.jpg"
+          alt="Du khách cưỡi ngựa trên thảo nguyên">
+
+        <div class="experience-body">
+
+          <h3>
+            👘 Trải nghiệm địa phương
+          </h3>
+
+          <p>
+            Có thể kết hợp tham quan Đồng Lâm
+            với các sản phẩm du lịch cộng đồng tại Hữu Liên.
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     06 VĂN HÓA CỘNG ĐỒNG
+===================================================== -->
+
+<section class="culture" id="van-hoa">
+
+  <div class="container culture-grid">
+
+    <div class="culture-photo">
+
+      <img
+        src="https://songv.langson.gov.vn/upload/105396/fck/snvu/2026_03_23_08_12_455.jpg"
+        alt="Trải nghiệm cưỡi ngựa tại Đồng Lâm">
+
+    </div>
+
+    <div>
+
+      <div class="label">
+        06 · Cộng đồng
+      </div>
+
+      <h2 class="title">
+        Cảnh quan
+        gắn với con người.
+      </h2>
+
+      <p class="text">
+        Đồng Lâm không chỉ là một cảnh quan tự nhiên.
+        Du lịch tại Hữu Liên còn được phát triển theo
+        hướng cộng đồng, kết nối thiên nhiên với đời sống
+        và các sản phẩm địa phương.
+      </p>
+
+      <div class="culture-list">
+
+        <div class="culture-item">
+
+          <div class="culture-icon">
+            🏠
+          </div>
+
+          <div>
+            <strong>
+              Du lịch cộng đồng
+            </strong>
+
+            <p>
+              Hữu Liên phát triển mô hình du lịch cộng đồng
+              gắn với cảnh quan và đời sống địa phương.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="culture-item">
+
+          <div class="culture-icon">
+            🐎
+          </div>
+
+          <div>
+            <strong>
+              Nghề nuôi và huấn luyện ngựa
+            </strong>
+
+            <p>
+              Hoạt động cưỡi ngựa được phát triển từ
+              nghề chăn nuôi ngựa của người dân địa phương.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="culture-item">
+
+          <div class="culture-icon">
+            👘
+          </div>
+
+          <div>
+            <strong>
+              Trang phục truyền thống
+            </strong>
+
+            <p>
+              Dịch vụ cho thuê trang phục dân tộc
+              được phát triển để phục vụ nhu cầu chụp ảnh.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="culture-item">
+
+          <div class="culture-icon">
+            🍚
+          </div>
+
+          <div>
+            <strong>
+              Sản phẩm địa phương
+            </strong>
+
+            <p>
+              Du lịch cộng đồng kết nối cảnh quan
+              với sản phẩm và ẩm thực địa phương.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     07 DẤU MỐC
+===================================================== -->
+
+<section class="history">
+
+  <div class="container">
+
+    <div class="label">
+      07 · Dấu mốc
+    </div>
+
+    <h2 class="title">
+      Từ điểm đến
+      đến thương hiệu du lịch.
+    </h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+
+        <div class="dot"></div>
+
+        <div class="year">
+          2017
+        </div>
+
+        <h3>
+          Du lịch cộng đồng Hữu Liên bắt đầu được khai thác
+        </h3>
+
+        <p>
+          Theo thông tin của huyện Hữu Lũng, du lịch cộng đồng
+          xã Hữu Liên bắt đầu được đưa vào khai thác từ năm 2017,
+          khi du khách biết nhiều hơn đến thảo nguyên Đồng Lâm.
+        </p>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <div class="dot"></div>
+
+        <div class="year">
+          2020
+        </div>
+
+        <h3>
+          Làng du lịch cộng đồng Hữu Liên được công nhận
+        </h3>
+
+        <p>
+          Đây là một dấu mốc trong quá trình phát triển
+          mô hình du lịch cộng đồng của địa phương.
+        </p>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <div class="dot"></div>
+
+        <div class="year">
+          2021
+        </div>
+
+        <h3>
+          Đồng Lâm được xếp hạng danh lam thắng cảnh cấp tỉnh
+        </h3>
+
+        <p>
+          Quyết định số 2141/QĐ-UBND ngày 31/10/2021
+          xếp hạng Đồng Lâm là di tích danh lam thắng cảnh
+          cấp tỉnh của Lạng Sơn.
+        </p>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <div class="dot"></div>
+
+        <div class="year">
+          2024
+        </div>
+
+        <h3>
+          Lễ hội Thảo nguyên Đồng Lâm
+        </h3>
+
+        <p>
+          Lễ hội cấp huyện được tổ chức ngày 15–16/11/2024,
+          kết hợp tham quan Đồng Lâm, hồ Nong Dùng và
+          các hoạt động văn hóa, du lịch cộng đồng.
+        </p>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <div class="dot"></div>
+
+        <div class="year">
+          2025
+        </div>
+
+        <h3>
+          Lạng Sơn được UNESCO công nhận Công viên địa chất toàn cầu
+        </h3>
+
+        <p>
+          Lạng Sơn chính thức gia nhập Mạng lưới Công viên
+          địa chất toàn cầu UNESCO vào năm 2025.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     08 UNESCO
+===================================================== -->
+
+<section class="unesco">
+
+  <div class="container">
+
+    <div class="unesco-content">
+
+      <div class="label">
+        08 · Giá trị quốc tế
+      </div>
+
+      <h2 class="title">
+        Đồng Lâm trong
+        không gian Công viên
+        địa chất UNESCO Lạng Sơn.
+      </h2>
+
+      <p class="text">
+        Xã Hữu Liên nằm trong vùng Công viên địa chất
+        toàn cầu UNESCO Lạng Sơn. Danh hiệu UNESCO ghi nhận
+        những giá trị nổi bật về địa chất, sinh thái,
+        cảnh quan và văn hóa của tỉnh.
+      </p>
+
+      <div class="badge">
+        🌏 Lang Son UNESCO Global Geopark · 2025
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     09 GIÁ TRỊ
+===================================================== -->
+
+<section>
+
+  <div class="container">
+
+    <div class="label">
+      09 · Giá trị của Đồng Lâm
+    </div>
+
+    <h2 class="title">
+      Không chỉ là
+      một đồng cỏ.
+    </h2>
+
+    <div class="elements">
+
+      <div class="element">
+        <div class="element-icon">🏞️</div>
+        <h3>Cảnh quan</h3>
+        <p>
+          Đồng cỏ, núi đá và mặt nước tạo thành
+          cảnh quan đặc trưng.
+        </p>
+      </div>
+
+      <div class="element">
+        <div class="element-icon">🌳</div>
+        <h3>Sinh thái</h3>
+        <p>
+          Gắn với không gian tự nhiên của
+          Hữu Liên.
+        </p>
+      </div>
+
+      <div class="element">
+        <div class="element-icon">⛰️</div>
+        <h3>Địa chất</h3>
+        <p>
+          Nằm trong không gian địa hình đá vôi
+          đặc trưng của khu vực.
+        </p>
+      </div>
+
+      <div class="element">
+        <div class="element-icon">🏘️</div>
+        <h3>Cộng đồng</h3>
+        <p>
+          Du lịch gắn với người dân và
+          sản phẩm địa phương.
+        </p>
+      </div>
+
+      <div class="element">
+        <div class="element-icon">🌏</div>
+        <h3>UNESCO</h3>
+        <p>
+          Hữu Liên nằm trong vùng Công viên
+          địa chất toàn cầu UNESCO Lạng Sơn.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     10 THÔNG TIN NHANH
+===================================================== -->
+
+<section class="info">
+
+  <div class="container">
+
+    <div class="label">
+      10 · Thông tin cơ bản
+    </div>
+
+    <h2 class="title">
+      Đồng Lâm
+      trong vài dòng.
+    </h2>
+
+    <div class="info-table">
+
+      <div class="info-row">
+
+        <div class="info-key">
+          Tên địa danh
+        </div>
+
+        <div class="info-value">
+          Thảo nguyên Đồng Lâm; còn được gọi là
+          thung lũng Đồng Lâm.
+        </div>
+
+      </div>
+
+      <div class="info-row">
+
+        <div class="info-key">
+          Địa chỉ hiện nay
+        </div>
+
+        <div class="info-value">
+          Thôn Làng Que, xã Hữu Liên, tỉnh Lạng Sơn.
+        </div>
+
+      </div>
+
+      <div class="info-row">
+
+        <div class="info-key">
+          Diện tích
+        </div>
+
+        <div class="info-value">
+          Trên 100 ha theo hồ sơ xếp hạng và tài liệu
+          của UBND huyện Hữu Lũng.
+        </div>
+
+      </div>
+
+      <div class="info-row">
+
+        <div class="info-key">
+          Chiều dài
+        </div>
+
+        <div class="info-value">
+          Khoảng 1,5 km.
+        </div>
+
+      </div>
+
+      <div class="info-row">
+
+        <div class="info-key">
+          Địa hình
+        </div>
+
+        <div class="info-value">
+          Thung lũng và đồng cỏ nằm giữa các dãy
+          núi đá vôi.
+        </div>
+
+      </div>
+
+      <div class="info-row">
+
+        <div class="info-key">
+          Điểm nổi bật
+        </div>
+
+        <div class="info-value">
+          Đồng cỏ, núi đá, hồ, suối, thác nước
+          và đàn ngựa.
+        </div>
+
+      </div>
+
+      <div class="info-row">
+
+        <div class="info-key">
+          Xếp hạng
+        </div>
+
+        <div class="info-value">
+          Di tích danh lam thắng cảnh cấp tỉnh,
+          theo Quyết định 2141/QĐ-UBND ngày 31/10/2021.
+        </div>
+
+      </div>
+
+      <div class="info-row">
+
+        <div class="info-key">
+          UNESCO
+        </div>
+
+        <div class="info-value">
+          Hữu Liên nằm trong vùng Công viên địa chất
+          toàn cầu UNESCO Lạng Sơn.
+        </div>
+
+      </div>
+
+      <div class="info-row">
+
+        <div class="info-key">
+          Độ cao
+        </div>
+
+        <div class="info-value">
+          Chưa đưa số liệu độ cao cụ thể vì chưa tìm được
+          số liệu chính thức đủ chắc chắn để công bố.
+        </div>
+
+      </div>
+
+      <div class="info-row">
+
+        <div class="info-key">
+          Khoảng cách
+        </div>
+
+        <div class="info-value">
+          Không ghi một con số cố định vì khoảng cách
+          phụ thuộc điểm xuất phát và tuyến đường.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     11 GALLERY
+===================================================== -->
+
+<section class="gallery-section">
+
+  <div class="container">
+
+    <div class="label">
+      11 · Hình ảnh Đồng Lâm
+    </div>
+
+    <h2 class="title">
+      Những khoảnh khắc
+      đúng với Đồng Lâm.
+    </h2>
+
+    <p class="text">
+      Bộ ảnh dưới đây ưu tiên ảnh từ nguồn chính thức
+      của tỉnh Lạng Sơn; chú thích được viết đúng
+      với nội dung thực tế của từng ảnh.
+    </p>
+
+    <div class="gallery">
+
+      <figure class="gallery-item big">
+
+        <img
+          src="https://songv.langson.gov.vn/upload/105396/fck/snvu/2026_03_23_08_12_451.jpg"
+          alt="Đàn ngựa chạy qua vùng nước tại Đồng Lâm">
+
+        <figcaption class="caption">
+          Đàn ngựa chạy qua vùng nước · Ảnh: Sở Ngoại vụ Lạng Sơn
+        </figcaption>
+
+      </figure>
+
+      <figure class="gallery-item">
+
+        <img
+          src="https://songv.langson.gov.vn/upload/105396/fck/snvu/2026_03_23_08_12_453.jpg"
+          alt="Du khách cưỡi ngựa tại Đồng Lâm">
+
+        <figcaption class="caption">
+          Du khách trải nghiệm cưỡi ngựa
+        </figcaption>
+
+      </figure>
+
+      <figure class="gallery-item">
+
+        <img
+          src="https://songv.langson.gov.vn/upload/105396/fck/snvu/2026_03_23_08_12_454.jpg"
+          alt="Du khách cưỡi ngựa giữa đàn ngựa ở Đồng Lâm">
+
+        <figcaption class="caption">
+          Cưỡi ngựa giữa thảo nguyên
+        </figcaption>
+
+      </figure>
+
+      <figure class="gallery-item">
+
+        <img
+          src="https://songv.langson.gov.vn/upload/105396/fck/snvu/2026_03_23_08_12_455.jpg"
+          alt="Du khách cưỡi ngựa dưới tán cây tại Đồng Lâm">
+
+        <figcaption class="caption">
+          Cưỡi ngựa giữa không gian xanh
+        </figcaption>
+
+      </figure>
+
+      <figure class="gallery-item">
+
+        <img
+          src="https://photo-cms-vovworld.zadn.vn/w730/uploaded/vovworld/rdywf/2021_04_12/_nvh8375_sjtn.jpg"
+          alt="Cưỡi ngựa trên đồng cỏ Đồng Lâm">
+
+        <figcaption class="caption">
+          Cưỡi ngựa trên đồng cỏ
+        </figcaption>
+
+      </figure>
+
+      <figure class="gallery-item wide">
+
+        <img
+          src="https://cdn.nhandan.vn/images/22f099ca8bc7ae81aa2a8d3416a84bf8df9a3968fcc22848c158c84e98a7f6c3d176d0d3fc4cd8c6a909bf1d53c7702b7e0f9975d435438b89e98e0ded1392ec/102-2843.jpg.webp"
+          alt="Đồng Lâm mùa nước nổi">
+
+        <figcaption class="caption">
+          Đồng Lâm mùa nước nổi · Ảnh: Báo Nhân Dân
+        </figcaption>
+
+      </figure>
+
+      <figure class="gallery-item">
+
+        <img
+          src="https://cdnphoto.dantri.com.vn/6Cj1LN6VdleejQW27PYPxIN2jgA%3D/thumb_w/960/2020/11/08/1242067748171448724451226626666390682740484-n-1604800900359.jpg"
+          alt="Dòng nước giữa đồng cỏ và núi đá Đồng Lâm">
+
+        <figcaption class="caption">
+          Dòng nước giữa thảo nguyên
+        </figcaption>
+
+      </figure>
+
+      <figure class="gallery-item">
+
+        <img
+          src="https://kenh14cdn.com/203336854389633024/2023/9/27/photo-9-1695781140606432029438.jpg"
+          alt="Toàn cảnh thung lũng Đồng Lâm">
+
+        <figcaption class="caption">
+          Toàn cảnh thung lũng
+        </figcaption>
+
+      </figure>
+
+      <figure class="gallery-item">
+
+        <img
+          src="https://file3.qdnd.vn/data/images/14/2024/11/15/upload_2217/anh1721110936am.jpg"
+          alt="Đàn ngựa trên đồng cỏ Đồng Lâm">
+
+        <figcaption class="caption">
+          Đàn ngựa trên đồng cỏ
+        </figcaption>
+
+      </figure>
+
+      <figure class="gallery-item wide">
+
+        <img
+          src="https://tttctt.1cdn.vn/2025/01/01/thao-nguyen-dong-lam.jpg"
+          alt="Cảnh quan xanh và mặt nước tại Đồng Lâm">
+
+        <figcaption class="caption">
+          Đồng cỏ và mặt nước
+        </figcaption>
+
+      </figure>
+
+      <figure class="gallery-item">
+
+        <img
+          src="https://media.baodautu.vn/Images/2024/05/12/mceu_77447749371715522595197.jpg"
+          alt="Du khách trải nghiệm cưỡi ngựa tại Đồng Lâm">
+
+        <figcaption class="caption">
+          Trải nghiệm cưỡi ngựa
+        </figcaption>
+
+      </figure>
+
+      <figure class="gallery-item">
+
+        <img
+          src="https://cdnphoto.dantri.com.vn/q5_w-suCcdLw9FB6QdzVWmlr8vs%3D/zoom/1200_630/2020/11/08/tung-cao-1604800640545.jpg"
+          alt="Đồng cỏ và đàn ngựa Đồng Lâm">
+
+        <figcaption class="caption">
+          Đồng cỏ và đàn ngựa
+        </figcaption>
+
+      </figure>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     12 NGUỒN
+===================================================== -->
+
+<section class="sources">
+
+  <div class="container">
+
+    <div class="label">
+      12 · Nguồn tham khảo
+    </div>
+
+    <h2 class="title">
+      Thông tin được
+      kiểm chứng từ nguồn.
+    </h2>
+
+    <div class="source-list">
+
+      <div class="source">
+
+        <a
+          href="https://langsontourism.com.vn/vi/hlglsn11"
+          target="_blank"
+          rel="noopener">
+          Cổng thông tin Du lịch Lạng Sơn – Khu Thảo nguyên Đồng Lâm
+        </a>
+
+        <small>
+          Nguồn chính thức về diện tích, chiều dài, cảnh quan,
+          đàn ngựa và các hoạt động du lịch.
+        </small>
+
+      </div>
+
+      <div class="source">
+
+        <a
+          href="https://langson.gov.vn/upload/2006486/20240325/2024-_De_an_thu_phi_tham_quan_tai_di_tich_danh_lam_thang_canh_Dong_Lam__xa_Huu_Lien__huyen_Huu_Lung__tinh_Lang_Son_00c97.pdf"
+          target="_blank"
+          rel="noopener">
+          UBND huyện Hữu Lũng – Đề án thu phí tham quan tại di tích danh lam thắng cảnh Đồng Lâm
+        </a>
+
+        <small>
+          Nguồn hồ sơ chính thức về diện tích trên 100 ha,
+          địa điểm và việc xếp hạng danh lam thắng cảnh cấp tỉnh năm 2021.
+        </small>
+
+      </div>
+
+      <div class="source">
+
+        <a
+          href="https://songv.langson.gov.vn/tin-tuc-su-kien/ho-tro-doanh-nghiep/trai-nghiem-du-lich-doc-dao-tren-thao-nguyen-xanh-dong-lam.html"
+          target="_blank"
+          rel="noopener">
+          Sở Ngoại vụ Lạng Sơn – Trải nghiệm du lịch độc đáo trên thảo nguyên xanh Đồng Lâm
+        </a>
+
+        <small>
+          Nguồn chính thức về đàn ngựa, cưỡi ngựa,
+          chụp ảnh và định hướng du lịch bền vững tại Hữu Liên.
+        </small>
+
+      </div>
+
+      <div class="source">
+
+        <a
+          href="https://huulung.langson.gov.vn/tin-tuc-su-kien/van-hoa-xa-hoi/cong-bo-quyet-dinh-va-trao-giay-chung-nhan-nhan-hieu-du-lich-dong-lam-huu-lien-.html"
+          target="_blank"
+          rel="noopener">
+          UBND huyện Hữu Lũng – Nhãn hiệu “Du lịch Đồng Lâm – Hữu Liên”
+        </a>
+
+        <small>
+          Nguồn về quá trình phát triển du lịch cộng đồng Hữu Liên
+          từ năm 2017 và dấu mốc năm 2020.
+        </small>
+
+      </div>
+
+      <div class="source">
+
+        <a
+          href="https://huulung.langson.gov.vn/tin-tuc-su-kien/van-hoa-xa-hoi/huu-lung-tich-cuc-chuan-bi-cho-le-hoi-thao-nguyen-dong-lam.html"
+          target="_blank"
+          rel="noopener">
+          UBND huyện Hữu Lũng – Lễ hội Thảo nguyên Đồng Lâm 2024
+        </a>
+
+        <small>
+          Nguồn về lễ hội tổ chức ngày 15–16/11/2024.
+        </small>
+
+      </div>
+
+      <div class="source">
+
+        <a
+          href="https://www.unesco.org/en/articles/lang-son-becomes-viet-nams-fourth-unesco-global-geopark"
+          target="_blank"
+          rel="noopener">
+          UNESCO – Lang Son Becomes Viet Nam’s Fourth UNESCO Global Geopark
+        </a>
+
+        <small>
+          Nguồn quốc tế chính thức xác nhận Lạng Sơn được công nhận
+          là Công viên địa chất toàn cầu UNESCO năm 2025.
+        </small>
+
+      </div>
+
+      <div class="source">
+
+        <a
+          href="https://vov.gov.vn/thao-nguyen-dong-lam-mua-ngap-nuoc-dtnew-495964"
+          target="_blank"
+          rel="noopener">
+          VOV – Thảo nguyên Đồng Lâm mùa ngập nước
+        </a>
+
+        <small>
+          Nguồn bổ sung về cảnh quan và trải nghiệm mùa nước.
+        </small>
+
+      </div>
+
+      <div class="source">
+
+        <a
+          href="https://vnanet.vn/vi/anh/anh-thoi-su-trong-nuoc-1014/thao-nguyen-dong-lam--diem-du-lich-hap-dan-cua-xu-lang-6170834.html"
+          target="_blank"
+          rel="noopener">
+          Thông tấn xã Việt Nam – Thảo nguyên Đồng Lâm
+        </a>
+
+        <small>
+          Nguồn ảnh và thông tin bổ sung về cảnh quan,
+          đàn trâu, đàn ngựa và hoạt động du lịch.
+        </small>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div>
+
+      <div class="footer-title">
+        🌿 THẢO NGUYÊN ĐỒNG LÂM
+      </div>
+
+      <div class="footer-small">
+        Hữu Liên · Lạng Sơn
+      </div>
+
+    </div>
+
+    <div class="footer-links">
+
+      <a href="./danhlamthangcanh.html">
+        🏠 Trang chủ
+      </a>
+
+      <a href="./mauson.html">
+        ← Mẫu Sơn
+      </a>
+
+      <a href="./momam.html">
+        Suối Mỏ Mắm →
+      </a>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- =====================================================
+     BACK TO TOP
+===================================================== -->
+
+<a
+  href="#"
+  class="top"
+  id="top"
+  aria-label="Lên đầu trang">
+  ↑
+</a>
+
+
+<script>
+
+const nav = document.getElementById("nav");
+const topButton = document.getElementById("top");
+
+window.addEventListener("scroll", () => {
+
+  if(window.scrollY > 70){
+
+    nav.classList.add("scrolled");
+    topButton.classList.add("show");
+
+  }else{
+
+    nav.classList.remove("scrolled");
+    topButton.classList.remove("show");
+
+  }
+
+});
+
+
+topButton.addEventListener("click", (event) => {
+
+  event.preventDefault();
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+});
+
+</script>
+
+</body>
+</html>
+```

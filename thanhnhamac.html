@@ -1,0 +1,2382 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Thành Nhà Mạc | Lạng Sơn</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #f4efe7;
+            --paper: #fffaf3;
+            --paper-2: #eee4d5;
+            --ink: #2f2923;
+            --muted: #756b61;
+            --brown: #5e4030;
+            --brown-dark: #3c2b21;
+            --gold: #b78a48;
+            --line: rgba(94, 64, 48, .16);
+            --shadow: 0 18px 50px rgba(61, 42, 28, .10);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 132px;
+        }
+
+        body {
+            font-family: "Be Vietnam Pro", sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.75;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        /* =========================
+           MENU CHÍNH
+        ========================= */
+
+        .topbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            z-index: 1000;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 5vw;
+
+            background: rgba(255, 250, 243, .95);
+            backdrop-filter: blur(14px);
+
+            border-bottom: 1px solid var(--line);
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: .08em;
+            color: var(--brown-dark);
+        }
+
+        .main-link {
+            padding: 10px 19px;
+
+            border: 1px solid rgba(94, 64, 48, .25);
+            border-radius: 999px;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            color: var(--brown);
+            background: rgba(255,255,255,.6);
+
+            transition: .25s ease;
+        }
+
+        .main-link:hover {
+            background: var(--brown);
+            color: white;
+        }
+
+        /* =========================
+           MENU SECTION
+        ========================= */
+
+        .section-nav {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            height: 58px;
+            z-index: 999;
+
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            padding: 0 5vw;
+
+            background: rgba(247, 241, 232, .97);
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid var(--line);
+
+            overflow-x: auto;
+            white-space: nowrap;
+            scrollbar-width: none;
+        }
+
+        .section-nav::-webkit-scrollbar {
+            display: none;
+        }
+
+        .section-nav a {
+            flex: 0 0 auto;
+
+            padding: 7px 13px;
+
+            border-radius: 999px;
+
+            font-size: 12px;
+            font-weight: 600;
+
+            color: var(--muted);
+
+            transition: .25s ease;
+        }
+
+        .section-nav a:hover,
+        .section-nav a.active {
+            color: white;
+            background: var(--brown);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 720px;
+
+            padding: 190px 6vw 100px;
+
+            display: flex;
+            align-items: flex-end;
+
+            position: relative;
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(38, 27, 20, .90),
+                    rgba(38, 27, 20, .20) 65%,
+                    rgba(38, 27, 20, .05)
+                ),
+                url("https://cdn-petrotimes.mastercms.vn/stores/news_dataimages/nguyenhinh/052019/24/15/dien-mao-moi-cua-di-tich-thanh-nha-mac-thanh-pho-lang-son_6.jpg")
+                center / cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            color: white;
+        }
+
+        .eyebrow {
+            display: inline-block;
+
+            margin-bottom: 20px;
+
+            font-size: 12px;
+            font-weight: 800;
+
+            letter-spacing: .14em;
+            text-transform: uppercase;
+
+            color: #ead5ad;
+        }
+
+        .hero h1 {
+            font-family: "DM Serif Display", serif;
+
+            font-size: clamp(55px, 9vw, 110px);
+            line-height: .95;
+
+            font-weight: 400;
+            letter-spacing: -.03em;
+
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 730px;
+
+            font-size: 16px;
+
+            color: rgba(255,255,255,.88);
+        }
+
+        .hero-tags {
+            margin-top: 28px;
+
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .hero-tag {
+            padding: 8px 13px;
+
+            border: 1px solid rgba(255,255,255,.28);
+            border-radius: 999px;
+
+            background: rgba(255,255,255,.08);
+
+            backdrop-filter: blur(8px);
+
+            font-size: 12px;
+            color: rgba(255,255,255,.92);
+        }
+
+        /* =========================
+           KHUNG
+        ========================= */
+
+        main {
+            width: min(1180px, 90%);
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 105px 0;
+            scroll-margin-top: 130px;
+        }
+
+        .section-head {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 50px;
+
+            margin-bottom: 48px;
+        }
+
+        .section-number {
+            font-size: 13px;
+            font-weight: 800;
+
+            letter-spacing: .15em;
+            text-transform: uppercase;
+
+            color: var(--gold);
+        }
+
+        .section-head h2 {
+            font-family: "DM Serif Display", serif;
+
+            font-size: clamp(38px, 5vw, 62px);
+            line-height: 1.05;
+
+            font-weight: 400;
+
+            color: var(--brown-dark);
+
+            margin-bottom: 18px;
+        }
+
+        .section-head p {
+            max-width: 760px;
+            color: var(--muted);
+        }
+
+        /* =========================
+           TỔNG QUAN
+        ========================= */
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1.08fr .92fr;
+
+            gap: 55px;
+
+            align-items: start;
+        }
+
+        .overview-image {
+            position: relative;
+
+            min-height: 540px;
+
+            overflow: hidden;
+            border-radius: 26px;
+
+            background: #ddd1c1;
+
+            box-shadow: var(--shadow);
+        }
+
+        .overview-image img {
+            width: 100%;
+            height: 540px;
+
+            object-fit: cover;
+        }
+
+        .overview-source {
+            position: absolute;
+
+            left: 16px;
+            bottom: 16px;
+
+            padding: 7px 11px;
+
+            border-radius: 8px;
+
+            background: rgba(31,24,19,.72);
+            backdrop-filter: blur(8px);
+
+            color: rgba(255,255,255,.92);
+
+            font-size: 11px;
+            line-height: 1.4;
+        }
+
+        .overview-text h3 {
+            font-family: "DM Serif Display", serif;
+
+            font-size: 37px;
+            line-height: 1.1;
+            font-weight: 400;
+
+            color: var(--brown-dark);
+
+            margin-bottom: 20px;
+        }
+
+        .overview-text p {
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+        .highlight {
+            margin-top: 30px;
+
+            padding: 25px;
+
+            border-left: 3px solid var(--gold);
+
+            border-radius: 0 16px 16px 0;
+
+            background: var(--paper-2);
+        }
+
+        .highlight strong {
+            display: block;
+
+            color: var(--brown-dark);
+
+            margin-bottom: 7px;
+        }
+
+        /* =========================
+           THÔNG TIN NHANH
+        ========================= */
+
+        .quick-info {
+            margin-top: 55px;
+        }
+
+        .quick-title {
+            margin-bottom: 20px;
+
+            font-size: 13px;
+            font-weight: 800;
+
+            letter-spacing: .12em;
+            text-transform: uppercase;
+
+            color: var(--brown);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 14px;
+        }
+
+        .info-card {
+            padding: 22px;
+
+            border: 1px solid var(--line);
+            border-radius: 17px;
+
+            background: var(--paper);
+        }
+
+        .info-card small {
+            display: block;
+
+            margin-bottom: 5px;
+
+            font-size: 11px;
+
+            color: var(--muted);
+
+            text-transform: uppercase;
+            letter-spacing: .08em;
+        }
+
+        .info-card strong {
+            display: block;
+
+            font-size: 14px;
+            line-height: 1.45;
+
+            color: var(--brown-dark);
+        }
+
+        /* =========================
+           TIMELINE
+        ========================= */
+
+        .timeline {
+            position: relative;
+            padding-left: 38px;
+        }
+
+        .timeline::before {
+            content: "";
+
+            position: absolute;
+
+            left: 7px;
+            top: 5px;
+            bottom: 5px;
+
+            width: 1px;
+
+            background: var(--line);
+        }
+
+        .timeline-item {
+            position: relative;
+
+            padding-bottom: 38px;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: "";
+
+            position: absolute;
+
+            left: -36px;
+            top: 7px;
+
+            width: 14px;
+            height: 14px;
+
+            border-radius: 50%;
+
+            background: var(--bg);
+            border: 3px solid var(--gold);
+        }
+
+        .timeline-year {
+            margin-bottom: 5px;
+
+            font-size: 13px;
+            font-weight: 800;
+
+            color: var(--gold);
+        }
+
+        .timeline-item h3 {
+            margin-bottom: 8px;
+
+            font-size: 20px;
+
+            color: var(--brown-dark);
+        }
+
+        .timeline-item p {
+            color: var(--muted);
+        }
+
+        /* =========================
+           NỘI DUNG 2 CỘT
+        ========================= */
+
+        .content-grid {
+            display: grid;
+
+            grid-template-columns: .95fr 1.05fr;
+
+            gap: 55px;
+
+            align-items: center;
+        }
+
+        .content-grid.reverse {
+            grid-template-columns: 1.05fr .95fr;
+        }
+
+        .content-grid img {
+            width: 100%;
+            height: 420px;
+
+            object-fit: cover;
+
+            border-radius: 22px;
+
+            box-shadow: var(--shadow);
+        }
+
+        .content-title {
+            font-family: "DM Serif Display", serif;
+
+            font-size: 38px;
+            line-height: 1.1;
+
+            font-weight: 400;
+
+            color: var(--brown-dark);
+
+            margin-bottom: 20px;
+        }
+
+        .content-text p {
+            color: var(--muted);
+            margin-bottom: 17px;
+        }
+
+        .quote {
+            margin-top: 25px;
+
+            padding: 20px 22px;
+
+            border-radius: 14px;
+
+            background: var(--paper-2);
+
+            color: var(--brown);
+
+            font-size: 14px;
+        }
+
+        /* =========================
+           THẺ ĐẶC ĐIỂM
+        ========================= */
+
+        .feature-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+        .feature-card {
+            min-height: 225px;
+
+            padding: 27px;
+
+            border: 1px solid var(--line);
+            border-radius: 20px;
+
+            background: var(--paper);
+
+            transition: .25s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .feature-index {
+            width: 36px;
+            height: 36px;
+
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 24px;
+
+            border-radius: 50%;
+
+            background: var(--paper-2);
+
+            color: var(--brown);
+
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 9px;
+
+            font-size: 18px;
+
+            color: var(--brown-dark);
+        }
+
+        .feature-card p {
+            color: var(--muted);
+
+            font-size: 14px;
+        }
+
+        /* =========================
+           CHI TIẾT PHÒNG THỦ
+        ========================= */
+
+        .defense-box {
+            padding: 40px;
+
+            border-radius: 25px;
+
+            background: var(--brown-dark);
+
+            color: white;
+        }
+
+        .defense-box h2 {
+            font-family: "DM Serif Display", serif;
+
+            font-size: 42px;
+            line-height: 1.1;
+
+            font-weight: 400;
+
+            margin-bottom: 18px;
+        }
+
+        .defense-box > p {
+            max-width: 850px;
+
+            color: rgba(255,255,255,.76);
+        }
+
+        .defense-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 15px;
+
+            margin-top: 35px;
+        }
+
+        .defense-card {
+            padding: 20px;
+
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 15px;
+
+            background: rgba(255,255,255,.055);
+        }
+
+        .defense-card strong {
+            display: block;
+
+            margin-bottom: 7px;
+
+            color: #e9d2a8;
+
+            font-size: 15px;
+        }
+
+        .defense-card span {
+            display: block;
+
+            color: rgba(255,255,255,.66);
+
+            font-size: 13px;
+        }
+
+        /* =========================
+           GALLERY
+        ========================= */
+
+        .gallery {
+            display: grid;
+
+            grid-template-columns: repeat(12, 1fr);
+
+            gap: 16px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+
+            border-radius: 18px;
+
+            background: #ddd1c1;
+        }
+
+        .gallery-item:nth-child(1) {
+            grid-column: span 7;
+        }
+
+        .gallery-item:nth-child(2) {
+            grid-column: span 5;
+        }
+
+        .gallery-item:nth-child(3) {
+            grid-column: span 4;
+        }
+
+        .gallery-item:nth-child(4) {
+            grid-column: span 4;
+        }
+
+        .gallery-item:nth-child(5) {
+            grid-column: span 4;
+        }
+
+        .gallery-item img {
+            height: 310px;
+
+            object-fit: cover;
+
+            transition: transform .5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.045);
+        }
+
+        .image-label {
+            padding: 10px 13px;
+
+            background: var(--paper);
+
+            color: var(--muted);
+
+            font-size: 11px;
+        }
+
+        /* =========================
+           GIÁ TRỊ
+        ========================= */
+
+        .value-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+        .value-card {
+            min-height: 215px;
+
+            padding: 27px;
+
+            background: var(--paper);
+
+            border: 1px solid var(--line);
+
+            border-radius: 20px;
+
+            transition: .25s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .value-card h3 {
+            margin-bottom: 9px;
+
+            font-size: 18px;
+
+            color: var(--brown-dark);
+        }
+
+        .value-card p {
+            color: var(--muted);
+
+            font-size: 14px;
+        }
+
+        /* =========================
+           BẢO TỒN
+        ========================= */
+
+        .conservation {
+            padding: 45px;
+
+            border-radius: 25px;
+
+            background: var(--brown-dark);
+
+            color: white;
+        }
+
+        .conservation h2 {
+            font-family: "DM Serif Display", serif;
+
+            font-size: 42px;
+
+            line-height: 1.1;
+
+            font-weight: 400;
+
+            margin-bottom: 18px;
+        }
+
+        .conservation > p {
+            max-width: 850px;
+
+            color: rgba(255,255,255,.77);
+        }
+
+        .conservation-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 15px;
+
+            margin-top: 35px;
+        }
+
+        .conservation-card {
+            padding: 20px;
+
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 15px;
+
+            background: rgba(255,255,255,.055);
+        }
+
+        .conservation-card strong {
+            display: block;
+
+            margin-bottom: 7px;
+
+            color: #e9d2a8;
+
+            font-size: 15px;
+        }
+
+        .conservation-card span {
+            display: block;
+
+            color: rgba(255,255,255,.66);
+
+            font-size: 13px;
+        }
+
+        /* =========================
+           NGUỒN
+        ========================= */
+
+        .source-box {
+            padding: 32px;
+
+            border: 1px solid var(--line);
+
+            border-radius: 20px;
+
+            background: var(--paper);
+        }
+
+        .source-box h3 {
+            font-family: "DM Serif Display", serif;
+
+            font-size: 34px;
+
+            font-weight: 400;
+
+            color: var(--brown-dark);
+
+            margin-bottom: 20px;
+        }
+
+        .source-box a {
+            display: block;
+
+            padding: 9px 0;
+
+            border-bottom: 1px solid var(--line);
+
+            color: var(--brown);
+
+            font-size: 14px;
+        }
+
+        .source-box a:last-child {
+            border-bottom: none;
+        }
+
+        .source-box a:hover {
+            color: var(--gold);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            margin-top: 30px;
+
+            padding: 60px 5vw;
+
+            text-align: center;
+
+            background: var(--brown-dark);
+
+            color: rgba(255,255,255,.72);
+        }
+
+        footer strong {
+            display: block;
+
+            margin-bottom: 8px;
+
+            font-family: "DM Serif Display", serif;
+
+            font-size: 28px;
+
+            font-weight: 400;
+
+            color: white;
+        }
+
+        footer span {
+            font-size: 12px;
+        }
+
+        /* =========================
+           NÚT QUAY LẠI
+        ========================= */
+
+        .back-button {
+            position: fixed;
+
+            right: 22px;
+            bottom: 22px;
+
+            z-index: 1001;
+
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            padding: 12px 17px;
+
+            border-radius: 999px;
+
+            background: var(--brown-dark);
+
+            color: white;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,.16);
+
+            font-size: 12px;
+            font-weight: 700;
+
+            transition: .25s ease;
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px);
+
+            background: var(--brown);
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .section-head,
+            .overview-grid,
+            .content-grid,
+            .content-grid.reverse {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .section-head {
+                margin-bottom: 35px;
+            }
+
+            .info-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .feature-grid,
+            .value-grid,
+            .defense-grid,
+            .conservation-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .overview-image,
+            .overview-image img {
+                min-height: 420px;
+                height: 420px;
+            }
+
+            .hero {
+                min-height: 650px;
+            }
+        }
+
+        @media (max-width: 620px) {
+
+            html {
+                scroll-padding-top: 120px;
+            }
+
+            .topbar {
+                height: 62px;
+                padding: 0 5%;
+            }
+
+            .logo {
+                font-size: 17px;
+            }
+
+            .main-link {
+                padding: 8px 13px;
+                font-size: 12px;
+            }
+
+            .section-nav {
+                top: 62px;
+                height: 56px;
+                padding: 0 5%;
+            }
+
+            .hero {
+                min-height: 610px;
+                padding: 170px 6% 70px;
+            }
+
+            .hero h1 {
+                font-size: 57px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            section {
+                padding: 80px 0;
+            }
+
+            .section-head h2 {
+                font-size: 42px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .overview-image,
+            .overview-image img {
+                min-height: 350px;
+                height: 350px;
+            }
+
+            .content-grid img {
+                height: 320px;
+            }
+
+            .defense-box,
+            .conservation {
+                padding: 28px;
+            }
+
+            .defense-box h2,
+            .conservation h2 {
+                font-size: 35px;
+            }
+
+            .gallery {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item:nth-child(n) {
+                grid-column: auto;
+            }
+
+            .gallery-item img {
+                height: 270px;
+            }
+
+            .back-button {
+                right: 15px;
+                bottom: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         MENU CHÍNH
+    ========================= -->
+
+    <header class="topbar">
+
+        <a href="./danhlamthangcanh.html" class="logo">
+            LẠNG SƠN
+        </a>
+
+        <a href="./danhlamthangcanh.html" class="main-link">
+            Danh thắng
+        </a>
+
+    </header>
+
+
+    <!-- =========================
+         MENU MỤC
+    ========================= -->
+
+    <nav class="section-nav">
+
+        <a href="#tong-quan">Tổng quan</a>
+        <a href="#lich-su">Lịch sử</a>
+        <a href="#vi-tri">Địa thế</a>
+        <a href="#kien-truc">Kiến trúc</a>
+        <a href="#phong-thu">Phòng thủ</a>
+        <a href="#dau-an">Dấu tích</a>
+        <a href="#gia-tri">Giá trị</a>
+        <a href="#bao-ton">Bảo tồn</a>
+        <a href="#hinh-anh">Hình ảnh</a>
+        <a href="#nguon">Nguồn</a>
+
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                Di tích lịch sử · kiến trúc quân sự
+            </div>
+
+            <h1>
+                Thành Nhà Mạc
+            </h1>
+
+            <p>
+                Dấu tích của một công trình quân sự cổ nằm giữa
+                núi đá Xứ Lạng, từng giữ vị trí hiểm yếu trên
+                tuyến đường từ Đại Việt sang Trung Quốc.
+            </p>
+
+            <div class="hero-tags">
+
+                <span class="hero-tag">
+                    Di tích lịch sử quốc gia · 1962
+                </span>
+
+                <span class="hero-tag">
+                    Phường Tam Thanh · Lạng Sơn
+                </span>
+
+                <span class="hero-tag">
+                    Công trình quân sự cổ
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <main>
+
+        <!-- =========================
+             01 TỔNG QUAN
+        ========================= -->
+
+        <section id="tong-quan">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    01 · Tổng quan
+                </div>
+
+                <div>
+
+                    <h2>
+                        Thành cổ giữa núi rừng Xứ Lạng
+                    </h2>
+
+                    <p>
+                        Thành Nhà Mạc là dấu tích của một công trình
+                        kiến trúc quân sự quan trọng trong lịch sử
+                        Lạng Sơn, được bố trí dựa vào địa hình núi đá
+                        hiểm trở để tạo lợi thế phòng thủ.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="overview-grid">
+
+                <!-- ẢNH TỔNG QUAN - KHÁC ẢNH HERO -->
+
+                <div class="overview-image">
+
+                    <img
+                        src="https://media.cungphuot.info/2015/10/09/5a-1444374105_680x0.jpg"
+                        alt="Dấu tích Thành Nhà Mạc Lạng Sơn"
+                        onerror="
+                            this.onerror=null;
+                            this.src='https://image.lecourrier.vn/MediaUpload/Org/2022/12/28/095831-afp2.jpg';
+                        "
+                    >
+
+                    <div class="overview-source">
+                        Nguồn ảnh: Cung Phượt
+                    </div>
+
+                </div>
+
+
+                <div class="overview-text">
+
+                    <h3>
+                        Một thành lũy tận dụng địa hình tự nhiên
+                    </h3>
+
+                    <p>
+                        Thành Nhà Mạc nằm tại phường Tam Thanh, tỉnh
+                        Lạng Sơn, trong quần thể danh thắng Nhị –
+                        Tam Thanh và núi Tô Thị.
+                    </p>
+
+                    <p>
+                        Theo các tài liệu của ngành văn hóa Lạng Sơn,
+                        vào những năm cuối thế kỷ XVI đến giữa thế kỷ XVII,
+                        Mạc Kính Cung đã cho xây dựng thành tại khu vực
+                        núi Vệ Sơn – Đông Kinh. Thành đóng vai trò như
+                        một căn cứ quân sự quan trọng nhằm kiểm soát
+                        tuyến đường hiểm yếu ở vùng biên ải.
+                    </p>
+
+                    <p>
+                        Công trình không xây dựng theo kiểu thành bao
+                        quanh một khu vực rộng lớn hoàn toàn bằng tường,
+                        mà tận dụng hai sườn núi tự nhiên để tạo thành
+                        lòng chảo và xây tường bịt các đầu còn lại.
+                    </p>
+
+                    <div class="highlight">
+
+                        <strong>
+                            Điểm nổi bật
+                        </strong>
+
+                        Thành Nhà Mạc kết hợp địa hình núi đá tự nhiên
+                        với tường thành bằng đá, tạo nên một thế phòng thủ
+                        đặc biệt phù hợp với điều kiện địa hình Lạng Sơn.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- THÔNG TIN NHANH -->
+
+            <div class="quick-info">
+
+                <div class="quick-title">
+                    Thông tin nhanh
+                </div>
+
+                <div class="info-grid">
+
+                    <div class="info-card">
+                        <small>Tên di tích</small>
+                        <strong>
+                            Thành Nhà Mạc
+                        </strong>
+                    </div>
+
+                    <div class="info-card">
+                        <small>Địa điểm</small>
+                        <strong>
+                            Phường Tam Thanh, tỉnh Lạng Sơn
+                        </strong>
+                    </div>
+
+                    <div class="info-card">
+                        <small>Niên đại</small>
+                        <strong>
+                            Cuối thế kỷ XVI – giữa thế kỷ XVII
+                        </strong>
+                    </div>
+
+                    <div class="info-card">
+                        <small>Người xây dựng</small>
+                        <strong>
+                            Mạc Kính Cung
+                        </strong>
+                    </div>
+
+                    <div class="info-card">
+                        <small>Chiều dài thành</small>
+                        <strong>
+                            Khoảng 300 m
+                        </strong>
+                    </div>
+
+                    <div class="info-card">
+                        <small>Độ dày tường</small>
+                        <strong>
+                            Khoảng 1 m
+                        </strong>
+                    </div>
+
+                    <div class="info-card">
+                        <small>Xếp hạng</small>
+                        <strong>
+                            Di tích lịch sử quốc gia
+                        </strong>
+                    </div>
+
+                    <div class="info-card">
+                        <small>Đặc trưng</small>
+                        <strong>
+                            Tường đá · cửa công · lỗ châu mai
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             02 LỊCH SỬ
+        ========================= -->
+
+        <section id="lich-su">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    02 · Lịch sử
+                </div>
+
+                <div>
+
+                    <h2>
+                        Dấu tích của một thời binh lửa
+                    </h2>
+
+                    <p>
+                        Thành Nhà Mạc gắn với giai đoạn lịch sử nhiều
+                        biến động của Đại Việt từ cuối thế kỷ XVI
+                        sang thế kỷ XVII.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+
+                    <div class="timeline-year">
+                        Từ năm 1527
+                    </div>
+
+                    <h3>
+                        Nhà Mạc thành lập
+                    </h3>
+
+                    <p>
+                        Sau khi nhà Mạc thành lập, khu vực Lạng Sơn
+                        trở thành một vùng có vị trí quan trọng trong
+                        bối cảnh chính trị và quân sự của đất nước.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-year">
+                        Cuối thế kỷ XVI
+                    </div>
+
+                    <h3>
+                        Xây dựng căn cứ tại Lạng Sơn
+                    </h3>
+
+                    <p>
+                        Mạc Kính Cung cho xây dựng thành tại khu vực
+                        núi Vệ Sơn – Đông Kinh nhằm tạo một căn cứ
+                        quân sự hiểm yếu.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-year">
+                        Cuối thế kỷ XVI – giữa thế kỷ XVII
+                    </div>
+
+                    <h3>
+                        Thành giữ vai trò phòng thủ
+                    </h3>
+
+                    <p>
+                        Thành được bố trí trên địa hình núi cao,
+                        kiểm soát tuyến đường độc đạo quan trọng
+                        nối vùng biên giới phía Bắc với nội địa.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-year">
+                        Sau nhiều thế kỷ
+                    </div>
+
+                    <h3>
+                        Chỉ còn lại những đoạn thành cổ
+                    </h3>
+
+                    <p>
+                        Những biến động lịch sử và thời gian khiến
+                        phần lớn công trình không còn nguyên vẹn.
+                        Dấu tích còn lại giúp hình dung quy mô và
+                        cấu trúc của tòa thành xưa.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-year">
+                        1962
+                    </div>
+
+                    <h3>
+                        Được xếp hạng di tích lịch sử quốc gia
+                    </h3>
+
+                    <p>
+                        Thành Nhà Mạc được đưa vào hệ thống di tích
+                        lịch sử quan trọng của Lạng Sơn và trở thành
+                        một phần của quần thể danh thắng Nhị – Tam Thanh.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             03 ĐỊA THẾ
+        ========================= -->
+
+        <section id="vi-tri">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    03 · Địa thế
+                </div>
+
+                <div>
+
+                    <h2>
+                        Dựa lưng vào núi, nhìn xuống thành phố
+                    </h2>
+
+                    <p>
+                        Vị trí địa hình là yếu tố quan trọng nhất
+                        tạo nên giá trị quân sự của Thành Nhà Mạc.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="content-grid">
+
+                <div class="content-text">
+
+                    <h3 class="content-title">
+                        Lợi thế từ núi đá và lòng chảo tự nhiên
+                    </h3>
+
+                    <p>
+                        Thành được bố trí trong khu vực núi đá phía
+                        Tây Bắc thành phố Lạng Sơn. Các sườn núi
+                        tự nhiên được tận dụng để tạo thành thế
+                        bao bọc cho khu vực bên trong.
+                    </p>
+
+                    <p>
+                        Cách bố trí này giúp giảm nhu cầu xây dựng
+                        tường thành khép kín, đồng thời biến địa hình
+                        hiểm trở thành một bộ phận của hệ thống phòng thủ.
+                    </p>
+
+                    <p>
+                        Từ khu vực thành có thể quan sát không gian
+                        rộng lớn của thành phố Lạng Sơn, cho thấy
+                        tầm quan trọng của vị trí này trong quá khứ.
+                    </p>
+
+                </div>
+
+
+                <img
+                    src="https://luhanhvietnam.com.vn/du-lich/vnt_upload/news/02_2020/thanh-nha-Mac-Lang-Son-13.jpg"
+                    alt="Địa thế Thành Nhà Mạc giữa núi đá"
+                    onerror="
+                        this.onerror=null;
+                        this.src='https://statics.vinpearl.com/thanh-nha-mac-lang-son-6_1624411709.jpg';
+                    "
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             04 KIẾN TRÚC
+        ========================= -->
+
+        <section id="kien-truc">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    04 · Kiến trúc
+                </div>
+
+                <div>
+
+                    <h2>
+                        Thành lũy bằng đá giữa hẻm núi
+                    </h2>
+
+                    <p>
+                        Những dấu tích còn lại cho thấy kỹ thuật
+                        xây dựng và cách tổ chức phòng thủ khá
+                        đặc biệt của công trình.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="content-grid reverse">
+
+                <img
+                    src="https://statics.vinpearl.com/thanh-nha-mac-lang-son-6_1624411709.jpg"
+                    alt="Tường thành và bậc lên Thành Nhà Mạc"
+                    onerror="
+                        this.onerror=null;
+                        this.src='https://media.cungphuot.info/2015/10/09/5a-1444374105_680x0.jpg';
+                    "
+                >
+
+
+                <div class="content-text">
+
+                    <h3 class="content-title">
+                        Đá, tường thành và lỗ châu mai
+                    </h3>
+
+                    <p>
+                        Thành được xây dựng bằng đá, với những đoạn
+                        tường còn lại có chiều dài tổng cộng khoảng
+                        300 m và bề dày khoảng 1 m.
+                    </p>
+
+                    <p>
+                        Trên tường có các lỗ châu mai và cửa công,
+                        cho thấy công trình được thiết kế trước hết
+                        cho mục đích quân sự và phòng thủ.
+                    </p>
+
+                    <p>
+                        Một đặc điểm đáng chú ý được các tài liệu
+                        địa phương nhắc tới là vật liệu kết dính
+                        trong xây dựng có sử dụng vôi cát; riêng
+                        một số đoạn tường còn được truyền lại cách
+                        sử dụng mật mía và mật ong trong kỹ thuật
+                        kết dính.
+                    </p>
+
+                    <div class="quote">
+                        Giá trị của Thành Nhà Mạc nằm ở sự kết hợp
+                        giữa kiến trúc quân sự và địa hình tự nhiên.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             05 PHÒNG THỦ
+        ========================= -->
+
+        <section id="phong-thu">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    05 · Phòng thủ
+                </div>
+
+                <div>
+
+                    <h2>
+                        Một căn cứ quân sự hiểm yếu
+                    </h2>
+
+                    <p>
+                        Thành từng kiểm soát một tuyến giao thông
+                        chiến lược ở vùng biên ải.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="defense-box">
+
+                <h2>
+                    Ba yếu tố tạo nên sức phòng thủ
+                </h2>
+
+                <p>
+                    Cấu trúc của thành cho thấy người xưa đã tận dụng
+                    tối đa điều kiện địa hình để xây dựng một căn cứ
+                    vừa quan sát, vừa phòng thủ.
+                </p>
+
+
+                <div class="defense-grid">
+
+                    <div class="defense-card">
+
+                        <strong>
+                            Địa hình
+                        </strong>
+
+                        <span>
+                            Dựa vào các sườn núi đá cao và hẻm núi
+                            để tạo thành thế phòng thủ tự nhiên.
+                        </span>
+
+                    </div>
+
+
+                    <div class="defense-card">
+
+                        <strong>
+                            Tường thành
+                        </strong>
+
+                        <span>
+                            Tường đá kiên cố nối các vị trí hiểm yếu
+                            và bịt những khoảng trống giữa địa hình.
+                        </span>
+
+                    </div>
+
+
+                    <div class="defense-card">
+
+                        <strong>
+                            Lỗ châu mai
+                        </strong>
+
+                        <span>
+                            Các lỗ châu mai và cửa công giúp tăng
+                            khả năng quan sát và phòng thủ.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             06 DẤU TÍCH
+        ========================= -->
+
+        <section id="dau-an">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    06 · Dấu tích
+                </div>
+
+                <div>
+
+                    <h2>
+                        Những gì còn lại hôm nay
+                    </h2>
+
+                    <p>
+                        Phần còn lại của Thành Nhà Mạc tuy không lớn
+                        nhưng đủ giúp nhận ra cấu trúc và quy mô
+                        của một công trình quân sự xưa.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+
+                    <div class="feature-index">
+                        01
+                    </div>
+
+                    <h3>
+                        Hai đoạn tường thành
+                    </h3>
+
+                    <p>
+                        Dấu tích hiện nay chủ yếu gồm hai đoạn tường
+                        đá nằm giữa địa hình núi đá.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-index">
+                        02
+                    </div>
+
+                    <h3>
+                        Cửa công
+                    </h3>
+
+                    <p>
+                        Một số cửa mở trên tường cho thấy cách tổ chức
+                        giao thông và phòng thủ của thành.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-index">
+                        03
+                    </div>
+
+                    <h3>
+                        Lỗ châu mai
+                    </h3>
+
+                    <p>
+                        Các lỗ châu mai còn lại là dấu ấn trực tiếp
+                        của chức năng quân sự.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-index">
+                        04
+                    </div>
+
+                    <h3>
+                        Bậc đá
+                    </h3>
+
+                    <p>
+                        Hệ thống bậc dẫn lên khu vực thành giúp du khách
+                        tiếp cận các dấu tích nằm trên sườn núi.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-index">
+                        05
+                    </div>
+
+                    <h3>
+                        Không gian nhìn rộng
+                    </h3>
+
+                    <p>
+                        Từ trên cao có thể quan sát cảnh quan thành phố
+                        và vùng núi xung quanh.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-index">
+                        06
+                    </div>
+
+                    <h3>
+                        Dấu ấn thời gian
+                    </h3>
+
+                    <p>
+                        Những mảng tường đá phủ màu thời gian tạo nên
+                        vẻ cổ kính rất riêng của di tích.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             07 GIÁ TRỊ
+        ========================= -->
+
+        <section id="gia-tri">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    07 · Giá trị
+                </div>
+
+                <div>
+
+                    <h2>
+                        Giá trị lịch sử và cảnh quan
+                    </h2>
+
+                    <p>
+                        Thành Nhà Mạc là một điểm giao giữa lịch sử
+                        quân sự, kiến trúc cổ và cảnh quan núi đá
+                        đặc trưng của Xứ Lạng.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="value-grid">
+
+                <div class="value-card">
+
+                    <h3>
+                        Giá trị lịch sử
+                    </h3>
+
+                    <p>
+                        Phản ánh một giai đoạn nhiều biến động trong
+                        lịch sử Đại Việt và vai trò đặc biệt của Lạng Sơn
+                        ở vùng biên giới phía Bắc.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <h3>
+                        Giá trị quân sự
+                    </h3>
+
+                    <p>
+                        Cho thấy cách người xưa kết hợp công trình
+                        nhân tạo với địa hình tự nhiên để hình thành
+                        một căn cứ phòng thủ.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <h3>
+                        Giá trị kiến trúc
+                    </h3>
+
+                    <p>
+                        Những đoạn tường đá, cửa công và lỗ châu mai
+                        là những dấu tích đáng chú ý của kiến trúc
+                        quân sự cổ.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <h3>
+                        Giá trị cảnh quan
+                    </h3>
+
+                    <p>
+                        Thành nằm giữa núi đá, tạo nên sự kết hợp
+                        đặc biệt giữa di tích lịch sử và thiên nhiên.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <h3>
+                        Giá trị văn hóa
+                    </h3>
+
+                    <p>
+                        Là một phần của quần thể Nhị – Tam Thanh,
+                        núi Tô Thị và các danh thắng nổi tiếng
+                        của Lạng Sơn.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <h3>
+                        Giá trị du lịch
+                    </h3>
+
+                    <p>
+                        Tạo thêm một điểm đến để tìm hiểu lịch sử,
+                        kiến trúc và ngắm cảnh trong hành trình khám phá
+                        khu vực phía Tây Bắc thành phố Lạng Sơn.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             08 BẢO TỒN
+        ========================= -->
+
+        <section id="bao-ton">
+
+            <div class="conservation">
+
+                <h2>
+                    Gìn giữ những dấu tích còn lại
+                </h2>
+
+                <p>
+                    Việc bảo tồn Thành Nhà Mạc cần gắn với bảo vệ
+                    tường thành cổ, cảnh quan núi đá và tổ chức
+                    tham quan phù hợp để hạn chế ảnh hưởng đến
+                    các cấu trúc lịch sử.
+                </p>
+
+
+                <div class="conservation-grid">
+
+                    <div class="conservation-card">
+
+                        <strong>
+                            Tường thành
+                        </strong>
+
+                        <span>
+                            Theo dõi, gia cố phù hợp và hạn chế
+                            các tác động gây hư hại lên đá cổ.
+                        </span>
+
+                    </div>
+
+
+                    <div class="conservation-card">
+
+                        <strong>
+                            Cảnh quan
+                        </strong>
+
+                        <span>
+                            Giữ gìn địa hình núi đá và không gian
+                            tự nhiên bao quanh di tích.
+                        </span>
+
+                    </div>
+
+
+                    <div class="conservation-card">
+
+                        <strong>
+                            Du lịch bền vững
+                        </strong>
+
+                        <span>
+                            Phát huy giá trị tham quan nhưng đồng thời
+                            bảo vệ lâu dài những dấu tích lịch sử.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             09 HÌNH ẢNH
+        ========================= -->
+
+        <section id="hinh-anh">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    09 · Hình ảnh
+                </div>
+
+                <div>
+
+                    <h2>
+                        Thành cổ giữa núi đá Xứ Lạng
+                    </h2>
+
+                    <p>
+                        Một số hình ảnh về tường thành, cổng thành,
+                        bậc lên và cảnh quan khu di tích.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="gallery">
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://media.cungphuot.info/2015/10/09/5a-1444374105_680x0.jpg"
+                        alt="Cổng Thành Nhà Mạc"
+                    >
+
+                    <div class="image-label">
+                        Dấu tích cổng và tường thành · Cung Phượt
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://cdn-petrotimes.mastercms.vn/stores/news_dataimages/nguyenhinh/052019/24/15/dien-mao-moi-cua-di-tich-thanh-nha-mac-thanh-pho-lang-son_6.jpg"
+                        alt="Con đường lên Thành Nhà Mạc"
+                    >
+
+                    <div class="image-label">
+                        Lối lên khu thành
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://statics.vinpearl.com/thanh-nha-mac-lang-son-6_1624411709.jpg"
+                        alt="Thành Nhà Mạc giữa núi"
+                    >
+
+                    <div class="image-label">
+                        Thành nằm giữa địa hình núi đá
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://luhanhvietnam.com.vn/du-lich/vnt_upload/news/02_2020/thanh-nha-Mac-Lang-Son-13.jpg"
+                        alt="Toàn cảnh khu Thành Nhà Mạc"
+                    >
+
+                    <div class="image-label">
+                        Toàn cảnh khu di tích
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://image.lecourrier.vn/MediaUpload/Org/2022/12/28/095831-afp2.jpg"
+                        alt="Tường thành Nhà Mạc và cảnh quan"
+                    >
+
+                    <div class="image-label">
+                        Tường thành và cảnh quan Xứ Lạng
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             10 NGUỒN
+        ========================= -->
+
+        <section id="nguon">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    10 · Nguồn
+                </div>
+
+                <div>
+
+                    <h2>
+                        Tài liệu tham khảo
+                    </h2>
+
+                    <p>
+                        Thông tin được tổng hợp từ các nguồn chính thức
+                        và các tư liệu giới thiệu về di tích.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="source-box">
+
+                <h3>
+                    Nguồn thông tin
+                </h3>
+
+                <a
+                    href="https://tamthanh.langson.gov.vn/gioi-thieu/di-tich-danh-thang"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    UBND phường Tam Thanh – Di tích, danh thắng phường Tam Thanh
+                </a>
+
+                <a
+                    href="https://sovhtt.langson.gov.vn/tin-tuc-su-kien/linh-vuc-van-hoa/khu-di-tich-danh-thang-nhi-tam-thanh.html"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Sở Văn hóa, Thể thao và Du lịch tỉnh Lạng Sơn
+                </a>
+
+                <a
+                    href="https://langson.gov.vn/tong-quan/lang-son-qua-cac-thoi-ky-lich-su"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Cổng thông tin điện tử tỉnh Lạng Sơn – Lạng Sơn qua các thời kỳ lịch sử
+                </a>
+
+                <a
+                    href="https://lspa.langson.gov.vn/"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Cổng Du lịch Lạng Sơn
+                </a>
+
+                <a
+                    href="https://commons.wikimedia.org/"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Wikimedia Commons – tư liệu hình ảnh
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <strong>
+            Thành Nhà Mạc
+        </strong>
+
+        <span>
+            Dấu tích thành lũy cổ giữa núi đá Xứ Lạng.
+        </span>
+
+    </footer>
+
+
+    <!-- =========================
+         NÚT QUAY LẠI
+    ========================= -->
+
+    <a
+        href="./danhlamthangcanh.html"
+        class="back-button"
+    >
+        ← Quay lại danh thắng
+    </a>
+
+
+    <!-- =========================
+         JS MENU ACTIVE
+    ========================= -->
+
+    <script>
+
+        const sections = document.querySelectorAll("main section");
+        const navLinks = document.querySelectorAll(".section-nav a");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+
+                entries.forEach((entry) => {
+
+                    if (entry.isIntersecting) {
+
+                        navLinks.forEach((link) => {
+                            link.classList.remove("active");
+                        });
+
+                        const active = document.querySelector(
+                            '.section-nav a[href="#' +
+                            entry.target.id +
+                            '"]'
+                        );
+
+                        if (active) {
+                            active.classList.add("active");
+                        }
+
+                    }
+
+                });
+
+            },
+            {
+                rootMargin: "-150px 0px -60% 0px",
+                threshold: 0
+            }
+        );
+
+
+        sections.forEach((section) => {
+            observer.observe(section);
+        });
+
+
+        navLinks.forEach((link) => {
+
+            link.addEventListener("click", () => {
+
+                setTimeout(() => {
+
+                    link.scrollIntoView({
+                        behavior: "smooth",
+                        block: "nearest",
+                        inline: "center"
+                    });
+
+                }, 100);
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>

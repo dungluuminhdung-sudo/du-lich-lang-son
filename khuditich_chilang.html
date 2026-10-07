@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Khu di tích lịch sử Chi Lăng | Lạng Sơn</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #087f8c;
+            --primary-dark: #05616b;
+            --secondary: #24a19c;
+            --blue: #247ba0;
+            --light: #eefafa;
+            --cream: #f8fbfa;
+            --text: #18343a;
+            --muted: #61767b;
+            --white: #ffffff;
+            --yellow: #f4b942;
+            --shadow: 0 12px 35px rgba(7, 78, 88, 0.12);
+            --radius: 20px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Be Vietnam Pro", sans-serif;
+            color: var(--text);
+            background: var(--cream);
+            line-height: 1.8;
+        }
+
+        /* ================= HEADER ================= */
+
+        .topbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(8, 127, 140, 0.12);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+            z-index: 1000;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .logo {
+            font-family: "DM Serif Display", serif;
+            font-size: 28px;
+            color: var(--primary-dark);
+            letter-spacing: 1px;
+            text-decoration: none;
+        }
+
+        .top-link {
+            text-decoration: none;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 14px;
+            border: 1px solid rgba(8, 127, 140, 0.25);
+            padding: 8px 15px;
+            border-radius: 999px;
+            transition: 0.3s;
+        }
+
+        .top-link:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* ================= SECTION NAV ================= */
+
+        .section-nav {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            height: 58px;
+            background: var(--primary-dark);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            overflow-x: auto;
+            scrollbar-width: none;
+        }
+
+        .section-nav::-webkit-scrollbar {
+            display: none;
+        }
+
+        .section-nav-inner {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            padding: 0 5%;
+            min-width: max-content;
+        }
+
+        .section-nav a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            padding: 8px 13px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 600;
+            white-space: nowrap;
+            transition: 0.25s;
+        }
+
+        .section-nav a:hover,
+        .section-nav a.active {
+            background: rgba(255,255,255,0.16);
+            color: #fff;
+        }
+
+        /* ================= HERO ================= */
+
+        .hero {
+            margin-top: 128px;
+            min-height: 570px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(3, 46, 54, 0.92) 0%,
+                    rgba(3, 46, 54, 0.72) 42%,
+                    rgba(3, 46, 54, 0.20) 100%
+                ),
+                url("https://icdn.dantri.com.vn/2023/07/26/5-1690364683693.jpg")
+                center / cover no-repeat;
+        }
+
+        .hero-content {
+            width: min(1150px, 90%);
+            margin: auto;
+            color: white;
+            padding: 70px 0;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            padding: 7px 15px;
+            border-radius: 999px;
+            background: rgba(255,255,255,0.14);
+            border: 1px solid rgba(255,255,255,0.25);
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-family: "DM Serif Display", serif;
+            font-size: clamp(42px, 7vw, 78px);
+            line-height: 1.08;
+            max-width: 850px;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 760px;
+            font-size: 18px;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .hero-line {
+            width: 90px;
+            height: 5px;
+            border-radius: 10px;
+            background: var(--yellow);
+            margin: 25px 0;
+        }
+
+        /* ================= GENERAL ================= */
+
+        main {
+            width: min(1150px, 90%);
+            margin: auto;
+        }
+
+        section {
+            padding: 80px 0 20px;
+            scroll-margin-top: 145px;
+        }
+
+        .section-label {
+            color: var(--primary);
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+
+        h2 {
+            font-family: "DM Serif Display", serif;
+            color: var(--primary-dark);
+            font-size: clamp(31px, 4vw, 46px);
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            color: var(--primary-dark);
+            font-size: 21px;
+            margin: 28px 0 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .lead {
+            font-size: 18px;
+            color: #40585d;
+        }
+
+        /* ================= OVERVIEW ================= */
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .overview-image {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            background: #dceeee;
+        }
+
+        .overview-image img {
+            width: 100%;
+            height: 410px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .info-box {
+            margin-top: 25px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .info-item {
+            background: white;
+            border: 1px solid rgba(8, 127, 140, 0.10);
+            border-radius: 15px;
+            padding: 15px;
+        }
+
+        .info-item strong {
+            display: block;
+            color: var(--primary);
+            font-size: 13px;
+            margin-bottom: 3px;
+        }
+
+        .info-item span {
+            font-size: 14px;
+            color: #41565b;
+        }
+
+        /* ================= FEATURE CARDS ================= */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 18px;
+            padding: 25px;
+            box-shadow: 0 7px 25px rgba(8, 80, 90, 0.07);
+            border: 1px solid rgba(8,127,140,0.08);
+        }
+
+        .card-number {
+            width: 38px;
+            height: 38px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--light);
+            color: var(--primary);
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin: 0 0 8px;
+            font-size: 18px;
+        }
+
+        .card p {
+            color: var(--muted);
+            font-size: 14px;
+            margin: 0;
+        }
+
+        /* ================= HISTORY ================= */
+
+        .timeline {
+            margin-top: 30px;
+            border-left: 3px solid #a8dedd;
+            padding-left: 28px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -39px;
+            top: 6px;
+            width: 17px;
+            height: 17px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 4px solid var(--cream);
+            box-shadow: 0 0 0 2px var(--primary);
+        }
+
+        .timeline-year {
+            color: var(--primary);
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        /* ================= HIGHLIGHT ================= */
+
+        .highlight {
+            margin-top: 30px;
+            background: linear-gradient(135deg, #e8f8f7, #edf7fc);
+            border-radius: 22px;
+            padding: 32px;
+            border: 1px solid rgba(8,127,140,0.12);
+        }
+
+        .highlight strong {
+            color: var(--primary-dark);
+        }
+
+        /* ================= MAP / LANDSCAPE ================= */
+
+        .landscape-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .landscape-image {
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .landscape-image img {
+            width: 100%;
+            height: 430px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* ================= 24 POINTS ================= */
+
+        .point-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .point {
+            background: white;
+            border-radius: 14px;
+            padding: 15px 18px;
+            border-left: 4px solid var(--secondary);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+        }
+
+        .point strong {
+            color: var(--primary-dark);
+        }
+
+        .point small {
+            display: block;
+            color: var(--muted);
+            font-size: 12px;
+            margin-top: 3px;
+        }
+
+        /* ================= BATTLE ================= */
+
+        .battle-box {
+            background: #073f49;
+            color: white;
+            border-radius: 25px;
+            padding: 40px;
+            margin-top: 25px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .battle-box::after {
+            content: "1427";
+            position: absolute;
+            right: 25px;
+            bottom: -35px;
+            font-family: "DM Serif Display", serif;
+            font-size: 150px;
+            color: rgba(255,255,255,0.06);
+        }
+
+        .battle-box h3 {
+            color: #fff;
+            font-size: 29px;
+            margin-top: 0;
+        }
+
+        .battle-box p {
+            color: rgba(255,255,255,0.84);
+            max-width: 850px;
+        }
+
+        /* ================= CULTURE ================= */
+
+        .culture-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .culture-card {
+            background: white;
+            border-radius: 18px;
+            padding: 25px;
+            box-shadow: 0 7px 25px rgba(0,0,0,0.05);
+        }
+
+        .culture-card h3 {
+            margin-top: 0;
+        }
+
+        /* ================= TOURISM ================= */
+
+        .tourism {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+            margin-top: 30px;
+        }
+
+        .tour-item {
+            background: white;
+            padding: 22px;
+            border-radius: 17px;
+            border-top: 4px solid var(--secondary);
+        }
+
+        .tour-item h3 {
+            margin-top: 0;
+            font-size: 18px;
+        }
+
+        .tour-item p {
+            font-size: 14px;
+            color: var(--muted);
+            margin-bottom: 0;
+        }
+
+        /* ================= CONSERVATION ================= */
+
+        .conservation {
+            background: linear-gradient(135deg, #f0fbfa, #f7fbff);
+            border-radius: 25px;
+            padding: 35px;
+            margin-top: 30px;
+        }
+
+        .conservation-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+            margin-top: 20px;
+        }
+
+        .conservation-item {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        .conservation-item strong {
+            color: var(--primary);
+        }
+
+        /* ================= GALLERY ================= */
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+            margin-top: 30px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 17px;
+            overflow: hidden;
+            min-height: 220px;
+            background: #dcebea;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            min-height: 220px;
+            object-fit: cover;
+            display: block;
+            transition: 0.35s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .image-label {
+            position: absolute;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            padding: 8px 10px;
+            border-radius: 10px;
+            background: rgba(0,0,0,0.58);
+            color: white;
+            font-size: 12px;
+            backdrop-filter: blur(5px);
+        }
+
+        .gallery-item.large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .gallery-item.large img {
+            min-height: 454px;
+        }
+
+        /* ================= SOURCES ================= */
+
+        .sources {
+            background: white;
+            border-radius: 20px;
+            padding: 28px;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.04);
+        }
+
+        .sources a {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .sources a:hover {
+            text-decoration: underline;
+        }
+
+        /* ================= BACK BUTTON ================= */
+
+        .back-home {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 1100;
+            text-decoration: none;
+            color: white;
+            background: var(--primary);
+            padding: 11px 17px;
+            border-radius: 999px;
+            font-size: 13px;
+            font-weight: 700;
+            box-shadow: 0 8px 25px rgba(8,127,140,0.3);
+            transition: 0.3s;
+        }
+
+        .back-home:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            margin-top: 80px;
+            background: #063f47;
+            color: rgba(255,255,255,0.75);
+            padding: 40px 5%;
+            text-align: center;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width: 900px) {
+            .overview-grid,
+            .landscape-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cards,
+            .tourism {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 650px) {
+            .topbar {
+                padding: 0 18px;
+            }
+
+            .logo {
+                font-size: 23px;
+            }
+
+            .top-link {
+                font-size: 12px;
+                padding: 7px 11px;
+            }
+
+            .hero {
+                min-height: 500px;
+            }
+
+            .hero-content {
+                width: 88%;
+            }
+
+            .hero p {
+                font-size: 15px;
+            }
+
+            .cards,
+            .point-list,
+            .culture-grid,
+            .tourism,
+            .conservation-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item.large {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+
+            .gallery-item.large img {
+                min-height: 260px;
+            }
+
+            .info-box {
+                grid-template-columns: 1fr;
+            }
+
+            .battle-box {
+                padding: 28px 22px;
+            }
+
+            section {
+                padding-top: 65px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ================= TOP BAR ================= -->
+
+    <header class="topbar">
+        <a href="./danhlamthangcanh.html" class="logo">LẠNG SƠN</a>
+        <a href="./danhlamthangcanh.html" class="top-link">← Danh lam thắng cảnh</a>
+    </header>
+
+
+    <!-- ================= SECTION NAV ================= -->
+
+    <nav class="section-nav">
+        <div class="section-nav-inner">
+            <a href="#tong-quan">Tổng quan</a>
+            <a href="#dia-hinh">Địa hình</a>
+            <a href="#lich-su">Lịch sử</a>
+            <a href="#diem-di-tich">Các điểm di tích</a>
+            <a href="#chien-thang">Chiến thắng 1427</a>
+            <a href="#canh-quan">Cảnh quan</a>
+            <a href="#van-hoa">Văn hóa</a>
+            <a href="#du-lich">Du lịch</a>
+            <a href="#bao-ton">Bảo tồn</a>
+            <a href="#hinh-anh">Hình ảnh</a>
+            <a href="#nguon">Nguồn</a>
+        </div>
+    </nav>
+
+
+    <!-- ================= HERO ================= -->
+
+    <div class="hero">
+        <div class="hero-content">
+
+            <div class="hero-tag">
+                DI TÍCH QUỐC GIA ĐẶC BIỆT
+            </div>
+
+            <h1>Khu di tích lịch sử Chi Lăng</h1>
+
+            <div class="hero-line"></div>
+
+            <p>
+                Quần thể di tích lịch sử gắn với những chiến công tiêu biểu
+                của dân tộc Việt Nam trong hành trình bảo vệ đất nước,
+                nằm giữa thung lũng núi đá hùng vĩ của xứ Lạng.
+            </p>
+
+        </div>
+    </div>
+
+
+    <main>
+
+        <!-- ================= 01 TỔNG QUAN ================= -->
+
+        <section id="tong-quan">
+
+            <div class="section-label">01 — Tổng quan</div>
+
+            <div class="overview-grid">
+
+                <div>
+                    <h2>“Cửa ải thép” giữa núi rừng Xứ Lạng</h2>
+
+                    <p class="lead">
+                        Chi Lăng là một vùng đất có vị trí địa lý và quân sự
+                        đặc biệt quan trọng ở phía Bắc Việt Nam. Thung lũng
+                        Chi Lăng nằm giữa những dãy núi đá vôi, tạo nên một
+                        địa thế tự nhiên thuận lợi cho phòng thủ và phục kích.
+                    </p>
+
+                    <p>
+                        Khu di tích lịch sử Chi Lăng ghi dấu nhiều sự kiện
+                        quan trọng trong lịch sử đấu tranh chống ngoại xâm
+                        của dân tộc, nổi bật nhất là chiến thắng Chi Lăng
+                        năm 1427 trong cuộc kháng chiến chống quân Minh.
+                    </p>
+
+                    <p>
+                        Ngày 31/12/2019, Thủ tướng Chính phủ ban hành Quyết định
+                        số 1954/QĐ-TTg xếp hạng Di tích lịch sử Chi Lăng là
+                        <strong>Di tích quốc gia đặc biệt</strong>.
+                    </p>
+
+                    <div class="info-box">
+
+                        <div class="info-item">
+                            <strong>Tên di tích</strong>
+                            <span>Di tích lịch sử Chi Lăng</span>
+                        </div>
+
+                        <div class="info-item">
+                            <strong>Cấp xếp hạng</strong>
+                            <span>Quốc gia đặc biệt</span>
+                        </div>
+
+                        <div class="info-item">
+                            <strong>Địa bàn hiện nay</strong>
+                            <span>Xã Chi Lăng, tỉnh Lạng Sơn</span>
+                        </div>
+
+                        <div class="info-item">
+                            <strong>Quy mô quy hoạch 2026</strong>
+                            <span>198,81 ha khu vực lập quy hoạch</span>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="overview-image">
+                    <img
+                        src="https://icdn.dantri.com.vn/2023/07/26/5-1690364683693.jpg"
+                        alt="Toàn cảnh thung lũng Chi Lăng"
+                        onerror="this.style.display='none';"
+                    >
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= 02 ĐỊA HÌNH ================= -->
+
+        <section id="dia-hinh">
+
+            <div class="section-label">02 — Địa hình</div>
+
+            <h2>Một “trận địa” tự nhiên đặc biệt</h2>
+
+            <div class="landscape-grid">
+
+                <div class="landscape-image">
+
+                    <img
+                        src="https://www.asiakingtravel.com/cuploads/files/image-20240617172903-1.jpeg"
+                        alt="Không gian đường vào khu vực Ải Chi Lăng"
+                        onerror="this.style.display='none';"
+                    >
+
+                </div>
+
+                <div>
+
+                    <p>
+                        Khu di tích nằm trong thung lũng hẹp kéo dài theo
+                        hướng của sông Thương, được bao bọc bởi các dãy núi
+                        đá vôi như Bảo Đài và Cai Kinh.
+                    </p>
+
+                    <p>
+                        Địa hình nơi đây có sự kết hợp giữa núi cao, thung lũng,
+                        sông suối và các khe núi. Chính đặc điểm này tạo nên
+                        nhiều vị trí hiểm yếu, thuận lợi cho việc tổ chức
+                        các trận đánh phục kích, tập kích và truy kích.
+                    </p>
+
+                    <p>
+                        Những địa danh như Núi Mặt Quỷ, Núi Mã Yên,
+                        Núi Cai Kinh, Núi Bàn Cờ… không chỉ có giá trị
+                        về lịch sử mà còn tạo nên cảnh quan đặc trưng
+                        của Chi Lăng.
+                    </p>
+
+                    <div class="highlight">
+                        <strong>Giá trị đặc biệt:</strong>
+                        địa hình tự nhiên của Chi Lăng được kết hợp với
+                        nghệ thuật quân sự để biến thung lũng thành một
+                        chiến trường có khả năng khống chế các tuyến
+                        di chuyển quan trọng từ phía Bắc xuống.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= 03 LỊCH SỬ ================= -->
+
+        <section id="lich-su">
+
+            <div class="section-label">03 — Lịch sử</div>
+
+            <h2>Dấu ấn lịch sử qua nhiều thời kỳ</h2>
+
+            <p class="lead">
+                Chi Lăng không chỉ gắn với một trận đánh duy nhất mà là
+                không gian lịch sử trải qua nhiều thế kỷ dựng nước và giữ nước.
+            </p>
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <div class="timeline-year">Thế kỷ XI</div>
+                    <p>
+                        Chi Lăng là một trong những khu vực gắn với các cuộc
+                        kháng chiến chống quân Tống và bảo vệ vùng biên cương
+                        phía Bắc.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">Thế kỷ XIII</div>
+                    <p>
+                        Khu vực Chi Lăng tiếp tục được nhắc đến trong lịch sử
+                        kháng chiến chống quân Nguyên – Mông.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">Năm 1427</div>
+                    <p>
+                        Chiến thắng Chi Lăng trong cuộc kháng chiến chống quân
+                        Minh trở thành dấu mốc nổi bật nhất của khu di tích.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">Thế kỷ XVIII – XIX</div>
+                    <p>
+                        Vùng đất Chi Lăng tiếp tục giữ vai trò quan trọng
+                        trong lịch sử quân sự và phong trào đấu tranh
+                        của nhân dân địa phương.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">Thế kỷ XX</div>
+                    <p>
+                        Khu vực tiếp tục ghi dấu những hoạt động cách mạng,
+                        kháng chiến và bảo vệ đất nước.
+                    </p>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-year">2019 – nay</div>
+                    <p>
+                        Di tích được xếp hạng quốc gia đặc biệt và tiếp tục
+                        được nghiên cứu, quy hoạch bảo tồn, tu bổ và phát huy
+                        giá trị lịch sử – văn hóa – du lịch.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= 04 CÁC ĐIỂM DI TÍCH ================= -->
+
+        <section id="diem-di-tich">
+
+            <div class="section-label">04 — Các điểm di tích</div>
+
+            <h2>Một quần thể gồm nhiều điểm thành phần</h2>
+
+            <p class="lead">
+                Theo quy hoạch được phê duyệt năm 2026, Di tích quốc gia đặc biệt
+                Chi Lăng gồm 24 điểm di tích quốc gia đặc biệt. Toàn bộ không gian
+                quy hoạch còn kết nối với 22 điểm di tích quốc gia và các khu vực
+                cảnh quan liên quan.
+            </p>
+
+            <div class="cards">
+
+                <div class="card">
+                    <div class="card-number">01</div>
+                    <h3>Núi Mặt Quỷ</h3>
+                    <p>
+                        Một địa danh nổi bật với hình dáng đá tự nhiên đặc biệt,
+                        gắn với không gian lịch sử Ải Chi Lăng.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-number">02</div>
+                    <h3>Núi Mã Yên</h3>
+                    <p>
+                        Một trong những địa điểm quan trọng của chiến trường
+                        Chi Lăng, nổi bật giữa thung lũng.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-number">03</div>
+                    <h3>Ải Chi Lăng</h3>
+                    <p>
+                        Không gian trung tâm gắn với nhiều chiến công quân sự
+                        trong lịch sử dân tộc.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-number">04</div>
+                    <h3>Quỷ Môn Quan</h3>
+                    <p>
+                        Địa danh gắn với vị trí hiểm yếu và những câu chuyện
+                        lịch sử, truyền thuyết của vùng Chi Lăng.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-number">05</div>
+                    <h3>Các địa điểm trận đánh</h3>
+                    <p>
+                        Hệ thống địa điểm liên quan đến các hoạt động phục kích,
+                        tập kích và truy kích trong chiến trường Chi Lăng.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-number">06</div>
+                    <h3>Không gian cảnh quan</h3>
+                    <p>
+                        Núi đá, thung lũng, sông suối và ruộng đồng tạo thành
+                        một tổng thể di sản đặc sắc.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= 05 CHIẾN THẮNG 1427 ================= -->
+
+        <section id="chien-thang">
+
+            <div class="section-label">05 — Chiến thắng Chi Lăng</div>
+
+            <h2>Dấu mốc lịch sử năm 1427</h2>
+
+            <div class="battle-box">
+
+                <h3>Chiến thắng Chi Lăng – bước ngoặt của cuộc kháng chiến chống Minh</h3>
+
+                <p>
+                    Năm 1427, quân Minh đưa lực lượng lớn sang nhằm giải vây
+                    cho đạo quân đang bị nghĩa quân Lam Sơn bao vây tại Đông Quan.
+                    Đạo quân tiếp viện do Liễu Thăng chỉ huy tiến vào từ phía Bắc
+                    và đi qua khu vực Chi Lăng.
+                </p>
+
+                <p>
+                    Nghĩa quân Lam Sơn đã tận dụng địa hình hiểm yếu của Chi Lăng,
+                    tổ chức nghi binh, phục kích và đánh vào lực lượng đối phương.
+                    Liễu Thăng bị tiêu diệt tại khu vực Chi Lăng, tạo ra bước ngoặt
+                    quan trọng cho chiến dịch cuối cùng của cuộc khởi nghĩa Lam Sơn.
+                </p>
+
+                <p>
+                    Chiến thắng Chi Lăng góp phần làm suy yếu nghiêm trọng lực lượng
+                    viện binh của quân Minh và tạo điều kiện để cuộc kháng chiến
+                    đi đến thắng lợi.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= 06 CẢNH QUAN ================= -->
+
+        <section id="canh-quan">
+
+            <div class="section-label">06 — Cảnh quan</div>
+
+            <h2>Núi đá, thung lũng và dòng sông</h2>
+
+            <p>
+                Bên cạnh giá trị lịch sử, Chi Lăng còn sở hữu cảnh quan thiên nhiên
+                đặc trưng của vùng núi đá vôi Đông Bắc. Những dãy núi xanh nối tiếp,
+                thung lũng rộng và các khu dân cư, ruộng đồng tạo nên một bức tranh
+                vừa hùng vĩ vừa gần gũi.
+            </p>
+
+            <div class="cards">
+
+                <div class="card">
+                    <div class="card-number">A</div>
+                    <h3>Núi đá vôi</h3>
+                    <p>
+                        Các khối núi đá vôi dựng đứng tạo nên địa hình đặc trưng
+                        và góp phần hình thành hệ thống phòng thủ tự nhiên.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-number">B</div>
+                    <h3>Thung lũng Chi Lăng</h3>
+                    <p>
+                        Không gian thung lũng kéo dài theo sông Thương,
+                        là khu vực trung tâm của quần thể di tích.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-number">C</div>
+                    <h3>Sông và đồng ruộng</h3>
+                    <p>
+                        Hệ thống sông suối, ruộng đồng và làng xóm tạo nên
+                        cảnh quan sinh thái – văn hóa đặc sắc.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= 07 VĂN HÓA ================= -->
+
+        <section id="van-hoa">
+
+            <div class="section-label">07 — Văn hóa</div>
+
+            <h2>Không gian lịch sử gắn với đời sống cộng đồng</h2>
+
+            <div class="culture-grid">
+
+                <div class="culture-card">
+
+                    <h3>Đền và không gian tưởng niệm</h3>
+
+                    <p>
+                        Trong không gian Chi Lăng có các công trình và địa điểm
+                        tưởng niệm những nhân vật, sự kiện lịch sử. Đây là nơi
+                        người dân địa phương và du khách tìm hiểu, tưởng nhớ
+                        các thế hệ đã góp phần bảo vệ đất nước.
+                    </p>
+
+                </div>
+
+                <div class="culture-card">
+
+                    <h3>Truyền thuyết dân gian</h3>
+
+                    <p>
+                        Nhiều địa danh trong khu vực gắn với những câu chuyện
+                        dân gian, truyền thuyết và ký ức cộng đồng được lưu truyền
+                        qua nhiều thế hệ.
+                    </p>
+
+                </div>
+
+                <div class="culture-card">
+
+                    <h3>Văn hóa Xứ Lạng</h3>
+
+                    <p>
+                        Du khách có thể kết hợp tìm hiểu khu di tích với văn hóa
+                        các dân tộc sinh sống tại Lạng Sơn, các làn điệu dân gian,
+                        phong tục và ẩm thực địa phương.
+                    </p>
+
+                </div>
+
+                <div class="culture-card">
+
+                    <h3>Nông sản địa phương</h3>
+
+                    <p>
+                        Khu vực Chi Lăng còn nổi tiếng với các sản vật địa phương,
+                        trong đó có na Chi Lăng – một sản phẩm nông nghiệp
+                        đặc trưng của vùng.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= 08 DU LỊCH ================= -->
+
+        <section id="du-lich">
+
+            <div class="section-label">08 — Du lịch</div>
+
+            <h2>Hành trình về miền ký ức lịch sử</h2>
+
+            <p class="lead">
+                Tham quan Chi Lăng phù hợp với hình thức du lịch kết hợp:
+                tìm hiểu lịch sử, khám phá cảnh quan và trải nghiệm văn hóa địa phương.
+            </p>
+
+            <div class="tourism">
+
+                <div class="tour-item">
+                    <h3>🏛️ Tìm hiểu lịch sử</h3>
+                    <p>
+                        Khám phá các địa điểm chiến trường, bia ghi dấu,
+                        tượng đài và các điểm di tích thành phần.
+                    </p>
+                </div>
+
+                <div class="tour-item">
+                    <h3>⛰️ Khám phá cảnh quan</h3>
+                    <p>
+                        Quan sát hệ thống núi đá, thung lũng và các địa danh
+                        tự nhiên nổi tiếng của Chi Lăng.
+                    </p>
+                </div>
+
+                <div class="tour-item">
+                    <h3>📷 Chụp ảnh</h3>
+                    <p>
+                        Cảnh quan núi đá và thung lũng tạo nhiều góc nhìn
+                        đặc trưng cho những chuyến tham quan.
+                    </p>
+                </div>
+
+                <div class="tour-item">
+                    <h3>🥭 Trải nghiệm nông sản</h3>
+                    <p>
+                        Tìm hiểu các sản phẩm nông nghiệp đặc trưng,
+                        đặc biệt là vùng trồng na Chi Lăng.
+                    </p>
+                </div>
+
+                <div class="tour-item">
+                    <h3>🏮 Tìm hiểu văn hóa</h3>
+                    <p>
+                        Kết hợp tham quan di tích với tìm hiểu phong tục,
+                        lễ hội và đời sống cộng đồng địa phương.
+                    </p>
+                </div>
+
+                <div class="tour-item">
+                    <h3>🗺️ Khám phá Xứ Lạng</h3>
+                    <p>
+                        Chi Lăng có thể được kết hợp vào hành trình khám phá
+                        nhiều di tích và danh thắng khác của tỉnh Lạng Sơn.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= 09 BẢO TỒN ================= -->
+
+        <section id="bao-ton">
+
+            <div class="section-label">09 — Bảo tồn</div>
+
+            <h2>Bảo tồn để lịch sử tiếp tục được kể</h2>
+
+            <p>
+                Việc bảo tồn Khu di tích lịch sử Chi Lăng không chỉ nhằm giữ lại
+                những dấu tích vật chất mà còn bảo vệ cảnh quan, không gian lịch sử
+                và giá trị văn hóa gắn với cộng đồng địa phương.
+            </p>
+
+            <div class="conservation">
+
+                <p>
+                    Ngày 19/01/2026, Thủ tướng Chính phủ ban hành Quyết định
+                    số 136/QĐ-TTg phê duyệt Quy hoạch bảo quản, tu bổ, phục hồi
+                    Di tích quốc gia đặc biệt Di tích lịch sử Chi Lăng, tỉnh Lạng Sơn.
+                </p>
+
+                <div class="conservation-grid">
+
+                    <div class="conservation-item">
+                        <strong>Bảo vệ di tích</strong>
+                        <p>
+                            Bảo quản các điểm di tích thành phần và các khu vực
+                            có giá trị lịch sử.
+                        </p>
+                    </div>
+
+                    <div class="conservation-item">
+                        <strong>Bảo vệ cảnh quan</strong>
+                        <p>
+                            Giữ gìn không gian núi đá, thung lũng và cảnh quan
+                            kết nối giữa các điểm di tích.
+                        </p>
+                    </div>
+
+                    <div class="conservation-item">
+                        <strong>Phục hồi phù hợp</strong>
+                        <p>
+                            Tu bổ, phục hồi các công trình và dấu tích trên cơ sở
+                            nghiên cứu khoa học và hồ sơ di tích.
+                        </p>
+                    </div>
+
+                    <div class="conservation-item">
+                        <strong>Phát huy giá trị</strong>
+                        <p>
+                            Gắn bảo tồn với giáo dục lịch sử, tham quan và
+                            phát triển du lịch bền vững.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= 10 HÌNH ẢNH ================= -->
+
+        <section id="hinh-anh">
+
+            <div class="section-label">10 — Hình ảnh</div>
+
+            <h2>Chi Lăng giữa núi rừng Xứ Lạng</h2>
+
+            <div class="gallery">
+
+                <div class="gallery-item large">
+                    <img
+                        src="https://icdn.dantri.com.vn/2023/07/26/5-1690364683693.jpg"
+                        alt="Toàn cảnh thung lũng Chi Lăng"
+                        onerror="this.style.display='none';"
+                    >
+                    <div class="image-label">
+                        Toàn cảnh thung lũng Chi Lăng
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img
+                        src="https://mia.vn/media/uploads/blog-du-lich/ai-chi-lang-03-1696429227.jpg"
+                        alt="Biển đá Ải Chi Lăng"
+                        onerror="this.style.display='none';"
+                    >
+                    <div class="image-label">
+                        Dấu tích Ải Chi Lăng
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img
+                        src="https://cdn.baophapluat.vn/w3840/uploaded/quynhluu/2022_10_26/e9b8ff0d00a2bba4d70f248085131dcd-1905.jpg"
+                        alt="Bia giới thiệu Ải Chi Lăng"
+                        onerror="this.style.display='none';"
+                    >
+                    <div class="image-label">
+                        Không gian tưởng niệm Ải Chi Lăng
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img
+                        src="https://file3.qdnd.vn/data/images/5/2020/01/20/xuandung/17012019dung8.jpg"
+                        alt="Tượng đài Chi Lăng"
+                        onerror="this.style.display='none';"
+                    >
+                    <div class="image-label">
+                        Tượng đài chiến thắng Chi Lăng
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img
+                        src="https://www.asiakingtravel.com/cuploads/files/image-20240617172903-1.jpeg"
+                        alt="Đường vào khu vực Chi Lăng"
+                        onerror="this.style.display='none';"
+                    >
+                    <div class="image-label">
+                        Cảnh quan khu di tích
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= 11 NGUỒN ================= -->
+
+        <section id="nguon">
+
+            <div class="section-label">11 — Nguồn thông tin</div>
+
+            <h2>Nguồn tham khảo</h2>
+
+            <div class="sources">
+
+                <p>
+                    <strong>Cổng thông tin điện tử tỉnh Lạng Sơn</strong><br>
+                    Thông tin về Quy hoạch bảo quản, tu bổ, phục hồi Di tích
+                    quốc gia đặc biệt Di tích lịch sử Chi Lăng năm 2026.
+                </p>
+
+                <p>
+                    <strong>Cổng thông tin điện tử huyện Chi Lăng</strong><br>
+                    Các thông tin giới thiệu về di tích – danh thắng và
+                    lịch sử khu vực Chi Lăng.
+                </p>
+
+                <p>
+                    <strong>Cổng Du lịch Lạng Sơn</strong><br>
+                    Thông tin giới thiệu Khu di tích lịch sử Chi Lăng,
+                    giá trị lịch sử, cảnh quan và các điểm di tích.
+                </p>
+
+                <p>
+                    <strong>Tư liệu hình ảnh:</strong>
+                    Dân Trí, Báo Pháp Luật Việt Nam, MIA.vn,
+                    Asia King Travel, Quân đội Nhân dân.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= BACK HOME ================= -->
+
+    <a href="./danhlamthangcanh.html" class="back-home">
+        ← Trang chủ
+    </a>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+        <strong>LẠNG SƠN</strong>
+        <br>
+        Khám phá danh lam thắng cảnh và di tích lịch sử Xứ Lạng
+    </footer>
+
+
+    <script>
+        const navLinks = document.querySelectorAll(".section-nav a");
+        const sections = document.querySelectorAll("main section");
+
+        window.addEventListener("scroll", () => {
+
+            let current = "";
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 180;
+
+                if (window.scrollY >= sectionTop) {
+                    current = section.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+
+                if (link.getAttribute("href") === "#" + current) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

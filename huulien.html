@@ -1,0 +1,2147 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hữu Liên – Làng du lịch cộng đồng Lạng Sơn</title>
+<meta name="description" content="Khám phá Hữu Liên – làng du lịch cộng đồng nổi bật của Lạng Sơn với thung lũng Đồng Lâm, núi đá vôi, nhà sàn và văn hóa bản địa.">
+
+<style>
+:root{
+  --bg:#f3f1e9;
+  --paper:#fffdf8;
+  --green:#2d5b49;
+  --green-dark:#173a2e;
+  --green-soft:#dce9e0;
+  --gold:#b78a49;
+  --text:#26362f;
+  --muted:#707a74;
+  --line:rgba(38,54,47,.12);
+  --shadow:0 20px 60px rgba(30,55,44,.10);
+  --radius:28px;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.7;
+}
+
+img{
+  max-width:100%;
+  display:block;
+}
+
+a{
+  color:inherit;
+}
+
+.container{
+  width:min(1180px,calc(100% - 32px));
+  margin:auto;
+}
+
+/* =========================
+   TOPBAR
+========================= */
+
+.topbar{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1000;
+  background:rgba(255,253,248,.90);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(38,54,47,.08);
+}
+
+.topbar-inner{
+  width:min(1180px,calc(100% - 32px));
+  margin:auto;
+  min-height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  min-width:0;
+}
+
+.brand-text{
+  display:flex;
+  flex-direction:column;
+  min-width:0;
+}
+
+.brand-text small{
+  color:var(--muted);
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.10em;
+  text-transform:uppercase;
+}
+
+.brand-text strong{
+  color:var(--green-dark);
+  font-size:14px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.back-btn{
+  text-decoration:none;
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--green-dark);
+  padding:9px 15px;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:800;
+  transition:.25s;
+}
+
+.back-btn:hover{
+  background:var(--green);
+  color:#fff;
+  transform:translateY(-2px);
+}
+
+/* =========================
+   SECTION NAV
+========================= */
+
+.section-nav{
+  position:sticky;
+  top:72px;
+  z-index:900;
+  background:rgba(243,241,233,.88);
+  backdrop-filter:blur(15px);
+  -webkit-backdrop-filter:blur(15px);
+  border-bottom:1px solid rgba(38,54,47,.08);
+}
+
+.section-nav-inner{
+  width:min(1180px,calc(100% - 32px));
+  margin:auto;
+  display:flex;
+  gap:5px;
+  overflow-x:auto;
+  scrollbar-width:none;
+  padding:7px 0;
+}
+
+.section-nav-inner::-webkit-scrollbar{
+  display:none;
+}
+
+.section-link{
+  flex:0 0 auto;
+  text-decoration:none;
+  padding:9px 13px;
+  border-radius:13px;
+  color:#69756e;
+  font-size:10px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.05em;
+  transition:.25s;
+}
+
+.section-link:hover,
+.section-link.active{
+  background:var(--green-soft);
+  color:var(--green-dark);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  min-height:720px;
+  position:relative;
+  overflow:hidden;
+  display:flex;
+  align-items:flex-end;
+  background:
+    linear-gradient(180deg,rgba(15,35,28,.08),rgba(10,28,21,.82)),
+    url("https://langsongeopark.com.vn/upload_images/images/2023/01/02/image%2812%29.png")
+    center/cover no-repeat;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 70% 25%,rgba(255,255,255,.18),transparent 30%),
+    linear-gradient(90deg,rgba(10,27,21,.50),transparent 65%);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  width:min(1180px,calc(100% - 32px));
+  margin:0 auto;
+  padding:130px 0 70px;
+  color:#fff;
+}
+
+.hero-kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 13px;
+  border:1px solid rgba(255,255,255,.25);
+  background:rgba(255,255,255,.10);
+  backdrop-filter:blur(10px);
+  border-radius:999px;
+  font-size:11px;
+  font-weight:900;
+  letter-spacing:.09em;
+  text-transform:uppercase;
+}
+
+.hero h1{
+  font-size:clamp(60px,10vw,128px);
+  line-height:.85;
+  letter-spacing:-.07em;
+  margin:24px 0 24px;
+}
+
+.hero-description{
+  max-width:680px;
+  font-size:clamp(17px,2vw,22px);
+  line-height:1.55;
+  color:rgba(255,255,255,.90);
+}
+
+.hero-facts{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:30px;
+}
+
+.hero-fact{
+  padding:10px 14px;
+  border-radius:999px;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.20);
+  backdrop-filter:blur(10px);
+  font-size:12px;
+  font-weight:700;
+}
+
+.hero-scroll{
+  position:absolute;
+  right:30px;
+  bottom:38px;
+  z-index:3;
+  color:rgba(255,255,255,.75);
+  writing-mode:vertical-rl;
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+
+/* =========================
+   COMMON
+========================= */
+
+.section{
+  padding:105px 0;
+  scroll-margin-top:130px;
+}
+
+.section-head{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:50px;
+  align-items:end;
+  margin-bottom:48px;
+}
+
+.eyebrow{
+  color:var(--gold);
+  font-size:11px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  margin-bottom:12px;
+}
+
+.section h2{
+  color:var(--green-dark);
+  font-size:clamp(34px,5vw,64px);
+  line-height:1.03;
+  letter-spacing:-.045em;
+}
+
+.section-head p{
+  color:var(--muted);
+  max-width:530px;
+  font-size:16px;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.intro{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+
+.intro-card{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:38px;
+  box-shadow:var(--shadow);
+}
+
+.intro-card.large{
+  min-height:360px;
+}
+
+.intro-card p{
+  color:#5f6b64;
+  margin-bottom:20px;
+}
+
+.number{
+  color:var(--gold);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.12em;
+}
+
+.route{
+  display:grid;
+  gap:12px;
+  margin-top:25px;
+}
+
+.route-item{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:14px 0;
+  border-bottom:1px solid var(--line);
+}
+
+.route-item span{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:var(--green-soft);
+  color:var(--green-dark);
+  display:grid;
+  place-items:center;
+  font-size:11px;
+  font-weight:900;
+}
+
+/* =========================
+   LANDSCAPE
+========================= */
+
+.landscape{
+  background:var(--green-dark);
+  color:#fff;
+  position:relative;
+  overflow:hidden;
+}
+
+.landscape::before{
+  content:"";
+  position:absolute;
+  width:500px;
+  height:500px;
+  border-radius:50%;
+  background:rgba(255,255,255,.04);
+  top:-220px;
+  right:-120px;
+}
+
+.landscape .section-head h2{
+  color:#fff;
+}
+
+.landscape .section-head p{
+  color:rgba(255,255,255,.68);
+}
+
+.landscape-grid{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:1.3fr .7fr;
+  gap:25px;
+}
+
+.landscape-main{
+  min-height:520px;
+  border-radius:var(--radius);
+  overflow:hidden;
+  position:relative;
+  background:#1e4435;
+}
+
+.landscape-main img{
+  width:100%;
+  height:100%;
+  min-height:520px;
+  object-fit:cover;
+  transition:.5s;
+}
+
+.landscape-main:hover img{
+  transform:scale(1.04);
+}
+
+.landscape-caption{
+  position:absolute;
+  left:25px;
+  right:25px;
+  bottom:25px;
+  padding:22px;
+  border-radius:20px;
+  background:rgba(16,42,33,.76);
+  backdrop-filter:blur(15px);
+}
+
+.landscape-caption h3{
+  font-size:28px;
+  margin-bottom:6px;
+}
+
+.landscape-caption p{
+  color:rgba(255,255,255,.72);
+  font-size:14px;
+}
+
+.landscape-side{
+  display:grid;
+  gap:25px;
+}
+
+.land-card{
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:var(--radius);
+  padding:30px;
+  background:rgba(255,255,255,.05);
+}
+
+.land-card .icon{
+  font-size:32px;
+  margin-bottom:18px;
+}
+
+.land-card h3{
+  margin-bottom:9px;
+  font-size:21px;
+}
+
+.land-card p{
+  color:rgba(255,255,255,.65);
+  font-size:14px;
+}
+
+/* =========================
+   SEASONS
+========================= */
+
+.season-tabs{
+  display:flex;
+  gap:8px;
+  margin-bottom:25px;
+}
+
+.season-btn{
+  border:1px solid var(--line);
+  background:var(--paper);
+  color:var(--muted);
+  padding:12px 18px;
+  border-radius:999px;
+  cursor:pointer;
+  font:inherit;
+  font-size:12px;
+  font-weight:900;
+  transition:.25s;
+}
+
+.season-btn.active{
+  background:var(--green);
+  color:#fff;
+  border-color:var(--green);
+}
+
+.season-panel{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+
+.season-image{
+  min-height:480px;
+  overflow:hidden;
+}
+
+.season-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.season-content{
+  padding:48px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.season-badge{
+  display:inline-block;
+  align-self:flex-start;
+  padding:7px 11px;
+  background:var(--green-soft);
+  color:var(--green-dark);
+  border-radius:999px;
+  font-size:10px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  margin-bottom:18px;
+}
+
+.season-content h3{
+  font-size:38px;
+  line-height:1.05;
+  color:var(--green-dark);
+  margin-bottom:18px;
+}
+
+.season-content p{
+  color:var(--muted);
+  margin-bottom:25px;
+}
+
+.highlights{
+  display:grid;
+  gap:10px;
+}
+
+.highlight{
+  display:flex;
+  gap:10px;
+  color:#4e5d55;
+  font-size:14px;
+}
+
+.highlight::before{
+  content:"✓";
+  color:var(--gold);
+  font-weight:900;
+}
+
+/* =========================
+   CULTURE
+========================= */
+
+.culture-grid{
+  display:grid;
+  grid-template-columns:.9fr 1.1fr;
+  gap:25px;
+}
+
+.culture-copy{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:42px;
+  box-shadow:var(--shadow);
+}
+
+.culture-copy h3{
+  color:var(--green-dark);
+  font-size:34px;
+  line-height:1.1;
+  margin-bottom:20px;
+}
+
+.culture-copy p{
+  color:var(--muted);
+  margin-bottom:18px;
+}
+
+.tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:25px;
+}
+
+.tag{
+  padding:8px 12px;
+  border-radius:999px;
+  background:var(--green-soft);
+  color:var(--green-dark);
+  font-size:11px;
+  font-weight:800;
+}
+
+.culture-image{
+  min-height:480px;
+  border-radius:var(--radius);
+  overflow:hidden;
+  position:relative;
+  box-shadow:var(--shadow);
+}
+
+.culture-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.culture-image-caption{
+  position:absolute;
+  left:22px;
+  right:22px;
+  bottom:22px;
+  background:rgba(20,45,35,.78);
+  backdrop-filter:blur(12px);
+  border-radius:18px;
+  padding:18px;
+  color:#fff;
+}
+
+.culture-image-caption strong{
+  display:block;
+  margin-bottom:3px;
+}
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.experience{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.experience-card{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:32px;
+  min-height:270px;
+  box-shadow:0 10px 35px rgba(30,55,44,.06);
+  transition:.3s;
+}
+
+.experience-card:hover{
+  transform:translateY(-7px);
+  box-shadow:var(--shadow);
+}
+
+.experience-icon{
+  font-size:38px;
+  margin-bottom:25px;
+}
+
+.experience-card h3{
+  color:var(--green-dark);
+  font-size:22px;
+  margin-bottom:10px;
+}
+
+.experience-card p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* =========================
+   DEVELOPMENT
+========================= */
+
+.development{
+  background:#e6eee8;
+}
+
+.development-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+
+.development-card{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:35px;
+}
+
+.development-card h3{
+  color:var(--green-dark);
+  font-size:24px;
+  margin-bottom:20px;
+}
+
+.development-list{
+  display:grid;
+  gap:14px;
+}
+
+.development-item{
+  display:grid;
+  grid-template-columns:45px 1fr;
+  gap:13px;
+  align-items:start;
+}
+
+.development-number{
+  width:40px;
+  height:40px;
+  border-radius:13px;
+  background:var(--green-soft);
+  color:var(--green-dark);
+  display:grid;
+  place-items:center;
+  font-size:12px;
+  font-weight:900;
+}
+
+.development-item strong{
+  display:block;
+  color:var(--green-dark);
+  margin-bottom:3px;
+}
+
+.development-item p{
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* =========================
+   QUICK INFO
+========================= */
+
+.info-box{
+  background:var(--green-dark);
+  border-radius:var(--radius);
+  padding:50px;
+  color:#fff;
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:50px;
+  box-shadow:var(--shadow);
+}
+
+.info-box h2{
+  color:#fff;
+}
+
+.info-box > div > p{
+  color:rgba(255,255,255,.68);
+  margin-top:18px;
+}
+
+.info-list{
+  display:grid;
+  gap:0;
+}
+
+.info-row{
+  display:grid;
+  grid-template-columns:150px 1fr;
+  gap:20px;
+  padding:18px 0;
+  border-bottom:1px solid rgba(255,255,255,.12);
+}
+
+.info-row:last-child{
+  border-bottom:0;
+}
+
+.info-label{
+  color:rgba(255,255,255,.50);
+  font-size:11px;
+  font-weight:900;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+
+.info-value{
+  color:#fff;
+  font-size:15px;
+}
+
+/* =========================
+   SOURCE
+========================= */
+
+.source{
+  padding-top:20px;
+}
+
+.source-box{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:32px;
+}
+
+.source-box h3{
+  color:var(--green-dark);
+  margin-bottom:14px;
+}
+
+.source-box p{
+  color:var(--muted);
+  font-size:13px;
+  margin-bottom:12px;
+}
+
+.source-box a{
+  color:var(--green);
+  word-break:break-all;
+  text-decoration:none;
+  font-size:13px;
+}
+
+.source-box a:hover{
+  text-decoration:underline;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  margin-top:70px;
+  background:#102a20;
+  color:#fff;
+  padding:50px 0;
+}
+
+.footer-inner{
+  display:flex;
+  justify-content:flex-start;
+  gap:30px;
+  align-items:end;
+}
+
+.footer-title{
+  font-size:28px;
+  font-weight:900;
+}
+
+.footer-sub{
+  color:rgba(255,255,255,.52);
+  font-size:12px;
+  margin-top:5px;
+}
+
+/* =========================
+   PROGRESS
+========================= */
+
+.progress{
+  position:fixed;
+  top:0;
+  left:0;
+  height:3px;
+  width:0;
+  background:var(--gold);
+  z-index:2000;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:850px){
+
+  .topbar-inner{
+    min-height:64px;
+  }
+
+  .section-nav{
+    top:64px;
+  }
+
+  .hero{
+    min-height:650px;
+  }
+
+  .hero-content{
+    padding-bottom:55px;
+  }
+
+  .hero h1{
+    font-size:70px;
+  }
+
+  .section{
+    padding:75px 0;
+  }
+
+  .section-head,
+  .intro,
+  .landscape-grid,
+  .season-panel,
+  .culture-grid,
+  .development-grid,
+  .info-box{
+    grid-template-columns:1fr;
+  }
+
+  .section-head{
+    gap:20px;
+  }
+
+  .landscape-main,
+  .landscape-main img{
+    min-height:420px;
+  }
+
+  .experience{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .info-box{
+    gap:30px;
+  }
+}
+
+@media(max-width:600px){
+
+  .container,
+  .topbar-inner,
+  .section-nav-inner,
+  .hero-content{
+    width:min(100% - 22px,1180px);
+  }
+
+  .brand-text strong{
+    max-width:180px;
+  }
+
+  .back-btn{
+    display:none;
+  }
+
+  .hero{
+    min-height:610px;
+  }
+
+  .hero h1{
+    font-size:62px;
+  }
+
+  .hero-description{
+    font-size:15px;
+  }
+
+  .hero-scroll{
+    display:none;
+  }
+
+  .intro-card,
+  .culture-copy,
+  .season-content,
+  .development-card,
+  .info-box,
+  .source-box{
+    padding:27px;
+  }
+
+  .experience{
+    grid-template-columns:1fr;
+  }
+
+  .season-image{
+    min-height:300px;
+  }
+
+  .season-content h3{
+    font-size:30px;
+  }
+
+  .landscape-main,
+  .landscape-main img{
+    min-height:350px;
+  }
+
+  .info-row{
+    grid-template-columns:1fr;
+    gap:5px;
+  }
+
+  .footer-inner{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="progress" id="progress"></div>
+
+<!-- TOPBAR -->
+<header class="topbar">
+  <div class="topbar-inner">
+
+    <a class="brand" href="./danhlamthangcanh.html">
+
+      <div class="brand-text">
+        <small>Lạng Sơn</small>
+        <strong>Làng du lịch cộng đồng Hữu Liên</strong>
+      </div>
+
+    </a>
+
+    <a class="back-btn" href="./danhlamthangcanh.html">
+      ← Danh sách điểm đến
+    </a>
+
+  </div>
+</header>
+
+<!-- SECTION NAV -->
+<nav class="section-nav">
+  <div class="section-nav-inner">
+
+    <a class="section-link active" href="#tong-quan">
+      Tổng quan
+    </a>
+
+    <a class="section-link" href="#canh-quan">
+      Cảnh quan
+    </a>
+
+    <a class="section-link" href="#mua">
+      Hai mùa
+    </a>
+
+    <a class="section-link" href="#van-hoa">
+      Văn hóa
+    </a>
+
+    <a class="section-link" href="#trai-nghiem">
+      Trải nghiệm
+    </a>
+
+    <a class="section-link" href="#phat-trien">
+      Phát triển
+    </a>
+
+    <a class="section-link" href="#thong-tin">
+      Thông tin
+    </a>
+
+    <a class="section-link" href="#nguon">
+      Nguồn
+    </a>
+
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="hero-kicker">
+      🌿 Community · Nature · Valley
+    </div>
+
+    <h1>Hữu Liên</h1>
+
+    <p class="hero-description">
+      Một làng du lịch cộng đồng nằm giữa núi đá vôi,
+      thung lũng xanh, làng bản và những ngôi nhà sàn
+      truyền thống của vùng Hữu Lũng, Lạng Sơn.
+    </p>
+
+    <div class="hero-facts">
+
+      <div class="hero-fact">
+        📍 Xã Hữu Liên, tỉnh Lạng Sơn
+      </div>
+
+      <div class="hero-fact">
+        ⛰️ Thung lũng Đồng Lâm
+      </div>
+
+      <div class="hero-fact">
+        🏡 Nhà sàn · Homestay
+      </div>
+
+      <div class="hero-fact">
+        🌿 Du lịch sinh thái cộng đồng
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="hero-scroll">
+    Cuộn để khám phá ↓
+  </div>
+
+</section>
+
+
+<main>
+
+<!-- TỔNG QUAN -->
+<section class="section" id="tong-quan">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+        <div class="eyebrow">01 · Tổng quan</div>
+
+        <h2>
+          Một vùng núi
+          để đi chậm lại.
+        </h2>
+      </div>
+
+      <p>
+        Hữu Liên kết hợp cảnh quan núi đá vôi,
+        thung lũng Đồng Lâm, làng bản và đời sống
+        cộng đồng địa phương thành một không gian
+        du lịch gần gũi với thiên nhiên.
+      </p>
+
+    </div>
+
+
+    <div class="intro">
+
+      <div class="intro-card large">
+
+        <div class="number">HỮU LIÊN</div>
+
+        <p style="margin-top:22px;">
+          Làng du lịch cộng đồng Hữu Liên được hình thành
+          và phát triển theo hướng kết hợp giữa bảo tồn
+          cảnh quan, văn hóa bản địa và các hoạt động
+          trải nghiệm dành cho du khách.
+        </p>
+
+        <p>
+          Điểm nhấn nổi bật nhất là thung lũng Đồng Lâm,
+          nơi những dãy núi đá vôi bao quanh đồng cỏ,
+          dòng nước và không gian làng bản.
+        </p>
+
+      </div>
+
+
+      <div class="intro-card">
+
+        <div class="number">HÀNH TRÌNH KHÁM PHÁ</div>
+
+        <div class="route">
+
+          <div class="route-item">
+            <span>01</span>
+            <strong>Làng bản</strong>
+          </div>
+
+          <div class="route-item">
+            <span>02</span>
+            <strong>Đồng Lâm</strong>
+          </div>
+
+          <div class="route-item">
+            <span>03</span>
+            <strong>Núi đá vôi</strong>
+          </div>
+
+          <div class="route-item">
+            <span>04</span>
+            <strong>Văn hóa cộng đồng</strong>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CẢNH QUAN -->
+<section class="section landscape" id="canh-quan">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+        <div class="eyebrow">02 · Cảnh quan</div>
+
+        <h2>
+          Đồng Lâm —
+          sân khấu của thiên nhiên.
+        </h2>
+      </div>
+
+      <p>
+        Thung lũng Đồng Lâm là một trong những
+        điểm nhấn cảnh quan đặc trưng của khu vực
+        Hữu Liên và tuyến du lịch Công viên địa chất
+        Lạng Sơn.
+      </p>
+
+    </div>
+
+
+    <div class="landscape-grid">
+
+      <div class="landscape-main">
+
+        <img
+          src="https://langsongeopark.com.vn/upload_images/images/2023/01/02/image%2812%29.png"
+          alt="Cảnh quan Hữu Liên và thung lũng Đồng Lâm"
+          loading="lazy"
+        >
+
+        <div class="landscape-caption">
+
+          <h3>Núi đá · đồng cỏ · dòng nước</h3>
+
+          <p>
+            Một không gian cảnh quan thay đổi theo
+            thời tiết và mùa trong năm.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="landscape-side">
+
+        <div class="land-card">
+
+          <div class="icon">⛰️</div>
+
+          <h3>Núi đá vôi</h3>
+
+          <p>
+            Những dãy núi đá vôi bao quanh thung lũng,
+            tạo nên địa hình đặc trưng của vùng.
+          </p>
+
+        </div>
+
+
+        <div class="land-card">
+
+          <div class="icon">🌱</div>
+
+          <h3>Đồng cỏ</h3>
+
+          <p>
+            Vào mùa cạn, thung lũng mở ra với những
+            khoảng đồng cỏ rộng và xanh.
+          </p>
+
+        </div>
+
+
+        <div class="land-card">
+
+          <div class="icon">💧</div>
+
+          <h3>Dòng nước</h3>
+
+          <p>
+            Khi nước dâng, mặt nước phản chiếu núi
+            và bầu trời, tạo diện mạo sơn thủy.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- HAI MÙA -->
+<section class="section" id="mua">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+        <div class="eyebrow">03 · Hai diện mạo</div>
+
+        <h2>
+          Hữu Liên thay đổi
+          theo mùa.
+        </h2>
+      </div>
+
+      <p>
+        Đồng Lâm có sự khác biệt rõ rệt giữa
+        thời kỳ cạn và thời kỳ nước dâng,
+        tạo nên hai diện mạo rất riêng.
+      </p>
+
+    </div>
+
+
+    <div class="season-tabs">
+
+      <button class="season-btn active" data-season="dry">
+        🌱 Mùa cạn
+      </button>
+
+      <button class="season-btn" data-season="water">
+        💧 Mùa nước
+      </button>
+
+    </div>
+
+
+    <div class="season-panel">
+
+      <div class="season-image">
+
+        <img
+          id="seasonImage"
+          src="https://langsongeopark.com.vn/upload_images/images/2024/12/07/Camping%201.jpg"
+          alt="Cảnh quan Đồng Lâm"
+        >
+
+      </div>
+
+
+      <div class="season-content">
+
+        <span class="season-badge" id="seasonBadge">
+          Mùa cạn
+        </span>
+
+        <h3 id="seasonTitle">
+          Không gian thảo nguyên
+        </h3>
+
+        <p id="seasonText">
+          Trong mùa cạn, Đồng Lâm mang sắc xanh
+          của đồng cỏ, những lối đi nhỏ và các dải
+          núi đá vôi bao quanh. Không gian rộng và
+          thoáng, phù hợp với những trải nghiệm
+          ngắm cảnh và khám phá thiên nhiên.
+        </p>
+
+        <div class="highlights" id="seasonHighlights">
+
+          <div class="highlight">
+            Đồng cỏ mở rộng, nổi bật với màu xanh tự nhiên.
+          </div>
+
+          <div class="highlight">
+            Không gian thích hợp cho trekking, cắm trại và ngắm cảnh.
+          </div>
+
+          <div class="highlight">
+            Núi đá vôi hiện rõ quanh thung lũng.
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- VĂN HÓA -->
+<section class="section" id="van-hoa">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+        <div class="eyebrow">04 · Văn hóa</div>
+
+        <h2>
+          Ngủ trong làng,
+          sống cùng cảnh quan.
+        </h2>
+      </div>
+
+      <p>
+        Hữu Liên không chỉ có cảnh đẹp mà còn
+        là không gian sinh hoạt của cộng đồng
+        địa phương với nhà sàn, ẩm thực và
+        những trải nghiệm văn hóa.
+      </p>
+
+    </div>
+
+
+    <div class="culture-grid">
+
+      <div class="culture-copy">
+
+        <div class="eyebrow">Làng bản & đời sống</div>
+
+        <h3>
+          Những ngôi nhà sàn
+          làm nên nét riêng Hữu Liên.
+        </h3>
+
+        <p>
+          Tại các làng bản Hữu Liên có những
+          ngôi nhà sàn truyền thống của người
+          Tày và Dao, góp phần tạo nên bản sắc
+          văn hóa đặc trưng của địa phương.
+        </p>
+
+        <p>
+          Du lịch cộng đồng được phát triển theo
+          hướng gắn việc nghỉ ngơi với trải nghiệm
+          không gian sống, văn hóa, ẩm thực và
+          các hoạt động truyền thống.
+        </p>
+
+        <div class="tags">
+
+          <span class="tag">Nhà sàn</span>
+          <span class="tag">Homestay</span>
+          <span class="tag">Văn hóa Tày</span>
+          <span class="tag">Văn hóa Dao</span>
+          <span class="tag">Ẩm thực địa phương</span>
+          <span class="tag">Đan lát</span>
+
+        </div>
+
+      </div>
+
+
+      <div class="culture-image">
+
+        <img
+          src="https://langsongeopark.com.vn/upload_images/images/2024/12/10/z6114623055560_979e3b00db405be36ce95bafcf9bab00.jpg"
+          alt="Homestay Sơn Thủy tại Hữu Liên"
+          loading="lazy"
+        >
+
+        <div class="culture-image-caption">
+
+          <strong>Homestay Sơn Thủy</strong>
+
+          <span>
+            Một lát cắt của không gian du lịch cộng đồng Hữu Liên.
+          </span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- TRẢI NGHIỆM -->
+<section class="section" id="trai-nghiem">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+        <div class="eyebrow">05 · Trải nghiệm</div>
+
+        <h2>
+          Không chỉ đến để ngắm,
+          mà còn để trải nghiệm.
+        </h2>
+      </div>
+
+      <p>
+        Hữu Liên phù hợp với những hành trình
+        khám phá thiên nhiên chậm rãi, kết hợp
+        cảnh quan với đời sống cộng đồng.
+      </p>
+
+    </div>
+
+
+    <div class="experience">
+
+      <div class="experience-card">
+
+        <div class="experience-icon">🥾</div>
+
+        <h3>Trekking</h3>
+
+        <p>
+          Đi bộ khám phá làng bản, thung lũng,
+          đường mòn và cảnh quan núi đá vôi.
+        </p>
+
+      </div>
+
+
+      <div class="experience-card">
+
+        <div class="experience-icon">🚣</div>
+
+        <h3>Khám phá Đồng Lâm</h3>
+
+        <p>
+          Tận hưởng không gian đồng cỏ vào mùa cạn
+          hoặc trải nghiệm cảnh quan mặt nước khi
+          thời tiết và điều kiện phù hợp.
+        </p>
+
+      </div>
+
+
+      <div class="experience-card">
+
+        <div class="experience-icon">🏡</div>
+
+        <h3>Ở homestay</h3>
+
+        <p>
+          Nghỉ tại nhà dân, tìm hiểu đời sống,
+          văn hóa và thưởng thức những nét đặc trưng
+          của địa phương.
+        </p>
+
+      </div>
+
+
+      <div class="experience-card">
+
+        <div class="experience-icon">🍚</div>
+
+        <h3>Ẩm thực</h3>
+
+        <p>
+          Tìm hiểu và thưởng thức các món ăn
+          mang đặc trưng của vùng miền núi
+          Lạng Sơn.
+        </p>
+
+      </div>
+
+
+      <div class="experience-card">
+
+        <div class="experience-icon">📷</div>
+
+        <h3>Ngắm cảnh</h3>
+
+        <p>
+          Núi đá, đồng cỏ, mặt nước và làng bản
+          tạo nên nhiều góc nhìn đặc sắc cho
+          người yêu thiên nhiên.
+        </p>
+
+      </div>
+
+
+      <div class="experience-card">
+
+        <div class="experience-icon">🌾</div>
+
+        <h3>Trải nghiệm cộng đồng</h3>
+
+        <p>
+          Tìm hiểu các hoạt động đời sống và
+          những nghề truyền thống gắn với cộng đồng
+          địa phương.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PHÁT TRIỂN -->
+<section class="section development" id="phat-trien">
+
+  <div class="container">
+
+    <div class="section-head">
+
+      <div>
+        <div class="eyebrow">06 · Hướng phát triển</div>
+
+        <h2>
+          Phát triển du lịch
+          theo hướng bền vững.
+        </h2>
+      </div>
+
+      <p>
+        Hướng phát triển của Hữu Liên tập trung
+        vào việc hoàn thiện hạ tầng, cảnh quan,
+        lưu trú và sản phẩm du lịch cộng đồng.
+      </p>
+
+    </div>
+
+
+    <div class="development-grid">
+
+      <div class="development-card">
+
+        <h3>Những ưu tiên chính</h3>
+
+        <div class="development-list">
+
+          <div class="development-item">
+
+            <div class="development-number">01</div>
+
+            <div>
+              <strong>Hạ tầng</strong>
+
+              <p>
+                Cải thiện các tuyến đường phục vụ
+                làng du lịch và kết nối với khu vực Đồng Lâm.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="development-item">
+
+            <div class="development-number">02</div>
+
+            <div>
+              <strong>Cảnh quan</strong>
+
+              <p>
+                Chỉnh trang không gian làng, bảo vệ môi trường
+                và xây dựng điểm đến sạch, đẹp, dễ tiếp cận.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="development-item">
+
+            <div class="development-number">03</div>
+
+            <div>
+              <strong>Lưu trú</strong>
+
+              <p>
+                Nâng cao chất lượng homestay nhưng vẫn
+                giữ nét đặc trưng của kiến trúc và đời sống bản địa.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="development-card">
+
+        <h3>Sản phẩm du lịch</h3>
+
+        <div class="development-list">
+
+          <div class="development-item">
+
+            <div class="development-number">04</div>
+
+            <div>
+              <strong>Khám phá thiên nhiên</strong>
+
+              <p>
+                Phát triển trekking, leo núi thể thao
+                và khám phá cảnh quan núi đá vôi.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="development-item">
+
+            <div class="development-number">05</div>
+
+            <div>
+              <strong>Trải nghiệm nông nghiệp</strong>
+
+              <p>
+                Gắn hoạt động du lịch với không gian
+                sản xuất và đời sống của người dân địa phương.
+              </p>
+            </div>
+
+          </div>
+
+
+          <div class="development-item">
+
+            <div class="development-number">06</div>
+
+            <div>
+              <strong>Du lịch cộng đồng</strong>
+
+              <p>
+                Tăng cường các sản phẩm gắn với văn hóa,
+                ẩm thực, nhà sàn và sinh hoạt bản địa.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- THÔNG TIN -->
+<section class="section" id="thong-tin">
+
+  <div class="container">
+
+    <div class="info-box">
+
+      <div>
+
+        <div class="eyebrow">
+          07 · Thông tin nhanh
+        </div>
+
+        <h2>
+          Hữu Liên
+          trong vài dòng.
+        </h2>
+
+        <p>
+          Một điểm đến kết hợp thiên nhiên,
+          văn hóa và du lịch cộng đồng của
+          vùng Hữu Lũng, Lạng Sơn.
+        </p>
+
+      </div>
+
+
+      <div class="info-list">
+
+        <div class="info-row">
+
+          <div class="info-label">
+            Địa chỉ
+          </div>
+
+          <div class="info-value">
+            Xã Hữu Liên, tỉnh Lạng Sơn
+          </div>
+
+        </div>
+
+
+        <div class="info-row">
+
+          <div class="info-label">
+            Hình thành
+          </div>
+
+          <div class="info-value">
+            Năm 2018
+          </div>
+
+        </div>
+
+
+        <div class="info-row">
+
+          <div class="info-label">
+            Điểm nổi bật
+          </div>
+
+          <div class="info-value">
+            Đồng Lâm · làng bản · núi đá vôi · rừng tự nhiên
+          </div>
+
+        </div>
+
+
+        <div class="info-row">
+
+          <div class="info-label">
+            Loại hình
+          </div>
+
+          <div class="info-value">
+            Du lịch sinh thái · cộng đồng · trải nghiệm
+          </div>
+
+        </div>
+
+
+        <div class="info-row">
+
+          <div class="info-label">
+            Đặc trưng
+          </div>
+
+          <div class="info-value">
+            Nhà sàn · homestay · văn hóa Tày và Dao
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- NGUỒN -->
+<section class="section source" id="nguon">
+
+  <div class="container">
+
+    <div class="source-box">
+
+      <div class="eyebrow">08 · Nguồn tham khảo</div>
+
+      <h3>
+        Thông tin và tư liệu
+      </h3>
+
+      <p>
+        Nội dung được tham khảo từ các nguồn thông tin
+        về Công viên địa chất Lạng Sơn, du lịch địa phương
+        và thông tin của xã Hữu Liên.
+      </p>
+
+      <p>
+        <strong>Ban Quản lý Công viên địa chất Lạng Sơn:</strong><br>
+        <a href="https://langsongeopark.com.vn/tin-tuc-bao-chi/du-lich-dia-chat-tai-huyen-huu-lung-tuyen-du-lich-cong-vien-dia-chat-lang-son-so-01--n272.html" target="_blank">
+          langsongeopark.com.vn
+        </a>
+      </p>
+
+      <p>
+        <strong>Trung tâm Xúc tiến Đầu tư, Thương mại và Du lịch tỉnh Lạng Sơn:</strong><br>
+        <a href="https://lspa.langson.gov.vn/van-hoa/kham-pha-trai-nghiem-du-lich-sinh-thai-cong-dong-tren-thao-nguyen-xanh-huu-lien-341511" target="_blank">
+          lspa.langson.gov.vn
+        </a>
+      </p>
+
+      <p>
+        <strong>Cổng thông tin điện tử xã Hữu Liên:</strong><br>
+        <a href="https://huulien.langson.gov.vn/" target="_blank">
+          huulien.langson.gov.vn
+        </a>
+      </p>
+
+      <p style="margin-top:18px;">
+        Một số hình ảnh được sử dụng nhằm minh họa
+        cảnh quan khu vực Hữu Lũng và Công viên địa chất Lạng Sơn.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<!-- FOOTER -->
+<footer>
+
+  <div class="container footer-inner">
+
+    <div>
+
+      <div class="footer-title">
+        Hữu Liên · Lạng Sơn
+      </div>
+
+      <div class="footer-sub">
+        Làng du lịch cộng đồng · Thiên nhiên · Văn hóa
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+/* =========================
+   THANH TIẾN TRÌNH
+========================= */
+
+window.addEventListener("scroll",function(){
+
+  const scrollTop =
+    document.documentElement.scrollTop || document.body.scrollTop;
+
+  const height =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
+
+  const percent =
+    height > 0 ? (scrollTop / height) * 100 : 0;
+
+  document.getElementById("progress").style.width =
+    percent + "%";
+
+});
+
+
+/* =========================
+   CHUYỂN MÙA
+========================= */
+
+const seasonData = {
+
+  dry:{
+    badge:"Mùa cạn",
+    title:"Không gian thảo nguyên",
+    text:
+      "Trong mùa cạn, Đồng Lâm mang sắc xanh của đồng cỏ, những lối đi nhỏ và các dải núi đá vôi bao quanh. Không gian rộng và thoáng, phù hợp với những trải nghiệm ngắm cảnh và khám phá thiên nhiên.",
+    image:
+      "https://langsongeopark.com.vn/upload_images/images/2024/12/07/Camping%201.jpg",
+    highlights:[
+      "Đồng cỏ mở rộng, nổi bật với màu xanh tự nhiên.",
+      "Không gian thích hợp cho trekking, cắm trại và ngắm cảnh.",
+      "Núi đá vôi hiện rõ quanh thung lũng."
+    ]
+  },
+
+  water:{
+    badge:"Mùa nước",
+    title:"Không gian sơn thủy",
+    text:
+      "Khi nước dâng, một phần đồng cỏ chuyển thành mặt nước, tạo nên diện mạo hoàn toàn khác cho Đồng Lâm. Đây là thời điểm cảnh quan trở nên giàu chiều sâu và tạo cảm giác như một thung lũng sơn thủy.",
+    image:
+      "https://langsongeopark.com.vn/upload_images/images/2023/01/02/image%2812%29.png",
+    highlights:[
+      "Mặt nước mở ra giữa những khối núi đá vôi.",
+      "Cảnh quan phù hợp với các trải nghiệm trên mặt nước khi điều kiện cho phép.",
+      "Mặt nước phản chiếu núi và bầu trời tạo nên khung cảnh ấn tượng."
+    ]
+  }
+
+};
+
+
+const buttons =
+  document.querySelectorAll(".season-btn");
+
+const seasonImage =
+  document.getElementById("seasonImage");
+
+const seasonBadge =
+  document.getElementById("seasonBadge");
+
+const seasonTitle =
+  document.getElementById("seasonTitle");
+
+const seasonText =
+  document.getElementById("seasonText");
+
+const seasonHighlights =
+  document.getElementById("seasonHighlights");
+
+
+buttons.forEach(button=>{
+
+  button.addEventListener("click",()=>{
+
+    const key = button.dataset.season;
+    const data = seasonData[key];
+
+    buttons.forEach(btn=>{
+      btn.classList.remove("active");
+    });
+
+    button.classList.add("active");
+
+    seasonImage.style.opacity="0";
+
+    setTimeout(()=>{
+
+      seasonImage.src=data.image;
+      seasonBadge.textContent=data.badge;
+      seasonTitle.textContent=data.title;
+      seasonText.textContent=data.text;
+
+      seasonHighlights.innerHTML =
+        data.highlights.map(item=>`
+          <div class="highlight">${item}</div>
+        `).join("");
+
+      seasonImage.onload=()=>{
+        seasonImage.style.opacity="1";
+      };
+
+      seasonImage.style.opacity="1";
+
+    },150);
+
+  });
+
+});
+
+
+/* =========================
+   MENU ACTIVE
+========================= */
+
+const sections =
+  document.querySelectorAll("section[id]");
+
+const navLinks =
+  document.querySelectorAll(".section-link");
+
+const observer =
+  new IntersectionObserver(
+    entries=>{
+
+      entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+          navLinks.forEach(link=>{
+            link.classList.remove("active");
+          });
+
+          const active =
+            document.querySelector(
+              `.section-link[href="#${entry.target.id}"]`
+            );
+
+          if(active){
+            active.classList.add("active");
+
+            active.scrollIntoView({
+              behavior:"smooth",
+              block:"nearest",
+              inline:"center"
+            });
+          }
+
+        }
+
+      });
+
+    },
+    {
+      rootMargin:"-30% 0px -60% 0px",
+      threshold:0
+    }
+  );
+
+
+sections.forEach(section=>{
+  observer.observe(section);
+});
+
+
+/* =========================
+   ẢNH LỖI
+========================= */
+
+document.querySelectorAll("img").forEach(img=>{
+
+  img.addEventListener("error",()=>{
+
+    img.style.opacity=".35";
+    img.style.filter="grayscale(1)";
+
+  });
+
+});
+
+</script>
+
+</body>
+</html>
+```

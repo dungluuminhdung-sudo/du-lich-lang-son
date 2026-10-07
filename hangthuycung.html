@@ -1,0 +1,3164 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hang Thủy Cung – Núi Đại Tượng | Lạng Sơn</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=DM+Serif+Display&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root{
+  --bg:#061218;
+  --bg2:#0b1d24;
+  --bg3:#102a32;
+
+  --paper:#edf4f1;
+  --paper2:#f7faf8;
+
+  --white:#eef8f6;
+  --text:#e8f4f2;
+
+  --muted:#8ba6a8;
+  --muted2:#637d80;
+
+  --line:rgba(174,226,225,.14);
+
+  --aqua:#76d7d0;
+  --aqua2:#42b7b3;
+  --ice:#b8ece8;
+
+  --gold:#d4ae67;
+  --blue:#4d8fa5;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:
+    radial-gradient(
+      circle at 8% 5%,
+      rgba(118,215,208,.09),
+      transparent 26%
+    ),
+    radial-gradient(
+      circle at 91% 30%,
+      rgba(77,143,165,.07),
+      transparent 27%
+    ),
+    var(--bg);
+
+  color:var(--text);
+
+  font-family:"Be Vietnam Pro",sans-serif;
+
+  line-height:1.8;
+
+  overflow-x:hidden;
+}
+
+img{
+  max-width:100%;
+}
+
+
+/* =========================================================
+   NAV
+========================================================= */
+
+.nav{
+  position:fixed;
+
+  top:0;
+  left:0;
+
+  width:100%;
+  height:70px;
+
+  z-index:1000;
+
+  background:rgba(6,18,24,.76);
+
+  backdrop-filter:blur(17px);
+
+  border-bottom:1px solid var(--line);
+}
+
+.nav-inner{
+  width:min(1180px,92%);
+
+  height:100%;
+
+  margin:auto;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+}
+
+.logo{
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:13px;
+
+  font-weight:700;
+
+  letter-spacing:.16em;
+}
+
+.logo span{
+  color:var(--aqua);
+}
+
+.back{
+  color:#d9e9e8;
+
+  text-decoration:none;
+
+  border:1px solid var(--line);
+
+  border-radius:999px;
+
+  padding:8px 16px;
+
+  font-size:11px;
+
+  transition:.3s;
+}
+
+.back:hover{
+  color:var(--aqua);
+
+  border-color:rgba(118,215,208,.46);
+}
+
+
+/* =========================================================
+   SECTION NAV
+========================================================= */
+
+.section-nav{
+  margin-top:70px;
+
+  position:sticky;
+
+  top:70px;
+
+  z-index:900;
+
+  background:rgba(6,18,24,.91);
+
+  backdrop-filter:blur(15px);
+
+  border-bottom:1px solid rgba(174,226,225,.10);
+}
+
+.section-nav-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:3px;
+
+  overflow-x:auto;
+
+  scrollbar-width:none;
+}
+
+.section-nav-inner::-webkit-scrollbar{
+  display:none;
+}
+
+.section-link{
+  flex:0 0 auto;
+
+  padding:12px 13px 10px;
+
+  color:#789093;
+
+  text-decoration:none;
+
+  font-size:10px;
+
+  font-weight:800;
+
+  letter-spacing:.08em;
+
+  text-transform:uppercase;
+
+  white-space:nowrap;
+
+  border-bottom:2px solid transparent;
+
+  transition:.25s;
+}
+
+.section-link:hover,
+.section-link.active{
+  color:var(--aqua);
+
+  border-bottom-color:var(--aqua);
+}
+
+section[id]{
+  scroll-margin-top:145px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+  min-height:930px;
+
+  position:relative;
+
+  display:flex;
+
+  align-items:flex-end;
+
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3,13,18,.96) 0%,
+      rgba(3,13,18,.84) 32%,
+      rgba(3,13,18,.48) 63%,
+      rgba(3,13,18,.27) 100%
+    ),
+    url("https://mediabls.mediatech.vn/upload/image/202306/thumbnail/7936_HTC.jpg");
+
+  background-size:cover;
+
+  background-position:center;
+}
+
+.hero::before{
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 28%,
+      rgba(6,18,24,.98) 100%
+    );
+}
+
+.hero::after{
+  content:"";
+
+  position:absolute;
+
+  right:-260px;
+  top:120px;
+
+  width:610px;
+  height:610px;
+
+  border-radius:50%;
+
+  border:1px solid rgba(118,215,208,.18);
+
+  box-shadow:
+    0 0 0 54px rgba(118,215,208,.025),
+    0 0 0 108px rgba(118,215,208,.017),
+    0 0 0 162px rgba(118,215,208,.011);
+}
+
+.hero-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:155px 0 107px;
+
+  position:relative;
+
+  z-index:5;
+}
+
+.kicker{
+  color:var(--aqua);
+
+  font-size:10px;
+
+  font-weight:800;
+
+  letter-spacing:.22em;
+
+  text-transform:uppercase;
+}
+
+.hero h1{
+  max-width:1000px;
+
+  margin-top:19px;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:clamp(56px,9vw,128px);
+
+  line-height:.83;
+
+  letter-spacing:-.08em;
+}
+
+.hero h1 span{
+  display:block;
+
+  color:var(--ice);
+}
+
+.hero-description{
+  max-width:750px;
+
+  margin-top:31px;
+
+  color:#c3d9da;
+
+  font-size:15px;
+}
+
+.hero-tags{
+  margin-top:29px;
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:9px;
+}
+
+.hero-tag{
+  padding:8px 12px;
+
+  border:1px solid rgba(174,226,225,.15);
+
+  border-radius:5px;
+
+  background:rgba(4,16,22,.48);
+
+  color:#d7e9e8;
+
+  font-size:10px;
+}
+
+.hero-note{
+  max-width:740px;
+
+  margin-top:20px;
+
+  color:#728d90;
+
+  font-size:10px;
+}
+
+
+/* =========================================================
+   COMMON
+========================================================= */
+
+.section{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.label{
+  color:var(--aqua);
+
+  font-size:10px;
+
+  font-weight:800;
+
+  text-transform:uppercase;
+
+  letter-spacing:.21em;
+}
+
+.title{
+  max-width:950px;
+
+  margin-top:15px;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:clamp(40px,6vw,79px);
+
+  line-height:.96;
+
+  letter-spacing:-.055em;
+}
+
+.intro{
+  max-width:780px;
+
+  margin-top:21px;
+
+  color:var(--muted);
+
+  font-size:13px;
+}
+
+
+/* =========================================================
+   FACTS
+========================================================= */
+
+.fact-grid{
+  margin-top:58px;
+
+  display:grid;
+
+  grid-template-columns:repeat(4,1fr);
+
+  gap:13px;
+}
+
+.fact{
+  min-height:225px;
+
+  padding:28px;
+
+  border:1px solid var(--line);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(118,215,208,.055),
+      rgba(255,255,255,.012)
+    );
+
+  position:relative;
+
+  overflow:hidden;
+
+  transition:.35s;
+}
+
+.fact:hover{
+  transform:translateY(-5px);
+
+  border-color:rgba(118,215,208,.32);
+}
+
+.fact::after{
+  content:"";
+
+  position:absolute;
+
+  width:155px;
+  height:155px;
+
+  right:-95px;
+  bottom:-100px;
+
+  border-radius:50%;
+
+  border:1px solid rgba(118,215,208,.10);
+}
+
+.fact-no{
+  color:#637d80;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:10px;
+
+  letter-spacing:.15em;
+}
+
+.fact strong{
+  display:block;
+
+  margin-top:39px;
+
+  color:#edf8f7;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:29px;
+
+  line-height:1.05;
+}
+
+.fact p{
+  margin-top:9px;
+
+  color:#859ea0;
+
+  font-size:10px;
+}
+
+
+/* =========================================================
+   AQUATIC
+========================================================= */
+
+.aquatic{
+  background:
+    radial-gradient(
+      ellipse at 50% 25%,
+      rgba(118,215,208,.08),
+      transparent 35%
+    ),
+    linear-gradient(
+      160deg,
+      #0a2229,
+      #06151b
+    );
+
+  border-top:1px solid var(--line);
+
+  border-bottom:1px solid var(--line);
+}
+
+.aquatic-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.aquatic-layout{
+  margin-top:58px;
+
+  display:grid;
+
+  grid-template-columns:.72fr 1.28fr;
+
+  gap:17px;
+}
+
+.aquatic-art{
+  min-height:590px;
+
+  position:relative;
+
+  overflow:hidden;
+
+  border:1px solid var(--line);
+
+  background:
+    radial-gradient(
+      circle at 50% 43%,
+      rgba(118,215,208,.14),
+      transparent 19%
+    ),
+    linear-gradient(
+      170deg,
+      #0d3036,
+      #06151a
+    );
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+}
+
+.aquatic-art::before{
+  content:"";
+
+  width:350px;
+  height:350px;
+
+  border-radius:50%;
+
+  border:1px solid rgba(118,215,208,.22);
+
+  box-shadow:
+    0 0 0 35px rgba(118,215,208,.022),
+    0 0 0 70px rgba(118,215,208,.016),
+    0 0 80px rgba(118,215,208,.09);
+}
+
+.water-orbit{
+  position:absolute;
+
+  width:230px;
+  height:230px;
+
+  border:1px dashed rgba(212,174,103,.27);
+
+  border-radius:50%;
+
+  transform:rotate(-18deg);
+}
+
+.water-orbit::before,
+.water-orbit::after{
+  content:"";
+
+  position:absolute;
+
+  width:7px;
+  height:7px;
+
+  border-radius:50%;
+
+  background:var(--aqua);
+}
+
+.water-orbit::before{
+  top:20px;
+  left:35px;
+}
+
+.water-orbit::after{
+  right:23px;
+  bottom:38px;
+
+  background:var(--gold);
+}
+
+.water-core{
+  position:absolute;
+
+  width:74px;
+  height:74px;
+
+  border-radius:50%;
+
+  background:
+    radial-gradient(
+      circle at 35% 27%,
+      #efffff,
+      #72d8d0 43%,
+      #16545a 100%
+    );
+
+  box-shadow:
+    0 0 70px rgba(118,215,208,.27);
+}
+
+.aquatic-mark{
+  position:absolute;
+
+  left:24px;
+  bottom:22px;
+
+  color:#607c80;
+
+  font-size:9px;
+
+  letter-spacing:.16em;
+
+  text-transform:uppercase;
+}
+
+.aquatic-copy{
+  padding:37px;
+
+  border:1px solid var(--line);
+
+  background:rgba(6,18,24,.74);
+}
+
+.aquatic-copy h3{
+  max-width:650px;
+
+  font-family:"DM Serif Display",serif;
+
+  font-size:52px;
+
+  line-height:.96;
+
+  font-weight:400;
+}
+
+.aquatic-copy p{
+  margin-top:17px;
+
+  color:#94adaf;
+
+  font-size:13px;
+}
+
+.aquatic-stats{
+  margin-top:30px;
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:11px;
+}
+
+.aquatic-stat{
+  padding:18px;
+
+  border:1px solid var(--line);
+
+  background:rgba(255,255,255,.018);
+}
+
+.aquatic-stat strong{
+  display:block;
+
+  color:var(--ice);
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:22px;
+}
+
+.aquatic-stat span{
+  display:block;
+
+  margin-top:3px;
+
+  color:#6d878a;
+
+  font-size:9px;
+}
+
+
+/* =========================================================
+   MAIN PHOTO
+========================================================= */
+
+.photo-zone{
+  background:var(--paper);
+
+  color:#152327;
+
+  border-bottom:1px solid #d1dcda;
+}
+
+.photo-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.photo-zone .label{
+  color:#318e8b;
+}
+
+.photo-title{
+  max-width:930px;
+
+  margin-top:14px;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:clamp(41px,6vw,78px);
+
+  line-height:.97;
+
+  letter-spacing:-.055em;
+}
+
+.photo-text{
+  max-width:770px;
+
+  margin-top:20px;
+
+  color:#63767a;
+
+  font-size:13px;
+}
+
+.main-photo{
+  margin-top:58px;
+
+  position:relative;
+
+  overflow:hidden;
+
+  border:1px solid #cdd9d7;
+
+  background:#081217;
+
+  line-height:0;
+}
+
+.main-photo img{
+  width:100%;
+
+  height:auto;
+
+  max-width:100%;
+
+  display:block;
+
+  transition:.7s;
+}
+
+.main-photo:hover img{
+  transform:none;
+}
+
+.main-caption{
+  position:relative;
+
+  padding:14px 16px;
+
+  background:#0b171c;
+
+  color:#dfeceb;
+
+  font-size:10px;
+
+  line-height:1.7;
+}
+
+
+/* =========================================================
+   FORMATIONS
+========================================================= */
+
+.formations{
+  background:#07151a;
+
+  border-top:1px solid var(--line);
+
+  border-bottom:1px solid var(--line);
+}
+
+.formations-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.formation-grid{
+  margin-top:58px;
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:13px;
+}
+
+.formation{
+  min-height:330px;
+
+  padding:31px;
+
+  border:1px solid var(--line);
+
+  background:
+    linear-gradient(
+      150deg,
+      #0c252c,
+      #08181e
+    );
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.formation::after{
+  content:"";
+
+  position:absolute;
+
+  width:260px;
+  height:260px;
+
+  border-radius:50%;
+
+  right:-135px;
+  bottom:-140px;
+
+  border:1px solid rgba(118,215,208,.08);
+}
+
+.formation-no{
+  color:#5d777b;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:10px;
+
+  letter-spacing:.15em;
+}
+
+.formation h3{
+  margin-top:52px;
+
+  font-family:"DM Serif Display",serif;
+
+  font-size:42px;
+
+  line-height:1;
+
+  font-weight:400;
+}
+
+.formation p{
+  margin-top:14px;
+
+  color:#829da0;
+
+  font-size:11px;
+}
+
+
+/* =========================================================
+   SPIRITUAL
+========================================================= */
+
+.spirit-section{
+  background:var(--paper2);
+
+  color:#18272a;
+}
+
+.spirit-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.spirit-grid{
+  margin-top:58px;
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:15px;
+}
+
+.spirit-card{
+  min-height:350px;
+
+  padding:31px;
+
+  border:1px solid #d3deda;
+
+  background:#f2f7f5;
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.spirit-card::before{
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:0;
+
+  width:55px;
+  height:2px;
+
+  background:#4aa4a0;
+}
+
+.spirit-no{
+  color:#748d90;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:10px;
+
+  letter-spacing:.15em;
+}
+
+.spirit-card h3{
+  margin-top:54px;
+
+  font-family:"DM Serif Display",serif;
+
+  font-size:43px;
+
+  line-height:1;
+}
+
+.spirit-card p{
+  margin-top:15px;
+
+  color:#6b7d81;
+
+  font-size:11px;
+}
+
+.spirit-highlight{
+  margin-top:22px;
+
+  padding:17px;
+
+  border-left:2px solid #55aaa6;
+
+  background:#e8f2f0;
+
+  color:#536a6d;
+
+  font-size:10px;
+}
+
+
+/* =========================================================
+   CONNECTION
+========================================================= */
+
+.connection{
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(140,139,194,.08),
+      transparent 25%
+    ),
+    #0a1720;
+
+  border-top:1px solid var(--line);
+}
+
+.connection-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.connection-grid{
+  margin-top:58px;
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:13px;
+}
+
+.connection-card{
+  min-height:310px;
+
+  padding:30px;
+
+  border:1px solid var(--line);
+
+  background:rgba(255,255,255,.025);
+}
+
+.connection-number{
+  color:#687a87;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:10px;
+
+  letter-spacing:.15em;
+}
+
+.connection-card h3{
+  margin-top:52px;
+
+  color:#edf6f5;
+
+  font-size:21px;
+
+  line-height:1.18;
+}
+
+.connection-card p{
+  margin-top:12px;
+
+  color:#87999e;
+
+  font-size:11px;
+}
+
+.connection-mini{
+  margin-top:19px;
+
+  color:var(--aqua);
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:9px;
+
+  letter-spacing:.13em;
+}
+
+
+/* =========================================================
+   JOURNEY
+========================================================= */
+
+.journey-section{
+  background:var(--paper);
+
+  color:#18272a;
+}
+
+.journey-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.journey{
+  margin-top:58px;
+
+  position:relative;
+
+  display:grid;
+
+  grid-template-columns:repeat(4,1fr);
+
+  gap:13px;
+}
+
+.journey::before{
+  content:"";
+
+  position:absolute;
+
+  top:21px;
+
+  left:6%;
+  right:6%;
+
+  height:1px;
+
+  background:#c5d2d0;
+}
+
+.journey-stop{
+  position:relative;
+
+  padding:0 13px;
+}
+
+.journey-dot{
+  width:43px;
+  height:43px;
+
+  border-radius:50%;
+
+  background:var(--paper);
+
+  border:2px solid #4b9d99;
+
+  display:grid;
+
+  place-items:center;
+
+  color:#397b78;
+
+  position:relative;
+
+  z-index:2;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:10px;
+}
+
+.journey-stop h3{
+  margin-top:18px;
+
+  font-size:18px;
+
+  line-height:1.2;
+}
+
+.journey-stop p{
+  margin-top:8px;
+
+  color:#6e8083;
+
+  font-size:10px;
+}
+
+
+/* =========================================================
+   PHOTO GALLERY
+========================================================= */
+
+.gallery-section{
+  background:#08161d;
+
+  border-top:1px solid var(--line);
+
+  border-bottom:1px solid var(--line);
+}
+
+.gallery-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.gallery{
+  margin-top:58px;
+
+  display:grid;
+
+  grid-template-columns:1.15fr .85fr;
+
+  gap:14px;
+
+  align-items:start;
+}
+
+.gallery figure{
+  margin:0;
+
+  position:relative;
+
+  overflow:hidden;
+
+  border:1px solid var(--line);
+
+  background:#071015;
+}
+
+.gallery-main{
+  align-self:start;
+}
+
+.gallery-side{
+  display:grid;
+
+  gap:14px;
+
+  align-items:start;
+}
+
+.gallery img{
+  width:100%;
+
+  height:auto;
+
+  max-width:100%;
+
+  display:block;
+
+  transition:.6s;
+}
+
+.gallery figure:hover img{
+  transform:none;
+}
+
+.gallery figcaption{
+  position:relative;
+
+  padding:11px 13px;
+
+  background:#071318;
+
+  color:#d9e7e6;
+
+  font-size:10px;
+
+  line-height:1.65;
+}
+
+
+/* =========================================================
+   VALUES
+========================================================= */
+
+.value-section{
+  background:
+    linear-gradient(
+      180deg,
+      #071218,
+      #091b22
+    );
+}
+
+.value-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.value-grid{
+  margin-top:58px;
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:13px;
+}
+
+.value-card{
+  min-height:275px;
+
+  padding:29px;
+
+  border:1px solid var(--line);
+
+  background:rgba(255,255,255,.022);
+
+  position:relative;
+}
+
+.value-card::before{
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:0;
+
+  width:37px;
+  height:2px;
+
+  background:var(--aqua);
+}
+
+.value-no{
+  color:#647980;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:10px;
+
+  letter-spacing:.14em;
+}
+
+.value-card h3{
+  margin-top:51px;
+
+  font-size:20px;
+
+  line-height:1.18;
+}
+
+.value-card p{
+  margin-top:11px;
+
+  color:#84999d;
+
+  font-size:11px;
+}
+
+
+/* =========================================================
+   CONSERVATION
+========================================================= */
+
+.conservation{
+  background:
+    linear-gradient(
+      145deg,
+      #12363d,
+      #081b21
+    );
+
+  border-top:1px solid rgba(118,215,208,.1);
+}
+
+.conservation-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.conservation-grid{
+  margin-top:57px;
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:14px;
+}
+
+.conservation-box{
+  min-height:270px;
+
+  padding:31px;
+
+  border:1px solid rgba(174,226,225,.1);
+
+  background:rgba(255,255,255,.035);
+}
+
+.conservation-box h3{
+  color:#edf9f7;
+
+  font-family:"DM Serif Display",serif;
+
+  font-size:41px;
+
+  font-weight:400;
+
+  line-height:.98;
+}
+
+.conservation-box p{
+  margin-top:15px;
+
+  color:#9eb8ba;
+
+  font-size:11px;
+}
+
+.alert{
+  margin-top:15px;
+
+  padding:21px;
+
+  border:1px solid rgba(212,174,103,.18);
+
+  background:rgba(212,174,103,.045);
+
+  color:#d3c8a9;
+
+  font-size:10px;
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.final{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0 90px;
+}
+
+.final-box{
+  position:relative;
+
+  overflow:hidden;
+
+  padding:60px;
+
+  border:1px solid rgba(118,215,208,.13);
+
+  background:
+    radial-gradient(
+      circle at 83% 18%,
+      rgba(118,215,208,.13),
+      transparent 25%
+    ),
+    linear-gradient(
+      135deg,
+      #12333a,
+      #07171d
+    );
+}
+
+.final-box::after{
+  content:"";
+
+  position:absolute;
+
+  right:-180px;
+  bottom:-220px;
+
+  width:460px;
+  height:460px;
+
+  border-radius:50%;
+
+  border:1px solid rgba(118,215,208,.09);
+
+  box-shadow:
+    0 0 0 48px rgba(118,215,208,.017),
+    0 0 0 96px rgba(118,215,208,.011);
+}
+
+.final-small{
+  position:relative;
+
+  z-index:2;
+
+  color:var(--aqua);
+
+  font-size:10px;
+
+  letter-spacing:.20em;
+
+  text-transform:uppercase;
+}
+
+.final-box h2{
+  position:relative;
+
+  z-index:2;
+
+  max-width:900px;
+
+  margin-top:18px;
+
+  font-family:"DM Serif Display",serif;
+
+  font-size:clamp(47px,7vw,93px);
+
+  line-height:.91;
+
+  font-weight:400;
+}
+
+.final-box p{
+  position:relative;
+
+  z-index:2;
+
+  max-width:740px;
+
+  margin-top:22px;
+
+  color:#a7c0c2;
+
+  font-size:12px;
+}
+
+.sources{
+  position:relative;
+
+  z-index:2;
+
+  margin-top:29px;
+
+  padding-top:21px;
+
+  border-top:1px solid rgba(255,255,255,.095);
+
+  color:#6f878b;
+
+  font-size:10px;
+
+  line-height:2;
+}
+
+.sources a{
+  color:#75d2cb;
+
+  text-decoration:none;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+  border-top:1px solid var(--line);
+
+  padding:70px 0 90px;
+}
+
+.footer-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+}
+
+.footer-brand{
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:13px;
+
+  font-weight:700;
+
+  letter-spacing:.15em;
+}
+
+.footer-title{
+  margin-top:16px;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:clamp(32px,5vw,59px);
+
+  letter-spacing:-.05em;
+}
+
+.footer-text{
+  max-width:770px;
+
+  margin-top:10px;
+
+  color:#607a7e;
+
+  font-size:11px;
+}
+
+.footer-source{
+  margin-top:28px;
+
+  padding-top:21px;
+
+  border-top:1px solid var(--line);
+
+  color:#536b70;
+
+  font-size:10px;
+
+  line-height:1.95;
+}
+
+.footer-source a{
+  color:#69bbb7;
+
+  text-decoration:none;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:950px){
+
+  .fact-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .aquatic-layout,
+  .spirit-grid,
+  .conservation-grid{
+    grid-template-columns:1fr;
+  }
+
+  .formation-grid,
+  .connection-grid,
+  .value-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .journey{
+    grid-template-columns:1fr 1fr;
+
+    row-gap:42px;
+  }
+
+  .journey::before{
+    display:none;
+  }
+
+  .gallery{
+    grid-template-columns:1fr;
+  }
+
+  .gallery-side{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .aquatic-art{
+    min-height:480px;
+  }
+}
+
+
+@media(max-width:620px){
+
+  .nav{
+    height:64px;
+  }
+
+  .section-nav{
+    margin-top:64px;
+
+    top:64px;
+  }
+
+  .section-nav-inner{
+    width:94%;
+  }
+
+  .section-link{
+    padding:11px 11px 9px;
+
+    font-size:9px;
+  }
+
+  section[id]{
+    scroll-margin-top:130px;
+  }
+
+  .hero{
+    min-height:820px;
+  }
+
+  .hero-inner{
+    padding-top:125px;
+
+    padding-bottom:80px;
+  }
+
+  .hero h1{
+    font-size:69px;
+  }
+
+  .hero-description{
+    font-size:14px;
+  }
+
+  .fact-grid,
+  .formation-grid,
+  .connection-grid,
+  .value-grid,
+  .journey{
+    grid-template-columns:1fr;
+  }
+
+  .aquatic-stats{
+    grid-template-columns:1fr;
+  }
+
+  .aquatic-art{
+    min-height:390px;
+  }
+
+  .water-orbit{
+    width:190px;
+    height:190px;
+  }
+
+  .aquatic-art::before{
+    width:270px;
+    height:270px;
+  }
+
+  .gallery-side{
+    grid-template-columns:1fr;
+  }
+
+  .section,
+  .aquatic-inner,
+  .photo-inner,
+  .formations-inner,
+  .spirit-inner,
+  .connection-inner,
+  .journey-inner,
+  .gallery-inner,
+  .value-inner,
+  .conservation-inner,
+  .final{
+    padding-top:78px;
+
+    padding-bottom:78px;
+  }
+
+  .final-box{
+    padding:34px;
+  }
+
+  .final-box h2{
+    font-size:53px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+
+<!-- =========================================================
+     NAV
+========================================================= -->
+
+<header class="nav">
+
+  <div class="nav-inner">
+
+    <div class="logo">
+      LẠNG SƠN <span>/</span> 15
+    </div>
+
+    <a
+      href="./danhlamthangcanh.html"
+      class="back"
+    >
+      ← Danh sách danh thắng
+    </a>
+
+  </div>
+
+</header>
+
+
+<!-- =========================================================
+     SECTION NAV
+========================================================= -->
+
+<nav class="section-nav" aria-label="Điều hướng nội dung">
+
+  <div class="section-nav-inner">
+
+    <a class="section-link active" href="#ho-so">
+      Hồ sơ
+    </a>
+
+    <a class="section-link" href="#thuy-cung">
+      Thủy Cung
+    </a>
+
+    <a class="section-link" href="#anh-thuc-te">
+      Ảnh thực tế
+    </a>
+
+    <a class="section-link" href="#cau-truc">
+      Cấu trúc
+    </a>
+
+    <a class="section-link" href="#tin-nguong">
+      Tín ngưỡng
+    </a>
+
+    <a class="section-link" href="#ket-noi">
+      Chùa Tiên
+    </a>
+
+    <a class="section-link" href="#hanh-trinh">
+      Hành trình
+    </a>
+
+    <a class="section-link" href="#goc-nhin">
+      Góc nhìn
+    </a>
+
+    <a class="section-link" href="#gia-tri">
+      Giá trị
+    </a>
+
+    <a class="section-link" href="#bao-ton">
+      Bảo tồn
+    </a>
+
+  </div>
+
+</nav>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+  <div class="hero-inner">
+
+    <div class="kicker">
+      HANG THỦY CUNG · NÚI ĐẠI TƯỢNG · CHÙA TIÊN
+    </div>
+
+    <h1>
+      HANG
+      <span>THỦY CUNG</span>
+    </h1>
+
+    <p class="hero-description">
+      Một hang đá vôi nằm trong lòng núi Đại Tượng,
+      nổi bật với vòm hang, nhiều ngách, thạch nhũ
+      và không gian tín ngưỡng gắn với khu di tích
+      Chùa Tiên – Giếng Tiên của Lạng Sơn.
+    </p>
+
+    <div class="hero-tags">
+
+      <div class="hero-tag">
+        📍 Núi Đại Tượng · Lạng Sơn
+      </div>
+
+      <div class="hero-tag">
+        🪨 Hang đá vôi
+      </div>
+
+      <div class="hero-tag">
+        ✨ Thạch nhũ tự nhiên
+      </div>
+
+      <div class="hero-tag">
+        🕯 Không gian tín ngưỡng
+      </div>
+
+      <div class="hero-tag">
+        🌙 Điểm tham quan về đêm
+      </div>
+
+    </div>
+
+    <div class="hero-note">
+      Hang Thủy Cung nằm gần Chùa Tiên – Giếng Tiên,
+      trong không gian núi Đại Tượng.
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     PROFILE
+========================================================= -->
+
+<section class="section" id="ho-so">
+
+  <div class="label">
+    01 / HỒ SƠ ĐỊA DANH
+  </div>
+
+  <h2 class="title">
+    Một hang đá
+    nhưng không chỉ có đá.
+  </h2>
+
+  <p class="intro">
+    Hang Thủy Cung là điểm nhấn trong không gian Chùa Tiên –
+    Giếng Tiên. Giá trị của nơi đây đến từ sự kết hợp giữa
+    địa hình hang động, thạch nhũ tự nhiên và không gian
+    văn hóa tín ngưỡng được hình thành trong quá trình
+    chỉnh trang di tích.
+  </p>
+
+
+  <div class="fact-grid">
+
+
+    <article class="fact">
+
+      <div class="fact-no">
+        01 / VỊ TRÍ
+      </div>
+
+      <strong>
+        Đại Tượng
+      </strong>
+
+      <p>
+        Hang nằm trong lòng núi Đại Tượng,
+        gần khu di tích Chùa Tiên – Giếng Tiên.
+      </p>
+
+    </article>
+
+
+    <article class="fact">
+
+      <div class="fact-no">
+        02 / HÌNH THÁI
+      </div>
+
+      <strong>
+        Vòm cao
+      </strong>
+
+      <p>
+        Hang đá vôi được mô tả có vòm cao,
+        nhiều ngách và nhiều bề mặt thạch nhũ.
+      </p>
+
+    </article>
+
+
+    <article class="fact">
+
+      <div class="fact-no">
+        03 / THẠCH NHŨ
+      </div>
+
+      <strong>
+        Muôn hình
+      </strong>
+
+      <p>
+        Các khối nhũ đá được thiên nhiên
+        kiến tạo qua hàng nghìn năm.
+      </p>
+
+    </article>
+
+
+    <article class="fact">
+
+      <div class="fact-no">
+        04 / DI TÍCH
+      </div>
+
+      <strong>
+        Quốc gia
+      </strong>
+
+      <p>
+        Chùa Tiên – Giếng Tiên được xếp hạng
+        di tích cấp quốc gia năm 1992.
+      </p>
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     AQUATIC
+========================================================= -->
+
+<section class="aquatic" id="thuy-cung">
+
+  <div class="aquatic-inner">
+
+    <div class="label">
+      02 / THẾ GIỚI TRONG LÒNG NÚI
+    </div>
+
+    <h2 class="title">
+      Vì sao gọi là
+      “Thủy Cung”?
+    </h2>
+
+    <p class="intro">
+      Tên gọi gợi lên hình ảnh một cung điện dưới lòng đất.
+      Nhưng vẻ đẹp thật sự của Hang Thủy Cung nằm ở cấu trúc
+      tự nhiên của vòm hang, thạch nhũ, các ngách đá và
+      lớp ánh sáng được bố trí trong không gian tham quan.
+    </p>
+
+
+    <div class="aquatic-layout">
+
+
+      <div class="aquatic-art">
+
+        <div class="water-orbit"></div>
+
+        <div class="water-core"></div>
+
+        <div class="aquatic-mark">
+          LIMESTONE · WATER · LIGHT
+        </div>
+
+      </div>
+
+
+      <div class="aquatic-copy">
+
+        <h3>
+          Một “cung điện”
+          được tạo bởi
+          thiên nhiên.
+        </h3>
+
+        <p>
+          Hang Thủy Cung là hang đá vôi lớn, có vòm cao
+          và nhiều ngách. Trong lòng hang tồn tại những
+          khối thạch nhũ với nhiều hình thái khác nhau.
+        </p>
+
+        <p>
+          Khi ánh sáng được bố trí trên các lối đi và
+          vách đá, không gian trở nên nổi bật hơn,
+          tạo cảm giác lung linh và huyền ảo đặc trưng
+          cho điểm đến này.
+        </p>
+
+
+        <div class="aquatic-stats">
+
+          <div class="aquatic-stat">
+
+            <strong>
+              Đá vôi
+            </strong>
+
+            <span>
+              Nền địa chất của hang
+            </span>
+
+          </div>
+
+
+          <div class="aquatic-stat">
+
+            <strong>
+              Thạch nhũ
+            </strong>
+
+            <span>
+              Hình thành qua thời gian rất dài
+            </span>
+
+          </div>
+
+
+          <div class="aquatic-stat">
+
+            <strong>
+              Nhiều ngách
+            </strong>
+
+            <span>
+              Cấu trúc không gian đa dạng
+            </span>
+
+          </div>
+
+
+          <div class="aquatic-stat">
+
+            <strong>
+              Ánh sáng
+            </strong>
+
+            <span>
+              Làm nổi bật bề mặt đá
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     MAIN PHOTO
+========================================================= -->
+
+<section class="photo-zone" id="anh-thuc-te">
+
+  <div class="photo-inner">
+
+    <div class="label">
+      03 / ẢNH THỰC TẾ
+    </div>
+
+    <h2 class="photo-title">
+      Hang Thủy Cung
+      giữa núi Đại Tượng.
+    </h2>
+
+    <p class="photo-text">
+      Ảnh chính dưới đây là ảnh trực tiếp của Hang Thủy Cung
+      được đăng trên cổng thông tin địa phương, cho thấy
+      cửa hang, vách đá và khu vực tiếp cận bên ngoài.
+    </p>
+
+
+    <figure class="main-photo">
+
+      <img
+        src="https://mediabls.mediatech.vn/upload/image/202306/thumbnail/7936_HTC.jpg"
+        alt="Hang Thủy Cung trong núi Đại Tượng, Lạng Sơn"
+        loading="lazy"
+        referrerpolicy="no-referrer"
+      >
+
+      <figcaption class="main-caption">
+        Hang Thủy Cung trong núi Đại Tượng, khu vực
+        Chùa Tiên – Giếng Tiên, Lạng Sơn.
+        Ảnh: Báo và Phát thanh, Truyền hình Lạng Sơn.
+      </figcaption>
+
+    </figure>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     FORMATIONS
+========================================================= -->
+
+<section class="formations" id="cau-truc">
+
+  <div class="formations-inner">
+
+    <div class="label">
+      04 / CẤU TRÚC HANG
+    </div>
+
+    <h2 class="title">
+      Nước đi qua đá,
+      thời gian để lại hình hài.
+    </h2>
+
+    <p class="intro">
+      Những khối đá trong Hang Thủy Cung không giống nhau.
+      Vòm hang, vách đá, hốc và các dải thạch nhũ tạo nên
+      một hệ thống hình thái tự nhiên phong phú.
+    </p>
+
+
+    <div class="formation-grid">
+
+
+      <article class="formation">
+
+        <div class="formation-no">
+          01 / VÒM HANG
+        </div>
+
+        <h3>
+          Không gian
+          mở cao.
+        </h3>
+
+        <p>
+          Vòm hang cao tạo nên cảm giác rộng và sâu,
+          đồng thời giúp các mảng đá trên trần và
+          vách hang trở thành điểm nhấn khi tham quan.
+        </p>
+
+      </article>
+
+
+      <article class="formation">
+
+        <div class="formation-no">
+          02 / THẠCH NHŨ
+        </div>
+
+        <h3>
+          Những đường nét
+          không lặp lại.
+        </h3>
+
+        <p>
+          Thạch nhũ được thiên nhiên kiến tạo trong thời gian
+          rất dài, tạo ra nhiều lớp bề mặt và hình dáng khác nhau
+          trên trần cũng như vách động.
+        </p>
+
+      </article>
+
+
+      <article class="formation">
+
+        <div class="formation-no">
+          03 / NGÁCH ĐÁ
+        </div>
+
+        <h3>
+          Mỗi bước
+          một góc nhìn.
+        </h3>
+
+        <p>
+          Nhiều ngách nhỏ làm thay đổi tầm nhìn liên tục,
+          khiến hành trình trong hang có cảm giác như
+          đang khám phá từng phòng nhỏ nối tiếp nhau.
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     SPIRITUAL
+========================================================= -->
+
+<section class="spirit-section" id="tin-nguong">
+
+  <div class="spirit-inner">
+
+    <div class="label">
+      05 / KHÔNG GIAN TÍN NGƯỠNG
+    </div>
+
+    <h2 class="title">
+      Từ cảnh quan thiên nhiên
+      đến không gian tâm linh.
+    </h2>
+
+    <p class="intro">
+      Sau quá trình chỉnh trang, trong Hang Thủy Cung có
+      hệ thống ban thờ và tượng thờ phong phú. Điều này tạo
+      nên một lớp văn hóa mới trên nền cảnh quan hang động.
+    </p>
+
+
+    <div class="spirit-grid">
+
+
+      <article class="spirit-card">
+
+        <div class="spirit-no">
+          01 / BAN THỜ
+        </div>
+
+        <h3>
+          Tín ngưỡng
+          trong lòng đá.
+        </h3>
+
+        <p>
+          Theo Báo Lạng Sơn, Hang Thủy Cung có các ban thờ
+          gắn với Thánh Mẫu, Chầu, Cô Bé, Cậu Bé...
+          thuộc tín ngưỡng thờ Mẫu của người Việt.
+        </p>
+
+        <div class="spirit-highlight">
+          Tín ngưỡng thờ Mẫu Tam phủ của người Việt
+          được UNESCO ghi danh là Di sản văn hóa phi vật thể
+          đại diện của nhân loại năm 2016.
+        </div>
+
+      </article>
+
+
+      <article class="spirit-card">
+
+        <div class="spirit-no">
+          02 / ÁNH SÁNG
+        </div>
+
+        <h3>
+          Khi vách đá
+          phát sáng.
+        </h3>
+
+        <p>
+          Hệ thống đèn điện và đèn lồng được bố trí dọc
+          các lối đi và trên vách đá, giúp làm nổi bật
+          hình dáng thạch nhũ cũng như các khu vực thờ tự.
+        </p>
+
+        <div class="spirit-highlight">
+          Ánh sáng tạo hiệu ứng thị giác,
+          nhưng nền tảng của cảnh quan vẫn là
+          cấu trúc đá tự nhiên của hang.
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONNECTION
+========================================================= -->
+
+<section class="connection" id="ket-noi">
+
+  <div class="connection-inner">
+
+    <div class="label">
+      06 / CHÙA TIÊN – GIẾNG TIÊN – THỦY CUNG
+    </div>
+
+    <h2
+      class="title"
+      style="color:#edf7f6;"
+    >
+      Ba lớp không gian
+      trong một khu vực.
+    </h2>
+
+    <p class="intro">
+      Hang Thủy Cung nằm gần Chùa Tiên và Giếng Tiên,
+      tạo thành một chuỗi điểm tham quan trong không gian
+      núi Đại Tượng.
+    </p>
+
+
+    <div class="connection-grid">
+
+
+      <article class="connection-card">
+
+        <div class="connection-number">
+          01 / CHÙA TIÊN
+        </div>
+
+        <h3>
+          Di tích
+          và tín ngưỡng.
+        </h3>
+
+        <p>
+          Chùa Tiên nằm trong lòng núi Đại Tượng,
+          là điểm nhấn quan trọng của quần thể
+          Chùa Tiên – Giếng Tiên.
+        </p>
+
+        <div class="connection-mini">
+          DI TÍCH · TÂM LINH
+        </div>
+
+      </article>
+
+
+      <article class="connection-card">
+
+        <div class="connection-number">
+          02 / GIẾNG TIÊN
+        </div>
+
+        <h3>
+          Nguồn nước
+          và truyền thuyết.
+        </h3>
+
+        <p>
+          Giếng Tiên gắn với truyền thuyết về Tiên ông
+          và nguồn nước trong vắt từ lòng núi,
+          tạo thêm lớp văn hóa dân gian cho khu di tích.
+        </p>
+
+        <div class="connection-mini">
+          NƯỚC · DÂN GIAN
+        </div>
+
+      </article>
+
+
+      <article class="connection-card">
+
+        <div class="connection-number">
+          03 / THỦY CUNG
+        </div>
+
+        <h3>
+          Hang đá
+          và thạch nhũ.
+        </h3>
+
+        <p>
+          Hang Thủy Cung mang tới một không gian
+          khám phá địa chất, thạch nhũ và cảnh quan
+          trong lòng núi.
+        </p>
+
+        <div class="connection-mini">
+          KARST · THẠCH NHŨ
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     JOURNEY
+========================================================= -->
+
+<section class="journey-section" id="hanh-trinh">
+
+  <div class="journey-inner">
+
+    <div class="label">
+      07 / HÀNH TRÌNH THAM QUAN
+    </div>
+
+    <h2 class="title">
+      Từ chân núi
+      đến lòng Thủy Cung.
+    </h2>
+
+    <p class="intro">
+      Một cách đơn giản để cảm nhận khu vực này là đi theo
+      chuỗi cảnh quan từ chân núi, lên Chùa Tiên – Giếng Tiên,
+      sau đó khám phá Hang Thủy Cung ở khu vực lân cận.
+    </p>
+
+
+    <div class="journey">
+
+
+      <div class="journey-stop">
+
+        <div class="journey-dot">
+          01
+        </div>
+
+        <h3>
+          Núi Đại Tượng
+        </h3>
+
+        <p>
+          Quan sát tổng thể khối núi
+          và cảnh quan xung quanh.
+        </p>
+
+      </div>
+
+
+      <div class="journey-stop">
+
+        <div class="journey-dot">
+          02
+        </div>
+
+        <h3>
+          Chùa Tiên
+        </h3>
+
+        <p>
+          Khám phá không gian chùa
+          nằm trong lòng núi.
+        </p>
+
+      </div>
+
+
+      <div class="journey-stop">
+
+        <div class="journey-dot">
+          03
+        </div>
+
+        <h3>
+          Giếng Tiên
+        </h3>
+
+        <p>
+          Tìm hiểu truyền thuyết
+          và dòng nước trong lòng núi.
+        </p>
+
+      </div>
+
+
+      <div class="journey-stop">
+
+        <div class="journey-dot">
+          04
+        </div>
+
+        <h3>
+          Hang Thủy Cung
+        </h3>
+
+        <p>
+          Quan sát vòm hang,
+          thạch nhũ và hệ thống ngách đá.
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     GALLERY
+========================================================= -->
+
+<section class="gallery-section" id="goc-nhin">
+
+  <div class="gallery-inner">
+
+    <div class="label">
+      08 / GÓC NHÌN THỰC TẾ
+    </div>
+
+    <h2
+      class="title"
+      style="color:#edf7f6;"
+    >
+      Không kéo ảnh.
+      Không ép ảnh.
+      Giữ nguyên hình dạng gốc.
+    </h2>
+
+    <p class="intro">
+      Các ảnh nội dung bên dưới được hiển thị theo tỉ lệ gốc:
+      chiều rộng tự co theo màn hình nhưng chiều cao tự tính,
+      vì vậy ảnh không bị méo hay bị kéo thành một khung cố định.
+    </p>
+
+
+    <div class="gallery">
+
+
+      <figure class="gallery-main">
+
+        <img
+          src="https://luongvantri.langson.gov.vn/upload/105842/fck/adminluongvantri/2025_10_27_03_58_0511.jpg"
+          alt="Hang Thủy Cung Lạng Sơn"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+        >
+
+        <figcaption>
+          Hang Thủy Cung trong khu vực Chùa Tiên – Giếng Tiên.
+          Ảnh: UBND phường Lương Văn Tri.
+        </figcaption>
+
+      </figure>
+
+
+      <div class="gallery-side">
+
+
+        <figure>
+
+          <img
+            src="https://luongvantri.langson.gov.vn/upload/105842/fck/adminluongvantri/2025_10_27_03_58_0511.jpg"
+            alt="Không gian cửa Hang Thủy Cung"
+            loading="lazy"
+            referrerpolicy="no-referrer"
+          >
+
+          <figcaption>
+            Cửa Hang Thủy Cung nhìn từ phía trước.
+            Ảnh: UBND phường Lương Văn Tri.
+          </figcaption>
+
+        </figure>
+
+
+        <figure>
+
+          <img
+            src="https://luongvantri.langson.gov.vn/upload/105842/fck/adminluongvantri/2025_10_27_03_58_0512.jpg"
+            alt="Không gian Hang Thủy Cung Lạng Sơn"
+            loading="lazy"
+            referrerpolicy="no-referrer"
+          >
+
+          <figcaption>
+            Hình ảnh thứ hai của Hang Thủy Cung
+            từ cổng thông tin địa phương.
+            Ảnh: UBND phường Lương Văn Tri.
+          </figcaption>
+
+        </figure>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     VALUES
+========================================================= -->
+
+<section class="value-section" id="gia-tri">
+
+  <div class="value-inner">
+
+    <div class="label">
+      09 / GIÁ TRỊ
+    </div>
+
+    <h2
+      class="title"
+      style="color:#edf7f6;"
+    >
+      Một hang động,
+      nhiều lớp giá trị.
+    </h2>
+
+
+    <div class="value-grid">
+
+
+      <article class="value-card">
+
+        <div class="value-no">
+          01 / ĐỊA CHẤT
+        </div>
+
+        <h3>
+          Hang đá vôi tự nhiên
+        </h3>
+
+        <p>
+          Vòm hang, vách đá, ngách và thạch nhũ
+          tạo nên một cảnh quan karst có tính nhận diện cao.
+        </p>
+
+      </article>
+
+
+      <article class="value-card">
+
+        <div class="value-no">
+          02 / CẢNH QUAN
+        </div>
+
+        <h3>
+          Không gian huyền ảo
+        </h3>
+
+        <p>
+          Hệ thống chiếu sáng kết hợp với bề mặt đá
+          tạo nên diện mạo lung linh đặc trưng.
+        </p>
+
+      </article>
+
+
+      <article class="value-card">
+
+        <div class="value-no">
+          03 / TÍN NGƯỠNG
+        </div>
+
+        <h3>
+          Văn hóa thờ Mẫu
+        </h3>
+
+        <p>
+          Các ban thờ trong hang tạo nên lớp không gian
+          tín ngưỡng gắn với đời sống văn hóa địa phương.
+        </p>
+
+      </article>
+
+
+      <article class="value-card">
+
+        <div class="value-no">
+          04 / DU LỊCH
+        </div>
+
+        <h3>
+          Điểm tham quan mới
+        </h3>
+
+        <p>
+          Hang Thủy Cung được địa phương phát huy
+          như một điểm nhấn trong tuyến tham quan Chùa Tiên.
+        </p>
+
+      </article>
+
+
+      <article class="value-card">
+
+        <div class="value-no">
+          05 / CỘNG ĐỒNG
+        </div>
+
+        <h3>
+          Gắn với không gian lễ hội
+        </h3>
+
+        <p>
+          Hang nằm trong quần thể Chùa Tiên – Giếng Tiên,
+          nơi diễn ra các hoạt động văn hóa và lễ hội đầu xuân.
+        </p>
+
+      </article>
+
+
+      <article class="value-card">
+
+        <div class="value-no">
+          06 / DI SẢN
+        </div>
+
+        <h3>
+          Kết nối nhiều lớp văn hóa
+        </h3>
+
+        <p>
+          Thiên nhiên, tín ngưỡng, truyền thuyết dân gian
+          và du lịch cùng hiện diện trong một không gian.
+        </p>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONSERVATION
+========================================================= -->
+
+<section class="conservation" id="bao-ton">
+
+  <div class="conservation-inner">
+
+    <div
+      class="label"
+      style="color:#a5e9e2;"
+    >
+      10 / BẢO TỒN
+    </div>
+
+    <h2
+      class="title"
+      style="color:#edf8f7;"
+    >
+      Hang động đẹp nhất
+      khi vẫn còn nguyên giá trị tự nhiên.
+    </h2>
+
+
+    <div class="conservation-grid">
+
+
+      <article class="conservation-box">
+
+        <h3>
+          Thạch nhũ
+          không phải đồ trang trí.
+        </h3>
+
+        <p>
+          Không bẻ, chạm phá hoặc lấy thạch nhũ trong hang.
+          Những cấu tạo tự nhiên này hình thành trong khoảng
+          thời gian rất dài và rất khó phục hồi.
+        </p>
+
+      </article>
+
+
+      <article class="conservation-box">
+
+        <h3>
+          Di tích tâm linh
+          cần được tôn trọng.
+        </h3>
+
+        <p>
+          Khi tham quan các khu vực thờ tự,
+          nên giữ yên tĩnh, không tự ý di chuyển đồ thờ
+          và tuân thủ hướng dẫn của đơn vị quản lý.
+        </p>
+
+      </article>
+
+
+    </div>
+
+
+    <div class="alert">
+      Khi đi tham quan, nên đi theo lối được phép,
+      chú ý nền đá có thể ẩm hoặc trơn và không tự ý
+      đi vào các ngách không dành cho khách.
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     FINAL
+========================================================= -->
+
+<section class="final">
+
+  <div class="final-box">
+
+    <div class="final-small">
+      HANG THỦY CUNG · NÚI ĐẠI TƯỢNG · LẠNG SƠN
+    </div>
+
+    <h2>
+      Trong lòng núi
+      có một thế giới
+      được tạo nên
+      bởi đá và thời gian.
+    </h2>
+
+    <p>
+      Hang Thủy Cung là một điểm nhấn của không gian
+      Chùa Tiên – Giếng Tiên, nơi cảnh quan hang đá vôi,
+      thạch nhũ và văn hóa tín ngưỡng cùng tạo nên
+      một trải nghiệm rất riêng của Lạng Sơn.
+    </p>
+
+
+    <div class="sources">
+
+      Nguồn thông tin:
+
+      <a
+        href="https://baolangson.vn/hang-thuy-cung-diem-nhan-moi-cua-du-lich-tam-linh-thanh-pho-lang-son-1587919.html"
+        target="_blank"
+        rel="noopener"
+      >
+        Báo và Phát thanh, Truyền hình Lạng Sơn
+      </a>
+
+      ·
+
+      <a
+        href="https://luongvantri.langson.gov.vn/gioi-thieu/cac-di-tich-danh-lam-thang-canh?isFeatured=1"
+        target="_blank"
+        rel="noopener"
+      >
+        UBND phường Lương Văn Tri
+      </a>
+
+      <br>
+
+      Hình ảnh:
+
+      <a
+        href="https://luongvantri.langson.gov.vn/"
+        target="_blank"
+        rel="noopener"
+      >
+        Cổng thông tin UBND phường Lương Văn Tri
+      </a>
+
+      ·
+
+      Báo và Phát thanh, Truyền hình Lạng Sơn.
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      LẠNG SƠN / 15
+    </div>
+
+    <div class="footer-title">
+      HANG THỦY CUNG
+    </div>
+
+    <div class="footer-text">
+      Núi Đại Tượng · Chùa Tiên – Giếng Tiên ·
+      phường Lương Văn Tri · tỉnh Lạng Sơn.
+    </div>
+
+    <div class="footer-source">
+
+      Thông tin địa phương:
+
+      <a
+        href="https://luongvantri.langson.gov.vn/"
+        target="_blank"
+        rel="noopener"
+      >
+        UBND phường Lương Văn Tri
+      </a>
+
+      <br>
+
+      Báo chí địa phương:
+
+      <a
+        href="https://baolangson.vn/"
+        target="_blank"
+        rel="noopener"
+      >
+        Báo và Phát thanh, Truyền hình Lạng Sơn
+      </a>
+
+      <br>
+
+      Tình trạng ảnh:
+      ảnh nội dung giữ tỉ lệ gốc, không ép chiều cao.
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- =========================================================
+     SCROLL REVEAL + SECTION NAV
+========================================================= -->
+
+<script>
+
+const revealItems = document.querySelectorAll(
+  ".fact, .aquatic-art, .aquatic-copy, .main-photo, .formation, .spirit-card, .connection-card, .journey-stop, .gallery figure, .value-card, .conservation-box"
+);
+
+const observer = new IntersectionObserver(
+
+  entries => {
+
+    entries.forEach(entry => {
+
+      if(entry.isIntersecting){
+
+        entry.target.classList.add("visible");
+
+      }
+
+    });
+
+  },
+
+  {
+    threshold:.08
+  }
+
+);
+
+
+revealItems.forEach(element => {
+
+  element.style.opacity="0";
+
+  element.style.transform="translateY(24px)";
+
+  element.style.transition=
+    "opacity .7s ease, transform .7s ease";
+
+  observer.observe(element);
+
+});
+
+
+const revealStyle = document.createElement("style");
+
+revealStyle.innerHTML=`
+
+.visible{
+  opacity:1 !important;
+  transform:translateY(0) !important;
+}
+
+`;
+
+document.head.appendChild(revealStyle);
+
+
+/* =========================================================
+   ACTIVE SECTION NAV
+========================================================= */
+
+const navLinks = [
+  ...document.querySelectorAll(".section-link")
+];
+
+const navSections = navLinks
+  .map(link =>
+    document.querySelector(
+      link.getAttribute("href")
+    )
+  )
+  .filter(Boolean);
+
+
+const sectionNavObserver = new IntersectionObserver(
+
+  entries => {
+
+    entries.forEach(entry => {
+
+      if(entry.isIntersecting){
+
+        navLinks.forEach(link => {
+
+          link.classList.toggle(
+            "active",
+            link.getAttribute("href") ===
+            "#" + entry.target.id
+          );
+
+        });
+
+      }
+
+    });
+
+  },
+
+  {
+    rootMargin:"-145px 0px -55% 0px",
+    threshold:0
+  }
+
+);
+
+
+navSections.forEach(section => {
+
+  sectionNavObserver.observe(section);
+
+});
+
+</script>
+
+
+</body>
+</html>
+```

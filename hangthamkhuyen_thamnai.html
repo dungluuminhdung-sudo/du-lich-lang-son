@@ -1,0 +1,2874 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Hang Thẩm Khuyên – Thẩm Hai | Lạng Sơn</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=DM+Serif+Display&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root{
+  --black:#080909;
+  --dark:#101212;
+  --dark2:#161918;
+  --panel:#1b1e1c;
+  --paper:#f1ece2;
+  --paper2:#e7e0d3;
+  --white:#f4efe6;
+  --muted:#989894;
+  --muted2:#696b67;
+  --line:rgba(255,255,255,.10);
+  --line-dark:#d4cbbb;
+  --rust:#a65b38;
+  --rust2:#c47b55;
+  --stone:#bcae98;
+  --gold:#c7a060;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"Be Vietnam Pro",sans-serif;
+  background:var(--black);
+  color:var(--white);
+  line-height:1.78;
+  overflow-x:hidden;
+}
+
+/* =====================================================
+   TOP NAV
+===================================================== */
+
+.nav{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:72px;
+  z-index:200;
+  background:rgba(8,9,9,.88);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav-inner{
+  width:min(1180px,92%);
+  height:100%;
+  margin:auto;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-family:"Space Grotesk",sans-serif;
+  font-weight:700;
+  font-size:13px;
+  letter-spacing:.15em;
+}
+
+.logo span{
+  color:var(--rust2);
+}
+
+.back{
+  color:#dedbd4;
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:999px;
+  padding:8px 16px;
+  font-size:12px;
+  transition:.3s;
+}
+
+.back:hover{
+  background:#f1ece2;
+  color:#101111;
+}
+
+/* =====================================================
+   SECTION NAV
+===================================================== */
+
+.section-nav{
+  position:sticky;
+  top:72px;
+  z-index:150;
+
+  background:rgba(8,9,9,.88);
+  backdrop-filter:blur(16px);
+
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.section-nav-inner{
+  width:min(1180px,92%);
+  margin:auto;
+
+  display:flex;
+  align-items:center;
+  gap:3px;
+
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+
+.section-nav-inner::-webkit-scrollbar{
+  display:none;
+}
+
+.section-link{
+  flex:0 0 auto;
+
+  padding:12px 14px 10px;
+
+  color:#777b76;
+
+  text-decoration:none;
+
+  font-size:10px;
+  font-weight:700;
+
+  letter-spacing:.08em;
+
+  white-space:nowrap;
+
+  border-bottom:2px solid transparent;
+
+  transition:.25s;
+}
+
+.section-link:hover,
+.section-link.active{
+  color:var(--rust2);
+  border-bottom-color:var(--rust2);
+}
+
+section[id],
+footer[id]{
+  scroll-margin-top:135px;
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+  min-height:870px;
+
+  position:relative;
+  overflow:hidden;
+
+  display:flex;
+  align-items:flex-end;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,6,6,.97) 0%,
+      rgba(5,6,6,.88) 32%,
+      rgba(5,6,6,.54) 60%,
+      rgba(5,6,6,.30) 100%
+    ),
+    url("https://mediabls.mediatech.vn/upload/image/202509/medium/593232_f7d1e7ee7bc5d1a19ea0273a4fa76099_08422129.jpg");
+
+  background-size:cover;
+  background-position:center;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 35%,
+      rgba(8,9,9,.96) 100%
+    );
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+
+  width:650px;
+  height:650px;
+
+  right:-270px;
+  top:125px;
+
+  border-radius:50%;
+
+  border:1px solid rgba(196,123,85,.18);
+
+  box-shadow:
+    0 0 0 55px rgba(196,123,85,.035),
+    0 0 0 110px rgba(196,123,85,.025),
+    0 0 0 165px rgba(196,123,85,.018);
+
+  pointer-events:none;
+}
+
+.hero-inner{
+  width:min(1180px,92%);
+  margin:auto;
+
+  position:relative;
+  z-index:3;
+
+  padding:150px 0 105px;
+}
+
+.kicker{
+  color:var(--rust2);
+
+  font-size:11px;
+  font-weight:800;
+
+  text-transform:uppercase;
+  letter-spacing:.2em;
+}
+
+.hero h1{
+  margin-top:20px;
+
+  max-width:1050px;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:clamp(52px,8.5vw,118px);
+  line-height:.87;
+
+  letter-spacing:-.065em;
+
+  font-weight:700;
+}
+
+.hero h1 span{
+  display:block;
+  color:var(--rust2);
+}
+
+.hero-desc{
+  max-width:710px;
+
+  margin-top:30px;
+
+  color:#c8c7c2;
+
+  font-size:16px;
+}
+
+.hero-meta{
+  margin-top:30px;
+
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.meta{
+  padding:10px 14px;
+
+  border-radius:10px;
+
+  border:1px solid rgba(255,255,255,.12);
+
+  background:rgba(0,0,0,.31);
+
+  font-size:11px;
+
+  color:#dad7d0;
+}
+
+.hero-note{
+  margin-top:23px;
+
+  max-width:680px;
+
+  color:#858781;
+
+  font-size:10px;
+}
+
+/* =====================================================
+   GENERAL SECTION
+===================================================== */
+
+.section{
+  width:min(1180px,92%);
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.label{
+  color:var(--rust2);
+
+  font-size:10px;
+  font-weight:800;
+
+  letter-spacing:.19em;
+  text-transform:uppercase;
+}
+
+.title{
+  max-width:930px;
+
+  margin-top:14px;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:clamp(38px,5.8vw,75px);
+
+  line-height:.98;
+
+  letter-spacing:-.045em;
+}
+
+.intro{
+  max-width:760px;
+
+  margin-top:21px;
+
+  color:var(--muted);
+
+  font-size:14px;
+}
+
+/* =====================================================
+   IMAGE + TEXT FEATURE
+===================================================== */
+
+.media-feature{
+  margin-top:55px;
+
+  display:grid;
+  grid-template-columns:1.08fr .92fr;
+
+  min-height:470px;
+
+  border:1px solid var(--line);
+
+  background:#151817;
+
+  overflow:hidden;
+}
+
+.media-feature.reverse{
+  grid-template-columns:.92fr 1.08fr;
+}
+
+.media-photo{
+  min-height:470px;
+  overflow:hidden;
+  margin:0;
+  background:#222;
+}
+
+.media-photo img{
+  width:100%;
+  height:100%;
+
+  display:block;
+
+  object-fit:cover;
+
+  transition:.7s;
+}
+
+.media-feature:hover .media-photo img{
+  transform:scale(1.035);
+}
+
+.media-copy{
+  padding:45px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.media-copy .small-label{
+  color:var(--gold);
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:10px;
+  font-weight:700;
+
+  letter-spacing:.15em;
+}
+
+.media-copy h3{
+  margin-top:18px;
+
+  font-family:"DM Serif Display",serif;
+
+  font-size:43px;
+
+  line-height:1.04;
+
+  font-weight:400;
+}
+
+.media-copy p{
+  margin-top:17px;
+
+  color:#929690;
+
+  font-size:13px;
+}
+
+.media-list{
+  margin-top:22px;
+
+  display:grid;
+
+  gap:10px;
+}
+
+.media-point{
+  padding:12px 14px;
+
+  border-left:2px solid var(--rust2);
+
+  background:rgba(255,255,255,.035);
+
+  color:#c7c7c1;
+
+  font-size:11px;
+}
+
+/* =====================================================
+   FACT STRIP
+===================================================== */
+
+.fact-grid{
+  margin-top:55px;
+
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+
+  gap:12px;
+}
+
+.fact-card{
+  min-height:200px;
+
+  padding:28px;
+
+  border:1px solid var(--line);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.045),
+      rgba(255,255,255,.018)
+    );
+
+  position:relative;
+  overflow:hidden;
+
+  transition:.35s;
+}
+
+.fact-card:hover{
+  transform:translateY(-5px);
+
+  border-color:rgba(196,123,85,.35);
+}
+
+.fact-number{
+  font-family:"Space Grotesk",sans-serif;
+
+  color:#777b77;
+
+  font-size:10px;
+  letter-spacing:.12em;
+}
+
+.fact-card strong{
+  display:block;
+
+  margin-top:29px;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:28px;
+
+  line-height:1.08;
+}
+
+.fact-card p{
+  margin-top:8px;
+
+  color:#888b86;
+
+  font-size:11px;
+}
+
+/* =====================================================
+   MAIN STORY
+===================================================== */
+
+.story{
+  background:var(--paper);
+  color:#242421;
+}
+
+.story-inner{
+  width:min(1180px,92%);
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.story .label{
+  color:var(--rust);
+}
+
+.story .intro{
+  color:#716f68;
+}
+
+.story-grid{
+  margin-top:58px;
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
+
+  gap:22px;
+}
+
+.story-img{
+  position:relative;
+
+  height:580px;
+
+  overflow:hidden;
+
+  background:#222;
+}
+
+.story-img img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  display:block;
+
+  transition:.7s;
+}
+
+.story-img:hover img{
+  transform:scale(1.04);
+}
+
+.story-caption{
+  position:absolute;
+
+  left:18px;
+  right:18px;
+  bottom:18px;
+
+  padding:15px;
+
+  background:rgba(8,9,8,.77);
+
+  backdrop-filter:blur(10px);
+
+  color:#ece8df;
+
+  font-size:11px;
+
+  border:1px solid rgba(255,255,255,.1);
+}
+
+.story-content{
+  padding:10px 10px 10px 18px;
+}
+
+.story-content h3{
+  font-family:"DM Serif Display",serif;
+
+  font-size:48px;
+
+  line-height:1.02;
+
+  font-weight:400;
+}
+
+.story-content p{
+  color:#716f68;
+
+  margin-top:18px;
+
+  font-size:14px;
+}
+
+.story-highlight{
+  margin-top:29px;
+
+  padding:19px 21px;
+
+  border-left:3px solid var(--rust);
+
+  background:#e9e1d4;
+
+  color:#514c43;
+
+  font-size:13px;
+}
+
+/* =====================================================
+   TWO CAVES
+===================================================== */
+
+.caves{
+  background:#111313;
+
+  border-top:1px solid rgba(255,255,255,.08);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.caves-inner{
+  width:min(1180px,92%);
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.caves-grid{
+  margin-top:58px;
+
+  display:grid;
+  grid-template-columns:1fr 1fr;
+
+  gap:15px;
+}
+
+.cave-card{
+  min-height:410px;
+
+  padding:34px;
+
+  border:1px solid var(--line);
+
+  background:
+    radial-gradient(
+      circle at 80% 15%,
+      rgba(196,123,85,.12),
+      transparent 28%
+    ),
+    #171918;
+
+  position:relative;
+  overflow:hidden;
+}
+
+.cave-card::after{
+  content:"";
+
+  position:absolute;
+
+  right:-90px;
+  bottom:-120px;
+
+  width:300px;
+  height:300px;
+
+  border-radius:50%;
+
+  border:1px solid rgba(255,255,255,.06);
+}
+
+.cave-tag{
+  color:var(--gold);
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:11px;
+
+  letter-spacing:.15em;
+}
+
+.cave-card h3{
+  margin-top:58px;
+
+  font-family:"DM Serif Display",serif;
+
+  font-size:43px;
+
+  line-height:1;
+
+  font-weight:400;
+}
+
+.cave-card .age{
+  margin-top:15px;
+
+  color:var(--rust2);
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:28px;
+
+  font-weight:700;
+}
+
+.cave-card p{
+  max-width:470px;
+
+  margin-top:13px;
+
+  color:#939691;
+
+  font-size:13px;
+}
+
+.cave-bottom{
+  position:absolute;
+
+  bottom:30px;
+  left:34px;
+
+  color:#626661;
+
+  font-size:10px;
+
+  letter-spacing:.1em;
+}
+
+/* =====================================================
+   ARCHAEOLOGY
+===================================================== */
+
+.archaeology{
+  background:
+    linear-gradient(
+      180deg,
+      #0d0f0e,
+      #171918
+    );
+}
+
+.arch-inner{
+  width:min(1180px,92%);
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.arch-grid{
+  margin-top:58px;
+
+  display:grid;
+  grid-template-columns:.72fr 1.28fr;
+
+  gap:25px;
+}
+
+.archive-number{
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:clamp(105px,16vw,205px);
+
+  line-height:.75;
+
+  letter-spacing:-.1em;
+
+  color:rgba(196,123,85,.10);
+
+  align-self:start;
+}
+
+.arch-text{
+  border-left:1px solid var(--line);
+
+  padding-left:32px;
+}
+
+.arch-text h3{
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:31px;
+
+  line-height:1.05;
+}
+
+.arch-text p{
+  max-width:710px;
+
+  margin-top:17px;
+
+  color:#969a95;
+
+  font-size:14px;
+}
+
+.arch-quote{
+  margin-top:28px;
+
+  padding:23px;
+
+  background:rgba(255,255,255,.035);
+
+  border:1px solid var(--line);
+
+  color:#d9d4ca;
+
+  font-size:14px;
+}
+
+/* =====================================================
+   DISCOVERIES
+===================================================== */
+
+.discovery-grid{
+  margin-top:55px;
+
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+
+  gap:13px;
+}
+
+.discovery{
+  min-height:225px;
+
+  border:1px solid var(--line);
+
+  background:var(--panel);
+
+  padding:29px;
+
+  position:relative;
+}
+
+.discovery-no{
+  color:var(--rust2);
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:11px;
+
+  letter-spacing:.12em;
+}
+
+.discovery h3{
+  margin-top:38px;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:21px;
+}
+
+.discovery p{
+  margin-top:9px;
+
+  color:#8b8f8a;
+
+  font-size:12px;
+}
+
+/* =====================================================
+   FOSSIL IMAGE
+===================================================== */
+
+.evidence{
+  margin-top:55px;
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr 1fr;
+
+  gap:13px;
+}
+
+.evidence figure{
+  height:380px;
+
+  margin:0;
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:#222;
+
+  border:1px solid var(--line);
+}
+
+.evidence img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  display:block;
+
+  transition:.65s;
+}
+
+.evidence figure:hover img{
+  transform:scale(1.05);
+}
+
+.evidence figcaption{
+  position:absolute;
+
+  left:14px;
+  right:14px;
+  bottom:14px;
+
+  padding:12px 13px;
+
+  background:rgba(7,8,8,.75);
+
+  backdrop-filter:blur(9px);
+
+  color:#e5e2da;
+
+  font-size:11px;
+}
+
+/* =====================================================
+   CAVE GALLERY
+===================================================== */
+
+.gallery{
+  margin-top:56px;
+
+  display:grid;
+
+  grid-template-columns:1.2fr .8fr;
+
+  gap:14px;
+}
+
+.gallery-main{
+  height:600px;
+}
+
+.gallery-side{
+  height:600px;
+
+  display:grid;
+
+  grid-template-rows:1fr 1fr;
+
+  gap:14px;
+}
+
+.gallery-card{
+  position:relative;
+
+  overflow:hidden;
+
+  background:#222;
+
+  border:1px solid var(--line);
+}
+
+.gallery img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  display:block;
+
+  transition:.7s;
+}
+
+.gallery figure:hover img{
+  transform:scale(1.045);
+}
+
+.gallery-caption{
+  position:absolute;
+
+  left:15px;
+  right:15px;
+  bottom:15px;
+
+  padding:12px 14px;
+
+  background:rgba(7,8,8,.75);
+
+  backdrop-filter:blur(8px);
+
+  color:#eeeae1;
+
+  font-size:11px;
+}
+
+.gallery-source{
+  margin-top:13px;
+
+  color:#666a65;
+
+  font-size:10px;
+}
+
+/* =====================================================
+   VISIT
+===================================================== */
+
+.visit{
+  background:var(--paper);
+  color:#292824;
+
+  border-top:1px solid #d3c9b9;
+}
+
+.visit-inner{
+  width:min(1180px,92%);
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.visit .label{
+  color:var(--rust);
+}
+
+.visit .intro{
+  color:#736e65;
+}
+
+.visit-grid{
+  margin-top:58px;
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:14px;
+}
+
+.visit-card{
+  min-height:260px;
+
+  padding:30px;
+
+  border:1px solid var(--line-dark);
+
+  background:#f8f4ec;
+
+  position:relative;
+}
+
+.visit-no{
+  color:var(--rust);
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:11px;
+
+  letter-spacing:.13em;
+}
+
+.visit-card h3{
+  margin-top:48px;
+
+  font-family:"DM Serif Display",serif;
+
+  font-size:31px;
+
+  line-height:1.05;
+
+  font-weight:400;
+}
+
+.visit-card p{
+  margin-top:12px;
+
+  color:#736e65;
+
+  font-size:12px;
+}
+
+.visit-note{
+  margin-top:40px;
+
+  border:1px solid #d2c6b5;
+
+  padding:23px;
+
+  background:#ebe4d8;
+
+  color:#68635b;
+
+  font-size:12px;
+}
+
+/* =====================================================
+   DEVELOPMENT
+===================================================== */
+
+.future{
+  background:#0e1010;
+
+  border-top:1px solid var(--line);
+}
+
+.future-inner{
+  width:min(1180px,92%);
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.future-grid{
+  margin-top:55px;
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:14px;
+}
+
+.future-card{
+  padding:30px;
+
+  border:1px solid var(--line);
+
+  background:rgba(255,255,255,.025);
+
+  min-height:235px;
+}
+
+.future-card h3{
+  font-size:20px;
+}
+
+.future-card p{
+  margin-top:11px;
+
+  color:#8f938e;
+
+  font-size:13px;
+}
+
+.future-tag{
+  display:inline-block;
+
+  margin-bottom:25px;
+
+  color:var(--gold);
+
+  font-size:10px;
+
+  letter-spacing:.15em;
+}
+
+/* =====================================================
+   FINAL
+===================================================== */
+
+.final{
+  width:min(1180px,92%);
+  margin:auto;
+
+  padding:110px 0 90px;
+}
+
+.final-box{
+  padding:55px;
+
+  position:relative;
+
+  overflow:hidden;
+
+  background:
+    radial-gradient(
+      circle at 83% 24%,
+      rgba(255,255,255,.12),
+      transparent 24%
+    ),
+    linear-gradient(
+      135deg,
+      #b46542,
+      #703a29
+    );
+}
+
+.final-box::after{
+  content:"◉";
+
+  position:absolute;
+
+  right:-110px;
+  bottom:-200px;
+
+  font-size:420px;
+
+  color:rgba(255,255,255,.05);
+}
+
+.final-label{
+  position:relative;
+  z-index:2;
+
+  color:#ecd7ca;
+
+  font-size:10px;
+
+  letter-spacing:.18em;
+}
+
+.final-box h2{
+  position:relative;
+  z-index:2;
+
+  max-width:850px;
+
+  margin-top:16px;
+
+  font-family:"DM Serif Display",serif;
+
+  font-size:clamp(45px,7vw,88px);
+
+  line-height:.94;
+
+  font-weight:400;
+}
+
+.final-box p{
+  position:relative;
+  z-index:2;
+
+  max-width:690px;
+
+  margin-top:21px;
+
+  color:#efd9cd;
+
+  font-size:13px;
+}
+
+.source{
+  position:relative;
+  z-index:2;
+
+  margin-top:28px;
+
+  padding-top:21px;
+
+  border-top:1px solid rgba(255,255,255,.18);
+
+  color:#d4b9ac;
+
+  font-size:10px;
+
+  line-height:1.9;
+}
+
+.source a{
+  color:#f5d9c9;
+
+  text-decoration:none;
+}
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.footer{
+  border-top:1px solid rgba(255,255,255,.08);
+
+  padding:70px 0 90px;
+}
+
+.footer-inner{
+  width:min(1180px,92%);
+  margin:auto;
+}
+
+.footer-brand{
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:13px;
+
+  font-weight:700;
+
+  letter-spacing:.15em;
+}
+
+.footer-title{
+  margin-top:15px;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:clamp(32px,5vw,58px);
+
+  letter-spacing:-.045em;
+
+  font-weight:700;
+}
+
+.footer-text{
+  max-width:720px;
+
+  margin-top:11px;
+
+  color:#777b76;
+
+  font-size:12px;
+}
+
+.footer-links{
+  margin-top:28px;
+
+  padding-top:21px;
+
+  border-top:1px solid var(--line);
+
+  color:#666b66;
+
+  font-size:10px;
+
+  line-height:2;
+}
+
+.footer-links a{
+  color:#ae7153;
+
+  text-decoration:none;
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:950px){
+
+  .fact-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .story-grid,
+  .caves-grid,
+  .arch-grid,
+  .future-grid,
+  .media-feature,
+  .media-feature.reverse{
+    grid-template-columns:1fr;
+  }
+
+  .media-photo{
+    min-height:400px;
+  }
+
+  .media-copy{
+    padding:35px;
+  }
+
+  .discovery-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .evidence{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .evidence figure:last-child{
+    grid-column:1 / 3;
+  }
+
+  .gallery{
+    grid-template-columns:1fr;
+  }
+
+  .gallery-main{
+    height:510px;
+  }
+
+  .gallery-side{
+    height:350px;
+
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:1fr;
+  }
+
+  .visit-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+}
+
+@media(max-width:620px){
+
+  .nav{
+    height:64px;
+  }
+
+  .section-nav{
+    top:64px;
+  }
+
+  .section-link{
+    padding:11px 12px 9px;
+    font-size:9px;
+  }
+
+  section[id],
+  footer[id]{
+    scroll-margin-top:125px;
+  }
+
+  .hero{
+    min-height:780px;
+  }
+
+  .hero-inner{
+    padding-top:125px;
+    padding-bottom:80px;
+  }
+
+  .hero h1{
+    font-size:69px;
+  }
+
+  .hero-desc{
+    font-size:14px;
+  }
+
+  .fact-grid,
+  .discovery-grid,
+  .evidence,
+  .visit-grid{
+    grid-template-columns:1fr;
+  }
+
+  .evidence figure:last-child{
+    grid-column:auto;
+  }
+
+  .story-img{
+    height:420px;
+  }
+
+  .media-photo{
+    min-height:300px;
+  }
+
+  .media-copy{
+    padding:29px;
+  }
+
+  .media-copy h3{
+    font-size:35px;
+  }
+
+  .gallery-main{
+    height:390px;
+  }
+
+  .gallery-side{
+    height:auto;
+
+    display:grid;
+
+    grid-template-columns:1fr;
+    grid-template-rows:240px 240px;
+  }
+
+  .section,
+  .story-inner,
+  .caves-inner,
+  .arch-inner,
+  .visit-inner,
+  .future-inner,
+  .final{
+    padding-top:78px;
+    padding-bottom:78px;
+  }
+
+  .final-box{
+    padding:34px;
+  }
+
+  .archive-number{
+    font-size:105px;
+  }
+
+  .back{
+    padding:7px 12px;
+    font-size:10px;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     NAV
+===================================================== -->
+
+<header class="nav">
+
+  <div class="nav-inner">
+
+    <div class="logo">
+      LẠNG SƠN <span>/</span> 10
+    </div>
+
+    <!-- ĐÃ SỬA NÚT QUAY LẠI -->
+    <a
+      href="./danhlamthangcanh.html"
+      class="back"
+    >
+      ← Danh sách danh thắng
+    </a>
+
+  </div>
+
+</header>
+
+
+<!-- =====================================================
+     SECTION NAV
+===================================================== -->
+
+<nav class="section-nav" aria-label="Điều hướng nội dung">
+
+  <div class="section-nav-inner">
+
+    <a class="section-link active" href="#ho-so">
+      Hồ sơ
+    </a>
+
+    <a class="section-link" href="#cua-hang">
+      Cửa hang
+    </a>
+
+    <a class="section-link" href="#hai-hang">
+      Hai hang
+    </a>
+
+    <a class="section-link" href="#khao-co">
+      Khảo cổ
+    </a>
+
+    <a class="section-link" href="#phat-hien">
+      Phát hiện
+    </a>
+
+    <a class="section-link" href="#hinh-anh">
+      Hình ảnh
+    </a>
+
+    <a class="section-link" href="#ben-trong">
+      Bên trong
+    </a>
+
+    <a class="section-link" href="#gia-tri">
+      Giá trị
+    </a>
+
+    <a class="section-link" href="#tuong-lai">
+      Tương lai
+    </a>
+
+    <a class="section-link" href="#nguon">
+      Nguồn
+    </a>
+
+  </div>
+
+</nav>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+  <div class="hero-inner">
+
+    <div class="kicker">
+      DI TÍCH KHẢO CỔ · TUYẾN DU LỊCH SỐ 2
+    </div>
+
+    <h1>
+      THẨM KHUYÊN
+      <span>THẨM HAI</span>
+    </h1>
+
+    <p class="hero-desc">
+      Hai hang động trên dãy núi đá vôi Phia Gà lưu giữ
+      những dấu tích đặc biệt về con người cổ và thế giới
+      động vật từng tồn tại hàng trăm nghìn năm trước.
+    </p>
+
+    <div class="hero-meta">
+
+      <div class="meta">
+        📍 Xã Tân Văn · Lạng Sơn
+      </div>
+
+      <div class="meta">
+        🪨 Dãy núi đá vôi Phia Gà
+      </div>
+
+      <div class="meta">
+        🦴 Di tích khảo cổ
+      </div>
+
+      <div class="meta">
+        🏛 Xếp hạng quốc gia năm 1993
+      </div>
+
+    </div>
+
+    <div class="hero-note">
+      Cụm di tích có tổng diện tích khoảng 22.380 m²
+      và nằm trong hệ thống các điểm tham quan của
+      Công viên địa chất Lạng Sơn.
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     THÔNG TIN
+===================================================== -->
+
+<section class="section" id="ho-so">
+
+  <div class="label">
+    01 / HỒ SƠ DI TÍCH
+  </div>
+
+  <h2 class="title">
+    Một quần thể hang động
+    mang trong mình dấu vết của quá khứ rất xa.
+  </h2>
+
+  <p class="intro">
+    Hang Thẩm Khuyên – Thẩm Hai thuộc xã Tân Văn, nằm trên
+    dãy núi đá vôi Phia Gà, thuộc hệ thống núi đá vôi
+    Điềm He – Bình Gia. Đây là một cụm di tích khảo cổ
+    có giá trị nổi bật về lịch sử con người và cổ sinh vật.
+  </p>
+
+
+  <!-- THÊM KHỐI ẢNH + VĂN BẢN -->
+
+  <div class="media-feature">
+
+    <figure class="media-photo">
+
+      <img
+        src="https://mediabls.mediatech.vn/upload/image/202509/medium/593232_f7d1e7ee7bc5d1a19ea0273a4fa76099_08422129.jpg"
+        alt="Vách đá và cửa Hang Thẩm Khuyên - Thẩm Hai"
+        loading="lazy"
+      >
+
+    </figure>
+
+
+    <div class="media-copy">
+
+      <div class="small-label">
+        GÓC NHÌN DI TÍCH
+      </div>
+
+      <h3>
+        Một cửa hang,
+        nhiều lớp lịch sử.
+      </h3>
+
+      <p>
+        Từ bên ngoài, Thẩm Khuyên – Thẩm Hai nổi bật giữa
+        cảnh quan núi đá vôi Phia Gà. Nhưng giá trị lớn nhất
+        của địa điểm không chỉ nằm ở hình thái hang động mà
+        còn ở những dấu tích khảo cổ và cổ sinh vật được
+        phát hiện bên trong.
+      </p>
+
+      <div class="media-list">
+
+        <div class="media-point">
+          <strong>Địa điểm:</strong>
+          Xã Tân Văn, tỉnh Lạng Sơn.
+        </div>
+
+        <div class="media-point">
+          <strong>Diện tích:</strong>
+          Khoảng 22.380 m².
+        </div>
+
+        <div class="media-point">
+          <strong>Giá trị:</strong>
+          Khảo cổ học · cổ sinh vật học · địa chất.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="fact-grid">
+
+    <div class="fact-card">
+
+      <div class="fact-number">
+        01 / ĐỊA ĐIỂM
+      </div>
+
+      <strong>
+        Tân Văn
+      </strong>
+
+      <p>
+        Xã Tân Văn, tỉnh Lạng Sơn.
+      </p>
+
+    </div>
+
+
+    <div class="fact-card">
+
+      <div class="fact-number">
+        02 / DIỆN TÍCH
+      </div>
+
+      <strong>
+        22.380 m²
+      </strong>
+
+      <p>
+        Diện tích toàn cụm di tích.
+      </p>
+
+    </div>
+
+
+    <div class="fact-card">
+
+      <div class="fact-number">
+        03 / KHOẢNG CÁCH
+      </div>
+
+      <strong>
+        65 km
+      </strong>
+
+      <p>
+        Khoảng cách được báo Lạng Sơn ghi nhận
+        từ trung tâm tỉnh về phía Đông Nam.
+      </p>
+
+    </div>
+
+
+    <div class="fact-card">
+
+      <div class="fact-number">
+        04 / XẾP HẠNG
+      </div>
+
+      <strong>
+        1993
+      </strong>
+
+      <p>
+        Di tích được xếp hạng cấp quốc gia.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     CÂU CHUYỆN ĐỊA ĐIỂM
+===================================================== -->
+
+<section class="story" id="cua-hang">
+
+  <div class="story-inner">
+
+    <div class="label">
+      02 / NHÌN TỪ BÊN NGOÀI
+    </div>
+
+    <h2 class="title">
+      Vách đá bên ngoài
+      là cánh cửa đầu tiên của di tích.
+    </h2>
+
+    <p class="intro">
+      Cụm hang nằm trong cảnh quan núi đá vôi nhiều cây xanh.
+      Từ khu vực chân núi, du khách có thể tiếp cận đường lên
+      di tích và quan sát hệ thống biển giới thiệu, cửa hang
+      và vách đá tự nhiên.
+    </p>
+
+
+    <div class="story-grid">
+
+      <figure class="story-img">
+
+        <img
+          src="https://mediabls.mediatech.vn/upload/image/202509/medium/593232_f7d1e7ee7bc5d1a19ea0273a4fa76099_08422129.jpg"
+          alt="Vách đá và cửa Hang Thẩm Khuyên - Thẩm Hai"
+          loading="lazy"
+        >
+
+        <figcaption class="story-caption">
+          Vách núi đá vôi và khu vực cửa Hang Thẩm Khuyên – Thẩm Hai.
+        </figcaption>
+
+      </figure>
+
+
+      <div class="story-content">
+
+        <h3>
+          Một di tích
+          được đánh dấu
+          ngay trên vách đá.
+        </h3>
+
+        <p>
+          Biển nhận diện di tích được đặt nổi bật trên vách núi,
+          giúp du khách dễ dàng nhận ra cụm Hang Thẩm Khuyên –
+          Thẩm Hai ngay từ bên ngoài.
+        </p>
+
+        <p>
+          Không gian quanh cửa hang vẫn giữ được cảm giác gần gũi
+          với cảnh quan tự nhiên. Đá, cây xanh và những khoảng tối
+          của cửa hang tạo nên một sự chuyển tiếp rõ rệt:
+          từ thế giới hiện tại bước vào không gian lưu giữ
+          những dấu tích của quá khứ.
+        </p>
+
+        <p>
+          Đây cũng là một điểm tham quan thuộc tuyến du lịch số 2
+          của Công viên địa chất Lạng Sơn.
+        </p>
+
+
+        <div class="story-highlight">
+          Hang không chỉ hấp dẫn vì vẻ đẹp tự nhiên mà quan trọng hơn,
+          giá trị của nơi này nằm ở những dấu tích khảo cổ và cổ sinh
+          được phát hiện trong lòng hang.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     HAI HANG
+===================================================== -->
+
+<section class="caves" id="hai-hang">
+
+  <div class="caves-inner">
+
+    <div class="label">
+      03 / HAI HANG · HAI MỐC THỜI GIAN
+    </div>
+
+    <h2 class="title">
+      Thẩm Khuyên và Thẩm Hai:
+      hai không gian, hai lớp thời gian.
+    </h2>
+
+    <p class="intro">
+      Theo hồ sơ đánh giá tác động môi trường của tỉnh,
+      hai hang có những niên đại khác nhau và cùng tạo thành
+      một cụm di tích khảo cổ đặc biệt.
+    </p>
+
+
+    <div class="caves-grid">
+
+      <article class="cave-card">
+
+        <div class="cave-tag">
+          HANG SỐ 01
+        </div>
+
+        <h3>
+          Thẩm Khuyên
+        </h3>
+
+        <div class="age">
+          ~475.000 năm
+        </div>
+
+        <p>
+          Các nhà nghiên cứu xác định hang có niên đại cách ngày nay
+          khoảng 475.000 năm. Đây là nơi đã phát hiện những dấu tích
+          quan trọng liên quan đến người cổ cùng các hóa thạch động vật.
+        </p>
+
+        <div class="cave-bottom">
+          DI TÍCH KHẢO CỔ · TÂN VĂN
+        </div>
+
+      </article>
+
+
+      <article class="cave-card">
+
+        <div class="cave-tag">
+          HANG SỐ 02
+        </div>
+
+        <h3>
+          Thẩm Hai
+        </h3>
+
+        <div class="age">
+          ~250.000 năm
+        </div>
+
+        <p>
+          Hang Thẩm Hai có niên đại cách ngày nay khoảng 250.000 năm.
+          Cùng với Thẩm Khuyên, nơi đây tạo thành một hồ sơ liên tục
+          về sự hiện diện của con người và động vật cổ trong khu vực.
+        </p>
+
+        <div class="cave-bottom">
+          PHIA GÀ · BÌNH GIA
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     KHẢO CỔ
+===================================================== -->
+
+<section class="archaeology" id="khao-co">
+
+  <div class="arch-inner">
+
+    <div class="label">
+      04 / HỒ SƠ KHẢO CỔ
+    </div>
+
+    <h2 class="title">
+      Điều làm di tích đặc biệt
+      không nằm ở vẻ ngoài của hang.
+    </h2>
+
+    <div class="arch-grid">
+
+      <div class="archive-number">
+        500K
+      </div>
+
+
+      <div class="arch-text">
+
+        <h3>
+          Hàng trăm nghìn năm
+          được lưu lại trong lớp đất đá.
+        </h3>
+
+        <p>
+          Hang Thẩm Khuyên – Thẩm Hai được biết đến là một trong
+          những địa điểm khảo cổ quan trọng ở Việt Nam, bởi nơi đây
+          đã phát hiện dấu tích của con người cổ cùng nhiều hóa thạch
+          động vật.
+        </p>
+
+        <p>
+          Tài liệu của tỉnh cho biết các nhà nghiên cứu đã phát hiện
+          răng của Homo erectus, cùng răng và xương của nhiều loài
+          động vật từng sống trong cùng thời kỳ.
+        </p>
+
+        <p>
+          Những phát hiện này giúp các nhà khoa học tìm hiểu thêm
+          về môi trường sống, hệ động vật cổ và sự hiện diện của
+          con người tại khu vực Đông Nam Á trong quá khứ xa xôi.
+        </p>
+
+
+        <div class="arch-quote">
+          Một hang động có thể giữ lại những thông tin mà
+          cảnh quan bên ngoài đã thay đổi từ rất lâu.
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     NHỮNG PHÁT HIỆN
+===================================================== -->
+
+<section class="section" id="phat-hien">
+
+  <div class="label">
+    05 / NHỮNG DẤU TÍCH QUAN TRỌNG
+  </div>
+
+  <h2 class="title">
+    Một thế giới động vật cổ
+    từng tồn tại quanh con người.
+  </h2>
+
+  <p class="intro">
+    Các phát hiện tại cụm di tích không chỉ liên quan đến con người cổ.
+    Nhiều hóa thạch động vật cũng được ghi nhận, tạo nên một bức tranh
+    về hệ sinh thái từng tồn tại tại khu vực.
+  </p>
+
+
+  <div class="discovery-grid">
+
+    <div class="discovery">
+
+      <div class="discovery-no">
+        01 / CON NGƯỜI CỔ
+      </div>
+
+      <h3>
+        Homo erectus
+      </h3>
+
+      <p>
+        Răng của người đứng thẳng được phát hiện tại cụm di tích,
+        góp phần quan trọng vào nghiên cứu về sự hiện diện của
+        con người cổ ở khu vực.
+      </p>
+
+    </div>
+
+
+    <div class="discovery">
+
+      <div class="discovery-no">
+        02 / VƯỢN KHỔNG LỒ
+      </div>
+
+      <h3>
+        Gigantopithecus
+      </h3>
+
+      <p>
+        Hóa thạch vượn khổng lồ là một trong những phát hiện
+        nổi bật được nhắc đến trong hồ sơ khảo cổ của di tích.
+      </p>
+
+    </div>
+
+
+    <div class="discovery">
+
+      <div class="discovery-no">
+        03 / ĐỘNG VẬT CỔ
+      </div>
+
+      <h3>
+        Voi răng kiếm
+      </h3>
+
+      <p>
+        Dấu tích của voi răng kiếm cùng các loài động vật lớn
+        giúp mở rộng hình dung về hệ sinh thái cổ tại khu vực.
+      </p>
+
+    </div>
+
+
+    <div class="discovery">
+
+      <div class="discovery-no">
+        04 / NHIỀU LOÀI KHÁC
+      </div>
+
+      <h3>
+        Tê giác · lợn rừng · đười ươi
+      </h3>
+
+      <p>
+        Các tài liệu giới thiệu còn ghi nhận răng và xương
+        của nhiều loài động vật khác từng tồn tại cùng thời.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     HÌNH ẢNH DI TÍCH
+===================================================== -->
+
+<section class="section" id="hinh-anh">
+
+  <div class="label">
+    06 / NHỮNG DẤU VẾT CÒN LẠI
+  </div>
+
+  <h2 class="title">
+    Nhìn vào đá,
+    rồi nhìn sâu hơn vào lịch sử.
+  </h2>
+
+  <p class="intro">
+    Các ảnh thực tế dưới đây cho thấy vách đá, biển di tích
+    và cảnh quan quanh cửa hang. Chúng giúp phần giới thiệu
+    không chỉ nói về khảo cổ mà còn cho thấy diện mạo hiện tại
+    của địa điểm.
+  </p>
+
+
+  <div class="evidence">
+
+    <figure>
+
+      <img
+        src="https://mediabls.mediatech.vn/upload/image/202509/medium/593233_9e680cceefb33430c857ab192ff3772f_08430929.jpg"
+        alt="Biển giới thiệu Công viên địa chất tại Hang Thẩm Khuyên - Thẩm Hai"
+        loading="lazy"
+      >
+
+      <figcaption>
+        Bảng giới thiệu dấu tích người tiền sử
+        tại khu vực Hang Thẩm Khuyên – Thẩm Hai.
+      </figcaption>
+
+    </figure>
+
+
+    <figure>
+
+      <img
+        src="https://mediabls.mediatech.vn/upload/image/202509/medium/593234_cbe22b6a01ce04f58be199a872bc4e56_08434729.jpg"
+        alt="Biển Di chỉ Thẩm Khuyên gắn trên vách đá"
+        loading="lazy"
+      >
+
+      <figcaption>
+        Biển “Di chỉ Thẩm Khuyên” được gắn trên vách đá.
+      </figcaption>
+
+    </figure>
+
+
+    <figure>
+
+      <img
+        src="https://mediabls.mediatech.vn/upload/image/202509/medium/593232_f7d1e7ee7bc5d1a19ea0273a4fa76099_08422129.jpg"
+        alt="Vách đá Hang Thẩm Khuyên Thẩm Hai"
+        loading="lazy"
+      >
+
+      <figcaption>
+        Vách núi đá vôi tại khu vực di tích.
+      </figcaption>
+
+    </figure>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     BÊN TRONG HANG
+===================================================== -->
+
+<section class="section" id="ben-trong">
+
+  <div class="label">
+    07 / KHÔNG GIAN BÊN TRONG
+  </div>
+
+  <h2 class="title">
+    Bóng tối không che giấu
+    vẻ đẹp của đá.
+  </h2>
+
+  <p class="intro">
+    Bên trong Hang Thẩm Khuyên, những khối thạch nhũ xuất hiện
+    với nhiều hình dạng. Ánh sáng chiếu vào các bề mặt đá tạo nên
+    những mảng màu và đường nét rất khác nhau.
+  </p>
+
+
+  <!-- THÊM KHỐI ẢNH + VĂN BẢN -->
+
+  <div class="media-feature reverse">
+
+    <div class="media-copy">
+
+      <div class="small-label">
+        KHÔNG GIAN TỰ NHIÊN
+      </div>
+
+      <h3>
+        Những lớp đá
+        được tạo nên theo thời gian.
+      </h3>
+
+      <p>
+        Không gian bên trong hang cho thấy rõ hơn đặc điểm của
+        địa hình đá vôi. Các bề mặt đá, thạch nhũ và những vùng
+        tối tạo nên một cảnh quan hoàn toàn khác so với bên ngoài.
+      </p>
+
+      <p>
+        Chính không gian này cũng giúp người tham quan hình dung
+        vì sao hang động có thể trở thành nơi lưu giữ các dấu tích
+        tự nhiên và khảo cổ trong thời gian rất dài.
+      </p>
+
+      <div class="media-list">
+
+        <div class="media-point">
+          Thạch nhũ tự nhiên trong lòng hang.
+        </div>
+
+        <div class="media-point">
+          Bề mặt đá với nhiều dạng địa hình.
+        </div>
+
+        <div class="media-point">
+          Không gian tối và sâu đặc trưng của hang động.
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <figure class="media-photo">
+
+      <img
+        src="https://mediabls.mediatech.vn/upload/image/202509/medium/593251_beb0640d446d68d0a242db33100e8dbf_08545229.jpg"
+        alt="Thạch nhũ trong Hang Thẩm Khuyên"
+        loading="lazy"
+      >
+
+    </figure>
+
+  </div>
+
+
+  <div class="gallery">
+
+    <figure class="gallery-main">
+
+      <img
+        src="https://mediabls.mediatech.vn/upload/image/202509/medium/593251_beb0640d446d68d0a242db33100e8dbf_08545229.jpg"
+        alt="Thạch nhũ trong Hang Thẩm Khuyên"
+        loading="lazy"
+      >
+
+      <div class="gallery-caption">
+        Hệ thống thạch nhũ tự nhiên trong lòng Hang Thẩm Khuyên.
+      </div>
+
+    </figure>
+
+
+    <div class="gallery-side">
+
+      <figure class="gallery-card">
+
+        <img
+          src="https://mediabls.mediatech.vn/upload/image/202509/medium/593252_3d43092e395e59f0a9f8f38c2d365b2b_08560429.jpg"
+          alt="Các dạng thạch nhũ trong Hang Thẩm Khuyên"
+          loading="lazy"
+        >
+
+        <div class="gallery-caption">
+          Những mảng thạch nhũ với nhiều hình dạng khác nhau.
+        </div>
+
+      </figure>
+
+
+      <figure class="gallery-card">
+
+        <img
+          src="https://mediabls.mediatech.vn/upload/image/202509/medium/593256_fd15a4c86392a38094e80406509e7d9e_09012929.jpg"
+          alt="Cận cảnh bề mặt thạch nhũ Hang Thẩm Khuyên"
+          loading="lazy"
+        >
+
+        <div class="gallery-caption">
+          Cận cảnh bề mặt đá và các lớp nhũ được hình thành
+          trong lòng hang.
+        </div>
+
+      </figure>
+
+    </div>
+
+  </div>
+
+
+  <div class="gallery-source">
+    Ảnh: Báo và Phát thanh, Truyền hình Lạng Sơn,
+    bài viết về Hang Thẩm Khuyên – Thẩm Hai năm 2025.
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     GIÁ TRỊ
+===================================================== -->
+
+<section class="visit" id="gia-tri">
+
+  <div class="visit-inner">
+
+    <div class="label">
+      08 / GIÁ TRỊ CỦA DI TÍCH
+    </div>
+
+    <h2 class="title">
+      Không chỉ là hang động.
+      Đây là một hồ sơ lịch sử tự nhiên.
+    </h2>
+
+    <p class="intro">
+      Giá trị của Hang Thẩm Khuyên – Thẩm Hai được tạo nên
+      bởi nhiều lớp: khảo cổ học, cổ sinh vật học, địa chất,
+      giáo dục và du lịch.
+    </p>
+
+
+    <div class="visit-grid">
+
+      <div class="visit-card">
+
+        <div class="visit-no">
+          01 / KHẢO CỔ
+        </div>
+
+        <h3>
+          Dấu tích người cổ
+        </h3>
+
+        <p>
+          Các phát hiện tại di tích cung cấp tư liệu quan trọng
+          cho nghiên cứu sự hiện diện và hoạt động của con người
+          cổ ở Việt Nam.
+        </p>
+
+      </div>
+
+
+      <div class="visit-card">
+
+        <div class="visit-no">
+          02 / CỔ SINH
+        </div>
+
+        <h3>
+          Thế giới động vật cổ
+        </h3>
+
+        <p>
+          Hóa thạch của nhiều loài động vật giúp hình dung
+          về môi trường và hệ sinh thái cổ của khu vực.
+        </p>
+
+      </div>
+
+
+      <div class="visit-card">
+
+        <div class="visit-no">
+          03 / ĐỊA CHẤT
+        </div>
+
+        <h3>
+          Núi đá vôi Phia Gà
+        </h3>
+
+        <p>
+          Cụm hang nằm trong hệ thống núi đá vôi Điềm He – Bình Gia,
+          tạo nên một phần quan trọng của cảnh quan địa chất địa phương.
+        </p>
+
+      </div>
+
+
+      <div class="visit-card">
+
+        <div class="visit-no">
+          04 / GIÁO DỤC
+        </div>
+
+        <h3>
+          Học từ dấu tích thật
+        </h3>
+
+        <p>
+          Di tích tạo cơ hội để kết nối kiến thức lịch sử,
+          địa chất, cổ sinh và khảo cổ học trong một địa điểm thực tế.
+        </p>
+
+      </div>
+
+
+      <div class="visit-card">
+
+        <div class="visit-no">
+          05 / DU LỊCH
+        </div>
+
+        <h3>
+          Tuyến du lịch số 2
+        </h3>
+
+        <p>
+          Hang Thẩm Khuyên – Thẩm Hai là một điểm tham quan
+          trong tuyến du lịch số 2 của Công viên địa chất Lạng Sơn.
+        </p>
+
+      </div>
+
+
+      <div class="visit-card">
+
+        <div class="visit-no">
+          06 / BẢO TỒN
+        </div>
+
+        <h3>
+          Giữ nguyên dấu tích
+        </h3>
+
+        <p>
+          Giá trị khảo cổ khiến việc bảo vệ đá, hóa thạch
+          và các dấu tích trong khu di tích đặc biệt quan trọng.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="visit-note">
+      <strong>Lưu ý:</strong>
+      Không tự ý lấy, đục, di chuyển hoặc tác động vào đá,
+      hóa thạch và các dấu tích khảo cổ trong khu vực di tích.
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     PHÁT TRIỂN DU LỊCH
+===================================================== -->
+
+<section class="future" id="tuong-lai">
+
+  <div class="future-inner">
+
+    <div class="label">
+      09 / HIỆN TẠI VÀ TƯƠNG LAI
+    </div>
+
+    <h2 class="title">
+      Một di tích từng bị lãng quên
+      đang được đầu tư để trở lại đúng vị trí.
+    </h2>
+
+    <p class="intro">
+      Trong những năm gần đây, khu di tích được chỉnh trang
+      và được đưa vào định hướng phát triển du lịch của địa phương.
+    </p>
+
+
+    <div class="future-grid">
+
+      <div class="future-card">
+
+        <div class="future-tag">
+          HẠ TẦNG
+        </div>
+
+        <h3>
+          Đường tiếp cận được cải thiện
+        </h3>
+
+        <p>
+          Báo Lạng Sơn ghi nhận đến năm 2024 khu di tích đã có
+          bãi đỗ xe, đường lên được đầu tư và chỉnh trang sạch đẹp,
+          thuận lợi hơn cho người dân và du khách.
+        </p>
+
+      </div>
+
+
+      <div class="future-card">
+
+        <div class="future-tag">
+          ĐỊNH HƯỚNG
+        </div>
+
+        <h3>
+          Tiếp tục chỉnh trang điểm di tích
+        </h3>
+
+        <p>
+          Trung tâm Xúc tiến Đầu tư, Thương mại và Du lịch tỉnh
+          đã có nội dung liên quan đến việc chỉnh trang điểm
+          Hang Thẩm Khuyên – Thẩm Hai.
+        </p>
+
+      </div>
+
+
+      <div class="future-card">
+
+        <div class="future-tag">
+          DU LỊCH
+        </div>
+
+        <h3>
+          Đưa hang vào các tour trải nghiệm
+        </h3>
+
+        <p>
+          Điểm Hang Thẩm Khuyên – Thẩm Hai tiếp tục xuất hiện
+          trong các chương trình khảo sát, xây dựng tour
+          của Công viên địa chất Lạng Sơn.
+        </p>
+
+      </div>
+
+
+      <div class="future-card">
+
+        <div class="future-tag">
+          GIÁ TRỊ ĐỊA PHƯƠNG
+        </div>
+
+        <h3>
+          Gắn di tích với cộng đồng
+        </h3>
+
+        <p>
+          Khu vực di tích cũng là nơi diễn ra các hoạt động
+          văn hóa của xã Tân Văn, góp phần kết nối di sản khảo cổ
+          với đời sống cộng đồng địa phương.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     FINAL
+===================================================== -->
+
+<section class="final" id="nguon">
+
+  <div class="final-box">
+
+    <div class="final-label">
+      THẨM KHUYÊN · THẨM HAI · TÂN VĂN
+    </div>
+
+    <h2>
+      Có những nơi
+      không kể chuyện bằng lời.
+      Chúng kể chuyện bằng đá.
+    </h2>
+
+    <p>
+      Hang Thẩm Khuyên – Thẩm Hai là nơi những lớp đá,
+      hóa thạch và dấu tích khảo cổ cùng tạo nên một câu chuyện
+      về con người và thiên nhiên ở Lạng Sơn từ hàng trăm nghìn năm trước.
+    </p>
+
+
+    <div class="source">
+
+      Nguồn chính:
+
+      <a
+        href="https://baolangson.vn/hang-tham-khuyen-tham-hai-di-tich-khao-co-doc-dao-noi-xu-lang-5059997.html"
+        target="_blank"
+        rel="noopener"
+      >
+        Báo và Phát thanh, Truyền hình Lạng Sơn
+      </a>
+
+      ·
+
+      <a
+        href="https://sonnmt.langson.gov.vn/upload/105376/20240618/BC_DTM_du_an_Hang_muc_phu_tro_Hang_Tham_Khuyen__1d467.pdf"
+        target="_blank"
+        rel="noopener"
+      >
+        Báo cáo ĐTM dự án Hang Thẩm Khuyên – Thẩm Hai
+      </a>
+
+      ·
+
+      <a
+        href="https://langsontourism.com.vn/"
+        target="_blank"
+        rel="noopener"
+      >
+        Cổng Thông tin du lịch Lạng Sơn
+      </a>
+
+      <br>
+
+      Hình ảnh trong trang:
+      Báo và Phát thanh, Truyền hình Lạng Sơn.
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      LẠNG SƠN / 10
+    </div>
+
+    <div class="footer-title">
+      HANG THẨM KHUYÊN – THẨM HAI
+    </div>
+
+    <div class="footer-text">
+      Di tích khảo cổ quốc gia · Xã Tân Văn · Tỉnh Lạng Sơn
+    </div>
+
+
+    <div class="footer-links">
+
+      Hồ sơ địa điểm:
+
+      <a
+        href="https://baolangson.vn/hang-tham-khuyen-tham-hai-di-tich-khao-co-doc-dao-noi-xu-lang-5059997.html"
+        target="_blank"
+        rel="noopener"
+      >
+        Báo và Phát thanh, Truyền hình Lạng Sơn
+      </a>
+
+      <br>
+
+      Thông tin dự án tu bổ:
+
+      <a
+        href="https://sonnmt.langson.gov.vn/upload/105376/20240618/BC_DTM_du_an_Hang_muc_phu_tro_Hang_Tham_Khuyen__1d467.pdf"
+        target="_blank"
+        rel="noopener"
+      >
+        UBND tỉnh Lạng Sơn
+      </a>
+
+      <br>
+
+      Thông tin du lịch:
+
+      <a
+        href="https://langsontourism.com.vn/"
+        target="_blank"
+        rel="noopener"
+      >
+        Cổng Thông tin du lịch Lạng Sơn
+      </a>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- =====================================================
+     REVEAL + SECTION ACTIVE
+===================================================== -->
+
+<script>
+
+/* =========================
+   REVEAL EFFECT
+========================= */
+
+const elements = document.querySelectorAll(
+  ".fact-card, .story-img, .story-content, .cave-card, .discovery, .evidence figure, .gallery-main, .gallery-card, .visit-card, .future-card, .media-feature"
+);
+
+const observer = new IntersectionObserver(
+  entries => {
+
+    entries.forEach(entry => {
+
+      if(entry.isIntersecting){
+
+        entry.target.classList.add("show");
+
+        observer.unobserve(entry.target);
+
+      }
+
+    });
+
+  },
+  {
+    threshold:.08
+  }
+);
+
+
+elements.forEach(element => {
+
+  element.style.opacity="0";
+
+  element.style.transform="translateY(22px)";
+
+  element.style.transition=
+    "opacity .65s ease, transform .65s ease";
+
+  observer.observe(element);
+
+});
+
+
+const revealStyle = document.createElement("style");
+
+revealStyle.innerHTML=`
+
+.show{
+  opacity:1 !important;
+  transform:translateY(0) !important;
+}
+
+`;
+
+document.head.appendChild(revealStyle);
+
+
+/* =========================
+   SECTION NAV ACTIVE
+========================= */
+
+const navLinks = document.querySelectorAll(".section-link");
+
+const sections = [...navLinks]
+  .map(link =>
+    document.querySelector(link.getAttribute("href"))
+  )
+  .filter(Boolean);
+
+
+const sectionObserver = new IntersectionObserver(
+
+  entries => {
+
+    entries.forEach(entry => {
+
+      if(entry.isIntersecting){
+
+        navLinks.forEach(link => {
+
+          link.classList.toggle(
+            "active",
+            link.getAttribute("href") === "#" + entry.target.id
+          );
+
+        });
+
+      }
+
+    });
+
+  },
+
+  {
+    rootMargin:"-145px 0px -55% 0px",
+    threshold:0
+  }
+
+);
+
+
+sections.forEach(section => {
+
+  sectionObserver.observe(section);
+
+});
+
+</script>
+
+</body>
+</html>
+```

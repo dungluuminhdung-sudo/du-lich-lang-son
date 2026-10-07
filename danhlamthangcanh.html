@@ -1,0 +1,2195 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Khám phá danh lam thắng cảnh Lạng Sơn</title>
+
+
+<style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+
+    background:var(--page-bg);
+
+    color:#222;
+
+    --accent:#0284c7;
+    --accent-dark:#0369a1;
+    --accent-light:#bae6fd;
+
+    --page-bg:#f0f9ff;
+
+    transition:
+        background-color .6s ease,
+        color .6s ease;
+}
+
+
+/* =====================================================
+   CHỦ ĐỀ
+===================================================== */
+
+/* TẤT CẢ - XANH BIỂN ĐỒNG BỘ */
+
+body.theme-all{
+    --accent:#0284c7;
+    --accent-dark:#075985;
+    --accent-light:#bae6fd;
+    --page-bg:#f0f9ff;
+
+    --hero-image:url("images/hero-all.jpg");
+}
+
+
+/* THIÊN NHIÊN - XANH LÁ TƯƠI */
+
+body.theme-nature{
+    --accent:#16a34a;
+    --accent-dark:#15803d;
+    --accent-light:#bbf7d0;
+    --page-bg:#f0fdf4;
+
+    --hero-image:url("images/hero-nature.jpg");
+}
+
+
+/* HANG ĐỘNG - XANH THAN TỐI, HUYỀN BÍ */
+
+body.theme-cave{
+    --accent:#334155;
+    --accent-dark:#0f172a;
+    --accent-light:#cbd5e1;
+    --page-bg:#eef2f7;
+
+    --hero-image:url("images/hero-cave.jpg");
+}
+
+
+/* LÀNG DU LỊCH - TEAL TƯƠI */
+
+body.theme-community{
+    --accent:#0f766e;
+    --accent-dark:#115e59;
+    --accent-light:#99f6e4;
+    --page-bg:#f0fdfa;
+
+    --hero-image:url("images/hero-community.jpg");
+}
+
+
+/* LỊCH SỬ - VĂN HÓA - ĐỎ SAN HÔ ĐẬM */
+
+body.theme-culture{
+    --accent:#dc2626;
+    --accent-dark:#b91c1c;
+    --accent-light:#fecaca;
+    --page-bg:#fff5f5;
+
+    --hero-image:url("images/hero-culture.jpg");
+}
+
+
+/* ĐỊA DANH ĐÔ THỊ - XANH DƯƠNG */
+
+body.theme-urban{
+    --accent:#2563eb;
+    --accent-dark:#1d4ed8;
+    --accent-light:#bfdbfe;
+    --page-bg:#eff6ff;
+
+    --hero-image:url("images/hero-urban.jpg");
+}
+
+
+/* HỒ - SUỐI - THÁC - CYAN TƯƠI */
+
+body.theme-lake{
+    --accent:#0891b2;
+    --accent-dark:#0e7490;
+    --accent-light:#a5f3fc;
+    --page-bg:#ecfeff;
+
+    --hero-image:url("images/hero-lake.jpg");
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+header{
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+    background:rgba(255,255,255,.96);
+
+    backdrop-filter:blur(14px);
+
+    border-bottom:
+        1px solid
+        rgba(0,0,0,.08);
+
+    transition:.4s;
+}
+
+
+.header-inner{
+    width:min(1400px,100%);
+
+    min-height:76px;
+
+    margin:auto;
+
+    padding:12px 25px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:25px;
+}
+
+
+.logo{
+    color:var(--accent-dark);
+
+    font-size:22px;
+
+    font-weight:800;
+
+    white-space:nowrap;
+
+    transition:.4s;
+}
+
+
+.logo span{
+    color:var(--accent);
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.search-box{
+    width:340px;
+}
+
+
+.search-box input{
+    width:100%;
+
+    padding:13px 18px;
+
+    border:
+        2px solid
+        var(--accent-light);
+
+    border-radius:30px;
+
+    outline:none;
+
+    background:white;
+
+    font-size:14px;
+
+    transition:.3s;
+}
+
+
+.search-box input:focus{
+    border-color:var(--accent);
+
+    box-shadow:
+        0 0 0 4px
+        var(--accent-light);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.hero{
+    position:relative;
+
+    min-height:530px;
+
+    display:flex;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    color:white;
+}
+
+
+.hero::before{
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.72),
+            rgba(0,0,0,.42),
+            rgba(0,0,0,.12)
+        ),
+
+        var(--hero-image);
+
+    background-size:cover;
+
+    background-position:center;
+
+    transform:scale(1.02);
+
+    transition:
+        background-image .7s ease,
+        transform .7s ease;
+}
+
+
+.hero-content{
+    position:relative;
+
+    z-index:2;
+
+    width:min(1400px,100%);
+
+    margin:auto;
+
+    padding:80px 25px;
+}
+
+
+.hero-content h1{
+    max-width:800px;
+
+    margin-bottom:22px;
+
+    font-size:
+        clamp(40px,5vw,68px);
+
+    line-height:1.05;
+
+    font-weight:800;
+}
+
+
+.hero-content p{
+    max-width:720px;
+
+    font-size:18px;
+
+    line-height:1.75;
+
+    color:
+        rgba(255,255,255,.94);
+}
+
+
+/* =====================================================
+   DANH MỤC
+===================================================== */
+
+.category-section{
+    width:min(1400px,100%);
+
+    margin:auto;
+
+    padding:30px 25px 5px;
+}
+
+
+.category-list{
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+}
+
+
+.category-btn{
+    border:
+        1px solid
+        #d7dde5;
+
+    background:white;
+
+    color:#444;
+
+    padding:
+        11px 18px;
+
+    border-radius:25px;
+
+    cursor:pointer;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    transition:.3s;
+}
+
+
+.category-btn:hover{
+    color:var(--accent);
+
+    border-color:var(--accent);
+
+    transform:translateY(-2px);
+}
+
+
+.category-btn.active{
+    color:white;
+
+    background:var(--accent);
+
+    border-color:var(--accent);
+
+    box-shadow:
+        0 7px 18px
+        rgba(0,0,0,.12);
+}
+
+
+/* =====================================================
+   RESULT
+===================================================== */
+
+.result-section{
+    width:min(1400px,100%);
+
+    margin:auto;
+
+    padding:
+        25px
+        25px
+        10px;
+}
+
+
+.result-info{
+    color:#666;
+
+    font-size:15px;
+}
+
+
+.result-info strong{
+    color:var(--accent-dark);
+}
+
+
+/* =====================================================
+   CARDS
+===================================================== */
+
+.cards-container{
+    width:min(1400px,100%);
+
+    margin:auto;
+
+    padding:
+        20px
+        25px
+        65px;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,minmax(0,1fr));
+
+    gap:22px;
+}
+
+
+.card{
+    position:relative;
+
+    background:white;
+
+    border:
+        1px solid
+        rgba(0,0,0,.07);
+
+    border-radius:18px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 7px 25px
+        rgba(0,0,0,.07);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+
+    cursor:pointer;
+}
+
+
+.card:hover{
+    transform:translateY(-7px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(0,0,0,.13);
+}
+
+
+/* =====================================================
+   SỐ THỨ TỰ - GÓC TRÊN BÊN TRÁI
+===================================================== */
+
+.card-number{
+    position:absolute;
+
+    top:16px;
+    left:16px;
+
+    width:62px;
+    height:62px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    background:transparent;
+
+    color:white;
+
+    font-size:21px;
+
+    font-weight:800;
+
+    z-index:3;
+
+    isolation:isolate;
+}
+
+
+.card-number::before{
+    content:"";
+
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    width:62px;
+    height:62px;
+
+    transform:
+        translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:
+        var(--card-category-color);
+
+    box-shadow:
+        0 7px 18px
+        rgba(0,0,0,.18);
+
+    z-index:-1;
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease;
+}
+
+
+.card:hover .card-number::before{
+    transform:
+        translate(-50%,-50%)
+        scale(1.08);
+
+    box-shadow:
+        0 10px 24px
+        rgba(0,0,0,.23);
+}
+
+
+/* =====================================================
+   MÀU VÒNG TRÒN THEO PHÂN LOẠI
+===================================================== */
+
+.card[data-category="nature"]
+.card-number{
+    --card-category-color:#16a34a;
+}
+
+
+.card[data-category="cave"]
+.card-number{
+    --card-category-color:#334155;
+}
+
+
+.card[data-category="community"]
+.card-number{
+    --card-category-color:#0f766e;
+}
+
+
+.card[data-category="culture"]
+.card-number{
+    --card-category-color:#dc2626;
+}
+
+
+.card[data-category="urban"]
+.card-number{
+    --card-category-color:#2563eb;
+}
+
+
+.card[data-category="lake"]
+.card-number{
+    --card-category-color:#0891b2;
+}
+
+
+/* =====================================================
+   TẤT CẢ
+   Khi chọn "Tất cả", toàn bộ vòng tròn đồng bộ
+   thành một màu xanh biển duy nhất.
+===================================================== */
+
+.theme-all .card .card-number{
+    --card-category-color:#0284c7;
+}
+
+
+/* =====================================================
+   CARD BODY
+===================================================== */
+
+.card-body{
+    padding:
+        94px
+        21px
+        21px;
+}
+
+
+.card-body h3{
+    margin-bottom:10px;
+
+    color:#222;
+
+    font-size:18px;
+
+    line-height:1.4;
+}
+
+
+.card-body p{
+    color:#777;
+
+    font-size:14px;
+
+    line-height:1.6;
+}
+
+
+/* =====================================================
+   CARD CHƯA CÓ TRANG
+===================================================== */
+
+.card.no-page{
+    cursor:default;
+}
+
+
+.card.no-page:hover{
+    transform:translateY(-3px);
+}
+
+
+/* =====================================================
+   KHÔNG CÓ KẾT QUẢ
+===================================================== */
+
+.no-result{
+    display:none;
+
+    text-align:center;
+
+    padding:70px 20px;
+
+    color:#777;
+}
+
+
+.no-result h2{
+    margin-bottom:10px;
+
+    color:var(--accent-dark);
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+    background:var(--accent-dark);
+
+    color:white;
+
+    text-align:center;
+
+    padding:35px 20px;
+
+    transition:.5s;
+}
+
+
+footer p{
+    margin:5px 0;
+
+    font-size:14px;
+
+    line-height:1.7;
+
+    opacity:.9;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media(max-width:1100px){
+
+    .cards-container{
+        grid-template-columns:
+            repeat(3,minmax(0,1fr));
+    }
+
+}
+
+
+@media(max-width:800px){
+
+    .header-inner{
+        flex-direction:column;
+
+        align-items:stretch;
+    }
+
+
+    .logo{
+        text-align:center;
+    }
+
+
+    .search-box{
+        width:100%;
+    }
+
+
+    .hero{
+        min-height:460px;
+    }
+
+
+    .hero-content h1{
+        font-size:42px;
+    }
+
+
+    .cards-container{
+        grid-template-columns:
+            repeat(2,minmax(0,1fr));
+    }
+
+}
+
+
+@media(max-width:520px){
+
+    .cards-container{
+        grid-template-columns:1fr;
+    }
+
+
+    .category-list{
+        display:grid;
+
+        grid-template-columns:
+            repeat(2,1fr);
+    }
+
+
+    .category-btn{
+        width:100%;
+    }
+
+
+    .hero-content h1{
+        font-size:36px;
+    }
+
+
+    .card-number,
+    .card-number::before{
+        width:58px;
+        height:58px;
+    }
+
+
+    .card-number{
+        top:14px;
+        left:14px;
+
+        font-size:19px;
+    }
+
+
+    .card-body{
+        padding:
+            84px
+            19px
+            19px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body class="theme-all">
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+    <div class="header-inner">
+
+        <div class="logo">
+            KHÁM PHÁ <span>LẠNG SƠN</span>
+        </div>
+
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Tìm kiếm địa danh..."
+                autocomplete="off"
+            >
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1 id="heroTitle">
+            Khám phá danh lam thắng cảnh Lạng Sơn
+        </h1>
+
+        <p id="heroDescription">
+            Hành trình khám phá những cảnh quan thiên nhiên,
+            danh thắng, di tích lịch sử và những địa điểm
+            nổi bật của xứ Lạng.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     DANH MỤC
+===================================================== -->
+
+<section class="category-section">
+
+    <div class="category-list">
+
+        <button
+            class="category-btn active"
+            data-category="all">
+
+            Tất cả
+
+        </button>
+
+
+        <button
+            class="category-btn"
+            data-category="nature">
+
+            Thiên nhiên
+
+        </button>
+
+
+        <button
+            class="category-btn"
+            data-category="cave">
+
+            Hang động
+
+        </button>
+
+
+        <button
+            class="category-btn"
+            data-category="community">
+
+            Làng du lịch
+
+        </button>
+
+
+        <button
+            class="category-btn"
+            data-category="culture">
+
+            Lịch sử - Văn hóa
+
+        </button>
+
+
+        <button
+            class="category-btn"
+            data-category="urban">
+
+            Địa danh đô thị
+
+        </button>
+
+
+        <button
+            class="category-btn"
+            data-category="lake">
+
+            Hồ - Suối - Thác
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SỐ LƯỢNG
+===================================================== -->
+
+<section class="result-section">
+
+    <div class="result-info">
+
+        Đang hiển thị
+
+        <strong id="resultCount">
+            30
+        </strong>
+
+        địa danh
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     DANH SÁCH ĐỊA DANH
+     CHÙA TIÊN LUÔN Ở ĐẦU
+===================================================== -->
+
+<section
+    class="cards-container"
+    id="cardsContainer">
+
+
+<!-- =====================================================
+     01
+===================================================== -->
+
+<article
+    class="card"
+    data-category="culture"
+    data-name="Chùa Tiên Giếng Tiên"
+    onclick="openPage('chuatien_giengtien.html')">
+
+    <div class="card-number">
+        01
+    </div>
+
+    <div class="card-body">
+
+        <h3>
+            Chùa Tiên – Giếng Tiên
+        </h3>
+
+        <p>
+            Điểm danh thắng và văn hóa nổi bật
+            của thành phố Lạng Sơn.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- 02 -->
+
+<article
+    class="card"
+    data-category="lake"
+    data-name="Thác Bản Khiếng"
+    onclick="openPage('thacbankhieng.html')">
+
+    <div class="card-number">
+        02
+    </div>
+
+    <div class="card-body">
+
+        <h3>
+            Thác Bản Khiếng
+        </h3>
+
+        <p>
+            Thác nước giữa rừng xanh với cảnh quan
+            tự nhiên hấp dẫn.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- 03 -->
+
+<article
+    class="card"
+    data-category="community"
+    data-name="Làng Pò Kít"
+    onclick="openPage('pokit.html')">
+
+    <div class="card-number">
+        03
+    </div>
+
+    <div class="card-body">
+
+        <h3>
+            Làng Pò Kít
+        </h3>
+
+        <p>
+            Điểm du lịch cộng đồng mang nét đẹp
+            văn hóa và cảnh quan vùng cao.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- 04 -->
+
+<article
+    class="card"
+    data-category="nature"
+    data-name="Khu du lịch Mẫu Sơn"
+    onclick="openPage('mauson.html')">
+
+    <div class="card-number">
+        04
+    </div>
+
+    <div class="card-body">
+
+        <h3>
+            Khu du lịch Mẫu Sơn
+        </h3>
+
+        <p>
+            Vùng núi cao nổi tiếng với cảnh quan
+            hùng vĩ, mây núi và khí hậu đặc trưng.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- 05 -->
+
+<article
+    class="card"
+    data-category="cave"
+    data-name="Hang Thủy Cung"
+    onclick="openPage('hangthuycung.html')">
+
+    <div class="card-number">
+        05
+    </div>
+
+    <div class="card-body">
+
+        <h3>
+            Hang Thủy Cung
+        </h3>
+
+        <p>
+            Hang động với hệ thống địa hình đá
+            tự nhiên độc đáo.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- 06 -->
+
+<article
+    class="card"
+    data-category="nature"
+    data-name="Thung lũng Bắc Sơn"
+    onclick="openPage('thunglungbacson.html')">
+
+    <div class="card-number">
+        06
+    </div>
+
+    <div class="card-body">
+
+        <h3>
+            Thung lũng Bắc Sơn
+        </h3>
+
+        <p>
+            Thung lũng rộng lớn với núi đá,
+            ruộng đồng và cảnh quan đặc sắc.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- 07 -->
+
+<article
+    class="card"
+    data-category="culture"
+    data-name="Đền Kỳ Cùng"
+    onclick="openPage('denkycung.html')">
+
+    <div class="card-number">
+        07
+    </div>
+
+    <div class="card-body">
+
+        <h3>
+            Đền Kỳ Cùng
+        </h3>
+
+        <p>
+            Di tích văn hóa tâm linh nằm bên
+            dòng sông Kỳ Cùng.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- 08 -->
+
+<article
+    class="card"
+    data-category="nature"
+    data-name="Rừng hồi Xứ Lạng"
+    onclick="openPage('runghoixulang.html')">
+
+    <div class="card-number">
+        08
+    </div>
+
+    <div class="card-body">
+
+        <h3>
+            Rừng hồi Xứ Lạng
+        </h3>
+
+        <p>
+            Không gian rừng hồi đặc trưng,
+            gắn với cảnh quan và sản vật của xứ Lạng.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- 09 -->
+
+<article
+    class="card"
+    data-category="cave"
+    data-name="Động Tam Thanh Chùa Tam Thanh"
+    onclick="openPage('tamthanh.html')">
+
+    <div class="card-number">
+        09
+    </div>
+
+    <div class="card-body">
+
+        <h3>
+            Động Tam Thanh – Chùa Tam Thanh
+        </h3>
+
+        <p>
+            Một trong những danh thắng nổi tiếng
+            nhất của thành phố Lạng Sơn.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- 10 -->
+
+<article
+    class="card"
+    data-category="lake"
+    data-name="Suối Mỏ Mắm"
+    onclick="openPage('momam.html')">
+
+    <div class="card-number">
+        10
+    </div>
+
+    <div class="card-body">
+
+        <h3>
+            Suối Mỏ Mắm
+        </h3>
+
+        <p>
+            Dòng suối trong xanh giữa không gian
+            núi rừng tự nhiên.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- 11 -->
+
+<article
+    class="card"
+    data-category="culture"
+    data-name="Khu di tích danh thắng Chi Lăng"
+    onclick="openPage('khuditich_chilang.html')">
+
+    <div class="card-number">
+        11
+    </div>
+
+    <div class="card-body">
+
+        <h3>
+            Khu di tích – danh thắng Chi Lăng
+        </h3>
+
+        <p>
+            Không gian lịch sử và cảnh quan
+            nổi bật của vùng Chi Lăng.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- 12 -->
+
+<article
+    class="card"
+    data-category="cave"
+    data-name="Núi Mắt Thần"
+    onclick="openPage('nuimatthan.html')">
+
+    <div class="card-number">
+        12
+    </div>
+
+    <div class="card-body">
+
+        <h3>
+            Núi Mắt Thần
+        </h3>
+
+        <p>
+            Núi đá có lỗ thủng tự nhiên tạo nên
+            hình ảnh đặc biệt giữa thung lũng.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- 13 -->
+
+<article
+    class="card"
+    data-category="urban"
+    data-name="Phố Kỳ Lừa"
+    onclick="openPage('phodibokylua.html')">
+
+    <div class="card-number">
+        13
+    </div>
+
+    <div class="card-body">
+
+        <h3>
+            Phố Kỳ Lừa
+        </h3>
+
+        <p>
+            Khu phố nổi tiếng gắn với đời sống
+            thương mại và văn hóa của Lạng Sơn.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- 14 -->
+
+<article
+    class="card"
+    data-category="nature"
+    data-name="Thảo nguyên Đồng Lâm"
+    onclick="openPage('donglam.html')">
+
+    <div class="card-number">
+        14
+    </div>
+
+    <div class="card-body">
+
+        <h3>
+            Thảo nguyên Đồng Lâm
+        </h3>
+
+        <p>
+            Không gian đồng cỏ rộng lớn nằm giữa
+            những dãy núi đá đặc trưng.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- 15 -->
+
+<article
+    class="card"
+    data-category="culture"
+    data-name="Thành Nhà Mạc"
+    onclick="openPage('thanhnhamac.html')">
+
+    <div class="card-number">
+        15
+    </div>
+
+    <div class="card-body">
+
+        <h3>
+            Thành Nhà Mạc
+        </h3>
+
+        <p>
+            Di tích lịch sử nằm trên địa hình
+            núi đá, có giá trị lịch sử đặc biệt.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- 16 -->
+
+<article
+    class="card"
+    data-category="community"
+    data-name="Làng văn hóa du lịch cộng đồng Quỳnh Sơn"
+    onclick="openPage('quynhson.html')">
+
+    <div class="card-number">
+        16
+    </div>
+
+    <div class="card-body">
+
+        <h3>
+            Làng văn hóa du lịch cộng đồng Quỳnh Sơn
+        </h3>
+
+        <p>
+            Không gian làng bản truyền thống
+            gắn với văn hóa cộng đồng.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- 17 -->
+
+<article
+    class="card"
+    data-category="cave"
+    data-name="Hang Gió"
+    onclick="openPage('hanggio.html')">
+
+    <div class="card-number">
+        17
+    </div>
+
+    <div class="card-body">
+
+        <h3>
+            Hang Gió
+        </h3>
+
+        <p>
+            Hang động tự nhiên với địa hình
+            đá vôi đặc trưng.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- 18 -->
+
+<article
+    class="card"
+    data-category="lake"
+    data-name="Hồ Tà Keo"
+    onclick="openPage('hotakeo.html')">
+
+    <div class="card-number">
+        18
+    </div>
+
+    <div class="card-body">
+
+        <h3>
+            Hồ Tà Keo
+        </h3>
+
+        <p>
+            Không gian hồ nước và cảnh quan
+            thiên nhiên yên bình.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- 19 -->
+
+<article
+    class="card"
+    data-category="culture"
+    data-name="Đền Tả Phủ"
+    onclick="openPage('dentaphu.html')">
+
+    <div class="card-number">
+        19
+    </div>
+
+    <div class="card-body">
+
+        <h3>
+            Đền Tả Phủ
+        </h3>
+
+        <p>
+            Di tích lịch sử và văn hóa nổi bật
+            tại thành phố Lạng Sơn.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- 20 -->
+
+<article
+    class="card"
+    data-category="nature"
+    data-name="Hữu Liên"
+    onclick="openPage('huulien.html')">
+
+    <div class="card-number">
+        20
+    </div>
+
+    <div class="card-body">
+
+        <h3>
+            Hữu Liên
+        </h3>
+
+        <p>
+            Vùng cảnh quan thiên nhiên nổi bật
+            với núi đá, hồ nước và không gian xanh.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- 21 -->
+
+<article
+    class="card"
+    data-category="cave"
+    data-name="Hang Thẩm Khuyên Thẩm Hai"
+    onclick="openPage('hangthamkhuyen_thamnai.html')">
+
+    <div class="card-number">
+        21
+    </div>
+
+    <div class="card-body">
+
+        <h3>
+            Hang Thẩm Khuyên – Thẩm Hai
+        </h3>
+
+        <p>
+            Hệ thống hang động có giá trị lớn
+            về khảo cổ và địa chất.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- 22 -->
+
+<article
+    class="card"
+    data-category="urban"
+    data-name="Núi Phai Vệ"
+    onclick="openPage('nuiphaive.html')">
+
+    <div class="card-number">
+        22
+    </div>
+
+    <div class="card-body">
+
+        <h3>
+            Núi Phai Vệ
+        </h3>
+
+        <p>
+            Địa danh nổi bật giữa trung tâm
+            thành phố Lạng Sơn.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- 23 -->
+
+<article
+    class="card"
+    data-category="cave"
+    data-name="Thế giới Cúc đá"
+    onclick="openPage('thegioicucda.html')">
+
+    <div class="card-number">
+        23
+    </div>
+
+    <div class="card-body">
+
+        <h3>
+            Thế giới Cúc đá
+        </h3>
+
+        <p>
+            Không gian địa chất gắn với những
+            dấu tích hóa thạch đặc biệt.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- 24 -->
+
+<article
+    class="card"
+    data-category="nature"
+    data-name="Bãi đá nhảy Lùng Pa"
+    onclick="openPage('lungpa.html')">
+
+    <div class="card-number">
+        24
+    </div>
+
+    <div class="card-body">
+
+        <h3>
+            Bãi đá nhảy Lùng Pa
+        </h3>
+
+        <p>
+            Địa hình đá tự nhiên độc đáo giữa
+            không gian núi rừng.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- 25 -->
+
+<article
+    class="card"
+    data-category="cave"
+    data-name="Hang Nước Hang Rắn Hang Ốc"
+    onclick="openPage('hangnuoc_hangran_hangoc.html')">
+
+    <div class="card-number">
+        25
+    </div>
+
+    <div class="card-body">
+
+        <h3>
+            Hang Nước – Hang Rắn – Hang Ốc
+        </h3>
+
+        <p>
+            Cụm hang động với cảnh quan tự nhiên
+            đặc trưng của vùng núi đá vôi.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- 26 -->
+
+<article
+    class="card"
+    data-category="urban"
+    data-name="Núi Tô Thị Nàng Tô Thị"
+    onclick="openPage('nuitothi.html')">
+
+    <div class="card-number">
+        26
+    </div>
+
+    <div class="card-body">
+
+        <h3>
+            Núi Tô Thị – Nàng Tô Thị
+        </h3>
+
+        <p>
+            Biểu tượng văn hóa và truyền thuyết
+            nổi tiếng của xứ Lạng.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- 27 -->
+
+<article
+    class="card"
+    data-category="nature"
+    data-name="Thảo nguyên Khau Slao Hữu Kiên"
+    onclick="openPage('thaonguyenkhauslao-huukien.html')">
+
+    <div class="card-number">
+        27
+    </div>
+
+    <div class="card-body">
+
+        <h3>
+            Thảo nguyên Khau Slao – Hữu Kiên
+        </h3>
+
+        <p>
+            Không gian thảo nguyên rộng mở
+            giữa núi rừng Lạng Sơn.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- 28 -->
+
+<article
+    class="card"
+    data-category="culture"
+    data-name="Ải Chi Lăng"
+    onclick="openPage('aichilang.html')">
+
+    <div class="card-number">
+        28
+    </div>
+
+    <div class="card-body">
+
+        <h3>
+            Ải Chi Lăng
+        </h3>
+
+        <p>
+            Địa danh lịch sử gắn với nhiều
+            sự kiện quan trọng trong lịch sử.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- 29 -->
+
+<article
+    class="card"
+    data-category="lake"
+    data-name="Thế giới đầm hồ Na Dương"
+    onclick="openPage('naduong.html')">
+
+    <div class="card-number">
+        29
+    </div>
+
+    <div class="card-body">
+
+        <h3>
+            Thế giới đầm hồ Na Dương
+        </h3>
+
+        <p>
+            Không gian hồ nước và cảnh quan
+            thiên nhiên đặc sắc.
+        </p>
+
+    </div>
+
+</article>
+
+
+<!-- 30 -->
+
+<article
+    class="card"
+    data-category="cave"
+    data-name="Động Nhị Thanh Chùa Tam Giáo"
+    onclick="openPage('dongnhithanh.html')">
+
+    <div class="card-number">
+        30
+    </div>
+
+    <div class="card-body">
+
+        <h3>
+            Động Nhị Thanh – Chùa Tam Giáo
+        </h3>
+
+        <p>
+            Danh thắng nổi tiếng kết hợp giữa
+            hang động và giá trị văn hóa.
+        </p>
+
+    </div>
+
+</article>
+
+
+</section>
+
+
+<!-- =====================================================
+     KHÔNG TÌM THẤY
+===================================================== -->
+
+<div
+    class="no-result"
+    id="noResult">
+
+    <h2>
+        Không tìm thấy địa danh
+    </h2>
+
+    <p>
+        Hãy thử tìm kiếm bằng một từ khóa khác.
+    </p>
+
+</div>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <p>
+        Khám phá danh lam thắng cảnh Lạng Sơn
+    </p>
+
+    <p>
+        Hành trình khám phá vẻ đẹp thiên nhiên,
+        văn hóa và lịch sử xứ Lạng.
+    </p>
+
+</footer>
+
+
+<script>
+
+/* =====================================================
+   DỮ LIỆU CHỦ ĐỀ
+===================================================== */
+
+const categoryData = {
+
+    all:{
+        theme:"theme-all",
+
+        title:
+            "Khám phá danh lam thắng cảnh Lạng Sơn",
+
+        description:
+            "Hành trình khám phá những cảnh quan thiên nhiên, danh thắng, di tích lịch sử và những địa điểm nổi bật của xứ Lạng."
+    },
+
+
+    nature:{
+        theme:"theme-nature",
+
+        title:
+            "Thiên nhiên Lạng Sơn",
+
+        description:
+            "Khám phá những dãy núi, thung lũng, thảo nguyên và cảnh quan thiên nhiên đặc sắc của Lạng Sơn."
+    },
+
+
+    cave:{
+        theme:"theme-cave",
+
+        title:
+            "Hang động Lạng Sơn",
+
+        description:
+            "Khám phá hệ thống hang động, núi đá vôi và những giá trị địa chất đặc biệt của xứ Lạng."
+    },
+
+
+    community:{
+        theme:"theme-community",
+
+        title:
+            "Làng du lịch cộng đồng",
+
+        description:
+            "Tìm hiểu những ngôi làng giàu bản sắc văn hóa, cảnh quan và đời sống cộng đồng của Lạng Sơn."
+    },
+
+
+    culture:{
+        theme:"theme-culture",
+
+        title:
+            "Lịch sử - Văn hóa",
+
+        description:
+            "Khám phá những di tích lịch sử, công trình văn hóa và địa danh gắn liền với lịch sử Lạng Sơn."
+    },
+
+
+    urban:{
+        theme:"theme-urban",
+
+        title:
+            "Địa danh đô thị",
+
+        description:
+            "Khám phá những địa danh nổi bật nằm trong không gian thành phố và đô thị Lạng Sơn."
+    },
+
+
+    lake:{
+        theme:"theme-lake",
+
+        title:
+            "Hồ - Suối - Thác",
+
+        description:
+            "Chiêm ngưỡng những hồ nước, dòng suối và thác nước giữa thiên nhiên xanh mát của Lạng Sơn."
+    }
+
+};
+
+
+/* =====================================================
+   BIẾN
+===================================================== */
+
+let currentCategory = "all";
+
+
+const body =
+    document.body;
+
+
+const buttons =
+    document.querySelectorAll(".category-btn");
+
+
+const cards =
+    document.querySelectorAll(".card");
+
+
+const searchInput =
+    document.getElementById("searchInput");
+
+
+const resultCount =
+    document.getElementById("resultCount");
+
+
+const noResult =
+    document.getElementById("noResult");
+
+
+const heroTitle =
+    document.getElementById("heroTitle");
+
+
+const heroDescription =
+    document.getElementById("heroDescription");
+
+
+/* =====================================================
+   MỞ TRANG GIỚI THIỆU
+===================================================== */
+
+function openPage(fileName){
+
+    if(
+        !fileName ||
+        fileName === "#"
+    ){
+        return;
+    }
+
+    window.location.href =
+        fileName;
+
+}
+
+
+/* =====================================================
+   BỎ DẤU TIẾNG VIỆT
+===================================================== */
+
+function removeVietnameseTones(text){
+
+    return text
+
+        .normalize("NFD")
+
+        .replace(
+            /[\u0300-\u036f]/g,
+            ""
+        )
+
+        .replace(/đ/g,"d")
+
+        .replace(/Đ/g,"D")
+
+        .toLowerCase();
+
+}
+
+
+/* =====================================================
+   ĐỔI CHỦ ĐỀ
+===================================================== */
+
+function changeCategory(category){
+
+    currentCategory =
+        category;
+
+    const data =
+        categoryData[category];
+
+
+    /* Đổi theme */
+
+    body.className =
+        data.theme;
+
+
+    /* Đổi Hero */
+
+    heroTitle.textContent =
+        data.title;
+
+
+    heroDescription.textContent =
+        data.description;
+
+
+    /* Đổi nút */
+
+    buttons.forEach(button => {
+
+        button.classList.remove(
+            "active"
+        );
+
+
+        if(
+            button.dataset.category ===
+            category
+        ){
+
+            button.classList.add(
+                "active"
+            );
+
+        }
+
+    });
+
+
+    /* Lọc */
+
+    filterCards();
+
+}
+
+
+/* =====================================================
+   LỌC ĐỊA DANH
+===================================================== */
+
+function filterCards(){
+
+    const keyword =
+        removeVietnameseTones(
+            searchInput.value.trim()
+        );
+
+
+    let visibleCount = 0;
+
+
+    cards.forEach(card => {
+
+        const category =
+            card.dataset.category;
+
+
+        const name =
+            removeVietnameseTones(
+                card.dataset.name
+            );
+
+
+        const categoryMatch =
+            currentCategory === "all" ||
+            category === currentCategory;
+
+
+        const searchMatch =
+            keyword === "" ||
+            name.includes(keyword);
+
+
+        if(
+            categoryMatch &&
+            searchMatch
+        ){
+
+            card.style.display =
+                "";
+
+            visibleCount++;
+
+        }else{
+
+            card.style.display =
+                "none";
+
+        }
+
+    });
+
+
+    resultCount.textContent =
+        visibleCount;
+
+
+    if(
+        visibleCount === 0
+    ){
+
+        noResult.style.display =
+            "block";
+
+    }else{
+
+        noResult.style.display =
+            "none";
+
+    }
+
+}
+
+
+/* =====================================================
+   CLICK DANH MỤC
+===================================================== */
+
+buttons.forEach(button => {
+
+    button.addEventListener(
+        "click",
+        function(){
+
+            changeCategory(
+                this.dataset.category
+            );
+
+        }
+    );
+
+});
+
+
+/* =====================================================
+   TÌM KIẾM
+===================================================== */
+
+searchInput.addEventListener(
+    "input",
+    filterCards
+);
+
+
+/* =====================================================
+   KHỞI ĐỘNG
+===================================================== */
+
+changeCategory("all");
+
+</script>
+
+
+</body>
+
+</html>
+```

@@ -1,0 +1,3527 @@
+<!DOCTYPE html>
+
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Làng văn hóa du lịch cộng đồng Quỳnh Sơn | Lạng Sơn</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=DM+Serif+Display&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root{
+  --forest:#173329;
+  --forest2:#21483a;
+  --forest3:#2c5948;
+
+  --rice:#d9b75f;
+  --rice2:#c7983e;
+
+  --cream:#f4efe3;
+  --paper:#fbf8f0;
+  --paper2:#eee8db;
+
+  --ink:#1c2822;
+  --muted:#718078;
+  --muted2:#8e968e;
+
+  --white:#f6f4ed;
+  --line:rgba(237,226,196,.15);
+
+  --brick:#a76345;
+  --water:#729c91;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:
+    radial-gradient(
+      circle at 8% 4%,
+      rgba(217,183,95,.07),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 92% 30%,
+      rgba(114,156,145,.06),
+      transparent 25%
+    ),
+    var(--forest);
+
+  color:#ebf0ea;
+
+  font-family:"Be Vietnam Pro",sans-serif;
+
+  line-height:1.82;
+
+  overflow-x:hidden;
+}
+
+
+/* =========================================================
+   NAV
+========================================================= */
+
+.nav{
+  position:fixed;
+
+  top:0;
+  left:0;
+
+  width:100%;
+  height:70px;
+
+  z-index:1000;
+
+  background:rgba(23,51,41,.78);
+
+  backdrop-filter:blur(18px);
+
+  border-bottom:1px solid var(--line);
+}
+
+.nav-inner{
+  width:min(1180px,92%);
+
+  height:100%;
+
+  margin:auto;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+}
+
+.logo{
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:13px;
+
+  font-weight:700;
+
+  letter-spacing:.16em;
+}
+
+.logo span{
+  color:var(--rice);
+}
+
+.back{
+  color:#e8eee8;
+
+  text-decoration:none;
+
+  padding:8px 16px;
+
+  border:1px solid var(--line);
+
+  border-radius:999px;
+
+  font-size:11px;
+
+  transition:.3s;
+}
+
+.back:hover{
+  color:var(--rice);
+
+  border-color:rgba(217,183,95,.48);
+}
+
+
+/* =========================================================
+   SECTION NAV
+========================================================= */
+
+.section-nav{
+  margin-top:70px;
+
+  position:sticky;
+
+  top:70px;
+
+  z-index:900;
+
+  background:rgba(15,39,30,.92);
+
+  backdrop-filter:blur(16px);
+
+  border-bottom:1px solid var(--line);
+
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.section-nav-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:3px;
+
+  overflow-x:auto;
+
+  scrollbar-width:none;
+}
+
+.section-nav-inner::-webkit-scrollbar{
+  display:none;
+}
+
+.section-link{
+  flex:0 0 auto;
+
+  padding:12px 13px 10px;
+
+  color:#84948b;
+
+  text-decoration:none;
+
+  font-size:10px;
+
+  font-weight:800;
+
+  letter-spacing:.08em;
+
+  text-transform:uppercase;
+
+  white-space:nowrap;
+
+  border-bottom:2px solid transparent;
+
+  transition:.25s;
+}
+
+.section-link:hover,
+.section-link.active{
+  color:var(--rice);
+
+  border-bottom-color:var(--rice);
+}
+
+section[id]{
+  scroll-margin-top:145px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+  min-height:930px;
+
+  position:relative;
+
+  display:flex;
+
+  align-items:flex-end;
+
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(15,35,28,.95) 0%,
+      rgba(15,35,28,.81) 31%,
+      rgba(15,35,28,.40) 65%,
+      rgba(15,35,28,.20) 100%
+    ),
+
+    url("https://langson.gov.vn/upload/2006486/fck/ly/79436f2da0992dc77488.jpg");
+
+  background-size:cover;
+
+  background-position:center;
+}
+
+.hero::before{
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 26%,
+      rgba(23,51,41,.98) 100%
+    );
+}
+
+.hero::after{
+  content:"";
+
+  position:absolute;
+
+  right:-245px;
+  top:120px;
+
+  width:600px;
+  height:600px;
+
+  border:1px solid rgba(217,183,95,.17);
+
+  border-radius:50%;
+
+  box-shadow:
+    0 0 0 58px rgba(217,183,95,.022),
+    0 0 0 116px rgba(217,183,95,.015),
+    0 0 0 174px rgba(217,183,95,.010);
+}
+
+.hero-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:155px 0 108px;
+
+  position:relative;
+
+  z-index:5;
+}
+
+.kicker{
+  color:#d9b75f;
+
+  font-size:10px;
+
+  font-weight:800;
+
+  letter-spacing:.22em;
+
+  text-transform:uppercase;
+}
+
+.hero h1{
+  max-width:1040px;
+
+  margin-top:19px;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:clamp(52px,9vw,126px);
+
+  line-height:.83;
+
+  letter-spacing:-.08em;
+}
+
+.hero h1 span{
+  display:block;
+
+  color:#efe6cf;
+}
+
+.hero-description{
+  max-width:760px;
+
+  margin-top:31px;
+
+  color:#d0dbd2;
+
+  font-size:15px;
+}
+
+.hero-tags{
+  margin-top:29px;
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:9px;
+}
+
+.hero-tag{
+  padding:8px 12px;
+
+  border:1px solid rgba(237,226,196,.14);
+
+  background:rgba(18,38,30,.47);
+
+  color:#e4ece5;
+
+  font-size:10px;
+
+  border-radius:5px;
+}
+
+.hero-note{
+  max-width:760px;
+
+  margin-top:20px;
+
+  color:#87958d;
+
+  font-size:10px;
+}
+
+
+/* =========================================================
+   COMMON
+========================================================= */
+
+.section{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.label{
+  color:var(--rice);
+
+  font-size:10px;
+
+  font-weight:800;
+
+  text-transform:uppercase;
+
+  letter-spacing:.21em;
+}
+
+.title{
+  max-width:960px;
+
+  margin-top:15px;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:clamp(40px,6vw,79px);
+
+  line-height:.96;
+
+  letter-spacing:-.055em;
+}
+
+.intro{
+  max-width:780px;
+
+  margin-top:21px;
+
+  color:#93a197;
+
+  font-size:13px;
+}
+
+
+/* =========================================================
+   PROFILE
+========================================================= */
+
+.profile-grid{
+  margin-top:58px;
+
+  display:grid;
+
+  grid-template-columns:1.2fr .9fr .9fr;
+
+  gap:13px;
+}
+
+.profile{
+  min-height:285px;
+
+  padding:29px;
+
+  border:1px solid var(--line);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(217,183,95,.05),
+      rgba(255,255,255,.012)
+    );
+
+  position:relative;
+
+  overflow:hidden;
+
+  transition:.35s;
+}
+
+.profile:hover{
+  transform:translateY(-6px);
+
+  border-color:rgba(217,183,95,.34);
+}
+
+.profile::after{
+  content:"";
+
+  position:absolute;
+
+  right:-105px;
+  bottom:-115px;
+
+  width:190px;
+  height:190px;
+
+  border-radius:50%;
+
+  border:1px solid rgba(217,183,95,.09);
+}
+
+.profile-no{
+  color:#66766e;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:10px;
+
+  letter-spacing:.15em;
+}
+
+.profile strong{
+  display:block;
+
+  margin-top:47px;
+
+  color:#eef2ec;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:30px;
+
+  line-height:1.05;
+}
+
+.profile p{
+  margin-top:12px;
+
+  color:#89978f;
+
+  font-size:11px;
+}
+
+
+/* =========================================================
+   VILLAGE VIEW
+========================================================= */
+
+.village-section{
+  background:
+    radial-gradient(
+      circle at 50% 25%,
+      rgba(217,183,95,.08),
+      transparent 34%
+    ),
+    #142a21;
+
+  border-top:1px solid var(--line);
+
+  border-bottom:1px solid var(--line);
+}
+
+.village-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.village-layout{
+  margin-top:58px;
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:16px;
+
+  align-items:start;
+}
+
+.village-photo{
+  position:relative;
+
+  overflow:hidden;
+
+  border:1px solid var(--line);
+
+  background:#0e2018;
+
+  line-height:0;
+}
+
+.village-photo img{
+  width:100%;
+  height:auto;
+
+  max-width:100%;
+
+  display:block;
+
+  transition:.7s;
+}
+
+.village-photo:hover img{
+  transform:none;
+}
+
+.village-caption{
+  padding:13px 15px;
+
+  background:#10231b;
+
+  color:#dfe8df;
+
+  font-size:10px;
+
+  line-height:1.7;
+}
+
+.village-copy{
+  padding:36px;
+
+  border:1px solid var(--line);
+
+  background:#173329;
+}
+
+.village-copy h3{
+  max-width:620px;
+
+  font-family:"DM Serif Display",serif;
+
+  font-size:53px;
+
+  font-weight:400;
+
+  line-height:.95;
+}
+
+.village-copy p{
+  margin-top:18px;
+
+  color:#9aac9f;
+
+  font-size:13px;
+}
+
+.village-stats{
+  margin-top:30px;
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:11px;
+}
+
+.village-stat{
+  padding:18px;
+
+  border:1px solid var(--line);
+
+  background:rgba(255,255,255,.018);
+}
+
+.village-stat strong{
+  display:block;
+
+  color:var(--rice);
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:22px;
+}
+
+.village-stat span{
+  display:block;
+
+  margin-top:4px;
+
+  color:#718178;
+
+  font-size:9px;
+}
+
+
+/* =========================================================
+   HOUSE STYLE
+========================================================= */
+
+.house-section{
+  background:var(--cream);
+
+  color:var(--ink);
+
+  border-bottom:1px solid #d7d0c2;
+}
+
+.house-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.house-grid{
+  margin-top:58px;
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:13px;
+}
+
+.house-card{
+  min-height:330px;
+
+  padding:30px;
+
+  border:1px solid #d8d0c3;
+
+  background:
+    linear-gradient(
+      145deg,
+      #faf6ed,
+      #ebe3d4
+    );
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.house-card::after{
+  content:"";
+
+  position:absolute;
+
+  right:-115px;
+  bottom:-130px;
+
+  width:280px;
+  height:280px;
+
+  border-radius:50%;
+
+  border:1px solid rgba(167,99,69,.10);
+}
+
+.house-no{
+  color:#85776d;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:10px;
+
+  letter-spacing:.14em;
+}
+
+.house-card h3{
+  margin-top:54px;
+
+  font-family:"DM Serif Display",serif;
+
+  font-size:42px;
+
+  line-height:1;
+}
+
+.house-card p{
+  margin-top:14px;
+
+  color:#756b63;
+
+  font-size:11px;
+}
+
+.house-mark{
+  position:absolute;
+
+  left:30px;
+  bottom:28px;
+
+  color:#a1684f;
+
+  font-size:9px;
+
+  font-weight:700;
+
+  letter-spacing:.13em;
+
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   CULTURE
+========================================================= */
+
+.culture-section{
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 68px,
+      rgba(217,183,95,.018) 69px
+    ),
+    #10271f;
+
+  border-top:1px solid var(--line);
+
+  border-bottom:1px solid var(--line);
+}
+
+.culture-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.culture-layout{
+  margin-top:58px;
+
+  display:grid;
+
+  grid-template-columns:.88fr 1.12fr;
+
+  gap:15px;
+
+  align-items:start;
+}
+
+.culture-image{
+  overflow:hidden;
+
+  border:1px solid var(--line);
+
+  line-height:0;
+
+  background:#0c1d17;
+}
+
+.culture-image img{
+  width:100%;
+  height:auto;
+
+  display:block;
+}
+
+.culture-copy{
+  padding:36px;
+
+  border:1px solid var(--line);
+
+  background:#173329;
+}
+
+.culture-copy h3{
+  font-family:"DM Serif Display",serif;
+
+  font-size:52px;
+
+  line-height:.95;
+
+  font-weight:400;
+}
+
+.culture-copy p{
+  margin-top:17px;
+
+  color:#9aac9e;
+
+  font-size:12px;
+}
+
+.culture-list{
+  margin-top:27px;
+
+  display:grid;
+
+  gap:10px;
+}
+
+.culture-item{
+  padding:16px;
+
+  border:1px solid var(--line);
+
+  background:rgba(255,255,255,.018);
+}
+
+.culture-item strong{
+  display:block;
+
+  color:#edf2ea;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:16px;
+}
+
+.culture-item span{
+  display:block;
+
+  margin-top:4px;
+
+  color:#76867e;
+
+  font-size:10px;
+}
+
+
+/* =========================================================
+   EXPERIENCES
+========================================================= */
+
+.experience-section{
+  background:var(--paper);
+
+  color:#1f2d26;
+
+  border-bottom:1px solid #d7ddd6;
+}
+
+.experience-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.experience-grid{
+  margin-top:58px;
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:13px;
+}
+
+.experience-card{
+  min-height:350px;
+
+  padding:30px;
+
+  border:1px solid #d4ddd6;
+
+  background:#f7faf6;
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.experience-card::before{
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  top:0;
+
+  width:44px;
+  height:2px;
+
+  background:#b99245;
+}
+
+.experience-no{
+  color:#77857e;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:10px;
+
+  letter-spacing:.14em;
+}
+
+.experience-card h3{
+  margin-top:53px;
+
+  font-family:"DM Serif Display",serif;
+
+  font-size:40px;
+
+  line-height:.98;
+}
+
+.experience-card p{
+  margin-top:14px;
+
+  color:#68756e;
+
+  font-size:11px;
+}
+
+.experience-link{
+  position:absolute;
+
+  left:30px;
+  bottom:26px;
+
+  color:#a07739;
+
+  font-size:9px;
+
+  font-weight:700;
+
+  letter-spacing:.13em;
+
+  text-transform:uppercase;
+}
+
+
+/* =========================================================
+   THEN
+========================================================= */
+
+.then-section{
+  background:
+    radial-gradient(
+      circle at 78% 25%,
+      rgba(166,118,77,.09),
+      transparent 27%
+    ),
+    linear-gradient(
+      145deg,
+      #3a2920,
+      #1a1512
+    );
+
+  border-top:1px solid rgba(217,183,95,.10);
+}
+
+.then-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.then-layout{
+  margin-top:58px;
+
+  display:grid;
+
+  grid-template-columns:1.18fr .82fr;
+
+  gap:15px;
+
+  align-items:start;
+}
+
+.then-photo{
+  overflow:hidden;
+
+  border:1px solid rgba(255,255,255,.11);
+
+  line-height:0;
+}
+
+.then-photo img{
+  width:100%;
+  height:auto;
+
+  display:block;
+}
+
+.then-copy{
+  padding:34px;
+
+  border:1px solid rgba(255,255,255,.095);
+
+  background:rgba(255,255,255,.035);
+}
+
+.then-copy h3{
+  font-family:"DM Serif Display",serif;
+
+  font-size:48px;
+
+  line-height:.98;
+
+  font-weight:400;
+}
+
+.then-copy p{
+  margin-top:16px;
+
+  color:#b9aaa0;
+
+  font-size:11px;
+}
+
+.then-badge{
+  margin-top:24px;
+
+  padding:14px;
+
+  border-left:2px solid var(--rice);
+
+  background:rgba(217,183,95,.04);
+
+  color:#dfd0c0;
+
+  font-size:10px;
+}
+
+
+/* =========================================================
+   NÀ LAY
+========================================================= */
+
+.nalay-section{
+  background:#f7f3e9;
+
+  color:#26342d;
+}
+
+.nalay-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.nalay-grid{
+  margin-top:58px;
+
+  display:grid;
+
+  grid-template-columns:.74fr 1.26fr;
+
+  gap:15px;
+
+  align-items:start;
+}
+
+.nalay-card{
+  padding:32px;
+
+  border:1px solid #d7d1c6;
+
+  background:#eee7d9;
+}
+
+.nalay-card strong{
+  display:block;
+
+  color:#94723b;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:43px;
+
+  line-height:1;
+}
+
+.nalay-card span{
+  display:block;
+
+  margin-top:8px;
+
+  color:#756b61;
+
+  font-size:10px;
+}
+
+.nalay-card p{
+  margin-top:22px;
+
+  color:#6f675f;
+
+  font-size:11px;
+}
+
+.nalay-photo{
+  overflow:hidden;
+
+  border:1px solid #d7d1c6;
+
+  line-height:0;
+}
+
+.nalay-photo img{
+  width:100%;
+  height:auto;
+
+  display:block;
+}
+
+
+/* =========================================================
+   HERITAGE
+========================================================= */
+
+.heritage-section{
+  background:#0d2119;
+
+  border-top:1px solid var(--line);
+
+  border-bottom:1px solid var(--line);
+}
+
+.heritage-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.timeline{
+  margin-top:58px;
+
+  position:relative;
+
+  display:grid;
+
+  grid-template-columns:repeat(4,1fr);
+
+  gap:13px;
+}
+
+.timeline::before{
+  content:"";
+
+  position:absolute;
+
+  left:6%;
+  right:6%;
+  top:21px;
+
+  height:1px;
+
+  background:rgba(217,183,95,.28);
+}
+
+.time{
+  position:relative;
+
+  padding:0 14px;
+}
+
+.time-dot{
+  width:43px;
+  height:43px;
+
+  display:grid;
+
+  place-items:center;
+
+  border-radius:50%;
+
+  background:#10271e;
+
+  border:2px solid var(--rice);
+
+  color:var(--rice);
+
+  position:relative;
+
+  z-index:2;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:10px;
+}
+
+.time-year{
+  margin-top:18px;
+
+  color:var(--rice);
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:13px;
+
+  font-weight:700;
+}
+
+.time h3{
+  margin-top:8px;
+
+  color:#edf1eb;
+
+  font-size:18px;
+
+  line-height:1.18;
+}
+
+.time p{
+  margin-top:8px;
+
+  color:#819188;
+
+  font-size:10px;
+}
+
+
+/* =========================================================
+   AWARD
+========================================================= */
+
+.award-section{
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(217,183,95,.10),
+      transparent 27%
+    ),
+    linear-gradient(
+      135deg,
+      #253e31,
+      #16261f
+    );
+
+  border-top:1px solid rgba(217,183,95,.08);
+}
+
+.award-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.award-box{
+  padding:38px;
+
+  border:1px solid rgba(255,255,255,.10);
+
+  background:rgba(255,255,255,.035);
+}
+
+.award-top{
+  color:var(--rice);
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:10px;
+
+  font-weight:700;
+
+  letter-spacing:.18em;
+
+  text-transform:uppercase;
+}
+
+.award-box h3{
+  margin-top:18px;
+
+  max-width:880px;
+
+  font-family:"DM Serif Display",serif;
+
+  font-size:58px;
+
+  line-height:.94;
+
+  font-weight:400;
+}
+
+.award-box p{
+  max-width:760px;
+
+  margin-top:19px;
+
+  color:#afc0b5;
+
+  font-size:12px;
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.gallery-section{
+  background:var(--paper2);
+
+  color:#233028;
+}
+
+.gallery-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.gallery{
+  margin-top:58px;
+
+  display:grid;
+
+  grid-template-columns:1.08fr .92fr;
+
+  gap:14px;
+
+  align-items:start;
+}
+
+.gallery figure{
+  margin:0;
+
+  overflow:hidden;
+
+  border:1px solid #d2dacf;
+
+  background:#f4f7f3;
+
+  line-height:0;
+}
+
+.gallery-main{
+  grid-row:span 2;
+}
+
+.gallery img{
+  width:100%;
+  height:auto;
+
+  max-width:100%;
+
+  display:block;
+
+  transition:.6s;
+}
+
+.gallery figure:hover img{
+  transform:none;
+}
+
+.gallery-caption{
+  padding:11px 13px;
+
+  background:#eef3ed;
+
+  color:#66736d;
+
+  font-size:10px;
+
+  line-height:1.65;
+}
+
+.gallery-side{
+  display:grid;
+
+  gap:14px;
+
+  align-items:start;
+}
+
+
+/* =========================================================
+   VALUES
+========================================================= */
+
+.value-section{
+  background:#122a21;
+
+  border-top:1px solid var(--line);
+}
+
+.value-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.value-grid{
+  margin-top:58px;
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:13px;
+}
+
+.value-card{
+  min-height:270px;
+
+  padding:29px;
+
+  border:1px solid var(--line);
+
+  background:rgba(255,255,255,.023);
+
+  position:relative;
+}
+
+.value-card::before{
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:0;
+
+  width:37px;
+  height:2px;
+
+  background:var(--rice);
+}
+
+.value-no{
+  color:#697b72;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:10px;
+
+  letter-spacing:.14em;
+}
+
+.value-card h3{
+  margin-top:50px;
+
+  color:#eef2ed;
+
+  font-size:20px;
+
+  line-height:1.18;
+}
+
+.value-card p{
+  margin-top:11px;
+
+  color:#829188;
+
+  font-size:11px;
+}
+
+
+/* =========================================================
+   CONSERVATION
+========================================================= */
+
+.conservation{
+  background:
+    linear-gradient(
+      145deg,
+      #315442,
+      #183328
+    );
+
+  border-top:1px solid rgba(217,183,95,.09);
+}
+
+.conservation-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.conservation-grid{
+  margin-top:57px;
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:14px;
+}
+
+.conservation-box{
+  min-height:270px;
+
+  padding:31px;
+
+  border:1px solid rgba(255,255,255,.095);
+
+  background:rgba(255,255,255,.035);
+}
+
+.conservation-box h3{
+  font-family:"DM Serif Display",serif;
+
+  font-size:41px;
+
+  line-height:.98;
+
+  font-weight:400;
+}
+
+.conservation-box p{
+  margin-top:15px;
+
+  color:#adbeb3;
+
+  font-size:11px;
+}
+
+.alert{
+  margin-top:15px;
+
+  padding:20px;
+
+  border:1px solid rgba(217,183,95,.20);
+
+  background:rgba(217,183,95,.045);
+
+  color:#d9cda9;
+
+  font-size:10px;
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.final{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0 90px;
+}
+
+.final-box{
+  position:relative;
+
+  overflow:hidden;
+
+  padding:60px;
+
+  border:1px solid rgba(217,183,95,.13);
+
+  background:
+    radial-gradient(
+      circle at 83% 18%,
+      rgba(217,183,95,.13),
+      transparent 25%
+    ),
+    linear-gradient(
+      135deg,
+      #294638,
+      #13261f
+    );
+}
+
+.final-box::after{
+  content:"";
+
+  position:absolute;
+
+  right:-200px;
+  bottom:-230px;
+
+  width:470px;
+  height:470px;
+
+  border-radius:50%;
+
+  border:1px solid rgba(217,183,95,.08);
+
+  box-shadow:
+    0 0 0 46px rgba(217,183,95,.017),
+    0 0 0 92px rgba(217,183,95,.011);
+}
+
+.final-small{
+  position:relative;
+
+  z-index:2;
+
+  color:var(--rice);
+
+  font-size:10px;
+
+  letter-spacing:.20em;
+
+  text-transform:uppercase;
+}
+
+.final-box h2{
+  position:relative;
+
+  z-index:2;
+
+  max-width:900px;
+
+  margin-top:18px;
+
+  font-family:"DM Serif Display",serif;
+
+  font-size:clamp(47px,7vw,92px);
+
+  line-height:.91;
+
+  font-weight:400;
+}
+
+.final-box p{
+  position:relative;
+
+  z-index:2;
+
+  max-width:760px;
+
+  margin-top:22px;
+
+  color:#adc0b5;
+
+  font-size:12px;
+}
+
+.sources{
+  position:relative;
+
+  z-index:2;
+
+  margin-top:29px;
+
+  padding-top:21px;
+
+  border-top:1px solid rgba(255,255,255,.10);
+
+  color:#72877c;
+
+  font-size:10px;
+
+  line-height:2;
+}
+
+.sources a{
+  color:#dfbe69;
+
+  text-decoration:none;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+  border-top:1px solid var(--line);
+
+  padding:70px 0 90px;
+}
+
+.footer-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+}
+
+.footer-brand{
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:13px;
+
+  font-weight:700;
+
+  letter-spacing:.15em;
+}
+
+.footer-title{
+  margin-top:16px;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:clamp(31px,5vw,58px);
+
+  letter-spacing:-.05em;
+}
+
+.footer-text{
+  max-width:780px;
+
+  margin-top:10px;
+
+  color:#718178;
+
+  font-size:11px;
+}
+
+.footer-source{
+  margin-top:27px;
+
+  padding-top:20px;
+
+  border-top:1px solid var(--line);
+
+  color:#5d7167;
+
+  font-size:10px;
+
+  line-height:1.95;
+}
+
+.footer-source a{
+  color:#d2ae5e;
+
+  text-decoration:none;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:950px){
+
+  .profile-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .village-layout,
+  .culture-layout,
+  .then-layout,
+  .nalay-grid,
+  .conservation-grid{
+    grid-template-columns:1fr;
+  }
+
+  .house-grid,
+  .experience-grid,
+  .value-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .timeline{
+    grid-template-columns:1fr 1fr;
+
+    row-gap:42px;
+  }
+
+  .timeline::before{
+    display:none;
+  }
+
+  .gallery{
+    grid-template-columns:1fr;
+  }
+
+  .gallery-main{
+    grid-row:auto;
+  }
+
+  .gallery-side{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+
+@media(max-width:620px){
+
+  .nav{
+    height:64px;
+  }
+
+  .section-nav{
+    margin-top:64px;
+
+    top:64px;
+  }
+
+  section[id]{
+    scroll-margin-top:130px;
+  }
+
+  .section-link{
+    padding:11px 11px 9px;
+
+    font-size:9px;
+  }
+
+  .hero{
+    min-height:820px;
+  }
+
+  .hero-inner{
+    padding-top:125px;
+
+    padding-bottom:80px;
+  }
+
+  .hero h1{
+    font-size:69px;
+  }
+
+  .hero-description{
+    font-size:14px;
+  }
+
+  .profile-grid,
+  .house-grid,
+  .experience-grid,
+  .value-grid,
+  .timeline{
+    grid-template-columns:1fr;
+  }
+
+  .village-stats{
+    grid-template-columns:1fr;
+  }
+
+  .gallery-side{
+    grid-template-columns:1fr;
+  }
+
+  .section,
+  .village-inner,
+  .house-inner,
+  .culture-inner,
+  .experience-inner,
+  .then-inner,
+  .nalay-inner,
+  .heritage-inner,
+  .award-inner,
+  .gallery-inner,
+  .value-inner,
+  .conservation-inner,
+  .final{
+    padding-top:78px;
+
+    padding-bottom:78px;
+  }
+
+  .final-box{
+    padding:34px;
+  }
+
+  .final-box h2{
+    font-size:53px;
+  }
+
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- =========================================================
+     NAV
+========================================================= -->
+
+<header class="nav">
+
+  <div class="nav-inner">
+
+```
+<div class="logo">
+  LẠNG SƠN <span>/</span> 16
+</div>
+
+<a
+  href="./danhlamthangcanh.html"
+  class="back"
+>
+  ← Danh sách danh thắng
+</a>
+```
+
+  </div>
+
+</header>
+
+<!-- =========================================================
+     SECTION NAV
+========================================================= -->
+
+<nav class="section-nav" aria-label="Điều hướng nội dung">
+
+  <div class="section-nav-inner">
+
+```
+<a class="section-link active" href="#ho-so">
+  Hồ sơ
+</a>
+
+<a class="section-link" href="#khong-gian">
+  Không gian
+</a>
+
+<a class="section-link" href="#nha-san">
+  Nhà sàn
+</a>
+
+<a class="section-link" href="#van-hoa">
+  Văn hóa
+</a>
+
+<a class="section-link" href="#trai-nghiem">
+  Trải nghiệm
+</a>
+
+<a class="section-link" href="#then">
+  Then
+</a>
+
+<a class="section-link" href="#na-lay">
+  Nà Lay
+</a>
+
+<a class="section-link" href="#lich-su">
+  Lịch sử
+</a>
+
+<a class="section-link" href="#giai-thuong">
+  Giải thưởng
+</a>
+
+<a class="section-link" href="#hinh-anh">
+  Hình ảnh
+</a>
+
+<a class="section-link" href="#gia-tri">
+  Giá trị
+</a>
+
+<a class="section-link" href="#ben-vung">
+  Bền vững
+</a>
+```
+
+  </div>
+
+</nav>
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+  <div class="hero-inner">
+
+```
+<div class="kicker">
+  LÀNG QUỲNH SƠN · BẮC SƠN · VĂN HÓA TÀY
+</div>
+
+<h1>
+  QUỲNH
+  <span>SƠN</span>
+</h1>
+
+<p class="hero-description">
+  Một làng du lịch cộng đồng nằm giữa thung lũng Bắc Sơn,
+  nơi hơn 400 ngôi nhà sàn của người Tày hòa vào đồng lúa,
+  núi đá vôi và nhịp sống nông nghiệp truyền thống.
+</p>
+
+<div class="hero-tags">
+
+  <div class="hero-tag">
+    📍 Xã Bắc Sơn, tỉnh Lạng Sơn
+  </div>
+
+  <div class="hero-tag">
+    🏠 Hơn 400 nhà sàn
+  </div>
+
+  <div class="hero-tag">
+    🌾 Thung lũng Bắc Sơn
+  </div>
+
+  <div class="hero-tag">
+    🎵 Then · đàn tính
+  </div>
+
+  <div class="hero-tag">
+    🏆 Best Tourism Villages 2025
+  </div>
+
+</div>
+
+<div class="hero-note">
+  Làng văn hóa du lịch cộng đồng Quỳnh Sơn được hình thành từ năm 2010
+  và thuộc Vùng Công viên địa chất toàn cầu UNESCO Lạng Sơn.
+</div>
+```
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     PROFILE
+========================================================= -->
+
+<section class="section" id="ho-so">
+
+  <div class="label">
+    01 / HỒ SƠ LÀNG
+  </div>
+
+  <h2 class="title">
+    Không phải một khu nghỉ dưỡng.
+    Đây là một ngôi làng thật đang sống.
+  </h2>
+
+  <p class="intro">
+    Quỳnh Sơn phát triển du lịch dựa trên chính cộng đồng dân cư,
+    nhà ở, ruộng đồng, văn hóa và những hoạt động thường ngày.
+    Du khách đến đây không chỉ để ngắm cảnh mà còn để sống chậm
+    giữa một không gian làng bản của người Tày.
+  </p>
+
+  <div class="profile-grid">
+
+```
+<article class="profile">
+
+  <div class="profile-no">
+    01 / HÌNH THÀNH
+  </div>
+
+  <strong>
+    2010
+  </strong>
+
+  <p>
+    Làng văn hóa du lịch cộng đồng Quỳnh Sơn
+    được hình thành từ năm 2010 và trở thành
+    một điểm du lịch cộng đồng tiêu biểu của Bắc Sơn.
+  </p>
+
+</article>
+
+
+<article class="profile">
+
+  <div class="profile-no">
+    02 / DIỆN TÍCH
+  </div>
+
+  <strong>
+    17 km²
+  </strong>
+
+  <p>
+    Không gian làng nằm trong thung lũng Bắc Sơn,
+    bao quanh bởi cánh cung núi đá vôi và đồng ruộng.
+  </p>
+
+</article>
+
+
+<article class="profile">
+
+  <div class="profile-no">
+    03 / NHÀ SÀN
+  </div>
+
+  <strong>
+    &gt;400
+  </strong>
+
+  <p>
+    Hơn 400 ngôi nhà sàn gỗ truyền thống
+    tạo nên diện mạo rất riêng của làng.
+  </p>
+
+</article>
+```
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     VILLAGE VIEW
+========================================================= -->
+
+<section class="village-section" id="khong-gian">
+
+  <div class="village-inner">
+
+```
+<div class="label">
+  02 / KHÔNG GIAN LÀNG
+</div>
+
+<h2 class="title">
+  Một thung lũng,
+  hàng trăm mái nhà,
+  một nhịp sống.
+</h2>
+
+<p class="intro">
+  Quỳnh Sơn nằm giữa thung lũng Bắc Sơn.
+  Những ngôi nhà sàn phân bố giữa đồng ruộng và đường làng,
+  phía xa là các dãy núi đá vôi tạo thành một khung cảnh
+  vừa rộng vừa kín, rất đặc trưng của vùng Bắc Sơn.
+</p>
+
+
+<div class="village-layout">
+
+
+  <figure class="village-photo">
+
+    <img
+      src="https://langson.gov.vn/upload/2006486/fck/ly/818934730912204043.jpg"
+      alt="Làng Quỳnh Sơn giữa thung lũng Bắc Sơn"
+      loading="lazy"
+      referrerpolicy="no-referrer"
+    >
+
+    <figcaption class="village-caption">
+      Toàn cảnh Làng du lịch cộng đồng Quỳnh Sơn
+      giữa thung lũng Bắc Sơn.
+      Ảnh: Cổng thông tin điện tử tỉnh Lạng Sơn.
+    </figcaption>
+
+  </figure>
+
+
+  <div class="village-copy">
+
+    <h3>
+      Làng nằm
+      giữa ruộng
+      và núi.
+    </h3>
+
+    <p>
+      Điểm đặc biệt của Quỳnh Sơn là cảnh quan làng bản
+      không bị tách khỏi sản xuất nông nghiệp.
+      Những ngôi nhà sàn, vườn cây và cánh đồng
+      nằm liền nhau trong cùng một không gian.
+    </p>
+
+    <p>
+      Từ trên cao, toàn bộ làng hiện lên như một dải
+      kiến trúc thấp nằm giữa thảm ruộng và hệ thống
+      núi đá vôi bao quanh.
+    </p>
+
+
+    <div class="village-stats">
+
+
+      <div class="village-stat">
+
+        <strong>
+          Bắc Sơn
+        </strong>
+
+        <span>
+          Không gian thung lũng karst
+        </span>
+
+      </div>
+
+
+      <div class="village-stat">
+
+        <strong>
+          Người Tày
+        </strong>
+
+        <span>
+          Cộng đồng cư dân chủ đạo
+        </span>
+
+      </div>
+
+
+      <div class="village-stat">
+
+        <strong>
+          Nhà sàn
+        </strong>
+
+        <span>
+          Kiến trúc truyền thống
+        </span>
+
+      </div>
+
+
+      <div class="village-stat">
+
+        <strong>
+          Đồng lúa
+        </strong>
+
+        <span>
+          Nền sản xuất nông nghiệp của làng
+        </span>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</div>
+```
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     HOUSE STYLE
+========================================================= -->
+
+<section class="house-section" id="nha-san">
+
+  <div class="house-inner">
+
+```
+<div class="label">
+  03 / NHÀ SÀN QUỲNH SƠN
+</div>
+
+<h2 class="title">
+  Một kiểu kiến trúc
+  lặp lại thành bản sắc.
+</h2>
+
+<p class="intro">
+  Quỳnh Sơn nổi bật bởi sự đồng nhất hiếm thấy của hệ thống
+  nhà sàn. Hơn 400 ngôi nhà được xây dựng theo kiến trúc
+  truyền thống của người Tày, mái lợp ngói âm dương.
+</p>
+
+
+<div class="house-grid">
+
+
+  <article class="house-card">
+
+    <div class="house-no">
+      01 / SỐ LƯỢNG
+    </div>
+
+    <h3>
+      Hơn 400
+      ngôi nhà.
+    </h3>
+
+    <p>
+      Một số lượng lớn nhà sàn truyền thống
+      được bảo tồn và duy trì trong không gian làng.
+    </p>
+
+    <div class="house-mark">
+      BẢN SẮC KIẾN TRÚC
+    </div>
+
+  </article>
+
+
+  <article class="house-card">
+
+    <div class="house-no">
+      02 / MÁI
+    </div>
+
+    <h3>
+      Ngói
+      âm dương.
+    </h3>
+
+    <p>
+      Mái nhà là một trong những chi tiết
+      dễ nhận biết nhất của kiến trúc nhà sàn
+      truyền thống tại Quỳnh Sơn.
+    </p>
+
+    <div class="house-mark">
+      NGÓI TRUYỀN THỐNG
+    </div>
+
+  </article>
+
+
+  <article class="house-card">
+
+    <div class="house-no">
+      03 / HƯỚNG NHÀ
+    </div>
+
+    <h3>
+      Cửa hướng
+      về phương Nam.
+    </h3>
+
+    <p>
+      Theo tư liệu của tỉnh, toàn bộ hơn 400 ngôi nhà
+      đều có cửa quay về hướng Nam, tạo không gian
+      thoáng và hài hòa với đồng ruộng.
+    </p>
+
+    <div class="house-mark">
+      HÒA HỢP THIÊN NHIÊN
+    </div>
+
+  </article>
+
+
+</div>
+```
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     CULTURE
+========================================================= -->
+
+<section class="culture-section" id="van-hoa">
+
+  <div class="culture-inner">
+
+```
+<div class="label">
+  04 / VĂN HÓA TÀY
+</div>
+
+<h2 class="title">
+  Du lịch bắt đầu
+  từ chính đời sống của người dân.
+</h2>
+
+<p class="intro">
+  Điều làm Quỳnh Sơn khác với nhiều điểm tham quan
+  là người dân trực tiếp tham gia tổ chức trải nghiệm:
+  hát Then, đàn tính, làm bánh, cấy lúa, gặt lúa,
+  trồng rau, bắt cá và nhiều hoạt động thường ngày.
+</p>
+
+
+<div class="culture-layout">
+
+
+  <figure class="culture-image">
+
+    <img
+      src="https://langson.gov.vn/upload/2006486/fck/ly/3883671082583901470.jpg"
+      alt="Hát Then đàn tính tại Làng Quỳnh Sơn"
+      loading="lazy"
+      referrerpolicy="no-referrer"
+    >
+
+  </figure>
+
+
+  <div class="culture-copy">
+
+    <h3>
+      Then và
+      đàn tính.
+    </h3>
+
+    <p>
+      Những làn điệu Then và tiếng đàn tính là một phần quan trọng
+      trong đời sống văn hóa Tày tại Quỳnh Sơn. Người dân có thể
+      biểu diễn và hướng dẫn du khách trải nghiệm trong chính
+      không gian nhà sàn của cộng đồng.
+    </p>
+
+    <p>
+      Thực hành văn hóa vì thế không bị tách thành một “màn trình diễn”
+      đơn thuần mà gắn với sinh hoạt, giao lưu và lưu trú tại làng.
+    </p>
+
+
+    <div class="culture-list">
+
+      <div class="culture-item">
+
+        <strong>
+          Then · đàn tính
+        </strong>
+
+        <span>
+          Di sản văn hóa phi vật thể được UNESCO ghi danh.
+        </span>
+
+      </div>
+
+
+      <div class="culture-item">
+
+        <strong>
+          Lồng Tồng
+        </strong>
+
+        <span>
+          Lễ hội xuống đồng của cộng đồng địa phương.
+        </span>
+
+      </div>
+
+
+      <div class="culture-item">
+
+        <strong>
+          Nhà sàn cộng đồng
+        </strong>
+
+        <span>
+          Không gian lưu trú và giao lưu với du khách.
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+```
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     EXPERIENCES
+========================================================= -->
+
+<section class="experience-section" id="trai-nghiem">
+
+  <div class="experience-inner">
+
+```
+<div class="label">
+  05 / TRẢI NGHIỆM
+</div>
+
+<h2 class="title">
+  Đừng chỉ nhìn làng.
+  Hãy sống thử một ngày ở làng.
+</h2>
+
+<p class="intro">
+  Du lịch cộng đồng tại Quỳnh Sơn được xây dựng quanh
+  những công việc và sinh hoạt có thật của cư dân.
+  Chính các hoạt động này giúp chuyến đi mang cảm giác
+  gần gũi thay vì chỉ là một chuyến tham quan.
+</p>
+
+
+<div class="experience-grid">
+
+
+  <article class="experience-card">
+
+    <div class="experience-no">
+      01 / NÔNG NGHIỆP
+    </div>
+
+    <h3>
+      Cấy lúa,
+      gặt lúa.
+    </h3>
+
+    <p>
+      Du khách có thể tham gia các hoạt động nông nghiệp
+      theo mùa, trải nghiệm công việc mà người dân địa phương
+      thực hiện hằng ngày.
+    </p>
+
+    <div class="experience-link">
+      TỪ RUỘNG ĐẾN BỮA ĂN
+    </div>
+
+  </article>
+
+
+  <article class="experience-card">
+
+    <div class="experience-no">
+      02 / ẨM THỰC
+    </div>
+
+    <h3>
+      Làm bánh,
+      nấu món địa phương.
+    </h3>
+
+    <p>
+      Các món ăn bản địa có thể được chế biến ngay
+      tại homestay, sử dụng nguyên liệu từ sản xuất
+      của cộng đồng.
+    </p>
+
+    <div class="experience-link">
+      ẨM THỰC BẮC SƠN
+    </div>
+
+  </article>
+
+
+  <article class="experience-card">
+
+    <div class="experience-no">
+      03 / SINH HOẠT
+    </div>
+
+    <h3>
+      Chèo thuyền,
+      bắt cá, trồng rau.
+    </h3>
+
+    <p>
+      Những hoạt động nhỏ như đi bè, bắt cá hay chăm sóc
+      vườn rau giúp du khách tiếp cận trực tiếp nhịp sống
+      của cộng đồng thay vì chỉ đứng quan sát.
+    </p>
+
+    <div class="experience-link">
+      SỐNG CÙNG NGƯỜI DÂN
+    </div>
+
+  </article>
+
+
+</div>
+```
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     THEN EXPERIENCE
+========================================================= -->
+
+<section class="then-section" id="then">
+
+  <div class="then-inner">
+
+```
+<div class="label">
+  06 / NGÔI NHÀ VĂN HÓA
+</div>
+
+<h2
+  class="title"
+  style="color:#f1e9df;"
+>
+  Khi âm thanh của
+  đàn tính trở thành một phần chuyến đi.
+</h2>
+
+<p class="intro">
+  Quỳnh Sơn khuyến khích du khách trải nghiệm văn hóa
+  ngay tại nhà sàn: ngồi cùng người dân, nghe Then,
+  học đàn tính và thưởng thức ẩm thực truyền thống.
+</p>
+
+
+<div class="then-layout">
+
+
+  <figure class="then-photo">
+
+    <img
+      src="https://langson.gov.vn/upload/2006486/fck/ly/3883671082583901470.jpg"
+      alt="Người Tày hát Then đàn tính tại Quỳnh Sơn"
+      loading="lazy"
+      referrerpolicy="no-referrer"
+    >
+
+  </figure>
+
+
+  <div class="then-copy">
+
+    <h3>
+      Văn hóa
+      được truyền bằng
+      trải nghiệm.
+    </h3>
+
+    <p>
+      Người dân là chủ thể của hoạt động du lịch.
+      Họ trực tiếp tổ chức đón khách, chuẩn bị bữa ăn,
+      biểu diễn Then, hướng dẫn trải nghiệm nông nghiệp
+      và giới thiệu đời sống của cộng đồng.
+    </p>
+
+    <p>
+      Đây cũng là cách để lợi ích từ du lịch quay trở lại
+      với chính những gia đình đang gìn giữ ngôi nhà,
+      văn hóa và cảnh quan của làng.
+    </p>
+
+    <div class="then-badge">
+      DU LỊCH CỘNG ĐỒNG · BẢO TỒN BẰNG SINH KẾ
+    </div>
+
+  </div>
+
+</div>
+```
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     NÀ LAY
+========================================================= -->
+
+<section class="nalay-section" id="na-lay">
+
+  <div class="nalay-inner">
+
+```
+<div class="label">
+  07 / ĐIỂM NHÌN
+</div>
+
+<h2 class="title">
+  Đứng cao hơn một chút,
+  cả Quỳnh Sơn hiện ra.
+</h2>
+
+<p class="intro">
+  Một trong những trải nghiệm nổi bật của vùng Quỳnh Sơn
+  là chinh phục núi Nà Lay để quan sát toàn cảnh thung lũng.
+  Tư liệu của tỉnh ghi nhận đỉnh núi có độ cao trên 600 m
+  so với mực nước biển.
+</p>
+
+
+<div class="nalay-grid">
+
+
+  <div class="nalay-card">
+
+    <strong>
+      &gt;600 m
+    </strong>
+
+    <span>
+      Độ cao đỉnh Nà Lay theo tư liệu tỉnh
+    </span>
+
+    <p>
+      Từ trên cao có thể nhìn xuống những nếp nhà sàn,
+      cánh đồng và hệ thống núi đá vôi bao quanh
+      thung lũng Bắc Sơn.
+    </p>
+
+    <p>
+      Đây cũng là góc nhìn giúp du khách hiểu rõ nhất
+      mối quan hệ giữa làng, ruộng và địa hình karst.
+    </p>
+
+  </div>
+
+
+  <figure class="nalay-photo">
+
+    <img
+      src="https://langson.gov.vn/upload/2006486/fck/ly/79436f2da0992dc77488.jpg"
+      alt="Toàn cảnh thung lũng Bắc Sơn nhìn từ trên cao"
+      loading="lazy"
+      referrerpolicy="no-referrer"
+    >
+
+  </figure>
+
+
+</div>
+```
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     HERITAGE
+========================================================= -->
+
+<section class="heritage-section" id="lich-su">
+
+  <div class="heritage-inner">
+
+```
+<div class="label">
+  08 / LỊCH SỬ VÀ BẢN SẮC
+</div>
+
+<h2 class="title">
+  Một làng hiện đại
+  nhưng vẫn giữ được cấu trúc cũ.
+</h2>
+
+<p class="intro">
+  Quỳnh Sơn không phát triển bằng cách thay thế hoàn toàn
+  bản làng cũ. Mô hình du lịch được xây dựng trên nền
+  kiến trúc, văn hóa và sản xuất vốn có của cộng đồng.
+</p>
+
+
+<div class="timeline">
+
+
+  <article class="time">
+
+    <div class="time-dot">
+      01
+    </div>
+
+    <div class="time-year">
+      2010
+    </div>
+
+    <h3>
+      Hình thành
+      làng du lịch.
+    </h3>
+
+    <p>
+      Bắt đầu xây dựng mô hình
+      du lịch cộng đồng tại Quỳnh Sơn.
+    </p>
+
+  </article>
+
+
+  <article class="time">
+
+    <div class="time-dot">
+      02
+    </div>
+
+    <div class="time-year">
+      PHÁT TRIỂN
+    </div>
+
+    <h3>
+      Nhà sàn
+      trở thành homestay.
+    </h3>
+
+    <p>
+      Nhiều hộ dân trực tiếp tham gia
+      dịch vụ lưu trú và trải nghiệm.
+    </p>
+
+  </article>
+
+
+  <article class="time">
+
+    <div class="time-dot">
+      03
+    </div>
+
+    <div class="time-year">
+      2025
+    </div>
+
+    <h3>
+      Được UN Tourism
+      vinh danh.
+    </h3>
+
+    <p>
+      Quỳnh Sơn nhận danh hiệu
+      “Làng du lịch tốt nhất năm 2025”.
+    </p>
+
+  </article>
+
+
+  <article class="time">
+
+    <div class="time-dot">
+      04
+    </div>
+
+    <div class="time-year">
+      2026+
+    </div>
+
+    <h3>
+      Tiếp tục phát triển
+      bền vững.
+    </h3>
+
+    <p>
+      Tỉnh đang triển khai định hướng
+      phát triển Quỳnh Sơn giai đoạn mới.
+    </p>
+
+  </article>
+
+
+</div>
+```
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     AWARD
+========================================================= -->
+
+<section class="award-section" id="giai-thuong">
+
+  <div class="award-inner">
+
+```
+<div class="award-box">
+
+  <div class="award-top">
+    BEST TOURISM VILLAGES 2025
+  </div>
+
+  <h3>
+    Quỳnh Sơn —
+    “Làng du lịch tốt nhất năm 2025”.
+  </h3>
+
+  <p>
+    Ngày 17/10/2025, tại thành phố Hồ Châu, tỉnh Chiết Giang,
+    Trung Quốc, Tổ chức Du lịch Liên Hợp Quốc (UN Tourism)
+    công bố danh sách “Làng du lịch tốt nhất năm 2025”.
+    Quỳnh Sơn của Lạng Sơn được vinh danh sau khi vượt qua
+    hơn 270 hồ sơ đến từ 65 quốc gia.
+  </p>
+
+  <p>
+    Danh hiệu ghi nhận những giá trị về bảo tồn văn hóa,
+    cảnh quan, môi trường, phát triển bền vững và sinh kế
+    cộng đồng – đúng với nền tảng mà Quỳnh Sơn đang xây dựng.
+  </p>
+
+</div>
+```
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     GALLERY
+========================================================= -->
+
+<section class="gallery-section" id="hinh-anh">
+
+  <div class="gallery-inner">
+
+```
+<div class="label">
+  09 / HÌNH ẢNH QUỲNH SƠN
+</div>
+
+<h2 class="title">
+  Những bức ảnh
+  kể đúng câu chuyện của làng.
+</h2>
+
+<p class="intro">
+  Ảnh nội dung được hiển thị theo đúng tỉ lệ gốc,
+  không ép chiều cao cố định và không dùng ảnh của
+  một địa danh khác để thay thế Quỳnh Sơn.
+</p>
+
+
+<div class="gallery">
+
+
+  <figure class="gallery-main">
+
+    <img
+      src="https://langson.gov.vn/upload/2006486/fck/ly/818934730912204043.jpg"
+      alt="Làng Quỳnh Sơn giữa thung lũng Bắc Sơn"
+      loading="lazy"
+      referrerpolicy="no-referrer"
+    >
+
+    <figcaption class="gallery-caption">
+      Quỳnh Sơn với hệ thống nhà sàn nằm giữa thung lũng Bắc Sơn.
+      Ảnh: Cổng thông tin điện tử tỉnh Lạng Sơn.
+    </figcaption>
+
+  </figure>
+
+
+  <div class="gallery-side">
+
+
+    <figure>
+
+      <img
+        src="https://langson.gov.vn/upload/2006486/fck/ly/z712558220865934abc095d62344a286313d8c4726796a_skdy.jpg"
+        alt="Du khách trải nghiệm cấy lúa tại Quỳnh Sơn"
+        loading="lazy"
+        referrerpolicy="no-referrer"
+      >
+
+      <figcaption class="gallery-caption">
+        Du khách quốc tế trải nghiệm cấy lúa truyền thống.
+        Ảnh: Cổng thông tin điện tử tỉnh Lạng Sơn.
+      </figcaption>
+
+    </figure>
+
+
+    <figure>
+
+      <img
+        src="https://langson.gov.vn/upload/2006486/fck/ly/2010-quynh-son.jpg"
+        alt="Du khách trải nghiệm đi bè tre tại Quỳnh Sơn"
+        loading="lazy"
+        referrerpolicy="no-referrer"
+      >
+
+      <figcaption class="gallery-caption">
+        Trải nghiệm đi bè tre trong không gian làng.
+        Ảnh: Cổng thông tin điện tử tỉnh Lạng Sơn.
+      </figcaption>
+
+    </figure>
+
+
+  </div>
+
+</div>
+```
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     VALUES
+========================================================= -->
+
+<section class="value-section" id="gia-tri">
+
+  <div class="value-inner">
+
+```
+<div class="label">
+  10 / GIÁ TRỊ
+</div>
+
+<h2
+  class="title"
+  style="color:#eef3ed;"
+>
+  Một ngôi làng,
+  nhiều lớp giá trị.
+</h2>
+
+
+<div class="value-grid">
+
+
+  <article class="value-card">
+
+    <div class="value-no">
+      01 / CỘNG ĐỒNG
+    </div>
+
+    <h3>
+      Người dân là chủ thể
+    </h3>
+
+    <p>
+      Chính người dân tổ chức lưu trú,
+      ẩm thực và các trải nghiệm cho du khách.
+    </p>
+
+  </article>
+
+
+  <article class="value-card">
+
+    <div class="value-no">
+      02 / KIẾN TRÚC
+    </div>
+
+    <h3>
+      Hơn 400 nhà sàn
+    </h3>
+
+    <p>
+      Cấu trúc nhà sàn tạo nên diện mạo
+      đặc trưng và tính nhận diện rất cao.
+    </p>
+
+  </article>
+
+
+  <article class="value-card">
+
+    <div class="value-no">
+      03 / VĂN HÓA
+    </div>
+
+    <h3>
+      Then và đàn tính
+    </h3>
+
+    <p>
+      Âm nhạc và diễn xướng truyền thống
+      vẫn được duy trì trong đời sống cộng đồng.
+    </p>
+
+  </article>
+
+
+  <article class="value-card">
+
+    <div class="value-no">
+      04 / CẢNH QUAN
+    </div>
+
+    <h3>
+      Làng giữa thung lũng
+    </h3>
+
+    <p>
+      Nhà sàn, đồng lúa, suối và núi đá vôi
+      tạo thành một cảnh quan văn hóa thống nhất.
+    </p>
+
+  </article>
+
+
+  <article class="value-card">
+
+    <div class="value-no">
+      05 / SINH KẾ
+    </div>
+
+    <h3>
+      Du lịch gắn với nông nghiệp
+    </h3>
+
+    <p>
+      Các hoạt động cấy, gặt, làm bánh và ẩm thực
+      giúp tạo thêm giá trị cho kinh tế hộ gia đình.
+    </p>
+
+  </article>
+
+
+  <article class="value-card">
+
+    <div class="value-no">
+      06 / QUỐC TẾ
+    </div>
+
+    <h3>
+      Best Tourism Villages 2025
+    </h3>
+
+    <p>
+      Danh hiệu quốc tế đưa Quỳnh Sơn
+      trở thành một hình mẫu du lịch nông thôn
+      được biết đến rộng hơn.
+    </p>
+
+  </article>
+
+
+</div>
+```
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     CONSERVATION
+========================================================= -->
+
+<section class="conservation" id="ben-vung">
+
+  <div class="conservation-inner">
+
+```
+<div
+  class="label"
+  style="color:#dfcb7a;"
+>
+  11 / DU LỊCH BỀN VỮNG
+</div>
+
+<h2
+  class="title"
+  style="color:#f0f4ee;"
+>
+  Giữ được ngôi làng
+  mới giữ được sức hút của ngôi làng.
+</h2>
+
+
+<div class="conservation-grid">
+
+
+  <article class="conservation-box">
+
+    <h3>
+      Không biến nhà sàn
+      thành phông nền.
+    </h3>
+
+    <p>
+      Giá trị lớn nhất của Quỳnh Sơn nằm ở việc nhà ở,
+      sản xuất, văn hóa và cảnh quan vẫn cùng tồn tại.
+      Phát triển du lịch cần giữ được cấu trúc làng
+      và không gian sống của cộng đồng.
+    </p>
+
+  </article>
+
+
+  <article class="conservation-box">
+
+    <h3>
+      Không biến văn hóa
+      thành một màn diễn.
+    </h3>
+
+    <p>
+      Then, đàn tính, lễ hội và các hoạt động truyền thống
+      nên được duy trì trong đời sống thực tế,
+      để du lịch trở thành động lực bảo tồn chứ không
+      làm mất đi ý nghĩa nguyên bản.
+    </p>
+
+  </article>
+
+
+</div>
+
+
+<div class="alert">
+  Khi tham quan Quỳnh Sơn, hãy tôn trọng không gian sống
+  của người dân, giữ vệ sinh, không tự ý vào nhà,
+  khu vực sinh hoạt hoặc ruộng vườn khi chưa được phép.
+</div>
+```
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     FINAL
+========================================================= -->
+
+<section class="final">
+
+  <div class="final-box">
+
+```
+<div class="final-small">
+  QUỲNH SƠN · BẮC SƠN · LẠNG SƠN
+</div>
+
+<h2>
+  Một ngôi làng
+  không cần dựng cảnh.
+  Chính cuộc sống
+  đã là cảnh đẹp.
+</h2>
+
+<p>
+  Làng văn hóa du lịch cộng đồng Quỳnh Sơn là câu chuyện
+  về cách một cộng đồng giữ lại nhà sàn, ruộng lúa,
+  văn hóa Tày và nhịp sống nông nghiệp, rồi biến chính
+  những giá trị ấy thành nền tảng để phát triển du lịch
+  cộng đồng bền vững.
+</p>
+
+
+<div class="sources">
+
+  Nguồn thông tin chính:
+
+  <a
+    href="https://langsontourism.com.vn/vi/quynhsonlsn"
+    target="_blank"
+    rel="noopener"
+  >
+    Cổng thông tin du lịch Lạng Sơn
+  </a>
+
+  ·
+
+  <a
+    href="https://langson.gov.vn/tinchuyende/lang-van-hoa-du-lich-cong-dong-quynh-son-ban-sac-duoc-toa-sang.html"
+    target="_blank"
+    rel="noopener"
+  >
+    Cổng thông tin điện tử tỉnh Lạng Sơn
+  </a>
+
+  ·
+
+  <a
+    href="https://bacson.langson.gov.vn/tin-tuc-su-kien/du-lich/lang-du-lich-tot-nhat-nam-2025-tai-lang-son.html"
+    target="_blank"
+    rel="noopener"
+  >
+    UBND xã Bắc Sơn
+  </a>
+
+  <br>
+
+  Hình ảnh:
+  Cổng thông tin điện tử tỉnh Lạng Sơn;
+  ảnh hiển thị nội dung giữ tỉ lệ gốc.
+
+</div>
+```
+
+  </div>
+
+</section>
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+  <div class="footer-inner">
+
+```
+<div class="footer-brand">
+  LẠNG SƠN / 16
+</div>
+
+<div class="footer-title">
+  QUỲNH SƠN
+</div>
+
+<div class="footer-text">
+  Làng văn hóa du lịch cộng đồng Quỳnh Sơn ·
+  xã Bắc Sơn · tỉnh Lạng Sơn ·
+  không gian văn hóa Tày giữa thung lũng Bắc Sơn.
+</div>
+
+<div class="footer-source">
+
+  Thông tin du lịch:
+
+  <a
+    href="https://langsontourism.com.vn/"
+    target="_blank"
+    rel="noopener"
+  >
+    Cổng thông tin du lịch Lạng Sơn
+  </a>
+
+  <br>
+
+  Thông tin tỉnh:
+
+  <a
+    href="https://langson.gov.vn/"
+    target="_blank"
+    rel="noopener"
+  >
+    Cổng thông tin điện tử tỉnh Lạng Sơn
+  </a>
+
+  <br>
+
+  Thông tin địa phương:
+
+  <a
+    href="https://bacson.langson.gov.vn/"
+    target="_blank"
+    rel="noopener"
+  >
+    UBND xã Bắc Sơn
+  </a>
+
+</div>
+```
+
+  </div>
+
+</footer>
+
+<!-- =========================================================
+     SCROLL REVEAL + SECTION NAV
+========================================================= -->
+
+<script>
+
+const revealItems = document.querySelectorAll(
+  ".profile, .village-photo, .village-copy, .house-card, .culture-image, .culture-copy, .experience-card, .then-photo, .then-copy, .nalay-card, .nalay-photo, .time, .award-box, .gallery figure, .value-card, .conservation-box"
+);
+
+const observer = new IntersectionObserver(
+
+  entries => {
+
+    entries.forEach(entry => {
+
+      if(entry.isIntersecting){
+
+        entry.target.classList.add("visible");
+
+      }
+
+    });
+
+  },
+
+  {
+    threshold:.08
+  }
+
+);
+
+
+revealItems.forEach(element => {
+
+  element.style.opacity="0";
+
+  element.style.transform="translateY(24px)";
+
+  element.style.transition=
+    "opacity .72s ease, transform .72s ease";
+
+  observer.observe(element);
+
+});
+
+
+const revealStyle = document.createElement("style");
+
+revealStyle.innerHTML=`
+
+.visible{
+  opacity:1 !important;
+  transform:translateY(0) !important;
+}
+
+`;
+
+document.head.appendChild(revealStyle);
+
+
+/* =========================================================
+   ACTIVE SECTION NAV
+========================================================= */
+
+const navLinks = [
+  ...document.querySelectorAll(".section-link")
+];
+
+const navSections = navLinks
+  .map(link =>
+    document.querySelector(
+      link.getAttribute("href")
+    )
+  )
+  .filter(Boolean);
+
+const sectionNavObserver = new IntersectionObserver(
+
+  entries => {
+
+    entries.forEach(entry => {
+
+      if(entry.isIntersecting){
+
+        navLinks.forEach(link => {
+
+          link.classList.toggle(
+            "active",
+            link.getAttribute("href") ===
+            "#" + entry.target.id
+          );
+
+        });
+
+      }
+
+    });
+
+  },
+
+  {
+    rootMargin:
+      window.innerWidth <= 620
+        ? "-130px 0px -55% 0px"
+        : "-145px 0px -55% 0px",
+
+    threshold:0
+  }
+
+);
+
+
+navSections.forEach(section => {
+
+  sectionNavObserver.observe(section);
+
+});
+
+
+/* =========================================================
+   AUTO SCROLL ACTIVE TAB INTO VIEW
+========================================================= */
+
+navLinks.forEach(link => {
+
+  link.addEventListener("click", () => {
+
+    setTimeout(() => {
+
+      link.scrollIntoView({
+        behavior:"smooth",
+        block:"nearest",
+        inline:"center"
+      });
+
+    },100);
+
+  });
+
+});
+
+</script>
+
+</body>
+</html>

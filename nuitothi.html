@@ -1,0 +1,1683 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Núi Tô Thị – Nàng Tô Thị | Lạng Sơn</title>
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #087f73;
+            --primary-dark: #075b53;
+            --primary-light: #dff5f0;
+
+            --sky: #dff2ff;
+            --yellow: #f7c948;
+            --yellow-light: #fff4c7;
+
+            --bg: #f7fbfa;
+            --white: #ffffff;
+
+            --text: #203331;
+            --muted: #667774;
+
+            --border: #dce9e6;
+            --shadow: 0 12px 35px rgba(14, 87, 78, .10);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Be Vietnam Pro", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.75;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        /* =========================
+           TOPBAR
+        ========================= */
+
+        .topbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 70px;
+            z-index: 1000;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 5%;
+
+            background: rgba(7, 91, 83, .96);
+            backdrop-filter: blur(12px);
+
+            color: white;
+
+            box-shadow: 0 4px 18px rgba(0,0,0,.10);
+        }
+
+        .logo {
+            font-family: "DM Serif Display", serif;
+            font-size: 29px;
+            letter-spacing: 1.4px;
+        }
+
+        .main-link {
+            padding: 8px 17px;
+            border-radius: 30px;
+
+            border: 1px solid rgba(255,255,255,.45);
+
+            font-size: 14px;
+            font-weight: 700;
+
+            transition: .25s ease;
+        }
+
+        .main-link:hover {
+            background: white;
+            color: var(--primary-dark);
+        }
+
+        /* =========================
+           SECTION NAV
+        ========================= */
+
+        .section-nav {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            height: 58px;
+            z-index: 999;
+
+            background: rgba(255,255,255,.96);
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid var(--border);
+
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .section-nav-inner {
+            width: max-content;
+            min-width: 100%;
+            height: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 7px;
+            padding: 0 18px;
+        }
+
+        .section-nav a {
+            padding: 8px 13px;
+
+            border-radius: 22px;
+
+            color: #71807e;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            transition: .2s ease;
+        }
+
+        .section-nav a:hover {
+            color: var(--primary);
+            background: var(--primary-light);
+        }
+
+        .section-nav a.active {
+            color: white;
+            background: var(--primary);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            position: relative;
+
+            margin-top: 128px;
+
+            min-height: 620px;
+
+            display: flex;
+            align-items: flex-end;
+
+            overflow: hidden;
+
+            background: #a7d7d0;
+        }
+
+        .hero-image {
+            position: absolute;
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            object-position: center;
+
+            display: block;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(3, 49, 45, .85) 0%,
+                    rgba(3, 49, 45, .44) 42%,
+                    rgba(3, 49, 45, .04) 82%
+                );
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+
+            width: min(1150px, 90%);
+            margin: auto;
+
+            padding: 80px 0 70px;
+
+            color: white;
+        }
+
+        .hero-tag {
+            display: inline-block;
+
+            margin-bottom: 16px;
+            padding: 7px 14px;
+
+            border-radius: 30px;
+
+            background: rgba(247,201,72,.95);
+            color: #304128;
+
+            font-size: 12px;
+            font-weight: 800;
+
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            max-width: 900px;
+
+            font-family: "DM Serif Display", serif;
+            font-size: clamp(52px, 7vw, 90px);
+            line-height: 1.02;
+
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 760px;
+
+            font-size: 17px;
+            color: rgba(255,255,255,.92);
+        }
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        main {
+            width: min(1150px, 90%);
+            margin: auto;
+        }
+
+        .section {
+            padding: 90px 0;
+
+            border-bottom: 1px solid var(--border);
+
+            scroll-margin-top: 145px;
+        }
+
+        .section-number {
+            margin-bottom: 8px;
+
+            color: var(--primary);
+
+            font-size: 13px;
+            font-weight: 800;
+
+            letter-spacing: 2px;
+        }
+
+        .section h2 {
+            margin-bottom: 15px;
+
+            color: var(--primary-dark);
+
+            font-family: "DM Serif Display", serif;
+            font-size: clamp(36px, 5vw, 54px);
+            line-height: 1.12;
+        }
+
+        .section-intro {
+            max-width: 780px;
+
+            color: var(--muted);
+
+            font-size: 16px;
+        }
+
+        .section-head {
+            margin-bottom: 38px;
+        }
+
+        /* =========================
+           TWO COLUMNS
+        ========================= */
+
+        .two-col {
+            display: grid;
+            grid-template-columns: 1.02fr .98fr;
+
+            gap: 45px;
+
+            align-items: center;
+        }
+
+        .text p {
+            margin-bottom: 18px;
+        }
+
+        /* =========================
+           IMAGE CARD
+        ========================= */
+
+        .image-card {
+            overflow: hidden;
+
+            background: white;
+
+            border-radius: 22px;
+
+            box-shadow: var(--shadow);
+
+            border: 1px solid var(--border);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 390px;
+
+            display: block;
+
+            object-fit: cover;
+        }
+
+        .caption {
+            padding: 13px 17px;
+
+            color: var(--muted);
+
+            font-size: 12px;
+
+            background: white;
+        }
+
+        /* =========================
+           QUICK INFO
+        ========================= */
+
+        .quick-info {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 14px;
+
+            margin-top: 35px;
+        }
+
+        .info-box {
+            padding: 20px;
+
+            border-radius: 17px;
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            box-shadow: 0 6px 20px rgba(20,80,70,.04);
+        }
+
+        .info-label {
+            margin-bottom: 5px;
+
+            color: var(--primary);
+
+            font-size: 11px;
+            font-weight: 800;
+
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .info-value {
+            color: #26433f;
+
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        /* =========================
+           CARDS
+        ========================= */
+
+        .highlight-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .highlight {
+            padding: 28px;
+
+            border-radius: 21px;
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            transition: .25s ease;
+        }
+
+        .highlight:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+
+        .highlight-icon {
+            width: 54px;
+            height: 54px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 17px;
+
+            border-radius: 16px;
+
+            background: var(--primary-light);
+
+            font-size: 26px;
+        }
+
+        .highlight h3 {
+            margin-bottom: 8px;
+
+            color: var(--primary-dark);
+
+            font-size: 19px;
+        }
+
+        .highlight p {
+            color: var(--muted);
+
+            font-size: 14px;
+        }
+
+        /* =========================
+           STORY
+        ========================= */
+
+        .story {
+            padding: 40px;
+
+            border-radius: 24px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #e8f8f5,
+                    #eef7ff
+                );
+
+            border: 1px solid #cce8e2;
+        }
+
+        .story p {
+            margin-bottom: 18px;
+        }
+
+        .story p:last-child {
+            margin-bottom: 0;
+        }
+
+        .quote {
+            margin-bottom: 24px;
+
+            color: var(--primary-dark);
+
+            font-family: "DM Serif Display", serif;
+
+            font-size: 28px;
+            line-height: 1.4;
+        }
+
+        /* =========================
+           FEATURE LIST
+        ========================= */
+
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 16px 34px;
+
+            margin-top: 28px;
+        }
+
+        .feature-item {
+            display: flex;
+
+            gap: 12px;
+
+            align-items: flex-start;
+        }
+
+        .feature-dot {
+            flex: 0 0 9px;
+
+            width: 9px;
+            height: 9px;
+
+            margin-top: 10px;
+
+            border-radius: 50%;
+
+            background: var(--yellow);
+        }
+
+        /* =========================
+           BLUE INFO PANEL
+        ========================= */
+
+        .blue-panel {
+            padding: 32px;
+
+            border-radius: 22px;
+
+            background: var(--sky);
+
+            border: 1px solid #c6e8fb;
+        }
+
+        .blue-panel h3 {
+            margin-bottom: 12px;
+
+            color: #175a78;
+
+            font-size: 21px;
+        }
+
+        /* =========================
+           GALLERY
+        ========================= */
+
+        .gallery {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 17px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 17px;
+
+            box-shadow: 0 7px 24px rgba(20,70,65,.06);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 245px;
+
+            display: block;
+
+            object-fit: cover;
+
+            transition: transform .4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.04);
+        }
+
+        .image-label {
+            padding: 12px 14px;
+
+            color: var(--muted);
+
+            font-size: 13px;
+        }
+
+        /* =========================
+           SOURCE
+        ========================= */
+
+        .source-box {
+            padding: 36px;
+
+            border-radius: 24px;
+
+            background: var(--primary-dark);
+
+            color: white;
+        }
+
+        .source-box h3 {
+            margin-bottom: 16px;
+
+            font-family: "DM Serif Display", serif;
+
+            font-size: 31px;
+        }
+
+        .source-box p {
+            margin-bottom: 8px;
+
+            color: rgba(255,255,255,.80);
+
+            font-size: 14px;
+        }
+
+        /* =========================
+           BACK BUTTON
+        ========================= */
+
+        .back-btn {
+            position: fixed;
+
+            right: 22px;
+            bottom: 22px;
+
+            z-index: 1100;
+
+            padding: 12px 18px;
+
+            border-radius: 30px;
+
+            background: var(--primary);
+            color: white;
+
+            font-size: 13px;
+            font-weight: 800;
+
+            box-shadow: 0 9px 25px rgba(0,0,0,.18);
+
+            transition: .25s ease;
+        }
+
+        .back-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 45px 20px;
+
+            background: #063f3a;
+
+            color: rgba(255,255,255,.76);
+
+            text-align: center;
+
+            font-size: 13px;
+        }
+
+        footer strong {
+            color: white;
+            font-size: 16px;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-info {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .highlight-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .feature-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 620px) {
+
+            .topbar {
+                padding: 0 18px;
+            }
+
+            .logo {
+                font-size: 23px;
+            }
+
+            .main-link {
+                padding: 7px 13px;
+                font-size: 12px;
+            }
+
+            .hero {
+                min-height: 525px;
+            }
+
+            .hero-content {
+                padding-bottom: 52px;
+            }
+
+            .hero h1 {
+                font-size: 49px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .section {
+                padding: 65px 0;
+            }
+
+            .quick-info {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .story {
+                padding: 25px;
+            }
+
+            .back-btn {
+                right: 14px;
+                bottom: 14px;
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+
+<header class="topbar">
+
+    <a href="./danhlamthangcanh.html" class="logo">
+        LẠNG SƠN
+    </a>
+
+    <a href="./danhlamthangcanh.html" class="main-link">
+        Danh thắng
+    </a>
+
+</header>
+
+<!-- =====================================================
+     SECTION NAV
+===================================================== -->
+
+<nav class="section-nav">
+
+    <div class="section-nav-inner">
+
+        <a href="#tong-quan">Tổng quan</a>
+        <a href="#truyen-thuyet">Truyền thuyết</a>
+        <a href="#dac-diem">Đặc điểm</a>
+        <a href="#canh-quan">Cảnh quan</a>
+        <a href="#gia-tri">Giá trị</a>
+        <a href="#tham-quan">Tham quan</a>
+        <a href="#van-hoa">Văn hóa</a>
+        <a href="#bao-ton">Bảo tồn</a>
+        <a href="#hinh-anh">Hình ảnh</a>
+        <a href="#nguon">Nguồn</a>
+
+    </div>
+
+</nav>
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <!-- Ảnh chính đã thay -->
+    <img
+        class="hero-image"
+        src="https://cdn.langsontv.vn/upload/news/4_04/nui_nang_to_thi_thanh_nha_mac_09433210042020.jpg"
+        alt="Núi Tô Thị Lạng Sơn"
+        onerror="this.onerror=null;this.src='https://langson360.com.vn/datafiles/1953114662136725504/2025-09/88488277-diem-den.png';"
+    >
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <div class="hero-tag">
+            Danh lam thắng cảnh · Xứ Lạng
+        </div>
+
+        <h1>
+            Núi Tô Thị
+        </h1>
+
+        <p>
+            Biểu tượng đá nổi tiếng của Lạng Sơn, gắn với hình tượng
+            Nàng Tô Thị bồng con chờ chồng và những câu ca dao quen thuộc về Xứ Lạng.
+        </p>
+
+    </div>
+
+</section>
+
+<main>
+
+<!-- =====================================================
+     01 TỔNG QUAN
+===================================================== -->
+
+<section class="section" id="tong-quan">
+
+    <div class="section-head">
+
+        <div class="section-number">
+            01 · TỔNG QUAN
+        </div>
+
+        <h2>
+            Biểu tượng của Xứ Lạng
+        </h2>
+
+        <p class="section-intro">
+            Núi Tô Thị nằm phía trước khu vực động Tam Thanh,
+            là một điểm nhấn nổi bật trong quần thể di tích danh thắng Nhị – Tam Thanh.
+        </p>
+
+    </div>
+
+    <div class="two-col">
+
+        <div class="text">
+
+            <p>
+                Núi Tô Thị còn được gọi là núi Nàng Tô Thị,
+                nổi bật với khối đá tự nhiên có hình dáng được dân gian
+                liên tưởng đến người phụ nữ đang bồng con đứng chờ chồng.
+            </p>
+
+            <p>
+                Hình tượng này đã trở thành một biểu tượng văn hóa quen thuộc
+                khi nhắc tới Lạng Sơn, đồng thời gắn với nhiều câu chuyện
+                và truyền thuyết dân gian được lưu truyền qua nhiều thế hệ.
+            </p>
+
+            <p>
+                Núi Tô Thị nằm trong không gian danh thắng Nhị – Tam Thanh –
+                Thành Nhà Mạc, nơi hội tụ cảnh quan núi đá vôi,
+                di tích lịch sử và những giá trị văn hóa đặc trưng của Xứ Lạng.
+            </p>
+
+        </div>
+
+        <!-- ẢNH TỔNG QUAN MỚI -->
+        <div class="image-card">
+
+            <img
+                src="https://langson360.com.vn/datafiles/1953114662136725504/2025-09/88488277-diem-den.png"
+                alt="Núi Tô Thị và cảnh quan Lạng Sơn"
+                loading="eager"
+                onerror="this.onerror=null;this.src='https://cdn.langsontv.vn/upload/news/4_04/nui_nang_to_thi_thanh_nha_mac_09433210042020.jpg';"
+            >
+
+            <div class="caption">
+                Núi Tô Thị nổi bật giữa cảnh quan núi đá và thung lũng Xứ Lạng.
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="quick-info">
+
+        <div class="info-box">
+            <div class="info-label">Tên gọi</div>
+            <div class="info-value">
+                Núi Tô Thị – Nàng Tô Thị
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="info-label">Địa điểm</div>
+            <div class="info-value">
+                Phường Tam Thanh, tỉnh Lạng Sơn
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="info-label">Loại hình</div>
+            <div class="info-value">
+                Danh lam thắng cảnh – văn hóa
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="info-label">Xếp hạng</div>
+            <div class="info-value">
+                Quần thể Nhị – Tam Thanh, xếp hạng quốc gia năm 1962
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     02 TRUYỀN THUYẾT
+===================================================== -->
+
+<section class="section" id="truyen-thuyet">
+
+    <div class="section-head">
+
+        <div class="section-number">
+            02 · TRUYỀN THUYẾT
+        </div>
+
+        <h2>
+            Câu chuyện Nàng Tô Thị
+        </h2>
+
+        <p class="section-intro">
+            Truyền thuyết về Nàng Tô Thị có nhiều dị bản,
+            nhưng đều làm nổi bật hình tượng người phụ nữ thủy chung.
+        </p>
+
+    </div>
+
+    <div class="story">
+
+        <div class="quote">
+            “Có nàng Tô Thị, có chùa Tam Thanh...”
+        </div>
+
+        <p>
+            Theo truyền thuyết dân gian phổ biến,
+            nàng Tô Thị bồng con đứng trên núi chờ người chồng trở về.
+            Sự chờ đợi kéo dài đã gắn hình ảnh nàng với khối đá trên núi.
+        </p>
+
+        <p>
+            Truyền thuyết có nhiều cách kể khác nhau,
+            nhưng hình tượng người phụ nữ bồng con chờ chồng
+            luôn được xem là biểu tượng của lòng chung thủy,
+            tình cảm gia đình và sự son sắt.
+        </p>
+
+        <p>
+            Câu chuyện cùng hình ảnh núi đá đã khiến Nàng Tô Thị
+            trở thành một trong những biểu tượng văn hóa nổi tiếng nhất
+            của Lạng Sơn.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     03 ĐẶC ĐIỂM
+===================================================== -->
+
+<section class="section" id="dac-diem">
+
+    <div class="section-head">
+
+        <div class="section-number">
+            03 · ĐẶC ĐIỂM
+        </div>
+
+        <h2>
+            Khối đá giữa núi xanh
+        </h2>
+
+        <p class="section-intro">
+            Giá trị của Núi Tô Thị đến từ sự kết hợp giữa địa hình đá vôi
+            và hình dáng tự nhiên đặc biệt của khối đá.
+        </p>
+
+    </div>
+
+    <div class="highlight-grid">
+
+        <div class="highlight">
+
+            <div class="highlight-icon">
+                ⛰️
+            </div>
+
+            <h3>
+                Núi đá vôi
+            </h3>
+
+            <p>
+                Núi Tô Thị nằm trong vùng địa hình núi đá vôi đặc trưng
+                của Lạng Sơn với các mỏm đá và sườn núi có hình thái đa dạng.
+            </p>
+
+        </div>
+
+        <div class="highlight">
+
+            <div class="highlight-icon">
+                🗿
+            </div>
+
+            <h3>
+                Hình tượng đặc biệt
+            </h3>
+
+            <p>
+                Một khối đá tự nhiên có dáng đứng đặc biệt
+                được dân gian liên tưởng đến hình ảnh người phụ nữ bồng con.
+            </p>
+
+        </div>
+
+        <div class="highlight">
+
+            <div class="highlight-icon">
+                🌿
+            </div>
+
+            <h3>
+                Không gian xanh
+            </h3>
+
+            <p>
+                Núi đá, cây xanh, đồng ruộng và các dãy núi phía xa
+                tạo nên cảnh quan đặc trưng của khu vực Xứ Lạng.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     04 CẢNH QUAN
+===================================================== -->
+
+<section class="section" id="canh-quan">
+
+    <div class="section-head">
+
+        <div class="section-number">
+            04 · CẢNH QUAN
+        </div>
+
+        <h2>
+            Núi đá nhìn xuống thung lũng
+        </h2>
+
+        <p class="section-intro">
+            Từ khu vực Núi Tô Thị có thể cảm nhận rõ sự đan xen
+            giữa núi đá, cây xanh, đồng ruộng và khu dân cư.
+        </p>
+
+    </div>
+
+    <div class="two-col">
+
+        <div class="image-card">
+
+            <img
+                src="https://statics.vinpearl.com/Anh%204%20dia%20diem%20du%20lich%20lang%20son.jpg"
+                alt="Cảnh quan Núi Tô Thị Lạng Sơn"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='https://langson360.com.vn/datafiles/1953114662136725504/2025-09/88488277-diem-den.png';"
+            >
+
+            <div class="caption">
+                Cảnh quan núi đá và đồng ruộng nhìn từ khu vực Núi Tô Thị.
+            </div>
+
+        </div>
+
+        <div class="text">
+
+            <p>
+                Một trong những điểm hấp dẫn của khu vực là sự tương phản
+                giữa những mỏm đá tự nhiên và màu xanh của cây cối,
+                đồng ruộng phía dưới.
+            </p>
+
+            <p>
+                Vào những thời điểm thời tiết đẹp,
+                cảnh quan xung quanh tạo thành một bức tranh rộng mở
+                với núi non, làng xóm và những cánh đồng.
+            </p>
+
+            <div class="feature-list">
+
+                <div class="feature-item">
+                    <span class="feature-dot"></span>
+                    <span>Núi đá vôi đặc trưng</span>
+                </div>
+
+                <div class="feature-item">
+                    <span class="feature-dot"></span>
+                    <span>Không gian cây xanh tự nhiên</span>
+                </div>
+
+                <div class="feature-item">
+                    <span class="feature-dot"></span>
+                    <span>Thung lũng và đồng ruộng phía dưới</span>
+                </div>
+
+                <div class="feature-item">
+                    <span class="feature-dot"></span>
+                    <span>Gắn với quần thể Nhị – Tam Thanh</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     05 GIÁ TRỊ
+===================================================== -->
+
+<section class="section" id="gia-tri">
+
+    <div class="section-head">
+
+        <div class="section-number">
+            05 · GIÁ TRỊ
+        </div>
+
+        <h2>
+            Giá trị tự nhiên và văn hóa
+        </h2>
+
+        <p class="section-intro">
+            Núi Tô Thị không chỉ là một mỏm đá nổi tiếng
+            mà còn là biểu tượng văn hóa gắn với hình ảnh Lạng Sơn.
+        </p>
+
+    </div>
+
+    <div class="highlight-grid">
+
+        <div class="highlight">
+
+            <div class="highlight-icon">
+                🌄
+            </div>
+
+            <h3>
+                Giá trị cảnh quan
+            </h3>
+
+            <p>
+                Khối đá Nàng Tô Thị là điểm nhấn đặc biệt trong
+                cảnh quan núi đá của khu danh thắng.
+            </p>
+
+        </div>
+
+        <div class="highlight">
+
+            <div class="highlight-icon">
+                📚
+            </div>
+
+            <h3>
+                Giá trị văn hóa
+            </h3>
+
+            <p>
+                Hình tượng Nàng Tô Thị xuất hiện trong ca dao,
+                truyền thuyết và ký ức văn hóa của nhiều thế hệ.
+            </p>
+
+        </div>
+
+        <div class="highlight">
+
+            <div class="highlight-icon">
+                🏛️
+            </div>
+
+            <h3>
+                Giá trị di sản
+            </h3>
+
+            <p>
+                Núi Tô Thị nằm trong không gian quần thể Nhị – Tam Thanh –
+                Thành Nhà Mạc có giá trị lịch sử và danh thắng nổi bật.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     06 THAM QUAN
+===================================================== -->
+
+<section class="section" id="tham-quan">
+
+    <div class="section-head">
+
+        <div class="section-number">
+            06 · THAM QUAN
+        </div>
+
+        <h2>
+            Một điểm dừng trong hành trình Xứ Lạng
+        </h2>
+
+        <p class="section-intro">
+            Núi Tô Thị phù hợp để kết hợp cùng các điểm tham quan
+            nổi tiếng khác trong cùng khu vực.
+        </p>
+
+    </div>
+
+    <div class="two-col">
+
+        <div class="text">
+
+            <p>
+                Vì nằm trong quần thể danh thắng Nhị – Tam Thanh,
+                Núi Tô Thị thường được kết hợp với các điểm tham quan
+                ở khu vực xung quanh.
+            </p>
+
+            <p>
+                Một hành trình có thể kết hợp tìm hiểu cảnh quan,
+                khám phá các di tích và tìm hiểu những câu chuyện văn hóa
+                đã trở thành biểu tượng của Lạng Sơn.
+            </p>
+
+            <div class="feature-list">
+
+                <div class="feature-item">
+                    <span class="feature-dot"></span>
+                    <span>Ngắm hình tượng Nàng Tô Thị</span>
+                </div>
+
+                <div class="feature-item">
+                    <span class="feature-dot"></span>
+                    <span>Ngắm cảnh núi đá và thung lũng</span>
+                </div>
+
+                <div class="feature-item">
+                    <span class="feature-dot"></span>
+                    <span>Kết hợp tham quan động Tam Thanh</span>
+                </div>
+
+                <div class="feature-item">
+                    <span class="feature-dot"></span>
+                    <span>Kết hợp tham quan Thành Nhà Mạc</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="blue-panel">
+
+            <h3>
+                Gợi ý trải nghiệm
+            </h3>
+
+            <p>
+                Dành thời gian quan sát khối đá từ nhiều góc khác nhau
+                để cảm nhận rõ hình tượng Nàng Tô Thị,
+                sau đó tiếp tục khám phá hệ thống danh thắng và di tích
+                nằm trong cùng khu vực.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     07 VĂN HÓA
+===================================================== -->
+
+<section class="section" id="van-hoa">
+
+    <div class="section-head">
+
+        <div class="section-number">
+            07 · VĂN HÓA
+        </div>
+
+        <h2>
+            Nàng Tô Thị trong ký ức Xứ Lạng
+        </h2>
+
+        <p class="section-intro">
+            Từ một hình dáng tự nhiên, Nàng Tô Thị đã trở thành
+            một hình ảnh quen thuộc trong văn hóa và du lịch Lạng Sơn.
+        </p>
+
+    </div>
+
+    <div class="story">
+
+        <p>
+            Hình ảnh Nàng Tô Thị được nhắc đến trong câu ca dao nổi tiếng
+            nói về những địa danh tiêu biểu của Lạng Sơn.
+        </p>
+
+        <p>
+            Chính sự kết hợp giữa cảnh quan và truyền thuyết
+            đã khiến Núi Tô Thị có sức sống đặc biệt trong đời sống văn hóa.
+        </p>
+
+        <p>
+            Ngày nay, khi giới thiệu về Lạng Sơn,
+            hình tượng Nàng Tô Thị thường được nhắc cùng với
+            chùa Tam Thanh, phố Kỳ Lừa và những biểu tượng khác của Xứ Lạng.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     08 BẢO TỒN
+===================================================== -->
+
+<section class="section" id="bao-ton">
+
+    <div class="section-head">
+
+        <div class="section-number">
+            08 · BẢO TỒN
+        </div>
+
+        <h2>
+            Giữ gìn biểu tượng đá
+        </h2>
+
+        <p class="section-intro">
+            Bảo vệ cảnh quan tự nhiên và giá trị văn hóa là yếu tố quan trọng
+            để Núi Tô Thị tiếp tục được gìn giữ lâu dài.
+        </p>
+
+    </div>
+
+    <div class="two-col">
+
+        <div class="text">
+
+            <p>
+                Núi Tô Thị thuộc quần thể Nhị – Tam Thanh,
+                khu danh thắng đã được xếp hạng cấp quốc gia từ năm 1962.
+            </p>
+
+            <p>
+                Việc bảo tồn cần chú trọng đồng thời đến cảnh quan núi đá,
+                môi trường xung quanh và những giá trị văn hóa,
+                truyền thuyết gắn với địa danh.
+            </p>
+
+            <div class="feature-list">
+
+                <div class="feature-item">
+                    <span class="feature-dot"></span>
+                    <span>Giữ gìn khối đá tự nhiên</span>
+                </div>
+
+                <div class="feature-item">
+                    <span class="feature-dot"></span>
+                    <span>Bảo vệ cảnh quan cây xanh</span>
+                </div>
+
+                <div class="feature-item">
+                    <span class="feature-dot"></span>
+                    <span>Giữ vệ sinh môi trường</span>
+                </div>
+
+                <div class="feature-item">
+                    <span class="feature-dot"></span>
+                    <span>Phát huy giá trị văn hóa địa phương</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="image-card">
+
+            <img
+                src="https://cdn.langsontv.vn/upload/news/4_04/nui_nang_to_thi_thanh_nha_mac_09433210042020.jpg"
+                alt="Nàng Tô Thị Lạng Sơn"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='https://langson360.com.vn/datafiles/1953114662136725504/2025-09/88488277-diem-den.png';"
+            >
+
+            <div class="caption">
+                Hình tượng Nàng Tô Thị – một biểu tượng quen thuộc của Lạng Sơn.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     09 HÌNH ẢNH
+===================================================== -->
+
+<section class="section" id="hinh-anh">
+
+    <div class="section-head">
+
+        <div class="section-number">
+            09 · HÌNH ẢNH
+        </div>
+
+        <h2>
+            Thư viện Núi Tô Thị
+        </h2>
+
+        <p class="section-intro">
+            Một số góc nhìn về Nàng Tô Thị và cảnh quan xung quanh.
+        </p>
+
+    </div>
+
+    <div class="gallery">
+
+        <!-- ẢNH 01 -->
+        <div class="gallery-item">
+
+            <img
+                src="https://cdn.langsontv.vn/upload/news/4_04/nui_nang_to_thi_thanh_nha_mac_09433210042020.jpg"
+                alt="Nàng Tô Thị trên núi"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='https://langson360.com.vn/datafiles/1953114662136725504/2025-09/88488277-diem-den.png';"
+            >
+
+            <div class="image-label">
+                Nàng Tô Thị giữa núi đá và cây xanh
+            </div>
+
+        </div>
+
+        <!-- ẢNH 02 -->
+        <div class="gallery-item">
+
+            <img
+                src="https://langson360.com.vn/datafiles/1953114662136725504/2025-09/88488277-diem-den.png"
+                alt="Núi Tô Thị nhìn xuống đồng ruộng"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='https://statics.vinpearl.com/Anh%204%20dia%20diem%20du%20lich%20lang%20son.jpg';"
+            >
+
+            <div class="image-label">
+                Núi Tô Thị nhìn xuống thung lũng
+            </div>
+
+        </div>
+
+        <!-- ẢNH 03 -->
+        <div class="gallery-item">
+
+            <img
+                src="https://statics.vinpearl.com/Anh%204%20dia%20diem%20du%20lich%20lang%20son.jpg"
+                alt="Cảnh quan núi đá Lạng Sơn"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='https://cdn.langsontv.vn/upload/news/4_04/nui_nang_to_thi_thanh_nha_mac_09433210042020.jpg';"
+            >
+
+            <div class="image-label">
+                Cảnh quan núi đá và cánh đồng Xứ Lạng
+            </div>
+
+        </div>
+
+        <!-- ẢNH 04 -->
+        <div class="gallery-item">
+
+            <img
+                src="https://cdn-i.doisongphapluat.com.vn/resize/th/upload/2025/10/10/check-in-dinh-nui-to-thi-diem-den-doc-dao-o-lang-son45-12371207.jpg"
+                alt="Cảnh quan từ đỉnh Núi Tô Thị"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='https://langson360.com.vn/datafiles/1953114662136725504/2025-09/88488277-diem-den.png';"
+            >
+
+            <div class="image-label">
+                Góc nhìn từ khu vực Núi Tô Thị
+            </div>
+
+        </div>
+
+        <!-- ẢNH 05 -->
+        <div class="gallery-item">
+
+            <img
+                src="https://ongvove.com/uploads/0000/17/2025/03/25/thoi-tiet-nui-to-thi-lang-son.jpg"
+                alt="Núi Tô Thị trong sương"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='https://cdn.langsontv.vn/upload/news/4_04/nui_nang_to_thi_thanh_nha_mac_09433210042020.jpg';"
+            >
+
+            <div class="image-label">
+                Núi Tô Thị trong màn sương
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     10 NGUỒN
+===================================================== -->
+
+<section class="section" id="nguon">
+
+    <div class="section-head">
+
+        <div class="section-number">
+            10 · NGUỒN
+        </div>
+
+        <h2>
+            Nguồn thông tin
+        </h2>
+
+    </div>
+
+    <div class="source-box">
+
+        <h3>
+            Núi Tô Thị – Lạng Sơn
+        </h3>
+
+        <p>
+            Thông tin chính được đối chiếu với Cổng Du lịch Lạng Sơn
+            và các nguồn thông tin du lịch, báo chí địa phương.
+        </p>
+
+        <p>
+            Cổng Du lịch Lạng Sơn – NÚI NÀNG TÔ THỊ - THÀNH NHÀ MẠC
+        </p>
+
+        <p>
+            Báo và Phát thanh, Truyền hình Lạng Sơn –
+            NÚI NÀNG TÔ THỊ - THÀNH NHÀ MẠC
+        </p>
+
+        <p>
+            Hình ảnh được sử dụng từ các nguồn được ghi chú tại từng khu vực ảnh.
+        </p>
+
+    </div>
+
+</section>
+
+</main>
+
+<!-- =====================================================
+     BACK BUTTON
+===================================================== -->
+
+<a
+    href="./danhlamthangcanh.html"
+    class="back-btn"
+>
+    ← Về danh thắng
+</a>
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <strong>LẠNG SƠN</strong>
+
+    <br>
+
+    Núi Tô Thị – Nàng Tô Thị
+
+    <br>
+
+    Khám phá vẻ đẹp thiên nhiên và văn hóa Xứ Lạng
+
+</footer>
+
+<!-- =====================================================
+     ACTIVE MENU
+===================================================== -->
+
+<script>
+
+    const sections = document.querySelectorAll(".section");
+    const navLinks = document.querySelectorAll(".section-nav a");
+
+    const observer = new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    navLinks.forEach(link => {
+                        link.classList.remove("active");
+                    });
+
+                    const activeLink = document.querySelector(
+                        '.section-nav a[href="#' + entry.target.id + '"]'
+                    );
+
+                    if (activeLink) {
+                        activeLink.classList.add("active");
+                    }
+
+                }
+
+            });
+
+        },
+        {
+            rootMargin: "-155px 0px -55% 0px",
+            threshold: 0
+        }
+    );
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+</script>
+
+</body>
+</html>

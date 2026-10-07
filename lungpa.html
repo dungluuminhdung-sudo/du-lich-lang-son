@@ -1,0 +1,2159 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Bãi đá nhảy Lùng Pa | Lạng Sơn</title>
+
+  <meta
+    name="description"
+    content="Khám phá Bãi đá nhảy Lùng Pa – điểm địa chất đặc biệt trên tuyến 2 Công viên địa chất Lạng Sơn, với các khối đá vôi gãy đổ tự nhiên, hóa thạch, cột cờ đàn tính và cảnh quan núi rừng Điềm He."
+  >
+
+  <style>
+    :root{
+      --stone-dark:#202622;
+      --stone-deep:#111615;
+      --stone:#555d58;
+      --rock:#777d73;
+      --rock-light:#c5c8bd;
+      --grass:#62704c;
+      --grass-light:#dce6c8;
+      --yellow:#efbb32;
+      --yellow-light:#f8e6a3;
+      --sky:#6d97aa;
+      --sky-light:#dcecf2;
+      --paper:#fffdf8;
+      --paper-2:#f1eee6;
+      --white:#ffffff;
+      --text:#29322f;
+      --muted:#727b76;
+      --line:#deded5;
+      --gold:#c8a14d;
+      --shadow:0 25px 70px rgba(23,31,28,.14);
+    }
+
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    html{
+      scroll-behavior:smooth;
+      scroll-padding-top:100px;
+    }
+
+    body{
+      font-family:Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:var(--paper);
+      line-height:1.7;
+      overflow-x:hidden;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    a{
+      color:inherit;
+      text-decoration:none;
+    }
+
+    .container{
+      width:min(1180px, calc(100% - 40px));
+      margin:auto;
+    }
+
+    /* ================= NAV ================= */
+
+    .site-nav{
+      position:fixed;
+      left:0;
+      top:0;
+      width:100%;
+      z-index:1000;
+      padding:18px 0;
+      transition:.3s ease;
+      color:#fff;
+    }
+
+    .site-nav.scrolled{
+      background:rgba(17,22,21,.94);
+      backdrop-filter:blur(14px);
+      padding:11px 0;
+      box-shadow:0 8px 30px rgba(0,0,0,.15);
+    }
+
+    .site-nav-inner{
+      width:min(1180px, calc(100% - 40px));
+      margin:auto;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:25px;
+    }
+
+    .site-logo{
+      font-size:15px;
+      font-weight:900;
+      letter-spacing:1px;
+      white-space:nowrap;
+    }
+
+    .site-links{
+      display:flex;
+      align-items:center;
+      gap:22px;
+      font-size:13px;
+      font-weight:700;
+    }
+
+    .site-links a{
+      opacity:.88;
+      transition:.25s ease;
+    }
+
+    .site-links a:hover{
+      opacity:1;
+      color:var(--yellow);
+    }
+
+    /* ================= HERO ================= */
+
+    .hero{
+      min-height:760px;
+      position:relative;
+      display:flex;
+      align-items:center;
+      color:#fff;
+      background:
+        linear-gradient(90deg,rgba(10,16,14,.78),rgba(10,16,14,.28)),
+        url("https://langsongeopark.com.vn/upload_images/images/2026/05/29/2026_05_29_08_51_522.png")
+        center/cover no-repeat;
+    }
+
+    .hero-content{
+      width:min(1180px,calc(100% - 40px));
+      margin:auto;
+      padding-top:80px;
+    }
+
+    .hero-tag{
+      display:inline-flex;
+      padding:8px 14px;
+      border:1px solid rgba(255,255,255,.4);
+      border-radius:999px;
+      font-size:12px;
+      font-weight:800;
+      letter-spacing:1px;
+      margin-bottom:25px;
+      background:rgba(255,255,255,.08);
+      backdrop-filter:blur(8px);
+    }
+
+    .hero h1{
+      font-size:clamp(55px,9vw,110px);
+      line-height:.9;
+      letter-spacing:-5px;
+      margin-bottom:30px;
+      font-weight:900;
+    }
+
+    .hero h1 span{
+      display:block;
+      color:var(--yellow);
+    }
+
+    .hero-description{
+      max-width:650px;
+      font-size:18px;
+      line-height:1.8;
+      color:rgba(255,255,255,.9);
+      margin-bottom:35px;
+    }
+
+    .hero-buttons{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:13px 20px;
+      border-radius:999px;
+      font-weight:800;
+      font-size:14px;
+      transition:.25s ease;
+    }
+
+    .btn-primary{
+      background:var(--yellow);
+      color:#1e211b;
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-2px);
+      background:#ffd05b;
+    }
+
+    .btn-outline{
+      border:1px solid rgba(255,255,255,.5);
+      color:#fff;
+      background:rgba(255,255,255,.07);
+    }
+
+    .btn-outline:hover{
+      background:#fff;
+      color:var(--text);
+    }
+
+    /* ================= QUICK INFO ================= */
+
+    .quick{
+      margin-top:-70px;
+      position:relative;
+      z-index:5;
+    }
+
+    .quick-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      background:#fff;
+      border-radius:25px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+
+    .quick-item{
+      padding:30px 25px;
+      border-right:1px solid var(--line);
+    }
+
+    .quick-item:last-child{
+      border-right:0;
+    }
+
+    .quick-number{
+      font-size:28px;
+      font-weight:900;
+      color:var(--grass);
+      margin-bottom:5px;
+    }
+
+    .quick-label{
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    /* ================= COMMON ================= */
+
+    section{
+      padding:110px 0;
+    }
+
+    .label{
+      color:var(--grass);
+      text-transform:uppercase;
+      letter-spacing:2px;
+      font-size:12px;
+      font-weight:900;
+      margin-bottom:16px;
+    }
+
+    .title{
+      font-size:clamp(38px,5vw,68px);
+      line-height:1.02;
+      letter-spacing:-2px;
+      margin-bottom:30px;
+      font-weight:900;
+    }
+
+    p{
+      color:#59625e;
+      margin-bottom:18px;
+      font-size:16px;
+    }
+
+    /* ================= TỔNG QUAN ================= */
+
+    .overview{
+      background:var(--paper);
+    }
+
+    .overview-grid{
+      display:grid;
+      grid-template-columns:.93fr 1.07fr;
+      gap:65px;
+      align-items:center;
+    }
+
+    .overview-photo{
+      height:590px;
+      position:relative;
+      overflow:hidden;
+      border-radius:35px;
+      box-shadow:var(--shadow);
+    }
+
+    .overview-photo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .photo-label{
+      position:absolute;
+      left:20px;
+      bottom:20px;
+      background:rgba(17,22,21,.8);
+      color:#fff;
+      padding:9px 14px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:700;
+      backdrop-filter:blur(8px);
+    }
+
+    .quote{
+      margin-top:30px;
+      padding:25px 28px;
+      border-left:5px solid var(--yellow);
+      background:var(--yellow-light);
+      border-radius:0 18px 18px 0;
+      font-weight:800;
+      color:#4b452f;
+    }
+
+    /* ================= ĐÁ ================= */
+
+    .rocks{
+      background:var(--paper-2);
+    }
+
+    .rocks-head{
+      max-width:760px;
+      margin-bottom:55px;
+    }
+
+    .rocks-gallery{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      grid-template-rows:280px 280px;
+      gap:20px;
+    }
+
+    .rock-card{
+      position:relative;
+      overflow:hidden;
+      border-radius:28px;
+    }
+
+    .rock-card:first-child{
+      grid-row:1 / 3;
+    }
+
+    .rock-card img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:.5s ease;
+    }
+
+    .rock-card:hover img{
+      transform:scale(1.05);
+    }
+
+    .rock-caption{
+      position:absolute;
+      left:20px;
+      right:20px;
+      bottom:20px;
+      padding:13px 17px;
+      color:#fff;
+      border-radius:14px;
+      background:rgba(17,22,21,.72);
+      backdrop-filter:blur(8px);
+      font-weight:700;
+    }
+
+    /* ================= ĐỊA CHẤT ================= */
+
+    .geology{
+      background:var(--stone-dark);
+      color:#fff;
+    }
+
+    .geology .label{
+      color:var(--yellow);
+    }
+
+    .geology .title{
+      color:#fff;
+    }
+
+    .geology p{
+      color:#c5ccc7;
+    }
+
+    .geology-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:70px;
+      align-items:center;
+    }
+
+    .facts{
+      display:grid;
+      gap:16px;
+      margin-top:35px;
+    }
+
+    .fact{
+      display:grid;
+      grid-template-columns:110px 1fr;
+      gap:20px;
+      padding:20px 0;
+      border-bottom:1px solid rgba(255,255,255,.14);
+    }
+
+    .fact-number{
+      font-size:38px;
+      line-height:1;
+      color:var(--yellow);
+      font-weight:900;
+    }
+
+    .fact strong{
+      display:block;
+      color:#fff;
+      margin-bottom:5px;
+    }
+
+    .fact span{
+      color:#aeb8b2;
+      font-size:14px;
+    }
+
+    .geo-tags{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:30px;
+    }
+
+    .geo-tag{
+      border:1px solid rgba(255,255,255,.2);
+      padding:8px 13px;
+      border-radius:999px;
+      font-size:12px;
+      color:#dce3df;
+    }
+
+    /* ================= BIỂN CỔ ================= */
+
+    .sea{
+      background:var(--sky-light);
+    }
+
+    .sea-box{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:60px;
+      align-items:center;
+    }
+
+    .sea-image{
+      height:530px;
+      border-radius:32px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+
+    .sea-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .sea-items{
+      display:grid;
+      gap:18px;
+      margin-top:35px;
+    }
+
+    .sea-item{
+      padding:22px;
+      background:rgba(255,255,255,.65);
+      border-radius:18px;
+    }
+
+    .sea-item strong{
+      display:block;
+      margin-bottom:5px;
+      font-size:17px;
+    }
+
+    .sea-item span{
+      color:#66716d;
+      font-size:14px;
+    }
+
+    /* ================= CỘT CỜ ================= */
+
+    .flag{
+      background:var(--paper);
+    }
+
+    .flag-grid{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:65px;
+      align-items:center;
+    }
+
+    .flag-image{
+      height:560px;
+      border-radius:35px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+
+    .flag-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    .flag-cards{
+      display:grid;
+      gap:15px;
+      margin-top:35px;
+    }
+
+    .flag-card{
+      padding:22px;
+      border:1px solid var(--line);
+      border-radius:20px;
+      background:#fff;
+    }
+
+    .flag-card strong{
+      display:block;
+      margin-bottom:5px;
+    }
+
+    .flag-card span{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    /* ================= TRẢI NGHIỆM ================= */
+
+    .experience{
+      background:var(--paper-2);
+    }
+
+    .experience-head{
+      max-width:720px;
+      margin-bottom:50px;
+    }
+
+    .experience-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+
+    .experience-card{
+      background:#fff;
+      border-radius:25px;
+      overflow:hidden;
+      box-shadow:0 10px 35px rgba(23,31,28,.07);
+    }
+
+    .experience-card-image{
+      height:230px;
+      overflow:hidden;
+    }
+
+    .experience-card-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:.5s ease;
+    }
+
+    .experience-card:hover img{
+      transform:scale(1.05);
+    }
+
+    .experience-card-body{
+      padding:20px;
+    }
+
+    .experience-card-body strong{
+      display:block;
+      margin-bottom:6px;
+    }
+
+    .experience-card-body span{
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    /* ================= HOA ================= */
+
+    .flower{
+      background:#f7f1df;
+    }
+
+    .flower-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:65px;
+      align-items:center;
+    }
+
+    .flower-image{
+      height:510px;
+      border-radius:35px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+
+    .flower-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+    }
+
+    /* ================= VĂN HÓA ================= */
+
+    .culture{
+      background:var(--paper);
+    }
+
+    .culture-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+      margin-top:50px;
+    }
+
+    .culture-card{
+      padding:28px 22px;
+      border:1px solid var(--line);
+      border-radius:22px;
+      background:#fff;
+    }
+
+    .culture-icon{
+      font-size:32px;
+      margin-bottom:15px;
+    }
+
+    .culture-card strong{
+      display:block;
+      margin-bottom:8px;
+    }
+
+    .culture-card span{
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    /* ================= TIMELINE ================= */
+
+    .timeline-section{
+      background:var(--stone-deep);
+      color:#fff;
+    }
+
+    .timeline-section .label{
+      color:var(--yellow);
+    }
+
+    .timeline-section .title{
+      color:#fff;
+    }
+
+    .timeline{
+      margin-top:60px;
+      display:grid;
+      gap:0;
+    }
+
+    .timeline-item{
+      display:grid;
+      grid-template-columns:180px 1fr;
+      gap:35px;
+      padding:30px 0;
+      border-top:1px solid rgba(255,255,255,.15);
+    }
+
+    .timeline-year{
+      color:var(--yellow);
+      font-size:15px;
+      font-weight:900;
+      letter-spacing:1px;
+    }
+
+    .timeline-item h3{
+      margin-bottom:8px;
+      font-size:22px;
+    }
+
+    .timeline-item p{
+      color:#abb5b0;
+      margin:0;
+    }
+
+    /* ================= THÔNG TIN ================= */
+
+    .data{
+      background:var(--paper-2);
+    }
+
+    .data-table{
+      margin-top:45px;
+      background:#fff;
+      border-radius:25px;
+      overflow:hidden;
+      border:1px solid var(--line);
+    }
+
+    .data-row{
+      display:grid;
+      grid-template-columns:280px 1fr;
+      border-bottom:1px solid var(--line);
+    }
+
+    .data-row:last-child{
+      border-bottom:0;
+    }
+
+    .data-key,
+    .data-value{
+      padding:20px 25px;
+    }
+
+    .data-key{
+      font-weight:900;
+      background:#f8f6ef;
+    }
+
+    .data-value{
+      color:#626b66;
+    }
+
+    /* ================= GALLERY ================= */
+
+    .gallery{
+      background:var(--paper);
+    }
+
+    .gallery-head{
+      max-width:760px;
+      margin-bottom:45px;
+    }
+
+    .gallery-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      grid-auto-rows:230px;
+      gap:15px;
+    }
+
+    .gallery-item{
+      overflow:hidden;
+      border-radius:20px;
+    }
+
+    .gallery-item:nth-child(1){
+      grid-column:span 2;
+      grid-row:span 2;
+    }
+
+    .gallery-item:nth-child(6){
+      grid-column:span 2;
+    }
+
+    .gallery-item img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:.5s ease;
+    }
+
+    .gallery-item:hover img{
+      transform:scale(1.05);
+    }
+
+    /* ================= NGUỒN ================= */
+
+    .sources{
+      background:var(--paper-2);
+    }
+
+    .source-list{
+      display:grid;
+      gap:18px;
+      margin-top:45px;
+    }
+
+    .source-item{
+      padding:24px;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:20px;
+    }
+
+    .source-item a{
+      color:var(--grass);
+      font-weight:900;
+    }
+
+    .source-item p{
+      margin:8px 0 0;
+      font-size:14px;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer{
+      background:var(--stone-deep);
+      color:#fff;
+      padding:70px 0 40px;
+    }
+
+    .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      gap:40px;
+      align-items:flex-end;
+    }
+
+    .footer-title{
+      font-size:26px;
+      font-weight:900;
+      margin-bottom:8px;
+    }
+
+    .footer-subtitle{
+      color:#9fa9a4;
+      font-size:14px;
+    }
+
+    .footer-links{
+      display:flex;
+      flex-wrap:wrap;
+      gap:20px;
+      font-size:13px;
+      color:#c8d0cc;
+    }
+
+    .footer-links a:hover{
+      color:var(--yellow);
+    }
+
+    .top{
+      position:fixed;
+      right:25px;
+      bottom:25px;
+      width:45px;
+      height:45px;
+      border-radius:50%;
+      background:var(--yellow);
+      color:#20251f;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:22px;
+      font-weight:900;
+      opacity:0;
+      visibility:hidden;
+      transform:translateY(10px);
+      transition:.25s ease;
+      z-index:999;
+    }
+
+    .top.show{
+      opacity:1;
+      visibility:visible;
+      transform:translateY(0);
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media(max-width:950px){
+
+      .site-links{
+        display:none;
+      }
+
+      .quick-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .quick-item:nth-child(2){
+        border-right:0;
+      }
+
+      .overview-grid,
+      .sea-box,
+      .flag-grid,
+      .flower-grid,
+      .geology-grid{
+        grid-template-columns:1fr;
+      }
+
+      .overview-photo{
+        height:450px;
+      }
+
+      .rocks-gallery{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .experience-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .culture-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .gallery-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .timeline-item{
+        grid-template-columns:140px 1fr;
+      }
+    }
+
+    @media(max-width:620px){
+
+      .container,
+      .site-nav-inner,
+      .hero-content{
+        width:min(100% - 28px,1180px);
+      }
+
+      section{
+        padding:75px 0;
+      }
+
+      .hero{
+        min-height:680px;
+      }
+
+      .hero h1{
+        font-size:55px;
+        letter-spacing:-3px;
+      }
+
+      .hero-description{
+        font-size:15px;
+      }
+
+      .quick{
+        margin-top:-40px;
+      }
+
+      .quick-grid{
+        grid-template-columns:1fr;
+      }
+
+      .quick-item{
+        border-right:0;
+        border-bottom:1px solid var(--line);
+      }
+
+      .quick-item:last-child{
+        border-bottom:0;
+      }
+
+      .overview-photo{
+        height:360px;
+      }
+
+      .rocks-gallery{
+        display:grid;
+        grid-template-columns:1fr;
+        grid-template-rows:300px 220px 220px;
+      }
+
+      .rock-card:first-child{
+        grid-row:auto;
+      }
+
+      .experience-grid,
+      .culture-grid{
+        grid-template-columns:1fr;
+      }
+
+      .sea-image,
+      .flag-image,
+      .flower-image{
+        height:380px;
+      }
+
+      .timeline-item{
+        grid-template-columns:1fr;
+        gap:10px;
+      }
+
+      .data-row{
+        grid-template-columns:1fr;
+      }
+
+      .data-key{
+        padding-bottom:8px;
+      }
+
+      .data-value{
+        padding-top:8px;
+      }
+
+      .gallery-grid{
+        grid-template-columns:1fr 1fr;
+        grid-auto-rows:170px;
+      }
+
+      .gallery-item:nth-child(1){
+        grid-column:span 2;
+        grid-row:span 2;
+      }
+
+      .gallery-item:nth-child(6){
+        grid-column:span 2;
+      }
+
+      .footer-inner{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= NAV ================= -->
+
+  <nav class="site-nav" id="nav">
+    <div class="site-nav-inner">
+
+      <a href="./danhlamthangcanh.html" class="site-logo">
+        🪨 LÙNG PA
+      </a>
+
+      <div class="site-links">
+        <a href="./danhlamthangcanh.html">Trang chủ</a>
+        <a href="#tong-quan">Tổng quan</a>
+        <a href="#dia-chat">Địa chất</a>
+        <a href="#bien-co">Biển cổ</a>
+        <a href="#cot-co">Cột cờ</a>
+        <a href="#trai-nghiem">Trải nghiệm</a>
+        <a href="#thong-tin">Thông tin</a>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ================= HERO ================= -->
+
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <div class="hero-tag">
+        🪨 ĐIỂM SỐ 12 · TUYẾN 2
+      </div>
+
+      <h1>
+        BÃI ĐÁ NHẢY
+        <span>LÙNG PA</span>
+      </h1>
+
+      <p class="hero-description">
+        Một “rừng đá” kỳ lạ trên đỉnh đèo Lùng Pa,
+        nơi những khối đá vôi gãy đổ xếp chồng lên nhau
+        như đang chuyển động, để lộ câu chuyện của một
+        vùng biển cổ cách đây khoảng 230 triệu năm.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#tong-quan" class="btn btn-primary">
+          Khám phá Bãi đá nhảy ↓
+        </a>
+
+        <a href="./danhlamthangcanh.html" class="btn btn-outline">
+          ← Về trang chủ
+        </a>
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- ================= QUICK ================= -->
+
+  <div class="quick">
+
+    <div class="container quick-grid">
+
+      <div class="quick-item">
+        <div class="quick-number">#12</div>
+        <div class="quick-label">
+          Điểm trên tuyến du lịch số 2
+        </div>
+      </div>
+
+      <div class="quick-item">
+        <div class="quick-number">~230 triệu</div>
+        <div class="quick-label">
+          Năm hình thành môi trường biển cổ
+        </div>
+      </div>
+
+      <div class="quick-item">
+        <div class="quick-number">1–3 cm</div>
+        <div class="quick-label">
+          Kích thước hóa thạch tiêu biểu
+        </div>
+      </div>
+
+      <div class="quick-item">
+        <div class="quick-number">🪨</div>
+        <div class="quick-label">
+          Đá vôi gãy đổ tự nhiên
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ================= 01 TỔNG QUAN ================= -->
+
+  <section class="overview" id="tong-quan">
+
+    <div class="container overview-grid">
+
+      <!-- ẢNH TRÁI -->
+      <div class="overview-photo">
+
+        <img
+          src="https://langsongeopark.com.vn/upload_images/images/2024/12/07/z6105642577214_62719c18099a6466424573cd6a557915.jpg"
+          alt="Toàn cảnh Bãi đá nhảy trên đỉnh đèo Lùng Pa"
+          loading="eager"
+          referrerpolicy="no-referrer">
+
+        <div class="photo-label">
+          Bãi đá nhảy · Đèo Lùng Pa
+        </div>
+
+      </div>
+
+      <!-- TỔNG QUAN PHẢI -->
+      <div class="overview-copy">
+
+        <div class="label">
+          01 · Tổng quan
+        </div>
+
+        <h2 class="title">
+          Một bãi đá
+          không giống những nơi khác.
+        </h2>
+
+        <p>
+          Bãi đá nhảy nằm trên đỉnh đèo Lùng Pa,
+          thuộc thôn Trung Kiên, xã Điềm He, tỉnh Lạng Sơn.
+          Đây là điểm số 12 trên tuyến du lịch số 2 của
+          Công viên địa chất Lạng Sơn.
+        </p>
+
+        <p>
+          Điểm đặc biệt nằm ở cấu tạo địa chất:
+          những lớp đá vôi vốn nằm khá thoải nhưng bị
+          phá vỡ, gãy đổ và xếp chồng lên nhau thành
+          một “bãi đá” lổn nhổn.
+        </p>
+
+        <p>
+          Khi đi lên đỉnh, du khách có thể len qua
+          các khối đá và quan sát cảnh quan núi rừng
+          rộng lớn của khu vực Điềm He.
+        </p>
+
+        <div class="quote">
+          Đẹp nhất ở Bãi đá nhảy không phải là
+          một tảng đá riêng lẻ, mà là cả “mê cung”
+          đá được tạo nên bởi tự nhiên.
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= 02 BÃI ĐÁ ================= -->
+
+  <section class="rocks" id="da">
+
+    <div class="container">
+
+      <div class="rocks-head">
+
+        <div class="label">
+          02 · Bãi đá
+        </div>
+
+        <h2 class="title">
+          “Đá nhảy” hình thành như thế nào?
+        </h2>
+
+        <p>
+          Các tập đá vôi ở Lùng Pa vốn hình thành
+          trong môi trường biển nông. Về sau, quá trình
+          biến dạng và đứt gãy làm các khối đá bị phá vỡ,
+          tạo thành địa hình gồ ghề đặc biệt ngày nay.
+        </p>
+
+      </div>
+
+      <div class="rocks-gallery">
+
+        <div class="rock-card">
+          <img
+            src="https://langsongeopark.com.vn/upload_images/images/2026/05/29/2026_05_29_08_51_522.png"
+            alt="Bãi đá nhảy Lùng Pa">
+
+          <div class="rock-caption">
+            Những khối đá vôi gãy đổ tạo thành “bãi đá nhảy”.
+          </div>
+        </div>
+
+        <div class="rock-card">
+          <img
+            src="https://langsongeopark.com.vn/upload_images/images/2024/12/07/z6105642583940_d5d21e67bdea19390740aa2a574ed339.jpg"
+            alt="Các khối đá tại Bãi đá nhảy">
+
+          <div class="rock-caption">
+            Địa hình đá tự nhiên độc đáo.
+          </div>
+        </div>
+
+        <div class="rock-card">
+          <img
+            src="https://langsongeopark.com.vn/upload_images/images/2024/12/07/z6105642593999_49677104b4381cf141580fc478b321ed.jpg"
+            alt="Cấu tạo đá vôi Lùng Pa">
+
+          <div class="rock-caption">
+            Dấu tích của quá trình biến dạng địa chất.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= 03 ĐỊA CHẤT ================= -->
+
+  <section class="geology" id="dia-chat">
+
+    <div class="container geology-grid">
+
+      <div>
+
+        <div class="label">
+          03 · Địa chất
+        </div>
+
+        <h2 class="title">
+          Một phòng thí nghiệm địa chất ngoài trời.
+        </h2>
+
+        <p>
+          Những lớp đá vôi tại Lùng Pa ghi lại câu chuyện
+          về môi trường biển cổ. Các lớp đá phân lớp,
+          bề mặt dạng răng cưa cùng cấu tạo hạt đậu,
+          trứng cá là những dấu hiệu đáng chú ý.
+        </p>
+
+        <p>
+          Đặc biệt, khu vực còn phát hiện các hóa thạch
+          sinh vật biển, giúp làm rõ hơn lịch sử địa chất
+          của vùng đất Xứ Lạng.
+        </p>
+
+        <div class="geo-tags">
+          <span class="geo-tag">Biển cổ</span>
+          <span class="geo-tag">Hóa thạch</span>
+          <span class="geo-tag">Địa chất</span>
+        </div>
+
+      </div>
+
+      <div class="facts">
+
+        <div class="fact">
+
+          <div class="fact-number">
+            230
+          </div>
+
+          <div>
+            <strong>Triệu năm</strong>
+            <span>
+              Khoảng thời gian ghi dấu môi trường biển cổ
+              của khu vực.
+            </span>
+          </div>
+
+        </div>
+
+        <div class="fact">
+
+          <div class="fact-number">
+            1–3
+          </div>
+
+          <div>
+            <strong>cm hóa thạch</strong>
+            <span>
+              Kích thước tiêu biểu của các hóa thạch
+              được ghi nhận.
+            </span>
+          </div>
+
+        </div>
+
+        <div class="fact">
+
+          <div class="fact-number">
+            3
+          </div>
+
+          <div>
+            <strong>Dấu hiệu nổi bật</strong>
+            <span>
+              Phân lớp đá, cấu tạo hạt đậu – trứng cá
+              và hóa thạch.
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= 04 BIỂN CỔ ================= -->
+
+  <section class="sea" id="bien-co">
+
+    <div class="container sea-box">
+
+      <div class="sea-image">
+
+        <img
+          src="https://langsongeopark.com.vn/upload_images/images/2024/12/07/z6105642593999_49677104b4381cf141580fc478b321ed.jpg"
+          alt="Địa chất biển cổ tại Bãi đá nhảy"
+          loading="lazy">
+
+      </div>
+
+      <div>
+
+        <div class="label">
+          04 · Biển cổ
+        </div>
+
+        <h2 class="title">
+          Trước khi có núi,
+          nơi đây từng là biển.
+        </h2>
+
+        <div class="sea-items">
+
+          <div class="sea-item">
+            <strong>🌊 Môi trường biển nông</strong>
+            <span>
+              Các lớp đá vôi cho thấy khu vực từng nằm
+              trong môi trường biển nông cổ.
+            </span>
+          </div>
+
+          <div class="sea-item">
+            <strong>🐚 Dấu tích sinh vật</strong>
+            <span>
+              Hóa thạch sinh vật biển được bảo tồn
+              trong các lớp đá.
+            </span>
+          </div>
+
+          <div class="sea-item">
+            <strong>🪨 Biến dạng địa chất</strong>
+            <span>
+              Đứt gãy và biến dạng về sau tạo nên
+              địa hình Bãi đá nhảy hiện nay.
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= 05 CỘT CỜ ================= -->
+
+  <section class="flag" id="cot-co">
+
+    <div class="container flag-grid">
+
+      <div>
+
+        <div class="label">
+          05 · Biểu tượng trên đỉnh
+        </div>
+
+        <h2 class="title">
+          Cột cờ mang hình cây đàn tính.
+        </h2>
+
+        <p>
+          Trên đỉnh khu vực Bãi đá nhảy có cột cờ
+          Tổ quốc với tạo hình cây đàn tính, kết hợp
+          giữa biểu tượng đất nước và nét văn hóa
+          đặc trưng của cộng đồng dân tộc tại Xứ Lạng.
+        </p>
+
+        <div class="flag-cards">
+
+          <div class="flag-card">
+            <strong>🇻🇳 Cột cờ Tổ quốc</strong>
+            <span>
+              Điểm nhấn nổi bật trên đỉnh Bãi đá nhảy.
+            </span>
+          </div>
+
+          <div class="flag-card">
+            <strong>🎵 Hình cây đàn tính</strong>
+            <span>
+              Gợi nhắc đến văn hóa và âm nhạc truyền thống
+              của vùng đất Lạng Sơn.
+            </span>
+          </div>
+
+          <div class="flag-card">
+            <strong>🏔️ Điểm quan sát</strong>
+            <span>
+              Từ khu vực cột cờ có thể quan sát cảnh quan
+              núi rừng xung quanh.
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="flag-image">
+
+        <img
+          src="https://langsongeopark.com.vn/upload_images/images/2026/05/29/2026_05_29_08_51_522.png"
+          alt="Cột cờ tại Bãi đá nhảy Lùng Pa"
+          loading="lazy">
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= 06 TRẢI NGHIỆM ================= -->
+
+  <section class="experience" id="trai-nghiem">
+
+    <div class="container">
+
+      <div class="experience-head">
+
+        <div class="label">
+          06 · Trải nghiệm
+        </div>
+
+        <h2 class="title">
+          Đến Lùng Pa không chỉ để chụp ảnh.
+        </h2>
+
+        <p>
+          Không gian Bãi đá nhảy phù hợp để khám phá
+          địa chất, tìm hiểu văn hóa địa phương và
+          ngắm cảnh trên đỉnh đèo.
+        </p>
+
+      </div>
+
+      <div class="experience-grid">
+
+        <div class="experience-card">
+
+          <div class="experience-card-image">
+            <img
+              src="https://langsongeopark.com.vn/upload_images/images/2024/12/07/z6105642583940_d5d21e67bdea19390740aa2a574ed339.jpg"
+              alt="Len qua mê cung đá">
+          </div>
+
+          <div class="experience-card-body">
+            <strong>🪨 Len qua mê cung đá</strong>
+            <span>
+              Quan sát trực tiếp các khối đá vôi gãy đổ.
+            </span>
+          </div>
+
+        </div>
+
+        <div class="experience-card">
+
+          <div class="experience-card-image">
+            <img
+              src="https://langsongeopark.com.vn/upload_images/images/2024/12/07/z6105642562336_9d225895d72487d89622eb295e7c7a16.jpg"
+              alt="Văn hóa Tày Nùng">
+          </div>
+
+          <div class="experience-card-body">
+            <strong>🎵 Tìm hiểu văn hóa Tày, Nùng</strong>
+            <span>
+              Khám phá những nét văn hóa đặc trưng
+              của cộng đồng địa phương.
+            </span>
+          </div>
+
+        </div>
+
+        <div class="experience-card">
+
+          <div class="experience-card-image">
+            <img
+              src="https://langsongeopark.com.vn/upload_images/images/2024/12/07/z6105642549487_9027812e2eb658fce79ad650582525b2.jpg"
+              alt="Ngắm cảnh từ trên cao">
+          </div>
+
+          <div class="experience-card-body">
+            <strong>🌄 Ngắm cảnh từ trên cao</strong>
+            <span>
+              Phóng tầm mắt ra cảnh quan núi rừng Điềm He.
+            </span>
+          </div>
+
+        </div>
+
+        <div class="experience-card">
+
+          <div class="experience-card-image">
+            <img
+              src="https://langsongeopark.com.vn/upload_images/images/2024/12/07/z6105642577214_62719c18099a6466424573cd6a557915.jpg"
+              alt="Check-in Bãi đá nhảy">
+          </div>
+
+          <div class="experience-card-body">
+            <strong>📸 Check-in Bãi đá nhảy</strong>
+            <span>
+              Lưu lại những góc nhìn đặc biệt của địa danh.
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= 07 MÙA HOA ================= -->
+
+  <section class="flower">
+
+    <div class="container flower-grid">
+
+      <div class="flower-image">
+
+        <img
+          src="https://langsongeopark.com.vn/upload_images/images/2024/12/07/z6105642589501_abcc64a6223e7b9446afc179f935e789.jpg"
+          alt="Hoa dã quỳ trên đường lên Bãi đá nhảy"
+          loading="lazy">
+
+      </div>
+
+      <div>
+
+        <div class="label">
+          07 · Mùa hoa
+        </div>
+
+        <h2 class="title">
+          Mùa đông, Lùng Pa khoác màu vàng.
+        </h2>
+
+        <h3 style="font-size:25px;margin-bottom:18px;">
+          🌼 Hoa dã quỳ trên đường lên Bãi đá nhảy.
+        </h3>
+
+        <p>
+          Vào mùa hoa, con đường dẫn lên Bãi đá nhảy
+          trở nên nổi bật với sắc vàng của hoa dã quỳ,
+          tạo thêm một nét đẹp riêng cho hành trình
+          khám phá địa danh.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= 08 VĂN HÓA ================= -->
+
+  <section class="culture">
+
+    <div class="container">
+
+      <div class="label">
+        08 · Văn hóa
+      </div>
+
+      <h2 class="title">
+        Một điểm địa chất có thêm “hồn” Xứ Lạng.
+      </h2>
+
+      <div class="culture-grid">
+
+        <div class="culture-card">
+          <div class="culture-icon">🎵</div>
+          <strong>Đàn tính</strong>
+          <span>
+            Hình ảnh cây đàn tính được đưa vào
+            biểu tượng cột cờ trên đỉnh.
+          </span>
+        </div>
+
+        <div class="culture-card">
+          <div class="culture-icon">👘</div>
+          <strong>Trang phục truyền thống</strong>
+          <span>
+            Nét văn hóa của cộng đồng dân tộc
+            tại địa phương.
+          </span>
+        </div>
+
+        <div class="culture-card">
+          <div class="culture-icon">🎶</div>
+          <strong>Âm nhạc dân gian</strong>
+          <span>
+            Những giá trị văn hóa truyền thống
+            tạo nên bản sắc Xứ Lạng.
+          </span>
+        </div>
+
+        <div class="culture-card">
+          <div class="culture-icon">🧺</div>
+          <strong>Sản phẩm địa phương</strong>
+          <span>
+            Các sản phẩm gắn với đời sống
+            và văn hóa của người dân.
+          </span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= 09 DẤU MỐC ================= -->
+
+  <section class="timeline-section">
+
+    <div class="container">
+
+      <div class="label">
+        09 · Dấu mốc
+      </div>
+
+      <h2 class="title">
+        Từ biển cổ đến điểm du lịch hôm nay.
+      </h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+
+          <div class="timeline-year">
+            ~230 TRIỆU NĂM TRƯỚC
+          </div>
+
+          <div>
+            <h3>Môi trường biển cổ</h3>
+            <p>
+              Các lớp đá vôi được hình thành trong
+              môi trường biển nông.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+          <div class="timeline-year">
+            SAU ĐÓ
+          </div>
+
+          <div>
+            <h3>Biến dạng và đứt gãy</h3>
+            <p>
+              Các khối đá bị phá vỡ, biến dạng và
+              tạo nên địa hình đá đặc biệt.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+          <div class="timeline-year">
+            2024
+          </div>
+
+          <div>
+            <h3>Được giới thiệu rộng rãi</h3>
+            <p>
+              Bãi đá nhảy được giới thiệu như một
+              điểm tham quan địa chất và cảnh quan.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+          <div class="timeline-year">
+            2025
+          </div>
+
+          <div>
+            <h3>Tiếp tục được khai thác giá trị</h3>
+            <p>
+              Các hoạt động trải nghiệm và quảng bá
+              điểm đến tiếp tục được đẩy mạnh.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="timeline-item">
+
+          <div class="timeline-year">
+            2026
+          </div>
+
+          <div>
+            <h3>Điểm đến trên tuyến 2</h3>
+            <p>
+              Bãi đá nhảy tiếp tục là điểm số 12
+              trên tuyến du lịch số 2 của Công viên
+              địa chất Lạng Sơn.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= 10 THÔNG TIN ================= -->
+
+  <section class="data" id="thong-tin">
+
+    <div class="container">
+
+      <div class="label">
+        10 · Thông tin cơ bản
+      </div>
+
+      <h2 class="title">
+        Bãi đá nhảy trong vài dòng.
+      </h2>
+
+      <div class="data-table">
+
+        <div class="data-row">
+          <div class="data-key">Tên địa danh</div>
+          <div class="data-value">Bãi đá nhảy.</div>
+        </div>
+
+        <div class="data-row">
+          <div class="data-key">Tên gắn với địa điểm</div>
+          <div class="data-value">
+            Bãi đá nhảy Lùng Pa / Bãi đá nhảy trên đỉnh đèo Lùng Pa.
+          </div>
+        </div>
+
+        <div class="data-row">
+          <div class="data-key">Địa chỉ hiện nay</div>
+          <div class="data-value">
+            Thôn Trung Kiên, xã Điềm He, tỉnh Lạng Sơn.
+          </div>
+        </div>
+
+        <div class="data-row">
+          <div class="data-key">Địa chỉ trong tài liệu cũ</div>
+          <div class="data-value">
+            Thôn Trung Kiên, xã Điềm He, huyện Văn Quan, tỉnh Lạng Sơn.
+          </div>
+        </div>
+
+        <div class="data-row">
+          <div class="data-key">Vị trí</div>
+          <div class="data-value">
+            Trên đỉnh đèo Lùng Pa.
+          </div>
+        </div>
+
+        <div class="data-row">
+          <div class="data-key">Tuyến du lịch</div>
+          <div class="data-value">
+            Tuyến số 2 của Công viên địa chất Lạng Sơn, điểm số 12.
+          </div>
+        </div>
+
+        <div class="data-row">
+          <div class="data-key">Tuổi địa chất</div>
+          <div class="data-value">
+            Khoảng 230 triệu năm.
+          </div>
+        </div>
+
+        <div class="data-row">
+          <div class="data-key">Loại đá</div>
+          <div class="data-value">
+            Đá vôi màu xám đen, phân lớp mỏng đến trung bình.
+          </div>
+        </div>
+
+        <div class="data-row">
+          <div class="data-key">Đặc điểm bề mặt</div>
+          <div class="data-value">
+            Dạng răng cưa, cấu tạo hạt đậu, trứng cá và các khối đá gãy đổ.
+          </div>
+        </div>
+
+        <div class="data-row">
+          <div class="data-key">Hóa thạch</div>
+          <div class="data-value">
+            Có hóa thạch Gastropods hoặc Cúc đá bảo tồn không hoàn chỉnh,
+            kích thước khoảng 1–3 cm.
+          </div>
+        </div>
+
+        <div class="data-row">
+          <div class="data-key">Biểu tượng văn hóa</div>
+          <div class="data-value">
+            Cột cờ Tổ quốc với tạo hình cây đàn tính.
+          </div>
+        </div>
+
+        <div class="data-row">
+          <div class="data-key">Cảnh quan mùa đông</div>
+          <div class="data-value">
+            Hoa dã quỳ nở trên đường dẫn lên Bãi đá nhảy.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= 11 THƯ VIỆN ẢNH ================= -->
+
+  <section class="gallery">
+
+    <div class="container">
+
+      <div class="gallery-head">
+
+        <div class="label">
+          11 · Thư viện ảnh
+        </div>
+
+        <h2 class="title">
+          Lùng Pa qua những góc nhìn khác nhau.
+        </h2>
+
+        <p>
+          Bộ ảnh ưu tiên ảnh trực tiếp từ Lang Son Geopark
+          và Cổng thông tin xã Điềm He để hạn chế lỗi ảnh
+          do thay đổi đường dẫn trung gian.
+        </p>
+
+      </div>
+
+      <div class="gallery-grid">
+
+        <div class="gallery-item">
+          <img
+            src="https://langsongeopark.com.vn/upload_images/images/2026/05/29/2026_05_29_08_51_522.png"
+            alt="Bãi đá nhảy Lùng Pa">
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="https://langsongeopark.com.vn/upload_images/images/2024/12/07/z6105642577214_62719c18099a6466424573cd6a557915.jpg"
+            alt="Toàn cảnh Bãi đá nhảy">
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="https://langsongeopark.com.vn/upload_images/images/2024/12/07/z6105642583940_d5d21e67bdea19390740aa2a574ed339.jpg"
+            alt="Các khối đá Lùng Pa">
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="https://langsongeopark.com.vn/upload_images/images/2024/12/07/z6105642593999_49677104b4381cf141580fc478b321ed.jpg"
+            alt="Địa chất Bãi đá nhảy">
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="https://langsongeopark.com.vn/upload_images/images/2024/12/07/z6105642562336_9d225895d72487d89622eb295e7c7a16.jpg"
+            alt="Văn hóa địa phương">
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="https://langsongeopark.com.vn/upload_images/images/2024/12/07/z6105642579396_7a2b899a9bd3d03d733b24d55d8603c8.jpg"
+            alt="Cảnh quan Lùng Pa">
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="https://langsongeopark.com.vn/upload_images/images/2024/12/07/z6105642549487_9027812e2eb658fce79ad650582525b2.jpg"
+            alt="Cảnh quan Bãi đá nhảy">
+        </div>
+
+        <div class="gallery-item">
+          <img
+            src="https://langsongeopark.com.vn/upload_images/images/2024/12/07/z6105642589501_abcc64a6223e7b9446afc179f935e789.jpg"
+            alt="Hoa dã quỳ Lùng Pa">
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= 12 NGUỒN THÔNG TIN ================= -->
+
+  <section class="sources">
+
+    <div class="container">
+
+      <div class="label">
+        12 · Nguồn thông tin
+      </div>
+
+      <h2 class="title">
+        Nguồn thông tin & nguồn ảnh.
+      </h2>
+
+      <div class="source-list">
+
+        <div class="source-item">
+          <a
+            href="https://diemhe.langson.gov.vn/gioi-thieu/di-tich-danh-thang"
+            target="_blank"
+            rel="noopener noreferrer">
+            Cổng thông tin điện tử xã Điềm He – Di tích, Danh thắng: Bãi đá nhảy
+          </a>
+
+          <p>
+            Nguồn chính thức hiện hành về vị trí, địa chất, hoa dã quỳ, cột cờ đàn tính và giá trị cảnh quan của Bãi đá nhảy.
+          </p>
+        </div>
+
+        <div class="source-item">
+          <a
+            href="https://langsongeopark.com.vn/tuyen-diem/diem-bai-da-nhay-deo-lung-pa-huyen-van-quan-tren-tuyen-du-lich-cong-vien-dia-chat-lang-son-so-02-n273.html"
+            target="_blank"
+            rel="noopener noreferrer">
+            Lang Son Geopark – Điểm Bãi đá nhảy trên Tuyến số 02
+          </a>
+
+          <p>
+            Nguồn chuyên môn về môi trường biển cổ, đá vôi, hóa thạch và quá trình hình thành “Bãi đá nhảy”.
+          </p>
+        </div>
+
+        <div class="source-item">
+          <a
+            href="https://vanquan.langson.gov.vn/tin-tuc-su-kien/du-lich/huyen-van-quan-co-04-diem-tham-quan-trong-tuyen-du-lich-cong-vien-dia-chat-lang-son..html"
+            target="_blank"
+            rel="noopener noreferrer">
+            UBND huyện Văn Quan – 04 điểm tham quan trong tuyến du lịch Công viên địa chất
+          </a>
+
+          <p>
+            Nguồn địa phương về Bãi đá nhảy trên đỉnh đèo Lùng Pa và vai trò của điểm này trên tuyến 2.
+          </p>
+        </div>
+
+        <div class="source-item">
+          <a
+            href="https://baolangson.vn/doan-chuyen-gia-unesco-va-hanh-trinh-trai-nghiem-dong-chay-su-song-noi-mien-dat-thieng-5014762.html"
+            target="_blank"
+            rel="noopener noreferrer">
+            Báo và Phát thanh, Truyền hình Lạng Sơn – Đoàn chuyên gia UNESCO và hành trình trải nghiệm
+          </a>
+
+          <p>
+            Nguồn báo chí địa phương ghi nhận hoạt động thẩm định tại Bãi đá nhảy.
+          </p>
+        </div>
+
+        <div class="source-item">
+          <a
+            href="https://diemhe.langson.gov.vn/tin-tuc-su-kien/tin-moi/bai-da-nhay-sac-vang-hoa-da-quy-to-diem-ve-dep-tren-dinh-deo-lung-pa.html"
+            target="_blank"
+            rel="noopener noreferrer">
+            Cổng thông tin xã Điềm He – Bãi đá nhảy – sắc vàng hoa dã quỳ
+          </a>
+
+          <p>
+            Nguồn cập nhật về mùa hoa dã quỳ tại đường lên điểm tham quan.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <div class="container footer-inner">
+
+      <div>
+
+        <div class="footer-title">
+          🪨 BÃI ĐÁ NHẢY LÙNG PA
+        </div>
+
+        <div class="footer-subtitle">
+          Điểm số 12 · Tuyến 2 · Công viên địa chất Lạng Sơn
+        </div>
+
+      </div>
+
+      <div class="footer-links">
+
+        <a href="./danhlamthangcanh.html">
+          Trang chủ
+        </a>
+
+        <a href="./runghoixulang.html">
+          ← Rừng Hồi Xứ Lạng
+        </a>
+
+        <a href="./hanggio.html">
+          Hang Gió →
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+  <!-- ================= BACK TO TOP ================= -->
+
+  <a href="#" class="top" id="top" aria-label="Lên đầu trang">
+    ↑
+  </a>
+
+  <script>
+    const nav = document.getElementById("nav");
+    const topButton = document.getElementById("top");
+
+    function handleScroll(){
+      if(window.scrollY > 70){
+        nav.classList.add("scrolled");
+        topButton.classList.add("show");
+      }else{
+        nav.classList.remove("scrolled");
+        topButton.classList.remove("show");
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll, {passive:true});
+    handleScroll();
+
+    topButton.addEventListener("click", function(e){
+      e.preventDefault();
+
+      window.scrollTo({
+        top:0,
+        behavior:"smooth"
+      });
+    });
+
+    const fallbackImage =
+      "https://diemhe.langson.gov.vn/upload/105811/20251118/1_0426f.jpg";
+
+    document.querySelectorAll("img").forEach(function(img){
+
+      img.addEventListener("error", function(){
+
+        if(!this.dataset.fallback){
+
+          this.dataset.fallback = "1";
+          this.src = fallbackImage;
+
+        }
+
+      });
+
+    });
+  </script>
+
+</body>
+</html>
+```

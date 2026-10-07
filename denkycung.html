@@ -1,0 +1,2144 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Đền Kỳ Cùng | Lạng Sơn</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #f4efe7;
+            --paper: #fffaf3;
+            --paper-2: #eee4d5;
+            --ink: #2f2923;
+            --muted: #756b61;
+            --brown: #5e4030;
+            --brown-dark: #3c2b21;
+            --gold: #b78a48;
+            --line: rgba(94, 64, 48, 0.16);
+            --shadow: 0 18px 50px rgba(61, 42, 28, .10);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 132px;
+        }
+
+        body {
+            font-family: "Be Vietnam Pro", sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.75;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        /* =========================
+           THANH MENU CHÍNH
+        ========================= */
+
+        .topbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            z-index: 1000;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 5vw;
+
+            background: rgba(255, 250, 243, .94);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: .08em;
+            color: var(--brown-dark);
+        }
+
+        .main-link {
+            padding: 10px 19px;
+            border: 1px solid rgba(94, 64, 48, .25);
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--brown);
+            background: rgba(255, 255, 255, .6);
+            transition: .25s ease;
+        }
+
+        .main-link:hover {
+            background: var(--brown);
+            color: white;
+        }
+
+        /* =========================
+           MENU SECTION CỐ ĐỊNH
+        ========================= */
+
+        .section-nav {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            height: 58px;
+            z-index: 999;
+
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            padding: 0 5vw;
+
+            background: rgba(247, 241, 232, .96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--line);
+
+            overflow-x: auto;
+            white-space: nowrap;
+
+            scrollbar-width: none;
+        }
+
+        .section-nav::-webkit-scrollbar {
+            display: none;
+        }
+
+        .section-nav a {
+            flex: 0 0 auto;
+
+            padding: 7px 13px;
+
+            border-radius: 999px;
+
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--muted);
+
+            transition: .25s ease;
+        }
+
+        .section-nav a:hover,
+        .section-nav a.active {
+            color: white;
+            background: var(--brown);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+       .hero {
+    min-height: 720px;
+    padding: 190px 6vw 100px;
+
+    display: flex;
+    align-items: flex-end;
+
+    position: relative;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(38, 27, 20, .88),
+            rgba(38, 27, 20, .20) 65%,
+            rgba(38, 27, 20, .08)
+        ),
+        url("https://mediabls.mediatech.vn/upload/image/202410/thumbnail/494112_z5873119248886_1e072bd1e80c5b455b71e0288e56899a_11284302.jpg")
+        center / cover no-repeat;
+}
+
+        .hero-content {
+            max-width: 820px;
+            color: white;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            margin-bottom: 20px;
+
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+
+            color: #ead5ad;
+        }
+
+        .hero h1 {
+            font-family: "DM Serif Display", serif;
+            font-weight: 400;
+            font-size: clamp(54px, 9vw, 110px);
+            line-height: .95;
+            letter-spacing: -.03em;
+            margin-bottom: 24px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            font-size: 16px;
+            color: rgba(255,255,255,.88);
+        }
+
+        .hero-tags {
+            margin-top: 28px;
+
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .hero-tag {
+            padding: 8px 13px;
+
+            border: 1px solid rgba(255,255,255,.28);
+            border-radius: 999px;
+
+            background: rgba(255,255,255,.08);
+            backdrop-filter: blur(8px);
+
+            font-size: 12px;
+            color: rgba(255,255,255,.9);
+        }
+
+        /* =========================
+           KHUNG CHUNG
+        ========================= */
+
+        main {
+            width: min(1180px, 90%);
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 105px 0;
+            scroll-margin-top: 130px;
+        }
+
+        .section-head {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 50px;
+
+            margin-bottom: 48px;
+        }
+
+        .section-number {
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: .15em;
+            color: var(--gold);
+            text-transform: uppercase;
+        }
+
+        .section-head h2 {
+            font-family: "DM Serif Display", serif;
+            font-size: clamp(38px, 5vw, 62px);
+            line-height: 1.05;
+            font-weight: 400;
+            color: var(--brown-dark);
+            margin-bottom: 18px;
+        }
+
+        .section-head p {
+            max-width: 740px;
+            color: var(--muted);
+        }
+
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: var(--line);
+        }
+
+        /* =========================
+           TỔNG QUAN
+        ========================= */
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1.08fr .92fr;
+            gap: 55px;
+            align-items: start;
+        }
+
+        .overview-image {
+            position: relative;
+            min-height: 540px;
+            overflow: hidden;
+            border-radius: 26px;
+            background: #ded2c2;
+            box-shadow: var(--shadow);
+        }
+
+        .overview-image img {
+            width: 100%;
+            height: 540px;
+            object-fit: cover;
+        }
+
+        .overview-source {
+            position: absolute;
+            left: 16px;
+            bottom: 16px;
+
+            padding: 7px 11px;
+
+            border-radius: 8px;
+
+            background: rgba(31, 24, 19, .72);
+            color: rgba(255,255,255,.9);
+
+            font-size: 11px;
+            line-height: 1.4;
+            backdrop-filter: blur(8px);
+        }
+
+        .overview-text h3 {
+            font-family: "DM Serif Display", serif;
+            font-size: 37px;
+            font-weight: 400;
+            line-height: 1.1;
+            color: var(--brown-dark);
+            margin-bottom: 20px;
+        }
+
+        .overview-text p {
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+        .highlight {
+            margin-top: 30px;
+            padding: 25px 25px;
+
+            border-left: 3px solid var(--gold);
+            background: var(--paper-2);
+            border-radius: 0 16px 16px 0;
+        }
+
+        .highlight strong {
+            display: block;
+            margin-bottom: 7px;
+            color: var(--brown-dark);
+        }
+
+        /* =========================
+           THÔNG TIN NHANH
+        ========================= */
+
+        .quick-info {
+            margin-top: 55px;
+        }
+
+        .quick-title {
+            margin-bottom: 20px;
+
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: .12em;
+            color: var(--brown);
+            text-transform: uppercase;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+        }
+
+        .info-card {
+            padding: 22px;
+
+            border: 1px solid var(--line);
+            border-radius: 17px;
+
+            background: var(--paper);
+        }
+
+        .info-card small {
+            display: block;
+            margin-bottom: 5px;
+
+            font-size: 11px;
+            color: var(--muted);
+            text-transform: uppercase;
+            letter-spacing: .08em;
+        }
+
+        .info-card strong {
+            font-size: 14px;
+            color: var(--brown-dark);
+            line-height: 1.45;
+        }
+
+        /* =========================
+           TIMELINE
+        ========================= */
+
+        .timeline {
+            position: relative;
+            padding-left: 38px;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            left: 7px;
+            top: 5px;
+            bottom: 5px;
+            width: 1px;
+            background: var(--line);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 38px;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -36px;
+            top: 7px;
+
+            width: 14px;
+            height: 14px;
+
+            border-radius: 50%;
+            background: var(--bg);
+            border: 3px solid var(--gold);
+        }
+
+        .timeline-year {
+            margin-bottom: 5px;
+
+            font-size: 13px;
+            font-weight: 800;
+            color: var(--gold);
+        }
+
+        .timeline-item h3 {
+            margin-bottom: 8px;
+            font-size: 20px;
+            color: var(--brown-dark);
+        }
+
+        .timeline-item p {
+            color: var(--muted);
+        }
+
+        /* =========================
+           NỘI DUNG 2 CỘT
+        ========================= */
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: .95fr 1.05fr;
+            gap: 55px;
+            align-items: center;
+        }
+
+        .content-grid.reverse {
+            grid-template-columns: 1.05fr .95fr;
+        }
+
+        .content-grid img {
+            height: 420px;
+            object-fit: cover;
+            border-radius: 22px;
+            box-shadow: var(--shadow);
+        }
+
+        .content-title {
+            font-family: "DM Serif Display", serif;
+            font-size: 38px;
+            font-weight: 400;
+            color: var(--brown-dark);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .content-text p {
+            color: var(--muted);
+            margin-bottom: 17px;
+        }
+
+        .quote {
+            margin-top: 25px;
+            padding: 20px 22px;
+
+            border-radius: 14px;
+            background: var(--paper-2);
+
+            color: var(--brown);
+            font-size: 14px;
+        }
+
+        /* =========================
+           THẺ GIÁ TRỊ
+        ========================= */
+
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .value-card {
+            min-height: 220px;
+
+            padding: 27px;
+
+            background: var(--paper);
+            border: 1px solid var(--line);
+            border-radius: 20px;
+
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .value-index {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 36px;
+            height: 36px;
+
+            margin-bottom: 24px;
+
+            border-radius: 50%;
+
+            background: var(--paper-2);
+            color: var(--brown);
+
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .value-card h3 {
+            margin-bottom: 9px;
+            font-size: 18px;
+            color: var(--brown-dark);
+        }
+
+        .value-card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* =========================
+           BẢO TỒN
+        ========================= */
+
+        .conservation {
+            padding: 45px;
+
+            border-radius: 25px;
+            background: var(--brown-dark);
+            color: white;
+        }
+
+        .conservation h2 {
+            font-family: "DM Serif Display", serif;
+            font-weight: 400;
+            font-size: 42px;
+            margin-bottom: 18px;
+        }
+
+        .conservation p {
+            color: rgba(255,255,255,.77);
+            max-width: 850px;
+        }
+
+        .conservation-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 35px;
+        }
+
+        .conservation-card {
+            padding: 20px;
+
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 15px;
+
+            background: rgba(255,255,255,.055);
+        }
+
+        .conservation-card strong {
+            display: block;
+            margin-bottom: 7px;
+            color: #e9d2a8;
+            font-size: 15px;
+        }
+
+        .conservation-card span {
+            display: block;
+            color: rgba(255,255,255,.66);
+            font-size: 13px;
+        }
+
+        /* =========================
+           GALLERY
+        ========================= */
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 16px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 18px;
+            background: #ddd1c1;
+        }
+
+        .gallery-item:nth-child(1) {
+            grid-column: span 7;
+        }
+
+        .gallery-item:nth-child(2) {
+            grid-column: span 5;
+        }
+
+        .gallery-item:nth-child(3) {
+            grid-column: span 4;
+        }
+
+        .gallery-item:nth-child(4) {
+            grid-column: span 4;
+        }
+
+        .gallery-item:nth-child(5) {
+            grid-column: span 4;
+        }
+
+        .gallery-item img {
+            height: 310px;
+            object-fit: cover;
+            transition: transform .5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.045);
+        }
+
+        .image-label {
+            padding: 10px 13px;
+            background: var(--paper);
+            color: var(--muted);
+            font-size: 11px;
+        }
+
+        /* =========================
+           NGUỒN
+        ========================= */
+
+        .source-box {
+            padding: 32px;
+
+            border: 1px solid var(--line);
+            border-radius: 20px;
+
+            background: var(--paper);
+        }
+
+        .source-box h3 {
+            font-family: "DM Serif Display", serif;
+            font-size: 34px;
+            font-weight: 400;
+            color: var(--brown-dark);
+            margin-bottom: 20px;
+        }
+
+        .source-box a {
+            display: block;
+            padding: 9px 0;
+
+            color: var(--brown);
+            font-size: 14px;
+
+            border-bottom: 1px solid var(--line);
+        }
+
+        .source-box a:last-child {
+            border-bottom: none;
+        }
+
+        .source-box a:hover {
+            color: var(--gold);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            margin-top: 30px;
+            padding: 60px 5vw;
+
+            background: var(--brown-dark);
+            color: rgba(255,255,255,.72);
+
+            text-align: center;
+        }
+
+        footer strong {
+            display: block;
+            margin-bottom: 8px;
+
+            font-family: "DM Serif Display", serif;
+            font-size: 28px;
+            font-weight: 400;
+
+            color: white;
+        }
+
+        footer span {
+            font-size: 12px;
+        }
+
+        /* =========================
+           NÚT QUAY LẠI
+        ========================= */
+
+        .back-button {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 1001;
+
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            padding: 12px 17px;
+
+            border-radius: 999px;
+
+            background: var(--brown-dark);
+            color: white;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,.16);
+
+            font-size: 12px;
+            font-weight: 700;
+
+            transition: .25s ease;
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px);
+            background: var(--brown);
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .section-head,
+            .overview-grid,
+            .content-grid,
+            .content-grid.reverse {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .section-head {
+                margin-bottom: 35px;
+            }
+
+            .info-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .value-grid,
+            .conservation-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .overview-image,
+            .overview-image img {
+                min-height: 420px;
+                height: 420px;
+            }
+
+            .hero {
+                min-height: 650px;
+            }
+        }
+
+        @media (max-width: 620px) {
+
+            html {
+                scroll-padding-top: 120px;
+            }
+
+            .topbar {
+                height: 62px;
+                padding: 0 5%;
+            }
+
+            .logo {
+                font-size: 17px;
+            }
+
+            .main-link {
+                padding: 8px 13px;
+                font-size: 12px;
+            }
+
+            .section-nav {
+                top: 62px;
+                height: 56px;
+                padding: 0 5%;
+            }
+
+            .hero {
+                min-height: 610px;
+                padding: 170px 6% 70px;
+            }
+
+            .hero h1 {
+                font-size: 57px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            section {
+                padding: 80px 0;
+            }
+
+            .section-head h2 {
+                font-size: 42px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .overview-image,
+            .overview-image img {
+                min-height: 350px;
+                height: 350px;
+            }
+
+            .content-grid img {
+                height: 320px;
+            }
+
+            .conservation {
+                padding: 28px;
+            }
+
+            .conservation h2 {
+                font-size: 35px;
+            }
+
+            .gallery {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item:nth-child(n) {
+                grid-column: auto;
+            }
+
+            .gallery-item img {
+                height: 270px;
+            }
+
+            .back-button {
+                right: 15px;
+                bottom: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         MENU CHÍNH
+    ========================= -->
+
+    <header class="topbar">
+
+        <a href="./danhlamthangcanh.html" class="logo">
+            LẠNG SƠN
+        </a>
+
+        <a href="./danhlamthangcanh.html" class="main-link">
+            Danh thắng
+        </a>
+
+    </header>
+
+
+    <!-- =========================
+         MENU SECTION
+    ========================= -->
+
+    <nav class="section-nav" id="sectionNav">
+
+        <a href="#tong-quan">Tổng quan</a>
+        <a href="#lich-su">Lịch sử</a>
+        <a href="#tuan-tranh">Quan Lớn Tuần Tranh</a>
+        <a href="#kien-truc">Kiến trúc</a>
+        <a href="#ben-da">Bến đá Kỳ Cùng</a>
+        <a href="#le-hoi">Lễ hội</a>
+        <a href="#ruoc-kieu">Rước kiệu</a>
+        <a href="#gia-tri">Giá trị</a>
+        <a href="#bao-ton">Bảo tồn</a>
+        <a href="#hinh-anh">Hình ảnh</a>
+        <a href="#nguon">Nguồn</a>
+
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                Di tích lịch sử · tín ngưỡng Xứ Lạng
+            </div>
+
+            <h1>
+                Đền Kỳ Cùng
+            </h1>
+
+            <p>
+                Ngôi đền bên sông Kỳ Cùng, gắn với tín ngưỡng
+                Quan Lớn Tuần Tranh, Bến đá Kỳ Cùng và lễ hội
+                Kỳ Cùng – Tả Phủ.
+            </p>
+
+            <div class="hero-tags">
+
+                <span class="hero-tag">
+                    Di tích Quốc gia · 1993
+                </span>
+
+                <span class="hero-tag">
+                    Lạng Sơn
+                </span>
+
+                <span class="hero-tag">
+                    Lễ hội 22 – 27 tháng Giêng
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <main>
+
+        <!-- =========================
+             01 TỔNG QUAN
+        ========================= -->
+
+        <section id="tong-quan">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    01 · Tổng quan
+                </div>
+
+                <div>
+                    <h2>
+                        Ngôi đền bên dòng Kỳ Cùng
+                    </h2>
+
+                    <p>
+                        Đền Kỳ Cùng là một địa điểm văn hóa – tâm linh
+                        nổi tiếng của Lạng Sơn, nằm bên tả ngạn sông
+                        Kỳ Cùng và gắn chặt với đời sống tín ngưỡng
+                        của cộng đồng cư dân Xứ Lạng.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="overview-grid">
+
+                <!-- ẢNH TỔNG QUAN
+                     KHÔNG PHẢI ẢNH HERO -->
+
+                <div class="overview-image">
+
+                    <img
+                        src="https://scontent.iocvnpt.com/resources/portal/Images/LSN/phucvt.lsn/dia%20diem/chua%20%C4%91%E1%BB%81n/den_ky_cung1.jpg_636692343123343962.jpg"
+                        alt="Đền Kỳ Cùng Lạng Sơn"
+                        onerror="
+                            this.onerror=null;
+                            this.src='https://upload.wikimedia.org/wikipedia/commons/0/05/%C4%90%E1%BB%81n_K%E1%BB%B3_C%C3%B9ng.jpg';
+                        "
+                    >
+
+                    <div class="overview-source">
+                        Nguồn ảnh: Cổng Du lịch Lạng Sơn
+                    </div>
+
+                </div>
+
+
+                <div class="overview-text">
+
+                    <h3>
+                        Điểm hội tụ của lịch sử và tín ngưỡng
+                    </h3>
+
+                    <p>
+                        Đền Kỳ Cùng còn được gọi là đền Quan Lớn
+                        Tuần Tranh. Đền nằm bên tả ngạn sông Kỳ Cùng,
+                        mặt trước hướng ra dòng sông, tạo nên một vị trí
+                        đặc biệt trong không gian đô thị và văn hóa
+                        của Lạng Sơn.
+                    </p>
+
+                    <p>
+                        Theo tư liệu giới thiệu của Trung tâm Xúc tiến
+                        Đầu tư, Thương mại và Du lịch tỉnh Lạng Sơn,
+                        tên gọi “Kỳ Cùng đại vương từ” gắn với tục thờ
+                        ông Cộc, ông Dài – những vị thần của sông Kỳ Cùng.
+                        Trong tín ngưỡng dân gian địa phương, đền còn
+                        được biết đến là nơi thờ Quan Lớn Tuần Tranh.
+                    </p>
+
+                    <p>
+                        Đền lưu giữ nhiều dấu tích và hiện vật có giá trị,
+                        trong đó có bia trùng tu lập năm 1931, các hoành phi,
+                        đại tự cùng một số đồ thờ tự có niên đại và giá trị
+                        nghệ thuật.
+                    </p>
+
+                    <div class="highlight">
+
+                        <strong>
+                            Điểm đặc biệt
+                        </strong>
+
+                        Đền Kỳ Cùng không chỉ là một công trình tín ngưỡng
+                        mà còn gắn với dòng sông Kỳ Cùng, Bến đá Kỳ Cùng
+                        và không gian lễ hội truyền thống Kỳ Cùng – Tả Phủ.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- THÔNG TIN NHANH Ở CUỐI TỔNG QUAN -->
+
+            <div class="quick-info">
+
+                <div class="quick-title">
+                    Thông tin nhanh
+                </div>
+
+                <div class="info-grid">
+
+                    <div class="info-card">
+                        <small>Tên gọi</small>
+                        <strong>
+                            Đền Kỳ Cùng
+                        </strong>
+                    </div>
+
+                    <div class="info-card">
+                        <small>Tên khác</small>
+                        <strong>
+                            Đền Quan Lớn Tuần Tranh
+                        </strong>
+                    </div>
+
+                    <div class="info-card">
+                        <small>Vị trí</small>
+                        <strong>
+                            Bên tả ngạn sông Kỳ Cùng, Lạng Sơn
+                        </strong>
+                    </div>
+
+                    <div class="info-card">
+                        <small>Không gian</small>
+                        <strong>
+                            Gắn với Bến đá Kỳ Cùng
+                        </strong>
+                    </div>
+
+                    <div class="info-card">
+                        <small>Kiến trúc</small>
+                        <strong>
+                            Kiểu chữ Đinh
+                        </strong>
+                    </div>
+
+                    <div class="info-card">
+                        <small>Tín ngưỡng</small>
+                        <strong>
+                            Kỳ Cùng Đại Vương · Quan Lớn Tuần Tranh
+                        </strong>
+                    </div>
+
+                    <div class="info-card">
+                        <small>Xếp hạng</small>
+                        <strong>
+                            Di tích quốc gia
+                        </strong>
+                    </div>
+
+                    <div class="info-card">
+                        <small>Lễ hội</small>
+                        <strong>
+                            22 – 27 tháng Giêng âm lịch
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             02 LỊCH SỬ
+        ========================= -->
+
+        <section id="lich-su">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    02 · Lịch sử
+                </div>
+
+                <div>
+                    <h2>
+                        Dấu tích qua nhiều thời kỳ
+                    </h2>
+
+                    <p>
+                        Lịch sử của đền được phản ánh qua tên gọi,
+                        văn bia, hoành phi và những hiện vật còn được
+                        lưu giữ tại di tích.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+
+                    <div class="timeline-year">
+                        Từ xa xưa
+                    </div>
+
+                    <h3>
+                        Tín ngưỡng gắn với sông Kỳ Cùng
+                    </h3>
+
+                    <p>
+                        Tên gọi Kỳ Cùng Đại Vương và truyền thống
+                        thờ ông Cộc, ông Dài cho thấy mối liên hệ
+                        lâu đời giữa di tích với tín ngưỡng dân gian
+                        gắn với dòng sông.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-year">
+                        1783
+                    </div>
+
+                    <h3>
+                        Dấu tích thời Lê
+                    </h3>
+
+                    <p>
+                        Di tích còn lưu giữ hoành phi, đại tự có niên đại
+                        thời Lê, trong đó có tư liệu được xác định vào
+                        năm Cảnh Hưng thứ 44.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-year">
+                        1931
+                    </div>
+
+                    <h3>
+                        Bia trùng tu đền
+                    </h3>
+
+                    <p>
+                        Tại đền hiện còn bia trùng tu được dựng vào
+                        tháng 2 năm 1931, ghi lại quá trình tu bổ
+                        và lịch sử của di tích.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-year">
+                        1993
+                    </div>
+
+                    <h3>
+                        Được xếp hạng di tích quốc gia
+                    </h3>
+
+                    <p>
+                        Đền Kỳ Cùng được biết đến trong hệ thống
+                        các di tích có giá trị lịch sử, kiến trúc,
+                        nghệ thuật và tín ngưỡng của Lạng Sơn.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-year">
+                        Hiện nay
+                    </div>
+
+                    <h3>
+                        Không gian văn hóa – tâm linh của Xứ Lạng
+                    </h3>
+
+                    <p>
+                        Đền tiếp tục là địa điểm sinh hoạt tín ngưỡng,
+                        tham quan và là một phần quan trọng của không gian
+                        lễ hội Kỳ Cùng – Tả Phủ.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             03 QUAN LỚN TUẦN TRANH
+        ========================= -->
+
+        <section id="tuan-tranh">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    03 · Tín ngưỡng
+                </div>
+
+                <div>
+                    <h2>
+                        Quan Lớn Tuần Tranh
+                    </h2>
+
+                    <p>
+                        Hình tượng Quan Lớn Tuần Tranh là một phần
+                        quan trọng trong đời sống tín ngưỡng liên quan
+                        đến đền Kỳ Cùng.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="content-grid">
+
+                <div class="content-text">
+
+                    <h3 class="content-title">
+                        Giữa truyền thuyết và tín ngưỡng dân gian
+                    </h3>
+
+                    <p>
+                        Theo giới thiệu của Cổng Du lịch Lạng Sơn,
+                        nhân dân trong vùng quan niệm đền Kỳ Cùng là
+                        nơi thờ Quan Lớn Tuần Tranh. Trong tín ngưỡng
+                        thờ Mẫu, Quan Lớn Tuần Tranh thuộc hàng Ngũ vị
+                        Quan lớn.
+                    </p>
+
+                    <p>
+                        Bên cạnh đó, đền còn phối thờ Đức Thánh Trần,
+                        Tam Tòa Thánh Mẫu và một số nhân thần. Chính
+                        sự đan xen giữa nhiều lớp tín ngưỡng đã tạo nên
+                        diện mạo văn hóa đặc biệt của di tích.
+                    </p>
+
+                    <div class="quote">
+                        Đền Kỳ Cùng là nơi giao thoa giữa tín ngưỡng
+                        dân gian gắn với dòng sông và tín ngưỡng thờ Mẫu.
+                    </div>
+
+                </div>
+
+
+                <img
+                    src="https://afamilycdn.com/150157425591193600/2025/1/29/tho-ran-11-81522338844650292127422-1738157140929-1738157141083953733309.jpg"
+                    alt="Không gian tín ngưỡng bên trong Đền Kỳ Cùng"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             04 KIẾN TRÚC
+        ========================= -->
+
+        <section id="kien-truc">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    04 · Kiến trúc
+                </div>
+
+                <div>
+                    <h2>
+                        Công trình hướng ra dòng sông
+                    </h2>
+
+                    <p>
+                        Kiến trúc của đền mang những đặc điểm truyền thống
+                        và được bố trí hài hòa với không gian bên sông.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="content-grid reverse">
+
+                <img
+                    src="https://statics.vinpearl.com/den-ky-cung-06_1642930533.jpg"
+                    alt="Không gian bên trong Đền Kỳ Cùng"
+                >
+
+
+                <div class="content-text">
+
+                    <h3 class="content-title">
+                        Kiểu chữ Đinh
+                    </h3>
+
+                    <p>
+                        Theo Cổng Du lịch Lạng Sơn, kiến trúc đền theo
+                        kiểu chữ Đinh và mặt tiền quay về hướng nam,
+                        phía trước hướng ra bờ sông Kỳ Cùng.
+                    </p>
+
+                    <p>
+                        Không gian kiến trúc gây ấn tượng bởi hệ thống
+                        gỗ, các chi tiết trang trí truyền thống cùng
+                        những đồ thờ tự được lưu giữ qua thời gian.
+                    </p>
+
+                    <p>
+                        Các hoành phi, đại tự có niên đại thời Lê và
+                        thời Nguyễn cùng chuông, đỉnh đồng, tượng thờ
+                        góp phần tạo nên giá trị nghệ thuật và lịch sử
+                        cho di tích.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             05 BẾN ĐÁ KỲ CÙNG
+        ========================= -->
+
+        <section id="ben-da">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    05 · Cảnh quan
+                </div>
+
+                <div>
+                    <h2>
+                        Bến đá Kỳ Cùng
+                    </h2>
+
+                    <p>
+                        Dòng sông Kỳ Cùng tạo nên không gian cảnh quan
+                        đặc trưng và làm nên vị thế riêng của đền.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="content-grid">
+
+                <div class="content-text">
+
+                    <h3 class="content-title">
+                        Đền và dòng sông trong cùng một không gian
+                    </h3>
+
+                    <p>
+                        Phía trước Đền Kỳ Cùng là dòng sông Kỳ Cùng.
+                        Trong lịch sử và ký ức đô thị, khu vực bến đá
+                        bên sông là một điểm quan trọng của không gian
+                        giao thương và đi lại.
+                    </p>
+
+                    <p>
+                        Vị trí này giúp đền không chỉ có giá trị tín ngưỡng
+                        mà còn gắn với cảnh quan của trung tâm Lạng Sơn.
+                    </p>
+
+                    <div class="highlight">
+
+                        <strong>
+                            Giá trị cảnh quan
+                        </strong>
+
+                        Sự kết hợp giữa kiến trúc đền, không gian đô thị
+                        và dòng sông tạo nên một trong những hình ảnh
+                        đặc trưng của khu vực trung tâm Xứ Lạng.
+
+                    </div>
+
+                </div>
+
+
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/4/4e/%C4%90%E1%BB%81n_K%E1%BB%B3_C%C3%B9ng_2.jpg"
+                    alt="Đền Kỳ Cùng bên sông Kỳ Cùng"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             06 LỄ HỘI
+        ========================= -->
+
+        <section id="le-hoi">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    06 · Lễ hội
+                </div>
+
+                <div>
+                    <h2>
+                        Lễ hội Kỳ Cùng – Tả Phủ
+                    </h2>
+
+                    <p>
+                        Một trong những lễ hội truyền thống lớn,
+                        gắn với đời sống văn hóa – tín ngưỡng của
+                        cộng đồng các dân tộc Xứ Lạng.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="content-grid">
+
+                <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/0/05/%C4%90%E1%BB%81n_K%E1%BB%B3_C%C3%B9ng.jpg"
+                    alt="Lễ hội tại Đền Kỳ Cùng"
+                >
+
+
+                <div class="content-text">
+
+                    <h3 class="content-title">
+                        Từ 22 đến 27 tháng Giêng
+                    </h3>
+
+                    <p>
+                        Lễ hội đền Kỳ Cùng gắn liền với lễ hội
+                        đền Tả Phủ và được tổ chức hằng năm từ
+                        ngày 22 đến ngày 27 tháng Giêng âm lịch.
+                    </p>
+
+                    <p>
+                        Đây là khoảng thời gian không gian quanh
+                        hai ngôi đền trở nên nhộn nhịp với những
+                        nghi lễ truyền thống, các hoạt động văn hóa
+                        và sự tham gia của người dân, du khách.
+                    </p>
+
+                    <p>
+                        Lễ hội thể hiện sự tri ân đối với các nhân vật
+                        được tôn kính trong tín ngưỡng địa phương,
+                        đồng thời góp phần duy trì bản sắc văn hóa
+                        của Lạng Sơn.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             07 RƯỚC KIỆU
+        ========================= -->
+
+        <section id="ruoc-kieu">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    07 · Nghi lễ
+                </div>
+
+                <div>
+                    <h2>
+                        Rước kiệu – kết nối hai ngôi đền
+                    </h2>
+
+                    <p>
+                        Hoạt động rước kiệu là một nét nổi bật
+                        trong không gian lễ hội Kỳ Cùng – Tả Phủ.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="value-grid">
+
+                <div class="value-card">
+
+                    <div class="value-index">
+                        01
+                    </div>
+
+                    <h3>
+                        Chuẩn bị
+                    </h3>
+
+                    <p>
+                        Các nghi thức và không gian phục vụ lễ rước
+                        được chuẩn bị trang trọng trước khi đoàn
+                        rước bắt đầu.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <div class="value-index">
+                        02
+                    </div>
+
+                    <h3>
+                        Rước kiệu
+                    </h3>
+
+                    <p>
+                        Đoàn rước tạo nên không khí trang nghiêm,
+                        đồng thời thể hiện sự kết nối giữa đền
+                        Kỳ Cùng và đền Tả Phủ.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <div class="value-index">
+                        03
+                    </div>
+
+                    <h3>
+                        Sinh hoạt cộng đồng
+                    </h3>
+
+                    <p>
+                        Nghi lễ thu hút người dân và du khách,
+                        góp phần duy trì không gian văn hóa truyền thống
+                        trong đời sống hiện đại.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             08 GIÁ TRỊ
+        ========================= -->
+
+        <section id="gia-tri">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    08 · Giá trị
+                </div>
+
+                <div>
+                    <h2>
+                        Nhiều lớp giá trị cùng tồn tại
+                    </h2>
+
+                    <p>
+                        Đền Kỳ Cùng có giá trị không chỉ ở một phương diện
+                        mà nằm trong sự kết hợp giữa lịch sử, kiến trúc,
+                        tín ngưỡng và cảnh quan.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="value-grid">
+
+                <div class="value-card">
+
+                    <div class="value-index">
+                        01
+                    </div>
+
+                    <h3>
+                        Giá trị lịch sử
+                    </h3>
+
+                    <p>
+                        Các tư liệu, văn bia và hiện vật phản ánh
+                        quá trình tồn tại và phát triển của di tích
+                        qua nhiều thời kỳ.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <div class="value-index">
+                        02
+                    </div>
+
+                    <h3>
+                        Giá trị tín ngưỡng
+                    </h3>
+
+                    <p>
+                        Là nơi gắn với tục thờ Kỳ Cùng Đại Vương,
+                        Quan Lớn Tuần Tranh và hệ thống tín ngưỡng
+                        thờ Mẫu.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <div class="value-index">
+                        03
+                    </div>
+
+                    <h3>
+                        Giá trị kiến trúc
+                    </h3>
+
+                    <p>
+                        Kiến trúc truyền thống, hệ thống trang trí
+                        và đồ thờ tự tạo nên giá trị nghệ thuật
+                        riêng của di tích.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <div class="value-index">
+                        04
+                    </div>
+
+                    <h3>
+                        Giá trị lễ hội
+                    </h3>
+
+                    <p>
+                        Lễ hội Kỳ Cùng – Tả Phủ là không gian
+                        bảo tồn và thực hành các giá trị văn hóa
+                        cộng đồng.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <div class="value-index">
+                        05
+                    </div>
+
+                    <h3>
+                        Giá trị cảnh quan
+                    </h3>
+
+                    <p>
+                        Vị trí bên sông Kỳ Cùng tạo nên cảnh quan
+                        đặc trưng và góp phần hình thành hình ảnh
+                        biểu tượng của thành phố.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <div class="value-index">
+                        06
+                    </div>
+
+                    <h3>
+                        Giá trị du lịch
+                    </h3>
+
+                    <p>
+                        Đền là điểm đến văn hóa – tâm linh quan trọng,
+                        kết nối với nhiều điểm tham quan khác trong
+                        khu vực trung tâm Lạng Sơn.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             09 BẢO TỒN
+        ========================= -->
+
+        <section id="bao-ton">
+
+            <div class="conservation">
+
+                <h2>
+                    Bảo tồn để di tích tiếp tục sống trong đời sống hiện đại
+                </h2>
+
+                <p>
+                    Việc bảo tồn Đền Kỳ Cùng cần được thực hiện đồng thời
+                    với gìn giữ kiến trúc, hiện vật, cảnh quan sông Kỳ Cùng
+                    và những thực hành văn hóa truyền thống.
+                </p>
+
+
+                <div class="conservation-grid">
+
+                    <div class="conservation-card">
+
+                        <strong>
+                            Kiến trúc
+                        </strong>
+
+                        <span>
+                            Giữ gìn cấu trúc, chi tiết trang trí
+                            và không gian truyền thống của đền.
+                        </span>
+
+                    </div>
+
+
+                    <div class="conservation-card">
+
+                        <strong>
+                            Hiện vật
+                        </strong>
+
+                        <span>
+                            Bảo quản bia, hoành phi, đồ thờ và
+                            những tư liệu có giá trị lịch sử.
+                        </span>
+
+                    </div>
+
+
+                    <div class="conservation-card">
+
+                        <strong>
+                            Lễ hội
+                        </strong>
+
+                        <span>
+                            Duy trì nghi lễ truyền thống và phát huy
+                            giá trị văn hóa cộng đồng.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             10 HÌNH ẢNH
+        ========================= -->
+
+        <section id="hinh-anh">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    10 · Hình ảnh
+                </div>
+
+                <div>
+                    <h2>
+                        Không gian Đền Kỳ Cùng
+                    </h2>
+
+                    <p>
+                        Một số hình ảnh về kiến trúc, không gian thờ tự
+                        và những đặc điểm nổi bật của di tích.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="gallery">
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/4/4e/%C4%90%E1%BB%81n_K%E1%BB%B3_C%C3%B9ng_2.jpg"
+                        alt="Đền Kỳ Cùng"
+                    >
+
+                    <div class="image-label">
+                        Đền Kỳ Cùng · Wikimedia Commons
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/0/05/%C4%90%E1%BB%81n_K%E1%BB%B3_C%C3%B9ng.jpg"
+                        alt="Không gian trước Đền Kỳ Cùng"
+                    >
+
+                    <div class="image-label">
+                        Không gian phía trước đền
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://afamilycdn.com/150157425591193600/2025/1/29/tho-ran-11-81522338844650292127422-1738157140929-1738157141083953733309.jpg"
+                        alt="Chi tiết trang trí bên trong Đền Kỳ Cùng"
+                    >
+
+                    <div class="image-label">
+                        Chi tiết tín ngưỡng và trang trí nội thất
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://statics.vinpearl.com/den-ky-cung-06_1642930533.jpg"
+                        alt="Nội thất Đền Kỳ Cùng"
+                    >
+
+                    <div class="image-label">
+                        Không gian nội thất
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://www.asiakingtravel.com/cuploads/files/d6%283%29.jpg"
+                        alt="Cổng Đền Kỳ Cùng"
+                    >
+
+                    <div class="image-label">
+                        Cổng đền
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             11 NGUỒN
+        ========================= -->
+
+        <section id="nguon">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    11 · Nguồn
+                </div>
+
+                <div>
+                    <h2>
+                        Tài liệu tham khảo
+                    </h2>
+
+                    <p>
+                        Thông tin trên trang được tổng hợp và biên soạn
+                        từ các nguồn giới thiệu về Đền Kỳ Cùng và du lịch
+                        Lạng Sơn.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="source-box">
+
+                <h3>
+                    Nguồn thông tin
+                </h3>
+
+                <a
+                    href="https://lspa.langson.gov.vn/diem-den-du-lich/den-ky-cung-341495"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Cổng Du lịch Lạng Sơn – Đền Kỳ Cùng
+                </a>
+
+                <a
+                    href="https://lspa.langson.gov.vn/"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Trung tâm Xúc tiến Đầu tư, Thương mại và Du lịch tỉnh Lạng Sơn
+                </a>
+
+                <a
+                    href="https://afamily.vn/"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    aFamily – tư liệu hình ảnh về tín ngưỡng tại Đền Kỳ Cùng
+                </a>
+
+                <a
+                    href="https://vinpearl.com/"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Vinpearl – tư liệu hình ảnh Đền Kỳ Cùng
+                </a>
+
+                <a
+                    href="https://commons.wikimedia.org/"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Wikimedia Commons – tư liệu hình ảnh
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <strong>
+            Đền Kỳ Cùng
+        </strong>
+
+        <span>
+            Một dấu ấn văn hóa – tâm linh bên dòng sông Kỳ Cùng.
+        </span>
+
+    </footer>
+
+
+    <!-- =========================
+         NÚT QUAY LẠI
+    ========================= -->
+
+    <a
+        href="./danhlamthangcanh.html"
+        class="back-button"
+    >
+        ← Quay lại danh thắng
+    </a>
+
+
+    <!-- =========================
+         JS ACTIVE SECTION
+    ========================= -->
+
+    <script>
+
+        const sections = document.querySelectorAll("main section");
+        const navLinks = document.querySelectorAll(".section-nav a");
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+
+                entries.forEach((entry) => {
+
+                    if (entry.isIntersecting) {
+
+                        navLinks.forEach((link) => {
+                            link.classList.remove("active");
+                        });
+
+                        const activeLink = document.querySelector(
+                            '.section-nav a[href="#' + entry.target.id + '"]'
+                        );
+
+                        if (activeLink) {
+                            activeLink.classList.add("active");
+                        }
+
+                    }
+
+                });
+
+            },
+            {
+                rootMargin: "-150px 0px -60% 0px",
+                threshold: 0
+            }
+        );
+
+
+        sections.forEach((section) => {
+            observer.observe(section);
+        });
+
+
+        /* Khi click menu, tự cuộn mục được chọn vào giữa */
+        navLinks.forEach((link) => {
+
+            link.addEventListener("click", () => {
+
+                setTimeout(() => {
+
+                    link.scrollIntoView({
+                        behavior: "smooth",
+                        block: "nearest",
+                        inline: "center"
+                    });
+
+                }, 100);
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>

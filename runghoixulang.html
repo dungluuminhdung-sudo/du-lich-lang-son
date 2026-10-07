@@ -1,0 +1,4574 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>Rừng Hồi Xứ Lạng | Lạng Sơn</title>
+
+<meta name="description"
+content="Khám phá Rừng Hồi Xứ Lạng – điểm tham quan trên tuyến 2 của Công viên địa chất Lạng Sơn, nơi rừng hồi xanh, hương hồi và văn hóa địa phương hòa quyện.">
+
+<style>
+
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root{
+
+  --forest:#183f2d;
+  --forest-dark:#0d2a1e;
+  --forest-deep:#071c14;
+
+  --leaf:#4d805b;
+  --leaf-light:#dfeedd;
+
+  --anise:#8eaa55;
+  --anise-light:#eef3d8;
+
+  --cream:#fffaf0;
+  --cream-2:#f6efe1;
+
+  --gold:#c79b50;
+  --gold-light:#ead7ad;
+
+  --white:#ffffff;
+
+  --text:#26382f;
+  --muted:#718078;
+
+  --line:#e1e9df;
+
+  --shadow:
+    0 24px 65px
+    rgba(14,54,34,.13);
+
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+
+  margin:0;
+  padding:0;
+
+  box-sizing:border-box;
+
+}
+
+
+html{
+
+  scroll-behavior:smooth;
+
+}
+
+
+body{
+
+  font-family:
+    Inter,
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  color:var(--text);
+
+  background:#f5f8f3;
+
+  line-height:1.75;
+
+}
+
+
+img{
+
+  display:block;
+
+  width:100%;
+
+  height:auto;
+
+  object-fit:cover;
+
+}
+
+
+a{
+
+  color:inherit;
+
+  text-decoration:none;
+
+}
+
+
+/* =========================================================
+   NAV
+========================================================= */
+
+.nav{
+
+  position:fixed;
+
+  top:0;
+  left:0;
+  right:0;
+
+  z-index:1000;
+
+  padding:
+    17px
+    4%;
+
+  transition:.35s ease;
+
+}
+
+
+.nav.scrolled{
+
+  background:
+    rgba(255,255,255,.95);
+
+  backdrop-filter:
+    blur(18px);
+
+  box-shadow:
+    0 8px 28px
+    rgba(0,0,0,.08);
+
+}
+
+
+.nav-inner{
+
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:space-between;
+
+}
+
+
+.logo{
+
+  color:white;
+
+  font-size:14px;
+
+  font-weight:950;
+
+  letter-spacing:.7px;
+
+  text-shadow:
+    0 2px 14px
+    rgba(0,0,0,.45);
+
+}
+
+
+.nav.scrolled .logo{
+
+  color:var(--forest);
+
+  text-shadow:none;
+
+}
+
+
+.nav-links{
+
+  display:flex;
+
+  gap:5px;
+
+}
+
+
+.nav-links a{
+
+  padding:
+    9px
+    12px;
+
+  color:white;
+
+  border-radius:50px;
+
+  font-size:11px;
+
+  font-weight:850;
+
+  transition:.25s;
+
+}
+
+
+.nav.scrolled .nav-links a{
+
+  color:var(--forest);
+
+}
+
+
+.nav-links a:hover{
+
+  background:
+    rgba(255,255,255,.15);
+
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+
+  min-height:100vh;
+
+  position:relative;
+
+  display:flex;
+
+  align-items:flex-end;
+
+  overflow:hidden;
+
+  background:
+
+    linear-gradient(
+      180deg,
+      rgba(3,27,17,.05),
+      rgba(5,29,18,.18) 38%,
+      rgba(3,21,13,.96) 100%
+    ),
+
+    url("https://vanquan.langson.gov.vn/upload/105421/fck/ubndhvq/2024_06_25_00_55_5419.jpg");
+
+  background-size:cover;
+
+  background-position:center;
+
+}
+
+
+.hero::before{
+
+  content:"";
+
+  position:absolute;
+
+  top:-180px;
+
+  right:-180px;
+
+  width:600px;
+
+  height:600px;
+
+  border-radius:50%;
+
+  background:
+
+    radial-gradient(
+      circle,
+      rgba(210,226,166,.18),
+      transparent 69%
+    );
+
+}
+
+
+.hero-content{
+
+  width:min(1140px,92%);
+
+  margin:auto;
+
+  padding:
+    160px
+    0
+    125px;
+
+  position:relative;
+
+  z-index:2;
+
+  color:white;
+
+}
+
+
+.hero-tag{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  padding:
+    8px
+    15px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.4);
+
+  border-radius:50px;
+
+  background:
+    rgba(255,255,255,.1);
+
+  backdrop-filter:
+    blur(12px);
+
+  font-size:10px;
+
+  font-weight:950;
+
+  letter-spacing:1.6px;
+
+  text-transform:uppercase;
+
+}
+
+
+.hero h1{
+
+  margin-top:22px;
+
+  font-size:
+    clamp(53px,8.3vw,110px);
+
+  line-height:.83;
+
+  letter-spacing:-5px;
+
+  font-weight:950;
+
+}
+
+
+.hero h1 span{
+
+  display:block;
+
+  color:
+    #dce9b8;
+
+}
+
+
+.hero-description{
+
+  max-width:700px;
+
+  margin-top:29px;
+
+  color:
+    rgba(255,255,255,.9);
+
+  font-size:17px;
+
+}
+
+
+.hero-actions{
+
+  margin-top:30px;
+
+  display:flex;
+
+  flex-wrap:wrap;
+
+  gap:11px;
+
+}
+
+
+.btn{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  padding:
+    13px
+    21px;
+
+  border-radius:50px;
+
+  font-size:12px;
+
+  font-weight:900;
+
+  transition:.25s;
+
+}
+
+
+.btn-primary{
+
+  color:var(--forest);
+
+  background:white;
+
+}
+
+
+.btn-primary:hover{
+
+  transform:
+    translateY(-3px);
+
+}
+
+
+.btn-glass{
+
+  color:white;
+
+  border:
+    1px solid
+    rgba(255,255,255,.42);
+
+  background:
+    rgba(255,255,255,.08);
+
+}
+
+
+.btn-glass:hover{
+
+  background:
+    rgba(255,255,255,.17);
+
+}
+
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.container{
+
+  width:min(1120px,92%);
+
+  margin:auto;
+
+}
+
+
+section{
+
+  padding:
+    100px
+    0;
+
+}
+
+
+.label{
+
+  color:var(--leaf);
+
+  font-size:11px;
+
+  font-weight:950;
+
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+
+}
+
+
+.title{
+
+  margin-top:10px;
+
+  color:var(--forest);
+
+  font-size:
+    clamp(38px,5vw,64px);
+
+  line-height:.97;
+
+  letter-spacing:-3.5px;
+
+  font-weight:950;
+
+}
+
+
+.text{
+
+  max-width:770px;
+
+  margin-top:18px;
+
+  color:var(--muted);
+
+  font-size:14px;
+
+}
+
+
+/* =========================================================
+   QUICK INFO
+========================================================= */
+
+.quick{
+
+  position:relative;
+
+  z-index:20;
+
+  margin-top:-58px;
+
+}
+
+
+.quick-card{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  overflow:hidden;
+
+  border-radius:30px;
+
+  background:white;
+
+  box-shadow:var(--shadow);
+
+}
+
+
+.quick-item{
+
+  padding:
+    27px
+    15px;
+
+  text-align:center;
+
+  border-right:
+    1px solid
+    var(--line);
+
+}
+
+
+.quick-item:last-child{
+
+  border-right:0;
+
+}
+
+
+.quick-item strong{
+
+  display:block;
+
+  color:var(--leaf);
+
+  font-size:24px;
+
+  line-height:1.2;
+
+  font-weight:950;
+
+}
+
+
+.quick-item span{
+
+  display:block;
+
+  margin-top:5px;
+
+  color:var(--muted);
+
+  font-size:11px;
+
+}
+
+
+/* =========================================================
+   01 INTRO
+========================================================= */
+
+.intro{
+
+  background:#f5f8f3;
+
+}
+
+
+.intro-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    .92fr
+    1.08fr;
+
+  gap:65px;
+
+  align-items:center;
+
+}
+
+
+.intro-photo{
+
+  height:600px;
+
+  position:relative;
+
+  overflow:hidden;
+
+  border-radius:35px;
+
+  box-shadow:var(--shadow);
+
+}
+
+
+.intro-photo img{
+
+  width:100%;
+
+  height:100%;
+
+}
+
+
+.photo-label{
+
+  position:absolute;
+
+  left:20px;
+
+  bottom:20px;
+
+  padding:
+    12px
+    16px;
+
+  color:var(--forest);
+
+  border-radius:17px;
+
+  background:
+    rgba(255,255,255,.92);
+
+  backdrop-filter:
+    blur(12px);
+
+  font-size:11px;
+
+  font-weight:900;
+
+}
+
+
+.intro-copy p{
+
+  margin-top:16px;
+
+  color:var(--muted);
+
+  font-size:14px;
+
+}
+
+
+.quote{
+
+  margin-top:27px;
+
+  padding:
+    21px
+    23px;
+
+  border-left:
+    5px solid
+    var(--gold);
+
+  border-radius:
+    0
+    19px
+    19px
+    0;
+
+  background:white;
+
+  color:var(--forest);
+
+  font-weight:850;
+
+}
+
+
+/* =========================================================
+   02 FOREST WALK
+========================================================= */
+
+.forest{
+
+  color:white;
+
+  background:
+
+    radial-gradient(
+      circle at 88% 8%,
+      rgba(191,219,145,.16),
+      transparent 28%
+    ),
+
+    linear-gradient(
+      135deg,
+      #163e2b,
+      #071c13
+    );
+
+}
+
+
+.forest .label{
+
+  color:#dce9b8;
+
+}
+
+
+.forest .title{
+
+  color:white;
+
+}
+
+
+.forest .text{
+
+  color:#c8d9d0;
+
+}
+
+
+.forest-layout{
+
+  margin-top:46px;
+
+  display:grid;
+
+  grid-template-columns:
+    1.25fr
+    .75fr;
+
+  gap:20px;
+
+}
+
+
+.forest-large{
+
+  min-height:570px;
+
+  position:relative;
+
+  overflow:hidden;
+
+  border-radius:34px;
+
+}
+
+
+.forest-large img{
+
+  width:100%;
+
+  height:100%;
+
+}
+
+
+.forest-large::after{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+
+    linear-gradient(
+      transparent 35%,
+      rgba(4,20,13,.94)
+    );
+
+}
+
+
+.forest-large-content{
+
+  position:absolute;
+
+  left:29px;
+
+  right:29px;
+
+  bottom:27px;
+
+  z-index:2;
+
+}
+
+
+.forest-large-content h3{
+
+  font-size:39px;
+
+  line-height:1;
+
+}
+
+
+.forest-large-content p{
+
+  margin-top:8px;
+
+  color:#d4e0da;
+
+  font-size:12px;
+
+}
+
+
+.forest-side{
+
+  display:grid;
+
+  grid-template-rows:
+    1fr
+    1fr;
+
+  gap:20px;
+
+}
+
+
+.forest-small{
+
+  position:relative;
+
+  overflow:hidden;
+
+  border-radius:29px;
+
+}
+
+
+.forest-small img{
+
+  width:100%;
+
+  height:100%;
+
+}
+
+
+.forest-small::after{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+
+    linear-gradient(
+      transparent 30%,
+      rgba(4,20,13,.94)
+    );
+
+}
+
+
+.forest-small-content{
+
+  position:absolute;
+
+  left:21px;
+
+  right:21px;
+
+  bottom:19px;
+
+  z-index:2;
+
+}
+
+
+.forest-small-content h3{
+
+  font-size:22px;
+
+}
+
+
+.forest-small-content p{
+
+  margin-top:3px;
+
+  color:#cfddd7;
+
+  font-size:11px;
+
+}
+
+
+/* =========================================================
+   03 ANISE TREE
+========================================================= */
+
+.tree{
+
+  background:
+    var(--cream);
+
+}
+
+
+.tree-layout{
+
+  margin-top:45px;
+
+  display:grid;
+
+  grid-template-columns:
+    .8fr
+    1.2fr;
+
+  gap:28px;
+
+  align-items:stretch;
+
+}
+
+
+.tree-card{
+
+  padding:
+    38px;
+
+  border-radius:31px;
+
+  background:
+    white;
+
+  box-shadow:
+    0 12px 38px
+    rgba(55,61,32,.07);
+
+}
+
+
+.tree-symbol{
+
+  color:
+    #c3d09c;
+
+  font-size:82px;
+
+  line-height:.8;
+
+  font-weight:950;
+
+}
+
+
+.tree-card h3{
+
+  margin-top:18px;
+
+  color:var(--forest);
+
+  font-size:33px;
+
+  line-height:1.04;
+
+}
+
+
+.tree-card p{
+
+  margin-top:15px;
+
+  color:var(--muted);
+
+  font-size:13px;
+
+}
+
+
+.tree-facts{
+
+  margin-top:24px;
+
+  display:grid;
+
+  gap:10px;
+
+}
+
+
+.tree-fact{
+
+  padding:
+    13px
+    15px;
+
+  border-radius:16px;
+
+  background:
+    var(--anise-light);
+
+}
+
+
+.tree-fact strong{
+
+  color:var(--forest);
+
+}
+
+
+.tree-photo{
+
+  min-height:540px;
+
+  overflow:hidden;
+
+  border-radius:32px;
+
+}
+
+
+.tree-photo img{
+
+  width:100%;
+
+  height:100%;
+
+}
+
+
+/* =========================================================
+   04 ANISE FRUIT
+========================================================= */
+
+.fruit{
+
+  background:white;
+
+}
+
+
+.fruit-layout{
+
+  margin-top:45px;
+
+  display:grid;
+
+  grid-template-columns:
+    1.08fr
+    .92fr;
+
+  gap:22px;
+
+}
+
+
+.fruit-photo{
+
+  min-height:530px;
+
+  overflow:hidden;
+
+  border-radius:31px;
+
+  background:#f0eadb;
+
+}
+
+
+.fruit-photo img{
+
+  width:100%;
+
+  height:100%;
+
+  object-fit:cover;
+
+}
+
+
+.fruit-content{
+
+  padding:
+    36px;
+
+  border-radius:31px;
+
+  background:
+    #f1f5df;
+
+}
+
+
+.star{
+
+  width:100px;
+
+  height:100px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  border-radius:50%;
+
+  background:
+    #dde8ba;
+
+  color:var(--forest);
+
+  font-size:51px;
+
+}
+
+
+.fruit-content h3{
+
+  margin-top:20px;
+
+  color:var(--forest);
+
+  font-size:35px;
+
+  line-height:1.04;
+
+}
+
+
+.fruit-content p{
+
+  margin-top:14px;
+
+  color:var(--muted);
+
+  font-size:13px;
+
+}
+
+
+.fruit-points{
+
+  margin-top:24px;
+
+  display:grid;
+
+  gap:11px;
+
+}
+
+
+.fruit-point{
+
+  display:flex;
+
+  gap:12px;
+
+  padding:
+    14px
+    16px;
+
+  border-radius:17px;
+
+  background:white;
+
+}
+
+
+.fruit-point-icon{
+
+  font-size:23px;
+
+}
+
+
+.fruit-point strong{
+
+  color:var(--forest);
+
+}
+
+
+.fruit-point p{
+
+  margin-top:2px;
+
+  font-size:11px;
+
+}
+
+
+/* =========================================================
+   05 SEASONS
+========================================================= */
+
+.seasons{
+
+  background:
+    #eaf2e4;
+
+}
+
+
+.season-grid{
+
+  margin-top:46px;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:15px;
+
+}
+
+
+.season{
+
+  min-height:260px;
+
+  padding:25px;
+
+  border-radius:27px;
+
+  background:white;
+
+  border:
+    1px solid
+    #dce6d7;
+
+  position:relative;
+
+  overflow:hidden;
+
+}
+
+
+.season-number{
+
+  color:#d9e5d2;
+
+  font-size:69px;
+
+  line-height:.8;
+
+  font-weight:950;
+
+}
+
+
+.season h3{
+
+  margin-top:19px;
+
+  color:var(--forest);
+
+  font-size:20px;
+
+}
+
+
+.season p{
+
+  margin-top:7px;
+
+  color:var(--muted);
+
+  font-size:12px;
+
+}
+
+
+.season-tag{
+
+  position:absolute;
+
+  right:20px;
+
+  top:20px;
+
+  padding:
+    6px
+    9px;
+
+  border-radius:50px;
+
+  color:var(--forest);
+
+  background:
+    var(--anise-light);
+
+  font-size:9px;
+
+  font-weight:950;
+
+}
+
+
+/* =========================================================
+   06 EXPERIENCE
+========================================================= */
+
+.experience{
+
+  background:
+    var(--cream);
+
+}
+
+
+.experience-grid{
+
+  margin-top:45px;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:19px;
+
+}
+
+
+.experience-card{
+
+  overflow:hidden;
+
+  border-radius:28px;
+
+  background:white;
+
+  box-shadow:
+    0 9px 31px
+    rgba(69,59,28,.07);
+
+}
+
+
+.experience-photo{
+
+  height:260px;
+
+  overflow:hidden;
+
+}
+
+
+.experience-photo img{
+
+  width:100%;
+
+  height:100%;
+
+  transition:.55s;
+
+}
+
+
+.experience-card:hover
+.experience-photo img{
+
+  transform:
+    scale(1.06);
+
+}
+
+
+.experience-body{
+
+  padding:
+    23px;
+
+}
+
+
+.exp-no{
+
+  color:var(--leaf);
+
+  font-size:9px;
+
+  font-weight:950;
+
+  letter-spacing:1.5px;
+
+}
+
+
+.experience-body h3{
+
+  margin-top:6px;
+
+  color:var(--forest);
+
+  font-size:20px;
+
+  line-height:1.08;
+
+}
+
+
+.experience-body p{
+
+  margin-top:7px;
+
+  color:var(--muted);
+
+  font-size:12px;
+
+}
+
+
+/* =========================================================
+   07 CULTURE
+========================================================= */
+
+.culture{
+
+  color:white;
+
+  background:
+    var(--forest-dark);
+
+}
+
+
+.culture .label{
+
+  color:#d9e8b8;
+
+}
+
+
+.culture .title{
+
+  color:white;
+
+}
+
+
+.culture .text{
+
+  color:#c5d7cd;
+
+}
+
+
+.culture-grid{
+
+  margin-top:44px;
+
+  display:grid;
+
+  grid-template-columns:
+    1fr
+    1fr;
+
+  gap:20px;
+
+}
+
+
+.culture-card{
+
+  padding:
+    30px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.08);
+
+  border-radius:27px;
+
+  background:
+    rgba(255,255,255,.055);
+
+}
+
+
+.culture-icon{
+
+  width:55px;
+
+  height:55px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  border-radius:17px;
+
+  background:
+    rgba(213,232,181,.12);
+
+  font-size:25px;
+
+}
+
+
+.culture-card h3{
+
+  margin-top:16px;
+
+  color:white;
+
+  font-size:21px;
+
+}
+
+
+.culture-card p{
+
+  margin-top:7px;
+
+  color:#bcd0c6;
+
+  font-size:12px;
+
+}
+
+
+/* =========================================================
+   08 TOURISM DEVELOPMENT
+========================================================= */
+
+.development{
+
+  background:white;
+
+}
+
+
+.development-box{
+
+  margin-top:44px;
+
+  max-width:900px;
+
+  padding:38px;
+
+  border-radius:31px;
+
+  background:
+    #f5f8ed;
+
+  border:
+    1px solid
+    #e1e8d8;
+
+}
+
+
+.development-box p{
+
+  color:var(--muted);
+
+  font-size:14px;
+
+}
+
+
+.development-box p + p{
+
+  margin-top:15px;
+
+}
+
+
+.development-highlight{
+
+  margin-top:24px;
+
+  padding:
+    18px
+    20px;
+
+  border-radius:17px;
+
+  background:white;
+
+  color:var(--forest);
+
+  font-size:13px;
+
+  font-weight:850;
+
+}
+
+
+/* =========================================================
+   09 TIMELINE
+========================================================= */
+
+.timeline-section{
+
+  background:
+    #f1eee5;
+
+}
+
+
+.timeline{
+
+  max-width:870px;
+
+  margin:47px auto 0;
+
+  position:relative;
+
+}
+
+
+.timeline::before{
+
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  bottom:0;
+
+  left:18px;
+
+  width:3px;
+
+  background:#d8dfd1;
+
+}
+
+
+.timeline-item{
+
+  position:relative;
+
+  padding-left:67px;
+
+  margin-bottom:41px;
+
+}
+
+
+.timeline-item:last-child{
+
+  margin-bottom:0;
+
+}
+
+
+.timeline-dot{
+
+  position:absolute;
+
+  left:0;
+  top:1px;
+
+  width:39px;
+
+  height:39px;
+
+  border:
+    7px solid
+    #dfe8d8;
+
+  border-radius:50%;
+
+  background:
+    var(--leaf);
+
+}
+
+
+.timeline-year{
+
+  color:var(--leaf);
+
+  font-size:11px;
+
+  font-weight:950;
+
+  letter-spacing:1.3px;
+
+}
+
+
+.timeline-item h3{
+
+  margin-top:3px;
+
+  color:var(--forest);
+
+  font-size:21px;
+
+}
+
+
+.timeline-item p{
+
+  margin-top:4px;
+
+  color:var(--muted);
+
+  font-size:13px;
+
+}
+
+
+/* =========================================================
+   10 DATA
+========================================================= */
+
+.data{
+
+  background:
+    #eaf1e6;
+
+}
+
+
+.data-table{
+
+  margin-top:43px;
+
+  overflow:hidden;
+
+  border-radius:30px;
+
+  background:white;
+
+  box-shadow:var(--shadow);
+
+}
+
+
+.data-row{
+
+  display:grid;
+
+  grid-template-columns:
+    245px
+    1fr;
+
+  border-bottom:
+    1px solid
+    var(--line);
+
+}
+
+
+.data-row:last-child{
+
+  border-bottom:0;
+
+}
+
+
+.data-key{
+
+  padding:
+    18px
+    22px;
+
+  color:var(--forest);
+
+  background:
+    #f3f7ef;
+
+  font-size:12px;
+
+  font-weight:950;
+
+}
+
+
+.data-value{
+
+  padding:
+    18px
+    22px;
+
+  color:var(--text);
+
+  font-size:13px;
+
+}
+
+
+/* =========================================================
+   11 GALLERY
+========================================================= */
+
+.gallery{
+
+  background:white;
+
+}
+
+
+.gallery-grid{
+
+  margin-top:44px;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(4,1fr);
+
+  grid-auto-rows:220px;
+
+  gap:13px;
+
+}
+
+
+.gallery-item{
+
+  position:relative;
+
+  overflow:hidden;
+
+  border-radius:20px;
+
+}
+
+
+.gallery-item.big{
+
+  grid-column:span 2;
+
+  grid-row:span 2;
+
+}
+
+
+.gallery-item.wide{
+
+  grid-column:span 2;
+
+}
+
+
+.gallery-item img{
+
+  width:100%;
+
+  height:100%;
+
+  transition:.6s;
+
+}
+
+
+.gallery-item:hover img{
+
+  transform:
+    scale(1.06);
+
+}
+
+
+.gallery-item::after{
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+    linear-gradient(
+      transparent 47%,
+      rgba(0,0,0,.68)
+    );
+
+}
+
+
+.gallery-caption{
+
+  position:absolute;
+
+  left:14px;
+
+  right:14px;
+
+  bottom:12px;
+
+  z-index:2;
+
+  color:white;
+
+  font-size:11px;
+
+  font-weight:850;
+
+}
+
+
+/* =========================================================
+   SOURCES
+========================================================= */
+
+.sources{
+
+  color:#cedbd2;
+
+  background:
+    #071a12;
+
+}
+
+
+.sources .label{
+
+  color:#d9e8b8;
+
+}
+
+
+.sources .title{
+
+  color:white;
+
+}
+
+
+.source-list{
+
+  margin-top:31px;
+
+  display:grid;
+
+  gap:11px;
+
+}
+
+
+.source{
+
+  padding:
+    17px
+    18px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.08);
+
+  border-radius:18px;
+
+  background:
+    rgba(255,255,255,.045);
+
+}
+
+
+.source a{
+
+  color:#dce9bb;
+
+  font-size:13px;
+
+  font-weight:850;
+
+  word-break:break-word;
+
+}
+
+
+.source p{
+
+  margin-top:4px;
+
+  color:#91a79d;
+
+  font-size:11px;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+
+  padding:
+    31px
+    5%;
+
+  color:#8da49a;
+
+  background:#03100b;
+
+}
+
+
+.footer-inner{
+
+  width:min(1120px,92%);
+
+  margin:auto;
+
+}
+
+
+.footer-title{
+
+  color:white;
+
+  font-weight:950;
+
+}
+
+
+.footer-sub{
+
+  margin-top:2px;
+
+  font-size:10px;
+
+}
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+.top{
+
+  position:fixed;
+
+  right:20px;
+
+  bottom:20px;
+
+  width:47px;
+
+  height:47px;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  border-radius:50%;
+
+  color:white;
+
+  background:
+    var(--leaf);
+
+  box-shadow:
+    0 10px 25px
+    rgba(0,0,0,.22);
+
+  opacity:0;
+
+  visibility:hidden;
+
+  transform:
+    translateY(12px);
+
+  transition:.3s;
+
+  z-index:999;
+
+}
+
+
+.top.show{
+
+  opacity:1;
+
+  visibility:visible;
+
+  transform:none;
+
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:950px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .quick-card{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .quick-item:nth-child(2){
+    border-right:0;
+  }
+
+  .intro-grid{
+    grid-template-columns:1fr;
+  }
+
+  .intro-photo{
+    height:450px;
+  }
+
+  .forest-layout{
+    grid-template-columns:1fr;
+  }
+
+  .forest-large{
+    min-height:480px;
+  }
+
+  .tree-layout,
+  .fruit-layout{
+    grid-template-columns:1fr;
+  }
+
+  .tree-photo,
+  .fruit-photo{
+    min-height:430px;
+  }
+
+  .season-grid{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .experience-grid{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .culture-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .gallery-grid{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .gallery-item.big{
+    grid-column:span 2;
+    grid-row:span 1;
+  }
+
+  .gallery-item.wide{
+    grid-column:span 2;
+  }
+
+}
+
+
+@media(max-width:620px){
+
+  section{
+    padding:72px 0;
+  }
+
+  .hero-content{
+    padding:
+      135px
+      0
+      120px;
+  }
+
+  .hero h1{
+    font-size:54px;
+    letter-spacing:-3px;
+  }
+
+  .hero-description{
+    font-size:14px;
+  }
+
+  .quick-item{
+    padding:
+      21px
+      9px;
+  }
+
+  .quick-item strong{
+    font-size:20px;
+  }
+
+  .intro-photo{
+    height:360px;
+  }
+
+  .forest-large{
+    min-height:390px;
+  }
+
+  .forest-large-content h3{
+    font-size:31px;
+  }
+
+  .tree-card,
+  .fruit-content,
+  .development-box{
+    padding:27px;
+  }
+
+  .tree-symbol{
+    font-size:62px;
+  }
+
+  .season-grid,
+  .experience-grid,
+  .culture-grid{
+    grid-template-columns:1fr;
+  }
+
+  .experience-photo{
+    height:240px;
+  }
+
+  .data-row{
+    grid-template-columns:1fr;
+  }
+
+  .data-key{
+    padding-bottom:7px;
+  }
+
+  .data-value{
+    padding-top:7px;
+  }
+
+  .gallery-grid{
+    grid-auto-rows:170px;
+  }
+
+  .footer-inner{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<header class="nav" id="nav">
+
+
+  <div class="nav-inner">
+
+
+    <a
+      href="./danhlamthangcanh.html"
+      class="logo">
+
+      🌿 LẠNG SƠN
+
+    </a>
+
+
+    <nav class="nav-links">
+
+
+      <a href="./danhlamthangcanh.html">
+        Danh sách điểm đến
+      </a>
+
+
+      <a href="#tong-quan">
+        Tổng quan
+      </a>
+
+
+      <a href="#rung">
+        Rừng hồi
+      </a>
+
+
+      <a href="#cay-hoi">
+        Cây hồi
+      </a>
+
+
+      <a href="#mua-hoi">
+        Mùa hồi
+      </a>
+
+
+      <a href="#trai-nghiem">
+        Trải nghiệm
+      </a>
+
+
+      <a href="#thong-tin">
+        Thông tin
+      </a>
+
+
+    </nav>
+
+
+  </div>
+
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+
+  <div class="hero-content">
+
+
+    <div class="hero-tag">
+
+      🌿 ĐIỂM THAM QUAN · TUYẾN 2
+
+    </div>
+
+
+    <h1>
+
+      RỪNG HỒI
+
+      <span>
+        XỨ LẠNG
+      </span>
+
+    </h1>
+
+
+    <p class="hero-description">
+
+      Một không gian rừng xanh đặc trưng của Xứ Lạng,
+      nơi những cây hồi nối nhau trên sườn núi,
+      hương thơm của quả hồi gắn với đời sống,
+      sinh kế và bản sắc của người dân địa phương.
+
+    </p>
+
+
+    <div class="hero-actions">
+
+
+      <a
+        href="#tong-quan"
+        class="btn btn-primary">
+
+        Khám phá rừng hồi ↓
+
+      </a>
+
+
+      <a
+        href="./danhlamthangcanh.html"
+        class="btn btn-glass">
+
+        ← Về danh sách điểm đến
+
+      </a>
+
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+<!-- =========================================================
+     QUICK INFO
+========================================================= -->
+
+<div class="container quick">
+
+
+  <div class="quick-card">
+
+
+    <div class="quick-item">
+
+      <strong>
+        🌿
+      </strong>
+
+      <span>
+        Rừng hồi đặc trưng Xứ Lạng
+      </span>
+
+    </div>
+
+
+    <div class="quick-item">
+
+      <strong>
+        ~4 ha
+      </strong>
+
+      <span>
+        Quy mô điểm tham quan
+      </span>
+
+    </div>
+
+
+    <div class="quick-item">
+
+      <strong>
+        07
+      </strong>
+
+      <span>
+        Hộ trồng hồi tại điểm tham quan
+      </span>
+
+    </div>
+
+
+    <div class="quick-item">
+
+      <strong>
+        ⭐
+      </strong>
+
+      <span>
+        Hoa hồi và sản vật địa phương
+      </span>
+
+    </div>
+
+
+  </div>
+
+</div>
+
+
+<!-- =========================================================
+     01 TỔNG QUAN
+========================================================= -->
+
+<section
+  class="intro"
+  id="tong-quan">
+
+
+  <div class="container intro-grid">
+
+
+    <div class="intro-photo">
+
+
+      <img
+        src="https://vanquan.langson.gov.vn/upload/105421/fck/ubndhvq/2024_06_25_00_55_5419.jpg"
+        alt="Lối đi lên Rừng Hồi Xứ Lạng"
+        loading="eager"
+        referrerpolicy="no-referrer">
+
+
+      <div class="photo-label">
+
+        Rừng Hồi Xứ Lạng
+
+      </div>
+
+
+    </div>
+
+
+    <div class="intro-copy">
+
+
+      <div class="label">
+
+        01 · Tổng quan
+
+      </div>
+
+
+      <h2 class="title">
+
+        Nơi hương hồi
+        bắt đầu từ cánh rừng.
+
+      </h2>
+
+
+      <p>
+
+        Rừng Hồi Xứ Lạng là điểm tham quan
+        trên tuyến du lịch số 2 của Công viên địa chất
+        Lạng Sơn với chủ đề “Hành trình về miền thiên giới”.
+
+      </p>
+
+
+      <p>
+
+        Theo thông tin của huyện Văn Quan, điểm tham quan
+        nằm tại khu vực thôn Bình Đãng A, xã An Sơn
+        trong hệ thống hành chính cũ, với khoảng 7 hộ
+        trồng hồi và diện tích gần 4 ha.
+
+      </p>
+
+
+      <p>
+
+        Hồ sơ dự án sau sắp xếp hành chính ghi địa điểm
+        thực hiện của công trình “Xây dựng cơ sở vật chất
+        điểm tham quan rừng Hồi xứ Lạng” là xã Yên Phúc,
+        tỉnh Lạng Sơn.
+
+      </p>
+
+
+      <div class="quote">
+
+        Rừng hồi không chỉ tạo nên một cảnh quan đẹp;
+        nơi đây còn kể câu chuyện về một sản vật gắn
+        với kinh tế, đời sống và bản sắc Xứ Lạng.
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+<!-- =========================================================
+     02 RỪNG
+========================================================= -->
+
+<section
+  class="forest"
+  id="rung">
+
+
+  <div class="container">
+
+
+    <div class="label">
+
+      02 · Không gian rừng
+
+    </div>
+
+
+    <h2 class="title">
+
+      Những triền núi
+      phủ màu xanh của hồi.
+
+    </h2>
+
+
+    <p class="text">
+
+      Cây hồi thường xanh quanh năm, tạo nên một cảnh quan
+      rừng sản xuất khác biệt. Từ bên dưới chân đồi,
+      du khách có thể đi theo lối lên để quan sát những
+      hàng cây và không gian rừng hồi.
+
+    </p>
+
+
+    <div class="forest-layout">
+
+
+      <article class="forest-large">
+
+
+        <img
+          src="https://cdn.shopify.com/s/files/1/0811/6289/5653/t/6/assets/star_anise_lang_son.jpg?v=1776676293"
+          alt="Rừng cây hồi trên sườn đồi"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+
+        <div class="forest-large-content">
+
+
+          <h3>
+
+            🌳 Rừng hồi xanh quanh năm
+
+          </h3>
+
+
+          <p>
+
+            Những tán hồi tạo thành một không gian
+            xanh đặc trưng của vùng núi phía Bắc.
+
+          </p>
+
+
+        </div>
+
+
+      </article>
+
+
+      <div class="forest-side">
+
+
+        <article class="forest-small">
+
+
+          <img
+            src="https://vanquan.langson.gov.vn/upload/105421/fck/ubndhvq/2024_06_25_00_55_5419.jpg"
+            alt="Lối đi lên Rừng Hồi Xứ Lạng"
+            loading="lazy"
+            referrerpolicy="no-referrer">
+
+
+          <div class="forest-small-content">
+
+
+            <h3>
+              🥾 Lối lên rừng
+            </h3>
+
+
+            <p>
+
+              Tuyến đường lên điểm tham quan
+              được địa phương chỉnh trang.
+
+            </p>
+
+
+          </div>
+
+
+        </article>
+
+
+        <article class="forest-small">
+
+
+          <img
+            src="https://k-agriculture.com/wp-content/uploads/2022/08/IMG_0126.jpg"
+            alt="Rừng hồi trên địa hình đồi núi"
+            loading="lazy"
+            referrerpolicy="no-referrer">
+
+
+          <div class="forest-small-content">
+
+
+            <h3>
+              🌿 Triền đồi xanh
+            </h3>
+
+
+            <p>
+
+              Hồi phát triển tốt ở các vùng núi
+              thấp và trung bình.
+
+            </p>
+
+
+          </div>
+
+
+        </article>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+<!-- =========================================================
+     03 CÂY HỒI
+========================================================= -->
+
+<section
+  class="tree"
+  id="cay-hoi">
+
+
+  <div class="container">
+
+
+    <div class="label">
+
+      03 · Cây hồi
+
+    </div>
+
+
+    <h2 class="title">
+
+      Một loài cây
+      trở thành biểu tượng.
+
+    </h2>
+
+
+    <p class="text">
+
+      Cây hồi còn được gọi là Đại hồi hoặc Hồi tám cánh.
+      Đây là loài cây thân gỗ thường xanh, thích hợp
+      với điều kiện khí hậu và địa hình của Lạng Sơn.
+
+    </p>
+
+
+    <div class="tree-layout">
+
+
+      <article class="tree-card">
+
+
+        <div class="tree-symbol">
+          8
+        </div>
+
+
+        <h3>
+
+          Cây hồi
+          tám cánh.
+
+        </h3>
+
+
+        <p>
+
+          Quả hồi có hình sao và thường gồm 5–8 cánh.
+          Trong cách gọi thông thường ở Việt Nam,
+          quả hồi thường được gọi là “hoa hồi”.
+
+        </p>
+
+
+        <div class="tree-facts">
+
+
+          <div class="tree-fact">
+
+            <strong>
+              🌳 Chiều cao:
+            </strong>
+
+            cây trưởng thành khoảng 10–15 m.
+
+          </div>
+
+
+          <div class="tree-fact">
+
+            <strong>
+              🍃 Lá:
+            </strong>
+
+            lá xanh quanh năm.
+
+          </div>
+
+
+          <div class="tree-fact">
+
+            <strong>
+              ⭐ Quả:
+            </strong>
+
+            hình sao, thường 5–8 cánh.
+
+          </div>
+
+
+          <div class="tree-fact">
+
+            <strong>
+              ⛰️ Độ cao thích hợp:
+            </strong>
+
+            khoảng 200–800 m so với mực nước biển.
+
+          </div>
+
+
+        </div>
+
+
+      </article>
+
+
+      <div class="tree-photo">
+
+
+        <img
+          src="https://nongnghiephuuco.vn/stores/news_dataimages/2025/012025/27/12/9124-3-120250127123819.jpg?rt=20250127123820"
+          alt="Quả hồi và cây hồi Lạng Sơn"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+<!-- =========================================================
+     04 QUẢ HỒI
+========================================================= -->
+
+<section class="fruit">
+
+
+  <div class="container">
+
+
+    <div class="label">
+
+      04 · Hương hồi
+
+    </div>
+
+
+    <h2 class="title">
+
+      Từ một quả sao
+      đến cả một chuỗi giá trị.
+
+    </h2>
+
+
+    <div class="fruit-layout">
+
+
+      <div class="fruit-photo">
+
+
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Dried_Star_Anise_Fruit_Seeds.jpg/960px-Dried_Star_Anise_Fruit_Seeds.jpg"
+          alt="Quả hồi khô"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+
+      </div>
+
+
+      <div class="fruit-content">
+
+
+        <div class="star">
+          ⭐
+        </div>
+
+
+        <h3>
+
+          Hương thơm
+          của Xứ Lạng.
+
+        </h3>
+
+
+        <p>
+
+          Hoa hồi Lạng Sơn được bảo hộ bằng Chỉ dẫn địa lý
+          từ năm 2007. Sản phẩm có giá trị trong ẩm thực,
+          dược liệu, hương liệu và nhiều ngành chế biến.
+
+        </p>
+
+
+        <div class="fruit-points">
+
+
+          <div class="fruit-point">
+
+
+            <div class="fruit-point-icon">
+              🍜
+            </div>
+
+
+            <div>
+
+              <strong>
+                Ẩm thực
+              </strong>
+
+              <p>
+
+                Là nguyên liệu tạo nên mùi thơm đặc trưng
+                cho nhiều món ăn.
+
+              </p>
+
+            </div>
+
+
+          </div>
+
+
+          <div class="fruit-point">
+
+
+            <div class="fruit-point-icon">
+              🧴
+            </div>
+
+
+            <div>
+
+              <strong>
+                Tinh dầu
+              </strong>
+
+              <p>
+
+                Quả, lá và các bộ phận của cây có thể
+                được sử dụng trong sản xuất tinh dầu.
+
+              </p>
+
+            </div>
+
+
+          </div>
+
+
+          <div class="fruit-point">
+
+
+            <div class="fruit-point-icon">
+              📦
+            </div>
+
+
+            <div>
+
+              <strong>
+                Chế biến
+              </strong>
+
+              <p>
+
+                Hồi được tiêu thụ dưới dạng tươi, khô
+                và các sản phẩm chế biến.
+
+              </p>
+
+            </div>
+
+
+          </div>
+
+
+          <div class="fruit-point">
+
+
+            <div class="fruit-point-icon">
+              🌍
+            </div>
+
+
+            <div>
+
+              <strong>
+                Thị trường
+              </strong>
+
+              <p>
+
+                Sản phẩm hồi Lạng Sơn đã có mặt
+                tại nhiều thị trường quốc tế.
+
+              </p>
+
+            </div>
+
+
+          </div>
+
+
+        </div>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+<!-- =========================================================
+     05 MÙA HỒI
+========================================================= -->
+
+<section
+  class="seasons"
+  id="mua-hoi">
+
+
+  <div class="container">
+
+
+    <div class="label">
+
+      05 · Mùa hồi
+
+    </div>
+
+
+    <h2 class="title">
+
+      Rừng hồi
+      thay đổi theo mùa.
+
+    </h2>
+
+
+    <p class="text">
+
+      Cây hồi có các mùa hoa, quả và thu hoạch khác nhau.
+      Thời điểm cụ thể có thể thay đổi theo điều kiện
+      thời tiết và mùa vụ từng năm.
+
+    </p>
+
+
+    <div class="season-grid">
+
+
+      <article class="season">
+
+
+        <div class="season-number">
+          01
+        </div>
+
+
+        <span class="season-tag">
+          HOA
+        </span>
+
+
+        <h3>
+          Mùa hoa
+        </h3>
+
+
+        <p>
+
+          Tài liệu địa phương ghi nhận hoa hồi
+          thường xuất hiện trong khoảng tháng 3–5.
+
+        </p>
+
+
+      </article>
+
+
+      <article class="season">
+
+
+        <div class="season-number">
+          02
+        </div>
+
+
+        <span class="season-tag">
+          QUẢ
+        </span>
+
+
+        <h3>
+          Mùa quả
+        </h3>
+
+
+        <p>
+
+          Quả hồi thường được ghi nhận trong khoảng
+          tháng 6–9.
+
+        </p>
+
+
+      </article>
+
+
+      <article class="season">
+
+
+        <div class="season-number">
+          03
+        </div>
+
+
+        <span class="season-tag">
+          THU HOẠCH
+        </span>
+
+
+        <h3>
+          Vụ hồi chính
+        </h3>
+
+
+        <p>
+
+          Tài liệu du lịch Văn Quan ghi vụ hồi chính
+          vào khoảng tháng 7–9 âm lịch.
+
+        </p>
+
+
+      </article>
+
+
+      <article class="season">
+
+
+        <div class="season-number">
+          04
+        </div>
+
+
+        <span class="season-tag">
+          TỨ QUÝ
+        </span>
+
+
+        <h3>
+          Vụ trái mùa
+        </h3>
+
+
+        <p>
+
+          Hồi tứ quý được địa phương ghi nhận
+          có một vụ riêng trong năm.
+
+        </p>
+
+
+      </article>
+
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+<!-- =========================================================
+     06 TRẢI NGHIỆM
+========================================================= -->
+
+<section
+  class="experience"
+  id="trai-nghiem">
+
+
+  <div class="container">
+
+
+    <div class="label">
+
+      06 · Trải nghiệm
+
+    </div>
+
+
+    <h2 class="title">
+
+      Đến rừng hồi
+      để nhìn, ngửi và trải nghiệm.
+
+    </h2>
+
+
+    <p class="text">
+
+      Điểm tham quan được định hướng phát triển theo
+      du lịch sinh thái, cho phép du khách trải nghiệm
+      không gian rừng và tìm hiểu câu chuyện phía sau
+      sản vật đặc trưng của Lạng Sơn.
+
+    </p>
+
+
+    <div class="experience-grid">
+
+
+      <article class="experience-card">
+
+
+        <div class="experience-photo">
+
+
+          <img
+            src="https://vanquan.langson.gov.vn/upload/105421/fck/ubndhvq/2024_06_25_00_55_5419.jpg"
+            alt="Đường lên Rừng Hồi Xứ Lạng"
+            loading="lazy"
+            referrerpolicy="no-referrer">
+
+
+        </div>
+
+
+        <div class="experience-body">
+
+
+          <div class="exp-no">
+            TRẢI NGHIỆM 01
+          </div>
+
+
+          <h3>
+            🥾 Đi bộ trong rừng hồi
+          </h3>
+
+
+          <p>
+
+            Đi theo lối lên điểm tham quan,
+            quan sát tán cây và cảnh quan rừng.
+
+          </p>
+
+
+        </div>
+
+
+      </article>
+
+
+      <article class="experience-card">
+
+
+        <div class="experience-photo">
+
+
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Dried_Star_Anise_Fruit_Seeds.jpg/960px-Dried_Star_Anise_Fruit_Seeds.jpg"
+            alt="Quả hồi khô"
+            loading="lazy"
+            referrerpolicy="no-referrer">
+
+
+        </div>
+
+
+        <div class="experience-body">
+
+
+          <div class="exp-no">
+            TRẢI NGHIỆM 02
+          </div>
+
+
+          <h3>
+            ⭐ Tìm hiểu thu hái hồi
+          </h3>
+
+
+          <p>
+
+            Tìm hiểu cách người dân thu hái
+            và sơ chế quả hồi.
+
+          </p>
+
+
+        </div>
+
+
+      </article>
+
+
+      <article class="experience-card">
+
+
+        <div class="experience-photo">
+
+
+          <img
+            src="https://k-agriculture.com/wp-content/uploads/2022/08/IMG_0126.jpg"
+            alt="Rừng hồi trên vùng đồi núi"
+            loading="lazy"
+            referrerpolicy="no-referrer">
+
+
+        </div>
+
+
+        <div class="experience-body">
+
+
+          <div class="exp-no">
+            TRẢI NGHIỆM 03
+          </div>
+
+
+          <h3>
+            📸 Chụp ảnh giữa rừng
+          </h3>
+
+
+          <p>
+
+            Những triền cây xanh và ánh sáng xuyên qua
+            tán rừng tạo nên không gian chụp ảnh tự nhiên.
+
+          </p>
+
+
+        </div>
+
+
+      </article>
+
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+<!-- =========================================================
+     07 VĂN HÓA
+========================================================= -->
+
+<section class="culture">
+
+
+  <div class="container">
+
+
+    <div class="label">
+
+      07 · Văn hóa địa phương
+
+    </div>
+
+
+    <h2 class="title">
+
+      Rừng hồi không tách
+      khỏi đời sống Xứ Lạng.
+
+    </h2>
+
+
+    <p class="text">
+
+      Cây hồi đã gắn với sản xuất và đời sống của
+      người dân Lạng Sơn trong thời gian dài.
+      Ở Văn Quan, cây hồi được xác định là cây
+      lâm nghiệp chủ lực của địa phương.
+
+    </p>
+
+
+    <div class="culture-grid">
+
+
+      <article class="culture-card">
+
+
+        <div class="culture-icon">
+          🏡
+        </div>
+
+
+        <h3>
+          Sinh kế cộng đồng
+        </h3>
+
+
+        <p>
+
+          Rừng hồi đem lại nguồn thu cho các hộ gia đình,
+          đồng thời tạo nguyên liệu cho các hoạt động
+          chế biến và kinh doanh.
+
+        </p>
+
+
+      </article>
+
+
+      <article class="culture-card">
+
+
+        <div class="culture-icon">
+          🎶
+        </div>
+
+
+        <h3>
+          Văn hóa dân gian
+        </h3>
+
+
+        <p>
+
+          Văn Quan có truyền thống dân ca với các làn điệu
+          như sli, then, lượn, quan làng và cỏ lảu,
+          có tiềm năng kết hợp với du lịch cộng đồng.
+
+        </p>
+
+
+      </article>
+
+
+      <article class="culture-card">
+
+
+        <div class="culture-icon">
+          🌾
+        </div>
+
+
+        <h3>
+          Nông – lâm sản
+        </h3>
+
+
+        <p>
+
+          Hồi cùng các sản phẩm địa phương trở thành
+          một phần quan trọng của hình ảnh và kinh tế
+          vùng Văn Quan.
+
+        </p>
+
+
+      </article>
+
+
+      <article class="culture-card">
+
+
+        <div class="culture-icon">
+          🌍
+        </div>
+
+
+        <h3>
+          Câu chuyện vươn xa
+        </h3>
+
+
+        <p>
+
+          Hoa hồi Lạng Sơn được bảo hộ chỉ dẫn địa lý
+          và tiếp tục được phát triển thị trường,
+          chế biến sâu và nâng cao giá trị.
+
+        </p>
+
+
+      </article>
+
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+<!-- =========================================================
+     08 PHÁT TRIỂN DU LỊCH
+========================================================= -->
+
+<section class="development">
+
+
+  <div class="container">
+
+
+    <div class="label">
+
+      08 · Phát triển điểm đến
+
+    </div>
+
+
+    <h2 class="title">
+
+      Từ rừng sản xuất
+      đến điểm tham quan.
+
+    </h2>
+
+
+    <div class="development-box">
+
+
+      <p>
+
+        Rừng Hồi Xứ Lạng được lựa chọn làm một điểm
+        tham quan trên tuyến du lịch của Công viên địa chất
+        Lạng Sơn nhằm đưa giá trị sản xuất nông – lâm nghiệp
+        đến gần hơn với du khách.
+
+      </p>
+
+
+      <p>
+
+        Năm 2024, huyện Văn Quan tổ chức chỉnh trang
+        điểm tham quan, trong đó có cải tạo lối đi,
+        dựng chòi nghỉ và phát quang cảnh quan.
+
+      </p>
+
+
+      <p>
+
+        Hồ sơ đầu tư cho công trình cơ sở vật chất
+        điểm tham quan được phê duyệt và quyết toán
+        trong năm 2025; hồ sơ sau sắp xếp ghi địa điểm
+        thực hiện là xã Yên Phúc.
+
+      </p>
+
+
+      <div class="development-highlight">
+
+        🌿 Định hướng:
+        du lịch sinh thái + trải nghiệm nông nghiệp
+        + quảng bá đặc sản + phát triển bền vững.
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+<!-- =========================================================
+     09 DẤU MỐC
+========================================================= -->
+
+<section class="timeline-section">
+
+
+  <div class="container">
+
+
+    <div class="label">
+
+      09 · Dấu mốc
+
+    </div>
+
+
+    <h2 class="title">
+
+      Hành trình của
+      Rừng Hồi Xứ Lạng.
+
+    </h2>
+
+
+    <div class="timeline">
+
+
+      <div class="timeline-item">
+
+
+        <div class="timeline-dot"></div>
+
+
+        <div class="timeline-year">
+          TRUYỀN THỐNG
+        </div>
+
+
+        <h3>
+          Cây hồi trở thành cây chủ lực của Văn Quan
+        </h3>
+
+
+        <p>
+
+          Người dân địa phương có truyền thống trồng
+          hồi lâu đời trên các vùng đồi núi phù hợp.
+
+        </p>
+
+
+      </div>
+
+
+      <div class="timeline-item">
+
+
+        <div class="timeline-dot"></div>
+
+
+        <div class="timeline-year">
+          2007
+        </div>
+
+
+        <h3>
+          Chỉ dẫn địa lý Hoa hồi Lạng Sơn
+        </h3>
+
+
+        <p>
+
+          Sản phẩm hoa hồi Lạng Sơn được đăng ký
+          bảo hộ chỉ dẫn địa lý, tạo nền tảng cho
+          việc xây dựng thương hiệu.
+
+        </p>
+
+
+      </div>
+
+
+      <div class="timeline-item">
+
+
+        <div class="timeline-dot"></div>
+
+
+        <div class="timeline-year">
+          2021
+        </div>
+
+
+        <h3>
+          Rừng hồi được định hướng thành sản phẩm du lịch
+        </h3>
+
+
+        <p>
+
+          Huyện Văn Quan được xác định có tiềm năng
+          biến những vùng rừng hồi thành điểm trải nghiệm
+          du lịch sinh thái.
+
+        </p>
+
+
+      </div>
+
+
+      <div class="timeline-item">
+
+
+        <div class="timeline-dot"></div>
+
+
+        <div class="timeline-year">
+          2024
+        </div>
+
+
+        <h3>
+          Chỉnh trang điểm tham quan
+        </h3>
+
+
+        <p>
+
+          Địa phương huy động lực lượng chỉnh trang
+          lối lên, cảnh quan và chòi nghỉ tại Rừng Hồi Xứ Lạng.
+
+        </p>
+
+
+      </div>
+
+
+      <div class="timeline-item">
+
+
+        <div class="timeline-dot"></div>
+
+
+        <div class="timeline-year">
+          2025–2026
+        </div>
+
+
+        <h3>
+          Tiếp tục hoàn thiện cơ sở vật chất
+        </h3>
+
+
+        <p>
+
+          Dự án cơ sở vật chất điểm tham quan tiếp tục
+          được hoàn thiện trong hệ thống hành chính mới.
+
+        </p>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+<!-- =========================================================
+     10 THÔNG TIN
+========================================================= -->
+
+<section
+  class="data"
+  id="thong-tin">
+
+
+  <div class="container">
+
+
+    <div class="label">
+
+      10 · Thông tin cơ bản
+
+    </div>
+
+
+    <h2 class="title">
+
+      Rừng Hồi Xứ Lạng
+      trong vài dòng.
+
+    </h2>
+
+
+    <div class="data-table">
+
+
+      <div class="data-row">
+
+        <div class="data-key">
+          Tên địa danh
+        </div>
+
+        <div class="data-value">
+          Rừng Hồi Xứ Lạng.
+        </div>
+
+      </div>
+
+
+      <div class="data-row">
+
+        <div class="data-key">
+          Tên tiếng Anh
+        </div>
+
+        <div class="data-value">
+          Xu Lang Anise Forest.
+        </div>
+
+      </div>
+
+
+      <div class="data-row">
+
+        <div class="data-key">
+          Tuyến Công viên địa chất
+        </div>
+
+        <div class="data-value">
+          Tuyến số 2 – “Hành trình về miền thiên giới”.
+        </div>
+
+      </div>
+
+
+      <div class="data-row">
+
+        <div class="data-key">
+          Địa chỉ trong tài liệu cũ
+        </div>
+
+        <div class="data-value">
+          Thôn Bình Đãng A, xã An Sơn, huyện Văn Quan,
+          tỉnh Lạng Sơn.
+        </div>
+
+      </div>
+
+
+      <div class="data-row">
+
+        <div class="data-key">
+          Địa điểm sau sắp xếp
+        </div>
+
+        <div class="data-value">
+          Hồ sơ đầu tư cơ sở vật chất ghi địa điểm
+          thực hiện sau sắp xếp là xã Yên Phúc, tỉnh Lạng Sơn.
+        </div>
+
+      </div>
+
+
+      <div class="data-row">
+
+        <div class="data-key">
+          Quy mô điểm tham quan
+        </div>
+
+        <div class="data-value">
+          Khoảng gần 4 ha.
+        </div>
+
+      </div>
+
+
+      <div class="data-row">
+
+        <div class="data-key">
+          Số hộ trồng hồi tại điểm
+        </div>
+
+        <div class="data-value">
+          Khoảng 7 hộ.
+        </div>
+
+      </div>
+
+
+      <div class="data-row">
+
+        <div class="data-key">
+          Loại hình
+        </div>
+
+        <div class="data-value">
+          Du lịch sinh thái, tham quan rừng và trải nghiệm
+          sản vật địa phương.
+        </div>
+
+      </div>
+
+
+      <div class="data-row">
+
+        <div class="data-key">
+          Cây trồng
+        </div>
+
+        <div class="data-value">
+          Cây hồi – Illicium verum.
+        </div>
+
+      </div>
+
+
+      <div class="data-row">
+
+        <div class="data-key">
+          Đặc điểm cây
+        </div>
+
+        <div class="data-value">
+          Cây thân gỗ thường xanh; cây trưởng thành
+          có thể cao khoảng 10–15 m.
+        </div>
+
+      </div>
+
+
+      <div class="data-row">
+
+        <div class="data-key">
+          Đặc sản gắn với địa danh
+        </div>
+
+        <div class="data-value">
+          Quả hồi, hồi khô, tinh dầu hồi và các
+          sản phẩm chế biến từ hồi.
+        </div>
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     11 GALLERY
+========================================================= -->
+
+<section class="gallery">
+
+
+  <div class="container">
+
+
+    <div class="label">
+
+      11 · Thư viện ảnh
+
+    </div>
+
+
+    <h2 class="title">
+
+      Rừng hồi
+      qua nhiều góc nhìn.
+
+    </h2>
+
+
+    <p class="text">
+
+      Bộ ảnh ưu tiên những URL trực tiếp có nguồn
+      rõ ràng; ảnh chính của điểm tham quan lấy từ
+      cổng thông tin huyện Văn Quan.
+
+    </p>
+
+
+    <div class="gallery-grid">
+
+
+      <figure class="gallery-item big">
+
+
+        <img
+          src="https://vanquan.langson.gov.vn/upload/105421/fck/ubndhvq/2024_06_25_00_55_5419.jpg"
+          alt="Rừng Hồi Xứ Lạng và lối đi lên điểm tham quan"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+
+        <figcaption class="gallery-caption">
+
+          Lối lên Rừng Hồi Xứ Lạng
+
+        </figcaption>
+
+
+      </figure>
+
+
+      <figure class="gallery-item">
+
+
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Dried_Star_Anise_Fruit_Seeds.jpg/960px-Dried_Star_Anise_Fruit_Seeds.jpg"
+          alt="Quả hồi khô"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+
+        <figcaption class="gallery-caption">
+
+          Quả hồi khô
+
+        </figcaption>
+
+
+      </figure>
+
+
+      <figure class="gallery-item">
+
+
+        <img
+          src="https://media.vov.vn/sites/default/files/styles/large_watermark/public/2021-09/hoa_hoi_1.jpg"
+          alt="Hoa hồi Lạng Sơn"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+
+        <figcaption class="gallery-caption">
+
+          Hoa hồi
+
+        </figcaption>
+
+
+      </figure>
+
+
+      <figure class="gallery-item">
+
+
+        <img
+          src="https://cdn.shopify.com/s/files/1/0811/6289/5653/t/6/assets/star_anise_lang_son.jpg?v=1776676293"
+          alt="Rừng cây hồi trên sườn đồi"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+
+        <figcaption class="gallery-caption">
+
+          Rừng hồi trên sườn đồi
+
+        </figcaption>
+
+
+      </figure>
+
+
+      <figure class="gallery-item">
+
+
+        <img
+          src="https://k-agriculture.com/wp-content/uploads/2022/08/IMG_0126.jpg"
+          alt="Không gian rừng hồi vùng núi"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+
+        <figcaption class="gallery-caption">
+
+          Không gian rừng hồi
+
+        </figcaption>
+
+
+      </figure>
+
+
+      <figure class="gallery-item wide">
+
+
+        <img
+          src="https://vanquan.langson.gov.vn/upload/105421/fck/ubndhvq/2024_06_25_00_55_5419.jpg"
+          alt="Điểm tham quan Rừng Hồi Xứ Lạng"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+
+        <figcaption class="gallery-caption">
+
+          Điểm tham quan Rừng Hồi Xứ Lạng
+
+        </figcaption>
+
+
+      </figure>
+
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+<!-- =========================================================
+     SOURCES
+========================================================= -->
+
+<section class="sources">
+
+
+  <div class="container">
+
+
+    <div class="label">
+
+      12 · Nguồn tham khảo
+
+    </div>
+
+
+    <h2 class="title">
+
+      Nguồn thông tin
+      và hình ảnh.
+
+    </h2>
+
+
+    <div class="source-list">
+
+
+      <div class="source">
+
+
+        <a
+          href="https://vanquan.langson.gov.vn/tin-tuc-su-kien/du-lich/huyen-van-quan-co-04-diem-tham-quan-trong-tuyen-du-lich-cong-vien-dia-chat-lang-son..html"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          UBND huyện Văn Quan –
+          04 điểm tham quan trong tuyến du lịch Công viên địa chất
+
+        </a>
+
+
+        <p>
+
+          Nguồn chính về điểm tham quan,
+          địa điểm cũ, quy mô gần 4 ha, 7 hộ trồng hồi
+          và các sản phẩm từ hồi tại Rừng Hồi Xứ Lạng.
+
+        </p>
+
+
+      </div>
+
+
+      <div class="source">
+
+
+        <a
+          href="https://vanquan.langson.gov.vn/tin-tuc-su-kien/du-lich/huyen-van-quan-chinh-trang-diem-tham-quan-rung-hoi-xu-lang-.html"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          UBND huyện Văn Quan –
+          Chỉnh trang điểm tham quan Rừng hồi Xứ Lạng
+
+        </a>
+
+
+        <p>
+
+          Nguồn về lối đi, chòi nghỉ và quá trình
+          chỉnh trang điểm tham quan năm 2024.
+
+        </p>
+
+
+      </div>
+
+
+      <div class="source">
+
+
+        <a
+          href="https://vanquan.langson.gov.vn/tin-tuc-su-kien/van-hoa-xa-hoi/rung-hoi-huyen-van-quan-co-the-khai-thac-thanh-san-pham-du-lich.html"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          UBND huyện Văn Quan –
+          Rừng hồi huyện Văn Quan có thể khai thác thành sản phẩm du lịch
+
+        </a>
+
+
+        <p>
+
+          Nguồn về diện tích rừng hồi Văn Quan,
+          mùa hoa, mùa quả và tiềm năng du lịch sinh thái.
+
+        </p>
+
+
+      </div>
+
+
+      <div class="source">
+
+
+        <a
+          href="https://sokhcn.langson.gov.vn/tin-tuc-su-kien/da-phuong-tien/ky-thuat-trong-va-cham-soc-cay-hoi-phu-hop-voi-dieu-kien-sinh-thai-tinh-lang-son.html"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Sở Khoa học và Công nghệ Lạng Sơn –
+          Kỹ thuật trồng và chăm sóc cây hồi
+
+        </a>
+
+
+        <p>
+
+          Nguồn về đặc điểm sinh học, chiều cao,
+          quả hồi và điều kiện sinh thái của cây hồi.
+
+        </p>
+
+
+      </div>
+
+
+      <div class="source">
+
+
+        <a
+          href="https://www.ipvietnam.gov.vn/documents/20195/811934/Ch%E1%BB%89%2Bd%E1%BA%ABn%2B%C4%91%E1%BB%8Ba%2Bl%C3%BD%2B%E2%80%93%2BDi%2Bs%E1%BA%A3n%2Bthi%C3%AAn%2Bnhi%C3%AAn%2Bv%C3%A0%2Bv%C4%83n%2Bh%C3%B3a%2BVi%E1%BB%87t%2B%28ti%E1%BA%BFng%2BVi%E1%BB%87t%29.pdf/a56b0cb4-d8bd-475a-be64-bba40329fb9f"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Cục Sở hữu trí tuệ –
+          Hoa hồi Lạng Sơn
+
+        </a>
+
+
+        <p>
+
+          Nguồn chính thức về khu vực chỉ dẫn địa lý,
+          đặc tính sản phẩm và đăng ký bảo hộ từ năm 2007.
+
+        </p>
+
+
+      </div>
+
+
+      <div class="source">
+
+
+        <a
+          href="https://baolangson.vn/hoa-hoi-lang-son-va-hanh-trinh-vuon-ra-the-gioi-1578461.html"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Báo và Phát thanh, Truyền hình Lạng Sơn –
+          Hoa hồi Lạng Sơn và hành trình vươn ra thế giới
+
+        </a>
+
+
+        <p>
+
+          Nguồn về diện tích, sản lượng,
+          tinh dầu và hành trình phát triển thị trường.
+
+        </p>
+
+
+      </div>
+
+
+      <div class="source">
+
+
+        <a
+          href="https://baolangson.vn/rung-hoi-xu-lang-chao-don-cac-van-dong-vien-5055300.html"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Báo và Phát thanh, Truyền hình Lạng Sơn –
+          Rừng hồi Xứ Lạng chào đón các vận động viên
+
+        </a>
+
+
+        <p>
+
+          Nguồn cập nhật về hoạt động trải nghiệm
+          và quảng bá Rừng Hồi Xứ Lạng.
+
+        </p>
+
+
+      </div>
+
+
+      <div class="source">
+
+
+        <a
+          href="https://langson.gov.vn/upload/2006486/20260311/3-Bieu-Danh-muc-cac-DA-chuyen-CDT-BQLDA_kem_theo_QD_a4f4d.pdf"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Cổng thông tin tỉnh Lạng Sơn –
+          Danh mục dự án sau sắp xếp
+
+        </a>
+
+
+        <p>
+
+          Hồ sơ năm 2026 ghi địa điểm thực hiện
+          dự án cơ sở vật chất Rừng Hồi Xứ Lạng
+          sau sắp xếp là xã Yên Phúc.
+
+        </p>
+
+
+      </div>
+
+
+      <div class="source">
+
+
+        <a
+          href="https://commons.wikimedia.org/wiki/File:Dried_Star_Anise_Fruit_Seeds.jpg"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Wikimedia Commons –
+          Dried Star Anise Fruit Seeds
+
+        </a>
+
+
+        <p>
+
+          Hình ảnh quả hồi khô được sử dụng
+          cho phần 04 · Hương hồi.
+
+        </p>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+
+  <div class="footer-inner">
+
+
+    <div>
+
+
+      <div class="footer-title">
+
+        🌿 RỪNG HỒI XỨ LẠNG
+
+      </div>
+
+
+      <div class="footer-sub">
+
+        Tuyến 2 · Hành trình về miền thiên giới
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+
+</footer>
+
+
+<!-- =========================================================
+     BACK TO TOP
+========================================================= -->
+
+<a
+  href="#"
+  class="top"
+  id="top"
+  aria-label="Lên đầu trang">
+
+  ↑
+
+</a>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+
+const nav =
+  document.getElementById("nav");
+
+
+const topButton =
+  document.getElementById("top");
+
+
+/* =========================================================
+   NAVIGATION SCROLL
+========================================================= */
+
+window.addEventListener(
+  "scroll",
+  function(){
+
+    if(window.scrollY > 70){
+
+      nav.classList.add("scrolled");
+
+      topButton.classList.add("show");
+
+    }else{
+
+      nav.classList.remove("scrolled");
+
+      topButton.classList.remove("show");
+
+    }
+
+  }
+);
+
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+topButton.addEventListener(
+  "click",
+  function(e){
+
+    e.preventDefault();
+
+    window.scrollTo({
+
+      top:0,
+
+      behavior:"smooth"
+
+    });
+
+  }
+);
+
+
+</script>
+
+
+</body>
+
+</html>
+```

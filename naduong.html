@@ -1,0 +1,2674 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Thế giới đầm hồ Na Dương | Lạng Sơn</title>
+
+<meta name="description"
+content="Khám phá Thế giới đầm hồ Na Dương – điểm di sản địa chất số 35 trên tuyến 4 của Công viên địa chất toàn cầu UNESCO Lạng Sơn, nơi lưu giữ dấu tích của hệ sinh thái cổ qua hóa thạch và trầm tích.">
+
+<style>
+
+:root{
+  --dark:#182321;
+  --dark-2:#101918;
+  --dark-3:#08110f;
+
+  --earth:#8c6740;
+  --earth-light:#c4a06c;
+
+  --fossil:#ead9b9;
+
+  --sand:#f3e7d3;
+  --sand-2:#faf6ed;
+
+  --green:#64765d;
+  --green-light:#dce5d5;
+
+  --blue:#567c83;
+  --blue-light:#dcecef;
+
+  --paper:#fffdf8;
+  --white:#ffffff;
+
+  --text:#293633;
+  --muted:#707b77;
+
+  --line:#e2ddd2;
+
+  --gold:#c7a15c;
+
+  --shadow:0 24px 65px rgba(24,35,33,.13);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:100px;
+}
+
+body{
+  font-family:Inter,Arial,Helvetica,sans-serif;
+  color:var(--text);
+  background:var(--paper);
+  line-height:1.75;
+}
+
+img{
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:cover;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+/* =========================================================
+   NAV — GIAO DIỆN CHUNG
+========================================================= */
+
+.site-nav{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1000;
+  padding:17px 4%;
+  transition:.35s ease;
+}
+
+.site-nav.scrolled{
+  background:rgba(255,253,248,.96);
+  backdrop-filter:blur(18px);
+  box-shadow:0 8px 28px rgba(0,0,0,.08);
+}
+
+.nav-inner{
+  width:min(1180px,92%);
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  color:white;
+  font-size:14px;
+  font-weight:950;
+  letter-spacing:.6px;
+  text-shadow:0 2px 13px rgba(0,0,0,.45);
+}
+
+.site-nav.scrolled .logo{
+  color:var(--dark);
+  text-shadow:none;
+}
+
+.nav-links{
+  display:flex;
+  gap:5px;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+}
+
+.nav-links a{
+  padding:9px 12px;
+  color:white;
+  border-radius:50px;
+  font-size:11px;
+  font-weight:850;
+  transition:.25s;
+}
+
+.site-nav.scrolled .nav-links a{
+  color:var(--dark);
+}
+
+.nav-links a:hover{
+  background:rgba(255,255,255,.15);
+}
+
+.site-nav.scrolled .nav-links a:hover{
+  background:rgba(24,35,33,.07);
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+  min-height:100vh;
+  position:relative;
+  display:flex;
+  align-items:flex-end;
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(5,15,14,.04),
+      rgba(8,17,16,.16) 35%,
+      rgba(5,10,10,.97) 100%
+    ),
+    url("https://cly.1cdn.vn/2024/08/07/2-4-.jpg");
+
+  background-size:cover;
+  background-position:center;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  width:550px;
+  height:550px;
+  right:-190px;
+  top:-170px;
+  border-radius:50%;
+  background:radial-gradient(
+    circle,
+    rgba(202,171,120,.16),
+    transparent 70%
+  );
+}
+
+.hero-content{
+  width:min(1140px,92%);
+  margin:auto;
+  padding:160px 0 125px;
+  position:relative;
+  z-index:3;
+  color:white;
+}
+
+.hero-tag{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 15px;
+  border:1px solid rgba(255,255,255,.4);
+  border-radius:50px;
+  background:rgba(255,255,255,.09);
+  backdrop-filter:blur(12px);
+  font-size:10px;
+  font-weight:950;
+  letter-spacing:1.7px;
+  text-transform:uppercase;
+}
+
+.hero h1{
+  margin-top:21px;
+  font-size:clamp(50px,8.2vw,109px);
+  line-height:.84;
+  letter-spacing:-5px;
+  font-weight:950;
+}
+
+.hero h1 span{
+  display:block;
+  color:var(--fossil);
+}
+
+.hero-description{
+  max-width:720px;
+  margin-top:29px;
+  color:rgba(255,255,255,.90);
+  font-size:17px;
+}
+
+.hero-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:11px;
+  margin-top:30px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:13px 21px;
+  border-radius:50px;
+  font-size:12px;
+  font-weight:900;
+  transition:.25s;
+}
+
+.btn-primary{
+  color:var(--dark);
+  background:white;
+}
+
+.btn-primary:hover{
+  transform:translateY(-3px);
+}
+
+.btn-glass{
+  color:white;
+  border:1px solid rgba(255,255,255,.42);
+  background:rgba(255,255,255,.08);
+}
+
+.btn-glass:hover{
+  background:rgba(255,255,255,.16);
+}
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+
+.container{
+  width:min(1120px,92%);
+  margin:auto;
+}
+
+section{
+  padding:100px 0;
+}
+
+.label{
+  color:var(--earth);
+  font-size:11px;
+  font-weight:950;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+.title{
+  margin-top:10px;
+  color:var(--dark);
+  font-size:clamp(38px,5vw,63px);
+  line-height:.97;
+  letter-spacing:-3.5px;
+  font-weight:950;
+}
+
+.text{
+  max-width:770px;
+  margin-top:18px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* =========================================================
+   QUICK INFO
+========================================================= */
+
+.quick{
+  position:relative;
+  z-index:20;
+  margin-top:-57px;
+}
+
+.quick-card{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  overflow:hidden;
+  border-radius:30px;
+  background:white;
+  box-shadow:var(--shadow);
+}
+
+.quick-item{
+  padding:27px 15px;
+  text-align:center;
+  border-right:1px solid var(--line);
+}
+
+.quick-item:last-child{
+  border-right:0;
+}
+
+.quick-item strong{
+  display:block;
+  color:var(--earth);
+  font-size:24px;
+  line-height:1.2;
+  font-weight:950;
+}
+
+.quick-item span{
+  display:block;
+  margin-top:5px;
+  color:var(--muted);
+  font-size:11px;
+}
+
+/* =========================================================
+   01 OVERVIEW
+========================================================= */
+
+.overview{
+  background:var(--paper);
+}
+
+.overview-grid{
+  display:grid;
+  grid-template-columns:.93fr 1.07fr;
+  gap:65px;
+  align-items:center;
+}
+
+.overview-photo{
+  height:590px;
+  position:relative;
+  overflow:hidden;
+  border-radius:34px;
+  box-shadow:var(--shadow);
+}
+
+.overview-photo img{
+  width:100%;
+  height:100%;
+}
+
+.photo-label{
+  position:absolute;
+  left:19px;
+  bottom:19px;
+  padding:12px 15px;
+  border-radius:17px;
+  background:rgba(255,253,248,.92);
+  backdrop-filter:blur(12px);
+  color:var(--dark);
+  font-size:11px;
+  font-weight:900;
+}
+
+.overview-copy p{
+  margin-top:15px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.quote{
+  margin-top:27px;
+  padding:21px 23px;
+  border-left:5px solid var(--gold);
+  border-radius:0 19px 19px 0;
+  background:var(--sand-2);
+  color:var(--dark);
+  font-weight:850;
+}
+
+/* =========================================================
+   02 GEOLOGY
+========================================================= */
+
+.geology{
+  color:white;
+  background:
+    radial-gradient(
+      circle at 86% 8%,
+      rgba(194,159,104,.17),
+      transparent 29%
+    ),
+    linear-gradient(135deg,#1d2927,#0b1211);
+}
+
+.geology .label{
+  color:var(--fossil);
+}
+
+.geology .title{
+  color:white;
+}
+
+.geology .text{
+  color:#c5cfcb;
+}
+
+.geology-grid{
+  margin-top:46px;
+  display:grid;
+  grid-template-columns:1.18fr .82fr;
+  gap:20px;
+}
+
+.geology-large{
+  min-height:570px;
+  position:relative;
+  overflow:hidden;
+  border-radius:33px;
+}
+
+.geology-large img{
+  width:100%;
+  height:100%;
+}
+
+.geology-large::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    transparent 35%,
+    rgba(4,8,8,.95)
+  );
+}
+
+.geology-large-content{
+  position:absolute;
+  left:28px;
+  right:28px;
+  bottom:27px;
+  z-index:2;
+}
+
+.geology-large-content h3{
+  font-size:39px;
+  line-height:1;
+}
+
+.geology-large-content p{
+  margin-top:8px;
+  color:#d1d9d6;
+  font-size:12px;
+}
+
+.geology-side{
+  display:grid;
+  grid-template-rows:1fr 1fr;
+  gap:20px;
+}
+
+.geology-small{
+  position:relative;
+  overflow:hidden;
+  border-radius:29px;
+}
+
+.geology-small img{
+  width:100%;
+  height:100%;
+}
+
+.geology-small::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    transparent 35%,
+    rgba(5,9,9,.93)
+  );
+}
+
+.geology-small-content{
+  position:absolute;
+  left:21px;
+  right:21px;
+  bottom:19px;
+  z-index:2;
+}
+
+.geology-small-content h3{
+  font-size:22px;
+}
+
+.geology-small-content p{
+  margin-top:3px;
+  color:#d0d9d5;
+  font-size:11px;
+}
+
+/* =========================================================
+   03 NUMBERS
+========================================================= */
+
+.numbers{
+  background:var(--sand-2);
+}
+
+.number-grid{
+  margin-top:45px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:14px;
+}
+
+.number-card{
+  padding:29px 22px;
+  border:1px solid var(--line);
+  border-radius:25px;
+  background:white;
+}
+
+.number-value{
+  color:var(--earth);
+  font-size:44px;
+  line-height:.95;
+  font-weight:950;
+}
+
+.number-card h3{
+  margin-top:15px;
+  color:var(--dark);
+  font-size:17px;
+}
+
+.number-card p{
+  margin-top:5px;
+  color:var(--muted);
+  font-size:11px;
+}
+
+/* =========================================================
+   04 FOSSILS
+========================================================= */
+
+.fossils{
+  background:white;
+}
+
+.fossils-grid{
+  margin-top:46px;
+  display:grid;
+  grid-template-columns:.82fr 1.18fr;
+  gap:28px;
+  align-items:stretch;
+}
+
+.fossil-photo{
+  min-height:560px;
+  overflow:hidden;
+  border-radius:32px;
+}
+
+.fossil-photo img{
+  width:100%;
+  height:100%;
+}
+
+.fossil-copy{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:40px;
+  border-radius:32px;
+  background:var(--sand-2);
+}
+
+.fossil-big{
+  color:#c5b392;
+  font-size:72px;
+  line-height:.85;
+  font-weight:950;
+  letter-spacing:-4px;
+}
+
+.fossil-copy h3{
+  margin-top:18px;
+  color:var(--dark);
+  font-size:35px;
+  line-height:1.03;
+}
+
+.fossil-copy > p{
+  margin-top:16px;
+  color:var(--muted);
+  font-size:14px;
+}
+
+.fossil-list{
+  margin-top:25px;
+  display:grid;
+  gap:10px;
+}
+
+.fossil-item{
+  display:flex;
+  gap:11px;
+  padding:13px 15px;
+  border-radius:16px;
+  background:white;
+}
+
+.fossil-icon{
+  font-size:22px;
+}
+
+.fossil-item strong{
+  color:var(--dark);
+}
+
+.fossil-item p{
+  margin-top:2px;
+  color:var(--muted);
+  font-size:11px;
+}
+
+/* =========================================================
+   05 PALEO WORLD
+========================================================= */
+
+.paleo{
+  background:#edf0e9;
+}
+
+.paleo-grid{
+  margin-top:44px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:17px;
+}
+
+.paleo-card{
+  padding:28px;
+  border-radius:27px;
+  background:white;
+  border:1px solid #dfe5dc;
+}
+
+.paleo-icon{
+  width:54px;
+  height:54px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:16px;
+  background:var(--green-light);
+  font-size:25px;
+}
+
+.paleo-card h3{
+  margin-top:16px;
+  color:var(--dark);
+  font-size:19px;
+}
+
+.paleo-card p{
+  margin-top:6px;
+  color:var(--muted);
+  font-size:12px;
+}
+
+/* =========================================================
+   06 EXPERIENCE
+========================================================= */
+
+.education{
+  color:white;
+  background:linear-gradient(135deg,#4b6268,#25373a);
+}
+
+.education .label{
+  color:#e7d7b3;
+}
+
+.education .title{
+  color:white;
+}
+
+.education .text{
+  color:#d3ddda;
+}
+
+.education-grid{
+  margin-top:45px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:20px;
+}
+
+.edu-card{
+  overflow:hidden;
+  border-radius:30px;
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.1);
+}
+
+.edu-image{
+  height:320px;
+  overflow:hidden;
+}
+
+.edu-image img{
+  width:100%;
+  height:100%;
+  transition:.5s;
+}
+
+.edu-card:hover .edu-image img{
+  transform:scale(1.04);
+}
+
+.edu-body{
+  padding:25px;
+}
+
+.edu-no{
+  color:#ead9b2;
+  font-size:9px;
+  font-weight:950;
+  letter-spacing:1.5px;
+}
+
+.edu-body h3{
+  margin-top:6px;
+  color:white;
+  font-size:22px;
+}
+
+.edu-body p{
+  margin-top:6px;
+  color:#cad7d4;
+  font-size:12px;
+}
+
+/* =========================================================
+   07 DEVELOPMENT
+========================================================= */
+
+.development{
+  background:var(--paper);
+}
+
+.development-box{
+  max-width:900px;
+  margin-top:45px;
+  padding:39px;
+  border-radius:31px;
+  background:var(--sand-2);
+  border:1px solid var(--line);
+}
+
+.development-box p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+.development-box p + p{
+  margin-top:15px;
+}
+
+.development-highlight{
+  margin-top:24px;
+  padding:18px 20px;
+  border-radius:18px;
+  background:white;
+  color:var(--dark);
+  font-size:13px;
+  font-weight:850;
+}
+
+/* =========================================================
+   08 TIMELINE
+========================================================= */
+
+.timeline-section{
+  background:#f1eee7;
+}
+
+.timeline{
+  max-width:870px;
+  margin:47px auto 0;
+  position:relative;
+}
+
+.timeline::before{
+  content:"";
+  position:absolute;
+  left:18px;
+  top:0;
+  bottom:0;
+  width:3px;
+  background:#ded8cb;
+}
+
+.timeline-item{
+  position:relative;
+  padding-left:67px;
+  margin-bottom:40px;
+}
+
+.timeline-item:last-child{
+  margin-bottom:0;
+}
+
+.timeline-dot{
+  position:absolute;
+  left:0;
+  top:1px;
+  width:39px;
+  height:39px;
+  border:7px solid #e1dbce;
+  border-radius:50%;
+  background:var(--earth);
+}
+
+.timeline-year{
+  color:var(--earth);
+  font-size:11px;
+  font-weight:950;
+  letter-spacing:1.3px;
+}
+
+.timeline-item h3{
+  margin-top:3px;
+  color:var(--dark);
+  font-size:21px;
+}
+
+.timeline-item p{
+  margin-top:4px;
+  color:var(--muted);
+  font-size:13px;
+}
+
+/* =========================================================
+   09 DATA
+========================================================= */
+
+.data{
+  background:#ece7dc;
+}
+
+.data-table{
+  margin-top:43px;
+  overflow:hidden;
+  border-radius:30px;
+  background:white;
+  box-shadow:var(--shadow);
+}
+
+.data-row{
+  display:grid;
+  grid-template-columns:245px 1fr;
+  border-bottom:1px solid var(--line);
+}
+
+.data-row:last-child{
+  border-bottom:0;
+}
+
+.data-key{
+  padding:18px 22px;
+  background:#f6f2ea;
+  color:var(--dark);
+  font-size:12px;
+  font-weight:950;
+}
+
+.data-value{
+  padding:18px 22px;
+  color:var(--text);
+  font-size:13px;
+}
+
+/* =========================================================
+   10 GALLERY
+========================================================= */
+
+.gallery{
+  background:white;
+}
+
+.gallery-grid{
+  margin-top:44px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  grid-auto-rows:220px;
+  gap:13px;
+}
+
+.gallery-item{
+  position:relative;
+  overflow:hidden;
+  border-radius:20px;
+}
+
+.gallery-item.big{
+  grid-column:span 2;
+  grid-row:span 2;
+}
+
+.gallery-item.wide{
+  grid-column:span 2;
+}
+
+.gallery-item img{
+  width:100%;
+  height:100%;
+  transition:.6s;
+}
+
+.gallery-item:hover img{
+  transform:scale(1.05);
+}
+
+.gallery-item::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    transparent 48%,
+    rgba(0,0,0,.72)
+  );
+}
+
+.gallery-caption{
+  position:absolute;
+  left:14px;
+  right:14px;
+  bottom:12px;
+  z-index:2;
+  color:white;
+  font-size:11px;
+  font-weight:850;
+}
+
+/* =========================================================
+   SOURCES
+========================================================= */
+
+.sources{
+  color:#d1d9d6;
+  background:#0b1312;
+}
+
+.sources .label{
+  color:#d6c69f;
+}
+
+.sources .title{
+  color:white;
+}
+
+.source-list{
+  margin-top:31px;
+  display:grid;
+  gap:11px;
+}
+
+.source{
+  padding:17px 18px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+  background:rgba(255,255,255,.045);
+}
+
+.source a{
+  color:#e2d0aa;
+  font-size:13px;
+  font-weight:850;
+  word-break:break-word;
+}
+
+.source p{
+  margin-top:4px;
+  color:#8fa09c;
+  font-size:11px;
+}
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+  padding:31px 5%;
+  color:#91a09c;
+  background:#060c0b;
+}
+
+.footer-inner{
+  width:min(1120px,92%);
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.footer-title{
+  color:white;
+  font-weight:950;
+}
+
+.footer-sub{
+  margin-top:2px;
+  font-size:10px;
+}
+
+.footer-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.footer-links a{
+  padding:8px 12px;
+  border-radius:50px;
+  background:rgba(255,255,255,.07);
+  font-size:10px;
+}
+
+/* =========================================================
+   BACK TO TOP
+========================================================= */
+
+.top{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:47px;
+  height:47px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  color:white;
+  background:var(--earth);
+  box-shadow:0 10px 25px rgba(0,0,0,.22);
+  opacity:0;
+  visibility:hidden;
+  transform:translateY(12px);
+  transition:.3s;
+  z-index:999;
+}
+
+.top.show{
+  opacity:1;
+  visibility:visible;
+  transform:none;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:950px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .quick-card{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .quick-item:nth-child(2){
+    border-right:0;
+  }
+
+  .overview-grid,
+  .fossils-grid{
+    grid-template-columns:1fr;
+  }
+
+  .overview-photo{
+    height:450px;
+  }
+
+  .geology-grid{
+    grid-template-columns:1fr;
+  }
+
+  .geology-large{
+    min-height:490px;
+  }
+
+  .number-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .paleo-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .education-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .gallery-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .gallery-item.big{
+    grid-column:span 2;
+    grid-row:span 1;
+  }
+
+  .gallery-item.wide{
+    grid-column:span 2;
+  }
+}
+
+@media(max-width:620px){
+
+  section{
+    padding:72px 0;
+  }
+
+  .hero-content{
+    padding:135px 0 120px;
+  }
+
+  .hero h1{
+    font-size:54px;
+    letter-spacing:-3px;
+  }
+
+  .hero-description{
+    font-size:14px;
+  }
+
+  .quick-item{
+    padding:21px 9px;
+  }
+
+  .quick-item strong{
+    font-size:20px;
+  }
+
+  .overview-photo{
+    height:360px;
+  }
+
+  .geology-large{
+    min-height:390px;
+  }
+
+  .geology-large-content h3{
+    font-size:31px;
+  }
+
+  .number-grid,
+  .paleo-grid,
+  .education-grid{
+    grid-template-columns:1fr;
+  }
+
+  .fossil-copy{
+    padding:27px;
+  }
+
+  .fossil-big{
+    font-size:58px;
+  }
+
+  .development-box{
+    padding:25px;
+  }
+
+  .data-row{
+    grid-template-columns:1fr;
+  }
+
+  .data-key{
+    padding-bottom:7px;
+  }
+
+  .data-value{
+    padding-top:7px;
+  }
+
+  .gallery-grid{
+    grid-auto-rows:170px;
+  }
+
+  .footer-inner{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     NAV — GIAO DIỆN CHUNG
+========================================================= -->
+
+<header class="site-nav" id="nav">
+
+  <div class="nav-inner">
+
+    <a href="./danhlamthangcanh.html" class="logo">
+      LẠNG SƠN
+    </a>
+
+    <nav class="nav-links">
+
+      <a href="./danhlamthangcanh.html">
+        Trang chủ
+      </a>
+
+      <a href="#tong-quan">
+        Tổng quan
+      </a>
+
+      <a href="#dia-chat">
+        Địa chất
+      </a>
+
+      <a href="#hoa-thach">
+        Hóa thạch
+      </a>
+
+      <a href="#co-sinh">
+        Cổ sinh
+      </a>
+
+      <a href="#trai-nghiem">
+        Trải nghiệm
+      </a>
+
+      <a href="#thong-tin">
+        Thông tin
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="hero-tag">
+      ĐIỂM SỐ 35 · TUYẾN 4
+    </div>
+
+    <h1>
+      THẾ GIỚI
+      <span>ĐẦM HỒ NA DƯƠNG</span>
+    </h1>
+
+    <p class="hero-description">
+
+      Một “cửa sổ thời gian” của Công viên địa chất
+      toàn cầu UNESCO Lạng Sơn, nơi đá, trầm tích
+      và hóa thạch cùng kể lại câu chuyện về những
+      hệ sinh thái cổ hàng chục triệu năm trước.
+
+    </p>
+
+    <div class="hero-actions">
+
+      <a href="#tong-quan" class="btn btn-primary">
+        Khám phá Na Dương ↓
+      </a>
+
+      <a href="./danhlamthangcanh.html" class="btn btn-glass">
+        ← Về trang chủ
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     QUICK DATA
+========================================================= -->
+
+<div class="container quick">
+
+  <div class="quick-card">
+
+    <div class="quick-item">
+      <strong>#35</strong>
+      <span>Điểm trên tuyến du lịch số 4</span>
+    </div>
+
+    <div class="quick-item">
+      <strong>~80 km²</strong>
+      <span>Diện tích bồn trũng</span>
+    </div>
+
+    <div class="quick-item">
+      <strong>~570 m</strong>
+      <span>Độ dày bể trầm tích</span>
+    </div>
+
+    <div class="quick-item">
+      <strong>40+ triệu năm</strong>
+      <span>Dấu tích hệ sinh thái cổ</span>
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =========================================================
+     01 TỔNG QUAN
+========================================================= -->
+
+<section class="overview" id="tong-quan">
+
+  <div class="container overview-grid">
+
+    <div class="overview-photo">
+
+      <img
+        src="https://cly.1cdn.vn/2024/08/07/2-4-.jpg"
+        alt="Toàn cảnh khu vực Thế giới đầm hồ Na Dương"
+        loading="eager"
+        referrerpolicy="no-referrer">
+
+      <div class="photo-label">
+        Thế giới đầm hồ Na Dương
+      </div>
+
+    </div>
+
+    <div class="overview-copy">
+
+      <div class="label">
+        01 · Tổng quan
+      </div>
+
+      <h2 class="title">
+        Một vùng đất
+        kể chuyện về Trái Đất.
+      </h2>
+
+      <p>
+        “Thế giới đầm hồ” Na Dương là điểm số 35
+        trên tuyến du lịch số 4 “Đường đến thủy cung”
+        của Công viên địa chất toàn cầu UNESCO Lạng Sơn.
+      </p>
+
+      <p>
+        Điểm đến nằm trong khu vực bồn trũng Na Dương,
+        một cấu trúc địa chất hình thành do hoạt động
+        dịch trượt liên quan đến đứt gãy Cao Bằng –
+        Tiên Yên.
+      </p>
+
+      <p>
+        Giá trị đặc biệt của nơi đây không chỉ nằm ở
+        cảnh quan hiện tại mà còn ở những lớp trầm tích
+        lưu giữ hóa thạch động vật, thực vật và dấu tích
+        của môi trường sống cổ.
+      </p>
+
+      <div class="quote">
+        Na Dương giống như một cuốn sách địa chất:
+        mỗi lớp trầm tích là một trang của lịch sử
+        tự nhiên.
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     02 ĐỊA CHẤT
+========================================================= -->
+
+<section class="geology" id="dia-chat">
+
+  <div class="container">
+
+    <div class="label">
+      02 · Địa chất
+    </div>
+
+    <h2 class="title">
+      Cả một bồn trũng
+      nằm dưới “khung cửa” Na Dương.
+    </h2>
+
+    <p class="text">
+      Bể trầm tích Na Dương có cấu trúc hình elip kéo dài
+      theo hướng Đông Bắc – Tây Nam. Theo nguồn tỉnh Lạng Sơn,
+      bồn trũng rộng khoảng 80 km², dài khoảng 18 km,
+      rộng 7–8 km và dày khoảng 570 m.
+    </p>
+
+    <div class="geology-grid">
+
+      <article class="geology-large">
+
+        <img
+          src="https://cly.1cdn.vn/2024/08/07/3-3-.jpg"
+          alt="Cảnh khai thác tại khu vực mỏ than Na Dương"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+        <div class="geology-large-content">
+
+          <h3>
+            ⛏️ Bồn trũng Na Dương
+          </h3>
+
+          <p>
+            Hoạt động khai thác lộ thiên đã làm lộ
+            nhiều lớp trầm tích chứa dấu tích cổ sinh.
+          </p>
+
+        </div>
+
+      </article>
+
+      <div class="geology-side">
+
+        <article class="geology-small">
+
+          <img
+            src="https://cly.1cdn.vn/2024/08/07/4-2-.jpg"
+            alt="Con đường đá trong khu vực công viên hóa thạch Na Dương"
+            loading="lazy"
+            referrerpolicy="no-referrer">
+
+          <div class="geology-small-content">
+
+            <h3>
+              🪨 Công viên hóa thạch
+            </h3>
+
+            <p>
+              Không gian tham quan được bố trí
+              giữa những khối đá và cây xanh.
+            </p>
+
+          </div>
+
+        </article>
+
+        <article class="geology-small">
+
+          <img
+            src="https://suckhoedoisong.qltns.mediacdn.vn/324455921873985536/2025/5/27/kham-pha-vien-ngoc-lo-thien-giua-cong-vien-dia-chat-lang-son-14-1748312149023196753311.jpg"
+            alt="Gốc cây hóa thạch khoảng 30 triệu năm tuổi tại Na Dương"
+            loading="lazy"
+            referrerpolicy="no-referrer">
+
+          <div class="geology-small-content">
+
+            <h3>
+              🌳 Cây hóa thạch
+            </h3>
+
+            <p>
+              Một gốc cây hóa thạch được trưng bày
+              trong không gian ngoài trời.
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     03 NHỮNG CON SỐ
+========================================================= -->
+
+<section class="numbers">
+
+  <div class="container">
+
+    <div class="label">
+      03 · Quy mô
+    </div>
+
+    <h2 class="title">
+      Na Dương
+      qua những con số.
+    </h2>
+
+    <p class="text">
+      Các số liệu dưới đây được lấy từ thông tin
+      cập nhật của Cổng thông tin điện tử tỉnh Lạng Sơn.
+    </p>
+
+    <div class="number-grid">
+
+      <article class="number-card">
+
+        <div class="number-value">
+          80
+        </div>
+
+        <h3>km²</h3>
+
+        <p>
+          Diện tích khoảng của bồn trũng.
+        </p>
+
+      </article>
+
+      <article class="number-card">
+
+        <div class="number-value">
+          18
+        </div>
+
+        <h3>km</h3>
+
+        <p>
+          Chiều dài của bể trầm tích.
+        </p>
+
+      </article>
+
+      <article class="number-card">
+
+        <div class="number-value">
+          7–8
+        </div>
+
+        <h3>km</h3>
+
+        <p>
+          Chiều rộng của bể trầm tích.
+        </p>
+
+      </article>
+
+      <article class="number-card">
+
+        <div class="number-value">
+          570
+        </div>
+
+        <h3>m</h3>
+
+        <p>
+          Độ dày khoảng của bể trầm tích.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     04 HÓA THẠCH
+========================================================= -->
+
+<section class="fossils" id="hoa-thach">
+
+  <div class="container">
+
+    <div class="label">
+      04 · Hóa thạch
+    </div>
+
+    <h2 class="title">
+      Những dấu vết
+      còn lại từ thế giới cổ.
+    </h2>
+
+    <p class="text">
+      Bể trầm tích Na Dương chứa nhiều hóa thạch
+      động vật và thực vật. Những mẫu vật này giúp
+      các nhà nghiên cứu tái dựng môi trường cổ và
+      lịch sử phát triển của hệ sinh thái.
+    </p>
+
+    <div class="fossils-grid">
+
+      <div class="fossil-photo">
+
+        <img
+          src="https://sohanews.sohacdn.com/160588918557773824/2024/6/17/na-duong-7-17186178064571016597308.png"
+          alt="Các thân cây hóa thạch tại khu vực mỏ Na Dương"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+      </div>
+
+      <div class="fossil-copy">
+
+        <div class="fossil-big">
+          FOSSIL
+        </div>
+
+        <h3>
+          Kho báu cổ sinh
+          dưới lớp trầm tích.
+        </h3>
+
+        <p>
+          Nguồn tỉnh Lạng Sơn ghi nhận các nhóm hóa thạch
+          tiêu biểu gồm trai, cá nước ngọt, rùa và cá sấu,
+          bên cạnh nhiều nhóm thực vật.
+        </p>
+
+        <div class="fossil-list">
+
+          <div class="fossil-item">
+
+            <div class="fossil-icon">
+              🐚
+            </div>
+
+            <div>
+              <strong>Trai</strong>
+              <p>Ghi nhận 5 loài.</p>
+            </div>
+
+          </div>
+
+          <div class="fossil-item">
+
+            <div class="fossil-icon">
+              🐟
+            </div>
+
+            <div>
+              <strong>Cá nước ngọt</strong>
+              <p>Ghi nhận 9 loài.</p>
+            </div>
+
+          </div>
+
+          <div class="fossil-item">
+
+            <div class="fossil-icon">
+              🐢
+            </div>
+
+            <div>
+              <strong>Rùa</strong>
+              <p>Ghi nhận khoảng 5–6 loài.</p>
+            </div>
+
+          </div>
+
+          <div class="fossil-item">
+
+            <div class="fossil-icon">
+              🐊
+            </div>
+
+            <div>
+              <strong>Cá sấu</strong>
+              <p>Ghi nhận 3 đơn vị phân loại.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     05 THẾ GIỚI CỔ
+========================================================= -->
+
+<section class="paleo" id="co-sinh">
+
+  <div class="container">
+
+    <div class="label">
+      05 · Cổ sinh vật học
+    </div>
+
+    <h2 class="title">
+      Hàng chục triệu năm trước,
+      nơi này từng khác hoàn toàn.
+    </h2>
+
+    <p class="text">
+      Các nghiên cứu về hóa thạch cho thấy Na Dương
+      từng có hệ sinh thái sông – hồ – đầm lầy – rừng
+      trong điều kiện khí hậu nhiệt đới và cận nhiệt đới.
+    </p>
+
+    <div class="paleo-grid">
+
+      <article class="paleo-card">
+
+        <div class="paleo-icon">
+          🌴
+        </div>
+
+        <h3>
+          Rừng nhiệt đới cổ
+        </h3>
+
+        <p>
+          Dấu tích thực vật cho thấy khu vực từng
+          có những hệ rừng ẩm ướt phong phú.
+        </p>
+
+      </article>
+
+      <article class="paleo-card">
+
+        <div class="paleo-icon">
+          🌊
+        </div>
+
+        <h3>
+          Sông – hồ – đầm lầy
+        </h3>
+
+        <p>
+          Các dấu tích địa chất và hóa thạch phản ánh
+          môi trường nước cổ đa dạng.
+        </p>
+
+      </article>
+
+      <article class="paleo-card">
+
+        <div class="paleo-icon">
+          🐊
+        </div>
+
+        <h3>
+          Động vật cổ
+        </h3>
+
+        <p>
+          Cá sấu, rùa, cá, động vật thân mềm
+          và nhiều nhóm động vật có vú từng sống tại đây.
+        </p>
+
+      </article>
+
+      <article class="paleo-card">
+
+        <div class="paleo-icon">
+          🌳
+        </div>
+
+        <h3>
+          Thực vật cổ
+        </h3>
+
+        <p>
+          Có dấu tích của các nhóm như sồi, long não,
+          dâu tằm, đa và thị.
+        </p>
+
+      </article>
+
+      <article class="paleo-card">
+
+        <div class="paleo-icon">
+          🧬
+        </div>
+
+        <h3>
+          Nghiên cứu tiến hóa
+        </h3>
+
+        <p>
+          Hóa thạch giúp tái dựng lịch sử sự sống
+          và môi trường qua nhiều giai đoạn địa chất.
+        </p>
+
+      </article>
+
+      <article class="paleo-card">
+
+        <div class="paleo-icon">
+          ⏳
+        </div>
+
+        <h3>
+          Cửa sổ thời gian
+        </h3>
+
+        <p>
+          Người tham quan có thể nhìn vào quá khứ
+          thông qua lớp đá và những mẫu vật còn lại.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     06 TRẢI NGHIỆM
+========================================================= -->
+
+<section class="education" id="trai-nghiem">
+
+  <div class="container">
+
+    <div class="label">
+      06 · Trải nghiệm
+    </div>
+
+    <h2 class="title">
+      Đi Na Dương
+      cũng là một buổi học ngoài trời.
+    </h2>
+
+    <p class="text">
+      Giá trị nổi bật của điểm đến là khả năng kết hợp
+      du lịch với giáo dục địa chất, cổ sinh vật học
+      và nghiên cứu thực địa.
+    </p>
+
+    <div class="education-grid">
+
+      <article class="edu-card">
+
+        <div class="edu-image">
+
+          <img
+            src="https://songv.langson.gov.vn/upload/105396/fck/snvu/2026_06_02_09_19_284.jpg"
+            alt="Học sinh tìm hiểu mẫu hóa thạch tại Na Dương"
+            loading="lazy"
+            referrerpolicy="no-referrer">
+
+        </div>
+
+        <div class="edu-body">
+
+          <div class="edu-no">
+            TRẢI NGHIỆM 01
+          </div>
+
+          <h3>
+            🔎 Quan sát hóa thạch
+          </h3>
+
+          <p>
+            Học sinh và du khách có thể trực tiếp
+            quan sát những mẫu vật và dấu tích cổ sinh
+            được giới thiệu tại điểm đến.
+          </p>
+
+        </div>
+
+      </article>
+
+      <article class="edu-card">
+
+        <div class="edu-image">
+
+          <img
+            src="https://humg.edu.vn/content/tintuc/PublishingImages/HTQT/t%C3%ACm%20hi%E1%BB%83u%20v%E1%BB%81%20c%C3%A1c%20g%E1%BB%91c%20c%C3%A2y%20ho%C3%A1%20th%E1%BA%A1ch%20t%E1%BA%A1i%20%C4%91i%E1%BB%83m%20%C4%91%E1%BA%BFn%20th%E1%BA%BF%20gi%E1%BB%9Bi%20%C4%91%E1%BA%A7m%20h%E1%BB%93%20na%20d%C6%B0%C6%A1ng.jpg"
+            alt="Sinh viên tìm hiểu các gốc cây hóa thạch tại Thế giới đầm hồ Na Dương"
+            loading="lazy"
+            referrerpolicy="no-referrer">
+
+        </div>
+
+        <div class="edu-body">
+
+          <div class="edu-no">
+            TRẢI NGHIỆM 02
+          </div>
+
+          <h3>
+            🧭 Khảo sát địa chất thực địa
+          </h3>
+
+          <p>
+            Sinh viên và các đoàn nghiên cứu có thể
+            tìm hiểu trực tiếp các gốc cây hóa thạch,
+            lớp trầm tích và những dấu tích của môi trường cổ.
+          </p>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     07 PHÁT TRIỂN
+========================================================= -->
+
+<section class="development">
+
+  <div class="container">
+
+    <div class="label">
+      07 · Phát triển
+    </div>
+
+    <h2 class="title">
+      Từ mỏ than
+      đến điểm du lịch địa chất.
+    </h2>
+
+    <div class="development-box">
+
+      <p>
+        Lạng Sơn đang từng bước hoàn thiện không gian
+        tham quan tại “Thế giới đầm hồ Na Dương”,
+        hướng tới kết hợp giữa bảo tồn di sản địa chất
+        với du lịch trải nghiệm và giáo dục.
+      </p>
+
+      <p>
+        Các hạng mục được định hướng gồm đường tham quan,
+        điểm quan sát, không gian trưng bày hóa thạch
+        và giới thiệu địa tầng.
+      </p>
+
+      <p>
+        Định hướng hiện nay biến Na Dương thành một
+        “bảo tàng tự nhiên ngoài trời”, nơi du khách
+        có thể tìm hiểu lịch sử Trái Đất ngay tại
+        nơi các mẫu vật được phát hiện.
+      </p>
+
+      <div class="development-highlight">
+        🏛️ Hướng phát triển:
+        du lịch địa chất + giáo dục trải nghiệm
+        + bảo tồn di sản.
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     08 DẤU MỐC
+========================================================= -->
+
+<section class="timeline-section">
+
+  <div class="container">
+
+    <div class="label">
+      08 · Dấu mốc
+    </div>
+
+    <h2 class="title">
+      Một hành trình
+      từ quá khứ đến hiện tại.
+    </h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-year">
+          HÀNG CHỤC TRIỆU NĂM TRƯỚC
+        </div>
+
+        <h3>
+          Hình thành hệ sinh thái cổ
+        </h3>
+
+        <p>
+          Na Dương từng là môi trường sông,
+          hồ, đầm lầy và rừng nhiệt đới,
+          để lại nhiều dấu tích hóa thạch.
+        </p>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-year">
+          1992
+        </div>
+
+        <h3>
+          Những phát hiện hóa thạch quan trọng
+        </h3>
+
+        <p>
+          Từ quá trình nghiên cứu ở bể trầm tích,
+          các nhà khoa học đã ghi nhận những hóa thạch
+          động vật, trong đó có cá sấu.
+        </p>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-year">
+          2021
+        </div>
+
+        <h3>
+          Công viên địa chất Lạng Sơn được thành lập
+        </h3>
+
+        <p>
+          Na Dương trở thành một trong những điểm
+          di sản địa chất quan trọng trong vùng Công viên.
+        </p>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-year">
+          2024–2025
+        </div>
+
+        <h3>
+          Được phát triển thành điểm tham quan địa chất
+        </h3>
+
+        <p>
+          Không gian trưng bày và công viên hóa thạch
+          từng bước được đầu tư để phục vụ du lịch
+          và giáo dục.
+        </p>
+
+      </div>
+
+      <div class="timeline-item">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-year">
+          2026
+        </div>
+
+        <h3>
+          Tiếp tục hoàn thiện sản phẩm du lịch địa chất
+        </h3>
+
+        <p>
+          Các hoạt động khảo sát, nghiên cứu và trải nghiệm
+          thực địa tiếp tục được tổ chức tại Na Dương.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     09 THÔNG TIN CƠ BẢN
+========================================================= -->
+
+<section class="data" id="thong-tin">
+
+  <div class="container">
+
+    <div class="label">
+      09 · Thông tin cơ bản
+    </div>
+
+    <h2 class="title">
+      Na Dương
+      trong vài dòng.
+    </h2>
+
+    <div class="data-table">
+
+      <div class="data-row">
+        <div class="data-key">Tên địa danh</div>
+        <div class="data-value">
+          Thế giới đầm hồ Na Dương.
+        </div>
+      </div>
+
+      <div class="data-row">
+        <div class="data-key">Điểm Công viên địa chất</div>
+        <div class="data-value">
+          Điểm số 35.
+        </div>
+      </div>
+
+      <div class="data-row">
+        <div class="data-key">Tuyến du lịch</div>
+        <div class="data-value">
+          Tuyến số 4 – “Đường đến thủy cung”.
+        </div>
+      </div>
+
+      <div class="data-row">
+        <div class="data-key">Địa chỉ hiện nay</div>
+        <div class="data-value">
+          Khu vực xã Na Dương và xã Lợi Bác,
+          tỉnh Lạng Sơn.
+        </div>
+      </div>
+
+      <div class="data-row">
+        <div class="data-key">Diện tích bồn trũng</div>
+        <div class="data-value">
+          Khoảng 80 km².
+        </div>
+      </div>
+
+      <div class="data-row">
+        <div class="data-key">Chiều dài</div>
+        <div class="data-value">
+          Khoảng 18 km.
+        </div>
+      </div>
+
+      <div class="data-row">
+        <div class="data-key">Chiều rộng</div>
+        <div class="data-value">
+          Khoảng 7–8 km.
+        </div>
+      </div>
+
+      <div class="data-row">
+        <div class="data-key">Độ dày bể trầm tích</div>
+        <div class="data-value">
+          Khoảng 570 m.
+        </div>
+      </div>
+
+      <div class="data-row">
+        <div class="data-key">Các hệ tầng</div>
+        <div class="data-value">
+          Hệ tầng Na Dương ở phía dưới,
+          dày khoảng 240 m; hệ tầng Dinh Chùa
+          ở phía trên, dày khoảng 300 m.
+        </div>
+      </div>
+
+      <div class="data-row">
+        <div class="data-key">Hóa thạch tiêu biểu</div>
+        <div class="data-value">
+          Trai, cá nước ngọt, rùa, cá sấu
+          và nhiều loại thực vật.
+        </div>
+      </div>
+
+      <div class="data-row">
+        <div class="data-key">Giá trị nổi bật</div>
+        <div class="data-value">
+          Địa chất, cổ sinh vật học, cổ địa lý,
+          cổ môi trường, cảnh quan và giáo dục.
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     10 GALLERY
+========================================================= -->
+
+<section class="gallery">
+
+  <div class="container">
+
+    <div class="label">
+      10 · Thư viện ảnh
+    </div>
+
+    <h2 class="title">
+      Na Dương
+      qua những góc nhìn khác nhau.
+    </h2>
+
+    <p class="text">
+      Bộ ảnh sử dụng các URL ảnh trực tiếp từ
+      những nguồn hiện còn truy cập được,
+      ưu tiên CDN ảnh rõ ràng và nguồn nghiên cứu,
+      báo chí, giáo dục.
+    </p>
+
+    <div class="gallery-grid">
+
+      <figure class="gallery-item big">
+
+        <img
+          src="https://cly.1cdn.vn/2024/08/07/2-4-.jpg"
+          alt="Toàn cảnh công viên Thế giới đầm hồ Na Dương"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+        <figcaption class="gallery-caption">
+          Thế giới đầm hồ Na Dương
+        </figcaption>
+
+      </figure>
+
+      <figure class="gallery-item">
+
+        <img
+          src="https://cly.1cdn.vn/2024/08/07/1-5-.jpg"
+          alt="Các khối cây hóa thạch trong công viên địa chất Na Dương"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+        <figcaption class="gallery-caption">
+          Các khối hóa thạch
+        </figcaption>
+
+      </figure>
+
+      <figure class="gallery-item">
+
+        <img
+          src="https://cly.1cdn.vn/2024/08/07/3-3-.jpg"
+          alt="Mỏ than Na Dương và địa hình bồn trũng"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+        <figcaption class="gallery-caption">
+          Bồn trũng Na Dương
+        </figcaption>
+
+      </figure>
+
+      <figure class="gallery-item">
+
+        <img
+          src="https://cly.1cdn.vn/2024/08/07/4-2-.jpg"
+          alt="Con đường đá trong công viên hóa thạch"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+        <figcaption class="gallery-caption">
+          Con đường công viên hóa thạch
+        </figcaption>
+
+      </figure>
+
+      <figure class="gallery-item">
+
+        <img
+          src="https://suckhoedoisong.qltns.mediacdn.vn/324455921873985536/2025/5/27/kham-pha-vien-ngoc-lo-thien-giua-cong-vien-dia-chat-lang-son-14-1748312149023196753311.jpg"
+          alt="Gốc cây hóa thạch khoảng 30 triệu năm tuổi"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+        <figcaption class="gallery-caption">
+          Gốc cây hóa thạch
+        </figcaption>
+
+      </figure>
+
+      <figure class="gallery-item wide">
+
+        <img
+          src="https://sohanews.sohacdn.com/160588918557773824/2024/6/17/na-duong-7-17186178064571016597308.png"
+          alt="Các thân cây hóa thạch được phát hiện tại Na Dương"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+        <figcaption class="gallery-caption">
+          Thân cây hóa thạch
+        </figcaption>
+
+      </figure>
+
+      <figure class="gallery-item">
+
+        <img
+          src="https://cly.1cdn.vn/2024/08/07/5-2-.jpg"
+          alt="Mẫu than Na Dương được trưng bày"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+        <figcaption class="gallery-caption">
+          Mẫu than Na Dương
+        </figcaption>
+
+      </figure>
+
+      <figure class="gallery-item">
+
+        <img
+          src="https://humg.edu.vn/content/tintuc/PublishingImages/HTQT/t%C3%ACm%20hi%E1%BB%83u%20v%E1%BB%81%20c%C3%A1c%20g%E1%BB%91c%20c%C3%A2y%20ho%C3%A1%20th%E1%BA%A1ch%20t%E1%BA%A1i%20%C4%91i%E1%BB%83m%20%C4%91%E1%BA%BFn%20th%E1%BA%BF%20gi%E1%BB%9Bi%20%C4%91%E1%BA%A7m%20h%E1%BB%93%20na%20d%C6%B0%C6%A1ng.jpg"
+          alt="Sinh viên tìm hiểu gốc cây hóa thạch tại Na Dương"
+          loading="lazy"
+          referrerpolicy="no-referrer">
+
+        <figcaption class="gallery-caption">
+          Khảo sát gốc cây hóa thạch
+        </figcaption>
+
+      </figure>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     11 NGUỒN
+========================================================= -->
+
+<section class="sources">
+
+  <div class="container">
+
+    <div class="label">
+      11 · Nguồn tham khảo
+    </div>
+
+    <h2 class="title">
+      Nguồn thông tin
+      và hình ảnh.
+    </h2>
+
+    <div class="source-list">
+
+      <div class="source">
+
+        <a
+          href="https://songv.langson.gov.vn/tin-tuc-su-kien/lang-son-ngay-nay/-the-gioi-dam-ho-na-duong-diem-den-tieu-bieu-trong-cong-vien-dia-chat-lang-son.html"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Cổng thông tin điện tử tỉnh Lạng Sơn –
+          “Thế giới đầm hồ” Na Dương
+
+        </a>
+
+        <p>
+          Nguồn chính thức cập nhật năm 2026 về
+          điểm số 35, quy mô bồn trũng, hóa thạch
+          và giá trị du lịch địa chất.
+        </p>
+
+      </div>
+
+      <div class="source">
+
+        <a
+          href="https://langsongeopark.com.vn/tin-tuc-bao-chi/khoi-dong-xay-dung-san-pham-du-lich-dia-chat-cong-vien-dia-chat-toan-cau-unesco-lang-son-n384.html"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Công viên địa chất toàn cầu UNESCO Lạng Sơn –
+          Khởi động xây dựng sản phẩm du lịch địa chất
+
+        </a>
+
+        <p>
+          Nguồn về định hướng phát triển sản phẩm
+          du lịch địa chất tại Na Dương.
+        </p>
+
+      </div>
+
+      <div class="source">
+
+        <a
+          href="https://humg.edu.vn/tin-tuc/pages/chi-tiet.aspx?ItemID=9256"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Trường Đại học Mỏ – Địa chất –
+          WEUN HUMG Geological Field School 2026
+
+        </a>
+
+        <p>
+          Nguồn giáo dục – nghiên cứu thực địa,
+          có hình ảnh sinh viên tìm hiểu gốc cây
+          hóa thạch tại Na Dương.
+        </p>
+
+      </div>
+
+      <div class="source">
+
+        <a
+          href="https://congly.vn/bat-ngo-voi-mo-bau-vat-dia-chat-lon-nhat-dong-nam-a-o-na-duong-443370.html"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Báo Công lý –
+          Bất ngờ với mỏ “báu vật” địa chất ở Na Dương
+
+        </a>
+
+        <p>
+          Nguồn tham khảo về bồn trũng, hóa thạch
+          và không gian công viên hóa thạch.
+        </p>
+
+      </div>
+
+      <div class="source">
+
+        <a
+          href="https://baolangson.vn/khao-sat-quoc-te-tai-diem-den-the-gioi-dam-ho-na-duong-thuoc-cong-vien-dia-chat-toan-cau-unesco-lang-son-5079994.html"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Báo và Phát thanh, Truyền hình Lạng Sơn –
+          Khảo sát quốc tế tại Na Dương
+
+        </a>
+
+        <p>
+          Nguồn năm 2026 về hoạt động khảo sát
+          và nghiên cứu tại điểm đến.
+        </p>
+
+      </div>
+
+      <div class="source">
+
+        <a
+          href="https://suckhoedoisong.vn/kham-pha-vien-ngoc-lo-thien-giua-cong-vien-dia-chat-lang-son-169250527092950625.htm"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Sức khỏe & Đời sống –
+          Khám phá “Viên ngọc lộ thiên” ở Na Dương
+
+        </a>
+
+        <p>
+          Nguồn hình ảnh và thông tin về gốc cây
+          hóa thạch được trưng bày tại Na Dương.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER — LINK ĐÃ SỬA ĐÚNG TÊN FILE
+========================================================= -->
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div>
+
+      <div class="footer-title">
+        THẾ GIỚI ĐẦM HỒ NA DƯƠNG
+      </div>
+
+      <div class="footer-sub">
+        Công viên địa chất toàn cầu UNESCO Lạng Sơn
+      </div>
+
+    </div>
+
+    <div class="footer-links">
+
+      <a href="./danhlamthangcanh.html">
+        Trang chủ
+      </a>
+
+      <a href="./thacbankhieng.html">
+        ← Thác Bản Khiếng
+      </a>
+
+      <a href="./runghoixulang.html">
+        Rừng hồi xứ Lạng →
+      </a>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- =========================================================
+     BACK TO TOP
+========================================================= -->
+
+<a
+  href="#"
+  class="top"
+  id="top"
+  aria-label="Lên đầu trang">
+
+  ↑
+
+</a>
+
+
+<!-- =========================================================
+     JAVASCRIPT
+========================================================= -->
+
+<script>
+
+const nav =
+  document.getElementById("nav");
+
+const topButton =
+  document.getElementById("top");
+
+
+window.addEventListener(
+  "scroll",
+  function(){
+
+    if(window.scrollY > 70){
+
+      nav.classList.add("scrolled");
+      topButton.classList.add("show");
+
+    }else{
+
+      nav.classList.remove("scrolled");
+      topButton.classList.remove("show");
+
+    }
+
+  }
+);
+
+
+topButton.addEventListener(
+  "click",
+  function(e){
+
+    e.preventDefault();
+
+    window.scrollTo({
+      top:0,
+      behavior:"smooth"
+    });
+
+  }
+);
+
+
+/* =========================================================
+   IMAGE FALLBACK
+========================================================= */
+
+const fallbackImage =
+  "https://cly.1cdn.vn/2024/08/07/2-4-.jpg";
+
+
+document.querySelectorAll("img").forEach(
+  function(img){
+
+    img.addEventListener(
+      "error",
+      function(){
+
+        if(
+          !this.dataset.fallback &&
+          this.src !== fallbackImage
+        ){
+
+          this.dataset.fallback = "1";
+          this.src = fallbackImage;
+
+        }
+
+      }
+    );
+
+  }
+);
+
+</script>
+
+</body>
+</html>
+```

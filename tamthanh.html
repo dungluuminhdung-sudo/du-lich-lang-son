@@ -1,0 +1,3029 @@
+```html
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Động Tam Thanh – Chùa Tam Thanh | Lạng Sơn</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=DM+Serif+Display&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root{
+  --night:#0d0c12;
+  --night2:#15131c;
+  --night3:#211d29;
+
+  --paper:#eee8df;
+  --paper2:#f7f3ec;
+
+  --white:#f5f0e9;
+  --text:#f0eae4;
+
+  --muted:#a59c96;
+  --muted2:#716b69;
+
+  --line:rgba(236,223,202,.13);
+
+  --amber:#d9ad69;
+  --amber2:#b67e3c;
+  --mist:#c9d0d0;
+
+  --violet:#9b8ab6;
+  --red:#a9574e;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:
+    radial-gradient(
+      circle at 9% 4%,
+      rgba(217,173,105,.07),
+      transparent 24%
+    ),
+    radial-gradient(
+      circle at 91% 34%,
+      rgba(155,138,182,.06),
+      transparent 23%
+    ),
+    var(--night);
+
+  color:var(--text);
+  font-family:"Be Vietnam Pro",sans-serif;
+  line-height:1.82;
+  overflow-x:hidden;
+}
+
+
+/* =========================================================
+   NAV
+========================================================= */
+
+.nav{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:70px;
+  z-index:1000;
+
+  background:rgba(13,12,18,.78);
+  backdrop-filter:blur(17px);
+  border-bottom:1px solid var(--line);
+}
+
+.nav-inner{
+  width:min(1180px,92%);
+  height:100%;
+  margin:auto;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.logo{
+  font-family:"Space Grotesk",sans-serif;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.16em;
+}
+
+.logo span{
+  color:var(--amber);
+}
+
+.back{
+  color:#e2dcd6;
+  text-decoration:none;
+  font-size:11px;
+  padding:8px 15px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  transition:.3s;
+}
+
+.back:hover{
+  color:var(--amber);
+  border-color:rgba(217,173,105,.45);
+}
+
+
+/* =========================================================
+   SECTION NAV
+========================================================= */
+
+.section-nav{
+  margin-top:70px;
+
+  position:sticky;
+  top:70px;
+
+  z-index:900;
+
+  background:rgba(13,12,18,.91);
+
+  backdrop-filter:blur(15px);
+
+  border-bottom:1px solid rgba(236,223,202,.09);
+}
+
+.section-nav-inner{
+  width:min(1180px,92%);
+  margin:auto;
+
+  display:flex;
+  align-items:center;
+
+  gap:3px;
+
+  overflow-x:auto;
+
+  scrollbar-width:none;
+}
+
+.section-nav-inner::-webkit-scrollbar{
+  display:none;
+}
+
+.section-link{
+  flex:0 0 auto;
+
+  padding:12px 13px 10px;
+
+  color:#858084;
+
+  text-decoration:none;
+
+  font-size:9px;
+
+  font-weight:800;
+
+  letter-spacing:.08em;
+
+  text-transform:uppercase;
+
+  white-space:nowrap;
+
+  border-bottom:2px solid transparent;
+
+  transition:.25s;
+}
+
+.section-link:hover,
+.section-link.active{
+  color:var(--amber);
+
+  border-bottom-color:var(--amber);
+}
+
+section[id]{
+  scroll-margin-top:145px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero{
+  min-height:930px;
+
+  display:flex;
+  align-items:flex-end;
+
+  position:relative;
+  overflow:hidden;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(10,9,14,.95) 0%,
+      rgba(10,9,14,.82) 33%,
+      rgba(10,9,14,.50) 63%,
+      rgba(10,9,14,.30) 100%
+    ),
+
+    url("https://statics.vinpearl.com/chua-tam-thanh-lang-son-1_1625219476.jpg");
+
+  background-size:cover;
+  background-position:center;
+}
+
+.hero::before{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 30%,
+      rgba(13,12,18,.98) 100%
+    );
+}
+
+.hero::after{
+  content:"";
+
+  position:absolute;
+
+  width:560px;
+  height:560px;
+
+  right:-240px;
+  top:125px;
+
+  border-radius:50%;
+
+  border:1px solid rgba(217,173,105,.18);
+
+  box-shadow:
+    0 0 0 54px rgba(217,173,105,.025),
+    0 0 0 108px rgba(217,173,105,.017),
+    0 0 0 162px rgba(217,173,105,.011);
+}
+
+.hero-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:155px 0 108px;
+
+  position:relative;
+  z-index:4;
+}
+
+.kicker{
+  color:var(--amber);
+
+  font-size:10px;
+
+  font-weight:800;
+
+  text-transform:uppercase;
+
+  letter-spacing:.23em;
+}
+
+.hero h1{
+  max-width:1000px;
+
+  margin-top:20px;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:clamp(54px,9vw,128px);
+
+  line-height:.82;
+
+  letter-spacing:-.078em;
+}
+
+.hero h1 span{
+  display:block;
+  color:#ddd2c5;
+}
+
+.hero-description{
+  max-width:750px;
+
+  margin-top:31px;
+
+  color:#cec3bb;
+
+  font-size:15px;
+}
+
+.hero-tags{
+  margin-top:29px;
+
+  display:flex;
+  flex-wrap:wrap;
+
+  gap:9px;
+}
+
+.hero-tag{
+  padding:8px 12px;
+
+  border:1px solid rgba(236,223,202,.14);
+
+  background:rgba(15,13,19,.44);
+
+  color:#e0d8d1;
+
+  font-size:10px;
+
+  border-radius:5px;
+}
+
+.hero-note{
+  max-width:720px;
+
+  margin-top:20px;
+
+  color:#817a78;
+
+  font-size:10px;
+}
+
+
+/* =========================================================
+   COMMON
+========================================================= */
+
+.section{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.label{
+  color:var(--amber);
+
+  font-size:10px;
+
+  font-weight:800;
+
+  text-transform:uppercase;
+
+  letter-spacing:.21em;
+}
+
+.title{
+  max-width:940px;
+
+  margin-top:14px;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:clamp(39px,6vw,78px);
+
+  line-height:.97;
+
+  letter-spacing:-.055em;
+}
+
+.intro{
+  max-width:770px;
+
+  margin-top:21px;
+
+  color:var(--muted);
+
+  font-size:13px;
+}
+
+
+/* =========================================================
+   FACTS
+========================================================= */
+
+.fact-grid{
+  margin-top:58px;
+
+  display:grid;
+
+  grid-template-columns:repeat(4,1fr);
+
+  gap:13px;
+}
+
+.fact{
+  min-height:225px;
+
+  padding:28px;
+
+  border:1px solid var(--line);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(217,173,105,.055),
+      rgba(255,255,255,.012)
+    );
+
+  position:relative;
+
+  overflow:hidden;
+
+  transition:.35s;
+}
+
+.fact:hover{
+  transform:translateY(-5px);
+
+  border-color:rgba(217,173,105,.31);
+}
+
+.fact::after{
+  content:"";
+
+  position:absolute;
+
+  width:155px;
+  height:155px;
+
+  right:-95px;
+  bottom:-100px;
+
+  border-radius:50%;
+
+  border:1px solid rgba(217,173,105,.10);
+}
+
+.fact-no{
+  color:#756d68;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:10px;
+
+  letter-spacing:.15em;
+}
+
+.fact strong{
+  display:block;
+
+  margin-top:39px;
+
+  color:#f0ebe5;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:29px;
+
+  line-height:1.05;
+}
+
+.fact p{
+  margin-top:9px;
+
+  color:#8e8581;
+
+  font-size:10px;
+}
+
+
+/* =========================================================
+   GATE
+========================================================= */
+
+.gate-section{
+  background:
+    radial-gradient(
+      ellipse at 50% 25%,
+      rgba(217,173,105,.08),
+      transparent 34%
+    ),
+    #17141d;
+
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+.gate-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.gate-grid{
+  margin-top:58px;
+
+  display:grid;
+
+  grid-template-columns:.82fr 1.18fr;
+
+  gap:16px;
+}
+
+.gate-photo{
+  min-height:610px;
+
+  overflow:hidden;
+
+  position:relative;
+
+  border:1px solid var(--line);
+
+  background:#0f0c12;
+}
+
+.gate-photo img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  display:block;
+
+  transition:.7s;
+}
+
+.gate-photo:hover img{
+  transform:scale(1.035);
+}
+
+.gate-photo::after{
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent 45%,
+      rgba(12,10,15,.88) 100%
+    );
+}
+
+.gate-caption{
+  position:absolute;
+
+  left:20px;
+  right:20px;
+  bottom:19px;
+
+  z-index:2;
+
+  color:#e7ddd4;
+
+  font-size:10px;
+}
+
+.gate-copy{
+  padding:37px;
+
+  border:1px solid var(--line);
+
+  background:#111018;
+}
+
+.gate-copy h3{
+  max-width:620px;
+
+  font-family:"DM Serif Display",serif;
+
+  font-size:51px;
+
+  font-weight:400;
+
+  line-height:.96;
+}
+
+.gate-copy p{
+  margin-top:18px;
+
+  color:#a49a94;
+
+  font-size:13px;
+}
+
+.gate-points{
+  margin-top:30px;
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:11px;
+}
+
+.gate-point{
+  padding:17px;
+
+  border:1px solid var(--line);
+
+  background:rgba(255,255,255,.018);
+}
+
+.gate-point strong{
+  display:block;
+
+  color:var(--mist);
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:21px;
+}
+
+.gate-point span{
+  display:block;
+
+  color:#77716f;
+
+  margin-top:4px;
+
+  font-size:9px;
+}
+
+
+/* =========================================================
+   CAVE INTERIOR
+========================================================= */
+
+.cave-section{
+  background:var(--paper);
+
+  color:#272125;
+
+  border-bottom:1px solid #d8d0c7;
+}
+
+.cave-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.cave-layout{
+  margin-top:58px;
+
+  display:grid;
+
+  grid-template-columns:1.25fr .75fr;
+
+  gap:15px;
+}
+
+.cave-main{
+  min-height:610px;
+
+  position:relative;
+
+  overflow:hidden;
+
+  border:1px solid #d5cbc1;
+
+  background:#131015;
+}
+
+.cave-main img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  display:block;
+
+  transition:.75s;
+}
+
+.cave-main:hover img{
+  transform:scale(1.035);
+}
+
+.cave-main figcaption{
+  position:absolute;
+
+  left:17px;
+  right:17px;
+  bottom:17px;
+
+  padding:14px;
+
+  background:rgba(12,10,14,.74);
+
+  backdrop-filter:blur(9px);
+
+  color:#eee8e2;
+
+  font-size:10px;
+}
+
+.cave-side{
+  display:grid;
+
+  grid-template-rows:1fr 1fr;
+
+  gap:15px;
+}
+
+.cave-card{
+  padding:29px;
+
+  border:1px solid #d8cfc5;
+
+  background:#f6f0e8;
+}
+
+.cave-card small{
+  color:#8c7567;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  letter-spacing:.15em;
+
+  font-size:10px;
+}
+
+.cave-card h3{
+  margin-top:43px;
+
+  font-family:"DM Serif Display",serif;
+
+  font-size:39px;
+
+  line-height:1;
+}
+
+.cave-card p{
+  margin-top:13px;
+
+  color:#766c66;
+
+  font-size:11px;
+}
+
+
+/* =========================================================
+   WATER
+========================================================= */
+
+.water-section{
+  background:
+    linear-gradient(
+      160deg,
+      #121724,
+      #0c111b
+    );
+
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+}
+
+.water-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.water-grid{
+  margin-top:58px;
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:13px;
+}
+
+.water-card{
+  min-height:320px;
+
+  padding:30px;
+
+  border:1px solid var(--line);
+
+  background:
+    linear-gradient(
+      160deg,
+      rgba(201,208,208,.045),
+      rgba(255,255,255,.01)
+    );
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.water-card::after{
+  content:"";
+
+  position:absolute;
+
+  left:-110px;
+  bottom:-130px;
+
+  width:290px;
+  height:290px;
+
+  border-radius:50%;
+
+  border:1px solid rgba(201,208,208,.09);
+}
+
+.water-no{
+  color:#6d7480;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:10px;
+
+  letter-spacing:.15em;
+}
+
+.water-card h3{
+  margin-top:54px;
+
+  color:#ece8e4;
+
+  font-family:"DM Serif Display",serif;
+
+  font-size:42px;
+
+  font-weight:400;
+
+  line-height:1;
+}
+
+.water-card p{
+  margin-top:14px;
+
+  color:#9399a3;
+
+  font-size:11px;
+}
+
+
+/* =========================================================
+   BUDDHIST ART
+========================================================= */
+
+.art-section{
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 72px,
+      rgba(217,173,105,.018) 73px
+    ),
+    #131117;
+}
+
+.art-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.art-layout{
+  margin-top:58px;
+
+  display:grid;
+
+  grid-template-columns:.85fr 1.15fr;
+
+  gap:15px;
+}
+
+.art-image{
+  min-height:600px;
+
+  overflow:hidden;
+
+  border:1px solid var(--line);
+}
+
+.art-image img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  display:block;
+}
+
+.art-copy{
+  padding:36px;
+
+  border:1px solid var(--line);
+
+  background:#1a1720;
+}
+
+.art-copy h3{
+  font-family:"DM Serif Display",serif;
+
+  font-size:51px;
+
+  line-height:.97;
+
+  font-weight:400;
+}
+
+.art-copy p{
+  margin-top:17px;
+
+  color:#a19896;
+
+  font-size:12px;
+}
+
+.art-highlight{
+  margin-top:30px;
+
+  padding:21px;
+
+  border-left:2px solid var(--amber);
+
+  background:rgba(217,173,105,.035);
+
+  color:#d5ccc5;
+
+  font-size:12px;
+}
+
+.art-stats{
+  margin-top:25px;
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:11px;
+}
+
+.art-stat{
+  padding:16px;
+
+  border:1px solid var(--line);
+
+  background:rgba(255,255,255,.015);
+}
+
+.art-stat strong{
+  display:block;
+
+  color:var(--amber);
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:21px;
+}
+
+.art-stat span{
+  display:block;
+
+  color:#777071;
+
+  font-size:9px;
+
+  margin-top:3px;
+}
+
+
+/* =========================================================
+   HERITAGE TIMELINE
+========================================================= */
+
+.timeline-section{
+  background:var(--paper2);
+
+  color:#292329;
+}
+
+.timeline-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.timeline{
+  margin-top:58px;
+
+  position:relative;
+
+  display:grid;
+
+  grid-template-columns:repeat(4,1fr);
+
+  gap:13px;
+}
+
+.timeline::before{
+  content:"";
+
+  position:absolute;
+
+  top:21px;
+
+  left:6%;
+  right:6%;
+
+  height:1px;
+
+  background:#cfc6bd;
+}
+
+.time{
+  position:relative;
+
+  padding:0 13px;
+}
+
+.time-dot{
+  width:43px;
+  height:43px;
+
+  display:grid;
+
+  place-items:center;
+
+  border-radius:50%;
+
+  background:var(--paper2);
+
+  border:2px solid #b48048;
+
+  color:#8e6438;
+
+  position:relative;
+
+  z-index:2;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:10px;
+}
+
+.time-year{
+  margin-top:17px;
+
+  color:#a36f3f;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:13px;
+
+  font-weight:700;
+}
+
+.time h3{
+  margin-top:8px;
+
+  font-size:18px;
+
+  line-height:1.18;
+}
+
+.time p{
+  margin-top:8px;
+
+  color:#756d68;
+
+  font-size:10px;
+}
+
+
+/* =========================================================
+   FESTIVAL
+========================================================= */
+
+.festival{
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(169,87,78,.11),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #321e26,
+      #171119
+    );
+
+  border-top:1px solid rgba(217,173,105,.08);
+}
+
+.festival-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0;
+}
+
+.festival-grid{
+  margin-top:57px;
+
+  display:grid;
+
+  grid-template-columns:1.1fr .9fr;
+
+  gap:14px;
+}
+
+.festival-box{
+  min-height:330px;
+
+  padding:31px;
+
+  border:1px solid rgba(255,255,255,.095);
+
+  background:rgba(255,255,255,.03);
+}
+
+.festival-box h3{
+  font-family:"DM Serif Display",serif;
+
+  font-size:47px;
+
+  line-height:.98;
+
+  font-weight:400;
+}
+
+.festival-box p{
+  margin-top:15px;
+
+  color:#baaaa9;
+
+  font-size:11px;
+}
+
+.festival-date{
+  margin-top:28px;
+
+  color:#dfb676;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:14px;
+
+  font-weight:700;
+
+  letter-spacing:.04em;
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.gallery{
+  margin-top:58px;
+
+  display:grid;
+
+  grid-template-columns:1.2fr .8fr;
+
+  gap:14px;
+}
+
+.gallery figure{
+  margin:0;
+
+  overflow:hidden;
+
+  position:relative;
+
+  border:1px solid var(--line);
+
+  background:#111;
+}
+
+.gallery-main{
+  height:590px;
+}
+
+.gallery-side{
+  display:grid;
+
+  grid-template-rows:1fr 1fr;
+
+  gap:14px;
+}
+
+.gallery-small{
+  min-height:288px;
+}
+
+.gallery img{
+  width:100%;
+  height:100%;
+
+  display:block;
+
+  object-fit:cover;
+
+  transition:.7s;
+}
+
+.gallery figure:hover img{
+  transform:scale(1.04);
+}
+
+.gallery figcaption{
+  position:absolute;
+
+  left:14px;
+  right:14px;
+  bottom:14px;
+
+  padding:12px;
+
+  background:rgba(12,10,14,.76);
+
+  backdrop-filter:blur(8px);
+
+  color:#eee7e0;
+
+  font-size:10px;
+}
+
+
+/* =========================================================
+   VALUES
+========================================================= */
+
+.value-grid{
+  margin-top:58px;
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:13px;
+}
+
+.value-card{
+  min-height:270px;
+
+  padding:29px;
+
+  border:1px solid var(--line);
+
+  background:#17141c;
+
+  position:relative;
+}
+
+.value-card::before{
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:0;
+
+  width:36px;
+  height:2px;
+
+  background:var(--amber);
+}
+
+.value-no{
+  color:#726b6e;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:10px;
+
+  letter-spacing:.14em;
+}
+
+.value-card h3{
+  margin-top:51px;
+
+  font-size:20px;
+
+  line-height:1.18;
+}
+
+.value-card p{
+  margin-top:11px;
+
+  color:#8d8586;
+
+  font-size:11px;
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.final{
+  width:min(1180px,92%);
+
+  margin:auto;
+
+  padding:110px 0 90px;
+}
+
+.final-box{
+  position:relative;
+
+  overflow:hidden;
+
+  padding:61px;
+
+  border:1px solid rgba(217,173,105,.14);
+
+  background:
+    radial-gradient(
+      circle at 84% 19%,
+      rgba(217,173,105,.13),
+      transparent 24%
+    ),
+    linear-gradient(
+      135deg,
+      #2c2023,
+      #120f16
+    );
+}
+
+.final-box::after{
+  content:"";
+
+  position:absolute;
+
+  right:-180px;
+  bottom:-205px;
+
+  width:450px;
+  height:450px;
+
+  border-radius:50%;
+
+  border:1px solid rgba(217,173,105,.09);
+
+  box-shadow:
+    0 0 0 48px rgba(217,173,105,.018),
+    0 0 0 96px rgba(217,173,105,.011);
+}
+
+.final-small{
+  position:relative;
+
+  z-index:2;
+
+  color:var(--amber);
+
+  font-size:10px;
+
+  text-transform:uppercase;
+
+  letter-spacing:.2em;
+}
+
+.final-box h2{
+  position:relative;
+
+  z-index:2;
+
+  max-width:900px;
+
+  margin-top:18px;
+
+  font-family:"DM Serif Display",serif;
+
+  font-size:clamp(47px,7vw,92px);
+
+  line-height:.91;
+
+  font-weight:400;
+}
+
+.final-box p{
+  position:relative;
+
+  z-index:2;
+
+  max-width:740px;
+
+  margin-top:22px;
+
+  color:#b7aba8;
+
+  font-size:12px;
+}
+
+.sources{
+  position:relative;
+
+  z-index:2;
+
+  margin-top:29px;
+
+  padding-top:21px;
+
+  border-top:1px solid rgba(255,255,255,.095);
+
+  color:#756d70;
+
+  font-size:10px;
+
+  line-height:2;
+}
+
+.sources a{
+  color:#dbad69;
+
+  text-decoration:none;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer{
+  border-top:1px solid var(--line);
+
+  padding:70px 0 88px;
+}
+
+.footer-inner{
+  width:min(1180px,92%);
+
+  margin:auto;
+}
+
+.footer-brand{
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:13px;
+
+  font-weight:700;
+
+  letter-spacing:.15em;
+}
+
+.footer-title{
+  margin-top:16px;
+
+  font-family:"Space Grotesk",sans-serif;
+
+  font-size:clamp(31px,5vw,58px);
+
+  letter-spacing:-.05em;
+}
+
+.footer-text{
+  max-width:760px;
+
+  margin-top:10px;
+
+  color:#6f696e;
+
+  font-size:11px;
+}
+
+.footer-source{
+  margin-top:28px;
+
+  padding-top:20px;
+
+  border-top:1px solid var(--line);
+
+  color:#5d585c;
+
+  font-size:10px;
+
+  line-height:1.95;
+}
+
+.footer-source a{
+  color:#c69352;
+
+  text-decoration:none;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:950px){
+
+  .fact-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .gate-grid,
+  .cave-layout,
+  .art-layout,
+  .festival-grid{
+    grid-template-columns:1fr;
+  }
+
+  .water-grid,
+  .value-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .timeline{
+    grid-template-columns:1fr 1fr;
+
+    row-gap:42px;
+  }
+
+  .timeline::before{
+    display:none;
+  }
+
+  .gallery{
+    grid-template-columns:1fr;
+  }
+
+  .gallery-side{
+    height:400px;
+
+    grid-template-columns:1fr 1fr;
+
+    grid-template-rows:1fr;
+  }
+
+  .gate-photo{
+    min-height:500px;
+  }
+
+  .art-image{
+    min-height:500px;
+  }
+}
+
+
+@media(max-width:620px){
+
+  .nav{
+    height:64px;
+  }
+
+  .section-nav{
+    margin-top:64px;
+    top:64px;
+  }
+
+  .section-link{
+    padding:11px 11px 9px;
+    font-size:8px;
+  }
+
+  section[id]{
+    scroll-margin-top:130px;
+  }
+
+  .hero{
+    min-height:820px;
+  }
+
+  .hero-inner{
+    padding-top:125px;
+    padding-bottom:79px;
+  }
+
+  .hero h1{
+    font-size:69px;
+  }
+
+  .hero-description{
+    font-size:14px;
+  }
+
+  .fact-grid,
+  .water-grid,
+  .value-grid,
+  .timeline{
+    grid-template-columns:1fr;
+  }
+
+  .gate-points,
+  .art-stats{
+    grid-template-columns:1fr;
+  }
+
+  .gate-photo{
+    min-height:430px;
+  }
+
+  .cave-main{
+    min-height:430px;
+  }
+
+  .cave-side{
+    grid-template-rows:auto auto;
+  }
+
+  .art-image{
+    min-height:430px;
+  }
+
+  .gallery-main{
+    height:390px;
+  }
+
+  .gallery-side{
+    height:auto;
+
+    grid-template-columns:1fr;
+
+    grid-template-rows:230px 230px;
+  }
+
+  .section,
+  .gate-inner,
+  .cave-inner,
+  .water-inner,
+  .art-inner,
+  .timeline-inner,
+  .festival-inner,
+  .final{
+    padding-top:78px;
+    padding-bottom:78px;
+  }
+
+  .final-box{
+    padding:34px;
+  }
+
+  .final-box h2{
+    font-size:53px;
+  }
+}
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     NAV
+========================================================= -->
+
+<header class="nav">
+
+  <div class="nav-inner">
+
+    <div class="logo">
+      LẠNG SƠN <span>/</span> 14
+    </div>
+
+    <a
+      href="./danhlamthangcanh.html"
+      class="back"
+    >
+      ← Danh sách danh thắng
+    </a>
+
+  </div>
+
+</header>
+
+
+<!-- =========================================================
+     SECTION NAV
+========================================================= -->
+
+<nav class="section-nav" aria-label="Điều hướng nội dung">
+
+  <div class="section-nav-inner">
+
+    <a class="section-link active" href="#ho-so">
+      Hồ sơ
+    </a>
+
+    <a class="section-link" href="#cua-hang">
+      Cửa hang
+    </a>
+
+    <a class="section-link" href="#long-dong">
+      Lòng động
+    </a>
+
+    <a class="section-link" href="#ho-am-ty">
+      Hồ Âm Ty
+    </a>
+
+    <a class="section-link" href="#a-di-da">
+      A Di Đà
+    </a>
+
+    <a class="section-link" href="#lich-su">
+      Lịch sử
+    </a>
+
+    <a class="section-link" href="#le-hoi">
+      Lễ hội
+    </a>
+
+    <a class="section-link" href="#goc-nhin">
+      Góc nhìn
+    </a>
+
+    <a class="section-link" href="#gia-tri">
+      Giá trị
+    </a>
+
+    <a class="section-link" href="#ket">
+      Kết
+    </a>
+
+  </div>
+
+</nav>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero">
+
+  <div class="hero-inner">
+
+    <div class="kicker">
+      ĐỘNG TAM THANH · CHÙA TAM THANH · XỨ LẠNG
+    </div>
+
+    <h1>
+      ĐỘNG
+      <span>TAM THANH</span>
+    </h1>
+
+    <p class="hero-description">
+      Một không gian nơi núi đá vôi, nhũ đá, tín ngưỡng
+      và lịch sử cùng tồn tại trong một hang động nổi tiếng
+      của Lạng Sơn.
+    </p>
+
+    <div class="hero-tags">
+
+      <div class="hero-tag">
+        📍 Phường Tam Thanh, tỉnh Lạng Sơn
+      </div>
+
+      <div class="hero-tag">
+        🪨 Hang đá vôi tự nhiên
+      </div>
+
+      <div class="hero-tag">
+        🏮 Chùa Tam Thanh
+      </div>
+
+      <div class="hero-tag">
+        🪷 Tượng Phật A Di Đà
+      </div>
+
+      <div class="hero-tag">
+        💧 Hồ Âm Ty
+      </div>
+
+    </div>
+
+    <div class="hero-note">
+      Một thành phần của quần thể danh thắng
+      Nhị – Tam Thanh, núi Tô Thị, thành Nhà Mạc.
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     HỒ SƠ
+========================================================= -->
+
+<section class="section" id="ho-so">
+
+  <div class="label">
+    01 / HỒ SƠ ĐỊA DANH
+  </div>
+
+  <h2 class="title">
+    Bước qua cửa hang,
+    bước vào một thế giới khác.
+  </h2>
+
+  <p class="intro">
+    Động Tam Thanh nằm trong khối núi đá vôi tại phường Tam Thanh.
+    Cửa động nằm giữa lưng chừng núi, phía trước là hệ thống bậc đá
+    dẫn vào một không gian vừa tự nhiên vừa mang đậm dấu ấn
+    văn hóa tâm linh.
+  </p>
+
+
+  <div class="fact-grid">
+
+    <div class="fact">
+
+      <div class="fact-no">
+        01 / CỬA HANG
+      </div>
+
+      <strong>
+        ~8 m
+      </strong>
+
+      <p>
+        Độ cao cửa động được Báo Lạng Sơn
+        mô tả khoảng 8 m.
+      </p>
+
+    </div>
+
+
+    <div class="fact">
+
+      <div class="fact-no">
+        02 / LỐI VÀO
+      </div>
+
+      <strong>
+        30 bậc
+      </strong>
+
+      <p>
+        Du khách đi qua khoảng 30 bậc đá
+        đục vào sườn núi để đến cửa động.
+      </p>
+
+    </div>
+
+
+    <div class="fact">
+
+      <div class="fact-no">
+        03 / TÊN KHÁC
+      </div>
+
+      <strong>
+        Thanh Thiền
+      </strong>
+
+      <p>
+        Chùa Tam Thanh còn được gọi
+        là chùa Thanh Thiền.
+      </p>
+
+    </div>
+
+
+    <div class="fact">
+
+      <div class="fact-no">
+        04 / XẾP HẠNG
+      </div>
+
+      <strong>
+        1962
+      </strong>
+
+      <p>
+        Quần thể Nhị – Tam Thanh, núi Tô Thị,
+        thành Nhà Mạc được xếp hạng di tích quốc gia.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     CỬA HANG
+========================================================= -->
+
+<section class="gate-section" id="cua-hang">
+
+  <div class="gate-inner">
+
+    <div class="label">
+      02 / CỬA TAM QUAN
+    </div>
+
+    <h2 class="title">
+      Cánh cửa của núi
+      nằm giữa lưng chừng đá.
+    </h2>
+
+    <p class="intro">
+      Điểm tiếp cận động Tam Thanh tạo cảm giác như đang bước vào
+      một nhà hát thiên nhiên. Những bậc đá dẫn lên cửa hang,
+      núi cây bao quanh và mái đá phía trên khiến không gian
+      chuyển từ ngoài trời sang lòng núi rất rõ rệt.
+    </p>
+
+
+    <div class="gate-grid">
+
+      <figure class="gate-photo">
+
+        <img
+          src="https://statics.vinpearl.com/chua-tam-thanh-lang-son-1_1625219476.jpg"
+          alt="Cổng Chùa Tam Thanh Lạng Sơn"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+        >
+
+        <figcaption class="gate-caption">
+          Chùa Tam Thanh nhìn từ phía ngoài, nằm tựa vào khối núi đá vôi.
+          Ảnh: tư liệu được đăng trên cổng thông tin phường Tam Thanh.
+        </figcaption>
+
+      </figure>
+
+
+      <div class="gate-copy">
+
+        <h3>
+          Từ sân chùa
+          vào lòng núi.
+        </h3>
+
+        <p>
+          Chùa Tam Thanh nằm ngay trong động Tam Thanh.
+          Phần kiến trúc phía trước tạo nên một khoảng chuyển tiếp
+          giữa cảnh quan núi đá và không gian thờ tự phía trong.
+        </p>
+
+        <p>
+          Theo thông tin địa phương, cửa động nằm ở lưng chừng núi
+          và được tiếp cận bằng hệ thống bậc đá. Qua cửa Tam Quan,
+          du khách bắt đầu nhìn thấy các không gian thờ tự xen lẫn
+          với nhũ đá tự nhiên.
+        </p>
+
+
+        <div class="gate-points">
+
+          <div class="gate-point">
+
+            <strong>
+              ~30
+            </strong>
+
+            <span>
+              Bậc đá dẫn vào khu di tích
+            </span>
+
+          </div>
+
+
+          <div class="gate-point">
+
+            <strong>
+              8 m
+            </strong>
+
+            <span>
+              Cao độ cửa hang theo tư liệu
+            </span>
+
+          </div>
+
+
+          <div class="gate-point">
+
+            <strong>
+              Núi đá
+            </strong>
+
+            <span>
+              Không gian tựa lưng vào núi
+            </span>
+
+          </div>
+
+
+          <div class="gate-point">
+
+            <strong>
+              Tam Quan
+            </strong>
+
+            <span>
+              Cửa vào không gian chùa trong hang
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     LÒNG ĐỘNG
+========================================================= -->
+
+<section class="cave-section" id="long-dong">
+
+  <div class="cave-inner">
+
+    <div class="label">
+      03 / LÒNG ĐỘNG
+    </div>
+
+    <h2 class="title">
+      Đá không đứng yên.
+      Nó kể chuyện bằng hình dạng.
+    </h2>
+
+    <p class="intro">
+      Bên trong động là những vòm đá, nhũ đá và măng đá
+      với nhiều hình dáng khác nhau. Ánh sáng nhân tạo hòa cùng
+      bề mặt đá tạo nên những mảng tương phản mạnh,
+      khiến mỗi góc trong hang có một cảm giác khác nhau.
+    </p>
+
+
+    <div class="cave-layout">
+
+      <figure class="cave-main">
+
+        <img
+          src="https://media.vietnamplus.vn/images/c14f6479e83e315b4cf3a2906cc6a51e508a1cb13cecfe29a17ae78eb62e30b5999d88e5ca4d4e331dab0686e0cb22ad28d2f79bd84d560304ff93da441e21ae120d687809679afc54b8bc3cc131d938/chua_tam_thanh_6.jpg.webp"
+          alt="Không gian bên trong Động Tam Thanh Lạng Sơn"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+        >
+
+        <figcaption>
+          Không gian nhũ đá và thờ tự bên trong Chùa Tam Thanh –
+          Động Tam Thanh. Ảnh: VietnamPlus.
+        </figcaption>
+
+      </figure>
+
+
+      <div class="cave-side">
+
+        <article class="cave-card">
+
+          <small>
+            01 / NHŨ ĐÁ
+          </small>
+
+          <h3>
+            Muôn hình
+            trong lòng núi.
+          </h3>
+
+          <p>
+            Các khối thạch nhũ tạo thành những đường nét tự nhiên
+            trên trần và vách động. Càng đi sâu, không gian
+            càng có nhiều ngóc ngách và hình thái đá khác nhau.
+          </p>
+
+        </article>
+
+
+        <article class="cave-card">
+
+          <small>
+            02 / TÂM LINH
+          </small>
+
+          <h3>
+            Chùa và hang
+            hòa làm một.
+          </h3>
+
+          <p>
+            Không gian thờ tự được bố trí trực tiếp trong hang,
+            để kiến trúc tôn giáo và địa hình tự nhiên cùng xuất hiện
+            trong một cảnh quan duy nhất.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     HỒ ÂM TY
+========================================================= -->
+
+<section class="water-section" id="ho-am-ty">
+
+  <div class="water-inner">
+
+    <div class="label">
+      04 / HỒ ÂM TY
+    </div>
+
+    <h2
+      class="title"
+      style="color:#eeeae4;"
+    >
+      Một mặt nước
+      nằm sâu giữa lòng động.
+    </h2>
+
+    <p class="intro">
+      Theo tư liệu của Báo Lạng Sơn, giữa động Tam Thanh có hồ Âm Ty,
+      nước trong và mát. Hồ góp phần tạo nên sự chuyển đổi cảnh quan
+      từ những bề mặt đá khô sang một không gian có chiều sâu,
+      phản chiếu ánh sáng và kiến trúc bên trong hang.
+    </p>
+
+
+    <div class="water-grid">
+
+      <article class="water-card">
+
+        <div class="water-no">
+          01 / NƯỚC
+        </div>
+
+        <h3>
+          Trong,
+          mát và sâu.
+        </h3>
+
+        <p>
+          Hồ Âm Ty là điểm nhấn về cảnh quan
+          trong lòng động, tạo ra một khoảng không
+          khác biệt giữa hệ thống nhũ đá.
+        </p>
+
+      </article>
+
+
+      <article class="water-card">
+
+        <div class="water-no">
+          02 / ÁNH SÁNG
+        </div>
+
+        <h3>
+          Ánh sáng
+          phản lên đá.
+        </h3>
+
+        <p>
+          Đèn chiếu trong hang làm nổi bật các mảng đá,
+          tạo hiệu ứng thị giác mạnh giữa vùng tối
+          và các khu vực có ánh sáng.
+        </p>
+
+      </article>
+
+
+      <article class="water-card">
+
+        <div class="water-no">
+          03 / CẢM GIÁC
+        </div>
+
+        <h3>
+          Đi càng sâu,
+          càng tĩnh.
+        </h3>
+
+        <p>
+          Sự kết hợp giữa đá, nước và không gian kín
+          khiến trải nghiệm trong động khác hẳn
+          cảnh quan bên ngoài.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     TƯỢNG A DI ĐÀ
+========================================================= -->
+
+<section class="art-section" id="a-di-da">
+
+  <div class="art-inner">
+
+    <div class="label">
+      05 / NGHỆ THUẬT PHẬT GIÁO
+    </div>
+
+    <h2 class="title">
+      Khi tác phẩm
+      được tạo ngay trên vách núi.
+    </h2>
+
+    <p class="intro">
+      Trong chùa có hệ thống tượng thờ phong phú. Nổi bật nhất
+      là tượng Phật A Di Đà được tạc trực tiếp vào vách đá,
+      được tài liệu du lịch của tỉnh xác định có giá trị
+      về niên đại và mỹ thuật.
+    </p>
+
+
+    <div class="art-layout">
+
+      <figure class="art-image">
+
+        <img
+          src="https://media.vietnamplus.vn/images/7255a701687d11cb8c6bbc58a6c807853b2383832d6b2f7ecb3835fd62fb10b656f1ed7f0fa16308c39e16b4f09a8d413baf0aa24dfd57111e811a4b44265e78/chua_tam_thanh_7.jpg"
+          alt="Không gian thờ tự bên trong Chùa Tam Thanh"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+        >
+
+      </figure>
+
+
+      <div class="art-copy">
+
+        <h3>
+          Nghệ thuật
+          nằm trong đá.
+        </h3>
+
+        <p>
+          Tượng A Di Đà nổi tiếng của Chùa Tam Thanh không phải
+          một pho tượng đặt rời khỏi hang mà được tạo trực tiếp
+          vào vách đá. Đây là một trong những chi tiết làm nên
+          giá trị đặc biệt của di tích.
+        </p>
+
+        <p>
+          Tài liệu du lịch Lạng Sơn ghi nhận tượng có niên đại
+          khoảng thế kỷ XVII và mang giá trị về cả lịch sử mỹ thuật.
+          Không gian thờ tự xung quanh tiếp tục hòa cùng cấu trúc
+          nhũ đá của hang.
+        </p>
+
+
+        <div class="art-highlight">
+          Giá trị của tác phẩm nằm ở chính sự kết hợp giữa
+          nghệ thuật tôn giáo và nền đá tự nhiên:
+          không thể tách riêng pho tượng khỏi không gian hang động.
+        </div>
+
+
+        <div class="art-stats">
+
+          <div class="art-stat">
+
+            <strong>
+              Thế kỷ XVII
+            </strong>
+
+            <span>
+              Niên đại theo tài liệu du lịch tỉnh
+            </span>
+
+          </div>
+
+
+          <div class="art-stat">
+
+            <strong>
+              202 cm
+            </strong>
+
+            <span>
+              Chiều cao tượng theo hồ sơ địa phương
+            </span>
+
+          </div>
+
+
+          <div class="art-stat">
+
+            <strong>
+              65 cm
+            </strong>
+
+            <span>
+              Chiều rộng tượng theo hồ sơ địa phương
+            </span>
+
+          </div>
+
+
+          <div class="art-stat">
+
+            <strong>
+              Vách đá
+            </strong>
+
+            <span>
+              Tác phẩm được tạo trực tiếp trên đá
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     TIMELINE
+========================================================= -->
+
+<section class="timeline-section" id="lich-su">
+
+  <div class="timeline-inner">
+
+    <div class="label">
+      06 / DÒNG THỜI GIAN
+    </div>
+
+    <h2 class="title">
+      Một hang động
+      đi qua nhiều lớp lịch sử.
+    </h2>
+
+    <p class="intro">
+      Động Tam Thanh không chỉ được nhìn như một thắng cảnh thiên nhiên.
+      Qua các thời kỳ, nơi đây tiếp tục được sử dụng như một không gian
+      tôn giáo, lưu giữ dấu tích văn bia và trở thành biểu tượng
+      văn hóa của xứ Lạng.
+    </p>
+
+
+    <div class="timeline">
+
+      <div class="time">
+
+        <div class="time-dot">
+          01
+        </div>
+
+        <div class="time-year">
+          THỜI LÊ
+        </div>
+
+        <h3>
+          Hình thành
+          dấu ấn chùa
+        </h3>
+
+        <p>
+          Tài liệu địa phương cho biết
+          Chùa Tam Thanh có từ thời nhà Lê.
+        </p>
+
+      </div>
+
+
+      <div class="time">
+
+        <div class="time-dot">
+          02
+        </div>
+
+        <div class="time-year">
+          1677
+        </div>
+
+        <h3>
+          Dấu tích
+          văn bia
+        </h3>
+
+        <p>
+          Hệ thống bút tích và bia đá
+          trong khu di tích phản ánh lịch sử lâu dài.
+        </p>
+
+      </div>
+
+
+      <div class="time">
+
+        <div class="time-dot">
+          03
+        </div>
+
+        <div class="time-year">
+          1962
+        </div>
+
+        <h3>
+          Di tích
+          quốc gia
+        </h3>
+
+        <p>
+          Quần thể Nhị – Tam Thanh,
+          núi Tô Thị, thành Nhà Mạc được xếp hạng.
+        </p>
+
+      </div>
+
+
+      <div class="time">
+
+        <div class="time-dot">
+          04
+        </div>
+
+        <div class="time-year">
+          HÔM NAY
+        </div>
+
+        <h3>
+          Di sản
+          sống
+        </h3>
+
+        <p>
+          Di tích tiếp tục đón du khách,
+          người hành hương và các hoạt động văn hóa.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     FESTIVAL
+========================================================= -->
+
+<section class="festival" id="le-hoi">
+
+  <div class="festival-inner">
+
+    <div class="label">
+      07 / LỄ HỘI CHÙA TAM THANH
+    </div>
+
+    <h2
+      class="title"
+      style="color:#f2ece7;"
+    >
+      Một ngày đầu xuân
+      khi di sản bước ra phố.
+    </h2>
+
+    <p class="intro">
+      Lễ hội Chùa Tam Thanh – Tam Giáo là một nét văn hóa nổi bật
+      của phường Tam Thanh. Điểm đặc sắc là nghi lễ rước kiệu
+      và bài vị Đốc trấn Ngô Thì Sĩ từ chùa Tam Giáo sang chùa
+      Tam Thanh rồi rước trở lại.
+    </p>
+
+
+    <div class="festival-grid">
+
+      <article class="festival-box">
+
+        <h3>
+          Ngày 15
+          tháng Giêng
+        </h3>
+
+        <div class="festival-date">
+          NGÀY HỘI TRUYỀN THỐNG
+        </div>
+
+        <p>
+          Lễ hội được tổ chức vào ngày 15 tháng Giêng âm lịch,
+          thu hút người dân địa phương và khách thập phương.
+        </p>
+
+      </article>
+
+
+      <article class="festival-box">
+
+        <h3>
+          Từ Nhị Thanh
+          đến Tam Thanh.
+        </h3>
+
+        <p>
+          Đoàn rước tạo nên sự liên kết đặc biệt giữa
+          Động Nhị Thanh – Chùa Tam Giáo và
+          Động Tam Thanh – Chùa Tam Thanh,
+          nối liền hai không gian di sản của xứ Lạng.
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     GALLERY
+========================================================= -->
+
+<section class="section" id="goc-nhin">
+
+  <div class="label">
+    08 / NHỮNG GÓC NHÌN
+  </div>
+
+  <h2 class="title">
+    Ngoài cửa chùa là núi.
+    Bên trong là cả một thế giới.
+  </h2>
+
+  <p class="intro">
+    Bộ ảnh dưới đây tập trung vào ba lớp hình ảnh:
+    cảnh quan bên ngoài, không gian lòng động và hoạt động
+    văn hóa gắn với Chùa Tam Thanh.
+  </p>
+
+
+  <div class="gallery">
+
+    <figure class="gallery-main">
+
+      <img
+        src="https://statics.vinpearl.com/chua-tam-thanh-lang-son-4_1625219597.jpg"
+        alt="Lễ hội Chùa Tam Thanh Lạng Sơn"
+        loading="lazy"
+        referrerpolicy="no-referrer"
+      >
+
+      <figcaption>
+        Không gian lễ hội trước Chùa Tam Thanh.
+        Ảnh: tư liệu được đăng trên cổng thông tin phường Tam Thanh.
+      </figcaption>
+
+    </figure>
+
+
+    <div class="gallery-side">
+
+      <figure class="gallery-small">
+
+        <img
+          src="https://media.vietnamplus.vn/images/c14f6479e83e315b4cf3a2906cc6a51e508a1cb13cecfe29a17ae78eb62e30b5999d88e5ca4d4e331dab0686e0cb22ad28d2f79bd84d560304ff93da441e21ae120d687809679afc54b8bc3cc131d938/chua_tam_thanh_6.jpg.webp"
+          alt="Nhũ đá trong Động Tam Thanh"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+        >
+
+        <figcaption>
+          Không gian đá và thờ tự trong lòng động.
+          Ảnh: VietnamPlus.
+        </figcaption>
+
+      </figure>
+
+
+      <figure class="gallery-small">
+
+        <img
+          src="https://ik.imagekit.io/tvlk/blog/2023/02/chua-tam-thanh-2.jpg?tr=dpr-2%2Cw-675"
+          alt="Không gian Chùa Tam Thanh trong hang"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+        >
+
+        <figcaption>
+          Không gian Chùa Tam Thanh trong hang động.
+          Ảnh: tư liệu du lịch.
+        </figcaption>
+
+      </figure>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     VALUES
+========================================================= -->
+
+<section class="section" id="gia-tri">
+
+  <div class="label">
+    09 / GIÁ TRỊ DI TÍCH
+  </div>
+
+  <h2 class="title">
+    Không chỉ là một điểm check-in.
+    Đây là một lớp ký ức của xứ Lạng.
+  </h2>
+
+
+  <div class="value-grid">
+
+    <div class="value-card">
+
+      <div class="value-no">
+        01 / ĐỊA CHẤT
+      </div>
+
+      <h3>
+        Cảnh quan hang đá vôi
+      </h3>
+
+      <p>
+        Nhũ đá, măng đá, vòm hang và hồ nước
+        tạo nên một không gian tự nhiên đặc trưng.
+      </p>
+
+    </div>
+
+
+    <div class="value-card">
+
+      <div class="value-no">
+        02 / TÂM LINH
+      </div>
+
+      <h3>
+        Không gian thờ tự trong hang
+      </h3>
+
+      <p>
+        Chùa được đặt trong lòng động,
+        tạo nên sự kết hợp đặc biệt giữa đá và kiến trúc.
+      </p>
+
+    </div>
+
+
+    <div class="value-card">
+
+      <div class="value-no">
+        03 / NGHỆ THUẬT
+      </div>
+
+      <h3>
+        Tượng A Di Đà trên vách đá
+      </h3>
+
+      <p>
+        Tác phẩm được tạc trực tiếp vào đá,
+        mang giá trị nổi bật về lịch sử và mỹ thuật.
+      </p>
+
+    </div>
+
+
+    <div class="value-card">
+
+      <div class="value-no">
+        04 / LỊCH SỬ
+      </div>
+
+      <h3>
+        Dấu tích nhiều thời kỳ
+      </h3>
+
+      <p>
+        Các bút tích, bia đá và lịch sử hình thành
+        làm tăng chiều sâu văn hóa của di tích.
+      </p>
+
+    </div>
+
+
+    <div class="value-card">
+
+      <div class="value-no">
+        05 / LỄ HỘI
+      </div>
+
+      <h3>
+        Văn hóa vẫn đang được tiếp nối
+      </h3>
+
+      <p>
+        Lễ hội Chùa Tam Thanh – Tam Giáo
+        tiếp tục kết nối di tích với cộng đồng.
+      </p>
+
+    </div>
+
+
+    <div class="value-card">
+
+      <div class="value-no">
+        06 / DU LỊCH
+      </div>
+
+      <h3>
+        Một biểu tượng của xứ Lạng
+      </h3>
+
+      <p>
+        Động Tam Thanh – Chùa Tam Thanh
+        là một trong những địa danh nổi tiếng nhất
+        của Lạng Sơn.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     FINAL
+========================================================= -->
+
+<section class="final" id="ket">
+
+  <div class="final-box">
+
+    <div class="final-small">
+      ĐỘNG TAM THANH · CHÙA TAM THANH · LẠNG SƠN
+    </div>
+
+    <h2>
+      Có những ngôi chùa
+      không đứng ngoài thiên nhiên.
+      Chúng nằm ngay trong lòng núi.
+    </h2>
+
+    <p>
+      Động Tam Thanh – Chùa Tam Thanh là nơi cảnh quan đá vôi,
+      tín ngưỡng, nghệ thuật và lịch sử cùng hội tụ:
+      từ những bậc đá dẫn vào hang, những nhũ đá trong lòng núi,
+      hồ Âm Ty đến tượng A Di Đà và các dấu tích văn hóa
+      được lưu giữ qua nhiều thế hệ.
+    </p>
+
+
+    <div class="sources">
+
+      Nguồn thông tin:
+
+      <a
+        href="https://tamthanh.langson.gov.vn/gioi-thieu/di-tich-danh-thang"
+        target="_blank"
+        rel="noopener"
+      >
+        UBND phường Tam Thanh
+      </a>
+
+      ·
+
+      <a
+        href="https://sovhtt.langson.gov.vn/tin-tuc-su-kien/linh-vuc-van-hoa/khu-di-tich-danh-thang-nhi-tam-thanh.html"
+        target="_blank"
+        rel="noopener"
+      >
+        Sở VHTTDL Lạng Sơn
+      </a>
+
+      ·
+
+      <a
+        href="https://diadanh.langson.gov.vn/node/1587"
+        target="_blank"
+        rel="noopener"
+      >
+        Địa danh Lạng Sơn
+      </a>
+
+      <br>
+
+      Hình ảnh:
+      nguồn được ghi tại từng ảnh.
+      Ưu tiên tư liệu của địa phương và các cơ quan báo chí.
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+  <div class="footer-inner">
+
+    <div class="footer-brand">
+      LẠNG SƠN / 14
+    </div>
+
+    <div class="footer-title">
+      ĐỘNG TAM THANH
+    </div>
+
+    <div class="footer-text">
+      Chùa Tam Thanh · Phường Tam Thanh ·
+      tỉnh Lạng Sơn · Quần thể Nhị – Tam Thanh,
+      núi Tô Thị, thành Nhà Mạc.
+    </div>
+
+    <div class="footer-source">
+
+      Thông tin di tích:
+
+      <a
+        href="https://tamthanh.langson.gov.vn/"
+        target="_blank"
+        rel="noopener"
+      >
+        UBND phường Tam Thanh
+      </a>
+
+      <br>
+
+      Thông tin văn hóa:
+
+      <a
+        href="https://sovhtt.langson.gov.vn/"
+        target="_blank"
+        rel="noopener"
+      >
+        Sở Văn hóa, Thể thao và Du lịch Lạng Sơn
+      </a>
+
+      <br>
+
+      Tư liệu:
+      các nguồn được ghi rõ tại từng hình ảnh.
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- =========================================================
+     SCROLL REVEAL + SECTION ACTIVE
+========================================================= -->
+
+<script>
+
+const revealItems = document.querySelectorAll(
+  ".fact, .gate-photo, .gate-copy, .cave-main, .cave-card, .water-card, .art-image, .art-copy, .time, .festival-box, .gallery figure, .value-card"
+);
+
+const observer = new IntersectionObserver(
+  entries => {
+
+    entries.forEach(entry => {
+
+      if(entry.isIntersecting){
+
+        entry.target.classList.add("visible");
+
+      }
+
+    });
+
+  },
+  {
+    threshold:.08
+  }
+);
+
+
+revealItems.forEach(element => {
+
+  element.style.opacity="0";
+
+  element.style.transform="translateY(24px)";
+
+  element.style.transition=
+    "opacity .7s ease, transform .7s ease";
+
+  observer.observe(element);
+
+});
+
+
+const revealStyle = document.createElement("style");
+
+revealStyle.innerHTML=`
+
+.visible{
+  opacity:1 !important;
+  transform:translateY(0) !important;
+}
+
+`;
+
+document.head.appendChild(revealStyle);
+
+
+/* =========================================================
+   ACTIVE SECTION NAV
+========================================================= */
+
+const navLinks = [
+  ...document.querySelectorAll(".section-link")
+];
+
+const navSections = navLinks
+  .map(link => {
+    return document.querySelector(
+      link.getAttribute("href")
+    );
+  })
+  .filter(Boolean);
+
+
+const sectionNavObserver = new IntersectionObserver(
+
+  entries => {
+
+    entries.forEach(entry => {
+
+      if(entry.isIntersecting){
+
+        navLinks.forEach(link => {
+
+          link.classList.toggle(
+            "active",
+            link.getAttribute("href") ===
+            "#" + entry.target.id
+          );
+
+        });
+
+        const activeLink = document.querySelector(
+          `.section-link[href="#${entry.target.id}"]`
+        );
+
+        if(activeLink){
+
+          activeLink.scrollIntoView({
+            behavior:"smooth",
+            block:"nearest",
+            inline:"center"
+          });
+
+        }
+
+      }
+
+    });
+
+  },
+
+  {
+    rootMargin:"-145px 0px -55% 0px",
+    threshold:0
+  }
+
+);
+
+
+navSections.forEach(section => {
+
+  sectionNavObserver.observe(section);
+
+});
+
+</script>
+
+
+</body>
+</html>
+```

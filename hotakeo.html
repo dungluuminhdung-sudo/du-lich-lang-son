@@ -1,0 +1,1725 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hồ Tà Keo | Lạng Sơn</title>
+
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #087f73;
+            --primary-dark: #075b53;
+            --primary-light: #dff5f0;
+
+            --sky: #e1f3ff;
+            --sky-dark: #17607f;
+
+            --yellow: #f7c948;
+            --yellow-light: #fff4c7;
+
+            --bg: #f7fbfa;
+            --white: #ffffff;
+
+            --text: #203331;
+            --muted: #667774;
+
+            --border: #dce9e6;
+
+            --shadow: 0 12px 35px rgba(14, 87, 78, .10);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Be Vietnam Pro", sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.75;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        /* =========================
+           TOPBAR
+        ========================= */
+
+        .topbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+
+            height: 70px;
+
+            z-index: 1000;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 5%;
+
+            background: rgba(7, 91, 83, .96);
+            backdrop-filter: blur(12px);
+
+            color: white;
+
+            box-shadow: 0 4px 18px rgba(0,0,0,.10);
+        }
+
+        .logo {
+            font-family: "DM Serif Display", serif;
+            font-size: 29px;
+            letter-spacing: 1.4px;
+        }
+
+        .main-link {
+            padding: 8px 17px;
+
+            border-radius: 30px;
+
+            border: 1px solid rgba(255,255,255,.45);
+
+            font-size: 14px;
+            font-weight: 700;
+
+            transition: .25s ease;
+        }
+
+        .main-link:hover {
+            background: white;
+            color: var(--primary-dark);
+        }
+
+        /* =========================
+           SECTION NAV
+        ========================= */
+
+        .section-nav {
+            position: fixed;
+
+            top: 70px;
+            left: 0;
+            right: 0;
+
+            height: 58px;
+
+            z-index: 999;
+
+            background: rgba(255,255,255,.96);
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid var(--border);
+
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .section-nav-inner {
+            width: max-content;
+            min-width: 100%;
+
+            height: 100%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            gap: 7px;
+
+            padding: 0 18px;
+        }
+
+        .section-nav a {
+            padding: 8px 13px;
+
+            border-radius: 22px;
+
+            color: #71807e;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            transition: .2s ease;
+        }
+
+        .section-nav a:hover {
+            color: var(--primary);
+            background: var(--primary-light);
+        }
+
+        .section-nav a.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            position: relative;
+
+            margin-top: 128px;
+
+            min-height: 620px;
+
+            display: flex;
+            align-items: flex-end;
+
+            overflow: hidden;
+
+            background: #8ecfc7;
+        }
+
+        .hero-image {
+            position: absolute;
+
+            inset: 0;
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+            object-position: center;
+
+            display: block;
+        }
+
+        .hero-overlay {
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(3,49,45,.87) 0%,
+                    rgba(3,49,45,.46) 42%,
+                    rgba(3,49,45,.03) 82%
+                );
+        }
+
+        .hero-content {
+            position: relative;
+
+            z-index: 2;
+
+            width: min(1150px, 90%);
+
+            margin: auto;
+
+            padding: 80px 0 70px;
+
+            color: white;
+        }
+
+        .hero-tag {
+            display: inline-block;
+
+            margin-bottom: 16px;
+
+            padding: 7px 14px;
+
+            border-radius: 30px;
+
+            background: rgba(247,201,72,.96);
+            color: #304128;
+
+            font-size: 12px;
+            font-weight: 800;
+
+            letter-spacing: 1.3px;
+
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            max-width: 850px;
+
+            margin-bottom: 20px;
+
+            font-family: "DM Serif Display", serif;
+
+            font-size: clamp(52px, 7vw, 90px);
+
+            line-height: 1.02;
+        }
+
+        .hero p {
+            max-width: 760px;
+
+            color: rgba(255,255,255,.92);
+
+            font-size: 17px;
+        }
+
+        /* =========================
+           MAIN
+        ========================= */
+
+        main {
+            width: min(1150px, 90%);
+            margin: auto;
+        }
+
+        .section {
+            padding: 90px 0;
+
+            border-bottom: 1px solid var(--border);
+
+            scroll-margin-top: 145px;
+        }
+
+        .section-head {
+            margin-bottom: 38px;
+        }
+
+        .section-number {
+            margin-bottom: 8px;
+
+            color: var(--primary);
+
+            font-size: 13px;
+            font-weight: 800;
+
+            letter-spacing: 2px;
+        }
+
+        .section h2 {
+            margin-bottom: 15px;
+
+            color: var(--primary-dark);
+
+            font-family: "DM Serif Display", serif;
+
+            font-size: clamp(36px, 5vw, 54px);
+
+            line-height: 1.12;
+        }
+
+        .section-intro {
+            max-width: 800px;
+
+            color: var(--muted);
+
+            font-size: 16px;
+        }
+
+        /* =========================
+           TWO COLUMNS
+        ========================= */
+
+        .two-col {
+            display: grid;
+
+            grid-template-columns: 1.02fr .98fr;
+
+            gap: 45px;
+
+            align-items: center;
+        }
+
+        .text p {
+            margin-bottom: 18px;
+        }
+
+        /* =========================
+           IMAGE CARD
+        ========================= */
+
+        .image-card {
+            overflow: hidden;
+
+            background: white;
+
+            border-radius: 22px;
+
+            border: 1px solid var(--border);
+
+            box-shadow: var(--shadow);
+        }
+
+        .image-card img {
+            width: 100%;
+            height: 390px;
+
+            display: block;
+
+            object-fit: cover;
+        }
+
+        .caption {
+            padding: 13px 17px;
+
+            background: white;
+
+            color: var(--muted);
+
+            font-size: 12px;
+        }
+
+        /* =========================
+           QUICK INFO
+        ========================= */
+
+        .quick-info {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 14px;
+
+            margin-top: 35px;
+        }
+
+        .info-box {
+            padding: 20px;
+
+            border-radius: 17px;
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            box-shadow: 0 6px 20px rgba(20,80,70,.04);
+        }
+
+        .info-label {
+            margin-bottom: 5px;
+
+            color: var(--primary);
+
+            font-size: 11px;
+            font-weight: 800;
+
+            letter-spacing: 1px;
+
+            text-transform: uppercase;
+        }
+
+        .info-value {
+            color: #26433f;
+
+            font-size: 14px;
+
+            font-weight: 700;
+        }
+
+        /* =========================
+           HIGHLIGHT CARDS
+        ========================= */
+
+        .highlight-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .highlight {
+            padding: 28px;
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 21px;
+
+            transition: .25s ease;
+        }
+
+        .highlight:hover {
+            transform: translateY(-4px);
+
+            box-shadow: var(--shadow);
+        }
+
+        .highlight-icon {
+            width: 54px;
+            height: 54px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 17px;
+
+            border-radius: 16px;
+
+            background: var(--primary-light);
+
+            font-size: 26px;
+        }
+
+        .highlight h3 {
+            margin-bottom: 8px;
+
+            color: var(--primary-dark);
+
+            font-size: 19px;
+        }
+
+        .highlight p {
+            color: var(--muted);
+
+            font-size: 14px;
+        }
+
+        /* =========================
+           STORY
+        ========================= */
+
+        .story {
+            padding: 40px;
+
+            border-radius: 24px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #e8f8f5,
+                    #eef7ff
+                );
+
+            border: 1px solid #cce8e2;
+        }
+
+        .story p {
+            margin-bottom: 18px;
+        }
+
+        .story p:last-child {
+            margin-bottom: 0;
+        }
+
+        .quote {
+            margin-bottom: 24px;
+
+            color: var(--primary-dark);
+
+            font-family: "DM Serif Display", serif;
+
+            font-size: 30px;
+
+            line-height: 1.4;
+        }
+
+        /* =========================
+           FEATURE LIST
+        ========================= */
+
+        .feature-list {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 16px 34px;
+
+            margin-top: 28px;
+        }
+
+        .feature-item {
+            display: flex;
+
+            gap: 12px;
+
+            align-items: flex-start;
+        }
+
+        .feature-dot {
+            flex: 0 0 9px;
+
+            width: 9px;
+            height: 9px;
+
+            margin-top: 10px;
+
+            border-radius: 50%;
+
+            background: var(--yellow);
+        }
+
+        /* =========================
+           BLUE PANEL
+        ========================= */
+
+        .blue-panel {
+            padding: 34px;
+
+            border-radius: 23px;
+
+            background: var(--sky);
+
+            border: 1px solid #c6e8fb;
+        }
+
+        .blue-panel h3 {
+            margin-bottom: 12px;
+
+            color: var(--sky-dark);
+
+            font-size: 22px;
+        }
+
+        .blue-panel p {
+            margin-bottom: 12px;
+        }
+
+        .blue-panel p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* =========================
+           GALLERY
+        ========================= */
+
+        .gallery {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 17px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+
+            background: white;
+
+            border: 1px solid var(--border);
+
+            border-radius: 17px;
+
+            box-shadow: 0 7px 24px rgba(20,70,65,.06);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 245px;
+
+            display: block;
+
+            object-fit: cover;
+
+            transition: transform .4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.04);
+        }
+
+        .image-label {
+            padding: 12px 14px;
+
+            color: var(--muted);
+
+            font-size: 13px;
+        }
+
+        /* =========================
+           SOURCE
+        ========================= */
+
+        .source-box {
+            padding: 36px;
+
+            border-radius: 24px;
+
+            background: var(--primary-dark);
+
+            color: white;
+        }
+
+        .source-box h3 {
+            margin-bottom: 16px;
+
+            font-family: "DM Serif Display", serif;
+
+            font-size: 31px;
+        }
+
+        .source-box p {
+            margin-bottom: 8px;
+
+            color: rgba(255,255,255,.80);
+
+            font-size: 14px;
+        }
+
+        /* =========================
+           BACK BUTTON
+        ========================= */
+
+        .back-btn {
+            position: fixed;
+
+            right: 22px;
+            bottom: 22px;
+
+            z-index: 1100;
+
+            padding: 12px 18px;
+
+            border-radius: 30px;
+
+            background: var(--primary);
+
+            color: white;
+
+            font-size: 13px;
+            font-weight: 800;
+
+            box-shadow: 0 9px 25px rgba(0,0,0,.18);
+
+            transition: .25s ease;
+        }
+
+        .back-btn:hover {
+            background: var(--primary-dark);
+
+            transform: translateY(-2px);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 45px 20px;
+
+            background: #063f3a;
+
+            color: rgba(255,255,255,.76);
+
+            text-align: center;
+
+            font-size: 13px;
+        }
+
+        footer strong {
+            color: white;
+
+            font-size: 16px;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .two-col {
+                grid-template-columns: 1fr;
+            }
+
+            .quick-info {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .highlight-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .feature-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 620px) {
+
+            .topbar {
+                padding: 0 18px;
+            }
+
+            .logo {
+                font-size: 23px;
+            }
+
+            .main-link {
+                padding: 7px 13px;
+
+                font-size: 12px;
+            }
+
+            .hero {
+                min-height: 525px;
+            }
+
+            .hero-content {
+                padding-bottom: 52px;
+            }
+
+            .hero h1 {
+                font-size: 49px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .section {
+                padding: 65px 0;
+            }
+
+            .quick-info {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .story {
+                padding: 25px;
+            }
+
+            .back-btn {
+                right: 14px;
+                bottom: 14px;
+
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+
+<header class="topbar">
+
+    <a href="./danhlamthangcanh.html" class="logo">
+        LẠNG SƠN
+    </a>
+
+    <a href="./danhlamthangcanh.html" class="main-link">
+        Danh thắng
+    </a>
+
+</header>
+
+<!-- =====================================================
+     SECTION NAV
+===================================================== -->
+
+<nav class="section-nav">
+
+    <div class="section-nav-inner">
+
+        <a href="#tong-quan">Tổng quan</a>
+        <a href="#lich-su">Lịch sử</a>
+        <a href="#dac-diem">Đặc điểm</a>
+        <a href="#canh-quan">Cảnh quan</a>
+        <a href="#vai-tro">Vai trò</a>
+        <a href="#du-lich">Du lịch</a>
+        <a href="#trai-nghiem">Trải nghiệm</a>
+        <a href="#bao-ton">Bảo tồn</a>
+        <a href="#hinh-anh">Hình ảnh</a>
+        <a href="#nguon">Nguồn</a>
+
+    </div>
+
+</nav>
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+    <!-- Ảnh Hồ Tà Keo từ trang du lịch địa phương -->
+    <img
+        class="hero-image"
+        src="https://locbinh.langson.gov.vn/upload/105424/fck/ubndhlb/2024_09_19_09_11_103.jpg"
+        alt="Hồ Tà Keo Lạng Sơn"
+        onerror="this.onerror=null;this.src='https://locbinh.langson.gov.vn/upload/105424/fck/ubndhlb/2024_09_19_09_11_104.jpg';"
+    >
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <div class="hero-tag">
+            Thiên nhiên · Lộc Bình
+        </div>
+
+        <h1>
+            Hồ Tà Keo
+        </h1>
+
+        <p>
+            Một hồ chứa nước giữa không gian đồi núi và cây xanh của Lộc Bình,
+            có cảnh quan tự nhiên và tiềm năng phát triển du lịch sinh thái.
+        </p>
+
+    </div>
+
+</section>
+
+<main>
+
+<!-- =====================================================
+     01 TỔNG QUAN
+===================================================== -->
+
+<section class="section" id="tong-quan">
+
+    <div class="section-head">
+
+        <div class="section-number">
+            01 · TỔNG QUAN
+        </div>
+
+        <h2>
+            Mặt hồ giữa vùng đồi núi
+        </h2>
+
+        <p class="section-intro">
+            Hồ Tà Keo nằm tại khu vực Sàn Viên, Lộc Bình,
+            là một trong những hồ chứa nước của địa phương có tiềm năng
+            khai thác cảnh quan và phát triển du lịch sinh thái.
+        </p>
+
+    </div>
+
+    <div class="two-col">
+
+        <div class="text">
+
+            <p>
+                Hồ Tà Keo thuộc khu vực xã Sàn Viên, huyện Lộc Bình,
+                tỉnh Lạng Sơn. Đây là một trong những hồ chứa nhân tạo
+                được xây dựng phục vụ nhu cầu thủy lợi của địa phương.
+            </p>
+
+            <p>
+                Không gian quanh hồ có đặc trưng là mặt nước rộng,
+                các triền đồi và vùng cây xanh bao quanh,
+                tạo nên cảnh quan khá yên tĩnh và thoáng đãng.
+            </p>
+
+            <p>
+                Theo thông tin của địa phương, Hồ Tà Keo cùng các hồ
+                Nà Cấy, Bản Chành... được đánh giá có tiềm năng
+                để khai thác và phát triển du lịch.
+            </p>
+
+        </div>
+
+        <!-- ẢNH TỔNG QUAN -->
+        <div class="image-card">
+
+            <img
+                src="https://locbinh.langson.gov.vn/upload/105424/fck/ubndhlb/2024_09_19_09_11_103.jpg"
+                alt="Hồ Tà Keo nhìn từ khu vực xung quanh"
+                loading="eager"
+                onerror="this.onerror=null;this.src='https://locbinh.langson.gov.vn/upload/105424/fck/ubndhlb/2024_09_19_09_11_104.jpg';"
+            >
+
+            <div class="caption">
+                Hồ Tà Keo giữa cảnh quan đồi núi của khu vực Lộc Bình.
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="quick-info">
+
+        <div class="info-box">
+            <div class="info-label">
+                Tên gọi
+            </div>
+
+            <div class="info-value">
+                Hồ Tà Keo
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="info-label">
+                Địa điểm
+            </div>
+
+            <div class="info-value">
+                Khu vực Sàn Viên, Lộc Bình, Lạng Sơn
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="info-label">
+                Loại hình
+            </div>
+
+            <div class="info-value">
+                Hồ chứa nước – cảnh quan sinh thái
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="info-label">
+                Định hướng
+            </div>
+
+            <div class="info-value">
+                Có tiềm năng phát triển du lịch sinh thái
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     02 LỊCH SỬ
+===================================================== -->
+
+<section class="section" id="lich-su">
+
+    <div class="section-head">
+
+        <div class="section-number">
+            02 · LỊCH SỬ
+        </div>
+
+        <h2>
+            Dấu ấn của công trình thủy lợi
+        </h2>
+
+        <p class="section-intro">
+            Hồ Tà Keo gắn với quá trình xây dựng các công trình thủy lợi
+            phục vụ sản xuất nông nghiệp tại Lạng Sơn.
+        </p>
+
+    </div>
+
+    <div class="story">
+
+        <div class="quote">
+            Từ công trình thủy lợi đến tiềm năng điểm đến sinh thái
+        </div>
+
+        <p>
+            Theo tài liệu lịch sử của ngành nông nghiệp Lạng Sơn,
+            trong những năm 1960 tỉnh đã xây dựng nhiều công trình thủy lợi lớn,
+            trong đó có hồ Tà Keo.
+        </p>
+
+        <p>
+            Chức năng quan trọng của hồ là tích nước và phục vụ sản xuất,
+            đồng thời góp phần điều tiết dòng chảy.
+        </p>
+
+        <p>
+            Ngày nay, ngoài giá trị phục vụ thủy lợi,
+            mặt nước và cảnh quan đồi núi quanh hồ được địa phương
+            đánh giá là có tiềm năng để phát triển thêm các sản phẩm
+            du lịch sinh thái.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     03 ĐẶC ĐIỂM
+===================================================== -->
+
+<section class="section" id="dac-diem">
+
+    <div class="section-head">
+
+        <div class="section-number">
+            03 · ĐẶC ĐIỂM
+        </div>
+
+        <h2>
+            Mặt nước và đồi xanh
+        </h2>
+
+        <p class="section-intro">
+            Vẻ đẹp của Hồ Tà Keo đến từ sự kết hợp giữa mặt hồ,
+            các triền đồi và thảm thực vật xung quanh.
+        </p>
+
+    </div>
+
+    <div class="highlight-grid">
+
+        <div class="highlight">
+
+            <div class="highlight-icon">
+                💧
+            </div>
+
+            <h3>
+                Mặt hồ rộng
+            </h3>
+
+            <p>
+                Mặt nước tạo ra khoảng không gian thoáng,
+                phản chiếu bầu trời và những dải đồi xung quanh.
+            </p>
+
+        </div>
+
+        <div class="highlight">
+
+            <div class="highlight-icon">
+                🌳
+            </div>
+
+            <h3>
+                Đồi cây bao quanh
+            </h3>
+
+            <p>
+                Những triền đồi phủ cây xanh tạo nên khung cảnh
+                tự nhiên, yên tĩnh và tương đối tách biệt.
+            </p>
+
+        </div>
+
+        <div class="highlight">
+
+            <div class="highlight-icon">
+                🌤️
+            </div>
+
+            <h3>
+                Không gian thoáng
+            </h3>
+
+            <p>
+                Cảnh quan mở quanh mặt hồ phù hợp cho việc
+                ngắm cảnh và khám phá không gian tự nhiên.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     04 CẢNH QUAN
+===================================================== -->
+
+<section class="section" id="canh-quan">
+
+    <div class="section-head">
+
+        <div class="section-number">
+            04 · CẢNH QUAN
+        </div>
+
+        <h2>
+            Hồ nước giữa màu xanh Lộc Bình
+        </h2>
+
+        <p class="section-intro">
+            Không gian quanh hồ mang vẻ đẹp bình yên,
+            phù hợp với những trải nghiệm gần gũi thiên nhiên.
+        </p>
+
+    </div>
+
+    <div class="two-col">
+
+        <div class="image-card">
+
+            <img
+                src="https://locbinh.langson.gov.vn/upload/105424/fck/ubndhlb/2024_09_19_09_11_104.jpg"
+                alt="Cảnh quan hồ Tà Keo"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='https://locbinh.langson.gov.vn/upload/105424/fck/ubndhlb/2024_09_19_09_11_103.jpg';"
+            >
+
+            <div class="caption">
+                Cảnh quan mặt nước và đồi cây quanh Hồ Tà Keo.
+            </div>
+
+        </div>
+
+        <div class="text">
+
+            <p>
+                Vào những ngày thời tiết đẹp,
+                mặt hồ kết hợp với bầu trời và các triền cây
+                tạo nên khung cảnh có độ mở lớn.
+            </p>
+
+            <p>
+                Sự yên tĩnh của mặt nước cũng tạo cho khu vực
+                một cảm giác thư thái, khác với những điểm du lịch
+                đông đúc trong trung tâm đô thị.
+            </p>
+
+            <div class="feature-list">
+
+                <div class="feature-item">
+                    <span class="feature-dot"></span>
+                    <span>Mặt nước tạo không gian mở</span>
+                </div>
+
+                <div class="feature-item">
+                    <span class="feature-dot"></span>
+                    <span>Đồi cây bao quanh hồ</span>
+                </div>
+
+                <div class="feature-item">
+                    <span class="feature-dot"></span>
+                    <span>Cảnh quan yên tĩnh</span>
+                </div>
+
+                <div class="feature-item">
+                    <span class="feature-dot"></span>
+                    <span>Gần các tài nguyên du lịch khác của Lộc Bình</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     05 VAI TRÒ
+===================================================== -->
+
+<section class="section" id="vai-tro">
+
+    <div class="section-head">
+
+        <div class="section-number">
+            05 · VAI TRÒ
+        </div>
+
+        <h2>
+            Giá trị của Hồ Tà Keo
+        </h2>
+
+        <p class="section-intro">
+            Hồ vừa có vai trò thủy lợi,
+            vừa có giá trị cảnh quan và tiềm năng phát triển dịch vụ sinh thái.
+        </p>
+
+    </div>
+
+    <div class="highlight-grid">
+
+        <div class="highlight">
+
+            <div class="highlight-icon">
+                🌾
+            </div>
+
+            <h3>
+                Phục vụ nông nghiệp
+            </h3>
+
+            <p>
+                Hồ là một công trình thủy lợi góp phần cung cấp nước
+                phục vụ sản xuất nông nghiệp tại địa phương.
+            </p>
+
+        </div>
+
+        <div class="highlight">
+
+            <div class="highlight-icon">
+                🌊
+            </div>
+
+            <h3>
+                Điều tiết dòng chảy
+            </h3>
+
+            <p>
+                Hồ có vai trò tích nước và tham gia điều tiết
+                dòng chảy theo chức năng của công trình thủy lợi.
+            </p>
+
+        </div>
+
+        <div class="highlight">
+
+            <div class="highlight-icon">
+                🧭
+            </div>
+
+            <h3>
+                Tiềm năng du lịch
+            </h3>
+
+            <p>
+                Địa phương xác định hệ thống hồ Tà Keo và các hồ khác
+                có tiềm năng khai thác để phát triển du lịch.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     06 DU LỊCH
+===================================================== -->
+
+<section class="section" id="du-lich">
+
+    <div class="section-head">
+
+        <div class="section-number">
+            06 · DU LỊCH
+        </div>
+
+        <h2>
+            Tiềm năng du lịch sinh thái
+        </h2>
+
+        <p class="section-intro">
+            Hồ Tà Keo hiện nổi bật hơn ở tiềm năng cảnh quan
+            và định hướng phát triển trong tương lai.
+        </p>
+
+    </div>
+
+    <div class="two-col">
+
+        <div class="text">
+
+            <p>
+                Tài liệu quy hoạch sử dụng đất của Lộc Bình giai đoạn
+                2021–2030 xác định hạng mục Khu du lịch sinh thái Hồ Tà Keo
+                với diện tích quy hoạch 388,70 ha tại khu vực Sàn Viên.
+            </p>
+
+            <p>
+                Điều này cho thấy địa phương đang hướng tới việc
+                khai thác bài bản hơn giá trị cảnh quan của hồ,
+                thay vì chỉ coi đây là một công trình thủy lợi.
+            </p>
+
+            <p>
+                Tuy nhiên, không nên hiểu Hồ Tà Keo là một khu du lịch
+                đã hoàn thiện đầy đủ cơ sở dịch vụ; thông tin quy hoạch
+                thể hiện đây là một hướng phát triển trong giai đoạn 2026–2030.
+            </p>
+
+        </div>
+
+        <div class="blue-panel">
+
+            <h3>
+                Định hướng 2026–2030
+            </h3>
+
+            <p>
+                <strong>388,70 ha</strong>
+                diện tích quy hoạch cho Khu du lịch sinh thái Hồ Tà Keo.
+            </p>
+
+            <p>
+                Địa điểm quy hoạch nằm tại khu vực
+                các thôn Nà Mò, Khòn Chào – Co Cai, xã Sàn Viên
+                theo hồ sơ quy hoạch.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     07 TRẢI NGHIỆM
+===================================================== -->
+
+<section class="section" id="trai-nghiem">
+
+    <div class="section-head">
+
+        <div class="section-number">
+            07 · TRẢI NGHIỆM
+        </div>
+
+        <h2>
+            Ngắm hồ và khám phá thiên nhiên
+        </h2>
+
+        <p class="section-intro">
+            Trong điều kiện phù hợp và theo khu vực được phép tiếp cận,
+            cảnh quan hồ có thể đem lại những trải nghiệm nhẹ nhàng,
+            thiên về ngắm cảnh và tìm hiểu thiên nhiên.
+        </p>
+
+    </div>
+
+    <div class="story">
+
+        <div class="quote">
+            Một khoảng xanh yên bình giữa vùng đồi núi
+        </div>
+
+        <p>
+            Trải nghiệm nổi bật nhất tại khu vực là quan sát mặt hồ,
+            các triền đồi và không gian cây xanh xung quanh.
+        </p>
+
+        <p>
+            Với định hướng phát triển du lịch sinh thái,
+            Hồ Tà Keo có thể trở thành một điểm đến kết hợp
+            tham quan cảnh quan, nghỉ ngơi và khám phá thiên nhiên
+            trong tương lai.
+        </p>
+
+        <p>
+            Do đây vẫn là khu vực có công trình thủy lợi,
+            người tham quan cần tuân thủ biển báo,
+            quy định an toàn và không tự ý xuống khu vực nguy hiểm.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     08 BẢO TỒN
+===================================================== -->
+
+<section class="section" id="bao-ton">
+
+    <div class="section-head">
+
+        <div class="section-number">
+            08 · BẢO TỒN
+        </div>
+
+        <h2>
+            Giữ hồ xanh, giữ cảnh quan
+        </h2>
+
+        <p class="section-intro">
+            Phát triển du lịch chỉ bền vững khi đi cùng với bảo vệ
+            nguồn nước, hệ sinh thái và an toàn công trình thủy lợi.
+        </p>
+
+    </div>
+
+    <div class="two-col">
+
+        <div class="text">
+
+            <p>
+                Hồ Tà Keo có vai trò thủy lợi nên việc bảo vệ
+                nguồn nước và an toàn công trình luôn cần được đặt lên trước.
+            </p>
+
+            <p>
+                Trong tương lai, nếu phát triển thành điểm du lịch sinh thái,
+                việc tổ chức không gian tham quan cần hạn chế rác thải,
+                bảo vệ thực vật ven hồ và không làm ảnh hưởng đến
+                hoạt động vận hành của công trình.
+            </p>
+
+            <div class="feature-list">
+
+                <div class="feature-item">
+                    <span class="feature-dot"></span>
+                    <span>Giữ vệ sinh mặt hồ</span>
+                </div>
+
+                <div class="feature-item">
+                    <span class="feature-dot"></span>
+                    <span>Bảo vệ cây xanh ven hồ</span>
+                </div>
+
+                <div class="feature-item">
+                    <span class="feature-dot"></span>
+                    <span>Không tự ý vào khu vực nguy hiểm</span>
+                </div>
+
+                <div class="feature-item">
+                    <span class="feature-dot"></span>
+                    <span>Ưu tiên phát triển du lịch bền vững</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="image-card">
+
+            <img
+                src="https://locbinh.langson.gov.vn/upload/105424/fck/ubndhlb/2024_09_19_09_11_103.jpg"
+                alt="Mặt hồ Tà Keo và đồi cây"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='https://locbinh.langson.gov.vn/upload/105424/fck/ubndhlb/2024_09_19_09_11_104.jpg';"
+            >
+
+            <div class="caption">
+                Không gian mặt nước và cây xanh tạo nên giá trị cảnh quan của hồ.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     09 HÌNH ẢNH
+===================================================== -->
+
+<section class="section" id="hinh-anh">
+
+    <div class="section-head">
+
+        <div class="section-number">
+            09 · HÌNH ẢNH
+        </div>
+
+        <h2>
+            Thư viện Hồ Tà Keo
+        </h2>
+
+        <p class="section-intro">
+            Một số góc nhìn tiêu biểu về mặt hồ và không gian đồi núi xung quanh.
+        </p>
+
+    </div>
+
+    <div class="gallery">
+
+        <!-- ẢNH 01 -->
+        <div class="gallery-item">
+
+            <img
+                src="https://locbinh.langson.gov.vn/upload/105424/fck/ubndhlb/2024_09_19_09_11_103.jpg"
+                alt="Hồ Tà Keo"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='https://locbinh.langson.gov.vn/upload/105424/fck/ubndhlb/2024_09_19_09_11_104.jpg';"
+            >
+
+            <div class="image-label">
+                Toàn cảnh Hồ Tà Keo
+            </div>
+
+        </div>
+
+        <!-- ẢNH 02 -->
+        <div class="gallery-item">
+
+            <img
+                src="https://locbinh.langson.gov.vn/upload/105424/fck/ubndhlb/2024_09_19_09_11_104.jpg"
+                alt="Cảnh quan quanh Hồ Tà Keo"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='https://locbinh.langson.gov.vn/upload/105424/fck/ubndhlb/2024_09_19_09_11_103.jpg';"
+            >
+
+            <div class="image-label">
+                Đồi cây bao quanh mặt hồ
+            </div>
+
+        </div>
+
+        <!-- ẢNH 03 -->
+        <div class="gallery-item">
+
+            <img
+                src="https://locbinh.langson.gov.vn/upload/105424/fck/ubndhlb/2024_09_19_09_11_103.jpg"
+                alt="Mặt nước Hồ Tà Keo"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='https://locbinh.langson.gov.vn/upload/105424/fck/ubndhlb/2024_09_19_09_11_104.jpg';"
+            >
+
+            <div class="image-label">
+                Mặt nước giữa không gian xanh
+            </div>
+
+        </div>
+
+        <!-- ẢNH 04 -->
+        <div class="gallery-item">
+
+            <img
+                src="https://locbinh.langson.gov.vn/upload/105424/fck/ubndhlb/2024_09_19_09_11_104.jpg"
+                alt="Hồ và đồi núi Lộc Bình"
+                loading="lazy"
+                onerror="this.onerror=null;this.src='https://locbinh.langson.gov.vn/upload/105424/fck/ubndhlb/2024_09_19_09_11_103.jpg';"
+            >
+
+            <div class="image-label">
+                Hồ Tà Keo nhìn giữa các triền đồi
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     10 NGUỒN
+===================================================== -->
+
+<section class="section" id="nguon">
+
+    <div class="section-head">
+
+        <div class="section-number">
+            10 · NGUỒN
+        </div>
+
+        <h2>
+            Nguồn thông tin
+        </h2>
+
+    </div>
+
+    <div class="source-box">
+
+        <h3>
+            Hồ Tà Keo – Lạng Sơn
+        </h3>
+
+        <p>
+            Cổng thông tin điện tử xã Lộc Bình –
+            mục Du lịch, giới thiệu Hồ Tà Keo và tiềm năng du lịch
+            của các hồ trên địa bàn.
+        </p>
+
+        <p>
+            UBND tỉnh Lạng Sơn –
+            tài liệu về công trình hồ Tà Keo và chức năng thủy lợi.
+        </p>
+
+        <p>
+            Hồ Tà Keo được xác định tại khu vực
+            xã Sàn Viên, huyện Lộc Bình, tỉnh Lạng Sơn.
+        </p>
+
+        <p>
+            Hồ sơ quy hoạch sử dụng đất 2021–2030:
+            Khu du lịch sinh thái Hồ Tà Keo quy hoạch 388,70 ha,
+            thực hiện giai đoạn 2026–2030.
+        </p>
+
+        <p>
+            Hình ảnh sử dụng trong trang lấy từ trang thông tin du lịch
+            của địa phương và được đặt cơ chế ảnh dự phòng.
+        </p>
+
+    </div>
+
+</section>
+
+</main>
+
+<!-- =====================================================
+     BACK BUTTON
+===================================================== -->
+
+<a
+    href="./danhlamthangcanh.html"
+    class="back-btn"
+>
+    ← Về danh thắng
+</a>
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <strong>LẠNG SƠN</strong>
+
+    <br>
+
+    Hồ Tà Keo
+
+    <br>
+
+    Khám phá thiên nhiên và những vùng đất xanh của Xứ Lạng
+
+</footer>
+
+<!-- =====================================================
+     ACTIVE MENU
+===================================================== -->
+
+<script>
+
+    const sections = document.querySelectorAll(".section");
+    const navLinks = document.querySelectorAll(".section-nav a");
+
+    const observer = new IntersectionObserver(
+        entries => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    navLinks.forEach(link => {
+                        link.classList.remove("active");
+                    });
+
+                    const activeLink = document.querySelector(
+                        '.section-nav a[href="#' + entry.target.id + '"]'
+                    );
+
+                    if (activeLink) {
+                        activeLink.classList.add("active");
+                    }
+
+                }
+
+            });
+
+        },
+        {
+            rootMargin: "-155px 0px -55% 0px",
+            threshold: 0
+        }
+    );
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+</script>
+
+</body>
+</html>

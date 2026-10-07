@@ -1,0 +1,2354 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Núi Phai Vệ | Lạng Sơn</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #f4efe7;
+            --paper: #fffaf3;
+            --paper-2: #eee4d5;
+            --ink: #2f2923;
+            --muted: #756b61;
+            --brown: #5e4030;
+            --brown-dark: #3c2b21;
+            --gold: #b78a48;
+            --line: rgba(94, 64, 48, .16);
+            --shadow: 0 18px 50px rgba(61, 42, 28, .10);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 132px;
+        }
+
+        body {
+            font-family: "Be Vietnam Pro", sans-serif;
+            background: var(--bg);
+            color: var(--ink);
+            line-height: 1.75;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        /* =========================
+           MENU CHÍNH
+        ========================= */
+
+        .topbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            z-index: 1000;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 5vw;
+
+            background: rgba(255, 250, 243, .95);
+            backdrop-filter: blur(14px);
+
+            border-bottom: 1px solid var(--line);
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 800;
+            letter-spacing: .08em;
+            color: var(--brown-dark);
+        }
+
+        .main-link {
+            padding: 10px 19px;
+
+            border: 1px solid rgba(94, 64, 48, .25);
+            border-radius: 999px;
+
+            font-size: 14px;
+            font-weight: 700;
+
+            color: var(--brown);
+            background: rgba(255,255,255,.6);
+
+            transition: .25s ease;
+        }
+
+        .main-link:hover {
+            background: var(--brown);
+            color: white;
+        }
+
+        /* =========================
+           MENU SECTION
+        ========================= */
+
+        .section-nav {
+            position: fixed;
+            top: 70px;
+            left: 0;
+            width: 100%;
+            height: 58px;
+            z-index: 999;
+
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            padding: 0 5vw;
+
+            background: rgba(247, 241, 232, .97);
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid var(--line);
+
+            overflow-x: auto;
+            white-space: nowrap;
+            scrollbar-width: none;
+        }
+
+        .section-nav::-webkit-scrollbar {
+            display: none;
+        }
+
+        .section-nav a {
+            flex: 0 0 auto;
+
+            padding: 7px 13px;
+
+            border-radius: 999px;
+
+            font-size: 12px;
+            font-weight: 600;
+
+            color: var(--muted);
+
+            transition: .25s ease;
+        }
+
+        .section-nav a:hover,
+        .section-nav a.active {
+            color: white;
+            background: var(--brown);
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 720px;
+
+            padding: 190px 6vw 100px;
+
+            display: flex;
+            align-items: flex-end;
+
+            position: relative;
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    to top,
+                    rgba(30, 25, 20, .88),
+                    rgba(30, 25, 20, .18) 68%,
+                    rgba(30, 25, 20, .05)
+                ),
+                url("https://luhanhvietnam.com.vn/du-lich/vnt_upload/news/12_2021/van-ly-truong-thanh-phien-ban-viet-13.jpg")
+                center / cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            color: white;
+        }
+
+        .eyebrow {
+            display: inline-block;
+
+            margin-bottom: 20px;
+
+            font-size: 12px;
+            font-weight: 800;
+
+            letter-spacing: .14em;
+            text-transform: uppercase;
+
+            color: #ead5ad;
+        }
+
+        .hero h1 {
+            font-family: "DM Serif Display", serif;
+
+            font-size: clamp(55px, 9vw, 110px);
+            line-height: .95;
+
+            font-weight: 400;
+            letter-spacing: -.03em;
+
+            margin-bottom: 25px;
+        }
+
+        .hero p {
+            max-width: 730px;
+
+            font-size: 16px;
+
+            color: rgba(255,255,255,.88);
+        }
+
+        .hero-tags {
+            margin-top: 28px;
+
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .hero-tag {
+            padding: 8px 13px;
+
+            border: 1px solid rgba(255,255,255,.28);
+            border-radius: 999px;
+
+            background: rgba(255,255,255,.08);
+
+            backdrop-filter: blur(8px);
+
+            font-size: 12px;
+            color: rgba(255,255,255,.92);
+        }
+
+        /* =========================
+           KHUNG CHUNG
+        ========================= */
+
+        main {
+            width: min(1180px, 90%);
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 105px 0;
+            scroll-margin-top: 130px;
+        }
+
+        .section-head {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 50px;
+
+            margin-bottom: 48px;
+        }
+
+        .section-number {
+            font-size: 13px;
+            font-weight: 800;
+
+            letter-spacing: .15em;
+            text-transform: uppercase;
+
+            color: var(--gold);
+        }
+
+        .section-head h2 {
+            font-family: "DM Serif Display", serif;
+
+            font-size: clamp(38px, 5vw, 62px);
+            line-height: 1.05;
+
+            font-weight: 400;
+
+            color: var(--brown-dark);
+
+            margin-bottom: 18px;
+        }
+
+        .section-head p {
+            max-width: 760px;
+            color: var(--muted);
+        }
+
+        /* =========================
+           TỔNG QUAN
+        ========================= */
+
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1.08fr .92fr;
+
+            gap: 55px;
+
+            align-items: start;
+        }
+
+        .overview-image {
+            position: relative;
+
+            min-height: 540px;
+
+            overflow: hidden;
+            border-radius: 26px;
+
+            background: #d9d0c2;
+
+            box-shadow: var(--shadow);
+        }
+
+        .overview-image img {
+            width: 100%;
+            height: 540px;
+
+            object-fit: cover;
+        }
+
+        .overview-source {
+            position: absolute;
+
+            left: 16px;
+            bottom: 16px;
+
+            padding: 7px 11px;
+
+            border-radius: 8px;
+
+            background: rgba(31,24,19,.72);
+            backdrop-filter: blur(8px);
+
+            color: rgba(255,255,255,.92);
+
+            font-size: 11px;
+            line-height: 1.4;
+        }
+
+        .overview-text h3 {
+            font-family: "DM Serif Display", serif;
+
+            font-size: 37px;
+            line-height: 1.1;
+            font-weight: 400;
+
+            color: var(--brown-dark);
+
+            margin-bottom: 20px;
+        }
+
+        .overview-text p {
+            color: var(--muted);
+            margin-bottom: 18px;
+        }
+
+        .highlight {
+            margin-top: 30px;
+
+            padding: 25px;
+
+            border-left: 3px solid var(--gold);
+
+            border-radius: 0 16px 16px 0;
+
+            background: var(--paper-2);
+        }
+
+        .highlight strong {
+            display: block;
+
+            color: var(--brown-dark);
+
+            margin-bottom: 7px;
+        }
+
+        /* =========================
+           THÔNG TIN NHANH
+        ========================= */
+
+        .quick-info {
+            margin-top: 55px;
+        }
+
+        .quick-title {
+            margin-bottom: 20px;
+
+            font-size: 13px;
+            font-weight: 800;
+
+            letter-spacing: .12em;
+            text-transform: uppercase;
+
+            color: var(--brown);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+
+            gap: 14px;
+        }
+
+        .info-card {
+            padding: 22px;
+
+            border: 1px solid var(--line);
+            border-radius: 17px;
+
+            background: var(--paper);
+        }
+
+        .info-card small {
+            display: block;
+
+            margin-bottom: 5px;
+
+            font-size: 11px;
+
+            color: var(--muted);
+
+            text-transform: uppercase;
+            letter-spacing: .08em;
+        }
+
+        .info-card strong {
+            display: block;
+
+            font-size: 14px;
+            line-height: 1.45;
+
+            color: var(--brown-dark);
+        }
+
+        /* =========================
+           TIMELINE
+        ========================= */
+
+        .timeline {
+            position: relative;
+            padding-left: 38px;
+        }
+
+        .timeline::before {
+            content: "";
+
+            position: absolute;
+
+            left: 7px;
+            top: 5px;
+            bottom: 5px;
+
+            width: 1px;
+
+            background: var(--line);
+        }
+
+        .timeline-item {
+            position: relative;
+
+            padding-bottom: 38px;
+        }
+
+        .timeline-item:last-child {
+            padding-bottom: 0;
+        }
+
+        .timeline-item::before {
+            content: "";
+
+            position: absolute;
+
+            left: -36px;
+            top: 7px;
+
+            width: 14px;
+            height: 14px;
+
+            border-radius: 50%;
+
+            background: var(--bg);
+            border: 3px solid var(--gold);
+        }
+
+        .timeline-year {
+            margin-bottom: 5px;
+
+            font-size: 13px;
+            font-weight: 800;
+
+            color: var(--gold);
+        }
+
+        .timeline-item h3 {
+            margin-bottom: 8px;
+
+            font-size: 20px;
+
+            color: var(--brown-dark);
+        }
+
+        .timeline-item p {
+            color: var(--muted);
+        }
+
+        /* =========================
+           NỘI DUNG 2 CỘT
+        ========================= */
+
+        .content-grid {
+            display: grid;
+
+            grid-template-columns: .95fr 1.05fr;
+
+            gap: 55px;
+
+            align-items: center;
+        }
+
+        .content-grid.reverse {
+            grid-template-columns: 1.05fr .95fr;
+        }
+
+        .content-grid img {
+            width: 100%;
+            height: 420px;
+
+            object-fit: cover;
+
+            border-radius: 22px;
+
+            box-shadow: var(--shadow);
+        }
+
+        .content-title {
+            font-family: "DM Serif Display", serif;
+
+            font-size: 38px;
+            line-height: 1.1;
+
+            font-weight: 400;
+
+            color: var(--brown-dark);
+
+            margin-bottom: 20px;
+        }
+
+        .content-text p {
+            color: var(--muted);
+            margin-bottom: 17px;
+        }
+
+        .quote {
+            margin-top: 25px;
+
+            padding: 20px 22px;
+
+            border-radius: 14px;
+
+            background: var(--paper-2);
+
+            color: var(--brown);
+
+            font-size: 14px;
+        }
+
+        /* =========================
+           HANG KHẢO CỔ
+        ========================= */
+
+        .archaeology-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 18px;
+        }
+
+        .archaeology-card {
+            padding: 30px;
+
+            border: 1px solid var(--line);
+            border-radius: 22px;
+
+            background: var(--paper);
+        }
+
+        .archaeology-card .number {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            width: 42px;
+            height: 42px;
+
+            margin-bottom: 20px;
+
+            border-radius: 50%;
+
+            background: var(--paper-2);
+            color: var(--brown);
+
+            font-size: 13px;
+            font-weight: 800;
+        }
+
+        .archaeology-card h3 {
+            margin-bottom: 12px;
+
+            font-size: 21px;
+
+            color: var(--brown-dark);
+        }
+
+        .archaeology-card p {
+            color: var(--muted);
+            font-size: 14px;
+        }
+
+        /* =========================
+           CỘT CỜ
+        ========================= */
+
+        .flag-box {
+            padding: 42px;
+
+            border-radius: 25px;
+
+            background: var(--brown-dark);
+
+            color: white;
+        }
+
+        .flag-box h2 {
+            font-family: "DM Serif Display", serif;
+
+            font-size: 43px;
+            line-height: 1.08;
+
+            font-weight: 400;
+
+            margin-bottom: 18px;
+        }
+
+        .flag-box > p {
+            max-width: 850px;
+
+            color: rgba(255,255,255,.77);
+        }
+
+        .flag-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 15px;
+
+            margin-top: 35px;
+        }
+
+        .flag-card {
+            padding: 21px;
+
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 15px;
+
+            background: rgba(255,255,255,.055);
+        }
+
+        .flag-card strong {
+            display: block;
+
+            margin-bottom: 7px;
+
+            color: #e9d2a8;
+
+            font-size: 15px;
+        }
+
+        .flag-card span {
+            display: block;
+
+            color: rgba(255,255,255,.67);
+
+            font-size: 13px;
+        }
+
+        /* =========================
+           GIÁ TRỊ
+        ========================= */
+
+        .value-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+        .value-card {
+            min-height: 220px;
+
+            padding: 27px;
+
+            background: var(--paper);
+
+            border: 1px solid var(--line);
+
+            border-radius: 20px;
+
+            transition: .25s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+
+            box-shadow: var(--shadow);
+        }
+
+        .value-index {
+            width: 36px;
+            height: 36px;
+
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 24px;
+
+            border-radius: 50%;
+
+            background: var(--paper-2);
+
+            color: var(--brown);
+
+            font-size: 12px;
+            font-weight: 800;
+        }
+
+        .value-card h3 {
+            margin-bottom: 9px;
+
+            font-size: 18px;
+
+            color: var(--brown-dark);
+        }
+
+        .value-card p {
+            color: var(--muted);
+
+            font-size: 14px;
+        }
+
+        /* =========================
+           BẢO TỒN
+        ========================= */
+
+        .conservation {
+            padding: 45px;
+
+            border-radius: 25px;
+
+            background: var(--brown-dark);
+
+            color: white;
+        }
+
+        .conservation h2 {
+            font-family: "DM Serif Display", serif;
+
+            font-size: 42px;
+
+            line-height: 1.1;
+
+            font-weight: 400;
+
+            margin-bottom: 18px;
+        }
+
+        .conservation > p {
+            max-width: 850px;
+
+            color: rgba(255,255,255,.77);
+        }
+
+        .conservation-grid {
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 15px;
+
+            margin-top: 35px;
+        }
+
+        .conservation-card {
+            padding: 20px;
+
+            border: 1px solid rgba(255,255,255,.12);
+            border-radius: 15px;
+
+            background: rgba(255,255,255,.055);
+        }
+
+        .conservation-card strong {
+            display: block;
+
+            margin-bottom: 7px;
+
+            color: #e9d2a8;
+
+            font-size: 15px;
+        }
+
+        .conservation-card span {
+            display: block;
+
+            color: rgba(255,255,255,.66);
+
+            font-size: 13px;
+        }
+
+        /* =========================
+           GALLERY
+        ========================= */
+
+        .gallery {
+            display: grid;
+
+            grid-template-columns: repeat(12, 1fr);
+
+            gap: 16px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+
+            border-radius: 18px;
+
+            background: #ddd1c1;
+        }
+
+        .gallery-item:nth-child(1) {
+            grid-column: span 7;
+        }
+
+        .gallery-item:nth-child(2) {
+            grid-column: span 5;
+        }
+
+        .gallery-item:nth-child(3) {
+            grid-column: span 4;
+        }
+
+        .gallery-item:nth-child(4) {
+            grid-column: span 4;
+        }
+
+        .gallery-item:nth-child(5) {
+            grid-column: span 4;
+        }
+
+        .gallery-item img {
+            height: 310px;
+
+            object-fit: cover;
+
+            transition: transform .5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.045);
+        }
+
+        .image-label {
+            padding: 10px 13px;
+
+            background: var(--paper);
+
+            color: var(--muted);
+
+            font-size: 11px;
+        }
+
+        /* =========================
+           NGUỒN
+        ========================= */
+
+        .source-box {
+            padding: 32px;
+
+            border: 1px solid var(--line);
+
+            border-radius: 20px;
+
+            background: var(--paper);
+        }
+
+        .source-box h3 {
+            font-family: "DM Serif Display", serif;
+
+            font-size: 34px;
+
+            font-weight: 400;
+
+            color: var(--brown-dark);
+
+            margin-bottom: 20px;
+        }
+
+        .source-box a {
+            display: block;
+
+            padding: 9px 0;
+
+            border-bottom: 1px solid var(--line);
+
+            color: var(--brown);
+
+            font-size: 14px;
+        }
+
+        .source-box a:last-child {
+            border-bottom: none;
+        }
+
+        .source-box a:hover {
+            color: var(--gold);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            margin-top: 30px;
+
+            padding: 60px 5vw;
+
+            text-align: center;
+
+            background: var(--brown-dark);
+
+            color: rgba(255,255,255,.72);
+        }
+
+        footer strong {
+            display: block;
+
+            margin-bottom: 8px;
+
+            font-family: "DM Serif Display", serif;
+
+            font-size: 28px;
+
+            font-weight: 400;
+
+            color: white;
+        }
+
+        footer span {
+            font-size: 12px;
+        }
+
+        /* =========================
+           NÚT QUAY LẠI
+        ========================= */
+
+        .back-button {
+            position: fixed;
+
+            right: 22px;
+            bottom: 22px;
+
+            z-index: 1001;
+
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            padding: 12px 17px;
+
+            border-radius: 999px;
+
+            background: var(--brown-dark);
+
+            color: white;
+
+            box-shadow: 0 10px 30px rgba(0,0,0,.16);
+
+            font-size: 12px;
+            font-weight: 700;
+
+            transition: .25s ease;
+        }
+
+        .back-button:hover {
+            transform: translateY(-3px);
+
+            background: var(--brown);
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .section-head,
+            .overview-grid,
+            .content-grid,
+            .content-grid.reverse {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .section-head {
+                margin-bottom: 35px;
+            }
+
+            .info-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .archaeology-grid,
+            .value-grid,
+            .flag-grid,
+            .conservation-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .overview-image,
+            .overview-image img {
+                min-height: 420px;
+                height: 420px;
+            }
+
+            .hero {
+                min-height: 650px;
+            }
+        }
+
+        @media (max-width: 620px) {
+
+            html {
+                scroll-padding-top: 120px;
+            }
+
+            .topbar {
+                height: 62px;
+                padding: 0 5%;
+            }
+
+            .logo {
+                font-size: 17px;
+            }
+
+            .main-link {
+                padding: 8px 13px;
+                font-size: 12px;
+            }
+
+            .section-nav {
+                top: 62px;
+                height: 56px;
+                padding: 0 5%;
+            }
+
+            .hero {
+                min-height: 610px;
+                padding: 170px 6% 70px;
+            }
+
+            .hero h1 {
+                font-size: 57px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            section {
+                padding: 80px 0;
+            }
+
+            .section-head h2 {
+                font-size: 42px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .overview-image,
+            .overview-image img {
+                min-height: 350px;
+                height: 350px;
+            }
+
+            .content-grid img {
+                height: 320px;
+            }
+
+            .flag-box,
+            .conservation {
+                padding: 28px;
+            }
+
+            .flag-box h2,
+            .conservation h2 {
+                font-size: 35px;
+            }
+
+            .gallery {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item:nth-child(n) {
+                grid-column: auto;
+            }
+
+            .gallery-item img {
+                height: 270px;
+            }
+
+            .back-button {
+                right: 15px;
+                bottom: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         MENU CHÍNH
+    ========================= -->
+
+    <header class="topbar">
+
+        <a href="./danhlamthangcanh.html" class="logo">
+            LẠNG SƠN
+        </a>
+
+        <a href="./danhlamthangcanh.html" class="main-link">
+            Danh thắng
+        </a>
+
+    </header>
+
+
+    <!-- =========================
+         MENU MỤC
+    ========================= -->
+
+    <nav class="section-nav">
+
+        <a href="#tong-quan">Tổng quan</a>
+        <a href="#lich-su">Lịch sử</a>
+        <a href="#khao-co">Khảo cổ</a>
+        <a href="#cot-co">Cột cờ</a>
+        <a href="#bac-thang">Đường lên núi</a>
+        <a href="#tam-nhin">Tầm nhìn</a>
+        <a href="#gia-tri">Giá trị</a>
+        <a href="#bao-ton">Bảo tồn</a>
+        <a href="#hinh-anh">Hình ảnh</a>
+        <a href="#nguon">Nguồn</a>
+
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                Di tích khảo cổ · cảnh quan Xứ Lạng
+            </div>
+
+            <h1>
+                Núi Phai Vệ
+            </h1>
+
+            <p>
+                Ngọn núi đá nổi bật giữa trung tâm Lạng Sơn,
+                nơi lưu giữ những dấu tích khảo cổ quan trọng
+                và mang trên mình cột cờ biểu tượng của Xứ Lạng.
+            </p>
+
+            <div class="hero-tags">
+
+                <span class="hero-tag">
+                    Di tích quốc gia · Khảo cổ
+                </span>
+
+                <span class="hero-tag">
+                    Phường Đông Kinh · Lạng Sơn
+                </span>
+
+                <span class="hero-tag">
+                    535 bậc đá
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <main>
+
+        <!-- =========================
+             01 TỔNG QUAN
+        ========================= -->
+
+        <section id="tong-quan">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    01 · Tổng quan
+                </div>
+
+                <div>
+
+                    <h2>
+                        Hòn non bộ giữa lòng thành phố
+                    </h2>
+
+                    <p>
+                        Núi Phai Vệ là một địa điểm vừa có giá trị
+                        khảo cổ, lịch sử vừa có giá trị cảnh quan,
+                        nổi bật giữa không gian đô thị Lạng Sơn.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="overview-grid">
+
+                <!-- ẢNH TỔNG QUAN
+                     KHÁC ẢNH HERO -->
+
+                <div class="overview-image">
+
+                    <img
+                        src="https://nqs.1cdn.vn/2024/07/08/i.ex-cdn.com-chatluongvacuocsong.vn-files-content-2024-07-08-_img_0808-1535.jpg"
+                        alt="Núi Phai Vệ và cột cờ Lạng Sơn"
+                        onerror="
+                            this.onerror=null;
+                            this.src='https://luhanhvietnam.com.vn/du-lich/vnt_upload/news/10_2021/cot-co-phai-ve_1-min_1.jpg';
+                        "
+                    >
+
+                    <div class="overview-source">
+                        Nguồn ảnh: tư liệu báo chí về Núi Phai Vệ
+                    </div>
+
+                </div>
+
+
+                <div class="overview-text">
+
+                    <h3>
+                        Thiên nhiên và khảo cổ cùng hiện diện
+                    </h3>
+
+                    <p>
+                        Núi Phai Vệ nằm ngay khu vực trung tâm thành phố
+                        Lạng Sơn. Nhìn từ xa, ngọn núi đá nổi bật giữa
+                        các khu dân cư và đường phố, tạo nên một cảnh quan
+                        đặc trưng của thành phố Xứ Lạng.
+                    </p>
+
+                    <p>
+                        Điểm đặc biệt của Phai Vệ không chỉ nằm ở hình
+                        thái núi đá mà còn ở các di chỉ khảo cổ được
+                        phát hiện trong hang. Hai di chỉ Hang Phai Vệ 1
+                        và Hang Phai Vệ 2 có niên đại lần lượt khoảng
+                        10.000 năm và 4.700–5.000 năm.
+                    </p>
+
+                    <p>
+                        Trên đỉnh núi hiện có cột cờ Phai Vệ cùng hệ thống
+                        bậc đá dẫn lên đỉnh. Công trình này trở thành
+                        một điểm tham quan, ngắm cảnh và là hình ảnh
+                        dễ nhận biết của Lạng Sơn.
+                    </p>
+
+                    <div class="highlight">
+
+                        <strong>
+                            Điều làm nên nét riêng
+                        </strong>
+
+                        Một di tích khảo cổ nằm giữa thành phố hiện đại,
+                        đồng thời kết hợp địa hình núi đá, không gian
+                        lịch sử và cảnh quan đô thị.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- THÔNG TIN NHANH -->
+
+            <div class="quick-info">
+
+                <div class="quick-title">
+                    Thông tin nhanh
+                </div>
+
+                <div class="info-grid">
+
+                    <div class="info-card">
+                        <small>Tên di tích</small>
+                        <strong>
+                            Núi Phai Vệ
+                        </strong>
+                    </div>
+
+                    <div class="info-card">
+                        <small>Địa chỉ hiện nay</small>
+                        <strong>
+                            Phường Đông Kinh, tỉnh Lạng Sơn
+                        </strong>
+                    </div>
+
+                    <div class="info-card">
+                        <small>Loại hình</small>
+                        <strong>
+                            Di tích khảo cổ
+                        </strong>
+                    </div>
+
+                    <div class="info-card">
+                        <small>Xếp hạng</small>
+                        <strong>
+                            Di tích quốc gia
+                        </strong>
+                    </div>
+
+                    <div class="info-card">
+                        <small>Hang Phai Vệ 1</small>
+                        <strong>
+                            Khoảng 10.000 năm
+                        </strong>
+                    </div>
+
+                    <div class="info-card">
+                        <small>Hang Phai Vệ 2</small>
+                        <strong>
+                            Khoảng 4.700–5.000 năm
+                        </strong>
+                    </div>
+
+                    <div class="info-card">
+                        <small>Đường lên</small>
+                        <strong>
+                            535 bậc đá
+                        </strong>
+                    </div>
+
+                    <div class="info-card">
+                        <small>Cột cờ</small>
+                        <strong>
+                            Xây dựng năm 2014
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             02 LỊCH SỬ
+        ========================= -->
+
+        <section id="lich-su">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    02 · Lịch sử
+                </div>
+
+                <div>
+
+                    <h2>
+                        Dấu chân con người tiền sử
+                    </h2>
+
+                    <p>
+                        Giá trị đặc biệt của Phai Vệ được thể hiện
+                        qua các di chỉ khảo cổ nằm trong hệ thống
+                        hang trên núi.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+
+                    <div class="timeline-year">
+                        Khoảng 10.000 năm trước
+                    </div>
+
+                    <h3>
+                        Hang Phai Vệ 1
+                    </h3>
+
+                    <p>
+                        Di chỉ Hang Phai Vệ 1 có niên đại khoảng
+                        10.000 năm, là dấu tích quan trọng giúp
+                        nghiên cứu lịch sử cư trú của con người
+                        trong khu vực Lạng Sơn.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-year">
+                        Khoảng 4.700–5.000 năm trước
+                    </div>
+
+                    <h3>
+                        Hang Phai Vệ 2
+                    </h3>
+
+                    <p>
+                        Hang Phai Vệ 2 có niên đại khoảng
+                        4.700–5.000 năm, bổ sung thêm tư liệu
+                        về quá trình con người sinh sống và
+                        thích nghi với môi trường núi đá.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-year">
+                        Thế kỷ XX
+                    </div>
+
+                    <h3>
+                        Phai Vệ trong đô thị Lạng Sơn
+                    </h3>
+
+                    <p>
+                        Khi thành phố phát triển, ngọn núi vẫn được
+                        giữ lại như một không gian tự nhiên và lịch sử
+                        nổi bật giữa khu vực đô thị.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-year">
+                        2014
+                    </div>
+
+                    <h3>
+                        Xây dựng và nâng cấp cột cờ
+                    </h3>
+
+                    <p>
+                        Công trình cột cờ trên núi Phai Vệ được xây dựng,
+                        trở thành một điểm nhấn mới của khu vực di tích
+                        và cảnh quan thành phố.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-year">
+                        Hiện nay
+                    </div>
+
+                    <h3>
+                        Điểm tham quan khảo cổ và cảnh quan
+                    </h3>
+
+                    <p>
+                        Phai Vệ được định hướng phát huy giá trị thông qua
+                        các hoạt động tham quan, nghiên cứu và tìm hiểu
+                        về lịch sử – khảo cổ của Lạng Sơn.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             03 KHẢO CỔ
+        ========================= -->
+
+        <section id="khao-co">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    03 · Khảo cổ
+                </div>
+
+                <div>
+
+                    <h2>
+                        Hai hang khảo cổ quan trọng
+                    </h2>
+
+                    <p>
+                        Các di chỉ trong núi giúp Phai Vệ trở thành
+                        một địa điểm có giá trị khoa học đặc biệt
+                        đối với việc nghiên cứu tiền sử khu vực.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="archaeology-grid">
+
+                <div class="archaeology-card">
+
+                    <div class="number">
+                        01
+                    </div>
+
+                    <h3>
+                        Hang Phai Vệ 1
+                    </h3>
+
+                    <p>
+                        Hang Phai Vệ 1 có niên đại khoảng 10.000 năm.
+                        Sự hiện diện của di chỉ cho thấy khu vực núi đá
+                        này từng có liên quan đến hoạt động cư trú của
+                        con người từ rất sớm.
+                    </p>
+
+                </div>
+
+
+                <div class="archaeology-card">
+
+                    <div class="number">
+                        02
+                    </div>
+
+                    <h3>
+                        Hang Phai Vệ 2
+                    </h3>
+
+                    <p>
+                        Hang Phai Vệ 2 có niên đại khoảng 4.700–5.000 năm,
+                        tạo thêm một lớp tư liệu khảo cổ giúp nghiên cứu
+                        sự thay đổi của con người trong các giai đoạn
+                        tiền sử khác nhau.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="quote" style="margin-top:24px;">
+
+                Phai Vệ là một trong hai di tích khảo cổ học nổi bật
+                của khu vực thành phố Lạng Sơn, cùng với di tích Mai Pha,
+                được định hướng khai thác theo hướng tham quan,
+                nghiên cứu và tìm hiểu. :contentReference[oaicite:2]{index=2}
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             04 CỘT CỜ
+        ========================= -->
+
+        <section id="cot-co">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    04 · Cột cờ
+                </div>
+
+                <div>
+
+                    <h2>
+                        Biểu tượng trên đỉnh Phai Vệ
+                    </h2>
+
+                    <p>
+                        Cột cờ tạo nên hình ảnh đặc trưng nhất của
+                        Núi Phai Vệ trong không gian thành phố Lạng Sơn.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="flag-box">
+
+                <h2>
+                    Từ núi đá đến điểm nhấn của thành phố
+                </h2>
+
+                <p>
+                    Cột cờ nằm trên đỉnh núi, kết hợp với hệ thống
+                    đường bậc thang uốn quanh sườn đá. Công trình vừa
+                    tạo điểm nhấn cảnh quan vừa giúp du khách tiếp cận
+                    khu vực cao của núi.
+                </p>
+
+
+                <div class="flag-grid">
+
+                    <div class="flag-card">
+
+                        <strong>
+                            2014
+                        </strong>
+
+                        <span>
+                            Năm công trình cột cờ được xây dựng.
+                        </span>
+
+                    </div>
+
+
+                    <div class="flag-card">
+
+                        <strong>
+                            535 bậc
+                        </strong>
+
+                        <span>
+                            Hệ thống bậc đá dẫn lên khu vực đỉnh núi.
+                        </span>
+
+                    </div>
+
+
+                    <div class="flag-card">
+
+                        <strong>
+                            Biểu tượng
+                        </strong>
+
+                        <span>
+                            Một điểm nhấn dễ nhận biết của thành phố Lạng Sơn.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             05 ĐƯỜNG LÊN NÚI
+        ========================= -->
+
+        <section id="bac-thang">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    05 · Đường lên núi
+                </div>
+
+                <div>
+
+                    <h2>
+                        535 bậc đá uốn theo sườn núi
+                    </h2>
+
+                    <p>
+                        Hệ thống bậc đá là một trong những đặc điểm
+                        dễ nhận thấy nhất khi khám phá Phai Vệ.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="content-grid">
+
+                <div class="content-text">
+
+                    <h3 class="content-title">
+                        Con đường giữa đá và cây xanh
+                    </h3>
+
+                    <p>
+                        Đường lên cột cờ gồm 535 bậc đá, được bố trí
+                        theo sườn núi thay vì tạo thành một tuyến thẳng.
+                        Vì vậy, từ phía dưới nhìn lên, hệ thống bậc
+                        tạo thành những đường cong nổi bật trên nền
+                        núi đá và cây xanh.
+                    </p>
+
+                    <p>
+                        Lan can dọc tuyến đường được tạo hình mô phỏng
+                        thân tre, góp phần tạo nên diện mạo riêng
+                        cho công trình.
+                    </p>
+
+                    <div class="highlight">
+
+                        <strong>
+                            Một điểm nhận diện của Phai Vệ
+                        </strong>
+
+                        Những đường bậc thang uốn lượn quanh núi
+                        là hình ảnh thường xuất hiện khi nhắc đến
+                        Núi Phai Vệ và cột cờ Lạng Sơn.
+
+                    </div>
+
+                </div>
+
+
+                <img
+                    src="https://luhanhvietnam.com.vn/du-lich/vnt_upload/news/10_2021/cot-co-phai-ve_2-min.jpg"
+                    alt="Bậc đá và cột cờ Phai Vệ"
+                    onerror="
+                        this.onerror=null;
+                        this.src='https://luhanhvietnam.com.vn/du-lich/vnt_upload/news/10_2021/cot-co-phai-ve_1-min_1.jpg';
+                    "
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             06 TẦM NHÌN
+        ========================= -->
+
+        <section id="tam-nhin">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    06 · Tầm nhìn
+                </div>
+
+                <div>
+
+                    <h2>
+                        Nhìn xuống thành phố Xứ Lạng
+                    </h2>
+
+                    <p>
+                        Độ cao và vị trí giữa thành phố tạo cho
+                        Phai Vệ một góc nhìn rộng về cảnh quan
+                        đô thị và vùng núi xung quanh.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="content-grid reverse">
+
+                <img
+                    src="https://nqs.1cdn.vn/2024/07/08/i.ex-cdn.com-chatluongvacuocsong.vn-files-content-2024-07-08-_img_0839-1540.jpg"
+                    alt="Toàn cảnh thành phố Lạng Sơn nhìn từ Núi Phai Vệ"
+                    onerror="
+                        this.onerror=null;
+                        this.src='https://nqs.1cdn.vn/2024/07/08/i.ex-cdn.com-chatluongvacuocsong.vn-files-content-2024-07-08-_img_0808-1535.jpg';
+                    "
+                >
+
+
+                <div class="content-text">
+
+                    <h3 class="content-title">
+                        Thành phố nằm dưới chân núi
+                    </h3>
+
+                    <p>
+                        Từ các điểm cao trên Phai Vệ, không gian đô thị
+                        Lạng Sơn mở rộng trước mắt với hệ thống nhà cửa,
+                        đường phố và những dãy núi ở phía xa.
+                    </p>
+
+                    <p>
+                        Dòng sông Kỳ Cùng cùng cảnh quan thành phố góp phần
+                        tạo nên một bức tranh đặc trưng của vùng núi
+                        biên giới Đông Bắc.
+                    </p>
+
+                    <p>
+                        Chính sự tương phản giữa khối núi đá xanh và
+                        khu đô thị bên dưới khiến Phai Vệ có giá trị
+                        cảnh quan rõ nét bên cạnh giá trị khảo cổ.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             07 GIÁ TRỊ
+        ========================= -->
+
+        <section id="gia-tri">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    07 · Giá trị
+                </div>
+
+                <div>
+
+                    <h2>
+                        Một di tích nhiều lớp giá trị
+                    </h2>
+
+                    <p>
+                        Phai Vệ kết hợp giữa khảo cổ học, cảnh quan,
+                        lịch sử và trải nghiệm du lịch ngay giữa
+                        khu vực đô thị.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="value-grid">
+
+                <div class="value-card">
+
+                    <div class="value-index">
+                        01
+                    </div>
+
+                    <h3>
+                        Giá trị khảo cổ
+                    </h3>
+
+                    <p>
+                        Hai hang khảo cổ có niên đại khác nhau cung cấp
+                        tư liệu quan trọng cho việc nghiên cứu tiền sử
+                        ở Lạng Sơn.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <div class="value-index">
+                        02
+                    </div>
+
+                    <h3>
+                        Giá trị khoa học
+                    </h3>
+
+                    <p>
+                        Di chỉ góp phần mở rộng hiểu biết về môi trường
+                        sống và hoạt động của con người trong quá khứ.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <div class="value-index">
+                        03
+                    </div>
+
+                    <h3>
+                        Giá trị cảnh quan
+                    </h3>
+
+                    <p>
+                        Núi đá nổi bật giữa đô thị tạo nên một điểm
+                        nhận diện tự nhiên rất riêng của thành phố.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <div class="value-index">
+                        04
+                    </div>
+
+                    <h3>
+                        Giá trị lịch sử
+                    </h3>
+
+                    <p>
+                        Khu vực Phai Vệ còn gắn với những câu chuyện
+                        về lịch sử đấu tranh và bảo vệ quê hương.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <div class="value-index">
+                        05
+                    </div>
+
+                    <h3>
+                        Giá trị biểu tượng
+                    </h3>
+
+                    <p>
+                        Hình ảnh lá cờ trên đỉnh núi trở thành một
+                        điểm nhấn giàu tính biểu tượng của Lạng Sơn.
+                    </p>
+
+                </div>
+
+
+                <div class="value-card">
+
+                    <div class="value-index">
+                        06
+                    </div>
+
+                    <h3>
+                        Giá trị du lịch
+                    </h3>
+
+                    <p>
+                        Tuyến bậc đá lên cột cờ và tầm nhìn từ đỉnh
+                        tạo nên một trải nghiệm tham quan kết hợp
+                        giữa lịch sử và cảnh quan.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             08 BẢO TỒN
+        ========================= -->
+
+        <section id="bao-ton">
+
+            <div class="conservation">
+
+                <h2>
+                    Bảo vệ di tích khảo cổ giữa đô thị
+                </h2>
+
+                <p>
+                    Phát huy giá trị Phai Vệ cần đi cùng với bảo vệ
+                    các hang và tầng văn hóa khảo cổ, duy trì cảnh quan
+                    núi đá và quản lý hoạt động tham quan phù hợp.
+                </p>
+
+
+                <div class="conservation-grid">
+
+                    <div class="conservation-card">
+
+                        <strong>
+                            Di chỉ khảo cổ
+                        </strong>
+
+                        <span>
+                            Bảo vệ các khu vực có giá trị khảo cổ,
+                            hạn chế tác động đến lớp đất và dấu tích.
+                        </span>
+
+                    </div>
+
+
+                    <div class="conservation-card">
+
+                        <strong>
+                            Địa hình núi đá
+                        </strong>
+
+                        <span>
+                            Giữ gìn cảnh quan tự nhiên và hạn chế
+                            các tác động làm biến đổi địa hình.
+                        </span>
+
+                    </div>
+
+
+                    <div class="conservation-card">
+
+                        <strong>
+                            Khai thác du lịch
+                        </strong>
+
+                        <span>
+                            Kết hợp tham quan, giáo dục và nghiên cứu
+                            để phát huy giá trị lâu dài của di tích.
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             09 HÌNH ẢNH
+        ========================= -->
+
+        <section id="hinh-anh">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    09 · Hình ảnh
+                </div>
+
+                <div>
+
+                    <h2>
+                        Phai Vệ trong nhiều góc nhìn
+                    </h2>
+
+                    <p>
+                        Một số hình ảnh về núi, cột cờ, bậc đá và
+                        cảnh quan thành phố nhìn từ trên cao.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="gallery">
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://luhanhvietnam.com.vn/du-lich/vnt_upload/news/12_2021/van-ly-truong-thanh-phien-ban-viet-13.jpg"
+                        alt="Toàn cảnh Núi Phai Vệ"
+                    >
+
+                    <div class="image-label">
+                        Núi Phai Vệ và tuyến bậc đá lên cột cờ
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://luhanhvietnam.com.vn/du-lich/vnt_upload/news/10_2021/cot-co-phai-ve_1-min_1.jpg"
+                        alt="Cột cờ Phai Vệ"
+                    >
+
+                    <div class="image-label">
+                        Cột cờ Phai Vệ
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://luhanhvietnam.com.vn/du-lich/vnt_upload/news/10_2021/cot-co-phai-ve_2-min.jpg"
+                        alt="Cột cờ trên núi Phai Vệ"
+                    >
+
+                    <div class="image-label">
+                        Cột cờ nhìn từ tuyến bậc đá
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://nqs.1cdn.vn/2024/07/08/i.ex-cdn.com-chatluongvacuocsong.vn-files-content-2024-07-08-_img_0808-1535.jpg"
+                        alt="Núi Phai Vệ nhìn từ trên cao"
+                    >
+
+                    <div class="image-label">
+                        Góc nhìn từ khu vực đỉnh núi
+                    </div>
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://nqs.1cdn.vn/2024/07/08/i.ex-cdn.com-chatluongvacuocsong.vn-files-content-2024-07-08-_img_0839-1540.jpg"
+                        alt="Thành phố Lạng Sơn nhìn từ Núi Phai Vệ"
+                    >
+
+                    <div class="image-label">
+                        Toàn cảnh Lạng Sơn từ Phai Vệ
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             10 NGUỒN
+        ========================= -->
+
+        <section id="nguon">
+
+            <div class="section-head">
+
+                <div class="section-number">
+                    10 · Nguồn
+                </div>
+
+                <div>
+
+                    <h2>
+                        Tài liệu tham khảo
+                    </h2>
+
+                    <p>
+                        Nội dung được tổng hợp từ các nguồn thông tin
+                        về di tích, khảo cổ và du lịch Lạng Sơn.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="source-box">
+
+                <h3>
+                    Nguồn thông tin
+                </h3>
+
+                <a
+                    href="https://langson.gov.vn/"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Cổng thông tin điện tử tỉnh Lạng Sơn
+                </a>
+
+                <a
+                    href="https://lspa.langson.gov.vn/thong-tin/quan-ly-bao-ton-va-khai-thac-gia-tri-di-tich-danh-thang-gan-voi-phat-trien-du-lich-tinh-lang-son-341470"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Cổng Du lịch Lạng Sơn – Quản lý, bảo tồn và khai thác giá trị di tích
+                </a>
+
+                <a
+                    href="https://bvhttdl.gov.vn/lang-son-tung-buoc-danh-thuc-tiem-nang-du-lich-hang-dong-20231205084939304.htm"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Bộ Văn hóa, Thể thao và Du lịch – Lạng Sơn từng bước đánh thức tiềm năng du lịch hang động
+                </a>
+
+                <a
+                    href="https://vnexpress.net/lang-son-nhieu-tiem-nang-phat-trien-du-lich-khao-co-4666536.html"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    VnExpress – Lạng Sơn nhiều tiềm năng phát triển du lịch khảo cổ
+                </a>
+
+                <a
+                    href="https://commons.wikimedia.org/"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    Wikimedia Commons – tư liệu hình ảnh
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <strong>
+            Núi Phai Vệ
+        </strong>
+
+        <span>
+            Di tích khảo cổ và biểu tượng cảnh quan giữa lòng Lạng Sơn.
+        </span>
+
+    </footer>
+
+
+    <!-- =========================
+         NÚT QUAY LẠI
+    ========================= -->
+
+    <a
+        href="./danhlamthangcanh.html"
+        class="back-button"
+    >
+        ← Quay lại danh thắng
+    </a>
+
+
+    <!-- =========================
+         JS ACTIVE MENU
+    ========================= -->
+
+    <script>
+
+        const sections = document.querySelectorAll("main section");
+        const navLinks = document.querySelectorAll(".section-nav a");
+
+        const observer = new IntersectionObserver(
+
+            (entries) => {
+
+                entries.forEach((entry) => {
+
+                    if (entry.isIntersecting) {
+
+                        navLinks.forEach((link) => {
+                            link.classList.remove("active");
+                        });
+
+                        const active = document.querySelector(
+                            '.section-nav a[href="#' +
+                            entry.target.id +
+                            '"]'
+                        );
+
+                        if (active) {
+                            active.classList.add("active");
+                        }
+
+                    }
+
+                });
+
+            },
+
+            {
+                rootMargin: "-150px 0px -60% 0px",
+                threshold: 0
+            }
+
+        );
+
+
+        sections.forEach((section) => {
+            observer.observe(section);
+        });
+
+
+        navLinks.forEach((link) => {
+
+            link.addEventListener("click", () => {
+
+                setTimeout(() => {
+
+                    link.scrollIntoView({
+                        behavior: "smooth",
+                        block: "nearest",
+                        inline: "center"
+                    });
+
+                }, 100);
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
